@@ -13,7 +13,8 @@
     "lv3",
     "sb1",
     "sb2"
-   ]
+   ],
+   "maxPoints": 99.0
   },
   {
    "id": "block-hv",
@@ -24,7 +25,8 @@
     "hv1",
     "hv2",
     "hv3"
-   ]
+   ],
+   "maxPoints": 75.0
   },
   {
    "id": "block-sa",
@@ -33,7 +35,8 @@
    "hint": "",
    "parts": [
     "sa"
-   ]
+   ],
+   "maxPoints": 45
   }
  ],
  "subtitle": "57 Aufgaben · 150 Minuten",
@@ -114,7 +117,9 @@
      "text": "In Mecklenburg-Vorpommern können junge Leute jetzt für den halben Fahrpreis mit dem Taxi auf Discotour gehen. Tickets dafür sind bei allen Geschäftsstellen der Allgemeinen Ortskrankenkasse (AOK) sowie an Esso Tankstellen zum halben Preis erhältlich. Junge Leute zwischen 16 und 25 Jahren können sie an Wochenenden und Feiertagen in der Zeit von 20 Uhr",
      "answer": "D"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv2",
@@ -224,7 +229,9 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv3",
@@ -340,6 +347,8 @@
      "answer": "B"
     }
    ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
    "bankImage": "img/m11-lv3.jpg"
   },
   {
@@ -469,7 +478,9 @@
      ],
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 9.0
   },
   {
    "id": "sb2",
@@ -607,7 +618,9 @@
      "answer": "N",
      "explain": "Das Wort lautet: WÄREN"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "hv1",
@@ -643,7 +656,9 @@
      "text": "Herr Krause kauft seine Medikamente am liebsten in der nächsten Stadt.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "hv2",
@@ -704,7 +719,9 @@
      "text": "Herr Mahler empfiehlt den Praktikanten, das Team mit Fleiß und guter Laune zu unterstützen.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0
   },
   {
    "id": "hv3",
@@ -740,7 +757,9 @@
      "text": "Janas Geburtstagsfest findet nicht im LEO statt.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "sa",
@@ -767,7 +786,41 @@
       "Hochzeitsgeschenk"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

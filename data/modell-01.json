@@ -13,7 +13,8 @@
     "lv3",
     "sb1",
     "sb2"
-   ]
+   ],
+   "maxPoints": 105.0
   },
   {
    "id": "block-hv",
@@ -24,7 +25,8 @@
     "hv1",
     "hv2",
     "hv3"
-   ]
+   ],
+   "maxPoints": 75.0
   },
   {
    "id": "block-sa",
@@ -33,7 +35,8 @@
    "hint": "",
    "parts": [
     "sa"
-   ]
+   ],
+   "maxPoints": 45
   }
  ],
  "subtitle": "61 Aufgaben · 150 Minuten",
@@ -114,7 +117,9 @@
      "text": "In Mecklenburg-Vorpommern können junge Leute jetzt für den halben Fahrpreis mit dem Taxi auf Discotour gehen. Tickets dafür sind bei allen Geschäftsstellen der Allgemeinen Ortskrankenkasse (AOK) sowie an Esso Tankstellen zum halben Preis erhältlich. Junge Leute zwischen 16 und 25 Jahren können sie an Wochenenden und Feiertagen in der Zeit von 20 Uhr bis morgens 6 Uhr benutzen. Die Taxifahrer erhalten bei ihrer Zentrale dann den vollen Fahrpreis erstattet.",
      "answer": "G"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv2",
@@ -224,7 +229,9 @@
      ],
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv3",
@@ -340,6 +347,8 @@
      "answer": "L"
     }
    ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
    "bankImage": "img/m01-lv3.jpg"
   },
   {
@@ -545,7 +554,9 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "sb2",
@@ -683,7 +694,9 @@
      "answer": "J",
      "explain": "Das Wort lautet: MÖCHTE"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "hv1",
@@ -719,7 +732,9 @@
      "text": "Die Sprecherin ist am liebsten mit ihren Eltern zusammen.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "hv2",
@@ -780,7 +795,9 @@
      "text": "Kunden mit wenig Geld zahlen für den Service nichts.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0
   },
   {
    "id": "hv3",
@@ -816,7 +833,9 @@
      "text": "Der Sänger beginnt seine Konzertreise mit einer Vorstellung in Wien",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "sa",
@@ -843,7 +862,41 @@
       "Wen Sie mitbringen möchten"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

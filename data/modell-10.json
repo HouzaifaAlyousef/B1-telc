@@ -13,7 +13,8 @@
     "lv3",
     "sb1",
     "sb2"
-   ]
+   ],
+   "maxPoints": 102.0
   },
   {
    "id": "block-hv",
@@ -24,7 +25,8 @@
     "hv1",
     "hv2",
     "hv3"
-   ]
+   ],
+   "maxPoints": 75.0
   },
   {
    "id": "block-sa",
@@ -33,7 +35,8 @@
    "hint": "",
    "parts": [
     "sa"
-   ]
+   ],
+   "maxPoints": 45
   }
  ],
  "subtitle": "59 Aufgaben · 150 Minuten",
@@ -114,7 +117,9 @@
      "text": "Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeeben. Wir empfehlen unseren Gästen, bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.",
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv2",
@@ -224,7 +229,9 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv3",
@@ -340,6 +347,8 @@
      "answer": "H"
     }
    ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
    "bankImage": "img/m10-lv3.jpg"
   },
   {
@@ -507,7 +516,9 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 12.0
   },
   {
    "id": "sb2",
@@ -645,7 +656,9 @@
      "answer": "C",
      "explain": "Das Wort lautet: EINMAL"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "hv1",
@@ -681,7 +694,9 @@
      "text": "Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "hv2",
@@ -742,7 +757,9 @@
      "text": "Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0
   },
   {
    "id": "hv3",
@@ -778,7 +795,9 @@
      "text": "Am besten fahren Sie ab Northeim mit dem Bus.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "sa",
@@ -805,7 +824,41 @@
       "Vorschlag für gemeinsame Unternehmung?"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

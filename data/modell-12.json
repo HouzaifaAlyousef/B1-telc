@@ -11,7 +11,8 @@
     "lv1",
     "lv3",
     "sb2"
-   ]
+   ],
+   "maxPoints": 62.5
   },
   {
    "id": "block-hv",
@@ -21,7 +22,8 @@
    "parts": [
     "hv2",
     "hv3"
-   ]
+   ],
+   "maxPoints": 50.0
   },
   {
    "id": "block-sa",
@@ -30,7 +32,8 @@
    "hint": "",
    "parts": [
     "sa"
-   ]
+   ],
+   "maxPoints": 45
   }
  ],
  "subtitle": "40 Aufgaben · 150 Minuten",
@@ -111,7 +114,9 @@
      "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das PlaudernundFreunden. 77 der BefragtenGrundfür denBesuch imKaffeehaus",
      "answer": "I"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv3",
@@ -222,6 +227,8 @@
      "answer": "D"
     }
    ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 22.5,
    "bankImage": "img/m12-lv3.jpg"
   },
   {
@@ -360,7 +367,9 @@
      "answer": "E",
      "explain": "Das Wort lautet: FALLS"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "hv2",
@@ -421,7 +430,9 @@
      "text": "Nach Meinung von Herrn Schütz haben jüngere Taxifahrer weniger Angst, nachts zu an.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0
   },
   {
    "id": "hv3",
@@ -457,7 +468,9 @@
      "text": "Janas Geburtstagsfest findet nicht im LEO statt.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "sa",
@@ -484,7 +497,41 @@
       "Was es bei Ihnen Neues gibt."
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

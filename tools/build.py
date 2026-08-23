@@ -34,6 +34,23 @@ BLOCKS = [
   ('block-hv', 'Hörverstehen', ['hv1', 'hv2', 'hv3'], 30, 'Aufgaben 41–60'),
   ('block-sa', 'Schriftlicher Ausdruck', ['sa'], 30, ''),
 ]
+# نقاط كل سؤال حسب جدول «Punkte und Gewichtung» بالنموذج الرسمي:
+# LV ٧٥ نقطة (٢٥ لكل جزء)، SB ٣٠ (١٥ لكل جزء)، HV ٧٥ (٢٥ لكل جزء)، SA ٤٥.
+# مجموع الامتحان الكتابي ٢٢٥، والنجاح ٦٠٪ = ١٣٥ نقطة.
+POINTS = {'LV1': 5.0, 'LV2': 5.0, 'LV3': 2.5, 'SB1': 1.5, 'SB2': 1.5,
+          'HV1': 5.0, 'HV2': 2.5, 'HV3': 5.0}
+
+# معايير تصحيح التعبير الكتابي (A=٥، B=٣، C=١، D=٠؛ المجموع × ٣ = ٤٥)
+SA_CRITERIA = [
+  ('Aufgabenbewältigung',
+   'Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?'),
+  ('Kommunikative Gestaltung',
+   'Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?'),
+  ('Formale Richtigkeit',
+   'Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?'),
+]
+SA_GRADES = [('A', 5), ('B', 3), ('C', 1), ('D', 0)]
+
 RANGE = {'LV1': (1, 5), 'LV2': (6, 10), 'LV3': (11, 20), 'SB1': (21, 30),
          'SB2': (31, 40), 'HV1': (41, 45), 'HV2': (46, 55), 'HV3': (56, 60)}
 
@@ -177,6 +194,14 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
 
     items.sort(key=lambda it: int(it['id']) if it['id'].isdigit() else 0)
     sec['items'] = items
+    if kind == 'SA':
+        sec['criteria'] = [{'title': t, 'hint': h} for t, h in SA_CRITERIA]
+        sec['grades'] = [{'key': k, 'points': p} for k, p in SA_GRADES]
+        sec['factor'] = 3
+        sec['maxPoints'] = len(SA_CRITERIA) * SA_GRADES[0][1] * 3
+    else:
+        sec['pointsPerItem'] = POINTS[kind]
+        sec['maxPoints'] = round(len(items) * POINTS[kind], 1)
     return sec if items else None
 
 
@@ -261,10 +286,15 @@ def main():
                     secs.append(sec)
 
             have = {s['id'] for s in secs}
-            blocks = [{'id': bid, 'title': t, 'minutes': mins, 'hint': hint,
-                       'parts': [p for p in parts if p in have]}
-                      for bid, t, parts, mins, hint in BLOCKS
-                      if any(p in have for p in parts)]
+            by_id = {s['id']: s for s in secs}
+            blocks = []
+            for bid, t, parts, mins, hint in BLOCKS:
+                mine = [p for p in parts if p in have]
+                if not mine:
+                    continue
+                blocks.append({'id': bid, 'title': t, 'minutes': mins, 'hint': hint,
+                               'parts': mine,
+                               'maxPoints': round(sum(by_id[p]['maxPoints'] for p in mine), 1)})
 
             data = {'id': f'modell-{i:02d}', 'title': f'Modelltest {i}',
                     'blocks': blocks,

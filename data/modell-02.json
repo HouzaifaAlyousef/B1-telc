@@ -13,7 +13,8 @@
     "lv3",
     "sb1",
     "sb2"
-   ]
+   ],
+   "maxPoints": 105.0
   },
   {
    "id": "block-hv",
@@ -24,7 +25,8 @@
     "hv1",
     "hv2",
     "hv3"
-   ]
+   ],
+   "maxPoints": 75.0
   }
  ],
  "subtitle": "60 Aufgaben · 120 Minuten",
@@ -105,7 +107,9 @@
      "text": "Warum bleiben manche Managerinnen erfolgreich, obwohl sie Nachrichten mitteilen, die ihr Publikum lieber nicht hören möchte? Ganz einfach: Sie verkaufen die schlechte Nachricht mit Humor. Ein Londoner Soziologe hat während einer Studie beobachtet, dass gerade bei Reden unangenehmen Inhalts oft heiter gelacht wird. Das Lachen wird bewusst provoziert, etwa durch bestimmte Wörter oder durch ein eigenes breites Lächeln. Die fröhliche Stimmung soll dafür sorgen, dass die Zuhörenden das Gefühl haben würden mehr wissen als alle annderen. (aus einer deutschen Zeitung)",
      "answer": "F"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv2",
@@ -215,7 +219,9 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv3",
@@ -331,6 +337,8 @@
      "answer": "B"
     }
    ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
    "bankImage": "img/m02-lv3.jpg"
   },
   {
@@ -536,7 +544,9 @@
      ],
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "sb2",
@@ -674,7 +684,9 @@
      "answer": "M",
      "explain": "Das Wort lautet: VORAUS"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "hv1",
@@ -710,7 +722,9 @@
      "text": "Herr Krause kauft seine Medikamente am liebsten in der nächsten Stadt.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "hv2",
@@ -771,7 +785,9 @@
      "text": "Das Reisebüro muss für die Fehler der Mitarbeitenden bezahlen.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0
   },
   {
    "id": "hv3",
@@ -807,7 +823,9 @@
      "text": "Im Untergeschoss gibt es Winterkleidung zum halben Preis.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   }
  ]
 }

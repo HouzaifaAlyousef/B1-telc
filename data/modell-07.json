@@ -13,7 +13,8 @@
     "lv3",
     "sb1",
     "sb2"
-   ]
+   ],
+   "maxPoints": 105.0
   },
   {
    "id": "block-hv",
@@ -24,7 +25,8 @@
     "hv1",
     "hv2",
     "hv3"
-   ]
+   ],
+   "maxPoints": 75.0
   },
   {
    "id": "block-sa",
@@ -33,7 +35,8 @@
    "hint": "",
    "parts": [
     "sa"
-   ]
+   ],
+   "maxPoints": 45
   }
  ],
  "subtitle": "61 Aufgaben · 150 Minuten",
@@ -114,7 +117,9 @@
      "text": "Zum sechsten Mal veranstaltet das Comitato Geniton Binnigen/ Bottmingen seine breit angelegte multikulturelle Kunstausstellung Arte. An der Veranstaltung nehmen 70 Küünstlerinnen und Künstler aus der Region sowie Gäste aus Italien, Frankreich, Deutschland und weiteren Ländern teil. Bei dem vor 18 Jahren gegründeten Comitato handelt es sich um einen Elternverein, der damals italienischsprachigen Kindern bei ihren Schulprobiemen hilfreich zur Seite stand. Da die jetzige dritte Kindergeneration nicht mehr diese Probleme hat, suchte das Comitato nach neuen Aufgeben und fand in der Organisation der alljährlichen Kunstausstellung ein neues, interessantes Betätigungsfeld.",
      "answer": "G"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv2",
@@ -224,7 +229,9 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "lv3",
@@ -340,6 +347,8 @@
      "answer": "A"
     }
    ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
    "bankImage": "img/m07-lv3.jpg"
   },
   {
@@ -545,7 +554,9 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "sb2",
@@ -683,7 +694,9 @@
      "answer": "B",
      "explain": "Das Wort lautet: ANGEBOT"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0
   },
   {
    "id": "hv1",
@@ -719,7 +732,9 @@
      "text": "Die Sprecherin fährt immer mit dem Fahrrad zur Arbeit.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "hv2",
@@ -780,7 +795,9 @@
      "text": "Die Gesetze machen die Arbeit von Frau Böck schwerer.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0
   },
   {
    "id": "hv3",
@@ -816,7 +833,9 @@
      "text": "Das Flugzeug landet mit 20 Minuten Verspätung in Leipzig.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0
   },
   {
    "id": "sa",
@@ -843,7 +862,41 @@
       "Wie man beim Reisen Geld sparren kann"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

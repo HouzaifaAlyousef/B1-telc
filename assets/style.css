@@ -238,3 +238,20 @@ textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
 /* Teil-Ergebnis in der Korrektur */
 .partscore{display:flex; gap:12px; align-items:center; margin:22px 0 10px;
   font-weight:600; font-size:15.5px}
+
+/* Nachfrage-Fenster (das eingebaute confirm() ist im eingebetteten Rahmen blockiert) */
+.modalback{position:fixed; inset:0; z-index:100; display:grid; place-items:center;
+  background:rgba(9,14,24,.55); padding:24px}
+.modal{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:20px; max-width:380px; width:100%}
+.modal p{margin:0 0 18px; font-size:16px}
+.modalbtns{display:flex; gap:10px}
+.modalbtns .btn{flex:1}
+
+/* Ein Bewertungskriterium im Schriftlichen Ausdruck */
+.crit + .crit{margin-top:18px; border-top:1px solid var(--line); padding-top:16px}
+.crit h3{margin:0 0 2px; font-size:16px}
+.crit .opts.inline{grid-template-columns:repeat(4, 1fr)}
+.crit .opt{flex-direction:column; gap:2px; text-align:center; padding:8px 4px; font-size:13px}
+.crit .opt input{display:none}
+.crit .opt .k{font-size:16px}
