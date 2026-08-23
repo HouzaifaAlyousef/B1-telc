@@ -1,0 +1,651 @@
+{
+ "id": "modell-15",
+ "title": "Modelltest 15",
+ "subtitle": "48 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Hinweis für Besucher der Bregenzer Festspiele"
+    },
+    {
+     "key": "B",
+     "text": "Abendwanderungen ab 89 Euro"
+    },
+    {
+     "key": "C",
+     "text": "Musikveranstaltungen am Nachmittag"
+    },
+    {
+     "key": "D",
+     "text": "Ihre Zeitung folgt Ihnen in den Urlaub"
+    },
+    {
+     "key": "E",
+     "text": "Schlechtes Wetter: Festspiele abgesagt"
+    },
+    {
+     "key": "F",
+     "text": "Rekord: 70.000 Besucher im Bücherdorf"
+    },
+    {
+     "key": "G",
+     "text": "Wandern ohne Gepäck"
+    },
+    {
+     "key": "H",
+     "text": "Neues für Literaturinteressierte"
+    },
+    {
+     "key": "I",
+     "text": "Neue Zeitung für Ihre Urlaubsplanung"
+    },
+    {
+     "key": "J",
+     "text": "Laute Musik stört den Nachbarn"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Abonnenten-Service Wenn Sie verreisen, wünschen wir ihnen erholsame und angenehme Ferienlage Bitte denken Sie daran, sich ihre Zeitung in den Urlaubtort nachsenden zu lassen. Denn mit den Neuigkeiten von zu Hause und aus aller Weil lässt sich die schönste Zeit des Jahres erst richtig genießen ganz Europa kostenlos, Die Höhe des Bezeugendes bleibt unverändert. Ausführliche Informationen und entsprechende Coupons ihrem Europabericht. Griechisch wird meistens von Zwölftklässlern als dritte Fremdsprache neben Französisch und Englisch gewählt. finden Sie in unserem großen Reise Service – Anzeigen oder rufen Sie uns einfach an: Telefon 01 30-18 58 50 zum Nulltarif. Hannoversche Allgemeine Neue Presse",
+     "answer": "D"
+    },
+    {
+     "id": "2",
+     "text": "Im Luftkurort Stadtkylf in der Mittelgebirgslandschaft des Oberen Kullas werden dreitägige Wanderungen ohne Gepäck veranstaltet Die Rundwanderung im deutsch – bei gischen Naturpark führt abends zu reservierten Zimmern. Die Betriebe übernehmen den Gepäcktransport zum nächsten Tagesziel. Die Wanderungen werden ganzjährig angeboten. In den Wanderprogramm sind drei Übernachtungen mit Frühstück dreimal Gepäcktransport, eine Wanderkarte, eine Wegbeschreibung und ein Wanderpass enthalten. Der Pauschalbetrag beträgt pro Person 89 Euro. Auskünfte: Verkehrsverein Erholungsgebiet Oberes Kylltal. Kurallee, 54589 Stadtkylf, Telefon ( 06597) 28 78.",
+     "answer": "G"
+    },
+    {
+     "id": "3",
+     "text": "Für den einen ist es musikalischer Hochgenuss für den anderen schlicht Lärm. Gemeint ist Musik, die aus Lautsprechen, Radios oder durch Musikinstrumente durch geöffnet Türen und Fenster bei sommerlichen Temperaturen ins Freie dringt. Die Gemeinde weist darauf hin, dass der Mittagsruhe von 13 bis 15 Uhr und nachts von 22 bis 7 Uhr keine musikalische Ruhestörung erfolgen darf. Gartengeräte mit Motoren dürfen montags bis freitags nur von 8 bis 13 und von 15 bis 19 Uhr benutzt werrden, aan Sonnabenden von 9 bis 13 Uhr. An Sonn - und Feiertagen dürfen die Geräte nicht zum Einsatz kommen.",
+     "answer": "J"
+    },
+    {
+     "id": "4",
+     "text": "– Das erste deutsche Bücherdorf hat in Mühlbeck/ Fredersdorf (Sachsen Anhalt ) seit Ende September seine Tore geöffnet. In acht Antiquarten warten über 70 000 Bücher aus alleen Bereichen der Literatur auf Interessenten. Das in reizvoller landschaftlicher Umgebung liegende Bücherdorf nahe Bitterfeld - unweit der A19 und des Flughafens Leipzig - ist aus allen Teilen Deutschlands lleicht zu erreich. Geöffnet sind die Antiquariate auch am Samstag und Sonntag. In Europa gibt es bereits acht solcher Bücherdörfer in Belgien, Frankreich, Großbritannien, den Niederlanden, Norwegen und der Schweiz. Initiatorin des deutschen Bücherdorfes ist Heidi Dehne (Tel. 03493/4 30 43).",
+     "answer": "H"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "5. Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeben. Wir empfehlen unseren Gästen , bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min. Beruf am Flughafen: Kinderbetreuerin Dem Kind zuliebe in Kloten warten Auf keinem anderen Flughafen sei der Aufenthalt familienfeindlicher als in Kloten, sagen viele Eltern. Weil die Wartezeit im Flug vergeht dank der 18 Kinderbetreuerinnen. Von Gabriella Hofer 24000 Kinder aus der ganzen Welt wurden letztes Jahr auf dem Flughafen Zürich-Kloten betreut. Die 18 Mitarbeiterinnen, die sich im Schichtbetrieb ablösen, stehen den Eltern und ihren Kindern täglich von 6.30 bis 22 Uhr mit Rat und Tat zur Seite. Die vielsprachigen Betreuerinnen – viele von ihnen sind ausgebildete Krankenschwestern, Kleinkindererzieherinnen oder Flugbegleiterinnen – verfügen auch über Erste-Hilfe- Kenntnisse. Der Flughafen Zürich-Kloten ist der einzige in Europa, der seinen kleinsten Gästen in beiden Terminals einen eigenen Aufenthaltsraum bietet. Aufenthalt und Betreuung sind kostenlos. In beiden Räumen stehen vier Wickeeltische mit Papierwindeln, eine Küche zum Aufwärmen der Kindermahlzeiten, sechs Bettchen, ein Laufgitter, Nachttöpfe und Toiletten für Kleinkinder zur Verfügung. Außerdem gibt es zahlreiche Stofftierchen, Schaukelpferdchen, Bauklötze, Puppenstuben, einen großen Stall, Bilderbücher, Spiele und vieles mehr. Es ist ein Erlebnis für die Kinder, mit Kindern zu spielen, die eine andere Muttersprache sprechen oder aus einem anderen Kulturkreis kommen, weiß Alice Martin (40). Die ehemalige Kinderschwester, selber Mutter eines sechsjährigen Sohnes, gehört seit 14 Jahren zum Team der Betreuerinnen. Zusammen mit 17 Kolleginnen ist sie abwechselnd in den beiden Kinderspielzimmern den Terminals A und B beschäftigt. Bevor Alice Martin 1994 von der Flughafendirektion angestellt wurde, war sie viele Jahre auf einer Geburtenabteilung und später noch in einem Behindertenheim beschäftigt. Die Kontakte zu den jetzt von ihr betreuten Kindern seinen nicht mehr so intensiv wie früher im Spital oder im Heim, dafür biete ihr die heutige Tätigkeit mehr Abwechslung. Die kinderliebende Frau reist selber gern und viel. Auch ihrre Fremdsprachenkenntnisse kommen ihr hier zugute. Alice Martin spricht neben ihrer Muttersprache Englisch, Französisch und Spanisch. Sehr bereichernd sei, dass sie in ihrer täglichen Arbeit andere Kulturen kennenlerne."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Die Kinderbetreuerinnen kümmern sich um",
+     "options": [
+      {
+       "key": "A",
+       "text": "Kinder, die auf dem Flughafen warten müssen."
+      },
+      {
+       "key": "B",
+       "text": "Kinder, die im Flugzeug krank wurden.."
+      },
+      {
+       "key": "C",
+       "text": "Kinder, die ohne Eltern fliegen müssen."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "7",
+     "text": "Die Flughafen Zürich-Kloten ist besonders familienfreundlich,",
+     "options": [
+      {
+       "key": "A",
+       "text": "seit Alice Martin dort arbeitet."
+      },
+      {
+       "key": "B",
+       "text": "weil die Wartezeit kürzer ist als auf anderen Flughäfen."
+      },
+      {
+       "key": "C",
+       "text": "weil es Räume gibt, in denen Kinder spielen können"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "8",
+     "text": "Frau Alice Martin hat eine Ausbildung als",
+     "options": [
+      {
+       "key": "A",
+       "text": "Flugbegleiterin."
+      },
+      {
+       "key": "B",
+       "text": "Kinderschwester."
+      },
+      {
+       "key": "C",
+       "text": "Pilotin."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "In den Aufenthaltsräumen spielen die Kinder",
+     "options": [
+      {
+       "key": "A",
+       "text": "am liebsten mit 18 Betreuerinnen."
+      },
+      {
+       "key": "B",
+       "text": "am liebsten mit Alice Martin."
+      },
+      {
+       "key": "C",
+       "text": "auch mit Kindern anderer Kulturen und Sprachen."
+      }
+     ],
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie sind in der Schweiz und möchten sich ein paar Tage beim Baden erholen.",
+     "answer": "D"
+    },
+    {
+     "id": "12",
+     "text": "Sie hören gerne klassische Musik, am liebsten Barocklieder. Sie möchten in ein Konzert gehen.",
+     "answer": "H"
+    },
+    {
+     "id": "13",
+     "text": "Ihr Sohn möchte gerne in den Schulfeien seinen Fremdsprachenkenntnisse verbessern.. Er möchte auch Sport treiben.",
+     "answer": "I"
+    },
+    {
+     "id": "14",
+     "text": "Sie reisen nicht gerne allein und suchen deshalb Reisepartner.",
+     "answer": "E"
+    },
+    {
+     "id": "15",
+     "text": "Sie möchten am Donnerstag Abend mit Ihrer Bekannten eine Musikveranstaltung besuchen.",
+     "answer": "A"
+    },
+    {
+     "id": "16",
+     "text": "Ihre Familie möchte den nächsten Urlaub am Meer verbringen.",
+     "answer": "X"
+    }
+   ],
+   "bankImage": "img/m15-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "An alle Kunden Gewinnen Sehr geehrter Herr Schröder, zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz Besonders ausgedacht: einen attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere erfolgreiche Buchidee. Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit iihrer Kundennummer können Sie an einnem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte Antwortschreiben zzurück und bestellen Sie damit – ohne Risiko – das Buch des Monats. Sie erhalten dieses Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, sollte Ihnen das Buch nicht gefallen. Ohne irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonst üblichen Preises in einer Buchhandlung. Gleichzeitig nehmen Sie an einem Preisausschreiben (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto eine Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance auf den Hauptgewinn - einen Mercedes der S-Klasse. Wenn Sie innerhalb der kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil – vorausgesetzt, Sie haben die richtige Kundennummer. Mit freundlichen Grüßen Petra Obermoser Leiterin der Abteilung Marketing"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… Kunden Gewinnen Sehr geehrter Herr Schröder, zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz …",
+     "options": [
+      {
+       "key": "A",
+       "text": "auf"
+      },
+      {
+       "key": "B",
+       "text": "in"
+      },
+      {
+       "key": "C",
+       "text": "über"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… an einnem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte Antwortschreiben zzurück und bestellen Sie …",
+     "options": [
+      {
+       "key": "A",
+       "text": "einfach"
+      },
+      {
+       "key": "B",
+       "text": "immer"
+      },
+      {
+       "key": "C",
+       "text": "noch"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "27",
+     "text": "… Gleichzeitig nehmen Sie an einem Preisausschreiben (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mit"
+      },
+      {
+       "key": "B",
+       "text": "teil"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "30",
+     "text": "… der kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil – vorausgesetzt, Sie …",
+     "options": [
+      {
+       "key": "A",
+       "text": "noch"
+      },
+      {
+       "key": "B",
+       "text": "schon"
+      },
+      {
+       "key": "C",
+       "text": "schnell"
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "B B Zwischen unseren vor C C A . A . 23. schöne 26 natürlich 29 A bald schönen schön bereits schönes viele unbedingt C C ) ( Neuendorf, den…. Sehr geehrte Frau Bauer, ich habe Ihre Anzeige in der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe ich während meines Studiums viele Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, acht Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe. Am Anfang war es sehr schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen gelernt, die mir auch über die Kultur und das Lebenn in Portugal (38) haben. Ich glaube, dass meine Erfahrungen für viele andere Menschen, die auch im Ausland leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kameera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich gerne anrufen, meine Telefonnummer ist 07612/64788980. Ich würde mich freuen, bald von Ihnen zu hören. Mit freundlichen Grüßen KAROLINE POINTNER"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor …",
+     "answer": "G",
+     "explain": "Das Wort lautet: INTERESSIERT"
+    },
+    {
+     "id": "32",
+     "text": "… und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe …",
+     "answer": "K",
+     "explain": "Das Wort lautet: ÖFTER"
+    },
+    {
+     "id": "33",
+     "text": "… Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein …",
+     "answer": "J",
+     "explain": "Das Wort lautet: NUR"
+    },
+    {
+     "id": "34",
+     "text": "… Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, …",
+     "answer": "M",
+     "explain": "Das Wort lautet: VOR"
+    },
+    {
+     "id": "35",
+     "text": "… Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe. Am Anfang war es sehr …",
+     "answer": "C",
+     "explain": "Das Wort lautet: ARBEITEN"
+    },
+    {
+     "id": "36",
+     "text": "… schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) …",
+     "answer": "L",
+     "explain": "Das Wort lautet: UNBEKANNT"
+    },
+    {
+     "id": "37",
+     "text": "… (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen …",
+     "answer": "I",
+     "explain": "Das Wort lautet: MÖGLICH"
+    },
+    {
+     "id": "38",
+     "text": "… die mir auch über die Kultur und das Lebenn in Portugal (38) haben. Ich glaube, dass meine Erfahrungen für viele …",
+     "answer": "D",
+     "explain": "Das Wort lautet: ERZÄHLT"
+    },
+    {
+     "id": "39",
+     "text": "… leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kameera darüber erzählen. (40) Sie …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WÜRDE"
+    },
+    {
+     "id": "40",
+     "text": "… und ich (39) gerne auch vor der Kameera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich …",
+     "answer": "E",
+     "explain": "Das Wort lautet: FALLS"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "ALS"
+    },
+    {
+     "key": "B",
+     "text": "ANFANGEN"
+    },
+    {
+     "key": "C",
+     "text": "ARBEITEN"
+    },
+    {
+     "key": "D",
+     "text": "ERZÄHLT"
+    },
+    {
+     "key": "E",
+     "text": "FALLS"
+    },
+    {
+     "key": "F",
+     "text": "INFORMIERT"
+    },
+    {
+     "key": "G",
+     "text": "INTERESSIERT"
+    },
+    {
+     "key": "H",
+     "text": "MÖCHTEN"
+    },
+    {
+     "key": "I",
+     "text": "MÖGLICH"
+    },
+    {
+     "key": "J",
+     "text": "NUR"
+    },
+    {
+     "key": "K",
+     "text": "ÖFTER"
+    },
+    {
+     "key": "L",
+     "text": "UNBEKANNT"
+    },
+    {
+     "key": "M",
+     "text": "VOR"
+    },
+    {
+     "key": "N",
+     "text": "WÜRDE"
+    },
+    {
+     "key": "O",
+     "text": "ZWISCHEN"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "In Deutschland gibt es immer mehr Organisationen, die sich um alte und kranke Menschen.",
+     "answer": "r"
+    },
+    {
+     "id": "47",
+     "text": "Die Spitex hat versorgt alte oder kranke Menschen im Krankenhaus.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Die Spitex hat zwei große Aufgabenbereiche.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Es gibt Aufgaben, die nur von einer Krankenschwester gemacht werden dürfen.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Die Spitex kümmert sich nur um alte Leute.",
+     "answer": "f"
+    },
+    {
+     "id": "51",
+     "text": "Die Spitex bekommt Geld von den Krankenkassen.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Die Krankenkassen geben den größten Teil ihres Geldes für die Spitex aus.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Herr Maurer findet den Preis pro Stunde in Ordnung.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Die Spitex ist in der ganzen Schweiz eine private Organisation.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.",
+     "answer": "r"
+    },
+    {
+     "id": "57",
+     "text": "Die Firma liefert das bestellte Sofa am Dienstagnachmittag zwischen drei und sechs Uhr liefern.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Der Gasthof Lindner liegt neben einer Tankstelle.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Der Film Komiker wird mehrmals am Tag gezeigt.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Für den Abend wird kein Regen erwartet.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Ihr Freund Jan hat Ihnen folgende E-Mail geschrieben: Liebe(r)........ Ich sende Dir ganz viele Grüße aus Rom! Du weißt ja, wie sehr mir diese Stadt gefällt. Ich bin hier von morgens bis abends nur unterwegs. Diese Museen, Parks Plätze und natürlich das Essen – wunderbar! Gestern Abend war ich übrigens in einem Rockkonzert. Ich fand die Musik ganz toll und die Stimmung war super. Doch Leider ist mein Urlaub schon fast vorbei und in drei Tagen muss ich wieder zurück nach Deutschland. Welche Stadt ist eigentlich Deine Lieblingsstadt? Hast du schon Pläne für Deinen nächsten Urlaub? Vielleicht können wir uns ja mal wieder treffen. Herzliche Grüße Jan"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Ihre Lieblingsstadt",
+      "Welche Musik Sie mögen.",
+      "Ihre Pläne für den nächsten Urlaub.",
+      "Treffen mit Jan?."
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,756 @@
+{
+ "id": "modell-03",
+ "title": "Modelltest 3",
+ "subtitle": "58 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Arbeitsplatz: Bezahlung wichtiger als Zufriedenheit"
+    },
+    {
+     "key": "B",
+     "text": "Ausstellungseröffnung an bayerischem Gymnasium"
+    },
+    {
+     "key": "C",
+     "text": "Frauen: mehr Spaß am Beruf als Männer"
+    },
+    {
+     "key": "D",
+     "text": "Gründe für Zufriedenheit am Arbeitsplatz"
+    },
+    {
+     "key": "E",
+     "text": "Immer mehr Teilzeitarbeitsplätze für Männer"
+    },
+    {
+     "key": "F",
+     "text": "Karriere ist Männern weniger wichtig als Frauen"
+    },
+    {
+     "key": "G",
+     "text": "Technik für Kleinkinder"
+    },
+    {
+     "key": "H",
+     "text": "Technisches Museum vergibt Umwelt-und Technikpreis"
+    },
+    {
+     "key": "I",
+     "text": "Umwelt- und Technikpreis"
+    },
+    {
+     "key": "J",
+     "text": "Wünsche von berufstätigen Eltern"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Eine aktuelle Umfrage der Arbeiterkammer unter berufstätigen Eltern zeigt den dringenden Wunsch nach flexiblen Arbeitszeiten (60% der Eltern) und nach Kindergärten im oder in der Nähe des Betriebes (58%). Frauen verlangen aber deutlich mehr Teilzeitarbeitsplätze (50%) als Männer (36%). 52% aller Eltern wünschen eine Ersatzperson, die den Vater oder die Mutter bei Krankheit des Kindes im Betrieb vertritt. Die Arbeiterkammer fordert, dass sich Bedarf der Eltern orientieren.",
+     "answer": "J"
+    },
+    {
+     "id": "2",
+     "text": "MÜNCHEN: Schüler an bayerischen Gymnasien, die sich für Umwelt oder Technik interessieren, können sich auch dieses Jahr wieder um den Carl Friedrich von Martius Umwelt und Technikpreis bewerben. Bei diesem Wettbewerb werden Facharbeiten aus dem letzten Schuljahr bewertet. Nähere Informationen erhältlich beim GSF- Forschungszentrum unter der Telefonnummer 089/311 87 27 12.",
+     "answer": "I"
+    },
+    {
+     "id": "3",
+     "text": "WIEN. Eine einmalige Abteilung für drei- bis sechsjährige Kinder wurde im Technischen Museum (15, Mariahitferstraße 112 ) eröffnet. In einem speziell für Kinder eingerichteten Bereich können die jüngsten Besucher Technik angreifen. Dort gibt es unter anderem Plasmascheiben, die Blitze erzeugen, ein Laufrad und ein Hüpfklavier, mit dem die Kinder Töne erspringen können. Viel Spaß macht den Kleinen auch, in einem Elektroauto herumzukurven und sich in verschiedenen Zerrspiegeln zu betrachten.",
+     "answer": "G"
+    },
+    {
+     "id": "4",
+     "text": "HAMBURG. Männer haben mehr Karrierechancen, Frauen dafür mehr Freude am Beruf: Das ergab eine große Umfrage in Hamburg. Obwohl nur 8% der weiblichen Arbeitnehmer an ihre Aufstiegschancen glauben, geben 61% an, dass ihre Arbeit ihnen Spaß mache. Bei den Männer ist dieses Verhältnis 23 zu 57 Prozent.",
+     "answer": "C"
+    },
+    {
+     "id": "5",
+     "text": "Für Zufriedenheit am Arbeitsplatz kann Geld allein nicht entscheidend sein. Dies gilt in besonderen Maß für hochqualifizierte europäische Arbeitskräfte, wie eine vergleichende internationale Management-Studie zeigt. Sowohl in Europa wie auch unter japanischen und amerikanischen Managern wird der Möglichkeit, neben der Arbeit auch Zeit für das Privatleben zu haben, ein zentraler Stellenwert beigemessen. Viel stärker als in Japan spielt es unter europäischen Angestellten eine Rolle, dass die Arbeit Spaß macht. Die Analysen zeigen auch, dass neben dem Gehalt der Ruf des Unternehmens für die Arbeitsplatzwahl von europäischen Arbeitnehmern besonders wichtig ist.",
+     "answer": "D"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Die Sendung mit der Maus Eine Ausstellung über die berühmte Fernsehserie SPEYER. Mit dem Fragebogen in der Hand marschieren die Grundschüler durch das Historische Museum in Speyer. Wie heißt doch noch mal deer, der die Maus gezeichnet hat? Fragt Anna. Lisa entdeckt den Namen neben dem Zeichenpult. Frieddrich Streich kritzelt sie auf ihr Blatt. Allerdings erst, nachdem sie sich bei einem erwachsenen Ausstellungsbesucher vergewissert hat, dass diese Information auch richtig ist. Maus Oleum heißt die Ausstellung im Jungen Museum, die sich mit einem Stück Fernsehgeschichte beschäftigt. Sie zeigt über 30 Jahre von der Geschichte der Sendung mit der Maus. In den farbenfrohen Räumen wird gezeigt, was und wer hinter den Lach- und Sachgeschichten steckt. Eine Weltkarte beweist, dass die Maus international bekannt ist. Kaum ein Land, in dem die beliebte Kindersendung nicht zu sehen ist. Die orangefarbene Maus erklärt die Welt, indemm sie sselbstverständlich gewordene Dinge hinter fragt. Mit welchen Mitteln dies geschieht das zeigt die Ausstellung. Was steckt in einer Parkuhr? Wie funktioniert eine Luftpumpe? Woraus wird Creme gemacht? Wie kommen die Löcher in den Käser? Mit solchen und anderen Fragen verblüfft und fasziniert die Maus auch ihre großen Zuschauer, die sich schlagartig daran erinnern, dass sie einst entscheiden neugieriger waren. Wie Detektive, die im Auftrag der Kinder ganz genau hingucken, gehen die Macher an jede Sendung heran. Sie wollen genauso viel wissen und verstehen wie die Kinder selbst Deshalb wird zum Beispiel die Parkuhr einfach aufgeschraubt oder das Innere einer Fahrradpumpe gezeigt. An Vorschlägen, was die Maus erklären könnte fehlt es nicht. Woche für Woche kommen Briefe aus aller Welt. Einige davon sind auch in der Ausstellung zu lesen. Liebe Maus heißt es da. Wir sind heute an einem Druckzentrum vorbeigefahren. Bitte sage uns doch wie eine Zeitung gemacht wirdd Seit 1971 ist die Maus aktiv: Sie reist in die Vergangenheit oder blickt in die Zukunft sie beantwortet Fragen und lässt Kinder aus verschiedene Ländern selbst erzählen . Auch schwierige Themen wie Politik sind dank der Maus kinderleicht zu verstehen. Überall da, man in der Ausstellung etwas anfassen ausprobieren kann, wo kleine und große Geheimnisse gelüftet werden, dort staunen die kleinen Besucher. Bilder werden zum Laufen gebracht, Töne erzeugt und Kamers getestet. Die Maus ist inzwischen auch bei Künstlern beliebt. Sie ist auf Bildern, Postkarten und Pllakaten auf der ganzen Welt zu sehen. Schöner aber sind die kleinen Kunstwerke aus Kinderhand, die die Fernsehmacher im Laufe der Jahre gesammelt und Papier bunte Bilder und sogar ein Puppen Theater ganz aus Pappe alles für die Maus Öffnungszeiten Die Ausstellung in Speyer ist noch bis zum 27 Oktober geöffnet. Dienstags bis sonntags von 10 bis 18 mittwochs bis 20 Uhr. LANGUUAGE Tests"
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Die Maus",
+     "options": [
+      {
+       "key": "A",
+       "text": "führt Kinder durch das Museum."
+      },
+      {
+       "key": "B",
+       "text": "wird in einer Werbefirma gezeichnet."
+      },
+      {
+       "key": "C",
+       "text": "wurde von Friedrich Streich erfunden."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "7",
+     "text": "Das Thema der Ausstellung",
+     "options": [
+      {
+       "key": "A",
+       "text": "ist die Geschichte der Sendung mit der Maus."
+      },
+      {
+       "key": "B",
+       "text": "ist 30 Jahre Junges Museum."
+      },
+      {
+       "key": "C",
+       "text": "sind Kinder aus aller Welt."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "8",
+     "text": "Die Sendung mit der Maus",
+     "options": [
+      {
+       "key": "A",
+       "text": "erhält Post aus der ganzen Welt."
+      },
+      {
+       "key": "B",
+       "text": "hat es schwer, noch neue Themen zu finden."
+      },
+      {
+       "key": "C",
+       "text": "nimmt nur Vorschläge von Kindern an."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "9",
+     "text": "Die Ausstellung",
+     "options": [
+      {
+       "key": "A",
+       "text": "erlaubt den Kindern, mit den Ausstellungsstücken zu spielen."
+      },
+      {
+       "key": "B",
+       "text": "erlaubt den Kindern nicht, die Ausstellungsstücke anzufassen."
+      },
+      {
+       "key": "C",
+       "text": "ist nur für Kinder geöffnet."
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie möchten als Student nebenbei Geld verdienen. Sie reisen gern.",
+     "answer": "D"
+    },
+    {
+     "id": "12",
+     "text": "Sie interessieren sich für Literatur aus arabischen Ländern.",
+     "answer": "K"
+    },
+    {
+     "id": "13",
+     "text": "Ihr Freund möchte gerne in einem Kino arbeiten.",
+     "answer": "J"
+    },
+    {
+     "id": "14",
+     "text": "Sie wollen in einem Restaurant arbeiten und dort auch wohnen.",
+     "answer": "A"
+    },
+    {
+     "id": "15",
+     "text": "Ihre Freundin sucht einen Kindergartenplatz für ihren kleinen Sohn.",
+     "answer": "H"
+    },
+    {
+     "id": "16",
+     "text": "Sie möchten am nächsten Wochenende in eine Diskothek gehen.",
+     "answer": "X"
+    },
+    {
+     "id": "17",
+     "text": "Sie möchten tanzen lernen.",
+     "answer": "I"
+    },
+    {
+     "id": "18",
+     "text": "Sie haben große Berufserfahrung in Gaststätten. Jetzt möchten Sie ein Restaurant leiten.",
+     "answer": "F"
+    },
+    {
+     "id": "19",
+     "text": "Sie möchten Filme aus afrikanischen Ländern sehen.",
+     "answer": "B"
+    },
+    {
+     "id": "20",
+     "text": "Sie möchten einen Fotografiekurs besuchen und haben nur abends Zeit.",
+     "answer": "X"
+    }
+   ],
+   "bankImage": "img/m03-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Liebe Vollzwinkler, wir wohnen jetzt schon (21) sechs Wochen in unserer neuen Wohnung. Zwar ist immer noch nicht alles so eingerichtet, wie Wir (22) das wünschen .Aber wir wussten ja. Dass das einige Zeit (23) würde, bis alles fertig ist. Natürlich haben wir uns zuerst um das Kinderzimmer gekümmert. Unsere beiden Kinder durften sich die Farben für die Wände selbst (24) Sie haben sich für Blau und Gelb entschieden. Meinem Mann (25) das am Anfang gar nicht gefallen, aber jetzt hat er sich (26) gewöhnt. Jetzt fehlt eigentlich nur noch das Wohnzimmer. Wir warten auf die neuen Möbel (27) wir gekauft haben. In der (28) Woche kommen sie endlich. Dann können auch wieder Gäste zu uns kommen. Wir würden uns alle sehr freuen, wenn Sie und Ihr Mann uns sehr bald besuchen (29).Wir waren schließlich fünf Jahre lang Nachbarn! und trotz (30) schönen neuen Wohnung sind wir ein bisschen traurig, dass wir nicht mehr neben Ihnen wohnen. Viele Liebe Grüße Ihre Edeltraut Augenthaler"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "Liebe Vollzwinkler, wir wohnen jetzt schon (21) sechs Wochen in unserer neuen Wohnung. Zwar ist immer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "A ab"
+      },
+      {
+       "key": "B",
+       "text": "seit"
+      },
+      {
+       "key": "C",
+       "text": "vor"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… Kinder durften sich die Farben für die Wände selbst (24) Sie haben sich für Blau und Gelb entschieden. Meinem Mann …",
+     "options": [
+      {
+       "key": "A",
+       "text": "AA ausgesucht"
+      },
+      {
+       "key": "B",
+       "text": "aussuchen"
+      },
+      {
+       "key": "C",
+       "text": "aussuchten"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "25",
+     "text": "… Sie haben sich für Blau und Gelb entschieden. Meinem Mann (25) das am Anfang gar nicht gefallen, aber jetzt hat er sich …",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat"
+      },
+      {
+       "key": "B",
+       "text": "ist"
+      },
+      {
+       "key": "C",
+       "text": "wird"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "26",
+     "text": "… das am Anfang gar nicht gefallen, aber jetzt hat er sich (26) gewöhnt. Jetzt fehlt eigentlich nur noch das Wohnzimmer. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "daran"
+      },
+      {
+       "key": "B",
+       "text": "darüber"
+      },
+      {
+       "key": "C",
+       "text": "davon"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "27",
+     "text": "… nur noch das Wohnzimmer. Wir warten auf die neuen Möbel (27) wir gekauft haben. In der (28) Woche kommen sie endlich. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "das"
+      },
+      {
+       "key": "B",
+       "text": "den"
+      },
+      {
+       "key": "C",
+       "text": "die"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "28",
+     "text": "… warten auf die neuen Möbel (27) wir gekauft haben. In der (28) Woche kommen sie endlich. Dann können auch wieder Gäste …",
+     "options": [
+      {
+       "key": "A",
+       "text": "nächsten"
+      },
+      {
+       "key": "B",
+       "text": "nächster"
+      },
+      {
+       "key": "C",
+       "text": "nächstes"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "29",
+     "text": "… sehr freuen, wenn Sie und Ihr Mann uns sehr bald besuchen (29).Wir waren schließlich fünf Jahre lang Nachbarn! und trotz …",
+     "options": [
+      {
+       "key": "A",
+       "text": "worden"
+      },
+      {
+       "key": "B",
+       "text": "wurden"
+      },
+      {
+       "key": "C",
+       "text": "würden"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "… waren schließlich fünf Jahre lang Nachbarn! und trotz (30) schönen neuen Wohnung sind wir ein bisschen traurig, dass …",
+     "options": [
+      {
+       "key": "A",
+       "text": "unser"
+      },
+      {
+       "key": "B",
+       "text": "unserer"
+      },
+      {
+       "key": "C",
+       "text": "unseres"
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "Sehr geehrte Damen und Herren, vielen Dank für die (31) Zusendung der Informationsmaterialien. Ich interessiere mich sowohl für das Seminar Schutz gegen Computerviren als (32) für Einführung ins Internet. Dazu habe ich noch (33) Fragen: Ist die Veranstaltung Einführung ins Internet auch wirklich für Anfänger gedacht? Da ich noch gar keine Erfahrung habe, möchte ich mich (34) jetzt auf das Seminar vorbereiten. (35) Sie mir die Schulungsunterlagen bereits vorher schicken? Gibt es für die (36) Seminare noch genügend freie Plätze? Bis (37) muss ich mich spätestens anmelden? Und nun noch eine Frage zur Bezahlung: Auslandsüberweisungen sind sehr teuer, daher (38) ich wissen, (39) man im Voraus bezahlen muss oder auch vor Ort bar bezahlen kann. (40) ich auch eine Kursbestätigung am Ende des Seminars erhalten? Mit freundlichen Grüßen WILLY GATES"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AUCH"
+    },
+    {
+     "key": "B",
+     "text": "BEIDEN"
+    },
+    {
+     "key": "C",
+     "text": "EINE"
+    },
+    {
+     "key": "D",
+     "text": "EINIGE"
+    },
+    {
+     "key": "E",
+     "text": "KÖNNTEN"
+    },
+    {
+     "key": "F",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "G",
+     "text": "MÜSSEN"
+    },
+    {
+     "key": "H",
+     "text": "OB"
+    },
+    {
+     "key": "I",
+     "text": "SCHNELLE"
+    },
+    {
+     "key": "J",
+     "text": "SCHON"
+    },
+    {
+     "key": "K",
+     "text": "SOLL"
+    },
+    {
+     "key": "L",
+     "text": "SONDERN"
+    },
+    {
+     "key": "M",
+     "text": "VORNE"
+    },
+    {
+     "key": "N",
+     "text": "WANN"
+    },
+    {
+     "key": "O",
+     "text": "WERDE"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "Sehr geehrte Damen und Herren, vielen Dank für die (31) Zusendung der Informationsmaterialien. Ich interessiere …",
+     "answer": "I",
+     "explain": "Das Wort lautet: SCHNELLE"
+    },
+    {
+     "id": "32",
+     "text": "… sowohl für das Seminar Schutz gegen Computerviren als (32) für Einführung ins Internet. Dazu habe ich noch (33) …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AUCH"
+    },
+    {
+     "id": "33",
+     "text": "… als (32) für Einführung ins Internet. Dazu habe ich noch (33) Fragen: Ist die Veranstaltung Einführung ins Internet …",
+     "answer": "D",
+     "explain": "Das Wort lautet: EINIGE"
+    },
+    {
+     "id": "34",
+     "text": "… Da ich noch gar keine Erfahrung habe, möchte ich mich (34) jetzt auf das Seminar vorbereiten. (35) Sie mir die …",
+     "answer": "J",
+     "explain": "Das Wort lautet: SCHON"
+    },
+    {
+     "id": "35",
+     "text": "… möchte ich mich (34) jetzt auf das Seminar vorbereiten. (35) Sie mir die Schulungsunterlagen bereits vorher schicken? …",
+     "answer": "E",
+     "explain": "Das Wort lautet: KÖNNTEN"
+    },
+    {
+     "id": "36",
+     "text": "… bereits vorher schicken? Gibt es für die (36) Seminare noch genügend freie Plätze? Bis (37) muss ich …",
+     "answer": "B",
+     "explain": "Das Wort lautet: BEIDEN"
+    },
+    {
+     "id": "37",
+     "text": "… es für die (36) Seminare noch genügend freie Plätze? Bis (37) muss ich mich spätestens anmelden? Und nun noch eine …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WANN"
+    },
+    {
+     "id": "38",
+     "text": "… Bezahlung: Auslandsüberweisungen sind sehr teuer, daher (38) ich wissen, (39) man im Voraus bezahlen muss oder auch …",
+     "answer": "F",
+     "explain": "Das Wort lautet: MÖCHTE"
+    },
+    {
+     "id": "39",
+     "text": "… sind sehr teuer, daher (38) ich wissen, (39) man im Voraus bezahlen muss oder auch vor Ort bar …",
+     "answer": "H",
+     "explain": "Das Wort lautet: OB"
+    },
+    {
+     "id": "40",
+     "text": "… Voraus bezahlen muss oder auch vor Ort bar bezahlen kann. (40) ich auch eine Kursbestätigung am Ende des Seminars …",
+     "answer": "O",
+     "explain": "Das Wort lautet: WERDE"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Der Sprecher hat zu Hause keinen Computer.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher benutzt den Computer nur am Arbeitsplatz.",
+     "answer": "f"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin lehnt Computer ab.",
+     "answer": "r"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin hat kein großes Vertrauen zu Computern.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Die Sprecherin braucht den Computer im täglichen Leben.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Herr Bachinger hat ein Buch über Väter geschrieben.",
+     "answer": "r"
+    },
+    {
+     "id": "47",
+     "text": "Herr Bachinger hat vor zehn Monaten geheiratet.",
+     "answer": "f"
+    },
+    {
+     "id": "48",
+     "text": "Herr Bachinger meint, dass die Zeitungen mehr über moderne Familien berichten sollen.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Herr Bachinger konnte seinen Chef sofort überzeugen.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Hausarbeit war für Herrn Bachinger nichts Neues.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Seine Kollegen haben ihn anfangs sehr vermisst.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Herr Bachinger hat gegen viele Vorurteile kämpfen müssen.",
+     "answer": "f"
+    },
+    {
+     "id": "53",
+     "text": "Herr Bachinger hat das Buch für andere Väter geschrieben.",
+     "answer": "f"
+    },
+    {
+     "id": "54",
+     "text": "Er will erst wieder arbeiten gehen, wenn sein Sohn in die Schule kommt.",
+     "answer": "r"
+    },
+    {
+     "id": "55",
+     "text": "Herr Bachinger meint, dass Teilzeitarbeit für ihn das Beste sei.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.",
+     "answer": "r"
+    },
+    {
+     "id": "57",
+     "text": "Die Firma liefert das bestellte Sofa am Dienstag ab drei Uhr nachmittags.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Der Gasthof Lindner ist neben einer Tankstelle.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Der Film Komiker läuft täglich um 20 Uhr.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Das Wetter ist am Abend noch gut.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben folgende E-Mail von Ihrer Freundin Sophie bekommen: Liebe(r)........ wir haben lange nichts mehr voreinander gehört. Ich hoffe, es geht dir gut. Gibt es bei dir Neuigkeiten? Ich bin nun schon seit zwei Monaten in Würzburg, und mein neuer Job gefällt mir sehr gut. In der Firma fühle ich mich wohl, mit meinen Kollegen verstehe ich mich prima und die Arbeit macht mir großen Spaß. Allerdings habe ich ein Problem: Außer meinen Kollegen kenne ich hier in der Stadt noch niemanden. In meiner Freizeit bin ich oft allein und weiß nicht, was ich machen soll. Wie könnte ich neue Leute kennenlernen? Hast du vielleicht einen Tipp für mich? Würzburg ist wirklich eine schöne Stadt mit vielen Sehenswürdigkeiten. Hast du Lust, mich mal an einem Wochenende zu besuchen? Ich würde mich sehr freuen. Viele Grüße Sophie"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Was Sie selbst gerne in Ihrer Freizeit machen",
+      "Tipps für Sophie",
+      "Reaktion auf den Vorschlag"
+     ]
+    }
+   ]
+  }
+ ]
+}

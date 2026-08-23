@@ -1,0 +1,787 @@
+{
+ "id": "modell-02",
+ "title": "Modelltest 2",
+ "subtitle": "60 Aufgaben · 8 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Zufriedenheit im Job schützt vor Stress"
+    },
+    {
+     "key": "B",
+     "text": "Erfolgreiche Männer können auch gute Väter sein"
+    },
+    {
+     "key": "C",
+     "text": "Keiner lacht so fröhlich wie der Weihnachtsmann"
+    },
+    {
+     "key": "D",
+     "text": "Wie Männer und Frauen lachen"
+    },
+    {
+     "key": "E",
+     "text": "Weniger Arbeit weniger Stress"
+    },
+    {
+     "key": "F",
+     "text": "Schlechte Nachrichten? Sagen Sie es mit einem Lächeln"
+    },
+    {
+     "key": "G",
+     "text": "Der Beruf ist für Männer wichtiger als die Familie"
+    },
+    {
+     "key": "H",
+     "text": "Auch ältere Menschen leiden unter Stress"
+    },
+    {
+     "key": "I",
+     "text": "Frauen reagieren besser auf schlechte Nachrichten als Männer"
+    },
+    {
+     "key": "J",
+     "text": "Mit 70 Jahren macht das Leben am meistens Spaß"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Frauen lachen auf viele Arten Sie kichern glucksen und manchmal singen sie fast Bei Männern dagegen kommt das viel seltener vor. Aber gemeinsam ist Männern und Frauen, dass sie in Vokalen lachen die im Mundzentrum gebildet werden. Und das ist entscheidend: Nur wenn die Vokale im Mundzentrum gebildet werden, ist das Lachen für uns fröhlich und positiv. Damit ist bewiesen, dass das Lachen vom Weihnachtsmann, dass wie eine tiefes Ho, ho, ho klingt. Kaum als fröhlich empfunden wird. Denn dieser Laut wird im hinteren Teil des Mundraums gebildet. (aus einer deutschen Zeitung)",
+     "answer": "D"
+    },
+    {
+     "id": "2",
+     "text": "Viel Arbeit, viel Stress. Wer viel arbeitet muss nicht unnbedingt gestresst sein. Frauen in medizinischen Berufen zum Beispiel klagen trotz teilweise hoher Belastung deutlich weniger über stressbedingte Krankheiten als Raumpflegerinnen, Kindergärtnerinnen oder Berufsschullehrerinnen. Dies zeigt eine Untersuchung des Hamburger IPO Instituts, das für eine Studie 1000 Frauen und Männer befragt hat. Vor Stress schützen laut Studie ein angenehmes Betriebsklima, ein gutes Verhältnis zur Chefin oder zum Chef und die Möglichkeit, die eigene Arbeit selbstständig zu planen. (aus einer deutschen Zeitung)",
+     "answer": "A"
+    },
+    {
+     "id": "3",
+     "text": "Ein neues Buch zeigt, wie Männer Fähigkeiten aus dem Arbeitsleben auf die Erziehung übertragen können und so zu erfolgreichen Vätern werden. Da wird die gemeinsame Kindererziehung zur Partnerarbeit (oder sogar zum Joint Venture) geschicktes Verhandeln heißt, das Kind zu überzeugen, dass sie Zähne geputzt werden müssen, und der Familienurlaub hat alle Qualitäten einer Tagung oder eines Seminars: Man erhält die Gelegenheit, die Kinder intensiv zu studieren. (aus einer deutschen Zeitung)",
+     "answer": "B"
+    },
+    {
+     "id": "4",
+     "text": "Eine Studie der Universität Essex hat ergeben dass wir mit siebzig Jahren am glücklichsten sind. Zwar haben die meisten Menschen in diesem Alter gesundheitliche Probleme, aber dafür genießen sie viel Freizeit und haben keinen Stress mehr. Deshalb macht ihnen das Leben so viel Spaß wie nie zuvor. Die Studie besagt auch, dass wir einen ersten Höhepunkt der Lebensfreude mit fünfzehn Jahren erreichen. Danach geht es bergab zwischen dreißig und fünfzig Jahren tragen wir am meisten Verantwortung das Leben ist geprägt von Sachzwängen. (aus einer deutschen Zeitung)",
+     "answer": "J"
+    },
+    {
+     "id": "5",
+     "text": "Warum bleiben manche Managerinnen erfolgreich, obwohl sie Nachrichten mitteilen, die ihr Publikum lieber nicht hören möchte? Ganz einfach: Sie verkaufen die schlechte Nachricht mit Humor. Ein Londoner Soziologe hat während einer Studie beobachtet, dass gerade bei Reden unangenehmen Inhalts oft heiter gelacht wird. Das Lachen wird bewusst provoziert, etwa durch bestimmte Wörter oder durch ein eigenes breites Lächeln. Die fröhliche Stimmung soll dafür sorgen, dass die Zuhörenden das Gefühl haben würden mehr wissen als alle annderen. (aus einer deutschen Zeitung)",
+     "answer": "F"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Geheimnisse des Schlafes Schlafstörungen die meisten Ursachen sind harmlos Lange Zeit hat man geglaubt, dass der Schlaf nur so etwas ist wie der kleine Bruder des Todes Ein Zustand der Körper Energie spart und alles langsamer läuft. Erst in den 50 er Jahren des letzten Jahrhunderts fand man heraus dass schlafen etwas sehr Aktives ist und Nacht für Nacht in unterschiedlichen Abschnitten verläuft. Der Schweizer Schlafforscher Alexander Borbely haat diesen Vorgang mit einer Treppe verglichen, über die wir jede Nacht mehrmalss gehen. Zunächst sind wir wach, dann schlafen wir ein und gehen bis tief hinab in den Keller in einen tiefen Schlaf. Danach geht es wieder hoch in einen leichten Schlaf, der von lebhaften, intensiven Träumen und schnellen Augenbewegungen begleitet wird Daher wird diese Phase auch REM-Schlaf ( rapid-eye-movements = schnelle Augenbewegung) genannt. Dieser Abschnitt ist im Gegensatz zu den anderen Phasen mit etwa 20 Minuten sehr kurz, soll aber äußerst wichtig für die physische Erholung sein. Damit hat die Wissenschaft aber noch lange nicht alle Probleme des Schlafes gelöst. Erwiesen ist nur: Wir brauchen ihn zur körperlichen Erholung, auch wenn wir ihn manchmal als Zeitverschwendung empfinden – immerhin verbringen wir ein Drittel unseres Lebens mit schlafen. Warum können wir aber nicht immer sofort einschlafen, wenn müde sind? Tatsächlich klagen viele Menschen in den westlichen Industrienationen über gelegentliche oder dauernde Schlafstörungen. So muss unser Körper, ins besonders das Gehirn die Eindrücke des Tages erst einmal verarbeiten damit wir gesund schlafen. Diese System reagiert so sensibel, dass schon kleine Ursachen – äußere und innere – störend wirken können. Äußere Ursachen können sein: Lärm, eine ungewohnte Umgebung, ein zu spätes, zu rreichliches Essen, kälte oder wärme, alles wirkt sich auf unser Wohlbefinden und somit auch auf den Schlaf aus. Als innere Ursachen kommen Schmerzen, Angst oder Ärger über ungelöste Konflikte in Frage. Erkrankungen beeinflussen den Schlaf, auch Medikamente können eine störende Rolle spielen Alles was uns gedanklich stark beschäftigt, kann unseren Schlaf beeinträchtigen. Wer aber nur geleggentlich nachts aufwacht, oder auch einmal einige Tag schlecht schläft braucht sich keine Sorgen zu machen. Ein paar schlaflose Nächte lassen sich schnell wieder nachholen. Ein echte Schlafstörung liegt erst dann vor wenn unsere Leistungsfähigkeit oder unsere Gesundheit auf Dauer stark beeinträchtigt werden. Dann sollte man auf jeden Fall ärztlichen Rat suchen."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Der Schweizer Schlafforscher Alexander Borbety",
+     "options": [
+      {
+       "key": "A",
+       "text": "behauptet, dass der gesunde Schlaf gleichmäßig ist."
+      },
+      {
+       "key": "B",
+       "text": "beschäftigt sich seit 50 Jahren mit dem Thema Schlaf."
+      },
+      {
+       "key": "C",
+       "text": "meint, dass es beim Schlaf verschiedene Stufen gibt."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "7",
+     "text": "Während der Leichtschlafphase",
+     "options": [
+      {
+       "key": "A",
+       "text": "erholt man sich nicht gut."
+      },
+      {
+       "key": "B",
+       "text": "träumt man besonders viel."
+      },
+      {
+       "key": "C",
+       "text": "wacht man öfter auf."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "8",
+     "text": "Die Wissenschaft ist heute der Meinung, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "alle Probleme des Schlafes gelöst sind."
+      },
+      {
+       "key": "B",
+       "text": "der Schlaf der Körperlichen Erholung dient."
+      },
+      {
+       "key": "C",
+       "text": "man durch Schlafen viel Zeit verliert."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "Vor allem die Menschen in westlichen Ländern",
+     "options": [
+      {
+       "key": "A",
+       "text": "klagen darüber, dass sie schlecht schlafen können."
+      },
+      {
+       "key": "B",
+       "text": "können ohne Sorgen und Probleme schlafen."
+      },
+      {
+       "key": "C",
+       "text": "werden beim Schlafen gelegentlich gestört."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "10",
+     "text": "Zum Arzt sollen die Menschen gehen, die",
+     "options": [
+      {
+       "key": "A",
+       "text": "längere Zeit sehr schlecht schlafen."
+      },
+      {
+       "key": "B",
+       "text": "manchmal nachts aufwachen."
+      },
+      {
+       "key": "C",
+       "text": "zu viel und zu lange schlafen."
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Ihr Bekannter ist Sportlehrer und sucht eine Nebenbeschäftigung in einem Verein.",
+     "answer": "E"
+    },
+    {
+     "id": "12",
+     "text": "Ein guter Bekannter (39) sucht eine Partnerin. Er ist reiselustig und geht spazieren.",
+     "answer": "F"
+    },
+    {
+     "id": "13",
+     "text": "Ihre Freundin ist besonders hübsch, Studentin und sucht für die Semesterferien im Sommer einen Job.",
+     "answer": "H"
+    },
+    {
+     "id": "14",
+     "text": "Sie suchen für das kommende Wochenende eine Konzertkarte.",
+     "answer": "X"
+    },
+    {
+     "id": "15",
+     "text": "Ihre 30-jährige Freundin hat in einem Hotel in Spanien gearbeitet und sucht jetzt eine ähnliche Arbeit in Deutschland.",
+     "answer": "C"
+    },
+    {
+     "id": "16",
+     "text": "Ihre 55-jährige Nachbarin sucht jemanden, mit dem sie reisen und klassische Konzerte besuchen kann.",
+     "answer": "A"
+    },
+    {
+     "id": "17",
+     "text": "Sie möchten lernen, wie Sie kleinere Reparaturen an Ihrem Auto selbst machen können.",
+     "answer": "K"
+    },
+    {
+     "id": "18",
+     "text": "Die Tochter Ihrer russischen Bekannten sucht eine Au-pair-Stelle in Deutschland. Sie ist erst 18 Jahre alt.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Ihre 21-jährige Bekannte sucht eine Stelle als Kindergärtnerin.",
+     "answer": "I"
+    },
+    {
+     "id": "20",
+     "text": "Eine Freundin braucht ein paar Ratschläge, wie sie erfolgreich eine neue Arbeit finden kann.",
+     "answer": "B"
+    }
+   ],
+   "bankImage": "img/m02-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Herrn Das COMPUTER-MAGAZIN Matthias Buschhaus Alte Gasse 19 D-80344 München München, den 21. Mai…. Ihre Kündigung vom 15. Mai Sehr geehrter Herr Buschhaus, schade, (21) Sie CHIP nicht weiter beziehen (22). Die Belieferung beenden wir mit unserem (23) Heft. Sie erhalten daher die darauf folgende Ausgabe nicht (24). Wir (25) Sie natürlich nur ungern als Abonnenten und würden uns freuen, wenn Sie CHIP (26) ab und zu am Kiosk kaufen. Vielleicht gelingt es uns, (27) wieder von der Qualität von CHIP zu überzeugen. (28) Sie noch Fragen haben oder sich wieder für ein Abonnement entscheiden, stehen wir Ihnen gerne unter (29) Nummer 0781/639 6259 von montags bis freitags von 8 bis 18 Uhr zur Verfügung. Mit (30) Grüßen Ihr CHIP-Aboservice"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… vom 15. Mai Sehr geehrter Herr Buschhaus, schade, (21) Sie CHIP nicht weiter beziehen (22). Die Belieferung …",
+     "options": [
+      {
+       "key": "A",
+       "text": "darum"
+      },
+      {
+       "key": "B",
+       "text": "dass"
+      },
+      {
+       "key": "C",
+       "text": "weil"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "22",
+     "text": "… Buschhaus, schade, (21) Sie CHIP nicht weiter beziehen (22). Die Belieferung beenden wir mit unserem (23) Heft. Sie …",
+     "options": [
+      {
+       "key": "A",
+       "text": "möchte"
+      },
+      {
+       "key": "B",
+       "text": "möchten"
+      },
+      {
+       "key": "C",
+       "text": "möchtest"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "23",
+     "text": "… beziehen (22). Die Belieferung beenden wir mit unserem (23) Heft. Sie erhalten daher die darauf folgende Ausgabe …",
+     "options": [
+      {
+       "key": "A",
+       "text": "nächste"
+      },
+      {
+       "key": "B",
+       "text": "nächsten"
+      },
+      {
+       "key": "C",
+       "text": "nächstes"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… Sie erhalten daher die darauf folgende Ausgabe nicht (24). Wir (25) Sie natürlich nur ungern als Abonnenten und …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mehr"
+      },
+      {
+       "key": "B",
+       "text": "noch"
+      },
+      {
+       "key": "C",
+       "text": "nur"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "25",
+     "text": "… daher die darauf folgende Ausgabe nicht (24). Wir (25) Sie natürlich nur ungern als Abonnenten und würden uns …",
+     "options": [
+      {
+       "key": "A",
+       "text": "verlieren"
+      },
+      {
+       "key": "B",
+       "text": "verliert"
+      },
+      {
+       "key": "C",
+       "text": "verloren"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "26",
+     "text": "… als Abonnenten und würden uns freuen, wenn Sie CHIP (26) ab und zu am Kiosk kaufen. Vielleicht gelingt es uns, …",
+     "options": [
+      {
+       "key": "A",
+       "text": "obwohl"
+      },
+      {
+       "key": "B",
+       "text": "trotz"
+      },
+      {
+       "key": "C",
+       "text": "trotzdem"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "27",
+     "text": "… ab und zu am Kiosk kaufen. Vielleicht gelingt es uns, (27) wieder von der Qualität von CHIP zu überzeugen. (28) Sie …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Ihnen"
+      },
+      {
+       "key": "B",
+       "text": "sie"
+      },
+      {
+       "key": "C",
+       "text": "Sie"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "… uns, (27) wieder von der Qualität von CHIP zu überzeugen. (28) Sie noch Fragen haben oder sich wieder für ein Abonnement …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Aber"
+      },
+      {
+       "key": "B",
+       "text": "Falls"
+      },
+      {
+       "key": "C",
+       "text": "Wann"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "29",
+     "text": "… ein Abonnement entscheiden, stehen wir Ihnen gerne unter (29) Nummer 0781/639 6259 von montags bis freitags von 8 bis …",
+     "options": [
+      {
+       "key": "A",
+       "text": "das"
+      },
+      {
+       "key": "B",
+       "text": "der"
+      },
+      {
+       "key": "C",
+       "text": "die"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "30",
+     "text": "… montags bis freitags von 8 bis 18 Uhr zur Verfügung. Mit (30) Grüßen Ihr CHIP-Aboservice",
+     "options": [
+      {
+       "key": "A",
+       "text": "freundlich"
+      },
+      {
+       "key": "B",
+       "text": "freundlichem"
+      },
+      {
+       "key": "C",
+       "text": "freundlichen"
+      }
+     ],
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "Sehr geehrter Herr Maier, ich habe Ihre Anzeige in der Zeitung vom letzten (31) gelesen und interessiere mich sehr (32) das Angebot. Ich (33) mit meiner Mutter und ihrer Schwester, die beide schon etwas ältere Damen sind, im September ein paar (34) Urlaub machen und benötige daher einige Informationen. Ist die Benutzung des Hallenbads und der Sauna im Preis enthalten oder (35) wir diese extra bezahlen? Weiters würde mich noch interessieren, (36) Pensionisten eine Ermäßigung bekommen. Sie schreiben darüber leider (37) in Ihrer Anzeige. (38) möchte ich wissen, ob man in der Gegend um das Hotel einfache Wanderungen unternehmen kann. Ich wäre Ihnen sehr dankbar, (39) Sie mir Bildmaterial zum Hotel und der Landschaft sowie eine Preisliste zukommen lassen könnten. Ich bedanke mich im(40) für die Informationen. Mit freundlichen Grüßen ANNELIESE SCHNEEBERGER"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AUSSERDEM"
+    },
+    {
+     "key": "B",
+     "text": "DÜRFEN"
+    },
+    {
+     "key": "C",
+     "text": "ERSTENS"
+    },
+    {
+     "key": "D",
+     "text": "FÜR"
+    },
+    {
+     "key": "E",
+     "text": "KEINES"
+    },
+    {
+     "key": "F",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "G",
+     "text": "MÜSSEN"
+    },
+    {
+     "key": "H",
+     "text": "NICHTS"
+    },
+    {
+     "key": "I",
+     "text": "OB"
+    },
+    {
+     "key": "J",
+     "text": "OBWOHL"
+    },
+    {
+     "key": "K",
+     "text": "TAGE"
+    },
+    {
+     "key": "L",
+     "text": "ÜBER"
+    },
+    {
+     "key": "M",
+     "text": "VORAUS"
+    },
+    {
+     "key": "N",
+     "text": "WENN"
+    },
+    {
+     "key": "O",
+     "text": "WOCHENENDE"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… Maier, ich habe Ihre Anzeige in der Zeitung vom letzten (31) gelesen und interessiere mich sehr (32) das Angebot. Ich …",
+     "answer": "O",
+     "explain": "Das Wort lautet: WOCHENENDE"
+    },
+    {
+     "id": "32",
+     "text": "… vom letzten (31) gelesen und interessiere mich sehr (32) das Angebot. Ich (33) mit meiner Mutter und ihrer …",
+     "answer": "D",
+     "explain": "Das Wort lautet: FÜR"
+    },
+    {
+     "id": "33",
+     "text": "… gelesen und interessiere mich sehr (32) das Angebot. Ich (33) mit meiner Mutter und ihrer Schwester, die beide schon …",
+     "answer": "F",
+     "explain": "Das Wort lautet: MÖCHTE"
+    },
+    {
+     "id": "34",
+     "text": "… schon etwas ältere Damen sind, im September ein paar (34) Urlaub machen und benötige daher einige Informationen. …",
+     "answer": "K",
+     "explain": "Das Wort lautet: TAGE"
+    },
+    {
+     "id": "35",
+     "text": "… des Hallenbads und der Sauna im Preis enthalten oder (35) wir diese extra bezahlen? Weiters würde mich noch …",
+     "answer": "G",
+     "explain": "Das Wort lautet: MÜSSEN"
+    },
+    {
+     "id": "36",
+     "text": "… extra bezahlen? Weiters würde mich noch interessieren, (36) Pensionisten eine Ermäßigung bekommen. Sie schreiben …",
+     "answer": "I",
+     "explain": "Das Wort lautet: OB"
+    },
+    {
+     "id": "37",
+     "text": "… eine Ermäßigung bekommen. Sie schreiben darüber leider (37) in Ihrer Anzeige. (38) möchte ich wissen, ob man in der …",
+     "answer": "H",
+     "explain": "Das Wort lautet: NICHTS"
+    },
+    {
+     "id": "38",
+     "text": "… Sie schreiben darüber leider (37) in Ihrer Anzeige. (38) möchte ich wissen, ob man in der Gegend um das Hotel …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AUSSERDEM"
+    },
+    {
+     "id": "39",
+     "text": "… unternehmen kann. Ich wäre Ihnen sehr dankbar, (39) Sie mir Bildmaterial zum Hotel und der Landschaft sowie …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WENN"
+    },
+    {
+     "id": "40",
+     "text": "… Preisliste zukommen lassen könnten. Ich bedanke mich im(40) für die Informationen. Mit freundlichen Grüßen ANNELIESE …",
+     "answer": "M",
+     "explain": "Das Wort lautet: VORAUS"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Herr Pawliczek erledigt alle seine Einkäufe im Internet.",
+     "answer": "r"
+    },
+    {
+     "id": "42",
+     "text": "Frau Zimmermann legt beim Einkaufen großen Wert auf persönlichen Kontakt.",
+     "answer": "f"
+    },
+    {
+     "id": "43",
+     "text": "Frau Schmidt findet zu Hause nicht genug Ruhe, um im Internet einzukaufen.",
+     "answer": "r"
+    },
+    {
+     "id": "44",
+     "text": "Frau Ruttnigg ist vom Einkaufen im Internet nicht überzeugt.",
+     "answer": "f"
+    },
+    {
+     "id": "45",
+     "text": "Herr Krause kauft seine Medikamente am liebsten in der nächsten Stadt.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Herr Thurnherr ist Chef in einem großen Reisebüro in Bern.",
+     "answer": "r"
+    },
+    {
+     "id": "47",
+     "text": "Jährlich wollen über 100 Personen eine Ausbildung in einem Reisebüro machen.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Während der Ausbildung kann man noch keine Studienreisen machen.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Herr Thurnherr meint, die Arbeit in einem Reisebüro sei anstrengend.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "In einem Reisebüro muss man oft Überstunden machen.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "In einem Reisebüro verdient man gut.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Auf Studienreisen besichtigt man viele Hotels.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Im schriftlichen Teil des Tests wird vor allem politisches Wissen geprüft.",
+     "answer": "f"
+    },
+    {
+     "id": "54",
+     "text": "Jährlich können 50 Jugendliche an einem Eignungstest teilnehmen.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Das Reisebüro muss für die Fehler der Mitarbeitenden bezahlen.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Sie müssen in Ingolstadt die Regionalbahn nach Regensburg nehmen.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Clara kann wegen einer Prüfung die Theaterkarten nicht abholen.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Im Schwarzwald können die Straßen morgen glatt werden",
+     "answer": "f"
+    },
+    {
+     "id": "59",
+     "text": "Der Liederabend findet zu einem späteren Termin statt",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Im Untergeschoss gibt es Winterkleidung zum halben Preis.",
+     "answer": "r"
+    }
+   ]
+  }
+ ]
+}

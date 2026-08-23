@@ -1,0 +1,795 @@
+{
+ "id": "modell-09",
+ "title": "Modelltest 9",
+ "subtitle": "60 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Familienbildung Schwerpunkt Beruf und Familie"
+    },
+    {
+     "key": "B",
+     "text": "Demonstration gegen Fluglärm b)"
+    },
+    {
+     "key": "C",
+     "text": "Flughafen Frankfurt wird 10 Jahre"
+    },
+    {
+     "key": "D",
+     "text": "Flughafen Frankfurt beliebter Veranstaltungsort"
+    },
+    {
+     "key": "E",
+     "text": "Experten gegen Vergrößerung des Flughafens"
+    },
+    {
+     "key": "F",
+     "text": "Diskussion über Flughafen und Arbeitsplätze"
+    },
+    {
+     "key": "G",
+     "text": "Neue Kurse: Spiele für Mütter und Kinder"
+    },
+    {
+     "key": "H",
+     "text": "Umwelt und Flughafen: Ein Informationsabend der Bürger"
+    },
+    {
+     "key": "I",
+     "text": "Neue Kurse für Kinder"
+    },
+    {
+     "key": "J",
+     "text": "Neue Kurse: Museumsführung für junnge Väter"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Der Frankfurter Flughafen wird weiter ausgebaut. Eine Gruppe von Frankfurter Bürgern aus den östlichen Stadtteilen, die sich seit Jahren aktiv für den Naturschutz und die Umwelt einsetzt, lädt für Donnerstag dieser Woche um 19.30 Uhr zu einem Informationsabend über den Ausbau des Frankfurter Flughafens ein. Im Bürgerhaus Ostend, Parkstraße 24, Clubraurn 12, werden verschiedene Sprecher zu hören sein. Die Gruppe möchte Antworten auf folgende Fragen suchen: Wie viel Lärm durch Flugzeuge verträgt die Stadt? Oder Welche Auswirkungen hat der Flugverkehr auf Umwelt und Natur?",
+     "answer": "H"
+    },
+    {
+     "id": "2",
+     "text": "Der Frankfurter Flughafen erfreut sich bei vielen Firmen als beliebter Ort für Veranstaltungen und Tagungen. Dies zeigt ein Bericht des Frankfurter Flughafens, derr beim zehnjährigen Jubiläum des Kongresszentruns vorgelegt wurde. Im Jubiläumsjahr haben am Frankfurter Flughafen 6800 Veranstaltungen mit insgesamt 72000 Teilnehmern stattgefunden. Im Jahr davor waren es nur 6300 Veranstaltungen mit 70000 Gästen. Im Kongresszentrum, das direkt gegenüber dem Hauptgebäude des Flughafens liegt, gibt es 28 Konferenzräume für bis zu 200 Teilnehmer. Modernste Technik wie Laptop-Anschlüsse und Internetzugänge in allen Konferenzräumen sind ebenso vorhanden, wie ein Dolmetscherdienst und verschiedene Speisemöglichkeiten. Eine transportable Videokonferenz-Anlage ermöglicht Verbindungen in die ganze Welt.",
+     "answer": "D"
+    },
+    {
+     "id": "3",
+     "text": "Eine Bürgergruppe mit dem Namen Südliches Frankfurt lädt für Montag kommender Woche, um 19.30 Uhr ins Pfarrhaus St. Mauritius, Mauritiusstraße 14, zu einer öffentlichen Expertenbefragung zum Thema Arbeitsplätze am Frankfurter Flughafen ein. Der Gruppe liegen Berichte und Daten vor, die nach den Worten der Sprecher der Gruppe sehr fantastisch und zweifelhaft sind. Deshalb hat die Bürgergruppe Südliches Frankfurt den Personalleiter des Frankfurter Flughafens, einen Experten aus dem Wirtschaftsministerium, einen bekannten Stadtentwicklungsplaner und einen Soziologen, der sich mit der Arbeitsplatzentwicklung in der Frankfurter Region beschäftigt, eingeladen. Im Anschluss an die Vorträge der Experten haben die Gäste Zeit, Fragen zu stellen.",
+     "answer": "F"
+    },
+    {
+     "id": "4",
+     "text": "Das neue Halbjahresprogramm der Evangelischen Familienbildungsstätte bringt eine Übersicht über viele Veranstaltungen. Neben Kursen wie Geburtsvorbereitung und Babypflege steht diesmal das Thema Berufsttätige Eltern im Mittelpunkt. In Gruppen und Kursen vor allemm für Frauen geht es darum, wie sich nach der Geburt eines Kindes Beruf und Familie miteinander vereinbaren lassen. Das Verhältnis zwischen Mann und Frau spielt eine große Rolle im Angebot der Familienbildung; hierzu gibt es wieder spezielle Programme nur für Frauen oder nur für Männer. Auch zum Verhältnis der Generationen (Großeltern und Enkelkinder) gibt es wieder Angebote. Darüber hinaus wartet das Programm mit Kursen für Entspannung und Zeitmanagement auf, die bei Fragen des Alltags helfen wollen.",
+     "answer": "A"
+    },
+    {
+     "id": "5",
+     "text": "Die Volkshochschule Dornbirn bietet in den kommenden Wochen neue Kurse an. Am Mittwoch nächster Woche beginnen zwei Malkurse für Kinder. Zweieinhalb- bis vierjährige Kinder treffen sich um 15.30 Uhr, Kinder im Alter von fünf und sechs Jahren um 17.00 Uhr. Für Kinder im Alter zwischen eineinhalb und sechs Jahren und ihre Väter beginnt am Samstag um 10.00 Uhr eine feste Vater-Kind-Gruppe. Am darauf-folgenden Samstag gibt es dann auch ein Treffen für Väter und Kinder bis dreieinhalb Jahren. Etwas anderes ist die Kultur- und Kreativwerkstatt am Montag nächster Woche. Aus Ton und Erde sollen Figuren nach afrikanischen Beispielen gebastelt werden. Zur Vorbereitung treffen sich die Teilnehmer am kommenden Montag zuerst im Museum. Anmeldung spätestens morgen bis 15.00 Uhr.",
+     "answer": "I"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Computerprobleme ein Kinderspiel Anne und Melanie (beide 6) stehen Erzieherinnen mit Vorschlägen hilfreich zur Seite Von Christiane Altenberger Sie sind die Problemlöser im Kindergarten an der Munckerstraße. Wenn das Malprogram spinnt, plötzlich ein Spiel auftaucht, das keiner kennt, dann rufen die Erzieherinnen nach Anne und Melanie. Die sind zwar erst sechs Jahre alt, aber mit den Computerspielen kennen sie sich aus. Die Kinder wissen manchmal mehr als wir sagt Eva Schilling. Leiterin des Kindergartens. Gelernt haben die beiden ihr Know-how bei Multimedia- Landschaften für Kinder, einem Projekt, das das Schulamt zusammen mit dem Studio im Netzz gestartet hat. Im Rahmen dieses Projekts werden in städtischen Kindergärten zwei Wanderstationen mit je drei Multtimedia- Computern und einem Farbdrucker installiert. Die Stationen wandern durch 14 Kindergärten, wo sie jeweils für vier Wochen installiert werden. Mit dabei in den Kindergärten: ein ganzer Satz von Spiel – Software. Vierjährige am Computer? In Pädagogen kreisen sind viele Berührungsängste da, weiß Edith llg, Fachberaterin für Kindergärten beim Schulamt, aber wir können uns aus dieser Entwicklung nicht ausklinken. Die Kinder wollen sich mit ihrer Umwelt auseinandersetzen. Angefangen hat diese Auseinandersetzung im Studio im Netz – 193 Kinder waren eingeladen, um erste Erfahrungen am Computer zu sammeln. Die Kinder waren absolut begeistert, haben immer wieder gefragt, wann gehen wir da wieder hin, so Frau llg. Bevor jedoch die Computer in die Kindergärten kamen, waren die Eltern aufzuklären. Bei manchen Eltern löste das Stichwort Computer akute Ängste aus nach dem Motto: Mein fröhliches, gesundes Kind setzt sich vor den Computer und steht sechs Stunden später krank,, sprachlos und einsam wieder auf. Diese Ängste haben sich inzwischen gelegt und die Erfahrung vor Ort zeigt, dass sie weitgehend über flüssig sind. Die Erzieherinnen achten auch darauf, dass die Kinder nie länger als 15 bis 20 Minuten vor den Computern sitzen, und holen vor allem kreative Software auf den Billdschirm. Das einsame Dämmern vor dem Computer ist wohl ohnehin eher Sache der Erwachsenen – die Kinder spielen immer zu zweit oder zu dritt an der Maschine. Eva Schilling hat beobachtet, dass die Kinder am Computer sehr friedlich miteinander umgehen, sie helfen sich gegenseitig, es gibt wenig Konflikte. Dabei entwickeln gerade Kinder, die sich sonst nur schwer aauf etwas konzentrieren können, plötzlich ungeahnte Konzentrationszeiten. Eva Schilling kann sich deshalb die Computer als Dauereinrichtung im Kindergarten vorstellen."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Das Schulamt hat ein Projekt gestartet, bei dem",
+     "options": [
+      {
+       "key": "A",
+       "text": "Computer in Kindergärten aufgestellt werden."
+      },
+      {
+       "key": "B",
+       "text": "Computerspiele für Vierjährige entwickelt werden sollen."
+      },
+      {
+       "key": "C",
+       "text": "Kinder neue Farbdrucker ausprobieren sollen."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "7",
+     "text": "Die Kinder",
+     "options": [
+      {
+       "key": "A",
+       "text": "hatten großen Spaß bei dem Projekt."
+      },
+      {
+       "key": "B",
+       "text": "wollten lieber draußen im Freien spielen."
+      },
+      {
+       "key": "C",
+       "text": "wussten nicht, wann sie ins Studio im Netz gehen sollten."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "8",
+     "text": "Eltern fürchten, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "der Computer ihren Kindern schadet."
+      },
+      {
+       "key": "B",
+       "text": "ihre Kinder nicht so früh aufstehen können."
+      },
+      {
+       "key": "C",
+       "text": "ihre Kinder vor dem Computer Angst haben."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "9",
+     "text": "Die Erzieherinnen",
+     "options": [
+      {
+       "key": "A",
+       "text": "arbeiten jeden Tag 15 bis 20 Minuten am Computer."
+      },
+      {
+       "key": "B",
+       "text": "spielen immer mit zwei oder drei Kindern am Computer."
+      },
+      {
+       "key": "C",
+       "text": "wählen für die Kinder die Software aus."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "10",
+     "text": "Wenn die Kinder am Computer sitzen, dann",
+     "options": [
+      {
+       "key": "A",
+       "text": "gibt es häufig Streit."
+      },
+      {
+       "key": "B",
+       "text": "hilft ein Kind dem anderen."
+      },
+      {
+       "key": "C",
+       "text": "können sich die meisten nicht lange konzentrieren."
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie wollen am Wochenende gerne in ein Klavierkonzert gehen.",
+     "answer": "E"
+    },
+    {
+     "id": "12",
+     "text": "Sie sind in Füssen und wollen am Montag ins Museum gehen.",
+     "answer": "F"
+    },
+    {
+     "id": "13",
+     "text": "Sie sind in Süddeutschland im Urlaub und möchten gerne eine bayerische Spezialität essen.",
+     "answer": "B"
+    },
+    {
+     "id": "14",
+     "text": "Sie haben sich mit Bekannten zu einem Fischessen verabredet.",
+     "answer": "K"
+    },
+    {
+     "id": "15",
+     "text": "Sie sind in Bayern und wollen Käsespezialitäten einkaufen.",
+     "answer": "C"
+    },
+    {
+     "id": "16",
+     "text": "Sie möchten einen Deutschkurs in Wien besuchen.",
+     "answer": "J"
+    },
+    {
+     "id": "17",
+     "text": "Ihr 16 jähriger Sohn soll in den Ferien im Ausland Englisch lernen.",
+     "answer": "H"
+    },
+    {
+     "id": "18",
+     "text": "Sie interessieren sich für einen Sprachkurs auf CD.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Sie wollen, dass Ihre 10- jährige Tochter in den Ferien eine Fremdsprache lernt.",
+     "answer": "X"
+    },
+    {
+     "id": "20",
+     "text": "Eine Bekannte will ihren Geburtstag in einem Restaurant feiern und dort auch übernachten.",
+     "answer": "L"
+    }
+   ],
+   "bankImage": "img/m09-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Liebe Catherine, seit ich dir letzte Mal von meinem Sprachhaufenhalt in der Schweiz (21) habe, ist viel passiert. Ich kenne (22) Land jetzt schon recht gut. Die Schweiz ist ja wirklich nicht groß. (23) in jeder Gegend wird ein anderer Dialekt oder gar eine andere Sprache gesprochen. Das ist (24) mich fast unglaublich! Bei uns in Australien fährt man mit dem Auto 24 Stunden lang geradeaus, und (25)man ankommt, dann sprechen die Leute dort immer noch dieselbe Sprache. Am Anfang hat mich das Sprachgemisch (26) sehr verwirrt , aber (27)verstehe ich fast alles, wenn jemand auf Schweizerdeutsch zu mir spricht. Ich kann aber nur auf Hochdeutsch antworten. Zwischen der Schule hier und unserem Schulsystem in Australien gibt es einige (28) : In der Schweiz sprechen die Lehrer viel und die Schüler (29) Vieles im Kopf behalten oder aufschreiben. In Australien arbeiten wir meistens im Rahmen von Projekten und machen eigentlich alle Aufgaben auf (30) Computer. Viele Grüße Jack"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… dir letzte Mal von meinem Sprachhaufenhalt in der Schweiz (21) habe, ist viel passiert. Ich kenne (22) Land jetzt schon …",
+     "options": [
+      {
+       "key": "A",
+       "text": "erzähle"
+      },
+      {
+       "key": "B",
+       "text": "erzählen"
+      },
+      {
+       "key": "C",
+       "text": "erzählt"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "22",
+     "text": "… in der Schweiz (21) habe, ist viel passiert. Ich kenne (22) Land jetzt schon recht gut. Die Schweiz ist ja wirklich …",
+     "options": [
+      {
+       "key": "A",
+       "text": "diese"
+      },
+      {
+       "key": "B",
+       "text": "diesen"
+      },
+      {
+       "key": "C",
+       "text": "dieses"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "23",
+     "text": "… schon recht gut. Die Schweiz ist ja wirklich nicht groß. (23) in jeder Gegend wird ein anderer Dialekt oder gar eine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "aber"
+      },
+      {
+       "key": "B",
+       "text": "obwohl"
+      },
+      {
+       "key": "C",
+       "text": "sondern"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "24",
+     "text": "… Dialekt oder gar eine andere Sprache gesprochen. Das ist (24) mich fast unglaublich! Bei uns in Australien fährt man …",
+     "options": [
+      {
+       "key": "A",
+       "text": "an"
+      },
+      {
+       "key": "B",
+       "text": "für"
+      },
+      {
+       "key": "C",
+       "text": "vor"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "25",
+     "text": "… fährt man mit dem Auto 24 Stunden lang geradeaus, und (25)man ankommt, dann sprechen die Leute dort immer noch …",
+     "options": [
+      {
+       "key": "A",
+       "text": "als"
+      },
+      {
+       "key": "B",
+       "text": "wann"
+      },
+      {
+       "key": "C",
+       "text": "wenn"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "26",
+     "text": "… dieselbe Sprache. Am Anfang hat mich das Sprachgemisch (26) sehr verwirrt , aber (27)verstehe ich fast alles, wenn …",
+     "options": [
+      {
+       "key": "A",
+       "text": "denn"
+      },
+      {
+       "key": "B",
+       "text": "ganz"
+      },
+      {
+       "key": "C",
+       "text": "schon"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "28",
+     "text": "… hier und unserem Schulsystem in Australien gibt es einige (28) : In der Schweiz sprechen die Lehrer viel und die Schüler …",
+     "options": [
+      {
+       "key": "A",
+       "text": "unterschied"
+      },
+      {
+       "key": "B",
+       "text": "unterschiede"
+      },
+      {
+       "key": "C",
+       "text": "unterschieden"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "29",
+     "text": "… : In der Schweiz sprechen die Lehrer viel und die Schüler (29) Vieles im Kopf behalten oder aufschreiben. In Australien …",
+     "options": [
+      {
+       "key": "A",
+       "text": "brauchen"
+      },
+      {
+       "key": "B",
+       "text": "haben"
+      },
+      {
+       "key": "C",
+       "text": "müssen"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "… von Projekten und machen eigentlich alle Aufgaben auf (30) Computer. Viele Grüße Jack",
+     "options": [
+      {
+       "key": "A",
+       "text": "dem"
+      },
+      {
+       "key": "B",
+       "text": "den"
+      },
+      {
+       "key": "C",
+       "text": "der"
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "QUANTUM-SYSTEM Das Lotterie Systemspiel Otto – Suhr- Allee 100. D- 10120 Berlin Sehr geehrte Lottospieler, wer möchte nicht auch (31) bei sechs Richtigen im Lotto dabei sein? Vertrauen Sie beim Lottospiel nicht (32) auf das Glück, denn Sie (33) Ihre Chancen selbst strak verbessern, (34) Sie mit unserem Lotterie-System spielen – und das für nur 5 Euro in der Woche! (35) allein zu spielen, spielen Sie mit uns in einer starken Spielergemeinschaft. Dadurch erhöhen sich (36) automatisch Ihre Chancen! Und was Sie gewinnen können? (37). unserem Quantum-System spielen Sie mit einer Chance auf einen Gewinn von 1 Million Euro! Alle Gewinne erhalten Sie umgehend und ungekürzt zu 100%- das (38) wir Ihnen! Davon habe ich mich selbst überzeugt! Spielen Sie mit uns das Quantum – System: (39) 700 Quantum – Systemspielgruppen haben zusammen schon über sieben Millionen Euro gewonnen. Herzliche Grüße, Ihre SABINE MEIER-PÜTZ PS: Als besondere Gewinnchance erhalten Sie heute das. Vier-Richtige-Gratisspiel. (40) Sie hier unbedingt mit und gewinnen Sie! Ich drücke Ihnen die Daumen……"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "BEI"
+    },
+    {
+     "key": "B",
+     "text": "BEREITS"
+    },
+    {
+     "key": "C",
+     "text": "EINMAL"
+    },
+    {
+     "key": "D",
+     "text": "EURE"
+    },
+    {
+     "key": "E",
+     "text": "GANZ"
+    },
+    {
+     "key": "F",
+     "text": "GARANTIEREN"
+    },
+    {
+     "key": "G",
+     "text": "GESTRN"
+    },
+    {
+     "key": "H",
+     "text": "KÖNNEN"
+    },
+    {
+     "key": "I",
+     "text": "MACHEN"
+    },
+    {
+     "key": "J",
+     "text": "NUR"
+    },
+    {
+     "key": "K",
+     "text": "STATT"
+    },
+    {
+     "key": "L",
+     "text": "TECHNISCH"
+    },
+    {
+     "key": "M",
+     "text": "ÜBER"
+    },
+    {
+     "key": "N",
+     "text": "UNSER"
+    },
+    {
+     "key": "O",
+     "text": "WENN"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… Berlin Sehr geehrte Lottospieler, wer möchte nicht auch (31) bei sechs Richtigen im Lotto dabei sein? Vertrauen Sie …",
+     "answer": "C",
+     "explain": "Das Wort lautet: EINMAL"
+    },
+    {
+     "id": "32",
+     "text": "… im Lotto dabei sein? Vertrauen Sie beim Lottospiel nicht (32) auf das Glück, denn Sie (33) Ihre Chancen selbst strak …",
+     "answer": "J",
+     "explain": "Das Wort lautet: NUR"
+    },
+    {
+     "id": "33",
+     "text": "… Sie beim Lottospiel nicht (32) auf das Glück, denn Sie (33) Ihre Chancen selbst strak verbessern, (34) Sie mit …",
+     "answer": "H",
+     "explain": "Das Wort lautet: KÖNNEN"
+    },
+    {
+     "id": "34",
+     "text": "… denn Sie (33) Ihre Chancen selbst strak verbessern, (34) Sie mit unserem Lotterie-System spielen – und das für nur …",
+     "answer": "O",
+     "explain": "Das Wort lautet: WENN"
+    },
+    {
+     "id": "35",
+     "text": "… spielen – und das für nur 5 Euro in der Woche! (35) allein zu spielen, spielen Sie mit uns in einer starken …",
+     "answer": "K",
+     "explain": "Das Wort lautet: STATT"
+    },
+    {
+     "id": "36",
+     "text": "… einer starken Spielergemeinschaft. Dadurch erhöhen sich (36) automatisch Ihre Chancen! Und was Sie gewinnen können? …",
+     "answer": "E",
+     "explain": "Das Wort lautet: GANZ"
+    },
+    {
+     "id": "37",
+     "text": "… automatisch Ihre Chancen! Und was Sie gewinnen können? (37). unserem Quantum-System spielen Sie mit einer Chance auf …",
+     "answer": "A",
+     "explain": "Das Wort lautet: BEI"
+    },
+    {
+     "id": "38",
+     "text": "… Gewinne erhalten Sie umgehend und ungekürzt zu 100%- das (38) wir Ihnen! Davon habe ich mich selbst überzeugt! Spielen …",
+     "answer": "F",
+     "explain": "Das Wort lautet: GARANTIEREN"
+    },
+    {
+     "id": "39",
+     "text": "… überzeugt! Spielen Sie mit uns das Quantum – System: (39) 700 Quantum – Systemspielgruppen haben zusammen schon …",
+     "answer": "B",
+     "explain": "Das Wort lautet: BEREITS"
+    },
+    {
+     "id": "40",
+     "text": "… erhalten Sie heute das. Vier-Richtige-Gratisspiel. (40) Sie hier unbedingt mit und gewinnen Sie! Ich drücke Ihnen …",
+     "answer": "I",
+     "explain": "Das Wort lautet: MACHEN"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin wäre lieber ein Einzelkind.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher hat heute ein gutes Verhältnis zu seinem Bruder.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin würde heute gern noch eine Schwester haben.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin hat schon früh lernen müssen, dass man im Zusammenleben viel Rücksicht nehmen muss.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Die Sprecherin versteht sich sehr gut mit ihrem Bruder.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Frau Wallner-Calletti lebt seit fünf Jahren in Italien.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "Sie wollen zuerst nur ein Jahr an einem italienischen Gymnasium unterrichten.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Sie hat ihren Mann bei einem Italienischkurs kennengelernt.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Sie eröffnete ein Wiener Restaurant in Rom.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Sie hatte am Anfang große Probleme, da sie das Kochen erst lernen musste.",
+     "answer": "f"
+    },
+    {
+     "id": "51",
+     "text": "Frau Wallner-Calletti besitzt Inzwischen auch ein italienisches Weinlokal.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Sie hatte immer große Schwierigkeiten mit den Behörden.",
+     "answer": "f"
+    },
+    {
+     "id": "53",
+     "text": "Ihre Tochter lernt die deutsche und die italienische Sprache.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Sie möchte bald eine Filiale des Wiener Café Central in Rom eröffnen.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Sie glaubt, dass man überall Erfolg haben kann, wenn man sich bemüht.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Sie müssen in Ingolstadt die Regionalbahn nach Regensburg nehmen.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Clara kann wegen einer Prüfung die Theaterkarten nicht abholen.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Im Schwarzwald können die Straßen morgen glatt werden.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Der Liederabend findet zu einem späteren Termin statt.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Im Untergeschoss gibt es Winterkleidung zum halben Preis.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben von einer Bekannten folgenden E-Mail erhalten: Liebe(r)........ Du hast schon so lange nicht mehr geschrieben. Wie geht es dir? Heute habe ich eine Bitte. Vielleicht kannst du uns helfen? Eine 16-jährige Schülerin aus deinem Land wird uns besuchen und zwei Wochen bei uns in Goldbach bleiben. Natürlich möchten wir, dass sie sich wohl fühlt. Dein Land kennen wir nur von deinen Erzählungen, denn wir waren selbst noch nicht da. Bitte gib uns ein paar Informationen Z.B über typische Gewohnheiten oder typisches Essen. Was können wir tun und wie können wir uns vorbereiten? Wir freuen uns schon auf deine Antwort. Schon einmal viele Dank und liebe Grüße Caroline"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Reaktion auf den Besuch der Schülerin",
+      "Vorschlag zu Essen und Trinken",
+      "Warum Sie so lange nicht geschrieben haben",
+      "Unternehmungen/Programm mit der Schülerin"
+     ]
+    }
+   ]
+  }
+ ]
+}

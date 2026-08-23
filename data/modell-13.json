@@ -1,0 +1,699 @@
+{
+ "id": "modell-13",
+ "title": "Modelltest 13",
+ "subtitle": "52 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Eine Karte – viele Vorteile"
+    },
+    {
+     "key": "B",
+     "text": "Endlich Ferien ohne Kinder"
+    },
+    {
+     "key": "C",
+     "text": "Günstiger Urlaub für Vereinsmitglieder"
+    },
+    {
+     "key": "D",
+     "text": "Meer statt Berge"
+    },
+    {
+     "key": "E",
+     "text": "Neues Wohnprojekt für Alleinerziehende"
+    },
+    {
+     "key": "F",
+     "text": "Reisebüros weltweit vernetzt"
+    },
+    {
+     "key": "G",
+     "text": "Schweizer Seen weiterhin sehr beliebt"
+    },
+    {
+     "key": "H",
+     "text": "Söhne schenken mehr als Töchter"
+    },
+    {
+     "key": "I",
+     "text": "Schöne werden großzügiger beschenkt"
+    },
+    {
+     "key": "J",
+     "text": "Ti W h Ki d ih S ß h b"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "– Das fängt ja gut an: Schon im Kinderzimmer werden Jungs bevorzugt sie bekommen mehr geschenkt als Mädchen. Das ist das Ergebnis einer Untersuchung vom Bundesverband des Spielwaren- Einzelhandels-Bundesweit wurden 6500 Familien nach ihren Schenkgewohnheiten – – befragt. Fast immer wurden für die Söhne auch schon im Babyalter mehr gekauft. Zuständig für die Geschenke sind übrigens meist die Mütter.",
+     "answer": "I"
+    },
+    {
+     "id": "2",
+     "text": "In diesem Sommer werden weitere 200 Großstadt-Jugendherbergen auf der ganzen Welt miteinander vernetzt ICYN heißt das Zauberwort International Communication Youth Network. Das System wurde speziell für Jugendherbergen entwickelt. Für nur 15 Euro Jahresgebühr kann man mit der ICYN-Karte weltweit nicht nur Übernachtungen in anderen Herbergen reservieren, sondern auch unbegrenzt im Internet surfen, sogar gratis übers Internet telefonieren, Bahn- und Flugtickets bargeldlos buchen sowie günstige Konzerttickets bekommen.",
+     "answer": "A"
+    },
+    {
+     "id": "3",
+     "text": "Ob zu Hause, irgendwo in der Schweiz oder im Ausland: Ferien mit Kindern wollen gut geplant sein. Wo gibt es denn Orte, wo Kinder noch Abenteuer erleben, Hotels oder Wohnungen, in denen sie sich wohl fühlen, wo aber gleichzeitig auch die Eltern auf ihre Rechnung kommen? Ruth Michaela Richter gibt Tipps, verrät Adressen und zeigt Beispiele. Damit werden sogar Städtereisen oder Schlossferien in England interessant.",
+     "answer": "J"
+    },
+    {
+     "id": "4",
+     "text": "Die Sehnsucht nach dem Meer ist in der Schweiz groß, vor allem bei der jüngeren Generation. Ein Drittel der Schweizerinnen und Schweizer würde nach einer Umfrage im Tausch für eine Meeresküste die Hälfte der Berge hergeben. Die Zeitschrift mare ließ über 1000 Personen in der Schweiz nach ihrem Verhältnis zum Meer befragen. Rund 42 Prozent der 15-bis 34-Jährigen würden treu dem Motto der Jugendbewegung der 80er Jahre: Nieder mit den Alpen, freie Sicht aufs Mittelmeer den Tausch eingehen. In der Deutschschweiz könnten sich nur 29 Prozent von den Bergen trennen, in der Roman die sind es 37 und im Tessin 43 Prozent.",
+     "answer": "D"
+    },
+    {
+     "id": "5",
+     "text": "Ob für die traditionelle Familie oder für Alleinerziehende: Der Verein für Familienherbergen in Gelsenkirchenbietet schonseit Jahrenpreisgünstige Ferien Über 1100 Zimmer und",
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Gelsenkirchen bietet schon seit Jahren preisgünstige Ferien. Über 1100 Zimmer und – – Wohnungen auch für das kleine Portemonnaie stehen zwischen Nordsee und Sizilien den Mitgliedern im neuen Katalog zur Auswahl. Nichtmitglieder erhalten diesen Katalog gegen eine Gebühr von 5 Euro. Infos: Telefon 061/981 25 25 oder www.ferienwohnung.ch Du oder Sie das ist hier die Frage Sprachliche Regeln am Arbeitsplatz Häufig erscheint Invar Kamprad, lekea-Gründer und-Besitzer, am Morgen unangemeldet angemeldet am Hintereingang einer seiner Filialen Guten Morgen ich bin der Invar Das schwedische Möbelbaus ist das beste Beispiel für die Du Kultur am Arbeitsplatz, denn alle Beschäftigten sprechen sich mit Du an. Die Gesellschaft für deutsche Sprache in Wiesbaden hat nun in einer Untersuchung festgestellt, dass mehr als 53 Prozent der befragten Personen alle Arbeitskollegen duzen. Wie zu erwarten sind es vvor allem die 16 bis 29 jährigen (59 Prozent) die sich lieber schnell duzen Bei den über 60 Jährigen sank die Zahl auf 14 Prozent warum eigentlich sagt man am Arbeitsplatz immer öfter Du Zum Beispiel pflegen Ikea Greenpeace und McDonalds alle das obligatorische Du Damit wollen sie Vertrauen aufbauen und ein familiäres Umfeld schaffen. Gegenüber den Kunden ist an jedoch vorsichtiger geworden. So hat Ikea im Verkaufskatalog statt dem Du wieder das sie eingeführt Man hofft mit Sie mehr Leute nicht nur jüngere anzusprechen. Bis heute üblich ist das Du zum Beispiel in Schweizer Gewerkschaften Viele Mitglieder sind sogar beleidigt, wenn sie mit sie angesprochen werden Es gibt aber auch umgekehrten Fall, zwar bei der Polizei Wer in Deutschland einen Polizisten duzt riskiert eine Strafe in der Schweizer hingegen findet man eine Anzeige wegen Duzens eines Beamten übertrieben Polizisten werden sowieso kaum mit Du angesprochen meint Hanspeter Fäh von der Zürcher Stadtpolizei Der Trend zum Du kann jedoch auch als sozialer Drucck oder Zwang empfunden werden. Ein Du abzulehnen gilt nämlich als unfreundlich. Das hat Dieter S Angestellter bei einem Textilgeschäft in Deutschland erfahren Ein Gericht entschied, dass er seine Kollegen weiterhin mit Du ansprechen musste. So sehr das Du in der Gesellschaft auch an Bedeutung gewinnt das Sie hat immer noch eine feste soziale Basis und kann diese sogar ausbauen Benimmkurse, wo man Höflichkeit und die richtigen Umgangsformen lernt, sind heute im Trend immer mehr Firmen schulen ihre Mitarbeiter in stilvollem Verhalten. Dazu gehören folgende Grundregeln: Die ältere Person bietet der jüngeren das Du an Oft ist jedoch auch die Stellung entscheidend Der ältere Mitarbeiter bietet seinem jüngeren Chef nie das Du an. LLAANNGGUUAAGGEE TTeessttss"
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Die Firma Ikea benutzt heute das. Du,",
+     "options": [
+      {
+       "key": "A",
+       "text": "weil das ein Zeichen für eine Familie Atmosphäre ist."
+      },
+      {
+       "key": "B",
+       "text": "weil sie mehr jüngere Kunden gewinnen will."
+      },
+      {
+       "key": "C",
+       "text": "weil so mehr Leute den Verkaufskatalog lesen."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "7",
+     "text": "In der Schweiz",
+     "options": [
+      {
+       "key": "A",
+       "text": "gilt das Du in Gewerkschaften als Beleidigung."
+      },
+      {
+       "key": "B",
+       "text": "werden Polizisten nur selten mit Du angesprochen."
+      },
+      {
+       "key": "C",
+       "text": "wird man bestraft, wenn man zu Beamten Du sagt."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "8",
+     "text": "Eine Untersuchung hat gezeigt,",
+     "options": [
+      {
+       "key": "A",
+       "text": "dass 14 Prozent der jüngeren Mitarbeiter das Siie vorziehen."
+      },
+      {
+       "key": "B",
+       "text": "dass besonders jüngere Arbeitskollegen schneller das Du wählen."
+      },
+      {
+       "key": "C",
+       "text": "dass sich alle Arbeitskollegen gern mit Du anderen würden."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "Durch Kurse können Angestellte",
+     "options": [
+      {
+       "key": "A",
+       "text": "höfliches Verhalten am Arbeitsplatz lernen."
+      },
+      {
+       "key": "B",
+       "text": "ihre Stellung im Arbeitsleben verbessern."
+      },
+      {
+       "key": "C",
+       "text": "neue Trends beim Einrichten des Arbeitsplatzes kkennen lernen."
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie haben von einer Schweizer Schauspielerin gehört und möchten gern einen Film sehen.",
+     "answer": "D"
+    },
+    {
+     "id": "12",
+     "text": "Sie haben gerade Ihre Ausbildung beendet und suchen eine Stelle an der Rezeption.",
+     "answer": "G"
+    },
+    {
+     "id": "13",
+     "text": "Sie interessieren sich für Umweltschutz und suchen eine passende Sendung.",
+     "answer": "F"
+    },
+    {
+     "id": "14",
+     "text": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz.",
+     "answer": "A"
+    },
+    {
+     "id": "15",
+     "text": "In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren.",
+     "answer": "I"
+    },
+    {
+     "id": "16",
+     "text": "Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk.",
+     "answer": "K"
+    }
+   ],
+   "bankImage": "img/m13-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien bestellt und diese zwei Tage vor Abflug am 27. Juni auch erhalten. Leider entsprachen die Tickets überhaupt nicht dem, was zuvor bei der Buchung am Telefon ausgemacht worden (22). (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Bank of India in Mumbai bitten. Meine Bankdaten finden Sie unten. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Luisa Martin"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien …",
+     "options": [
+      {
+       "key": "A",
+       "text": "ihnen"
+      },
+      {
+       "key": "B",
+       "text": "Ihnen"
+      },
+      {
+       "key": "C",
+       "text": "Sie"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "22",
+     "text": "… was zuvor bei der Buchung am Telefon ausgemacht worden (22). (23) ich ausdrücklich einen Direktflug nach Mumbai …",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat"
+      },
+      {
+       "key": "B",
+       "text": "war"
+      },
+      {
+       "key": "C",
+       "text": "wäre"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "für"
+      },
+      {
+       "key": "B",
+       "text": "mit"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "25",
+     "text": "… Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit …",
+     "options": [
+      {
+       "key": "A",
+       "text": "erst"
+      },
+      {
+       "key": "B",
+       "text": "jetzt"
+      },
+      {
+       "key": "C",
+       "text": "schon"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "27",
+     "text": "… noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der …",
+     "options": [
+      {
+       "key": "A",
+       "text": "den"
+      },
+      {
+       "key": "B",
+       "text": "der"
+      },
+      {
+       "key": "C",
+       "text": "die"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "… Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Luisa Martin",
+     "options": [
+      {
+       "key": "A",
+       "text": "mich"
+      },
+      {
+       "key": "B",
+       "text": "mir"
+      },
+      {
+       "key": "C",
+       "text": "sich"
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "3. anach an Obwohl sondern bei B B Nämlich sonst vor C C ) ( Sehr geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen Entwicklungsprogrammen vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen ADRIAN SCHÖLLER EVD Trans GmbH"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AUCH"
+    },
+    {
+     "key": "B",
+     "text": "AUFTRAG"
+    },
+    {
+     "key": "C",
+     "text": "BESCHREIBEN"
+    },
+    {
+     "key": "D",
+     "text": "FRAGEN"
+    },
+    {
+     "key": "E",
+     "text": "GEEIGENET"
+    },
+    {
+     "key": "F",
+     "text": "GEGEÜBER"
+    },
+    {
+     "key": "G",
+     "text": "INFORMATIONEN"
+    },
+    {
+     "key": "H",
+     "text": "KÖNNTEN"
+    },
+    {
+     "key": "I",
+     "text": "STATTFINDEN"
+    },
+    {
+     "key": "J",
+     "text": "SUCHEN"
+    },
+    {
+     "key": "K",
+     "text": "TERMIN"
+    },
+    {
+     "key": "L",
+     "text": "TOUR"
+    },
+    {
+     "key": "M",
+     "text": "VOR"
+    },
+    {
+     "key": "N",
+     "text": "WÄREN"
+    },
+    {
+     "key": "O",
+     "text": "WEIL"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen …",
+     "answer": "B",
+     "explain": "Das Wort lautet: AUFTRAG"
+    },
+    {
+     "id": "32",
+     "text": "… vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer …",
+     "answer": "I",
+     "explain": "Das Wort lautet: STATTFINDEN"
+    },
+    {
+     "id": "33",
+     "text": "… in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von …",
+     "answer": "G",
+     "explain": "Das Wort lautet: INFORMATIONEN"
+    },
+    {
+     "id": "34",
+     "text": "… daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die …",
+     "answer": "C",
+     "explain": "Das Wort lautet: BESCHREIBEN"
+    },
+    {
+     "id": "35",
+     "text": "… Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir …",
+     "answer": "E",
+     "explain": "Das Wort lautet: GEEIGNET"
+    },
+    {
+     "id": "36",
+     "text": "… Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir folgende …",
+     "answer": "O",
+     "explain": "Das Wort lautet: WEIL"
+    },
+    {
+     "id": "37",
+     "text": "… Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit …",
+     "answer": "J",
+     "explain": "Das Wort lautet: SUCHEN"
+    },
+    {
+     "id": "38",
+     "text": "… technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AUCH"
+    },
+    {
+     "id": "39",
+     "text": "… sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald …",
+     "answer": "K",
+     "explain": "Das Wort lautet: TERMIN"
+    },
+    {
+     "id": "40",
+     "text": "… und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen ADRIAN …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WÄREN"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Für die Sprechen ist es unwichtig, ob ihre Kinder in der Schule gut sind.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher findet es wichtig, dass Eltern immer für ihre Kinder da sind.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin glaubt, dass sie mehr mit ihrer Tochter ssprechen müsste.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Es ist dem Sprecher wichtig, dass seine Kinder gesund leben.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Der Sprecher möchte, dass sein Kind die eigenen Ideen realisieren kann.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Viele Touristen besuchen Torgau wegen seiner historischen Sehenswürdigkeiten.",
+     "answer": "r"
+    },
+    {
+     "id": "47",
+     "text": "Den Spielpark Hartenfels gibt es schon seit vielen Jahren.",
+     "answer": "f"
+    },
+    {
+     "id": "48",
+     "text": "Außer dem Spielpark gibt es in der Umgebung viele andere Freizeitmöglichkeiten für die Kinder.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Der Spielpark bietet den Kindern Spielmöglichkeiten, die sie zu Hause nicht haben.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Die Kinder können im Spielpark auch selbst etwas bauen.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Das Spielen am Back kann für die Kinder gefährlich werden.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Beide Elternteile müssen auf die Kinder aufpassen.",
+     "answer": "f"
+    },
+    {
+     "id": "53",
+     "text": "Im Spielpark können Kinder bis zum Alter von sieben von Aufsichtspersonen betreut werden.",
+     "answer": "f"
+    },
+    {
+     "id": "54",
+     "text": "Der Eintritt in den Spielpark ist zurzeit frei.",
+     "answer": "r"
+    },
+    {
+     "id": "55",
+     "text": "Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Der nächste Zug nach Füssen fährt um 11:56 Uhr.",
+     "answer": "r"
+    },
+    {
+     "id": "57",
+     "text": "Die Firma befindet sich in der Bellmondstraße.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Im City-Kino werden im Untergeschoss alte Filme gezeigt.",
+     "answer": "f"
+    },
+    {
+     "id": "59",
+     "text": "Das Zugteam bringt Ihnen Südtiroler Käsespezialitäten an Ihren Platz.",
+     "answer": "f"
+    },
+    {
+     "id": "60",
+     "text": "Die Großmutter kann heute nicht kommen.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben von Ihnen Freund folgende E-Mail erhalten: Liebe(r)........ nach unserm schönen, gemeinsamen Erlebnis letztes Jahr möchte ich auch dieses Jahr wieder einen Ausflug für uns alle organisieren. Ich hoffe sehr, dass ihr Zeit habt und mitkommen könnt - ich freue mich schon jetzt, euch alle bald wieder zu sehen! Das Dumme ist nur, dass ich mir vor drei Wochen beim Basketball das Bein gebrochen habe und noch nicht so gut zu Fuß bin. Deshalb habe ich einen gemütlichen Ausflug mit Bus und Schiff geplant - hoffentlich ist dann auch das Wetter gut für die Schiffsfahrt! Wohin es geht, möchte ich euch aber noch nicht verraten - das soll eine Überraschung werden. Termin: übernächster Samstag. Zeit und Treffpunkt: 9:30 Uhr bei mir. Bitte schreibt mir doch, ob ihr beim Ausflug dabei sein könnt! Hoffentlich bis bald. Thomas"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Alternativvorschlag für Schlechtes Wetter",
+      "Einladung annehmen",
+      "Was Sie noch über den Ausflug wissen wollen",
+      "Auf Sportunfall reagieren"
+     ]
+    }
+   ]
+  }
+ ]
+}
