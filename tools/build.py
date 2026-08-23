@@ -1,6 +1,8 @@
 """يبني ملفات data/*.json للتطبيق من ملف telc B1 PDF."""
-import json, os, re, sys
+import io, json, os, re, sys
 import pdfplumber, pypdfium2
+from pypdf import PdfReader
+from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
 import telcpdf, sections as S
@@ -167,10 +169,53 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
     return sec if items else None
 
 
+def export_ads(doc, reader, pages_lv3, model_no):
+    """يصدّر صفحة إعلانات Leseverstehen Teil 3 كصورة بأعلى دقّة متاحة.
+
+    الصفحة بالـPDF صورة مو نص. أحياناً صفحة الإعلانات ما إلها عنوان نصّي
+    فما بتنربط بالقسم، فمنفتّش كمان بالصفحة اللي بعدها. منختار أكبر صورة
+    بالمساحة (مو بالحجم) تا ما ناخد زخرفة صغيرة بالغلط.
+
+    إذا الصورة أصلاً JPEG منسخها كما هي — صفر خسارة جودة وأصغر حجم.
+    غير هيك (PNG أو JPEG2000) منحوّلها بدقّتها الأصلية بدون أي تصغير.
+    """
+    name = f'm{model_no:02d}-lv3.jpg'
+    dest = os.path.join(IMGS, name)
+    scan = sorted(set(pages_lv3) | {max(pages_lv3) + 1})
+
+    best = None                      # (مساحة، صفحة، صورة)
+    for pno in scan:
+        if pno > len(reader.pages):
+            continue
+        for im in reader.pages[pno - 1].images:
+            try:
+                pil = Image.open(io.BytesIO(im.data))
+            except Exception:
+                continue
+            area = pil.size[0] * pil.size[1]
+            if area > 200_000 and (best is None or area > best[0]):
+                best = (area, pno, im, pil)
+
+    if best:
+        _, _, im, pil = best
+        if im.name.lower().endswith(('.jpg', '.jpeg')):
+            with open(dest, 'wb') as f:
+                f.write(im.data)          # نسخة طبق الأصل
+        else:
+            pil.convert('L').save(dest, 'JPEG', quality=88,
+                                  optimize=True, progressive=True)
+        return name
+
+    doc[max(pages_lv3) - 1].render(scale=2.0).to_pil().convert('L').save(
+        dest, 'JPEG', quality=85, optimize=True, progressive=True)
+    return name
+
+
 def main():
     os.makedirs(IMGS, exist_ok=True)
     pages, models = telcpdf.read(PDF)
     doc = pypdfium2.PdfDocument(PDF)
+    reader = PdfReader(PDF)
     index = []
 
     with pdfplumber.open(PDF) as pdf:
@@ -199,12 +244,8 @@ def main():
                     words = telcpdf.words_for(pdf, ps) if kind == 'SB1' else []
                     sec = build_section(kind, i, rows, words, key, keyword, doc)
 
-                if kind == 'LV3' and sec:               # الإعلانات صورة مو نص
-                    img_page = max(ps)
-                    name = f'm{i:02d}-lv3.png'
-                    doc[img_page - 1].render(scale=2.2).to_pil().save(
-                        os.path.join(IMGS, name), optimize=True)
-                    sec['bankImage'] = f'img/{name}'
+                if kind == 'LV3' and sec:
+                    sec['bankImage'] = f'img/{export_ads(doc, reader, ps, i)}'
                 if sec:
                     secs.append(sec)
 
