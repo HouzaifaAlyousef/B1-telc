@@ -13,16 +13,27 @@ IMGS = os.path.join(OUT, 'img')
 
 # Prüfungsteil: (Gruppe, Titel, Minuten)
 META = {
-  'LV1': ('Leseverstehen', 'Leseverstehen, Teil 1', 20),
-  'LV2': ('Leseverstehen', 'Leseverstehen, Teil 2', 25),
+  'LV1': ('Leseverstehen', 'Leseverstehen, Teil 1', 15),
+  'LV2': ('Leseverstehen', 'Leseverstehen, Teil 2', 20),
   'LV3': ('Leseverstehen', 'Leseverstehen, Teil 3', 20),
-  'SB1': ('Sprachbausteine', 'Sprachbausteine, Teil 1', 15),
+  'SB1': ('Sprachbausteine', 'Sprachbausteine, Teil 1', 20),
   'SB2': ('Sprachbausteine', 'Sprachbausteine, Teil 2', 15),
   'HV1': ('Hörverstehen', 'Hörverstehen, Teil 1', 8),
-  'HV2': ('Hörverstehen', 'Hörverstehen, Teil 2', 12),
+  'HV2': ('Hörverstehen', 'Hörverstehen, Teil 2', 14),
   'HV3': ('Hörverstehen', 'Hörverstehen, Teil 3', 8),
   'SA':  ('Schriftlicher Ausdruck', 'Schriftlicher Ausdruck', 30),
 }
+
+# التقسيم الرسمي حسب صفحة Testformat بنموذج telc:
+# Leseverstehen + Sprachbausteine بلوك واحد ٩٠ دقيقة (أسئلة ١-٤٠)،
+# Hörverstehen ~٣٠ دقيقة (٤١-٦٠)، Schriftlicher Ausdruck ٣٠ دقيقة.
+# أوقات الأجزاء المفردة فوق مجموعها بيساوي وقت البلوك اللي بينتمولو.
+BLOCKS = [
+  ('block-lv-sb', 'Leseverstehen und Sprachbausteine',
+   ['lv1', 'lv2', 'lv3', 'sb1', 'sb2'], 90, 'Aufgaben 1–40'),
+  ('block-hv', 'Hörverstehen', ['hv1', 'hv2', 'hv3'], 30, 'Aufgaben 41–60'),
+  ('block-sa', 'Schriftlicher Ausdruck', ['sa'], 30, ''),
+]
 RANGE = {'LV1': (1, 5), 'LV2': (6, 10), 'LV3': (11, 20), 'SB1': (21, 30),
          'SB2': (31, 40), 'HV1': (41, 45), 'HV2': (46, 55), 'HV3': (56, 60)}
 
@@ -249,15 +260,23 @@ def main():
                 if sec:
                     secs.append(sec)
 
+            have = {s['id'] for s in secs}
+            blocks = [{'id': bid, 'title': t, 'minutes': mins, 'hint': hint,
+                       'parts': [p for p in parts if p in have]}
+                      for bid, t, parts, mins, hint in BLOCKS
+                      if any(p in have for p in parts)]
+
             data = {'id': f'modell-{i:02d}', 'title': f'Modelltest {i}',
+                    'blocks': blocks,
                     'subtitle': f'{sum(len(s["items"]) for s in secs)} Aufgaben · '
-                                f'{len(secs)} Prüfungsteile',
+                                f'{sum(b["minutes"] for b in blocks)} Minuten',
                     'sections': secs}
             with open(os.path.join(OUT, f'modell-{i:02d}.json'), 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=1)
             index.append({'id': data['id'], 'file': f'modell-{i:02d}.json',
                           'title': data['title'], 'sections': len(secs),
-                          'minutes': sum(s['minutes'] for s in secs)})
+                          'aufgaben': sum(len(s['items']) for s in secs),
+                          'minutes': sum(b['minutes'] for b in blocks)})
             print(f"Modell {i:2}: " + '  '.join(
                 f"{s['id']}={len(s['items'])}" for s in secs))
 

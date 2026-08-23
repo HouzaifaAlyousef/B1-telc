@@ -10,7 +10,7 @@ const elToast= document.getElementById('toast');
 const S = {
   index: null,      // Übersicht der Modelltests
   modell: null,     // geöffneter Modelltest
-  section: null,    // geöffneter Prüfungsteil
+  run: null,        // laufender Durchgang: ein Teil oder ein ganzer Prüfungsteil
   answers: {},      // { itemId: Antwort }
   tick: null,       // Timer
   left: 0,          // verbleibende Sekunden
@@ -95,8 +95,8 @@ function screenHome(){
       const p = done[m.id] || {};
       const finished = Object.keys(p).length;
       const meta = finished
-        ? `${finished} von ${m.sections} Teilen bearbeitet`
-        : `${m.sections} Teile · ${m.minutes} Minuten`;
+        ? `${finished} Teil(e) bearbeitet · ${m.aufgaben} Aufgaben`
+        : `${m.aufgaben} Aufgaben · ${m.minutes} Minuten`;
       return `<button class="tile" data-id="${esc(m.id)}">
         <span class="n">${i + 1}</span>
         <span class="grow"><span style="font-weight:600">${esc(m.title)}</span>
@@ -145,72 +145,124 @@ function screenModell(m){
   stopTimer();
   go('modell', () => {
     const prog = load('b1.progress', {})[m.id] || {};
-    const groups = {};
-    m.sections.forEach(s => { (groups[s.group] ||= []).push(s); });
+    const part = id => m.sections.find(s => s.id === id);
+    const badge = (id, mins) => {
+      const r = prog[id];
+      return r ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${r.score}/${r.max}</span>`
+               : `<span class="pill">${mins} Min.</span>`;
+    };
 
-    const html = Object.entries(groups).map(([g, list]) => `
-      <h3 style="margin:18px 0 8px">${esc(g)}</h3>
-      ${list.map(s => {
-        const r = prog[s.id];
-        const badge = r
-          ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${r.score}/${r.max}</span>`
-          : `<span class="pill">${s.minutes} Min.</span>`;
-        return `<button class="tile" data-sec="${esc(s.id)}">
-          <span class="grow"><span style="font-weight:600">${esc(s.title)}</span>
-            <div class="meta">${s.items.length} Aufgaben</div></span>
-          ${badge}
-        </button>`;
-      }).join('')}`).join('');
+    const blocks = (m.blocks || []).map(b => {
+      const parts = b.parts.map(part).filter(Boolean);
+      const n = parts.reduce((a, p) => a + p.items.length, 0);
+      const sub = [b.hint, `${n} Aufgaben`].filter(Boolean).join(' · ');
+      return `<button class="tile" data-run="block:${esc(b.id)}">
+        <span class="grow"><span style="font-weight:600">${esc(b.title)}</span>
+          <div class="meta">${esc(sub)}</div></span>
+        ${badge(b.id, b.minutes)}
+      </button>`;
+    }).join('');
+
+    const singles = m.sections.map(s => `
+      <button class="tile" data-run="part:${esc(s.id)}">
+        <span class="grow"><span style="font-weight:600">${esc(s.title)}</span>
+          <div class="meta">${s.items.length} Aufgaben</div></span>
+        ${badge(s.id, s.minutes)}
+      </button>`).join('');
 
     app.innerHTML = `
       <h1>${esc(m.title)}</h1>
       <p class="sub">${esc(m.subtitle || '')}</p>
-      ${html}`;
+      <h3 class="grouphead">Wie in der Prüfung</h3>
+      <p class="sub">Ein Prüfungsteil am Stück, mit der echten Prüfungszeit.</p>
+      ${blocks}
+      <h3 class="grouphead">Einzelne Teile üben</h3>
+      <p class="sub">Ein Teil allein, mit anteiliger Zeit.</p>
+      ${singles}`;
 
-    app.querySelectorAll('[data-sec]').forEach(b =>
-      b.onclick = () => screenIntro(m.sections.find(s => s.id === b.dataset.sec)));
+    app.querySelectorAll('[data-run]').forEach(b =>
+      b.onclick = () => {
+        const [kind, id] = b.dataset.run.split(':');
+        screenIntro(kind === 'block' ? blockRun(m, id) : partRun(m, id));
+      });
   });
 }
 
-/* ============ Startbildschirm eines Teils ============ */
-function screenIntro(sec){
-  S.section = sec;
+/* Ein Durchgang = Titel, Zeit und die Teile, die dazugehören. */
+function partRun(m, id){
+  const s = m.sections.find(x => x.id === id);
+  return { id: s.id, title: s.title, minutes: s.minutes, parts: [s], isBlock: false };
+}
+function blockRun(m, id){
+  const b = m.blocks.find(x => x.id === id);
+  const parts = b.parts.map(p => m.sections.find(s => s.id === p)).filter(Boolean);
+  return { id: b.id, title: b.title, minutes: b.minutes, hint: b.hint, parts, isBlock: true };
+}
+const runItems = run => run.parts.flatMap(p => p.items);
+
+/* ============ Startbildschirm ============ */
+function screenIntro(run){
+  S.run = run;
   S.answers = {};
   stopTimer();
   go('intro', () => {
+    const n = runItems(run).length;
+    const notes = [...new Set(run.parts.map(p => p.note).filter(Boolean))];
+    const list = run.isBlock && run.parts.length > 1
+      ? `<ul class="partlist">${run.parts.map(p =>
+          `<li><span class="grow">${esc(p.title)}</span>
+             <span class="meta">${p.items.length} Aufgaben</span></li>`).join('')}</ul>`
+      : `<div class="instr">${esc(run.parts[0].instruction)}</div>`;
+
     app.innerHTML = `
       <div class="card">
-        <span class="pill">${esc(sec.group)}</span>
-        <h2 style="margin-top:10px">${esc(sec.title)}</h2>
-        <div class="instr">${esc(sec.instruction)}</div>
-        ${sec.note ? `<div class="fb warn" style="margin-bottom:16px">${esc(sec.note)}</div>` : ''}
+        <span class="pill">${esc(run.isBlock ? 'Wie in der Prüfung' : run.parts[0].group)}</span>
+        <h2 style="margin-top:10px">${esc(run.title)}</h2>
+        ${run.hint ? `<p class="sub" style="margin-bottom:14px">${esc(run.hint)}</p>` : ''}
+        ${list}
+        ${notes.map(t => `<div class="fb warn" style="margin-bottom:16px">${esc(t)}</div>`).join('')}
         <div class="row" style="gap:24px;margin-bottom:16px">
           <div><div class="meta" style="color:var(--muted);font-size:13px">Aufgaben</div>
-               <b style="font-size:18px">${sec.items.length}</b></div>
+               <b style="font-size:18px">${n}</b></div>
           <div><div class="meta" style="color:var(--muted);font-size:13px">Zeit</div>
-               <b style="font-size:18px">${sec.minutes} Minuten</b></div>
+               <b style="font-size:18px">${run.minutes} Minuten</b></div>
         </div>
         <button class="btn wide" id="start">Start ▶</button>
       </div>`;
-    document.getElementById('start').onclick = () => screenExam(sec);
+    document.getElementById('start').onclick = () => screenExam(run);
   });
 }
 
 /* ============ Prüfung ============ */
-function screenExam(sec){
+function screenExam(run){
   go('exam', () => {
-    app.innerHTML = renderPassages(sec) + renderBank(sec) +
-      `<div id="qs">${sec.items.map((it, i) => renderItem(sec, it, i)).join('')}</div>` +
+    const nav = run.parts.length > 1
+      ? `<nav class="partnav">${run.parts.map((p, i) =>
+          `<a href="#part-${esc(p.id)}">${esc(shortTitle(p.title))}</a>`).join('')}</nav>`
+      : '';
+
+    const body = run.parts.map(p => `
+      <section class="part" id="part-${esc(p.id)}">
+        ${run.parts.length > 1 ? `<h2 class="parthead">${esc(p.title)}</h2>
+          <div class="instr">${esc(p.instruction)}</div>` : ''}
+        ${renderPassages(p)}${renderBank(p)}
+        ${p.items.map(it => renderItem(p, it)).join('')}
+      </section>`).join('');
+
+    app.innerHTML = nav + body +
       `<div class="bottombar"><div class="inner">
-         <span class="progress" id="prog">0 / ${sec.items.length}</span>
+         <span class="progress" id="prog">0 / ${runItems(run).length}</span>
          <button class="btn grow" id="submit">Abgeben &amp; korrigieren</button>
        </div></div>`;
 
-    bindInputs(sec);
-    document.getElementById('submit').onclick = () => finish(sec, false);
-    startTimer(sec.minutes * 60, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(sec, true); });
+    run.parts.forEach(p => bindInputs(p));
+    document.getElementById('submit').onclick = () => finish(run, false);
+    startTimer(run.minutes * 60, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
   });
 }
+
+const shortTitle = t => t.replace('Leseverstehen', 'LV').replace('Sprachbausteine', 'SB')
+                         .replace('Hörverstehen', 'HV').replace(', Teil ', ' ');
 
 function renderPassages(sec){
   if (!sec.passages || !sec.passages.length) return '';
@@ -223,10 +275,13 @@ function renderPassages(sec){
 
 function renderBank(sec){
   if (sec.bankImage){
+    // Pfade in den JSON-Dateien sind relativ zum data-Ordner.
+    // In der Einzeldatei-Version steht hier schon eine data:-URI.
+    const src = sec.bankImage.startsWith('data:') ? sec.bankImage : 'data/' + sec.bankImage;
     return `<div class="bank"><h3>${esc(sec.bankTitle || 'Anzeigen')}</h3>
       <p class="sub" style="margin:0 0 10px">Zum Vergrößern auf das Bild tippen</p>
-      <a href="${esc(sec.bankImage)}" target="_blank" rel="noopener">
-        <img src="${esc(sec.bankImage)}" alt="Anzeigen" class="bankimg"></a></div>`;
+      <a href="${esc(src)}" target="_blank" rel="noopener">
+        <img src="${esc(src)}" alt="Anzeigen" class="bankimg"></a></div>`;
   }
   if (!sec.bank || !sec.bank.length) return '';
   return `<div class="bank"><h3>${esc(sec.bankTitle || 'Auswahl')}</h3>
@@ -234,7 +289,7 @@ function renderBank(sec){
       `<li><span class="k">${esc(o.key)}</span>${esc(o.text)}</li>`).join('')}</ul></div>`;
 }
 
-function renderItem(sec, it, i){
+function renderItem(sec, it){
   const head = `<div class="qhead"><span class="qnum">${esc(it.id)}</span>
     <span class="qtext grow">${esc(it.text)}</span></div>`;
   let body = '';
@@ -259,27 +314,28 @@ function renderItem(sec, it, i){
     body = `<textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …"></textarea>
             <div class="counter" id="wc_${esc(it.id)}">0 Wörter (mindestens ${it.minWords || 100})</div>`;
   }
-  return `<div class="q" id="q_${esc(it.id)}">${head}${body}<div class="fbslot"></div></div>`;
+  return `<div class="q" id="q_${esc(it.id)}">${head}${body}</div>`;
 }
 
 function bindInputs(sec){
-  app.querySelectorAll('[data-opt]').forEach(lb => {
+  const scope = document.getElementById('part-' + sec.id) || app;
+  scope.querySelectorAll('[data-opt]').forEach(lb => {
     lb.onclick = () => {
       const [id, key] = lb.dataset.opt.split('|');
       S.answers[id] = key;
       lb.closest('.opts').querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
       lb.classList.add('sel');
-      updateProgress(sec);
+      updateProgress();
     };
   });
-  app.querySelectorAll('[data-sel]').forEach(sl => {
+  scope.querySelectorAll('[data-sel]').forEach(sl => {
     sl.onchange = () => {
       const v = sl.value;
       if (v) S.answers[sl.dataset.sel] = v; else delete S.answers[sl.dataset.sel];
-      updateProgress(sec);
+      updateProgress();
     };
   });
-  app.querySelectorAll('[data-txt]').forEach(ta => {
+  scope.querySelectorAll('[data-txt]').forEach(ta => {
     ta.oninput = () => {
       const id = ta.dataset.txt;
       S.answers[id] = ta.value;
@@ -287,77 +343,94 @@ function bindInputs(sec){
       const c = document.getElementById('wc_' + id);
       const min = sec.items.find(x => x.id === id).minWords || 100;
       if (c){ c.textContent = `${n} Wörter (mindestens ${min})`; c.style.color = n >= min ? 'var(--ok)' : 'var(--muted)'; }
-      updateProgress(sec);
+      updateProgress();
     };
   });
 }
 
-function updateProgress(sec){
-  const n = sec.items.filter(it => {
-    const v = S.answers[it.id];
-    return v !== undefined && String(v).trim() !== '';
-  }).length;
+const answered = it => {
+  const v = S.answers[it.id];
+  return v !== undefined && String(v).trim() !== '';
+};
+
+function updateProgress(){
+  const items = runItems(S.run);
   const p = document.getElementById('prog');
-  if (p) p.textContent = `${n} / ${sec.items.length}`;
+  if (p) p.textContent = `${items.filter(answered).length} / ${items.length}`;
 }
 
 /* ============ Korrektur ============ */
-function finish(sec, auto){
+function finish(run, auto){
   if (!auto){
-    const missing = sec.items.length - sec.items.filter(it =>
-      S.answers[it.id] !== undefined && String(S.answers[it.id]).trim() !== '').length;
+    const missing = runItems(run).filter(it => !answered(it)).length;
     if (missing && !confirm(`${missing} Aufgabe(n) ohne Antwort. Trotzdem abgeben?`)) return;
   }
   stopTimer();
 
-  if (sec.format === 'writing') return screenWriting(sec);
+  if (run.parts.length === 1 && run.parts[0].format === 'writing')
+    return screenWriting(run);
 
-  let score = 0;
-  sec.items.forEach(it => { if (S.answers[it.id] === it.answer) score++; });
-  const max = sec.items.length;
+  let score = 0, max = 0;
+  run.parts.forEach(p => {
+    if (p.format === 'writing') return;        // wird getrennt bewertet
+    p.items.forEach(it => { max++; if (S.answers[it.id] === it.answer) score++; });
+  });
   const pct = Math.round(score / max * 100);
 
   const prog = load('b1.progress', {});
-  (prog[S.modell.id] ||= {})[sec.id] = { score, max, pct };
+  (prog[S.modell.id] ||= {})[run.id] = { score, max, pct };
   save('b1.progress', prog);
   S.history.push({
-    modell: S.modell.title, section: sec.title, score, max, pct,
+    modell: S.modell.title, section: run.title, score, max, pct,
     date: new Date().toLocaleDateString('de-DE')
   });
   save('b1.history', S.history.slice(-50));
 
-  screenResult(sec, score, max, pct);
+  screenResult(run, score, max, pct);
 }
 
-function screenResult(sec, score, max, pct){
+/* Antwort lesbar machen: "B — Bildband: Babys im Garten" */
+function answerLabel(sec, it, k){
+  if (!k) return 'keine Antwort';
+  if (sec.format === 'truefalse') return k === 'r' ? 'Richtig' : 'Falsch';
+  if (sec.bank){
+    const o = sec.bank.find(x => x.key === k);
+    return o ? (o.text ? `${k} — ${o.text}` : k) : '—';
+  }
+  const o = (it.options || []).find(x => x.key === k);
+  return o ? `${k} — ${o.text}` : '—';
+}
+
+function screenResult(run, score, max, pct){
   go('result', () => {
     const cls = pct >= 60 ? 'ok' : 'bad';
     const verdict = pct >= 80 ? 'Sehr gut! 🎉'
                   : pct >= 60 ? 'Bestanden ✅ — weiter üben!'
                   : 'Noch nicht bestanden 💪';
 
-    const corrections = sec.items.map(it => {
-      const mine = S.answers[it.id];
-      const ok = mine === it.answer;
-      const label = k => {
-        if (sec.format === 'truefalse') return k === 'r' ? 'Richtig' : k === 'f' ? 'Falsch' : '—';
-        if (sec.bank){ const o = sec.bank.find(x => x.key === k); return o ? (o.text ? `${k} — ${o.text}` : k) : '—'; }
-        const o = (it.options || []).find(x => x.key === k); return o ? `${k} — ${o.text}` : '—';
-      };
-      return `<div class="q ${ok ? 'isok' : 'isbad'}">
-        <div class="qhead"><span class="qnum">${esc(it.id)}</span>
-          <span class="qtext grow">${esc(it.text)}</span></div>
-        <div class="fb ${ok ? 'ok' : 'bad'}">
-          ${ok
-            ? '<b>✔ Richtig</b>'
-            : `<b>✘ Falsch</b>
+    const perPart = run.parts.filter(p => p.format !== 'writing').map(p => {
+      const right = p.items.filter(it => S.answers[it.id] === it.answer).length;
+      const head = run.parts.length > 1
+        ? `<div class="partscore"><span class="grow">${esc(p.title)}</span>
+             <span class="pill ${right / p.items.length >= 0.6 ? 'ok' : 'bad'}">${right}/${p.items.length}</span>
+           </div>` : '';
+      const cards = p.items.map(it => {
+        const mine = S.answers[it.id];
+        const ok = mine === it.answer;
+        return `<div class="q ${ok ? 'isok' : 'isbad'}">
+          <div class="qhead"><span class="qnum">${esc(it.id)}</span>
+            <span class="qtext grow">${esc(it.text)}</span></div>
+          <div class="fb ${ok ? 'ok' : 'bad'}">
+            ${ok ? '<b>✔ Richtig</b>' : `<b>✘ Falsch</b>
                <div class="fbrow"><span class="lbl">Ihre Antwort</span>
-                 <span class="val">${esc(mine ? label(mine) : 'keine Antwort')}</span></div>
+                 <span class="val">${esc(answerLabel(p, it, mine))}</span></div>
                <div class="fbrow"><span class="lbl">Lösung</span>
-                 <span class="val">${esc(label(it.answer))}</span></div>`}
-          ${it.explain ? `<div class="why">${esc(it.explain)}</div>` : ''}
-        </div>
-      </div>`;
+                 <span class="val">${esc(answerLabel(p, it, it.answer))}</span></div>`}
+            ${it.explain ? `<div class="why">${esc(it.explain)}</div>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+      return head + cards;
     }).join('');
 
     app.innerHTML = `
@@ -368,19 +441,20 @@ function screenResult(sec, score, max, pct){
         <div class="meta" style="color:var(--muted);font-size:13px">Bestehensgrenze ca. 60 %</div>
       </div>
       <h2 style="margin:18px 0 10px">Korrektur</h2>
-      ${corrections}
+      ${perPart}
       <div class="bottombar"><div class="inner">
         <button class="btn ghost grow" id="again">Wiederholen</button>
-        <button class="btn grow" id="back">Andere Teile</button>
+        <button class="btn grow" id="back">Übersicht</button>
       </div></div>`;
 
-    document.getElementById('again').onclick = () => screenIntro(sec);
+    document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
   });
 }
 
 /* Schriftlicher Ausdruck: Selbstkontrolle über eine Checkliste */
-function screenWriting(sec){
+function screenWriting(run){
+  const sec = run.parts[0];
   const it = sec.items[0];
   const mine = (S.answers[it.id] || '').trim();
   const words = mine.split(/\s+/).filter(Boolean).length;
@@ -395,16 +469,16 @@ function screenWriting(sec){
       <div class="card">
         <h2>Inhaltspunkte</h2>
         <p class="sub">Haken Sie ab, was Sie wirklich geschrieben haben.</p>
-        ${it.points.map((p, i) => `<label class="opt" style="margin-bottom:8px">
+        ${it.points.map((pt, i) => `<label class="opt" style="margin-bottom:8px">
           <input type="checkbox" class="chk" data-i="${i}">
-          <span class="grow">${esc(p)}</span>
+          <span class="grow">${esc(pt)}</span>
         </label>`).join('')}
         <div class="fb ok" id="wres" style="display:none"></div>
         <button class="btn wide" id="calc" style="margin-top:12px">Ergebnis berechnen</button>
       </div>
       <div class="bottombar"><div class="inner">
         <button class="btn ghost grow" id="again">Wiederholen</button>
-        <button class="btn grow" id="back">Andere Teile</button>
+        <button class="btn grow" id="back">Übersicht</button>
       </div></div>`;
 
     document.getElementById('calc').onclick = () => {
@@ -420,10 +494,10 @@ function screenWriting(sec){
 
       const score = done + (long ? 1 : 0), max = chks.length + 1;
       const prog = load('b1.progress', {});
-      (prog[S.modell.id] ||= {})[sec.id] = { score, max, pct: Math.round(score / max * 100) };
+      (prog[S.modell.id] ||= {})[run.id] = { score, max, pct: Math.round(score / max * 100) };
       save('b1.progress', prog);
     };
-    document.getElementById('again').onclick = () => screenIntro(sec);
+    document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
   });
 }
