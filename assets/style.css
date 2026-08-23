@@ -5,14 +5,23 @@
   --warn:#b7791f; --warn-soft:#fdf3e0;
   --radius:14px; --shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px rgba(16,24,40,.06);
 }
+/* الوضع الليلي: مرة حسب إعداد النظام (إلا إذا المستخدم اختار فاتح صراحةً)،
+   ومرة حسب اختياره الصريح — تا يشتغل بالحالتين */
 @media (prefers-color-scheme: dark){
-  :root{
+  :root:not([data-theme="light"]){
     --bg:#0f1520; --card:#182233; --ink:#e9eef7; --muted:#98a4bb;
     --line:#28344a; --brand:#5b8dff; --brand-dark:#7ba3ff; --brand-soft:#1c2b46;
     --ok:#43c795; --ok-soft:#122c24; --bad:#ff7d95; --bad-soft:#331a21;
     --warn:#e0b25e; --warn-soft:#31280f;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
   }
+}
+:root[data-theme="dark"]{
+    --bg:#0f1520; --card:#182233; --ink:#e9eef7; --muted:#98a4bb;
+    --line:#28344a; --brand:#5b8dff; --brand-dark:#7ba3ff; --brand-soft:#1c2b46;
+    --ok:#43c795; --ok-soft:#122c24; --bad:#ff7d95; --bad-soft:#331a21;
+    --warn:#e0b25e; --warn-soft:#31280f;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
