@@ -1,0 +1,632 @@
+{
+ "id": "modell-16",
+ "title": "Modelltest 16",
+ "subtitle": "45 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Nur wenige lesen im Zug"
+    },
+    {
+     "key": "B",
+     "text": "Bahnfahren bei älteren Menschen immer beliebter"
+    },
+    {
+     "key": "C",
+     "text": "Per Internet leichter ans Ziel"
+    },
+    {
+     "key": "D",
+     "text": "Männer fahren besser"
+    },
+    {
+     "key": "E",
+     "text": "Hilfe beim Reisen mit der Bahn"
+    },
+    {
+     "key": "F",
+     "text": "Frauen finden den richtigen Weg"
+    },
+    {
+     "key": "G",
+     "text": "Neuer Deutschkurs in Solothurn"
+    },
+    {
+     "key": "H",
+     "text": "Jetzt wird auch im Zug gelernt"
+    },
+    {
+     "key": "I",
+     "text": "LesenimZug ist beliebt"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Frauen kommen genauso gut an ihr Ziel wie Männer, sie geben nur nicht so damit an. Das – – ergab eine Studie der Eberhard Karls Universität Tübingen mit 600 Testpersonen. Obwohl Frauen sich so gut zurechtfinden wie Männer. Wenn Frauen allein unterwegs sind, fragen sie öfter nach dem Weg und freuen sich, wenn ihnen Freunde helfen. Die Tübinger Forscher nennen das ein kommunikatives. Orientierungsmodell Männer dagegen verfahren sich lieber dreimal, als einmal Um Hilfe zu bitten. Dabei Spielt offsichtlich die Erziehung eine Rolle.",
+     "answer": "F"
+    },
+    {
+     "id": "2",
+     "text": "Bahnfahren ist entspannend und lädt zum Lesen ein. Deswegen liest auch etwa die Hälfte aller Reissenden während ihrer Banfahrt. Frauen sind dabei lesefreudiger als Männer: 63 Prozent von ihnen steigen mit dem Buch in den Zug unterwegs ist, verbringt im Durschnitt etwa eine Stunde und 28 Minuten mit dem Lesen eines Buches oder einer Zeitung. Ein Zehntel aller Bahnreisenden gesteht, dass sie keine Buchleser sind. Dies sind die wesentlichen Ergebnisse einer Studie der Stiftung Lesen in Zusammenarbeit mit der Deutschen Bahn.",
+     "answer": "I"
+    },
+    {
+     "id": "3",
+     "text": "Der friere Verein junger Mädchen heißt nun Cornpagna und hat sich zu einem modernen gemeinnützigen Dienstleistungsbetrieb gewandelt. Das wichtigste Ziel des Vereins ist es weiterhin, Menschen zu begleiten. Diese Dienstleistung richtet sich vor allem an Menschen, die Hilfe angewiesen sind: Alleinreisende Kinder alte und behinderte Menschen. Die Reisen werden am Ausgangsbahnhof abgeholt und mit den öffentlich Verkehrsmitteln bis zum Zielort begleitet.",
+     "answer": "E"
+    },
+    {
+     "id": "4",
+     "text": "Christine zum stein Leiterin der Volkshochschule Solothurn (VHS), ist begeistert: super gelaufen seien die Kurse, die die VHS in den Morgenzügen des Quartal angeboten hat. Weil sich das Pilotprojekt von VHS und RBS auf der Strecke Solothurn – Bern bestens bewährt hat, sollen künftig auch Pendlerinnen und Pendler in umgekehrter Richtung die Möglichkeit erhalten während der Bahnfahrt Sprachen zu lernen Zug ab Bern, mit einem Kurs in einer neuer Rechtschreibung. Ebenfalls angeboten werden Englisch, Italienisch und Französisch.",
+     "answer": "H"
+    },
+    {
+     "id": "5",
+     "text": "Sie sind in der Schweiz zu einem Fest eingeladen aber auf der Einladung steht nur die Adresse? Kein Problem, auch ohne Auto: Seit einiger Zeit hat er Internet Fahrplan der Schweizerischen Bundesbahnen(www.sbb.ch) einen großen Brüder. Bis jetzt konnte man nur Verbindungen von Bahnhöfen zu Bahnhöfen oder Haltstellen zu abfragen. Neuerdings ist das auch für den",
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Weg von einer Adresse zu einer anderen möglich. Der elektronische Fahrplan führt Sie automatisch zum Haltepunkt des öffentlichen Verkehrs der am nächsten bei der Zieladresse liegt. Das ist mit dem Verkehrsleitssystem für Autos vergleichbar, das Sie aber auch in der Verkehrten Richtung durch Einbahnstraßen führen kann. Beim öffentlichen Verkehr kommt das glücklicherweise nicht vor. ist jeweils richtig? Neue Berufe Raumberater für harmonisches Wohnen Räume nach der chinesischen Lehre Feng Shui zu gestalten, damit sich die Menschen wohl Fühlen das ist der Beruf von Iris Eigenmann Seit knapp einem Jahr bin ich nun selbstständig und bin voller Energie. So stehe ich jeden Tag mit einem Lächeln auf und gehe abends wieder mit einem Lächeln ins Bett. Die diplomierte Raumberaterin Iris Eigenmann ist von ihrem Beruf sichtlich begeistert. Da viele mit dem Wort Fengshui nichts anfangen können, bezeichnet sie sich selbst als Raumberaterin für harmonisches Wohnungen aber auch Büros und andere Arbeitsplätze so einzurichten, dass sich Menschen in diesen Räumen wohl fühlen können. Ursprünglich ist Frau Eigenmann gelernte Hochbauzeichnerin und hat Jahrelang Bauprojekte geleitet. Diese Erfahrungen mit Architektur und Wohnbau helfen ihr nun sehr bei ihrer Tätigkeit als Raumberaterin. Ihre Arbeit besteht darin, den optimalen Energiefluss eines Wohn- oder Arbeitsumfeldes zu finden. Sie macht individuelle Vorschläge für die Raumanordnung, die Farbwahl der Wände oder für die Verwendung von Baumaterialien. Ich habe alle Ideen zuerst bei mir zu Hause ausprobiert und war selbst überrascht von der positiven Wirkung, erzählt sie begeistert. Eine Raumberaterin arbeitet in der Regel folgendermaßen: Zuerst besprechen die Leute mit Frau Eigenmann, warum sie sich in ihrer Wohnung nicht wohl fühlen und wie sie ihren Wohnraum verbessen möchten. Dann bittet die Beraterin ihre Kunden, ihr einen genauen Plan der Wohnung zu schicken, auf dem sie die Möbelaufstellung und die genaue Ausrichtung des Hauses sehen kann. Daraufhin macht Frau Eigenmann einen detaillierten Wohnungsplan mit ausführlichen Erklärungen, wie man die Räume optimal einrichtet, um sich darin zufrieden zu fühlen. Für die Erstellung eines solchen Planes benötigt sie nach eigener Aussage je nach Größe der Wohnung oder des Gebäudes zwischen einem halben und einem ganzen Tag. Anschließend geht Iris Eigenmann zu den Leuten nach Hause, um die Situation vor Ort zu analysieren und Verbesserungsmöglichkeiten aufzuzeigen. Auch immer mehr Firmen suchen Rat bei einer Raumberaterin meisteens dann, wenn das Unternehmen nicht mehr so erfolgreich arbeitet. Iris Eigenmann versucht dann, das Arbeitsumfeld so zu verändern, dass sich Kunden und Angestellte wohler fühlen. Das führt in den meisten Fällen dazu, dass auch die Geschäfte wieder besser gehen. Der Preis für die Raumberatung wird je nach Aufwand mit dem Kunden gemeinsam bestimmt. Das Geld aber ist für Frau Eigenmann weniger wichtig als die Möglichkeit, den Menschen zu helfen und ihre positiven Erfahrungen weiterzugeben. p g g Das persönliche Ziel der Feng-Shui-Raumberaterin für die Zukunft ist es, vermehrt auch im sozialen Bereich zu wirken zum Beispiel in Krankenhäusern oder Altersheimen. Sie meint, dass mit einfachen Maßnahmen dort die Lebensqualität der Menschen erheblich verbessert werden könnte. LLAANNGGUUAAGGEE TTeessttss"
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Iris Eigenmann.",
+     "options": [
+      {
+       "key": "A",
+       "text": "berät Kunden beim Aufstellen von Möbeln in Wohnungen und Büros."
+      },
+      {
+       "key": "B",
+       "text": "hilft Menschen bei der richtigen Berufswahl."
+      },
+      {
+       "key": "C",
+       "text": "zeichnet Pläne für eine Große Baufirma."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "7",
+     "text": "Als Raumberaterin kümmert sich Iris Eigenmann darum,",
+     "options": [
+      {
+       "key": "A",
+       "text": "dass sich Menschen in Wohn und Arbeitsräumen wohler fühlen."
+      },
+      {
+       "key": "B",
+       "text": "chinesische Möbel in Europa zu verkaufen."
+      },
+      {
+       "key": "C",
+       "text": "Materialien für neue Bauprojekte zu entwickeln."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "8",
+     "text": "Die Leute, die sich beraten lassen wollen,",
+     "options": [
+      {
+       "key": "A",
+       "text": "besprechen mit Frau Eigenmann zuerst ihre Wünsche."
+      },
+      {
+       "key": "B",
+       "text": "laden Frau Eigenmann zuerst in ihre Wohnung ein."
+      },
+      {
+       "key": "C",
+       "text": "schicken Frau Eigenmann zuerst einen Plan der Wohnung."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "Die Firmenkunden von Frau Eigenmann",
+     "options": [
+      {
+       "key": "A",
+       "text": "bezahlen besonders wenig für die Beratung."
+      },
+      {
+       "key": "B",
+       "text": "sind meist erfolgreiche Unternehmen."
+      },
+      {
+       "key": "C",
+       "text": "wollen auch ihre wirtschaftliche Lage verbessern."
+      }
+     ],
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie interessiert sich für eine neue Waschmaschine.",
+     "answer": "L"
+    },
+    {
+     "id": "12",
+     "text": "Ihr Freund sucht einen Praktikumsplatz bei einer Zeeitung.",
+     "answer": "D"
+    },
+    {
+     "id": "13",
+     "text": "Sie wollen ein neues Musikinstrument spielen lernen.",
+     "answer": "K"
+    },
+    {
+     "id": "14",
+     "text": "In Ihrer Wohnung gibt es Probleme mit dem Wasser in Bad und Küche und Sie wollen das verändern.",
+     "answer": "C"
+    }
+   ],
+   "bankImage": "img/m16-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Liebe Dominique, da ich dich telefonisch nicht erreiche, auch nicht per E-Mail, schreibe ich dir einen Brief. Es istt nämlich etwas ganz Besonderes (21) : Stelle (22) vor, ich habe die Stelle bei der EU in Brüssel bekommen! Du weißt noch: Es gab ungefähr 300 Bewerber, und unter denen (23) die besten ausgesucht. Ich hatte mich auf das Vorstellungsgespräch schon (24) Zeit vorher vorbereitet. Trotzdem ohne meine Sprachkenntnisse und meine Auslandserfahrung (25) ich die Stelle sicher nicht bekommen. Aber ein bisschen Glück braucht man auch, (26) so etwas gelingt. Nun bitte ich dich (27) ein paar gute Tipps. Vielleicht kennst du auch jemanden, von(28) ich Informationen über das Leben in Belgien bekommen kann? Ich würde dich am liebsten kürz (29) , um mit dir persönlich zu sprechen. Geht das vielleicht (30) zwei Wochen, Z.B. am übernächsten Wochenende? Bitte gib mir Beschreiben. Herzlich Grüße Katie"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… dir einen Brief. Es istt nämlich etwas ganz Besonderes (21) : Stelle (22) vor, ich habe die Stelle bei der EU in …",
+     "options": [
+      {
+       "key": "A",
+       "text": "geschah"
+      },
+      {
+       "key": "B",
+       "text": "geschehen"
+      },
+      {
+       "key": "C",
+       "text": "geschieht"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… Ich hatte mich auf das Vorstellungsgespräch schon (24) Zeit vorher vorbereitet. Trotzdem ohne meine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "lange"
+      },
+      {
+       "key": "B",
+       "text": "langem"
+      },
+      {
+       "key": "C",
+       "text": "langer"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "27",
+     "text": "… man auch, (26) so etwas gelingt. Nun bitte ich dich (27) ein paar gute Tipps. Vielleicht kennst du auch jemanden, …",
+     "options": [
+      {
+       "key": "A",
+       "text": "für"
+      },
+      {
+       "key": "B",
+       "text": "über"
+      },
+      {
+       "key": "C",
+       "text": "um"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "… , um mit dir persönlich zu sprechen. Geht das vielleicht (30) zwei Wochen, Z.B. am übernächsten Wochenende? Bitte gib …",
+     "options": [
+      {
+       "key": "A",
+       "text": "bis"
+      },
+      {
+       "key": "B",
+       "text": "in"
+      },
+      {
+       "key": "C",
+       "text": "an"
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "dir B hätte den Du würde denen C C A A A 26. 29. 23. halten als getroffen wären damit treffe B B B wurden ob treffen C C C ) ( Sehr geehrte Frau Campe, mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse inn Deutsch anbieten. Ich lerne (32) zwei Jahren Deutsch in Yverden, einer kleinen Stadt in der Westschweiz. Es gefällt mir hier, aber ich lebe in einer französischsprachigen Region und auch meine Arbeitskollegen (33) nur Französisch (oder Englisch) mit mir. So habe ich einfach zu (34). Gelegenheit, Deutsch zu sprechen. Deshalb interessiere ich mich (35) für Ihre Intensivkurse. Die Oberpfalz (36) ich schon seit langem einmal kennen lernen. Ich habe schon viel darüber gehört und gelesen, war aber selber noch nie dort. Bevor ich mich für einen Sprachkurs in St. Anderasburg entscheide, (37) ich noch einige Fragen. Bieten Sie auch Sprachkurse an, in denen man international anerkannte Diplome erwerben kann? (38). Studenten nehmen an einem Kurs teil? Kann man abends auch noch individuell mit dem Computer weiterlernen? Muss man für die Exkursionen extra bezahlen oder sind die Kosten (39) schon im Kursgeld enthalten? Für Ihre Antwort (40) meine Fragen bedanke ich mich vielmals. Mit freundlichen Grüßen Nadia Grade"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… ) ( Sehr geehrte Frau Campe, mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse inn …",
+     "answer": "C",
+     "explain": "Das Wort lautet: DARÜBER"
+    },
+    {
+     "id": "32",
+     "text": "… Andreasburg Intensivkurse inn Deutsch anbieten. Ich lerne (32) zwei Jahren Deutsch in Yverden, einer kleinen Stadt in …",
+     "answer": "I",
+     "explain": "Das Wort lautet: SEIT"
+    },
+    {
+     "id": "33",
+     "text": "… Region und auch meine Arbeitskollegen (33) nur Französisch (oder Englisch) mit mir. So habe ich …",
+     "answer": "J",
+     "explain": "Das Wort lautet: SPRECHEN"
+    },
+    {
+     "id": "34",
+     "text": "… (oder Englisch) mit mir. So habe ich einfach zu (34). Gelegenheit, Deutsch zu sprechen. Deshalb interessiere …",
+     "answer": "L",
+     "explain": "Das Wort lautet: WENIG"
+    },
+    {
+     "id": "35",
+     "text": "… Deutsch zu sprechen. Deshalb interessiere ich mich (35) für Ihre Intensivkurse. Die Oberpfalz (36) ich schon seit …",
+     "answer": "H",
+     "explain": "Das Wort lautet: SEHR"
+    },
+    {
+     "id": "36",
+     "text": "… ich mich (35) für Ihre Intensivkurse. Die Oberpfalz (36) ich schon seit langem einmal kennen lernen. Ich habe …",
+     "answer": "G",
+     "explain": "Das Wort lautet: MÖCHTE"
+    },
+    {
+     "id": "37",
+     "text": "… mich für einen Sprachkurs in St. Anderasburg entscheide, (37) ich noch einige Fragen. Bieten Sie auch Sprachkurse an, …",
+     "answer": "D",
+     "explain": "Das Wort lautet: HÄTTE"
+    },
+    {
+     "id": "38",
+     "text": "… denen man international anerkannte Diplome erwerben kann? (38). Studenten nehmen an einem Kurs teil? Kann man abends …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WIE VIELE"
+    },
+    {
+     "id": "39",
+     "text": "… für die Exkursionen extra bezahlen oder sind die Kosten (39) schon im Kursgeld enthalten? Für Ihre Antwort (40) meine …",
+     "answer": "M",
+     "explain": "Das Wort lautet: WIE"
+    },
+    {
+     "id": "40",
+     "text": "… Kosten (39) schon im Kursgeld enthalten? Für Ihre Antwort (40) meine Fragen bedanke ich mich vielmals. Mit freundlichen …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AUF"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AUF"
+    },
+    {
+     "key": "B",
+     "text": "DAFÜR"
+    },
+    {
+     "key": "C",
+     "text": "DARÜBER"
+    },
+    {
+     "key": "D",
+     "text": "HÄTTE"
+    },
+    {
+     "key": "E",
+     "text": "KANN"
+    },
+    {
+     "key": "F",
+     "text": "KÖNNEN"
+    },
+    {
+     "key": "G",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "H",
+     "text": "SEHR"
+    },
+    {
+     "key": "I",
+     "text": "SEIT"
+    },
+    {
+     "key": "J",
+     "text": "SPRECHEN"
+    },
+    {
+     "key": "K",
+     "text": "VOR"
+    },
+    {
+     "key": "L",
+     "text": "WENIG"
+    },
+    {
+     "key": "M",
+     "text": "WIE"
+    },
+    {
+     "key": "N",
+     "text": "WIE VIELE"
+    },
+    {
+     "key": "O",
+     "text": "WISSEN"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin fühlt sich durch Handys gestört.",
+     "answer": "r"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher benützt das Handy für Gespräche mit Freunden.",
+     "answer": "f"
+    },
+    {
+     "id": "43",
+     "text": "Der Sprecher ruft gerne sein Partnerin mit dem Handy an.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin findet Handys für Kinder nicht gut.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Der Sprecher hätte auch gern ein Handy.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Das Kino Freie Filmbühne ist in Burgoberdorf.",
+     "answer": "r"
+    },
+    {
+     "id": "47",
+     "text": "Die Freie Filmbühne wird geschlossen.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Die Freie Filmbühne hat dieses Jahr zum ersten Mal einen Preis gewonnen.",
+     "answer": "r"
+    },
+    {
+     "id": "49",
+     "text": "Das Haus, in dem die Freie Filmbühne jetzt ist, war früher eine Schule.",
+     "answer": "f"
+    },
+    {
+     "id": "50",
+     "text": "In der Nähe des Kinos kann man etwas trinken gehen.",
+     "answer": "f"
+    },
+    {
+     "id": "51",
+     "text": "Wo jetzt die Freie Filmbühne ist, sollen Wohnungen und ein Freizeitzentrum gebaut werden.",
+     "answer": "r"
+    },
+    {
+     "id": "52",
+     "text": "Es wird wahrscheinlich zwei Jahre dauern, bis die neuen Gebäude fertig sind.",
+     "answer": "f"
+    },
+    {
+     "id": "53",
+     "text": "Es haben jetzt weniger Leute Interesse an der Freie Filmbühne als amm Anfang.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Frau Imbach möchte, dass die Freie Filmbühne umzieht.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Wegen des Nebels sollte man heute nicht nach München fahren.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "In der Buchabteilung ist ein berühmter Autor zu Gast.",
+     "answer": "r"
+    },
+    {
+     "id": "58",
+     "text": "Der Zug nach Wein fährt heute von einem anderen Bahnsteig ab.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "LAANGUAGE Tests Ihr Freund hat Ihnen folgenden Brief geschrieben: Liebe(r)........ ich sende dir sonnige Grüße von der wunderschöne Insel Malta Katja, die Kinder und ich sind ganz glücklich! Strand, Kultur. Sport- all das ist hier möglich! Gestern haben wir uns sogar ein Auto gemietet und einen Ausflug gemacht. Und auch für mein Hobby. Das Fotografieren, habe ich sehr viel Zeit, ich habe schon ganz viele Fotos gemacht. Ich schicke dir mit diesem Brief auch ein Buch über Malta, damit du siehst wie interessant dieses Land ist. Hoffentlich gefällt dir das Buch. Leider ist unser Urlaub auch schon in wenigen Tagen vorbei. Wie wäre das - vielleicht können wir uns ja wieder einmal treffen? Bis hoffentlich bald Viktor"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Ihre Hobbys",
+      "Reaktion auf das Buch",
+      "Ihre Pläne für den nächsten Urlaub",
+      "Treffen mit Viktor"
+     ]
+    }
+   ]
+  }
+ ]
+}

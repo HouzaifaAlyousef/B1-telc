@@ -1,0 +1,813 @@
+{
+ "id": "modell-06",
+ "title": "Modelltest 6",
+ "subtitle": "61 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Märchen-Festspiele in Bremen"
+    },
+    {
+     "key": "B",
+     "text": "Griechische Botschaft bietet Sprachkurse für Schüler"
+    },
+    {
+     "key": "C",
+     "text": "Universitätsstadt wird 300 Jahre"
+    },
+    {
+     "key": "D",
+     "text": "Wissenschaft: Von der Körpergröße hängt das Gehalt ab"
+    },
+    {
+     "key": "E",
+     "text": "Durch Handel reich geworden"
+    },
+    {
+     "key": "F",
+     "text": "Interessante Universitätsstadt mit hoher Lebensqualität"
+    },
+    {
+     "key": "G",
+     "text": "Latein in deutschen Schulen wieder beliebter"
+    },
+    {
+     "key": "H",
+     "text": "Wer wenig lacht, verdient auch weniger"
+    },
+    {
+     "key": "I",
+     "text": "Fremdsprachen: Schüler lernen nur Englisch und Französisch"
+    },
+    {
+     "key": "J",
+     "text": "Griechisch wird in deutschen Schulen kaum unterrichtet"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "In Deutschland lernen nur ganz wenige Schüler Griechisch. Es sind insgesamt nur 0.14 aller Schüler. Vor 30 Jahren waren es noch 0,48 So berichtet die griechische Botschaft in Berlin in ihrem Europabericht. Griechisch wird meistens von Zwölftklässlern als dritte Fremdsprache neben Französisch und Englisch gewählt. Die wenigen Schüler, die Griechisch wählen, haben Verwandte in Griechenland.",
+     "answer": "J"
+    },
+    {
+     "id": "2",
+     "text": "Dem Meer verdankt die Hansestadt Bremen ihre Bedeutung. Bremer Kaufleute und Seefahrer nutzten die günstige geografische Lage, um in aller Welt heimisch zu werden. Seit Generationenhaben sie Handel getrieben, so dass Geld in die Stadt. Dies steht man der Stadt heute noch an: das Alte Rathaus, das Kaufmannhaus, die historische Innenstadt. Außerdem war Bremen auch immer eine Heimat für natürlich das Märchen der Bremer Stadtmusikanten.",
+     "answer": "E"
+    },
+    {
+     "id": "3",
+     "text": "Freiburg, die Hauptstadt des Schwarzwaldes, liegt in einer der sonnigsten Gegenden Deutschlands. Wo es so viel Sonne gibt, da ist auch viel Lebensfreude, und nicht zuletzt gehören auch badische Küche und badischer Wein zum Besten was in Deutschland geboten wird. Zum einmaligen Flair gemütlichen Universitätsstadt trägt auch ihre Lage bei. Frankreich und die Schweiz sind nicht weit entfernt. Die Stadt selbst lockt mit vielen alten Straßen mit zahlreichen Museen und Baudenkmälern. Über alles hinaus ragt die große Kirche, die nach 300 jähriger Bauzeit 1513 vollendet wurde.",
+     "answer": "F"
+    },
+    {
+     "id": "4",
+     "text": "In einer wissenschaftlichen Untersuchung hat man erforscht, warum bestimme Menschen mehr Geld verdienen als andere. Britische Wissenschaftler behaupten, größeren Menschen zahlt der Chef mehr. Im Laufe des vergangenen Jahres haben zwei weitere Untersuchungen festgestellt: Wer wenig lacht oder häufig mit Kollegen trinken geht, vverdient mehr nur: Nicht lachen und mit Kollegen trinken, gehen das kann man lernen. Aber wachsen?",
+     "answer": "D"
+    },
+    {
+     "id": "5",
+     "text": "Das Statistische Bundesamt berichtet, dass in deutschen Schulen allgemein wieder mehr Latein gelernt wird. Allein in Thüringen hat sich die Anzahl in den letzten beiden Jahren verdoppelt Während der Tiefpunkt bei Latein im vorletzten Jahr erreicht war, wählen zurzeit wieder mehr Schüler Latein als erste Fremdsprache. Als vorteilhaft hat sich offenbar vor allem das wittenbergische Modell erwiesen, das Latein in der fünften Klasse mit einer modernen Fremdsprache (Französisch, Englisch usw.) kombiniert Allerdinges sind hier meist nur drei Stunden für beide Sprachen pro Woche vorgesehen. Das sei bei Weitem zu wenig, Kritisieren Lateinlehrer Weitem zu wenig kritisieren Lateinlehrer.",
+     "answer": "G"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Leben Das machen wir mit links Über eine Million Österreicher sind Linkshändder und langsam setzen sie sich durch in der Rechtshänder Welt Schau der macht das mit der linken Hand. Solche und ähnliche Kommentare hörte der gelernte Porzellanformer Gerhard Spur (51) von Besuchern, die die Porzellanmanufaktur im Wiener Augarten besichtigten und dem Künstler beim Herstellen eines Kunstwerkes zusahen allerdings nur früher, als nur die rechte Hand die so genannte schöne Hand war, die man zum Arbeiten. Schreiben usw. verwenden durfte. Heute ist es offensichtlich normal, dass jemand mit der linken Hand Vasen aus Porzellan bearbeitet. Gerhard Spur wird jedenfalls nicht mehr bestaunt. Links arbeiten Gut 15 Prozent der Menschheit sind Linkshänder. Über die Gründe für Linkshändigkeit ist sich die Wissenschaft nicht einig. Fest steht nur. Wenn Kinder gezwungen werden, statt mit der linken Hand mit der rechten Hand zu schreiben, hat dies schwerwiegende Folgen. Dies führt zu Knoten im Kopf so die Linkshänder-Expertin Johanna Barbara Sattier. Spätestens wenn umgeschulte Kinder mit dem Lesen und Schreiben beginnen, macht sich das Chaos im Kopf bemerkbar. In der Schule ist es mittlerweile verboten, Linksshänder auf rechts umzuschulen. Probleme machen allerdings noch Arbeitsplätze, die nicht für Linkshänder geeignet sind, erklärt Erich Pospischill, Leiter des arbeitsmedizinischen Zentrums Mödling: Schon die Computermaus auf der falschen Seite führt zu rascherer Ermüdung, weil das Gehirn durch das ständige Umdenken zusätzlich belastet wird. Lösungen im Betrieb Die Maschine, an der Slata Tanasic tagtäglich arbeitet, funktioniert von links unten nach rechts oben. Genau verkehrt für die 41- Jährige, die seit 21 Jahren im Seibert-Elektroniikwerkk arbeitet. Ich habe gesagt, dass ich mit der Maschine so nicht arbeiten kann. Und das wurde akzeptiert. Slata wurde in einen anderen Arbeitsbereich versetzt und macht jetzt Arbeiten, die auch mit der linken Hand möglich sind: Montieren und Vorbereiten der Bauteile. Eltern können helfen Bei Kleinkindern lässt sich nicht sofort erkennen, ob sie links- oder rechtshändig sind, sagt die Expertin Sattler: Viele Kinder ahmen zuerst die Tätigkeiten in unserer rechtshändigen Welt nach. Deshalb rät Sattler den Eltern, ihren Kinder beim Herausfinden ihrer Händigkeit zu helfen: Blumen gießen mit einer kleinen Kanne, einen Ball werfen bei diesen Handlungen greifen Kinder automatisch mit der starken Hand zu. Und dann sollten Eltern bereits erste Konsequenzen ziehen."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Gerhard Spur",
+     "options": [
+      {
+       "key": "A",
+       "text": "arbeitet heute nur noch mit der rechten Hand."
+      },
+      {
+       "key": "B",
+       "text": "arbeitet früher mit Linkshändern zusammen."
+      },
+      {
+       "key": "C",
+       "text": "stellt seine Kunstwerke mit der linken Hand her"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "7",
+     "text": "Heute ist wissenschaftlich bewiesen, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "es eine klare Ursache für Linkshändigkeit gibt."
+      },
+      {
+       "key": "B",
+       "text": "Linkshänder besser im Lesen und Schreiben sind."
+      },
+      {
+       "key": "C",
+       "text": "Linkshänder das Schreiben mit der rechten Hand schadet."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "8",
+     "text": "Erich Pospischill meint, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "es für Linkshänder sehr oft keine geeigneten Arbeitsplätze gibt."
+      },
+      {
+       "key": "B",
+       "text": "Linkshänder vor allem im Computerbereich eingesetzt werden."
+      },
+      {
+       "key": "C",
+       "text": "Linkshänder wesentlich öfter krank sind."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "9",
+     "text": "Frau Slata Tanasic",
+     "options": [
+      {
+       "key": "A",
+       "text": "arbeitet seit 41 Jahren in der gleichen Firma."
+      },
+      {
+       "key": "B",
+       "text": "erledigt alle Arbeiten mit der linken Hand."
+      },
+      {
+       "key": "C",
+       "text": "ist seit 21 Jahren an der gleichen Maschine beschäftigt."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "10",
+     "text": "Laut der Linkshänder-Expertin Johanna Sattier",
+     "options": [
+      {
+       "key": "A",
+       "text": "haben Linkshänder meistens auch linkshändige Eltern."
+      },
+      {
+       "key": "B",
+       "text": "kann man Linkshändigkeit bei kleinen Kindern nicht gleich entdecken."
+      },
+      {
+       "key": "C",
+       "text": "sind linkshändige Kinder besonders gut im Ballspielen."
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie lieben Krimis und möchten daher einer Krimiautorin beim Vorlesen zuhören.",
+     "answer": "K"
+    },
+    {
+     "id": "12",
+     "text": "Ihr Bekannter würde gerne am Wochenende ein Boot mieten.",
+     "answer": "X"
+    },
+    {
+     "id": "13",
+     "text": "Sie möchten sich in einem Hotel in den Bergen erholen und mit dem Zug anreisen.",
+     "answer": "F"
+    },
+    {
+     "id": "14",
+     "text": "Sie möchten sich eine Märchenvorstellung im Theater ansehen.",
+     "answer": "E"
+    },
+    {
+     "id": "15",
+     "text": "Ihre Freundin sucht ein angenehmes Hotel, in dem man auch Sport treiben kann.",
+     "answer": "D"
+    },
+    {
+     "id": "16",
+     "text": "Am Sonntag wollen Sie einen kleinen Ausflug mit Kindern machen. Die Kinder mögen Tiere.",
+     "answer": "G"
+    },
+    {
+     "id": "17",
+     "text": "Ihre Bekannten möchten gerne im Mai eine Schiffsfahrt machen.",
+     "answer": "L"
+    },
+    {
+     "id": "18",
+     "text": "Sie möchten gerne am Wochenende tanzen gehen und suchen eine tolle Disco.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Der kleine Sohn von Freunden ist begeistert von der Eisenbahn. Sie möchten am Wochenende mit ihm etwas Interessantes machen.",
+     "answer": "H"
+    },
+    {
+     "id": "20",
+     "text": "Sie möchten im August eine Woche in den Bergen wandern und brauchen eine erfahren Person, die mit Ihnen geht.",
+     "answer": "A"
+    }
+   ],
+   "bankImage": "img/m06-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Liebe Jelena, ich hab dir doch schon vom Deutsschkurs erzählt, (21) ich hier besuche. Der ist wirklich ganz gut. Wir haben jetzt eine neue Aufgabe bekommen. Wir müssen Informationen (22) Thema Gesundheit und Ernährung suchen und schauen, was es dazu Interessantes (23) Internet gibt. Die interessanteste Internetseite, die ich finden (24) , ist www.gesund.ch. Diese Seite ist für (25) Leute gemacht, die gern mehr über gesunde Ernährung erfahren möchten. Fachleute beschreiben hier genau, (26) Lebensmittel für unseren Körper wichtig und gesund sind und wie oft und wie viel man pro Tag essen sollte. Außerdem kann man (27) seinen persönlichen Speiseplan selbst erstellen und dafür passende Rezepte (28) . Für Menschen, (29) ein paar Kilos zu viel haben, gibt es auch Tipps zum Abnehmen und Links zu verschiedenen Fitnesszentren in der Schweiz. Und was gibt es bei dir Neues? (30) mir doch möglichst bald zurück! Bis dann und viele Grüße Paola"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… Jelena, ich hab dir doch schon vom Deutsschkurs erzählt, (21) ich hier besuche. Der ist wirklich ganz gut. Wir haben …",
+     "options": [
+      {
+       "key": "A",
+       "text": "das"
+      },
+      {
+       "key": "B",
+       "text": "den"
+      },
+      {
+       "key": "C",
+       "text": "der"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "22",
+     "text": "… eine neue Aufgabe bekommen. Wir müssen Informationen (22) Thema Gesundheit und Ernährung suchen und schauen, was es …",
+     "options": [
+      {
+       "key": "A",
+       "text": "zu"
+      },
+      {
+       "key": "B",
+       "text": "zum"
+      },
+      {
+       "key": "C",
+       "text": "zur"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "23",
+     "text": "… Ernährung suchen und schauen, was es dazu Interessantes (23) Internet gibt. Die interessanteste Internetseite, die ich …",
+     "options": [
+      {
+       "key": "A",
+       "text": "am"
+      },
+      {
+       "key": "B",
+       "text": "im"
+      },
+      {
+       "key": "C",
+       "text": "mit"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… gibt. Die interessanteste Internetseite, die ich finden (24) , ist www.gesund.ch. Diese Seite ist für (25) Leute …",
+     "options": [
+      {
+       "key": "A",
+       "text": "können"
+      },
+      {
+       "key": "B",
+       "text": "könnten"
+      },
+      {
+       "key": "C",
+       "text": "konnte"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "25",
+     "text": "… ich finden (24) , ist www.gesund.ch. Diese Seite ist für (25) Leute gemacht, die gern mehr über gesunde Ernährung …",
+     "options": [
+      {
+       "key": "A",
+       "text": "junge"
+      },
+      {
+       "key": "B",
+       "text": "jungen"
+      },
+      {
+       "key": "C",
+       "text": "junges"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "26",
+     "text": "… erfahren möchten. Fachleute beschreiben hier genau, (26) Lebensmittel für unseren Körper wichtig und gesund sind …",
+     "options": [
+      {
+       "key": "A",
+       "text": "welche"
+      },
+      {
+       "key": "B",
+       "text": "welchen"
+      },
+      {
+       "key": "C",
+       "text": "welcher"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "27",
+     "text": "… und wie viel man pro Tag essen sollte. Außerdem kann man (27) seinen persönlichen Speiseplan selbst erstellen und dafür …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mir"
+      },
+      {
+       "key": "B",
+       "text": "dir"
+      },
+      {
+       "key": "C",
+       "text": "sich"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "28",
+     "text": "… Speiseplan selbst erstellen und dafür passende Rezepte (28) . Für Menschen, (29) ein paar Kilos zu viel haben, gibt …",
+     "options": [
+      {
+       "key": "A",
+       "text": "fand"
+      },
+      {
+       "key": "B",
+       "text": "finden"
+      },
+      {
+       "key": "C",
+       "text": "gefunden"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "29",
+     "text": "… erstellen und dafür passende Rezepte (28) . Für Menschen, (29) ein paar Kilos zu viel haben, gibt es auch Tipps zum …",
+     "options": [
+      {
+       "key": "A",
+       "text": "denen"
+      },
+      {
+       "key": "B",
+       "text": "deren"
+      },
+      {
+       "key": "C",
+       "text": "die"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "… in der Schweiz. Und was gibt es bei dir Neues? (30) mir doch möglichst bald zurück! Bis dann und viele Grüße …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Schreibe"
+      },
+      {
+       "key": "B",
+       "text": "Schreiben"
+      },
+      {
+       "key": "C",
+       "text": "Schreibt"
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "Sehr geehrter Herr Gauberger, ihre Anzeige habe ich mit Interesse gelesen. Ich bin (31) lange Rentner und bekomme monatlich nur wenig Geld. Wenn ich die Möglichkeit (32) , noch ein wenig zu verdienen, würde mir das sehr helfen. Ich bin (33) schon 72 Jahre alt, aber noch bei sehr guter Gesundheit. Daher denke ich, dass ich die Arbeit (34) Probleme machen kann. Seit über dreißig Jahren treibe ich (35) Tag Sport. Auch das frühe Aufstehen macht mir gar (36) aus. Einige Fragen hätte ich trotzdem noch: Müssen die Zeitungen ( 37) ausgetragen werden und wie lange ist man unterwegs? Außerdem möchte ich natürlich wissen, ( 38) man verdient. Ich bin gerne bereit, mich bei (39) vorzustellen, damit Sie sehen können, dass ich für die Tätigkeit (40) bin. Mit freundlichen Grüßen EBERHARD SPITZWEG"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "BEOUEM"
+    },
+    {
+     "key": "B",
+     "text": "GEEIGNET"
+    },
+    {
+     "key": "C",
+     "text": "HÄTTE"
+    },
+    {
+     "key": "D",
+     "text": "IHNEN"
+    },
+    {
+     "key": "E",
+     "text": "JEDEN"
+    },
+    {
+     "key": "F",
+     "text": "KÖNNTE"
+    },
+    {
+     "key": "G",
+     "text": "MEHR"
+    },
+    {
+     "key": "H",
+     "text": "NICHTS"
+    },
+    {
+     "key": "I",
+     "text": "OHNE"
+    },
+    {
+     "key": "J",
+     "text": "SCHON"
+    },
+    {
+     "key": "K",
+     "text": "SIE"
+    },
+    {
+     "key": "L",
+     "text": "TÄGLICH"
+    },
+    {
+     "key": "M",
+     "text": "WIE HOCH"
+    },
+    {
+     "key": "N",
+     "text": "WIE VIEL"
+    },
+    {
+     "key": "O",
+     "text": "ZWAR"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… ihre Anzeige habe ich mit Interesse gelesen. Ich bin (31) lange Rentner und bekomme monatlich nur wenig Geld. Wenn …",
+     "answer": "J",
+     "explain": "Das Wort lautet: SCHON"
+    },
+    {
+     "id": "32",
+     "text": "… monatlich nur wenig Geld. Wenn ich die Möglichkeit (32) , noch ein wenig zu verdienen, würde mir das sehr helfen. …",
+     "answer": "C",
+     "explain": "Das Wort lautet: HÄTTE"
+    },
+    {
+     "id": "33",
+     "text": "… wenig zu verdienen, würde mir das sehr helfen. Ich bin (33) schon 72 Jahre alt, aber noch bei sehr guter Gesundheit. …",
+     "answer": "O",
+     "explain": "Das Wort lautet: ZWAR"
+    },
+    {
+     "id": "34",
+     "text": "… guter Gesundheit. Daher denke ich, dass ich die Arbeit (34) Probleme machen kann. Seit über dreißig Jahren treibe ich …",
+     "answer": "I",
+     "explain": "Das Wort lautet: OHNE"
+    },
+    {
+     "id": "35",
+     "text": "… Probleme machen kann. Seit über dreißig Jahren treibe ich (35) Tag Sport. Auch das frühe Aufstehen macht mir gar (36) …",
+     "answer": "E",
+     "explain": "Das Wort lautet: JEDEN"
+    },
+    {
+     "id": "36",
+     "text": "… (35) Tag Sport. Auch das frühe Aufstehen macht mir gar (36) aus. Einige Fragen hätte ich trotzdem noch: Müssen die …",
+     "answer": "H",
+     "explain": "Das Wort lautet: NICHTS"
+    },
+    {
+     "id": "37",
+     "text": "… Fragen hätte ich trotzdem noch: Müssen die Zeitungen ( 37) ausgetragen werden und wie lange ist man unterwegs? …",
+     "answer": "L",
+     "explain": "Das Wort lautet: TÄGLICH"
+    },
+    {
+     "id": "38",
+     "text": "… ist man unterwegs? Außerdem möchte ich natürlich wissen, ( 38) man verdient. Ich bin gerne bereit, mich bei (39) …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WIE VIEL"
+    },
+    {
+     "id": "39",
+     "text": "… ( 38) man verdient. Ich bin gerne bereit, mich bei (39) vorzustellen, damit Sie sehen können, dass ich für die …",
+     "answer": "D",
+     "explain": "Das Wort lautet: IHNEN"
+    },
+    {
+     "id": "40",
+     "text": "… damit Sie sehen können, dass ich für die Tätigkeit (40) bin. Mit freundlichen Grüßen EBERHARD SPITZWEG",
+     "answer": "B",
+     "explain": "Das Wort lautet: GEEIGNET"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Die Sprecherin findet es gut, dass sie zur Arbeit ein Stück zu Fuß gehen kann.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Der Sprecher fährt nie mit dem Auto zur Arbeit.",
+     "answer": "r"
+    },
+    {
+     "id": "44",
+     "text": "Der Sprecher benutzt für den Weg zur Arbeit zurzeit verschiedene Verkehrsmittel.",
+     "answer": "f"
+    },
+    {
+     "id": "45",
+     "text": "Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Frau Reiter ist die einzige Lokführerin in Deutschland.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "Sie wollte schon mit 10 Jahren Lokführerin werden.",
+     "answer": "f"
+    },
+    {
+     "id": "48",
+     "text": "Frau Reiter hat nach der Schule eine Lehrstell als Elektronikerin gefunden",
+     "answer": "r"
+    },
+    {
+     "id": "49",
+     "text": "Nach der Lehre hat Frau Reiter als Automechanikerin gearbeitet.",
+     "answer": "f"
+    },
+    {
+     "id": "50",
+     "text": "Frau Reiters Eltern waren mit der Berufsswahl ihre Tochter einverstanden.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Frau Reiter muss manchmal Reparaturen machen",
+     "answer": "r"
+    },
+    {
+     "id": "52",
+     "text": "Frau Reiter macht gerne Nachtdienst.",
+     "answer": "f"
+    },
+    {
+     "id": "53",
+     "text": "Von der Arbeit ist Frau Reiter oft müde",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Der Mann von Frau Reiter hat regelmäßige Arbeitszeiten.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Frau Reiter möchte später Lokführer und Lokführerinnen ausbilden",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.",
+     "answer": "r"
+    },
+    {
+     "id": "57",
+     "text": "Die Firma liefert das bestellte Sofa am Dienstag ab drei Uhr nachmittags.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Der Gasthof Lindner ist neben einer Tankstelle.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Der Film Komiker läuft täglich um 20 Uhr.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Das Wetter ist am Abend noch gut.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben im Urlaub Andreas kennengelernt. Er hat Ihnen folgende E-Mail geschrieben: Liebe(r)........ Heute habe ich Zeit, dir ein paar Zeilen zu schreiben. Der Urlaub war so schön, aber seit ich zurück bin, habe ich im Büro sehr viel Arbeit. Bestimmt brauche ich schon bald wieder Urlaub! Während ich weg war, hat sich hier übrigens einiges geändert: Es gibt einen neuen Kollegen, er heißt Roberto. Was aber die größte Veränderung ist: Er arbeitet mit mir in meinem Büro, das heißt, ich habe endlich jemanden, mit dem ich mich Zwischendurch auch ein bisschen unterhalten kann! Roberrto ist aus Spanien hierher gezogen. Er kennt noch niemanden hier, außer mir natürlich, und ist meistens allein. Denkst du, dass ich ihn und ein paar andere Arbeitskollegen einmal einladen sollte? Was würdest du tun? Na gut, für heute muss ich Schluss machen. Melde dich doch bald einmal bei mir! Viele Grüße Andreas"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Wie Sie am liebsten arbeiten (alleine oder mit Kollegen).",
+      "Was Sie nach dem Urlaub gemacht haben.",
+      "Was es bei Ihnen Neues gibt."
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,814 @@
+{
+ "id": "modell-04",
+ "title": "Modelltest 4",
+ "subtitle": "61 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Bilder mit dem Computer bearbeiten"
+    },
+    {
+     "key": "B",
+     "text": "Kirche bietet Backkurs für Kinder an"
+    },
+    {
+     "key": "C",
+     "text": "Kirche eröffnet neuen Treffpunkt"
+    },
+    {
+     "key": "D",
+     "text": "Neu: Kochbuch über Weiner Fleischgerichte"
+    },
+    {
+     "key": "E",
+     "text": "Neue Computerprogramme werden getestet"
+    },
+    {
+     "key": "F",
+     "text": "Preis für bestes Lernprogramm"
+    },
+    {
+     "key": "G",
+     "text": "Rezepte für Kuchen und Torten"
+    },
+    {
+     "key": "H",
+     "text": "Studie zeigt: Kaffeetrinker sind glücklicher"
+    },
+    {
+     "key": "I",
+     "text": "Warum die Wiener ins Café gehen"
+    },
+    {
+     "key": "J",
+     "text": "Zürcher Fotografen stellen aus"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "– Die Kunst und Medienschule F+ F Zürich bietet bereits zum dritten Mal den Computerkurs Digitale Bildbearbeitung an im neuen Semester steht für zehn Samstage Fotografie nach der Fotografie also die digitale Bearbeitung von Bildern im Mittelpunkt Dabei kommen verschiedene Softwareprodukte zum Einsatz Der Kurs befasst sich aber nicht nur mit dem – – Vermitteln auch Themen und Problembereiche rund um die digitale Foto und Bildbearbeitung kurskosten 800Franken Nähere Informationen und Anmeldung zu diesem Kurs www.f- f.ch.",
+     "answer": "A"
+    },
+    {
+     "id": "2",
+     "text": "– Neuperlach-Süd Nach dem Einkaufen eine Kaffee genießen, mit anderen ins Gespräch Immen, sich mit Bekannten treffen oder einfach spannen all das geht ab 11 Juli immer – – dienstags zwischen 14 und 18 Uhr im neuen Eiscafé der Dietrich Bonhoeffer Kirche Wir hotten damit einen Ort der Begegnung für Jung und Alt anbieten und zur Belebung des Stadtteils beitragen erklärt Pfarrer Sebastian Kühnen. Neben kalten und heißen Getränken sowie Kuchen steht während der Öffnungszeiten auch eine Mitarbeiten für Gespräch zur Verfügung.",
+     "answer": "C"
+    },
+    {
+     "id": "3",
+     "text": "Geheimnisse der modernen Konditorkunst der Meister des Süßen, Herwig Gasser, in Jahre hinweg sammelte der Bäcker des berühmten Wiener Café Landmann Mehlspeisenrezepte. Von der Birnentorte über den Apfelstrudel bis hin zum Heidelbeerstolle Verlag Kettel, 110 Fotos, 300 Seiten. – – ISBAN 3 85134 014 -0",
+     "answer": "G"
+    },
+    {
+     "id": "4",
+     "text": "Am Montag wird in Stuttgart die BildungsDidacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.",
+     "answer": "E"
+    },
+    {
+     "id": "5",
+     "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus.",
+     "answer": "I"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Verheiratet mit Handy und Computer Die Woche mit sechzig bis achtzig Arbeitsstunden war für Volkmar Bergmann ganz normal. Der Gründer und Chefingenieur einer Software – Firma hatte von montags bis freitags einen Zwölfstundentag und arbeite auch an Samstagen und Sonntagen. Das Geschäft ging sehr gut. Die Firma wurde immer größer: 1.100 Mitarbeiterinnen und Mitarbeiter – darauf konnte Volkmar Bergmann wirklich stolz sein. Die Arbeit machte ihm Spaß, jedenfalls so lange bis sein Sohn geboren wurde. Auf einmal fingg ich an, die Dinge in einem anderen Licht zu sehen Stress mit Nacht – und Wochenendarbeit heraus zukommen. Jahrelang gelang ihm das nicht. Erst als er sich entschlossen hatte, sein Leben vollkommen zu ändern, wurde es bbesser: Heute arbeitet Bergmann nur 20 Stunden die Woche, als Berater für die Firma, die ihm früher einmal gehörte. Er hat Zeit für die Kinder und sagt: Ich bin zufriedener als jemals zuvor in meinem Leben. Glück gehabt Anderen Vielarbeiten ist eine solche Änderung nicht möglich sie bleiben mit ihrem Schreibtisch verheiratet Ein 24 Stunden Arbeitstag ist der Trend sagt Bryan EE. Robinson Professor in den USA Millionen von Arbeitnehmern geben ihre ganze Kraft für ihnen Job. Wir leben in einer Welt die vor allem den Menschen alle Chancen bietet, für die die Arbeit das Wichtigste im Leben ist, den so genannten Workaholics Diese Menschen können Gutes nur doch in ihrer Arbeit tun. Sie haben längst die Fähigkeit verloren ein Privatleben zu führen und sich um ihre Familie und die Freunde zu kümmern. Die Schwierigkeiten der Menschen, die an der Krankheiten Workaholismus leiden nehmen ständigen zu immer Mehr Menschen laufen Gefahr von ihrer Arbeit regelrecht aufgefressen zu werden Das Ende dieser Entwicklung lässt sich leicht absehen: absehen Die Miitarbeiter werden häufiger krank Arbeitsfreude und Motivation nehmen ab, es kommt zu Fehlen und Pannen. Das Familienleben leidet. Moderne Technik und Medien machen es möglich: Durch das Handy ist man überall und jedeer Zeit erreichbar. Mit Laptops und Mini – Computern ist man unabhängig vom Arbeitsplatz und kann von jedem Ort der Welt aus im Internet surfen oder seine elektronische Post erledigen. Die räumliche Grenze zwischen dem Zuhause und dem Büro besteht für viele nicht mehr. Der Arbeitsplatz wird als Zuhause angesehen und das Zuhause wird zum Arbeitsplatz Eigentlich waren die neuen Medien dazu gedacht, die Arbeit einfacher zu machen. In Wirklichkeit führen sie dazu, dass die Arbeit immer tiefer in den Bereich der Freizeit eindringt. Ein Privatleben, in dem man von der Arbeit einmal ganz abschalten kann, gibt es schon heute für viele nicht mehr. Inzwischen gibt es Seminare für Arbeitskranke in denen die Teilnehmenden lernen sollen wieder zu leben und nicht nur zu funktionieren: Der Psychologe Ulrich Beer gibt seinnen Patienten iin einer solchen Situation einen einfach Ral: im Kalender müssen genau so viele private wie berufliche Termine stehen Familie und Beruf sind gleich wichtig LANGUAGGE Tests"
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Volkmar Bergmann",
+     "options": [
+      {
+       "key": "A",
+       "text": "wollte bei einer anderen Firma arbeiten."
+      },
+      {
+       "key": "B",
+       "text": "wollte mehr Zeit für sein Privatleben haben."
+      },
+      {
+       "key": "C",
+       "text": "wollte nur noch nachts und an Wochenenden arbeiten."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "7",
+     "text": "Es gibt viele Menschen,",
+     "options": [
+      {
+       "key": "A",
+       "text": "die gerne einen anderen Schreibtisch hätten."
+      },
+      {
+       "key": "B",
+       "text": "die heute bereits arbeitskrank sind."
+      },
+      {
+       "key": "C",
+       "text": "die pro Woche nur noch 24 Stunden arbeiten."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "8",
+     "text": "Durch die moderne Technik",
+     "options": [
+      {
+       "key": "A",
+       "text": "haben die Menschen mehr Zeit für das Privatleben."
+      },
+      {
+       "key": "B",
+       "text": "kann die Arbeit fast überall erledigt werden."
+      },
+      {
+       "key": "C",
+       "text": "wird es in Zukunft immer weniger Arbeit geben."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "Laut Professor Robinson",
+     "options": [
+      {
+       "key": "A",
+       "text": "wollen viele Menschen weniger arbeiten."
+      },
+      {
+       "key": "B",
+       "text": "kann viel Arbeit den Menschen gut tun."
+      },
+      {
+       "key": "C",
+       "text": "leben viele Menschen nur noch für ihren Beruf."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "10",
+     "text": "In Seminaren sollen die Teilnehmer lernen,",
+     "options": [
+      {
+       "key": "A",
+       "text": "kranken Mitarbeitern zu helfen."
+      },
+      {
+       "key": "B",
+       "text": "wie man die Arbeit im Büro besser organisieren kann."
+      },
+      {
+       "key": "C",
+       "text": "ein gesundes Verhältnis zur Arbeit zu finden."
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie wollen am Wochenende gerne in ein Klavierkonzert gehen.",
+     "answer": "E"
+    },
+    {
+     "id": "12",
+     "text": "Sie sind in Füssen und wollen am Montag ins Museum gehen.",
+     "answer": "F"
+    },
+    {
+     "id": "13",
+     "text": "Sie sind in Süddeutschland im Urlaub und möchten gerne eine bayerische Spezialität essen.",
+     "answer": "B"
+    },
+    {
+     "id": "14",
+     "text": "Sie haben sich mit Bekannten zu einem Fischessen verabredet.",
+     "answer": "K"
+    },
+    {
+     "id": "15",
+     "text": "Sie sind in Bayern und wollen Käsespezialitäten einkaufen.",
+     "answer": "C"
+    },
+    {
+     "id": "16",
+     "text": "Sie möchten einen Deutschkurs in Wien besuchen.",
+     "answer": "J"
+    },
+    {
+     "id": "17",
+     "text": "Ihr 16 jähriger Sohn soll in den Ferien im Ausland Englisch lernen.",
+     "answer": "H"
+    },
+    {
+     "id": "18",
+     "text": "Sie interessieren sich für einen Sprachkurs auf CD.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Sie wollen, dass Ihre 10- jährige Tochter in den Ferien eine Fremdsprache lernt.",
+     "answer": "X"
+    },
+    {
+     "id": "20",
+     "text": "Eine Bekannte will ihren Geburtstag in einem Restaurant feiern und dort auch übernachten.",
+     "answer": "L"
+    }
+   ],
+   "bankImage": "img/m04-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Sehr geehrter Herr Meyerhofer, Wie Sie wissen , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sind , sind immer besetzt, und das Treppenhaus ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden. Mit freundlichen Grüßen Ihre Anneliese Kühne"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Ihr"
+      },
+      {
+       "key": "B",
+       "text": "Ihrem"
+      },
+      {
+       "key": "C",
+       "text": "Ihren"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "22",
+     "text": "… nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "war"
+      },
+      {
+       "key": "B",
+       "text": "wäre"
+      },
+      {
+       "key": "C",
+       "text": "würde"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "23",
+     "text": "… es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants …",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat"
+      },
+      {
+       "key": "B",
+       "text": "ist"
+      },
+      {
+       "key": "C",
+       "text": "wurde"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "24",
+     "text": "… Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Bis"
+      },
+      {
+       "key": "B",
+       "text": "Nach"
+      },
+      {
+       "key": "C",
+       "text": "Von"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "25",
+     "text": "… verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof …",
+     "options": [
+      {
+       "key": "A",
+       "text": "dem"
+      },
+      {
+       "key": "B",
+       "text": "den"
+      },
+      {
+       "key": "C",
+       "text": "der"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "26",
+     "text": "… im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sind , sind immer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "denen"
+      },
+      {
+       "key": "B",
+       "text": "die"
+      },
+      {
+       "key": "C",
+       "text": "diese"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "27",
+     "text": "… ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze …",
+     "options": [
+      {
+       "key": "A",
+       "text": "im"
+      },
+      {
+       "key": "B",
+       "text": "in"
+      },
+      {
+       "key": "C",
+       "text": "ins"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "28",
+     "text": "… mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "geöffnet"
+      },
+      {
+       "key": "B",
+       "text": "öffnen"
+      },
+      {
+       "key": "C",
+       "text": "öffnet"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "29",
+     "text": "… (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Problem"
+      },
+      {
+       "key": "B",
+       "text": "Probleme"
+      },
+      {
+       "key": "C",
+       "text": "Problemen"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "30",
+     "text": "… den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden. Mit freundlichen Grüßen …",
+     "options": [
+      {
+       "key": "A",
+       "text": "er"
+      },
+      {
+       "key": "B",
+       "text": "man"
+      },
+      {
+       "key": "C",
+       "text": "wir"
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "Sehr geehrte Damen und Herren, ich habe Ihre Anzeige gelesen und interessiere mich sehr für Ihr Angebot. Ich komme aus Kroatien und möchte (31) den nächsten Sommerferien mein Deutsch verbessern. Klagenfurt ist für mich der ideale Ort, (32) das nicht so weit weg von meiner Heimatstadt Zagreb ist. Da kann ich an den Wochenenden vielleicht auch (33) nach Hause fahren. Nun aber zu meiner Person: Ich bin 24 Jahre alt und habe in der Schule vier Jahre lang Deutsch gelernt. Ich kann zwar (34) ganz gut schreiben, (35) ich habe immer wieder Probleme beim freien Sprechen. Im Herbst möchte ich in Hamburg ein Studium beginnen, für das ich ebenfalls gute Deutschkenntnisse brauche. Am liebsten wäre mir ein vierwöchiger Deutschkurs, (36) nur vormittags stattfindet, (37) ich nachmittags etwas anderes machen kann. Ich hätte den ganzen August bis Mitte September Zeit. (38) Sie einen passenden Kurs für mich haben, schicken Sie mir bitte sobald (39) möglich nähere Informationen zu. Mich interessieren auch Ihre Freizeitprogramme, Spezialkurse, die Unterkunftsmöglichkeiten und natürlich die Preise. Bitte empfehlen Sie mir auch ein (40) gute Webseiten über Klagenfurt und den Wörthersee. Vielen Dank im Voraus und freundliche Grüße Ivica Palic"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "ABER"
+    },
+    {
+     "key": "B",
+     "text": "DAMIT"
+    },
+    {
+     "key": "C",
+     "text": "DER"
+    },
+    {
+     "key": "D",
+     "text": "IN"
+    },
+    {
+     "key": "E",
+     "text": "MANCHMAL"
+    },
+    {
+     "key": "F",
+     "text": "MIT"
+    },
+    {
+     "key": "G",
+     "text": "PAAR"
+    },
+    {
+     "key": "H",
+     "text": "SCHON"
+    },
+    {
+     "key": "I",
+     "text": "SEHR"
+    },
+    {
+     "key": "J",
+     "text": "TROTZ"
+    },
+    {
+     "key": "K",
+     "text": "WANN"
+    },
+    {
+     "key": "L",
+     "text": "WEIL"
+    },
+    {
+     "key": "M",
+     "text": "WENN"
+    },
+    {
+     "key": "N",
+     "text": "WIE"
+    },
+    {
+     "key": "O",
+     "text": "ZU"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… sehr für Ihr Angebot. Ich komme aus Kroatien und möchte (31) den nächsten Sommerferien mein Deutsch verbessern. …",
+     "answer": "D",
+     "explain": "Das Wort lautet: IN"
+    },
+    {
+     "id": "32",
+     "text": "… verbessern. Klagenfurt ist für mich der ideale Ort, (32) das nicht so weit weg von meiner Heimatstadt Zagreb ist. …",
+     "answer": "L",
+     "explain": "Das Wort lautet: WEIL"
+    },
+    {
+     "id": "33",
+     "text": "… ist. Da kann ich an den Wochenenden vielleicht auch (33) nach Hause fahren. Nun aber zu meiner Person: Ich bin 24 …",
+     "answer": "E",
+     "explain": "Das Wort lautet: MANCHMAL"
+    },
+    {
+     "id": "34",
+     "text": "… der Schule vier Jahre lang Deutsch gelernt. Ich kann zwar (34) ganz gut schreiben, (35) ich habe immer wieder Probleme …",
+     "answer": "H",
+     "explain": "Das Wort lautet: SCHON"
+    },
+    {
+     "id": "35",
+     "text": "… Deutsch gelernt. Ich kann zwar (34) ganz gut schreiben, (35) ich habe immer wieder Probleme beim freien Sprechen. Im …",
+     "answer": "A",
+     "explain": "Das Wort lautet: ABER"
+    },
+    {
+     "id": "36",
+     "text": "… Am liebsten wäre mir ein vierwöchiger Deutschkurs, (36) nur vormittags stattfindet, (37) ich nachmittags etwas …",
+     "answer": "C",
+     "explain": "Das Wort lautet: DER"
+    },
+    {
+     "id": "37",
+     "text": "… Deutschkurs, (36) nur vormittags stattfindet, (37) ich nachmittags etwas anderes machen kann. Ich hätte den …",
+     "answer": "B",
+     "explain": "Das Wort lautet: DAMIT"
+    },
+    {
+     "id": "38",
+     "text": "… Ich hätte den ganzen August bis Mitte September Zeit. (38) Sie einen passenden Kurs für mich haben, schicken Sie mir …",
+     "answer": "M",
+     "explain": "Das Wort lautet: WENN"
+    },
+    {
+     "id": "39",
+     "text": "… Kurs für mich haben, schicken Sie mir bitte sobald (39) möglich nähere Informationen zu. Mich interessieren auch …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WIE"
+    },
+    {
+     "id": "40",
+     "text": "… natürlich die Preise. Bitte empfehlen Sie mir auch ein (40) gute Webseiten über Klagenfurt und den Wörthersee. Vielen …",
+     "answer": "G",
+     "explain": "Das Wort lautet: PAAR"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin wäre lieber ein Einzelkind.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher hat heute ein gutes Verhältnis zu seinem Bruder.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin würde heute gern noch eine Schwester haben.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin hat schon früh lernen müssen, dass man im Zusammenleben viel Rücksicht nehmen muss.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Die Sprecherin versteht sich sehr gut mit ihrem Bruder.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Die Lehrerin fährt mit ihrer Klasse und an die Nordsee.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "Herr Kühne hat den Brief der Lehrerin nicht erhalten.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Die Klassenfahrt beginnt an einem Samstag.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Herrn Kühnes Sohn Martin wird bei Busfahrten oft schlecht.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Die Fahrt mit dem Schiff dauert fünf bis sechs Stunden.",
+     "answer": "f"
+    },
+    {
+     "id": "51",
+     "text": "Das Haus, in dem die Schüler wohnen, gehört zu einem Hotel.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Die Klassenfahrt wird von einer Lehrerin und einem Lehrer geleitet.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Die Lehrerin empfiehlt, dass die Kinder nicht mehr als 50 Euro Taschengeld mitnehmen.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Katerina kann entweder mitfahren, oder in eine andere Klasse gehen.",
+     "answer": "r"
+    },
+    {
+     "id": "55",
+     "text": "Auf der Klassenfahrt darf nur mit Erlaubnis der Eltern geraucht werden.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Sie müssen in Ingolstadt die Regionalbahn nach Regensburg nehmen.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Clara kann wegen einer Prüfung die Theaterkarten nicht abholen.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Im Schwarzwald können die Straßen morgen glatt werden.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Der Liederabend findet zu einem späteren Termin statt.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Im Untergeschoss gibt es Winterkleidung zum halben Preis.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben von einer Freundin folgenden Brief erhalten: Liebe(r)........ ich hoffe, dir geht’s gut. stell dir vor, bei mir gibt es Neuigkeiten Du weißt doch, dass wir schon lange von einem Garten geträumt haben. Jetzt haben wir endlich einen am Stadtrand gefunden. Da er sehr groß ist. Wollte ich dich fragen, ob du nicht Lust hast den Garten mit uns zu teilen. Die Miete ist gar nicht so hoch . Du könntest dort Salat und Gemüse anpflanzen, natürlich auch Blumen ganz wie du willst. Es gibt auch Obstbäume und eine große Wiese, auf der man sich einfach hinlegen, und wir könnten im Garten auch grillen. Was denkst du? Wäre das nicht toll. Antworte mir bald. Alles Liebe Deine Nadja"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Reaktion auf den Vorschlag",
+      "Fragen zum Garten",
+      "Weg zum Garten",
+      "Was es bei Ihnen Neues gibt"
+     ]
+    }
+   ]
+  }
+ ]
+}

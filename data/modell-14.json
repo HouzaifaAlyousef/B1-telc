@@ -1,0 +1,700 @@
+{
+ "id": "modell-14",
+ "title": "Modelltest 14",
+ "subtitle": "50 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Neue Untersuchung über Familien in der Schweiz"
+    },
+    {
+     "key": "B",
+     "text": "Ein Jahr preiswert reisen"
+    },
+    {
+     "key": "C",
+     "text": "Buchtipp: Ausflüge für Familien"
+    },
+    {
+     "key": "D",
+     "text": "Bahnfahren im nächsten Jahr um 25% teurer!"
+    },
+    {
+     "key": "E",
+     "text": "Ein Unternehmen mit vielen beruflichen Möglichkeiten"
+    },
+    {
+     "key": "F",
+     "text": "Neue Kindersendung im Fernsehen"
+    },
+    {
+     "key": "G",
+     "text": "Der Film soll echt sein: Schweizer Filmteam in Indien"
+    },
+    {
+     "key": "H",
+     "text": "Wie man im Zug Leute kennen lernt"
+    },
+    {
+     "key": "I",
+     "text": "Jeden Tag ein Stück Wirklichkeit im Fernsehen"
+    },
+    {
+     "key": "J",
+     "text": "Filmaufnahmen im Berner Oberland"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Immer wieder drehen indische Regisseure Szenen ihrer Kinofilme in den Schweizer Bergen. Warum nehmen sie die Strapazen und hoben Kosten einer solch langen Reise auf sich? Das Hamburger Abendblatt eines dieser Filmteams auf dem Drehplatz im idyllischen Berner Oberland erhielt spannende und heitere Antworten.",
+     "answer": "J"
+    },
+    {
+     "id": "2",
+     "text": "KIDTOURS Ferien mit Kindern ist ein praktischer Ausflugsführer fürr Familien: mit 1000 Tipps, Tricks und Ideen für jeden Geschmack, jedes Alter und jedes Budget. Das übersichtliche, hübsch illustrierte Nach- schlage werk erhalten Sie für € 19,50 im Buchhandel oder direkt bei Werd Verlag, www.werd.net.",
+     "answer": "C"
+    },
+    {
+     "id": "3",
+     "text": "Das Halbtax -Abo ist Ihr Schlüssel zu günstigen Reisen mit Bahn, Bus und Schifft und präsentiert sich im praktischen Kreditkartenformat. Schon beim Abo selbst können Sie zünftig sparen: Für ein Jahr halbtaxeln bezahlen Sie 150 Schweizer Franken. Und das ist noch nicht alles: Mit dem Halbtax-Abo sind Sie gut informiert: Zweimal jährlich erhalten Sie das Kundenmagazin mit vielen Reise -Ideen und exklusiven Reiseangeboten. Mit Ihrem Halbtax- Abo erhalten Sie 25% Preisnachlass auf Zugfahrten von der Schweiz nach Deutschland und Österreich, wenn Sie Ihre Fahrkarte in der Schweiz kaufen. SBB CFF FF SBB – Schweizerische Bundesbahnen",
+     "answer": "B"
+    },
+    {
+     "id": "4",
+     "text": "Dokumentarfilm und Seifenoper zuusammen heißt Doku-Soap, stammt aus England und macht sich seit Jahren auch auf deutschen TV Kanälen breit. Vor allem Privatsender haben sich als erfolgreiche Doku – Soap- Sender etabliert. In vielen TV- Serien kann man das wirkliche Leben von Menschen verfolgen und mit ihnen mit leben. Zurzeit besonders erfolgreich: die Sendung Tausche Familie die täglich um 18 Uhr viele Zuschauer vor den Fernseher lockt.",
+     "answer": "I"
+    },
+    {
+     "id": "5",
+     "text": "Wir wollen dir bei der Berufswahl helfen: Die deutsche Bahn, ein Unternehmen mit Zukunft. Viele Berufe ändern sich im Laufe der Zeit. Genauso wie die Interessen im Leben. Und trotzdem gibt es Neigungen und Fähigkeiten, die du lange Zeit in deinem Leben behalten wirst. So zum Beispiel die Freude am Kontakt mit Menschen. Oder die Begeisterung für fremde Sprachen. Oder das Arbeiten in der freien Natur und im Team. Oder das Interesse an Technik und die Freude am Handwerk. Je nachdem, wofür du dich interessierst, kannst du bei der Deutschen Bahn aus insgesamt 15 Lehrberufen wählen. Um die richttige Entscheidung zu",
+     "answer": "E"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "treffen, lohnt es sich, sich gründlich zu informieren, zum Beispiel aus unserer Website www. Bahn .de Die neue Sir-Karl-Popper-Schule Ein Schulversuch für besonders Klage Schüler WIEN. Es ist eine ganz normale Schulstunde Geschichte in einer ganz normale Klasse. Während der Lehrer – – einen Vortrag über das alle Rom hält, unterhalten sich die Schüler über den Schulball, kreiereen diee Kleidung des Lehrers, reichen Zettel unter der Schulbank weiter. Ganz normale Kinder Auch überdurchschnittlich intelligente Kinder sind ganz normale Kinder, betont Elfriede Wegricht, Psychologin in der Sir Karl Popper Schule, die im vergangen September Ihren Betrieb aufgenommen hat nur weil sie in der Schule gut sind, heißt das nicht, dass sie nicht genauso wie alle anderen Schüler Liebeskummer, Ärger mit den Eltern und andere Pubertätsporobleme haben Der Unterschied zwischen normalen und hochbegabten in ihrer bisherigen Schulkarriere nicht besonders anstrengen mussten und es nicht gewohnt sind, mit ihrer Zeit gut hauszuhalten Förderung durch Forderung Um überdurchschnittlich intelligente Kinder nun entsprechend zu fördern, sieht das Konzept der Sir Karl Popper- Schule mehr Fremdsprachen projektorientiertes Arbeiten in kleinen Klassen und vor allem mehr Eigenveraantwortung für den Lernenden vor. Dazu kommt die Förderung der individuellen Fähigkeiten: Wer in einem Fach gut ist und sich besonders für ein Thema interessiert bekommt Sonderaufgaben und tiefer gehen Ende Unterlagen. Anfangs war der plötzlich Mehr aufwand ein Schock für die Schüler, die eine 40 Stunden Woche zu bewältigen haben Aber es ist besser, sie erleben den Schock jetzt als zu Beginn des Studiums meint Herr Peters Lehrer und Schülerbetreuer an der Popper Schule denn oft scheitern besonders kluge Menschen Später weeil sie mit ihrer Intelligenz nichhts anzufangen wissen Denn zumeist erreichten sie mit wenig Aufwand und Mitarbeit relativ gute Ergebnisse Wer ist hochbegabt? Zielgruppe der Sir Karl Popper Schule sind Kinder, die in mindestens einem Fach hochbegabt sind und überdurchschnittlich gute Ergebnisse haben, das sind 20 30 der Schüler. Nach einer Aufnahmeprüfung wurden von 64 Bewerben 28 geteilt sind und von insgesamt 28 Lehren betreut werden In diesen Klassen können die über durchschnittliche intelligenten Schüler dann endlich so sein, wie sie sind, ohne bei jeder Wortmeldung von ihren Klassenkameraden beschimpft zu werden meint die Schulpsychologien Ziel des Schulversuchs sei es jedoch laaut Peters nicht, besonders kluge Schüler von normalen Kindern zu trennen, sondern Erfahrung im Umgang mit überdurchschnittlich die Begabtenförderung in die Normalschule zu übernehmen."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Die Psychologin der Popper-Schule meint, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "besonders intelligente Kinder sich stark von anderen Kindern unterscheiden."
+      },
+      {
+       "key": "B",
+       "text": "besonders intelligente Schüler dieselben Probleme haben wie andere Kinder."
+      },
+      {
+       "key": "C",
+       "text": "besonders intelligente Schüler weniger Probleme im alltäglichen Leben haben."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "7",
+     "text": "Für überdurchschnittlich intelligente Schüler ist typisch, dass Sie",
+     "options": [
+      {
+       "key": "A",
+       "text": "auch ohne viel Anstrengung gute Noten haben."
+      },
+      {
+       "key": "B",
+       "text": "nach der Schule immer großen Erfolg im Beruf haben."
+      },
+      {
+       "key": "C",
+       "text": "sich die Zeit zum Lernen besser als andere einteilen können."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "8",
+     "text": "Im Unterricht der Popper-Schule sollen die Schüler",
+     "options": [
+      {
+       "key": "A",
+       "text": "immer in einer Fremdsprache miteinander sprechen."
+      },
+      {
+       "key": "B",
+       "text": "in ihren besten Fächern eine spezielle Betreuung bekommen."
+      },
+      {
+       "key": "C",
+       "text": "in kleinen Gruppen schwächeren Schülern helfen."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "Die erste Zeit in der Popper-Schule war für die Schüler schwer, weil",
+     "options": [
+      {
+       "key": "A",
+       "text": "sich ihre Noten plötzlich verschlechterten."
+      },
+      {
+       "key": "B",
+       "text": "sie auf einmal viel mehr Zeit mit Lernen verbringen mussten."
+      },
+      {
+       "key": "C",
+       "text": "sie noch nicht wussten, welche besonderen Talente sie hatten."
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie suchen für Ihre beiden Kinder neue Betten und möchten höchstens 200 Euro ausgeben.",
+     "answer": "C"
+    },
+    {
+     "id": "12",
+     "text": "Sie haben Probleme mit dem Rücken und suchen ein Gesundheitsbett.",
+     "answer": "X"
+    },
+    {
+     "id": "13",
+     "text": "Sie suchen ein schönes Sofa, das man auch als Gästebett benutzen kann.",
+     "answer": "A"
+    },
+    {
+     "id": "14",
+     "text": "Vor Ihre Urlaubsreise möchten Sie Ihr Fahrrad überprüfen lassen.",
+     "answer": "L"
+    },
+    {
+     "id": "15",
+     "text": "Ihre Freunde möchten eine organisierte Radtour machen und suchen ein geeignetes Angebot.",
+     "answer": "J"
+    },
+    {
+     "id": "16",
+     "text": "Ihre Verwandten haben eine Woche Urlaub und suchen einen Ferienort am Meer.",
+     "answer": "G"
+    }
+   ],
+   "bankImage": "img/m14-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Familie einen Flug nach Indien gebucht. Leider entsprach unser Flug überhaupt nicht dem, (22)bei der Buchung am Telefon ausgemacht worden war. (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir einen Flug (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Der Flug war nicht nur anders als vereinbart, (26) auch noch viel teurer. statt (27) erwarteten 640 Euro kostete der Flug 720 Euro. Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Deutschen Bank in Mumbai bitten. Meine Bankdaten haben Sie bereits. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.Mit freundlichen Grüßen Harish Khurana"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "Sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Familie einen Flug nach Indien …",
+     "options": [
+      {
+       "key": "A",
+       "text": "ihnen"
+      },
+      {
+       "key": "B",
+       "text": "Ihnen"
+      },
+      {
+       "key": "C",
+       "text": "Sie"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "22",
+     "text": "… gebucht. Leider entsprach unser Flug überhaupt nicht dem, (22)bei der Buchung am Telefon ausgemacht worden war. (23) ich …",
+     "options": [
+      {
+       "key": "A",
+       "text": "das"
+      },
+      {
+       "key": "B",
+       "text": "was"
+      },
+      {
+       "key": "C",
+       "text": "wie"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… nach Mumbai bestellt hatte, haben Sie mir einen Flug (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "für"
+      },
+      {
+       "key": "B",
+       "text": "mit"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "25",
+     "text": "… Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit …",
+     "options": [
+      {
+       "key": "A",
+       "text": "erst"
+      },
+      {
+       "key": "B",
+       "text": "nach"
+      },
+      {
+       "key": "C",
+       "text": "seit"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "27",
+     "text": "… anders als vereinbart, (26) auch noch viel teurer. statt (27) erwarteten 640 Euro kostete der Flug 720 Euro. Ich darf …",
+     "options": [
+      {
+       "key": "A",
+       "text": "der"
+      },
+      {
+       "key": "B",
+       "text": "deren"
+      },
+      {
+       "key": "C",
+       "text": "die"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "28",
+     "text": "… 640 Euro kostete der Flug 720 Euro. Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein …",
+     "options": [
+      {
+       "key": "A",
+       "text": "für"
+      },
+      {
+       "key": "B",
+       "text": "um"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "30",
+     "text": "… Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.Mit freundlichen Grüßen Harish Khurana",
+     "options": [
+      {
+       "key": "A",
+       "text": "mich"
+      },
+      {
+       "key": "B",
+       "text": "mir"
+      },
+      {
+       "key": "C",
+       "text": "sich"
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "23. A Danach 26. A besonders 29. A an Obwohl sondern bei Nämlich sonst vor C C ) ( Sehr geehrte Frau Borner, es gibt ganz viele Raschläge, wie mman sich ernähren soll, was man essen soll und was nicht. Die meisten Empfehlungen sind aber nicht für etwas, (31) gegen etwas, und zwar immer wieder gegen etwas anderes: gegen Fleisch zum Beispiel oder gegen Zucker, aber auch gegen Milch. so (32) man etwa, wer kein Fleisch isst, lebt nicht nur gesünder, sondern fühlt sich auch besser. (33) Durchsehen einer Zeitschrift ist mir Ihre Anzeige aufgefallen, und nun habe ich folgende Fragen an Sie: Von (34) Nahrungsmitteln darf man eigentlich so viel essen, wie man will? Was (35) jeden Tag gegessen werden? Und wie ist das mit der Milch? Die einen sagen, Milch ist sehr gesund (36) der vielen wichtigen Nährstoffe. Andere meinen, wer viel Milch trinkt, kann Probleme mit dem Magen bekommen. Außerdem kann man anstelle (37) Milch auch Mineralwasser trinken. Was soll ich jetzt glauben? Für eine Antwort (38) meine Fragen danke ich Ihnen im Voraus. Könnten Sie mir auch noch eine Broschüre schicken? Das Thema Essen und Sport (39) mich besonders interessieren, (40) ich selber viel Sport treibe. Mit freundlichen Grüßen Silvia Schönenberger"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AUF"
+    },
+    {
+     "key": "B",
+     "text": "BEIM"
+    },
+    {
+     "key": "C",
+     "text": "DESWEGEN"
+    },
+    {
+     "key": "D",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "E",
+     "text": "NENNT"
+    },
+    {
+     "key": "F",
+     "text": "SAGT"
+    },
+    {
+     "key": "G",
+     "text": "SOLLTE"
+    },
+    {
+     "key": "H",
+     "text": "SONDERN"
+    },
+    {
+     "key": "I",
+     "text": "VON"
+    },
+    {
+     "key": "J",
+     "text": "WAS"
+    },
+    {
+     "key": "K",
+     "text": "WEGEN"
+    },
+    {
+     "key": "L",
+     "text": "WEIL"
+    },
+    {
+     "key": "M",
+     "text": "WELCHEN"
+    },
+    {
+     "key": "N",
+     "text": "WÜRDE"
+    },
+    {
+     "key": "O",
+     "text": "ZUM"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… Die meisten Empfehlungen sind aber nicht für etwas, (31) gegen etwas, und zwar immer wieder gegen etwas anderes: …",
+     "answer": "H",
+     "explain": "Das Wort lautet: SONDERN"
+    },
+    {
+     "id": "33",
+     "text": "… lebt nicht nur gesünder, sondern fühlt sich auch besser. (33) Durchsehen einer Zeitschrift ist mir Ihre Anzeige …",
+     "answer": "B",
+     "explain": "Das Wort lautet: BEIM"
+    },
+    {
+     "id": "34",
+     "text": "… aufgefallen, und nun habe ich folgende Fragen an Sie: Von (34) Nahrungsmitteln darf man eigentlich so viel essen, wie …",
+     "answer": "M",
+     "explain": "Das Wort lautet: WELCHEN"
+    },
+    {
+     "id": "35",
+     "text": "… darf man eigentlich so viel essen, wie man will? Was (35) jeden Tag gegessen werden? Und wie ist das mit der Milch? …",
+     "answer": "G",
+     "explain": "Das Wort lautet: SOLLTE"
+    },
+    {
+     "id": "36",
+     "text": "… das mit der Milch? Die einen sagen, Milch ist sehr gesund (36) der vielen wichtigen Nährstoffe. Andere meinen, wer viel …",
+     "answer": "K",
+     "explain": "Das Wort lautet: WEGEN"
+    },
+    {
+     "id": "38",
+     "text": "… trinken. Was soll ich jetzt glauben? Für eine Antwort (38) meine Fragen danke ich Ihnen im Voraus. Könnten Sie mir …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AUF"
+    },
+    {
+     "id": "39",
+     "text": "… noch eine Broschüre schicken? Das Thema Essen und Sport (39) mich besonders interessieren, (40) ich selber viel Sport …",
+     "answer": "N",
+     "explain": "Das Wort lautet: AUF"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Der Sprecher hätte gern Urlaub wie die anderen Kinder gemacht.",
+     "answer": "r"
+    },
+    {
+     "id": "42",
+     "text": "Dem Sprecher hat der Wanderurlaub nicht so gut gefallen.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin hat die Ferien bei Verwandten verbracht.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin hat mit ihren Eltern regelmäßig Fahrradausflüge gemacht.",
+     "answer": "f"
+    },
+    {
+     "id": "45",
+     "text": "Der Sprecher hat den Urlaub mit den Eltern gemeinsam geplant.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Herr Schütz arbeitet erst seit kurzer Zeit als Taxifahrer",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "In der Kleinstadt hatte Herr Schütz keine Geschäftsleute als Kunden.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Herr Schütz hat sich schon einmal in einen Fahrgast verliebt.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Die Fahrgäste erzählen viel, weil sie den Taxifahrer nicht kennen.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Männer sprechen oft über unpersönliche Dinge.",
+     "answer": "f"
+    },
+    {
+     "id": "51",
+     "text": "Herr Schütz bekommt von den Fahrgästen manchmal auch einen Tipp.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "In der Freizeit steht Sport für Herrn Schütz an erster Stelle.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Beim Schwimmen kann sich Herr Schütz von einem anstrengenden Tag erholen.",
+     "answer": "f"
+    },
+    {
+     "id": "54",
+     "text": "Herr Schütz hat sich entschieden, nur am Tag Taxi zu fahren.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Nach Meinung von Herrn Schütz haben jüngere Taxifahrer weniger Angst, nachts zu an.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Der Zug nach Mannheim fährt um 13:14 Uhr ab.",
+     "answer": "r"
+    },
+    {
+     "id": "57",
+     "text": "Dr. Hoffmann ist um Urlaub unter der Nummer 957 30 75 zu erreichen.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Sie können den Film das Leben ist schön um 18: 15 Uhr im Central sehen.",
+     "answer": "f"
+    },
+    {
+     "id": "59",
+     "text": "Heute Abend beginnt es zu schneien.",
+     "answer": "f"
+    },
+    {
+     "id": "60",
+     "text": "Katrin hätte am Dreiundzwanzigsten Zeit.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Eine Freundin hat Ihnen den folgenden Brief geschrieben: Liebe(r)........ wie geht es Dir? Du hast mir schon so lange nicht mehr geschrieben, dass ich mir Sorgen mache. Hoffentlich isst bei Euch allles in Ordnung. Es wird wirklich Zeit, dass wir uns wiedersehen. Anfang des Jahres habe ich meinen Arbeitsplatz gewechselt. Meine neue Stelle ist sehr interessant, aber auch anstrengend. Ich bin nun beruflich sehr viel unterwegs. Demnächst muss ich auch in Eure Gegend reisen. Dann könnten wir uns doch einmal am Abend treffen und gemeinsam etwas unternehmen. Wie findest Du meine Idee? Ich würde auch sehr gerne Deine Familie kennenlernen. Bitte antworte mir bald! Herzliche Grüße Deine Tamara"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Vorschlag zum Treffen",
+      "Jemanden mitbringen",
+      "Frage zur neuen Arbeitsstelle",
+      "Warum Sie nicht geschrieben haben"
+     ]
+    }
+   ]
+  }
+ ]
+}

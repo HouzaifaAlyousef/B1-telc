@@ -1,0 +1,814 @@
+{
+ "id": "modell-01",
+ "title": "Modelltest 1",
+ "subtitle": "61 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Angebot für Reisende: Für wenig Geld öffentliche Verkehrsmittel benutzen"
+    },
+    {
+     "key": "B",
+     "text": "Bildband: Babys im Garten"
+    },
+    {
+     "key": "C",
+     "text": "Ein Schüler mit vielen Ideen"
+    },
+    {
+     "key": "D",
+     "text": "Früh übt sich: Hotels bieten Skikurse für Zweijährige an"
+    },
+    {
+     "key": "E",
+     "text": "Handbuch für Hobby-Fotografen"
+    },
+    {
+     "key": "F",
+     "text": "Neu: Mit dem Taxi gratis zur Disco"
+    },
+    {
+     "key": "G",
+     "text": "Neu: Taxi Tickest für Discobesucher"
+    },
+    {
+     "key": "H",
+     "text": "Schulkinder schreiben spannende Geschichten"
+    },
+    {
+     "key": "I",
+     "text": "Skikurs für Eltern und Kinder"
+    },
+    {
+     "key": "J",
+     "text": "Straßenbahn und Bus im Flugticket enthalten"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Ich möchte, dass Menschen, die meine Fotos gesehen haben, von nun an die Welt mit anderen Augen betrachten. Das könnte der neuseeländischen Fotografin Anne Geddes gelingen. Denn die Bilder, die sie für das Buch. Drunten im Garten von den kleinen Menschenkindern gemacht hat, sind ungewöhnlich und wunderschon: Babys auf Blumen, Blattern, Beeren, verkleidet als Morcheln, Melonen oder Marienkäfer, Babys in Tulpen und als Schmetterlinge. Ein Bildband, angereichert mit poetischen Texten und Ratschlägen.",
+     "answer": "B"
+    },
+    {
+     "id": "2",
+     "text": "Die meisten Skikurse für Kinder beginnen im Alter von vier Jahren. Im Kärntner Baby Dorf Trebesing ist das anders: Hier werden im Windel Wedel Camp bereits Kleinkinder ab zwei Jahren unterrichtet. Täglich zwei Stunden können die Skihaserin unter fachkundiger Anleitung auf einem flachen Hügel erste Geh- bzw. Fahrversuche auf zwei Brettern machen. Nach einigen Tagen Übung geht es dann mit dem Baby Bus ins Skigebiet Innerkrems. Auch Ginas Baby und Kinderhotel am Fiaker See bietet seinen jüngsten Gästen Skikurse. Fast 1000 Knirpse haben in der Windelschule schon Skifahren gelernt. Auskunft: Tourismusverband Leiser Malta Tal und die Kinderhotels",
+     "answer": "D"
+    },
+    {
+     "id": "3",
+     "text": "Berlins jüngster Schriftsteller hat deutlich mehr Texte verfasst als er Jahre zählt. Rund 50 Gedichte und Erzählungen tippte Daniel Story. 12, schon in seiner Computer. Ich schreibe fast, seitdem es mich gibt, sagt der Sechstklässler Bereits mit sieben dichtete er die ersten Verse, jetzt mit zwölf ist er stolz auf seine erste Autorenlesung. Wenn Freunde Fußball spielen, tobt Daniels Phantasie im Kinderzimmer. Warum er lieber schreibt? Daniel: Ich schreibe, weil ich nicht alles erleben kann, was ich denke.",
+     "answer": "C"
+    },
+    {
+     "id": "4",
+     "text": "Ob Sie privat oder geschäftlich unterwegs sind, mit dem Stadt Ticket können Sie billig die öffentlichen Verkehrsmittel nutzen. Voraussetzung: Sie sind mit dem Flugzeug oder der Deutschen Bahn(über 100 km) angereist. Gegen einen Aufpreis von nur Euro 2,50 ermöglicht Ihnen das Stadt Ticket auch nach der Ankunft am Zielort freie Fahrt. Mit U- S- oder Straßenbahnen sowie Bussen. Bis zu 48 Stunden. Übrigens: Ihr Stadt Ticket gilt an zwei aufeinanderfolgenden Tagen, die Sie beim Kauf Ihres Fahrscheines selbst bestimmen.",
+     "answer": "A"
+    },
+    {
+     "id": "5",
+     "text": "In Mecklenburg-Vorpommern können junge Leute jetzt für den halben Fahrpreis mit dem Taxi auf Discotour gehen. Tickets dafür sind bei allen Geschäftsstellen der Allgemeinen Ortskrankenkasse (AOK) sowie an Esso Tankstellen zum halben Preis erhältlich. Junge Leute zwischen 16 und 25 Jahren können sie an Wochenenden und Feiertagen in der Zeit von 20 Uhr bis morgens 6 Uhr benutzen. Die Taxifahrer erhalten bei ihrer Zentrale dann den vollen Fahrpreis erstattet.",
+     "answer": "G"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Leipzigerin geht in den USA auf Sendung Drei Monate Praktikum für junge Sachsen im Land der unbegrenzten Möglichkeiten Manchmal fühle ich mich wwie ein Missionar, scherzt Ulrike Rudelt. Das Bild vom Deutschen, der Lederhosen träggt, Bier trinkt und Sauerkraut isst, hält sich ihrer Meinung nach in der Öffentlichkeit Amerikas ganz stark und wird vor allem in der Fernsehwerbung ständig wiederholt. Dagegen kämpfe ich, sagt die 25- Jährige selbstbewusst, die derzeit ein dreimonatiges Praktikum am Institute of International Studies in Kalifornien absolviert und so oft es geht über die Heimat erzählt. An der Uni in Monterey darf die Leipziger Studentin neben dem Hospitieren auch selbst unterrichten. Das Interesse der Studenten und Dozenten an der deutschen Sprache, an Geschichte und Gegenwart Deutschlands ist große. Richtig in Fahrt kommt Ulrike, wenn es um den Mauerfall geht und darum, wie sich der Osten nach der Wende entwickeltt hat. Die Chancen, die ich jetzt habe, hatten meine Eltern nicht, sagt sie. So ging sie nach dem Studium als Au Pair-Mädchen nach England und machte im Rahmen studentischer Austauschprogramme bereits Praktika in den USA und den Niederlanden. Einen Vorgeschmack vom. American Way of Life gab es bereits während des einwöchigen Einfühhrungsseminars in New York, schwärmt Cornelia Schiemenz. Die Stadt pulsiert, und wir hatten jede Menge Spaß. Auf dem Programm standen Ausflüge, und dazu hörten sie jede Menge vor träge zum Welthandel, Kampf gegen Arbeitslosigkeit, zur wirtschaftlichen Entwicklung der USA und Kriminalitätsbekämpfung. In Denver, wo die Studentin für Kommunikations-und Medienwissenschaft die Arbeit eines Tv- Senders kennen lernt, steht sie nach einigen Tagen selbst vor der Kamera und darf Beiträge für den Sender produzieren ich bin absolut glücklich, sagt die 23 jährige. Antje Kutzer, die dritte Leipzigerin in der Gruppe, hat es nach Los Angeles verschlagen. Nach dem Abitur hat sie Reiseverkehrskauffrau gelernt. In der Reisekette New World Travel erste Erfahrungen. Anfangs erzählt die 23- jährige hatte ich großes Heimweh, es sind doch einige Kilometer weg von Leipzig. Doch dann stelle ich mich der Chefin im besten Englisch vor, worauf sie auf Deutsch antwortete, dass wahnsinnig freut, dass ich ihr über die Schulter sehen will. Die drei Frauen zählen zu den 20 jungen Berufsanfängern aus Ostdeutschland, die unter 2100 Bewerben der Pall- Mall - Initiative ausgewählt wurden und ein dreimonatiges Praktikum in den Staaten absolvieren. Bei der Auswahl der Praktikanten legt man auch auf Auslandserfahrung Wert. Schließlich geht es nicht darum, dass die Teilnehmer ein paar schöne Wochen im Land der unbegrenzten Möglichkeiten erleben. Die Unternehmen stellen zumeist hohe Anforderungen."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Die Werbung in den Vereinigten Staaten",
+     "options": [
+      {
+       "key": "A",
+       "text": "beschäftigt sich überhaupt nicht mit Deutschland."
+      },
+      {
+       "key": "B",
+       "text": "zeigt immer wieder dasselbe Bild von Deutschland."
+      },
+      {
+       "key": "C",
+       "text": "zeigt viele unterschiedliche Seiten von Deutschland."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "7",
+     "text": "Die Eltern von Laura Rudelt.",
+     "options": [
+      {
+       "key": "A",
+       "text": "arbeiten und lebten lange Jahre in den Niederlanden."
+      },
+      {
+       "key": "B",
+       "text": "hatten nicht die Möglichkeiten wie ihre Tochter."
+      },
+      {
+       "key": "C",
+       "text": "wollen ihre Tochter nun in den USA Besuchen."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "8",
+     "text": "Während die Praktikantinnen in New York waren.",
+     "options": [
+      {
+       "key": "A",
+       "text": "bekamen sie eine Stadtführung."
+      },
+      {
+       "key": "B",
+       "text": "besuchten sie einen Sprachkurs."
+      },
+      {
+       "key": "C",
+       "text": "wurden sie über wichtige Themen informiert"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "9",
+     "text": "Die dritte Leipzigerin, die in die USA gereist ist",
+     "options": [
+      {
+       "key": "A",
+       "text": "kommt eigentlich aus Österreich."
+      },
+      {
+       "key": "B",
+       "text": "wollte dort ihr Abitur machen und dann studieren."
+      },
+      {
+       "key": "C",
+       "text": "wurde von ihrer neuen Chefin freundlich aufgenommen."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "10",
+     "text": "Wer als Praktikantin ins Ausland geht",
+     "options": [
+      {
+       "key": "A",
+       "text": "braucht schon einige Berufserfahrungen."
+      },
+      {
+       "key": "B",
+       "text": "soll dabei vor allem das Land kennenlernen."
+      },
+      {
+       "key": "C",
+       "text": "soll schon einmal im Ausland gewesen sein."
+      }
+     ],
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie möchten für ein Jahr in Wien Psychologie studieren und suchen daher eine günstige Mietwohnung.",
+     "answer": "G"
+    },
+    {
+     "id": "12",
+     "text": "Sie möchten am Abend ins Kino gehen und suchen daher eine verlässliche Person, die auf Ihr Kind aufpasst.",
+     "answer": "F"
+    },
+    {
+     "id": "13",
+     "text": "Sie möchten in den Sommerferien nebenbei ein wenig Geld dazu verdienen und suchen daher einen passenden Job.",
+     "answer": "J"
+    },
+    {
+     "id": "14",
+     "text": "Sie möchten ein Geburtstagfest organisieren und brauchen dafür einen Raum. Um das Essen und die Getränke für die Gäste möchten Sie sich selbst kümmern.",
+     "answer": "A"
+    },
+    {
+     "id": "15",
+     "text": "Ihre Bekannten aus Deutschland müssen aus beruflichen Gründen nach Salzburg umziehen und haben Sie gebeten, eine Mietwohnung für Sie suchen.",
+     "answer": "X"
+    },
+    {
+     "id": "16",
+     "text": "Ihre 23 jährige Freundin hat soeben einen Computerkurs abgeschlossen undd sucht einen Job.",
+     "answer": "E"
+    },
+    {
+     "id": "17",
+     "text": "Ihr 12 jährige Sohn wünscht sich zum Geburtstag Buch über Sterne.",
+     "answer": "X"
+    },
+    {
+     "id": "18",
+     "text": "Ihre Kinder möchten am Nachmittag ins Kino gehen. Sie suchen einen passenden Film für Kinder.",
+     "answer": "C"
+    },
+    {
+     "id": "19",
+     "text": "Sie möchten mit Freunden gern ins Kino gehen. Da es ein sehr warmer Sommerabend ist, suchen Sie nach einer Vorstellung im Ferien.",
+     "answer": "I"
+    },
+    {
+     "id": "20",
+     "text": "Ihre Freundin ist Erzieherin und zur Zeit arbeitslos. Sie möchte daher als Kindermädchen bei einer Familie arbeiten.",
+     "answer": "L"
+    }
+   ],
+   "bankImage": "img/m01-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Sehr geehrter Herr Meyerhofer, Wie Sie wissen , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sin , sind immer besetzt, und das Treppenhaus ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden. Mit freundlichen Grüßen Ihre Anneliese Kühne"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Ihr"
+      },
+      {
+       "key": "B",
+       "text": "Ihrem"
+      },
+      {
+       "key": "C",
+       "text": "Ihren"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "22",
+     "text": "… nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "war"
+      },
+      {
+       "key": "B",
+       "text": "wäre"
+      },
+      {
+       "key": "C",
+       "text": "würde"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "23",
+     "text": "… es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants …",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat"
+      },
+      {
+       "key": "B",
+       "text": "ist"
+      },
+      {
+       "key": "C",
+       "text": "wurde"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "24",
+     "text": "… Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Bis"
+      },
+      {
+       "key": "B",
+       "text": "Nach"
+      },
+      {
+       "key": "C",
+       "text": "Von"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "25",
+     "text": "… verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof …",
+     "options": [
+      {
+       "key": "A",
+       "text": "dem"
+      },
+      {
+       "key": "B",
+       "text": "den"
+      },
+      {
+       "key": "C",
+       "text": "der"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "26",
+     "text": "… im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sin , sind immer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "denen"
+      },
+      {
+       "key": "B",
+       "text": "die"
+      },
+      {
+       "key": "C",
+       "text": "diese"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "27",
+     "text": "… ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze …",
+     "options": [
+      {
+       "key": "A",
+       "text": "im"
+      },
+      {
+       "key": "B",
+       "text": "in"
+      },
+      {
+       "key": "C",
+       "text": "ins"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "28",
+     "text": "… mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "geöffnet"
+      },
+      {
+       "key": "B",
+       "text": "öffnen"
+      },
+      {
+       "key": "C",
+       "text": "öffnet"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "29",
+     "text": "… (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Problem"
+      },
+      {
+       "key": "B",
+       "text": "Probleme"
+      },
+      {
+       "key": "C",
+       "text": "Problemen"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "30",
+     "text": "… den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden. Mit freundlichen Grüßen …",
+     "options": [
+      {
+       "key": "A",
+       "text": "er"
+      },
+      {
+       "key": "B",
+       "text": "man"
+      },
+      {
+       "key": "C",
+       "text": "wir"
+      }
+     ],
+     "answer": "B"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "Sehr geehrte Herr Blanco Ruiz Ich schreibe Ihnen auf die Anzeige, die (31) in der heutigen Bild Zeitung aufgefallen ist. Da ich (32) einige Monate beruflich nach Südamerika gehe, muss ich sehr schnell Spanisch lernen. Für einen richtigen Sprachkurs habe ich leider (33) Zeit. Aber Ihre Methode interessiert mich, vor allem die Sprachübungen (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, (37) Ihr Programm besonders die alltägliche Kommunikation fördert. Wie lange wird es dauern, (38) ich mich meinen Geschäftsfreunden richtig unterhalten kann? Und wie viele Stunden (39) Woche sollte man mindestens üben? Können Sie mir eine Musterlektion schicken ich? (40) gerne ausprobieren, wie ihre Methode funktioniert Mit freundlichen Grüßen Ihre KARIN ÜBERSCHÄR"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AM"
+    },
+    {
+     "key": "B",
+     "text": "BIS"
+    },
+    {
+     "key": "C",
+     "text": "DASS"
+    },
+    {
+     "key": "D",
+     "text": "FÜR"
+    },
+    {
+     "key": "E",
+     "text": "GUTE"
+    },
+    {
+     "key": "F",
+     "text": "KENIE"
+    },
+    {
+     "key": "G",
+     "text": "MICH"
+    },
+    {
+     "key": "H",
+     "text": "MIR"
+    },
+    {
+     "key": "I",
+     "text": "MIT"
+    },
+    {
+     "key": "J",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "K",
+     "text": "OHNE"
+    },
+    {
+     "key": "L",
+     "text": "PRO"
+    },
+    {
+     "key": "M",
+     "text": "WÄHREND"
+    },
+    {
+     "key": "N",
+     "text": "WÄRE"
+    },
+    {
+     "key": "O",
+     "text": "WÜRDEN"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… Herr Blanco Ruiz Ich schreibe Ihnen auf die Anzeige, die (31) in der heutigen Bild Zeitung aufgefallen ist. Da ich (32) …",
+     "answer": "H",
+     "explain": "Das Wort lautet: MIR"
+    },
+    {
+     "id": "32",
+     "text": "… (31) in der heutigen Bild Zeitung aufgefallen ist. Da ich (32) einige Monate beruflich nach Südamerika gehe, muss ich …",
+     "answer": "D",
+     "explain": "Das Wort lautet: FÜR"
+    },
+    {
+     "id": "33",
+     "text": "… lernen. Für einen richtigen Sprachkurs habe ich leider (33) Zeit. Aber Ihre Methode interessiert mich, vor allem die …",
+     "answer": "F",
+     "explain": "Das Wort lautet: KENIE"
+    },
+    {
+     "id": "34",
+     "text": "… Methode interessiert mich, vor allem die Sprachübungen (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich …",
+     "answer": "I",
+     "explain": "Das Wort lautet: MIT"
+    },
+    {
+     "id": "35",
+     "text": "… (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, …",
+     "answer": "E",
+     "explain": "Das Wort lautet: GUTE"
+    },
+    {
+     "id": "36",
+     "text": "… CDs. Ich denke, damit könnte ich ganz (35) Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, (37) Ihr Programm …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AM"
+    },
+    {
+     "id": "37",
+     "text": "… Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, (37) Ihr Programm besonders die alltägliche Kommunikation …",
+     "answer": "C",
+     "explain": "Das Wort lautet: DASS"
+    },
+    {
+     "id": "38",
+     "text": "… Kommunikation fördert. Wie lange wird es dauern, (38) ich mich meinen Geschäftsfreunden richtig unterhalten …",
+     "answer": "B",
+     "explain": "Das Wort lautet: BIS"
+    },
+    {
+     "id": "39",
+     "text": "… richtig unterhalten kann? Und wie viele Stunden (39) Woche sollte man mindestens üben? Können Sie mir eine …",
+     "answer": "L",
+     "explain": "Das Wort lautet: PRO"
+    },
+    {
+     "id": "40",
+     "text": "… üben? Können Sie mir eine Musterlektion schicken ich? (40) gerne ausprobieren, wie ihre Methode funktioniert Mit …",
+     "answer": "J",
+     "explain": "Das Wort lautet: MÖCHTE"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin wünscht sich einen Arbeitsplatz für ihren Vater.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher ist kein besonders guter Schüler.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin möchte nicht immer gestört werden.",
+     "answer": "r"
+    },
+    {
+     "id": "44",
+     "text": "Der Sprecher versteht sich nicht gut mit seiner Mutter.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Die Sprecherin ist am liebsten mit ihren Eltern zusammen.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Frau Schäfer hat von dem Verein kurz nach der Gründung zum ersten Mal gehört.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "Die Mitglieder des Vereins kommen aus ganz Deutschland.",
+     "answer": "f"
+    },
+    {
+     "id": "48",
+     "text": "Die Mitglieder des Vereins wissen über Hausarbeit gut Bescheid",
+     "answer": "r"
+    },
+    {
+     "id": "49",
+     "text": "Im Verein werden oft Feste gefeiert.",
+     "answer": "f"
+    },
+    {
+     "id": "50",
+     "text": "Der Verein bietet auch die Organisation von Festen an",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Der Verein vermittelt Senioren, die tagsüber Kinder betreuen",
+     "answer": "r"
+    },
+    {
+     "id": "52",
+     "text": "Laut Frau Schäfer vertrauen viele Familien den Mitarbeiterinnen des Vereins mehr als anderen",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Vereinsmitglied kann nur werden, wer einen Beruf gelernt hat",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Die Mitarbeiterinnen bekommen für ihre Arbeiten 10 Euro pro Stunde.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Kunden mit wenig Geld zahlen für den Service nichts.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Sie sollen um 19:30 Uhr bei Georg und Claudia sein.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Im südlichen Österreich ist es tagsüber sonnig, später windig und regnerisch",
+     "answer": "r"
+    },
+    {
+     "id": "58",
+     "text": "Der Speisewagen befindet sich im hinteren Teil des Zuges.",
+     "answer": "f"
+    },
+    {
+     "id": "59",
+     "text": "Die Schweizer geben für Urlaub mehr Geld aus als für ihre Gesundheit.",
+     "answer": "f"
+    },
+    {
+     "id": "60",
+     "text": "Der Sänger beginnt seine Konzertreise mit einer Vorstellung in Wien",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Eine Bekannte hat Ihnen folgenden Brief geschrieben: Liebe(r)........ Ich habe eine tolle Überraschung. stelle dir vor, was mir mein Onkel angeboten hat. Er rief mich am Samstag an. Er hat ein großes Ferienhaus im Schwarzwald. Das Haus kann ich für die Ferien kostenlos haben. Ich kann auch Freunde mitbringen! Wäre das nichts für uns? Wir könnten uns alle dort treffen. Du, deine Eltern und Freunde, und ich mit meiner Familie und meinen Freunden. Ich würde mich wahnsinnig freuen, wenn das klappen würde. Bitte schreibe mir so schnell du kannst, damit wir alles planen können. Urlaub im Schwarzwald - das wird traumhaft schön! Herzliche Grüße Petra Einleitung und einen passendenSchluss. Vergessen Sie nicht Datumund Anrede."
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Warum Sie gern nach Deutschland kommen möchten",
+      "Wie Sie anreisen wollen",
+      "Was Sie gemeinsam machen könnten",
+      "Wen Sie mitbringen möchten"
+     ]
+    }
+   ]
+  }
+ ]
+}

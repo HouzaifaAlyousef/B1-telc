@@ -1,0 +1,458 @@
+{
+ "id": "modell-12",
+ "title": "Modelltest 12",
+ "subtitle": "40 Aufgaben · 6 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Bilder mit dem Computer bearbeiten"
+    },
+    {
+     "key": "B",
+     "text": "Kirche bietet Backkurs für Kinder an"
+    },
+    {
+     "key": "C",
+     "text": "Kirche eröffnet neuen Treffpunkt"
+    },
+    {
+     "key": "D",
+     "text": "Neu: Kochbuch über Weiner Fleischgerichte"
+    },
+    {
+     "key": "E",
+     "text": "Neue Computerprogramme werden getestet"
+    },
+    {
+     "key": "F",
+     "text": "Preis für bestes Lernprogramm"
+    },
+    {
+     "key": "G",
+     "text": "Rezepte für Kuchen und Torten"
+    },
+    {
+     "key": "H",
+     "text": "Studie zeigt: Kaffeetrinker sind glücklicher"
+    },
+    {
+     "key": "I",
+     "text": "Warum die Wiener ins Café gehen"
+    },
+    {
+     "key": "J",
+     "text": "Zürcher Fotografen stellen aus"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Die Kunst – und Medienschule F+ F Zürich bietet bereits zum dritten Mal den Computerkurs Digitale Bildbearbeitung an im neuen Semester steht für zehn Samstage Fotografie nach der Fotografie also die digitale Bearbeitung von Bildern im Mittelpunkt Dabei kommen verschiedene Softwareprodukte zum Einsatz Der Kurs befasst sich aber nicht nur mit dem – – Vermitteln auch Themen und Problembereiche rund um die digitale Foto und Bildbearbeitung kurskosten 800Franken Nähere Informationen und Anmeldung zu diesem Kurs www.f- f.ch.",
+     "answer": "A"
+    },
+    {
+     "id": "2",
+     "text": "– Neuperlach-Süd Nach dem Einkaufen eine Kaffee genießen, mit anderen ins Gespräch Immen, sich mit Bekannten treffen oder einfach spannen all das geht ab 11 Juli immer – – dienstags zwischen 14 und 18 Uhr im neuen Eiscafé der Dietrich Bonhoeffer Kirche Wir hotten damit einen Ort der Begegnung für Jung und Alt anbieten und zur Belebung des Stadtteils beitragen erklärt Pfarrer Sebastian Kühnen. Neben kalten und heißen Getränken sowie Kuchen steht während der Öffnungszeiten auch eine Mitarbeiten für Gespräch zur Verfügung.",
+     "answer": "C"
+    },
+    {
+     "id": "3",
+     "text": "Geheimnisse der modernen Konditorkunst der Meister des Süßen, Herwig Gasser, in Jahre hinweg sammelte der Bäcker des berühmten Wiener Café Landmann Mehlspeisenrezepte. Von der Birnentorte über den Apfelstrudel bis hin zum Heidelbeerstolle Verlag Kettel, 110 Fotos, 300 Seiten. – – ISBAN 3 85134 014 -0",
+     "answer": "G"
+    },
+    {
+     "id": "4",
+     "text": "Am Montag wird in Stuttgart die BildungsDidacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.",
+     "answer": "E"
+    },
+    {
+     "id": "5",
+     "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das PlaudernundFreunden. 77 der BefragtenGrundfür denBesuch imKaffeehaus",
+     "answer": "I"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie mögen thailändisches Essen und möchten lernen, einige Speisen selbst zu kochen.",
+     "answer": "F"
+    },
+    {
+     "id": "12",
+     "text": "Sie müssen umziehen und brauchen jemand, der Ihnen hilft.",
+     "answer": "K"
+    },
+    {
+     "id": "13",
+     "text": "Ihr Kind hat in Mathematik schlechte Noten bekommen und braucht Nachhilfe.",
+     "answer": "B"
+    },
+    {
+     "id": "14",
+     "text": "Ihre Freundin hat Geburtstag. Sie möchten ihr einen Blumenstrauß schicken lassen.",
+     "answer": "I"
+    },
+    {
+     "id": "15",
+     "text": "Am Samstag wollen sie mit Ihrer Tante eine Blumenausstellung besuchen.",
+     "answer": "E"
+    },
+    {
+     "id": "16",
+     "text": "Ihr Kollege heiratet. Sie möchten ihm etwas für die Küche schenken.",
+     "answer": "L"
+    },
+    {
+     "id": "17",
+     "text": "Sie wollen für eine Hochzeit einen Luxuswagen mieten.",
+     "answer": "X"
+    },
+    {
+     "id": "18",
+     "text": "Am nächsten Montag möchten Sie mit Ihren Freunden thailändisch essen gehen.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Für Ihre Geburtstagfeier suchen Sie jemanden, der bei Ihnen zu Hause kocht.",
+     "answer": "D"
+    }
+   ],
+   "bankImage": "img/m12-lv3.png"
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": ") ( Neuendorf, den…. Sehr geehrte Frau Bauer, ich habe Ihre Anzeige in der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe ich während meines Studiums viele Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, acht Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe. Am Anfang war es sehr schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen gelernt, die mir auch über die Kultur und das Leben in Portugal (38) haben. Ich glaube, dass meine Erfahrungen für viele andere Menschen, die auch im Ausland leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich gerne anrufen, meine Telefonnummer ist 07612/64788980. Ich würde mich freuen, bald von Ihnen zu hören. Mit freundlichen Grüßen KAROLINE POINTNER"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "ALS"
+    },
+    {
+     "key": "B",
+     "text": "ANFANGEN"
+    },
+    {
+     "key": "C",
+     "text": "ARBEITEN"
+    },
+    {
+     "key": "D",
+     "text": "ERZÄHLT"
+    },
+    {
+     "key": "E",
+     "text": "FALLS"
+    },
+    {
+     "key": "F",
+     "text": "INFORMIERT"
+    },
+    {
+     "key": "G",
+     "text": "INTERESSIERT"
+    },
+    {
+     "key": "H",
+     "text": "MÖCHTEN"
+    },
+    {
+     "key": "I",
+     "text": "MÖGLICH"
+    },
+    {
+     "key": "J",
+     "text": "NUR"
+    },
+    {
+     "key": "K",
+     "text": "ÖFTER"
+    },
+    {
+     "key": "L",
+     "text": "UNBEKANNT"
+    },
+    {
+     "key": "M",
+     "text": "VOR"
+    },
+    {
+     "key": "N",
+     "text": "WÜRDE"
+    },
+    {
+     "key": "O",
+     "text": "ZWISCHEN"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor …",
+     "answer": "G",
+     "explain": "Das Wort lautet: INTERESSIERT"
+    },
+    {
+     "id": "32",
+     "text": "… und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe …",
+     "answer": "K",
+     "explain": "Das Wort lautet: ÖFTER"
+    },
+    {
+     "id": "33",
+     "text": "… Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein …",
+     "answer": "J",
+     "explain": "Das Wort lautet: NUR"
+    },
+    {
+     "id": "34",
+     "text": "… Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, …",
+     "answer": "M",
+     "explain": "Das Wort lautet: VOR"
+    },
+    {
+     "id": "35",
+     "text": "… Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe. Am Anfang war es sehr …",
+     "answer": "C",
+     "explain": "Das Wort lautet: ARBEITEN"
+    },
+    {
+     "id": "36",
+     "text": "… schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) …",
+     "answer": "L",
+     "explain": "Das Wort lautet: UNBEKANNT"
+    },
+    {
+     "id": "37",
+     "text": "… (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen …",
+     "answer": "I",
+     "explain": "Das Wort lautet: MÖGLICH"
+    },
+    {
+     "id": "38",
+     "text": "… die mir auch über die Kultur und das Leben in Portugal (38) haben. Ich glaube, dass meine Erfahrungen für viele …",
+     "answer": "D",
+     "explain": "Das Wort lautet: ERZÄHLT"
+    },
+    {
+     "id": "39",
+     "text": "… leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WÜRDE"
+    },
+    {
+     "id": "40",
+     "text": "… und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich …",
+     "answer": "E",
+     "explain": "Das Wort lautet: FALLS"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Herr Schütz arbeitet erst seit kurzer Zeit als Taxifahrer.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "In der Kleinstadt hatte Herr Schütz keine Geschäftsleute als Kunden",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Herr Schütz hat sich schon einmal in einen Fahrgast verliebt.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Die Fahrgäste erzählen viel, weil sie den Taxifahrer nicht kennen",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Männer sprechen oft über unpersönliche Dinge.",
+     "answer": "f"
+    },
+    {
+     "id": "51",
+     "text": "Herr Schütz bekommt von den Fahrgästen manchmal auch einen Tipp.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "In der Freizeit steht Sport für Herrn SSchütz an erster Stelle.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Beim Schwimmen kann sich Herr Schütz voon einem anstrengenden Tag erholen.",
+     "answer": "f"
+    },
+    {
+     "id": "54",
+     "text": "Herr Schütz hat sich entschieden, nur am Tag Taxi zu fahren",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Nach Meinung von Herrn Schütz haben jüngere Taxifahrer weniger Angst, nachts zu an.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "In Norddeutschland steigen die Temperaturen morgen auf 5 bis 7 Grad.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Hamburg hat öfter gewonnen als Stuttgart.",
+     "answer": "r"
+    },
+    {
+     "id": "58",
+     "text": "Nach zwei Monaten müssen Sie für die Zeitschrift bezahlen.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Auf dem Mittleren Ring in München wird die Geschwindigkeit kontrolliert.",
+     "answer": "f"
+    },
+    {
+     "id": "60",
+     "text": "Janas Geburtstagsfest findet nicht im LEO statt.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Ein Bekannter hat Ihnen folgenden Brief geschrieben: Liebe(r)........ es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentliich viel am Computer? Lass doch mal wieder was von dir hören! Liebe Grüße und bis bald Andreas Betreff, eine passende Anrede, Einleitung und einen passendenSchluss."
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Ihre Erfahrungen mit dem Computer",
+      "Etwas über Ihre Wohnung",
+      "Ob Sie Andreas besuchen möchten.",
+      "Was es bei Ihnen Neues gibt."
+     ]
+    }
+   ]
+  }
+ ]
+}

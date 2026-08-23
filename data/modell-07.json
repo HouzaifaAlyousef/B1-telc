@@ -1,0 +1,814 @@
+{
+ "id": "modell-07",
+ "title": "Modelltest 7",
+ "subtitle": "61 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Finanzielle Unterstützung fü r Kunstprojekte mit Schülern"
+    },
+    {
+     "key": "B",
+     "text": "Winterveranstaltung auf dem Eis mit Musik"
+    },
+    {
+     "key": "C",
+     "text": "Aktionsprogramm der Eu:Finanzielle Unterstützung für italienische Künstler"
+    },
+    {
+     "key": "D",
+     "text": "Kunstausstellung von italienischen Schülern"
+    },
+    {
+     "key": "E",
+     "text": "Deutschlernen mit euer Methode im Radio"
+    },
+    {
+     "key": "F",
+     "text": "Geld f ür gemeinsame europäische Projekte"
+    },
+    {
+     "key": "G",
+     "text": "Elternverein organsiert Kunstausstellung"
+    },
+    {
+     "key": "H",
+     "text": "Mit der Eisenbahn ins winterliche Wien"
+    },
+    {
+     "key": "I",
+     "text": "Mehr Geld für österreichische Musikschulen"
+    },
+    {
+     "key": "J",
+     "text": "Wie Sprachaufenthalte auswählen?"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Rund 150,000 Sprachreisen werden von Deutschen jährlich unternommen. Der Wunsch, eine andere Sprache zu lernen, kann verschieden Gründe haben: private, schulische oder berufliche. Das Angebot an Sprachreisen wächst ständig, über die Qualität ist jedoch wenig oder nichts bekannt. Im Marktplatz geht es diesmal um Kriterien für das Lernen mit Erfolg. Welche Methoden sind zu empfehlen, welche Anbieter kosten? Ihre Fragen werden am Hörertelefon unter 0800-839601 von Fachleuten beantwortet.",
+     "answer": "J"
+    },
+    {
+     "id": "2",
+     "text": "Die Metropole Wien lädt zum winterlichen Eisvergnügen vor dem Wiener Rathaus ein: vom 22. Januar bis 7.März kann man auf 1800 Quadraatmetern übers Eis fahren. Die Musik dazu bestimmt den Fahrstil und reicht vom klassischen Walzer bis zur Diskomusik. Nachts werden auf der Eisbahn Partys veranstaltet, vom Samba - Fest bis zum Hip-Hop –Event. Speisen und Getränke gibt es an verschiedenen Ständen, Schlittschuhe und Stiefel kann man leihen. Informationen: Wiener Tourismusverband.",
+     "answer": "B"
+    },
+    {
+     "id": "3",
+     "text": "Für das Aktionsprogramm der Europäischen Union (EU) zur beruflichen Weiterbildung, Leonardo da Vinci, können noch bis zum 31. März Anträge gestellt werden. Ziel des Programms ist es, europäische Projekte zur beruflichen Weiterbildung zu unterstützen AAnträge auf finanzielle unterstützen können die Institutionen stellen, die mit mindestens zwei weiteren europäischen Partnern an einem Projekt arbeiten wollen. Information: Nationale Koordinerungsstelle Leonardo da Vinci, Fehrbellineer Platz 3, D-10707 Berlin, Tel, 030//8643-0, Fax- 2637.",
+     "answer": "F"
+    },
+    {
+     "id": "4",
+     "text": "Wien(SN.APA). Wie das Unterrichtsministerlum mitteilte, sollen im kommenden. Jahr monatlich 70,000 Euro für Kulturprojekte an Schulen zur Verfügung gestellt werden. Unterstützt würden damit Veranstaltungen und Projekte, die das Verständnis der Kinder und Jugendlichen für die Künste wecken, das Interesse am Musisch – Kreativen verstärken und zu Kontakten und einer Auseinandersetzung mit Künstlern führen. Dadurch soll in altersgemäßer Form die ganzheitliche Entwicklung der Persönlichkeit von Kindern und Jugenddlichen gefördert werden.",
+     "answer": "A"
+    },
+    {
+     "id": "5",
+     "text": "Zum sechsten Mal veranstaltet das Comitato Geniton Binnigen/ Bottmingen seine breit angelegte multikulturelle Kunstausstellung Arte. An der Veranstaltung nehmen 70 Küünstlerinnen und Künstler aus der Region sowie Gäste aus Italien, Frankreich, Deutschland und weiteren Ländern teil. Bei dem vor 18 Jahren gegründeten Comitato handelt es sich um einen Elternverein, der damals italienischsprachigen Kindern bei ihren Schulprobiemen hilfreich zur Seite stand. Da die jetzige dritte Kindergeneration nicht mehr diese Probleme hat, suchte das Comitato nach neuen Aufgeben und fand in der Organisation der alljährlichen Kunstausstellung ein neues, interessantes Betätigungsfeld.",
+     "answer": "G"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Philipp Reis der wahre Erfinder des Telefons? Erfinder, Lehrer, Familienvater Auf den Spuren von Philipp Reis besuchte Susanne Müller seinen Geburtsort. Weil sein Vater nie aufgeschrieben habe, was er machte, ist mancher gute Gedanke verloren gegangen, klagt später einmal Karl Reis. Auch gibt es wenige offizielle Berichte und Dokumente über Philipp Reis in Friedrichsdorf und in seiner Geburtsstadt Gelnhausen. Das gilt besonders für das private Leben der Familie Reis, die ab 1852 in unmittelbarer Nähe des berühmten Garnier – Instituts in Friedrichsdorf ein Haus gefunden hatte. Berichte des Sohnes Karl Reis erzählen ein wenig mehr über das Leben des Erfinders. Karl Reis, der beim Tod des Vaters erst elf Jahre alt war, berichtet von einem lieben und gerechten Vater, der sich sehr um seine Frau und seine Kinder gesorgt hat. Wenn der Vater aber seine Experimente machte, vergaß er alles um sich herum. Philipp Reis lernte bereits als Junge viele technische Maschinen kennen und machte eine Reihe von Experimenten, die er als Lehrer am Garnier – Institut fortsetzte. Er entwickelte eine große Anzahl von technischen Geräten, die im Institut gut verwendet werdenn konnten. Auf die Schüler machte Philipp Reis einen oft sehr merkwürdigen Eindruck. Verunsichert waren die Schüler besonders dann, wenn Reis Aufsicht hatte, aber selbst im Klassenraum gar nicht anwesend war. Trotzdem konnte Reis alles hören und wusste, was passiert war. Philipp Reis hatte eine besondere Kamera gebaut, mit der er von seinem Arbeitszimmer aus, in dem er gleichzeitig Experimente durchführte, in die Klassenraume schauen konnte. Ein Draht, der über den Schulhof in sein Arbeitszimmer führte, diente als Vorläufer des späteren Telefons. Bei den Schülern und Lehrern entstand so der Ruf, dass der Reis auf geheimnisvolle. Weise alles sehen kann. 1883 schrieb der englische Professor Silvanus Thompson einen Bericht über Reis und nannte ihn den wahren Erfinder des Telefons. Philipp Reis habe das Telefon entwickelt, und nicht Graham Bell oder Thomas Edison. Diese beiden amerikanischen Forscher hätten auch bei ihren Arbeite zur Entwicklung des Telefons auf Philipp Reis Experimente in Deutschland hingewiesen. Seine offizielle Anerkennung als Erfinder des Telefons hat Philipp Reis allerdings nicht mehr erlebt. Im Jahre 1874 ist er in Friedrichsdorf an einer Lungenkrankheit gestorben."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Heute weiß man, dass Philipp Reis",
+     "options": [
+      {
+       "key": "A",
+       "text": "bei seinen Versuchen die Familie vergaß."
+      },
+      {
+       "key": "B",
+       "text": "seinen Kindern viel über seine Experimente erzählte."
+      },
+      {
+       "key": "C",
+       "text": "sogar mit seiner Familie Experimente machte."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "7",
+     "text": "Professor Thompson",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat bei der Entwicklung des Telefons mitgearbeitet."
+      },
+      {
+       "key": "B",
+       "text": "meinte, dass Reis das Telefon erfunden hat"
+      },
+      {
+       "key": "C",
+       "text": "war ein Studienkollege von Philipp Reis."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "8",
+     "text": "Die Schüler von Philipp Reis",
+     "options": [
+      {
+       "key": "A",
+       "text": "konnten ihren Lehrer in seinem Arbeitszimmer sehen."
+      },
+      {
+       "key": "B",
+       "text": "machen in seinem Arbeitszimmer Experimente."
+      },
+      {
+       "key": "C",
+       "text": "wurden von ihrem Lehrer mit einer Kamera beobachtet"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "9",
+     "text": "Über das private Leben von Philipp Reis",
+     "options": [
+      {
+       "key": "A",
+       "text": "gibt es nur wenige Berichte aus seiner Familie."
+      },
+      {
+       "key": "B",
+       "text": "kann man im Garnier-Institut viele Berichte finden."
+      },
+      {
+       "key": "C",
+       "text": "kann man in Gelnhausen viel erfahren."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "10",
+     "text": "Philipp Reis",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat viele technische Geräte gebaut ."
+      },
+      {
+       "key": "B",
+       "text": "leitete als junger Wissenschaftler das Garnier-Institut."
+      },
+      {
+       "key": "C",
+       "text": "studierte am Garnier-Institut"
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie lieben Krimis und möchten daher einer Krimiautorin beim Vorlesen zuhören.",
+     "answer": "K"
+    },
+    {
+     "id": "12",
+     "text": "Ihr Bekannter würde gerne am Wochenende ein Boot mieten.",
+     "answer": "X"
+    },
+    {
+     "id": "13",
+     "text": "Sie möchten sich in einem Hotel in den Bergen erholen und mit dem Zug anreisen.",
+     "answer": "F"
+    },
+    {
+     "id": "14",
+     "text": "Sie möchten sich eine Märchenvorstellung im Theater ansehen.",
+     "answer": "E"
+    },
+    {
+     "id": "15",
+     "text": "Ihre Freundin sucht ein angenehmes Hotel, in dem man auch Sport treiben kann.",
+     "answer": "D"
+    },
+    {
+     "id": "16",
+     "text": "Am Sonntag wollen Sie einen kleinen Ausflug mit Kindern machen. Die Kinder mögen Tiere.",
+     "answer": "G"
+    },
+    {
+     "id": "17",
+     "text": "Ihre Bekannten möchten gerne im Mai eine Schiffsfahrt machen.",
+     "answer": "L"
+    },
+    {
+     "id": "18",
+     "text": "Sie möchten gerne am Wochenende tanzen gehen und suchen eine tolle Disco.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Der kleine Sohn von Freunden ist begeistert von der Eisenbahn. Sie möchten am Wochenende mit ihm etwas Interessantes machen.",
+     "answer": "H"
+    },
+    {
+     "id": "20",
+     "text": "Sie möchten im August eine Woche in den Bergen wandern und brauchen eine erfahren Person, die mit Ihnen geht.",
+     "answer": "A"
+    }
+   ],
+   "bankImage": "img/m07-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "An alle Kunden Gewinnen Sehr geehrter Herr Schröder, zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz Besonders ausgedacht: einen attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere erfolgreiche Buchidee. Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit iihrer Kundennummer können Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte Antwortschreiben zurück und bestellen Sie damit – ohne Risiko – das Buch des Monats. Sie erhalten dieses Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, sollte Ihnen das Buch nicht gefallen. Ohne irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonsst üblichen Preises in einer Buchhandlung. Gleichzeitig nehmen Sie an einem Preisausschreiben (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto eine Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance auf den Hauptgewinn - einen Mercedes der S-Klasse. Wenn Sie innerhalb der kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil – vorausgesetzt, Sie haben die richtige Kundennummer. Mit freundlichen Grüßen Petra Obermoser Leiterin der Abteilung Marketing"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… Kunden Gewinnen Sehr geehrter Herr Schröder, zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz …",
+     "options": [
+      {
+       "key": "A",
+       "text": "auf"
+      },
+      {
+       "key": "B",
+       "text": "in"
+      },
+      {
+       "key": "C",
+       "text": "über"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "22",
+     "text": "… ganz Besonders ausgedacht: einen attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Mit"
+      },
+      {
+       "key": "B",
+       "text": "Von"
+      },
+      {
+       "key": "C",
+       "text": "Zwischen"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "23",
+     "text": "… Buchidee. Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit iihrer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "schöne"
+      },
+      {
+       "key": "B",
+       "text": "schönen"
+      },
+      {
+       "key": "C",
+       "text": "schönes"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "24",
+     "text": "… Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte Antwortschreiben zurück und bestellen Sie …",
+     "options": [
+      {
+       "key": "A",
+       "text": "einfach"
+      },
+      {
+       "key": "B",
+       "text": "immer"
+      },
+      {
+       "key": "C",
+       "text": "noch"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "25",
+     "text": "… – das Buch des Monats. Sie erhalten dieses Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, …",
+     "options": [
+      {
+       "key": "A",
+       "text": "unsere"
+      },
+      {
+       "key": "B",
+       "text": "unserem"
+      },
+      {
+       "key": "C",
+       "text": "unseren"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "26",
+     "text": "… irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonsst üblichen …",
+     "options": [
+      {
+       "key": "A",
+       "text": "natürlich"
+      },
+      {
+       "key": "B",
+       "text": "schön"
+      },
+      {
+       "key": "C",
+       "text": "viele"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "27",
+     "text": "… Gleichzeitig nehmen Sie an einem Preisausschreiben (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mit"
+      },
+      {
+       "key": "B",
+       "text": "teil"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "… (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto …",
+     "options": [
+      {
+       "key": "A",
+       "text": "unter"
+      },
+      {
+       "key": "B",
+       "text": "neben"
+      },
+      {
+       "key": "C",
+       "text": "vor"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "29",
+     "text": "… Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance …",
+     "options": [
+      {
+       "key": "A",
+       "text": "bald"
+      },
+      {
+       "key": "B",
+       "text": "bereits"
+      },
+      {
+       "key": "C",
+       "text": "unbedingt"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "… der kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil – vorausgesetzt, Sie …",
+     "options": [
+      {
+       "key": "A",
+       "text": "noch"
+      },
+      {
+       "key": "B",
+       "text": "schon"
+      },
+      {
+       "key": "C",
+       "text": "schnell"
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "Sehr geehrte Damen und Herren, seit längerem plane ich eine Wanderreise in die Sahara-Länder. Nun ist mir beim Lesen der Zeitschrift Berge die Anzeige von Geo-Tours aufgefallen, denn (31) steht, dass Sie auf Erlebnisreisen in Wüstenregionen spezialisiert sind. Vielleicht haben Sie das richtige Angebot für uns - (32) für mich und meine 17-Jährige Tochter. Unsere Vorstellungen sind im Einzelnen diese: Zuerst eine Wanderreise, etwa 10 Tage, möglichst leichte Tageswanderungen(ca. 4 – 5 Stunden), und (33) ein Erholungsurlaub am Meer. Bieten Sie solche Kombinationen an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch folgende Fragen: Wird das Gepäck von einem Übernachtungsort zum nächsten transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen zusammengesetzt sind, (38) Sprache die Reiseleiterin/ der Reiseleiter spricht und ob ein Arzt (39) ist. Ich freue mich auf Ihr (40). Mit freundlichen Grüßen ANNETTE LUCHSINGER"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "ANFRAGE"
+    },
+    {
+     "key": "B",
+     "text": "ANGEBOT"
+    },
+    {
+     "key": "C",
+     "text": "DABEI"
+    },
+    {
+     "key": "D",
+     "text": "DAFÜR"
+    },
+    {
+     "key": "E",
+     "text": "DANACH"
+    },
+    {
+     "key": "F",
+     "text": "DARIN"
+    },
+    {
+     "key": "G",
+     "text": "DESHALB"
+    },
+    {
+     "key": "H",
+     "text": "HÄTTE"
+    },
+    {
+     "key": "I",
+     "text": "MIT"
+    },
+    {
+     "key": "J",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "K",
+     "text": "NÄMLICH"
+    },
+    {
+     "key": "L",
+     "text": "UNTER"
+    },
+    {
+     "key": "M",
+     "text": "WÄRE"
+    },
+    {
+     "key": "N",
+     "text": "WELCHE"
+    },
+    {
+     "key": "O",
+     "text": "WENN"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… Berge die Anzeige von Geo-Tours aufgefallen, denn (31) steht, dass Sie auf Erlebnisreisen in Wüstenregionen …",
+     "answer": "F",
+     "explain": "Das Wort lautet: DARIN"
+    },
+    {
+     "id": "32",
+     "text": "… sind. Vielleicht haben Sie das richtige Angebot für uns - (32) für mich und meine 17-Jährige Tochter. Unsere …",
+     "answer": "K",
+     "explain": "Das Wort lautet: NÄMLICH"
+    },
+    {
+     "id": "33",
+     "text": "… leichte Tageswanderungen(ca. 4 – 5 Stunden), und (33) ein Erholungsurlaub am Meer. Bieten Sie solche …",
+     "answer": "E",
+     "explain": "Das Wort lautet: DANACH"
+    },
+    {
+     "id": "34",
+     "text": "… am Meer. Bieten Sie solche Kombinationen an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch …",
+     "answer": "O",
+     "explain": "Das Wort lautet: WENN"
+    },
+    {
+     "id": "35",
+     "text": "… an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch folgende Fragen: Wird das Gepäck von einem …",
+     "answer": "H",
+     "explain": "Das Wort lautet: HÄTTE"
+    },
+    {
+     "id": "36",
+     "text": "… zum nächsten transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen …",
+     "answer": "L",
+     "explain": "Das Wort lautet: UNTER"
+    },
+    {
+     "id": "37",
+     "text": "… transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen zusammengesetzt sind, …",
+     "answer": "J",
+     "explain": "Das Wort lautet: MÖCHTE"
+    },
+    {
+     "id": "38",
+     "text": "… auch wissen, wie die Reisegruppen zusammengesetzt sind, (38) Sprache die Reiseleiterin/ der Reiseleiter spricht und ob …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WELCHE"
+    },
+    {
+     "id": "39",
+     "text": "… Reiseleiterin/ der Reiseleiter spricht und ob ein Arzt (39) ist. Ich freue mich auf Ihr (40). Mit freundlichen Grüßen …",
+     "answer": "C",
+     "explain": "Das Wort lautet: DABEI"
+    },
+    {
+     "id": "40",
+     "text": "… spricht und ob ein Arzt (39) ist. Ich freue mich auf Ihr (40). Mit freundlichen Grüßen ANNETTE LUCHSINGER",
+     "answer": "B",
+     "explain": "Das Wort lautet: ANGEBOT"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Der Sprecher könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Die Sprecherin geht gern zu Fuß.",
+     "answer": "f"
+    },
+    {
+     "id": "43",
+     "text": "Der Sprecher findet es in Ordnung, dass seine Frau immer das Auto hat",
+     "answer": "r"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin fährt jeden Tag mit ihrem Motorrad zur Arbeit.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Die Sprecherin fährt immer mit dem Fahrrad zur Arbeit.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Das Ziel des Vereins UKI ist, ausländische Bürger in Österreich zu unterstützen.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "Der Verein wendet sich besonders an internationale Manager, weil diese den Verein finanziell unterstützen.",
+     "answer": "f"
+    },
+    {
+     "id": "48",
+     "text": "Die Abendkurse für Berufstätige dauern neun Monate.",
+     "answer": "r"
+    },
+    {
+     "id": "49",
+     "text": "Es gibt einen speziellen Deutschkurs für Jugendliche, die eine österreichische Hauptschule besuchen wollen.",
+     "answer": "r"
+    },
+    {
+     "id": "50",
+     "text": "Es gibt auch Kurse, die nichts mit Deutschlernen zu tun haben.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Die Deutschlehrer sind gleichzeitig auch Sozialarbeiter.",
+     "answer": "r"
+    },
+    {
+     "id": "52",
+     "text": "Sozialarbeiter helfen Ausländern bei Problemen mit Ämtern.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Im Kurs werden Papiere für eine Bewerbung vorbereitet.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Frauen und Kinder lernen im Unterricht gemeinsam Deutsch.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Die Gesetze machen die Arbeit von Frau Böck schwerer.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Ihr Flug nach Prag ist nicht pünktlich.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Im Speisewagen kann man ins Internet gehen.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Montags bis freitags ab 8:00 Uhr kann man sich persönlich beraten lassen.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Das Hörspiel Katzen in der Nacht wird morgen um 20:30 Uhr gesendet.",
+     "answer": "f"
+    },
+    {
+     "id": "60",
+     "text": "Das Flugzeug landet mit 20 Minuten Verspätung in Leipzig.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben von einer Freundin folgenden Brief erhalten: Liebe(r)........ Wie geht’s dir? Hattest du ein schönes Wochenende? Hier hat es die ganze Zeit geregnet, deshalb bin ich zuhause geblieben. Du hattest vorgeschlagen, dass wir im Sommer zusammen verreisen könnten. Die Idee finde ich super! An welches Reiseziel denkst du? Ich bin gerne am Meer, mag aber auch Städterreisen. Wichtig ist für mich nur, dass ich auch ein bisschen Sport machen kann. Die Reise sollte aber nicht zu viel kosten, denn ich habe vor Kurzem schon viel für eine Autoreparatur bezahlen müssen. Was meinst du: wie können wir günstig Urlaub machen? Es muss ja kein Luxushotel sein. Schreib mir bald, dann können wir anfangen zu planen. Viele Grüße Annika"
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Was Sie am Wochenende unternommen haben",
+      "Wohin Sie gerne reisen würden",
+      "Was Sie im Urlaub gerne machen",
+      "Wie man beim Reisen Geld sparren kann"
+     ]
+    }
+   ]
+  }
+ ]
+}

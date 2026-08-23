@@ -1,0 +1,738 @@
+{
+ "id": "modell-11",
+ "title": "Modelltest 11",
+ "subtitle": "57 Aufgaben · 9 Prüfungsteile",
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Früh übt sich: Hotels bieten Skikurse für Zweijährige an"
+    },
+    {
+     "key": "B",
+     "text": "Neu: Mit dem Taxi gratis zur Disco"
+    },
+    {
+     "key": "C",
+     "text": "Straßenbahn und Bus im Flugticket enthalten"
+    },
+    {
+     "key": "D",
+     "text": "Neu: Taxi Tickest für Discobesucher"
+    },
+    {
+     "key": "E",
+     "text": "Skikurs für Eltern und Kinder"
+    },
+    {
+     "key": "F",
+     "text": "Angebot für Reisende: Für wenig Geld öffentliche Verkehrsmittel benutzen"
+    },
+    {
+     "key": "G",
+     "text": "Buchtipp: Babys im Garten"
+    },
+    {
+     "key": "H",
+     "text": "Schulkinder schreiben spannende Geschichten"
+    },
+    {
+     "key": "I",
+     "text": "Ratschläge für Hobby-Fotografen"
+    },
+    {
+     "key": "J",
+     "text": "Ein Schüler mit vielen Ideen"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "text": "Ich möchte, dass Menschen, die meine Fotos gesehen haben, von nun an die Welt mit anderen Augen betrachten. Das könnte der neuseeländischen Fotografin Anne Geddes gelingen. Denn die Bilder, die sie für das Buch. Drunten im Garten von den kleinen Menschenkindern gemacht hat, sind ungewöhnlich und wunderschon: Babys auf Blumen, Blattern, Beeren, verkleidet als Morcheln, Melonen oder Marienkäfer, Babys in Tulpen und als Schmetterlinge. Ein Bildband, angereichert mit poetischen Texten und Ratschlägen.",
+     "answer": "G"
+    },
+    {
+     "id": "2",
+     "text": "Die meisten Skikurse für Kinder beginnen im Alter von vier Jahren. Im Kärntner Baby Dorf Trebesing ist das anders: Hier werden im Windel Wedel Camp bereits Kleinkinder ab zwei Jahren unterrichtet. Täglich zwei Stunden können die Skihaserin unter fachkundiger Anleitung auf einem flachen Hügel erste Geh- bzw. Fahrversuche auf zwei Brettern machen. Nach einigen Tagen Übung geht es dann mit dem Baby Bus ins Skigebiet Innerkremms. Auch Ginas Baby und Kinderhotel am Fiaker See bietet seinen jüngsten Gästen Skikurse. Fast 1000 Knirpse haben in der Windelschule schon Skifahren gelernt. Auskunft: Tourismusverband Leiser Malta Tal und die Kinderhotels",
+     "answer": "A"
+    },
+    {
+     "id": "3",
+     "text": "Berlins jüngster Schriftsteller hat deutlich mehr Texte verfasst als er Jahre zählt. Rund 50 Gedichte und Erzählungen tippte Daniel Story. 12, schon in seiner Computer. Ich schreibe fast, seitdem es mich gibt, sagt der Sechstklässler Bereits mit sieben dichtete er die ersten Verse, jetzt mit zwölf ist er stolz auf seine erste Autorenlesung. Wenn Freunde Fußball spielen, tobt Daniels Phantasie im Kinderzimmer. Warum er lieber schreibt? Daniel: Ich schreibe, weil ich nicht alles erleben kann, was ich denke.",
+     "answer": "J"
+    },
+    {
+     "id": "4",
+     "text": "Ob Sie privat oder geschäftlich unterwegs sind, mit dem Stadt Ticket können Sie billig die öffentlichen Verkehrsmittel nutzen. Voraussetzung: Sie sind mit dem Flugzeug oder der Deutschen Bahn(über 100 km) angereist. Gegen einen Aufpreis von nur Euro 2,50 ermöglicht Ihnen das Stadt Ticket auch nach der Ankunft am Zielort freie Fahrt. Mit U- S- oder Straßenbahnen sowie Bussen. Bis zu 48 Stunden. Übrigens: Ihr Stadt Ticket gilt an zwei aufeinanderfolgenden Tagen, die Sie beim Kauf Ihres Fahrscheines selbst bestimmen.",
+     "answer": "F"
+    },
+    {
+     "id": "5",
+     "text": "In Mecklenburg-Vorpommern können junge Leute jetzt für den halben Fahrpreis mit dem Taxi auf Discotour gehen. Tickets dafür sind bei allen Geschäftsstellen der Allgemeinen Ortskrankenkasse (AOK) sowie an Esso Tankstellen zum halben Preis erhältlich. Junge Leute zwischen 16 und 25 Jahren können sie an Wochenenden und Feiertagen in der Zeit von 20 Uhr",
+     "answer": "D"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "bis morgens 6 Uhr benutzen. Die Taxifahrer erhalten bei ihrer Zentrale dann den vollen Fahrpreis erstattet. Die neue Sir-Karl-Popper-Schule Ein Schulversuch für besonders Klage Schüler WIEN. Es ist eine ganz normale Schulstunde Geschichte in einer ganz normale Klasse. Während der Lehrer – – einen Vortrag über das alle Rom hält, unterhalten sich die Schüler über den Schulball, kreieren die Kleidung des Lehrers, reichen Zettel unter der Schulbank weiter. Ganz normale Kinder Auch überdurchschnittlich intelligente Kinder sind ganz normale Kinder, betont Elfriede Wegricht, Psychologin in der Sir Karl Popper Schule, die im vergangen September Ihren Betrieb aufgenommen hat nur weil sie in der Schule gut sind, heißt das nicht, dass sie nicht genauso wie alle anderen Schüler Liebeskummer, Ärger mit den Eltern und andere Pubertätsporobleme haben Der Unterschied zwischen normalen und hochbegabten in ihrer bisherigen Schulkarriere nicht bessonders anstrengen mussten und es nicht gewohnt sind, mit ihrer Zeit gut hauszuhalten Federung durch Forderung Um überdurchschnittlich intelligente Kinder nun entsprechend zu fördern, sieht das Konzept der Sir Karl Popper- Schule mehr Fremdsprachen projektorientiertes Arbeiten in kleinen Klassen und vor allem mehr Eigenverantwortung für den Lernenden vor. Dazu kommt die Förderung der individuellen Fähigkeiten: Wer in einem Fach gut ist und sich besonders für ein Thema interessiert bekommt Sonderaufgaben und tiefer gehen Ende Unterlagen. Anfangs war der plötzlich Mehr aufwand ein Schock für die Schüler, die eine 40 Stunden Woche zu bewältigen haben Aber es ist besser, sie erleben den Schock jetzt als zu Beginn des Studiums meint Herr Peters Lehrer und Schülerbetreuer an der Popper Schule denn oft scheitern besonders kluge Menschen Später weil sie mit ihrer Intelligenz nichts anzufangen wissen Denn zumeist erreichten sie mit wenig Aufwand und Mitarbeit relativ gute Ergebnisse Wer ist hochbegabt Zielgruppe der Sir Karl Popper Schule sind Kinder, die in mindestens einem Fach hhochbegabt sind und überdurchschnittlich gute Ergebnisse haben, das sind 20 30 der Schüler. Nach einer Aufnahmeprüfung wurden von 64 Bewerben 28 geteilt sind und von insgesamt 28 Lehren betreut werden In diesen Klassen können die über durchschnittliche intelligenten Schüler dann endlich so sein, wie sie sind, ohne bei jeder Wortmeldung von ihren Klassenkameraden beschimpft zu werden meint die Schulpsychologien Ziel des Schulversuchs sei es jedoch laut Peters nicht, besonders kluge SSchüler von normalen Kindern zu trennen, sondern Erfahrung im Umgang mit überdurchschnittlich die Begabtenförderung in die Normalschule zu üb h übernehmen."
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Die Psychologin der Popper-Schule meint, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "besonders intelligente Kinder sich stark von anderen Kindern unterscheiden."
+      },
+      {
+       "key": "B",
+       "text": "besonders intelligente Schüler dieselben Probleme haben wie andere Kinder."
+      },
+      {
+       "key": "C",
+       "text": "besonders intelligente Schüler weniger Probleme im alltäglichen Leben haben."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "7",
+     "text": "Für überdurchschnittlich intelligente Schüler ist typisch, dass Sie",
+     "options": [
+      {
+       "key": "A",
+       "text": "auch ohne viel Anstrengung gute Noten haben."
+      },
+      {
+       "key": "B",
+       "text": "nach der Schule immer großen Erfolg im Beruf haben."
+      },
+      {
+       "key": "C",
+       "text": "sich die Zeit zum Lernen besser als andere einteilen können."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "8",
+     "text": "Im Unterricht der Popper-Schule sollen die Schüler",
+     "options": [
+      {
+       "key": "A",
+       "text": "immer in einer Fremdsprache miteinander sprechen."
+      },
+      {
+       "key": "B",
+       "text": "in ihren besten Fächern eine spezielle Betreuung bekommen."
+      },
+      {
+       "key": "C",
+       "text": "in kleinen Gruppen schwächeren Schülern helfen."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "9",
+     "text": "Die erste Zeit in der Popper-Schule war für die Schüler schwer, weil",
+     "options": [
+      {
+       "key": "A",
+       "text": "sich ihre Noten plötzlich verschlechterten."
+      },
+      {
+       "key": "B",
+       "text": "sie auf einmal viel mehr Zeit mit Leernen verbringen mussten."
+      },
+      {
+       "key": "C",
+       "text": "sie noch nicht wussten, welche besonderen Talente sie hatten."
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "10",
+     "text": "In der Popper-Schule werden nur Schüler aufgenommen,",
+     "options": [
+      {
+       "key": "A",
+       "text": "die in mindestens einem Fach sehr gut sind."
+      },
+      {
+       "key": "B",
+       "text": "die mindestens 20 bis 30 Prozent der Aufnahmeprüfung erreichen."
+      },
+      {
+       "key": "C",
+       "text": "dievonden insgesamt 28Lehrernals intelligent bbeschriebenwerden"
+      }
+     ],
+     "answer": "A"
+    }
+   ]
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "format": "matching",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie haben von einer Schweizer Schauspielerin gehört und möchten gern einen Film sehen.",
+     "answer": "D"
+    },
+    {
+     "id": "12",
+     "text": "Sie haben gerade Ihre Ausbildung beendet und suchen eine Stelle an der Rezeption.",
+     "answer": "G"
+    },
+    {
+     "id": "13",
+     "text": "Sie interessieren sich für Umweltschutz und suchen eine passende Sendung.",
+     "answer": "F"
+    },
+    {
+     "id": "14",
+     "text": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz.",
+     "answer": "A"
+    },
+    {
+     "id": "15",
+     "text": "In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren.",
+     "answer": "I"
+    },
+    {
+     "id": "16",
+     "text": "Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk.",
+     "answer": "K"
+    },
+    {
+     "id": "17",
+     "text": "Sie sind mit der Schule fertig und wollen bei der Deutschen Bahn eine Ausbildung machen.",
+     "answer": "X"
+    },
+    {
+     "id": "18",
+     "text": "Sie interessieren sich für politisches Theater und möchten dazu am Wochenende etwas hören oder sehen.",
+     "answer": "J"
+    },
+    {
+     "id": "19",
+     "text": "Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma.",
+     "answer": "L"
+    },
+    {
+     "id": "20",
+     "text": "Sie wollen mehr über das Thema Arbeiten in Europa erfahren. ) ( DB",
+     "answer": "B"
+    }
+   ],
+   "bankImage": "img/m11-lv3.png"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "body": "Liebe Olivia, wie du ja weißt, mache ich gerade Urlaub auf Fehmarn. Und dass ich mein Fahrrad mitgenommen habe, war wirklich eine gute Idee. Radfahren macht hier nämlich viel Spaß trotz (21) Windes. Und es gibt auch Angebote für Radfahrerr wie (22) , die sich vor allem erholen und nicht besonders anstrengen wollen. So kann man hier zum Beispiel (23) Fahrkarten kaufen, um mit dem Bus in einen anderen Ort zu fahren und mit dem Rad zurück. Oder es gibt Angebote mit Schiffen, die das Rad (24) wenig Geld transportieren. Besonders (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) Hafen sind mir die vielen Fahrräder aufgefallen. (27) gibt es Markierungen auf den Straßen, die den Radfahrern(28), sich bei roten Ampeln vor die Autos zu stellen. (29) Ampeln schalten für Radfahrer sogar früher auf Grün als für Autos. Du siehst also: Es hat sich gelohnt, das Fahrrad (30). Liebe Grüße Lutz"
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "… gute Idee. Radfahren macht hier nämlich viel Spaß trotz (21) Windes. Und es gibt auch Angebote für Radfahrerr wie (22) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "den"
+      },
+      {
+       "key": "B",
+       "text": "der"
+      },
+      {
+       "key": "C",
+       "text": "des"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "22",
+     "text": "… (21) Windes. Und es gibt auch Angebote für Radfahrerr wie (22) , die sich vor allem erholen und nicht besonders …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mein"
+      },
+      {
+       "key": "B",
+       "text": "mich"
+      },
+      {
+       "key": "C",
+       "text": "mir"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "24",
+     "text": "… zurück. Oder es gibt Angebote mit Schiffen, die das Rad (24) wenig Geld transportieren. Besonders (25) hat mich aber …",
+     "options": [
+      {
+       "key": "A",
+       "text": "durch"
+      },
+      {
+       "key": "B",
+       "text": "für"
+      },
+      {
+       "key": "C",
+       "text": "mit"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "27",
+     "text": "… (26) Hafen sind mir die vielen Fahrräder aufgefallen. (27) gibt es Markierungen auf den Straßen, die den …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Aber"
+      },
+      {
+       "key": "B",
+       "text": "Außer"
+      },
+      {
+       "key": "C",
+       "text": "Außerdem"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "28",
+     "text": "… gibt es Markierungen auf den Straßen, die den Radfahrern(28), sich bei roten Ampeln vor die Autos zu stellen. (29) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "erlauben"
+      },
+      {
+       "key": "B",
+       "text": "erlaubt"
+      },
+      {
+       "key": "C",
+       "text": "erlaubte"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "30",
+     "text": "… Autos. Du siehst also: Es hat sich gelohnt, das Fahrrad (30). Liebe Grüße Lutz",
+     "options": [
+      {
+       "key": "A",
+       "text": "mitgenommen"
+      },
+      {
+       "key": "B",
+       "text": "mitnehmen"
+      },
+      {
+       "key": "C",
+       "text": "mitzunehmen"
+      }
+     ],
+     "answer": "C"
+    }
+   ]
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörterliste",
+   "format": "wordbank",
+   "passages": [
+    {
+     "body": "besonderen zum Einiges C C LLAANNGGUUAAGGEE TTeessttss ) (   Sehr geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen Entwicklungsprogrammen vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen ADRIAN SCHÖLLER EVD Trans GmbH"
+    }
+   ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AM"
+    },
+    {
+     "key": "B",
+     "text": "AUFTRAG"
+    },
+    {
+     "key": "C",
+     "text": "FRAGEN"
+    },
+    {
+     "key": "D",
+     "text": "GEEIGENET"
+    },
+    {
+     "key": "E",
+     "text": "GEGEÜBER"
+    },
+    {
+     "key": "F",
+     "text": "INFORMATIONEN"
+    },
+    {
+     "key": "G",
+     "text": "KÖNNTEN"
+    },
+    {
+     "key": "H",
+     "text": "NENNEN"
+    },
+    {
+     "key": "I",
+     "text": "NUN"
+    },
+    {
+     "key": "J",
+     "text": "STATTFINDEN"
+    },
+    {
+     "key": "K",
+     "text": "TERMIN"
+    },
+    {
+     "key": "L",
+     "text": "TROTZDEM"
+    },
+    {
+     "key": "M",
+     "text": "VOR"
+    },
+    {
+     "key": "N",
+     "text": "WÄREN"
+    },
+    {
+     "key": "O",
+     "text": "WEGEN"
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen …",
+     "answer": "B",
+     "explain": "Das Wort lautet: AUFTRAG"
+    },
+    {
+     "id": "32",
+     "text": "… vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer …",
+     "answer": "J",
+     "explain": "Das Wort lautet: STATTFINDEN"
+    },
+    {
+     "id": "33",
+     "text": "… in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von …",
+     "answer": "F",
+     "explain": "Das Wort lautet: INFORMATIONEN"
+    },
+    {
+     "id": "34",
+     "text": "… daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die …",
+     "answer": "H",
+     "explain": "Das Wort lautet: NENNEN"
+    },
+    {
+     "id": "35",
+     "text": "… Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir …",
+     "answer": "D",
+     "explain": "Das Wort lautet: GEEIGNET"
+    },
+    {
+     "id": "36",
+     "text": "… Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir folgende …",
+     "answer": "O",
+     "explain": "Das Wort lautet: WEGEN"
+    },
+    {
+     "id": "37",
+     "text": "… Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit …",
+     "answer": "I",
+     "explain": "Das Wort lautet: NUN"
+    },
+    {
+     "id": "38",
+     "text": "… technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge …",
+     "answer": "A",
+     "explain": "Das Wort lautet: AM"
+    },
+    {
+     "id": "39",
+     "text": "… sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald …",
+     "answer": "K",
+     "explain": "Das Wort lautet: TERMIN"
+    },
+    {
+     "id": "40",
+     "text": "… und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen ADRIAN …",
+     "answer": "N",
+     "explain": "Das Wort lautet: WÄREN"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Herr Pawliczek erledigt alle seine Einkäufe im Internet.",
+     "answer": "r"
+    },
+    {
+     "id": "42",
+     "text": "Frau Zimmermann legt beim Einkaufen großen Wert auf persönlichen Kontakt.",
+     "answer": "f"
+    },
+    {
+     "id": "43",
+     "text": "Frau Schmidt findet zu Hause nicht genug Ruhe, um im Internet einzukaufen.",
+     "answer": "r"
+    },
+    {
+     "id": "44",
+     "text": "Frau Ruttnigg ist vom Einkaufen im Internet nicht überzeugt.",
+     "answer": "f"
+    },
+    {
+     "id": "45",
+     "text": "Herr Krause kauft seine Medikamente am liebsten in der nächsten Stadt.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Mit einem Praktikum können sich Jugendliche auf das Studium vorbereiten.",
+     "answer": "f"
+    },
+    {
+     "id": "47",
+     "text": "Herrn Mahlers Firma bietet jungen Leuten in verschiedenen Abteilungen ein Praktikum an.",
+     "answer": "r"
+    },
+    {
+     "id": "48",
+     "text": "Herrn Mahlers Firma stellt alle Praktikanten nach der Ausbildung ein.",
+     "answer": "f"
+    },
+    {
+     "id": "49",
+     "text": "Bei einer Bewerbung ist das Schulzeugnis für Herrn Mahler das Wichtigste.",
+     "answer": "f"
+    },
+    {
+     "id": "50",
+     "text": "Praktikanten sollten selbst erkennen, wo man sie brauchen könnte.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Herr Mahler meint, dass die Ideen der Praktikanten bei der Arbeit stören.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Herr Mahler legt großen Wert auf Teamarbeit.",
+     "answer": "r"
+    },
+    {
+     "id": "53",
+     "text": "Nach Frau Bachs Meinung verhalten sich Praktikanten im Betrieb oft wie in der Schule oder an der Universität.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Für den Praktikanten ist es gut, wenn er Interesse an der Arbeit zeigt.",
+     "answer": "r"
+    },
+    {
+     "id": "55",
+     "text": "Herr Mahler empfiehlt den Praktikanten, das Team mit Fleiß und guter Laune zu unterstützen.",
+     "answer": "r"
+    }
+   ]
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "In Norddeutschland steigen die Temperaturen morgen auf 5 bis 7 Grad.",
+     "answer": "f"
+    },
+    {
+     "id": "57",
+     "text": "Hamburg hat öfter gewonnen als Stuttgart.",
+     "answer": "r"
+    },
+    {
+     "id": "58",
+     "text": "Nach zwei Monaten müssen Sie für die Zeitschrift bezahlen.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Auf dem Mittleren Ring in München wird die Geschwindigkeit kontrolliert.",
+     "answer": "f"
+    },
+    {
+     "id": "60",
+     "text": "Janas Geburtstagsfest findet nicht im LEO statt.",
+     "answer": "f"
+    }
+   ]
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "format": "writing",
+   "passages": [
+    {
+     "title": "Brief",
+     "body": "Sie haben folgenden Brief von einer Freundin erhalten: Liebe(r)........ Entschuldige, dass ich mich erst jetzt wieder melde. Ich weiß, wir hatten ausgemacht, uns öfter mal zu schreiben. Aber es war so viel los in letzter Zeit. Ich habe eine Neuigkeit für dich: Meine kleine Schwester Janine heiratet im Oktober, und ich habe ihr versprochen, schon mal allen Freunden zu schreiben und Bescheid zu sagen. Die offizielle Einladung bekommst du natürlich noch von ihr direkt. Eddi, ihr zukünftiger Mann, ist echt nett, und wir mögen ihn alle sehr. Er ist koch und arbeitet hier in einem Hotel. Wir planen jetzt alles. Gib mir deshalb möglichst bald Bescheid, ob du kommst und mit wem. Herzliche Grüße Jennifer Einleitung und einen passendenSchluss. Vergessen Sie nicht DatumundAnrede."
+    }
+   ],
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief.",
+     "minWords": 100,
+     "points": [
+      "Reaktion auf Neuigkeit",
+      "Übernachtungsmöglichkeit",
+      "Sie möchten zur Hochzeit kommen",
+      "Hochzeitsgeschenk"
+     ]
+    }
+   ]
+  }
+ ]
+}
