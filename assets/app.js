@@ -148,19 +148,27 @@ function screenModell(m){
       const parts = b.parts.map(part).filter(Boolean);
       const n = parts.reduce((a, p) => a + p.items.length, 0);
       const r = prog[b.id];
+      const done = r && r.points !== undefined;
       const badge = `<span class="pills">
         <span class="pill">${b.minutes} Min.</span>
-        ${r && r.points !== undefined
-          ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>`
-          : ''}</span>`;
+        ${done ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>` : ''}
+      </span>`;
       const sub = [b.hint, `${n} Aufgaben`, `${fmtP(b.maxPoints)} Punkte`,
                    b.missing ? `${b.missing} Aufgaben fehlen in der Vorlage` : '']
         .filter(Boolean).join(' · ');
-      return `<button class="tile" data-block="${esc(b.id)}">
-        <span class="grow"><span style="font-weight:600">${esc(b.title)}</span>
-          <div class="meta">${esc(sub)}</div></span>
-        ${badge}
-      </button>`;
+      return `<div class="blockcard">
+        <button class="tile" data-block="${esc(b.id)}">
+          <span class="grow"><span style="font-weight:600">${esc(b.title)}</span>
+            <div class="meta">${esc(sub)}</div></span>
+          ${badge}
+        </button>
+        ${done && r.answers ? `<div class="lastrun">
+          <span>Letzte Prüfung${r.date ? ' · ' + esc(r.date) : ''}<br>
+            ${fmtP(r.points)}/${fmtP(r.max)} Punkte · ${r.pct} %</span>
+          <button class="btn ghost sm" data-review="${esc(b.id)}">Ansehen</button>
+          <button class="btn grey sm" data-clear="${esc(b.id)}">Löschen</button>
+        </div>` : ''}
+      </div>`;
     }).join('');
 
     const total = m.blocks.reduce((a, b) => a + b.maxPoints, 0);
@@ -173,6 +181,13 @@ function screenModell(m){
 
     app.querySelectorAll('[data-block]').forEach(b =>
       b.onclick = () => screenIntro(blockRun(m, b.dataset.block)));
+    app.querySelectorAll('[data-review]').forEach(b =>
+      b.onclick = () => reviewRun(m, b.dataset.review));
+    app.querySelectorAll('[data-clear]').forEach(b =>
+      b.onclick = () => ask('Letzte Prüfung löschen?', () => {
+        clearResult(m.id, b.dataset.clear);
+        screenModell(m);
+      }, 'Löschen'));
   });
 }
 
@@ -188,6 +203,25 @@ function blockRun(m, id){
            missing: b.missing, parts };
 }
 const runItems = run => run.parts.flatMap(p => p.items);
+
+/* Die letzte Prüfung noch einmal ansehen — mit den damals gegebenen Antworten. */
+function reviewRun(m, blockId){
+  const r = (load('b1.progress', {})[m.id] || {})[blockId];
+  if (!r || !r.answers) return;
+  const run = blockRun(m, blockId);
+  S.run = run;
+  S.answers = { ...r.answers };
+  S.dropped = {};
+  stopTimer();
+  if (run.parts.length === 1 && run.parts[0].format === 'writing')
+    return screenWriting(run, r);
+  let right = 0, total = 0;
+  run.parts.forEach(p => p.items.forEach(it => {
+    total++;
+    if (S.answers[it.id] === it.answer) right++;
+  }));
+  screenResult(run, r.points, r.max, r.pct, right, total);
+}
 
 /* ============ Startbildschirm ============ */
 function screenIntro(run){
@@ -284,7 +318,7 @@ function renderPassages(sec){
   return sec.passages.map(p => `
     <div class="passage">
       ${p.title ? `<h3>${esc(p.title)}</h3>` : ''}
-      <div class="body">${esc(p.body)}</div>
+      ${(p.paragraphs || [p.body]).map(t => `<p>${esc(t)}</p>`).join('')}
     </div>`).join('');
 }
 
@@ -418,12 +452,25 @@ function noteOf(pct){
   return 'nicht bestanden';
 }
 
-function saveResult(run, points, max){
+function saveResult(run, points, max, extra = {}){
   const pct = Math.round(points / max * 100);
   const prog = load('b1.progress', {});
-  (prog[S.modell.id] ||= {})[run.id] = { points, max, pct };
+  // nur die letzte Prüfung je Prüfungsteil — eine neue ersetzt die alte
+  (prog[S.modell.id] ||= {})[run.id] = {
+    points, max, pct,
+    date: new Date().toLocaleDateString('de-DE'),
+    answers: { ...S.answers },
+    ...extra
+  };
   save('b1.progress', prog);
   return pct;
+}
+
+function clearResult(modellId, runId){
+  const prog = load('b1.progress', {});
+  if (prog[modellId]) delete prog[modellId][runId];
+  if (prog[modellId] && !Object.keys(prog[modellId]).length) delete prog[modellId];
+  save('b1.progress', prog);
 }
 
 function finish(run, auto){
@@ -520,12 +567,12 @@ function screenResult(run, points, max, pct, right, total){
 
 /* Schriftlicher Ausdruck: Selbstbewertung nach den drei telc Kriterien.
    Jedes Kriterium A=5 / B=3 / C=1 / D=0, die Summe wird mit 3 multipliziert. */
-function screenWriting(run){
+function screenWriting(run, saved){
   const sec = run.parts[0];
   const it = sec.items[0];
   const mine = (S.answers[it.id] || '').trim();
   const words = mine.split(/\s+/).filter(Boolean).length;
-  const grades = {};
+  const grades = { ...(saved && saved.grades || {}) };
 
   go('result', () => {
     app.innerHTML = `
@@ -569,11 +616,20 @@ function screenWriting(run){
         if (Object.keys(grades).length < sec.criteria.length) return;
 
         const points = Object.values(grades).reduce((a, b) => a + b, 0) * sec.factor;
-        const pct = saveResult(run, points, sec.maxPoints);
+        const pct = saveResult(run, points, sec.maxPoints, { grades: { ...grades } });
         document.getElementById('wres').innerHTML =
           scoreCard(points, sec.maxPoints, pct, '');
       };
     });
+    if (saved){                              // gespeicherte Bewertung wiederherstellen
+      Object.entries(grades).forEach(([i, pts]) => {
+        const g = sec.grades.find(x => x.points === pts);
+        const lb = g && app.querySelector(`[data-crit="${i}|${g.key}"]`);
+        if (lb){ lb.classList.add('sel'); lb.querySelector('input').checked = true; }
+      });
+      document.getElementById('wres').innerHTML =
+        scoreCard(saved.points, sec.maxPoints, saved.pct, '');
+    }
     document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
   });

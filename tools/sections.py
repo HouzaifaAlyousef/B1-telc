@@ -13,6 +13,33 @@ def clean(t):
     return t
 
 
+def paragraphs(rows, gap_factor=1.4):
+    """يقسّم صفوف نص لفقرات.
+
+    المسافة بين سطور الفقرة الوحدة ثابتة تقريباً (~١٩٫٥ نقطة)، وبين الفقرات
+    بتكبر (~٣٢). فمنحسب المسافة الشائعة ومنعتبر أي قفزة أكبر منها بمقدار
+    معيّن بداية فقرة جديدة. والسطر المزحزح لليمين كمان بيبدأ فقرة.
+    """
+    rs = [(y, x, clean(t)) for y, x, t in rows if not is_noise(t)]
+    if not rs:
+        return []
+    gaps = sorted(rs[i][0] - rs[i - 1][0] for i in range(1, len(rs)))
+    line = gaps[len(gaps) // 2] if gaps else 0        # المسافة الشائعة
+    base = min(x for _, x, _ in rs)
+
+    out, cur = [], []
+    for i, (y, x, t) in enumerate(rs):
+        newp = cur and ((line and y - rs[i - 1][0] > line * gap_factor)
+                        or x > base + 2)
+        if newp:
+            out.append(' '.join(cur))
+            cur = []
+        cur.append(t)
+    if cur:
+        out.append(' '.join(cur))
+    return [clean(p) for p in out if clean(p)]
+
+
 def is_noise(t):
     t = clean(t)
     return (not t or DOTS_RE.match(t) or len(t) < 2
@@ -171,16 +198,11 @@ def parse_sb2(rows, extra_rows=()):
                     seen.add(k)
                     bank.append({'key': k, 'text': w})
 
-    for y, x, t in strip_instructions(rows):
-        c = clean(t)
-        if bank_line(c):
-            continue
-        if not is_noise(c):
-            body.append(c)
+    body = paragraphs([r for r in strip_instructions(rows) if not bank_line(clean(r[2]))])
     take_bank(strip_instructions(rows))
     take_bank(extra_rows)
     bank.sort(key=lambda b: b['key'])
-    return bank, ' '.join(body)
+    return bank, body
 
 
 # ---------------- خيارات A/B/C ----------------
@@ -227,7 +249,7 @@ def parse_lv2(rows):
              for n, c in win.items()
              if any(re.match(rf'^{n}\s*[.)]', clean(r[2])) for r in c)}
     first = min(stems.values()) if stems else min(min(r[0] for r in c) for c in win.values())
-    passage = ' '.join(clean(t) for y, x, t in rows if y < first - 4 and not is_noise(t))
+    passage = paragraphs([r for r in rows if r[0] < first - 4])
 
     items = []
     for n, chunk in sorted(win.items()):
@@ -237,7 +259,7 @@ def parse_lv2(rows):
         stem = join_rows([r for r in chunk if r[0] < cut and r[1] < 90], n)
         if stem and len(opts) == 3:
             items.append({'id': str(n), 'text': stem, 'options': opts})
-    return clean(passage), items
+    return passage, items
 
 
 # ---------------- Sprachbausteine Teil 1 ----------------
@@ -262,8 +284,7 @@ def parse_sb1(rows, words, lo=21, hi=30):
         return '', []
 
     grid_top = min(y for _, y, _ in marks) - 12
-    passage = ' '.join(clean(t) for y, x, t in strip_instructions(rows)
-                       if y < grid_top and not is_noise(t))
+    passage = paragraphs([r for r in strip_instructions(rows) if r[0] < grid_top])
 
     items = []
     for mx, my, n in marks:
@@ -299,7 +320,7 @@ def parse_sb1(rows, words, lo=21, hi=30):
             items.append({'id': str(n), 'text': f'Lücke ({n})',
                           'options': [{'key': k, 'text': t}
                                       for k, t in zip('ABC', texts)]})
-    return clean(passage), items
+    return passage, items
 
 
 # ---------------- Schriftlicher Ausdruck ----------------

@@ -108,6 +108,9 @@ h3{font-size:16px; margin:0 0 4px}
   padding:16px; margin-bottom:14px; box-shadow:var(--shadow);
 }
 .passage h3{color:var(--brand-dark)}
+.passage p{margin:0 0 14px; line-height:1.85}
+.passage p:last-child{margin-bottom:0}
+.passage p:first-of-type{font-weight:600}    /* Überschrift des Textes */
 .passage .body{white-space:pre-wrap; line-height:1.85}
 .bank{
   background:var(--card); border:1px dashed var(--line); border-radius:var(--radius);
@@ -279,3 +282,14 @@ textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
 
 /* Schon vergebene Zuordnung: im Auswahlfeld gesperrt */
 select option:disabled{color:var(--muted)}
+
+/* Prüfungsteil-Kachel mit Zeile für die letzte Prüfung */
+.blockcard{margin-bottom:10px}
+.blockcard .tile{margin-bottom:0}
+.lastrun{
+  display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:8px;
+  background:var(--card); border:1px solid var(--line); border-top:0;
+  border-radius:0 0 var(--radius) var(--radius);
+  padding:9px 10px 9px 14px; font-size:13px; color:var(--muted); line-height:1.5;
+}
+.lastrun .btn.sm{padding:6px 11px; font-size:13px; white-space:nowrap}

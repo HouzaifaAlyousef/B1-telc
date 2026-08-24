@@ -126,7 +126,7 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         fmt = 'mc'
         body, items = S.parse_lv2(rows)
         if body:
-            passages = [{'body': body}]
+            passages = [{'paragraphs': body}]
     elif kind == 'LV3':
         fmt = 'matching'
         items = S.parse_lv3(rows)
@@ -136,17 +136,18 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         fmt = 'mc'
         body, items = S.parse_sb1(rows, words)
         if body:
-            passages = [{'body': body}]
+            passages = [{'paragraphs': body}]
         for it in items:
-            it['text'] = gap_context(body, it['id'])
+            it['text'] = gap_context(' '.join(body), it['id'])
     elif kind == 'SB2':
         fmt = 'wordbank'
         bank, body = S.parse_sb2(rows)
         bank = [{'key': b['key'].upper(), 'text': b['text']} for b in bank]
         if body:
-            passages = [{'body': body}]
+            passages = [{'paragraphs': body}]
         # الفراغات ٣١-٤٠ مرقّمة بالنص نفسه، فمنولّدها من مدى الأرقام
-        items = [{'id': str(n), 'text': gap_context(body, n)} for n in range(lo, hi + 1)]
+        flat = ' '.join(body)
+        items = [{'id': str(n), 'text': gap_context(flat, n)} for n in range(lo, hi + 1)]
         sec['bankTitle'] = 'Wörterliste'
     elif kind.startswith('HV'):
         fmt = 'truefalse'
@@ -289,7 +290,7 @@ def main():
                     sec = build_section(kind, i, rows, [], key, keyword, doc)
                     if sec:
                         sec['bank'] = bank
-                        sec['passages'] = [{'body': body}] if body else []
+                        sec['passages'] = [{'paragraphs': body}] if body else []
                         sec['items'] = [it for it in sec['items']
                                         if it['answer'] in [b['key'] for b in bank]]
                         if not sec['items']:
