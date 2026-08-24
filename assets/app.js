@@ -334,6 +334,26 @@ function renderItem(sec, it){
   return `<div class="q" id="q_${esc(it.id)}">${head}${body}</div>`;
 }
 
+/* In Zuordnungsaufgaben passt jede Antwort nur einmal ("Jede Überschrift /
+   jedes Wort passt nur einmal"). Schon vergebene Antworten werden in den
+   anderen Aufgaben gesperrt. Ausnahme: X in Leseverstehen Teil 3 — das darf
+   mehrfach vorkommen, wenn zu einer Situation keine Anzeige passt. */
+function syncBank(sec){
+  if (sec.format !== 'matching' && sec.format !== 'wordbank') return;
+  const scope = document.getElementById('part-' + sec.id) || app;
+  const used = new Map();
+  sec.items.forEach(it => {
+    const v = S.answers[it.id];
+    if (v && v !== 'X') used.set(v, it.id);
+  });
+  scope.querySelectorAll('[data-sel]').forEach(sl => {
+    const id = sl.dataset.sel;
+    [...sl.options].forEach(o => {
+      if (o.value) o.disabled = used.has(o.value) && used.get(o.value) !== id;
+    });
+  });
+}
+
 function bindInputs(sec){
   const scope = document.getElementById('part-' + sec.id) || app;
   scope.querySelectorAll('[data-opt]').forEach(lb => {
@@ -358,9 +378,11 @@ function bindInputs(sec){
     sl.onchange = () => {
       const v = sl.value;
       if (v) S.answers[sl.dataset.sel] = v; else delete S.answers[sl.dataset.sel];
+      syncBank(sec);
       updateProgress();
     };
   });
+  syncBank(sec);
   scope.querySelectorAll('[data-txt]').forEach(ta => {
     ta.oninput = () => {
       const id = ta.dataset.txt;
