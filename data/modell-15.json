@@ -1,6 +1,6 @@
 {
  "id": "modell-15",
- "title": "Modelltest 15",
+ "title": "JAN",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -679,24 +679,29 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "instruction": "Antworten Sie Jan. Schreiben Sie etwas zu allen vier Punkte:",
+   "brief": {
+    "intro": "Ihr Freund Jan hat Ihnen folgende E-Mail geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Ich sende Dir ganz viele Grüße aus Rom! Du weißt ja, wie sehr mir diese Stadt gefällt. Ich bin hier von morgens bis abends nur unterwegs. Diese Museen, Parks Plätze und natürlich das Essen – wunderbar! Gestern Abend war ich übrigens in einem Rockkonzert. Ich fand die Musik ganz toll und die Stimmung war super.",
+     "Doch Leider ist mein Urlaub schon fast vorbei und in drei Tagen muss ich wieder zurück nach Deutschland. Welche Stadt ist eigentlich Deine Lieblingsstadt? Hast du schon Pläne für Deinen nächsten Urlaub? Vielleicht können wir uns ja mal wieder treffen.",
+     "Herzliche Grüße"
+    ],
+    "signature": "Jan"
+   },
+   "hints": [],
    "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Ihr Freund Jan hat Ihnen folgende E-Mail geschrieben: Liebe(r)........ Ich sende Dir ganz viele Grüße aus Rom! Du weißt ja, wie sehr mir diese Stadt gefällt. Ich bin hier von morgens bis abends nur unterwegs. Diese Museen, Parks Plätze und natürlich das Essen – wunderbar! Gestern Abend war ich übrigens in einem Rockkonzert. Ich fand die Musik ganz toll und die Stimmung war super. Doch Leider ist mein Urlaub schon fast vorbei und in drei Tagen muss ich wieder zurück nach Deutschland. Welche Stadt ist eigentlich Deine Lieblingsstadt? Hast du schon Pläne für Deinen nächsten Urlaub? Vielleicht können wir uns ja mal wieder treffen. Herzliche Grüße Jan"
-    }
-   ],
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Jan. Schreiben Sie etwas zu allen vier Punkte:",
      "minWords": 100,
      "points": [
       "Ihre Lieblingsstadt",
-      "Welche Musik Sie mögen.",
-      "Ihre Pläne für den nächsten Urlaub.",
-      "Treffen mit Jan?."
+      "Welche Musik Sie mögen",
+      "Ihre Pläne für den nächsten Urlaub",
+      "Treffen mit Jan?"
      ]
     }
    ],

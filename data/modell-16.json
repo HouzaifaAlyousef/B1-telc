@@ -1,6 +1,6 @@
 {
  "id": "modell-16",
- "title": "Modelltest 16",
+ "title": "VIKTOR",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -660,18 +660,22 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "instruction": "Antworten Sie auf diesen Brief. Schreiben Sie in Ihrem Brief etwas zu den folgenden vier Punkten:",
+   "brief": {
+    "intro": "LAANGUAGE Tests Ihr Freund hat Ihnen folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "ich sende dir sonnige Grüße von der wunderschöne Insel Malta Katja, die Kinder und ich sind ganz glücklich! Strand, Kultur. Sport- all das ist hier möglich! Gestern haben wir uns sogar ein Auto gemietet und einen Ausflug gemacht. Und auch für mein Hobby. Das Fotografieren, habe ich sehr viel Zeit, ich habe schon ganz viele Fotos gemacht. Ich schicke dir mit diesem Brief auch ein Buch über Malta, damit du siehst wie interessant dieses Land ist. Hoffentlich gefällt dir das Buch. Leider ist unser Urlaub auch schon in wenigen Tagen vorbei. Wie wäre das - vielleicht können wir uns ja wieder einmal treffen?",
+     "Bis hoffentlich bald"
+    ],
+    "signature": "Viktor"
+   },
+   "hints": [],
    "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "LAANGUAGE Tests Ihr Freund hat Ihnen folgenden Brief geschrieben: Liebe(r)........ ich sende dir sonnige Grüße von der wunderschöne Insel Malta Katja, die Kinder und ich sind ganz glücklich! Strand, Kultur. Sport- all das ist hier möglich! Gestern haben wir uns sogar ein Auto gemietet und einen Ausflug gemacht. Und auch für mein Hobby. Das Fotografieren, habe ich sehr viel Zeit, ich habe schon ganz viele Fotos gemacht. Ich schicke dir mit diesem Brief auch ein Buch über Malta, damit du siehst wie interessant dieses Land ist. Hoffentlich gefällt dir das Buch. Leider ist unser Urlaub auch schon in wenigen Tagen vorbei. Wie wäre das - vielleicht können wir uns ja wieder einmal treffen? Bis hoffentlich bald Viktor"
-    }
-   ],
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie auf diesen Brief. Schreiben Sie in Ihrem Brief etwas zu den folgenden vier Punkten:",
      "minWords": 100,
      "points": [
       "Ihre Hobbys",

@@ -255,3 +255,17 @@ textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
 .crit .opt{flex-direction:column; gap:2px; text-align:center; padding:8px 4px; font-size:13px}
 .crit .opt input{display:none}
 .crit .opt .k{font-size:16px}
+
+/* Schriftlicher Ausdruck: Aufbau wie im Prüfungsheft */
+.briefintro{margin:0 0 12px; font-size:15px}
+.brief{border:2px solid var(--warn); border-radius:10px; padding:16px 18px;
+  background:var(--card); margin-bottom:18px}
+.brief p{margin:0 0 10px; line-height:1.75; font-size:15px}
+.brief p:last-child{margin-bottom:0}
+.brief .anrede{font-weight:600}
+.brief .sig{font-weight:600; margin-top:14px}
+.task{margin-bottom:18px}
+.task > p{margin:0 0 10px; font-size:15px; font-weight:600}
+.task ul{margin:0 0 12px; padding-inline-start:22px; display:grid; gap:6px}
+.task li{font-size:15px; font-weight:600}
+.task .hint{font-weight:400; font-size:14px; color:var(--muted); margin:0 0 6px}

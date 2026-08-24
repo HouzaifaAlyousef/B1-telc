@@ -1,6 +1,6 @@
 {
  "id": "modell-13",
- "title": "Modelltest 13",
+ "title": "THOMAS",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -727,18 +727,27 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben von Ihnen Freund folgende E-Mail erhalten: Liebe(r)........ nach unserm schönen, gemeinsamen Erlebnis letztes Jahr möchte ich auch dieses Jahr wieder einen Ausflug für uns alle organisieren. Ich hoffe sehr, dass ihr Zeit habt und mitkommen könnt - ich freue mich schon jetzt, euch alle bald wieder zu sehen! Das Dumme ist nur, dass ich mir vor drei Wochen beim Basketball das Bein gebrochen habe und noch nicht so gut zu Fuß bin. Deshalb habe ich einen gemütlichen Ausflug mit Bus und Schiff geplant - hoffentlich ist dann auch das Wetter gut für die Schiffsfahrt! Wohin es geht, möchte ich euch aber noch nicht verraten - das soll eine Überraschung werden. Termin: übernächster Samstag. Zeit und Treffpunkt: 9:30 Uhr bei mir. Bitte schreibt mir doch, ob ihr beim Ausflug dabei sein könnt! Hoffentlich bis bald. Thomas"
-    }
+   "instruction": "Antworten Sie Thomas. Schreiben Sie etwas zu allen vier Punkten:",
+   "brief": {
+    "intro": "Sie haben von Ihnen Freund folgende E-Mail erhalten:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "nach unserm schönen, gemeinsamen Erlebnis letztes Jahr möchte ich auch dieses Jahr wieder einen Ausflug für uns alle organisieren. Ich hoffe sehr, dass ihr Zeit habt und mitkommen könnt - ich freue mich schon jetzt, euch alle bald wieder zu sehen! Das Dumme ist nur, dass ich mir vor drei Wochen beim Basketball das Bein gebrochen habe und noch nicht so gut zu Fuß bin. Deshalb habe ich einen gemütlichen Ausflug mit Bus und Schiff geplant - hoffentlich ist dann auch das Wetter gut für die Schiffsfahrt! Wohin es geht, möchte ich euch aber noch nicht verraten - das soll eine Überraschung werden.",
+     "Termin: übernächster Samstag.",
+     "Zeit und Treffpunkt: 9:30 Uhr bei mir.",
+     "Bitte schreibt mir doch, ob ihr beim Ausflug dabei sein könnt!",
+     "Hoffentlich bis bald."
+    ],
+    "signature": "Thomas"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Thomas. Schreiben Sie etwas zu allen vier Punkten:",
      "minWords": 100,
      "points": [
       "Alternativvorschlag für Schlechtes Wetter",

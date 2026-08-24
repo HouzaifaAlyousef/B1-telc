@@ -1,6 +1,6 @@
 {
  "id": "modell-09",
- "title": "Modelltest 9",
+ "title": "CAROLINA",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -823,18 +823,25 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben von einer Bekannten folgenden E-Mail erhalten: Liebe(r)........ Du hast schon so lange nicht mehr geschrieben. Wie geht es dir? Heute habe ich eine Bitte. Vielleicht kannst du uns helfen? Eine 16-jährige Schülerin aus deinem Land wird uns besuchen und zwei Wochen bei uns in Goldbach bleiben. Natürlich möchten wir, dass sie sich wohl fühlt. Dein Land kennen wir nur von deinen Erzählungen, denn wir waren selbst noch nicht da. Bitte gib uns ein paar Informationen Z.B über typische Gewohnheiten oder typisches Essen. Was können wir tun und wie können wir uns vorbereiten? Wir freuen uns schon auf deine Antwort. Schon einmal viele Dank und liebe Grüße Caroline"
-    }
+   "instruction": "Antworten Sie Caroline. Schreiben Sie etwas zu den folgenden vier Punkten:",
+   "brief": {
+    "intro": "Sie haben von einer Bekannten folgenden E-Mail erhalten:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Du hast schon so lange nicht mehr geschrieben. Wie geht es dir? Heute habe ich eine Bitte. Vielleicht kannst du uns helfen? Eine 16-jährige Schülerin aus deinem Land wird uns besuchen und zwei Wochen bei uns in Goldbach bleiben. Natürlich möchten wir, dass sie sich wohl fühlt. Dein Land kennen wir nur von deinen Erzählungen, denn wir waren selbst noch nicht da. Bitte gib uns ein paar Informationen Z.B über typische Gewohnheiten oder typisches Essen. Was können wir tun und wie können wir uns vorbereiten?",
+     "Wir freuen uns schon auf deine Antwort.",
+     "Schon einmal viele Dank und liebe Grüße"
+    ],
+    "signature": "Caroline"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Caroline. Schreiben Sie etwas zu den folgenden vier Punkten:",
      "minWords": 100,
      "points": [
       "Reaktion auf den Besuch der Schülerin",

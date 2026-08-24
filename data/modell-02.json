@@ -1,6 +1,6 @@
 {
  "id": "modell-02",
- "title": "Modelltest 2",
+ "title": "EVA1",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -27,9 +27,19 @@
     "hv3"
    ],
    "maxPoints": 75.0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45
   }
  ],
- "subtitle": "60 Aufgaben · 120 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -826,6 +836,75 @@
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Schreiben Sie Ihrer Bekannten nun einen Antwortbrief, der die folgenden Punkte erhält:",
+   "brief": {
+    "intro": "Eine Bekannte aus der Schweiz hat eine neue Stelle. Sie hat Ihnen den folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "wie geht es denn so mit dem Deutsch lernen? Kommst du gut voran, und was machst du im Moment so? Stell dir vor, ich habe die neue Stelle bei der Zeitschrift VIA bekommen! ich arbeite jetzt als Journalistin, und das war ja immer mein Traumberuf!",
+     "VIA wird vor allem von jüngeren LLeuten gelesen. Deshalb schreiben wir viel über Berufe und Ausbildungen und auch über Freizeit und Sport. Für die nächsten Hefte von VIA planen wir jetzt eine neue Serie über Berufs wünsche. Was ist eigentlich dein Traumberuf? Wenn du möchtest, schicke ich dir gerne einmal ein Grätschet von VIA, damit du siehst, was ich so mache.",
+     "Ich freue mich schon auf deine Antwort.",
+     "Herzliche Grüße"
+    ],
+    "signature": "Eva"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"
+   ],
+   "format": "writing",
+   "items": [
+    {
+     "id": "A",
+     "text": "Schreiben Sie Ihrer Bekannten nun einen Antwortbrief, der die folgenden Punkte erhält:",
+     "minWords": 100,
+     "points": [
+      "Fortschritte beim Deutsch Lernen",
+      "Auf Evas neue Stelle reagieren",
+      "Was es Neues bei Ihnen gibt",
+      "Ihr Traumberuf"
+     ]
+    }
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

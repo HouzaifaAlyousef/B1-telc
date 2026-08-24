@@ -1,6 +1,6 @@
 {
  "id": "modell-05",
- "title": "Modelltest 5",
+ "title": "NICOLE",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -27,9 +27,19 @@
     "hv3"
    ],
    "maxPoints": 75.0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45
   }
  ],
- "subtitle": "58 Aufgaben · 120 Minuten",
+ "subtitle": "59 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -788,6 +798,74 @@
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:",
+   "brief": {
+    "intro": "Eine Freundin beschreibt in einem Brief, welche Probleme sie mit ihrem Bruder hat und bittet Sie um Rat:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "entschuldige, dass ich dir so lange nicht mehr geschrieben habe. Aber weißt du mein älterer Bruder, der schon lange im Ausland lebt, ist jetzt für zwei Monate bei uns. Wir unternehmen einiges zusammen, Z.B. gehen wir nachmittags ins Schwimmbad oder abends ins Kino.",
+     "Wir verstehen uns eigentlich ganz gut, aber dennoch habe ich ein Problem mit ihm: Wenn es im Fernsehen Sportsendungen gibt, dann bekomme ich ihn nicht mehr weg vom Fernseher! Er sitzt dann stundenlang nur da und sieht fern, ganz egal wie schön das Wetter draußen ist! Was soll ich bloß tun? Überhaupt nichts sagen oder soll ich mit ihm deswegen streiten? Er fährt bald wieder weg und ich möchte doch mit ihm zusammen sein. Was würdest du machen? Hast du vielleicht ein paar Tipps oder Ratschläge für mich?",
+     "Herzliche Grüße"
+    ],
+    "signature": "Nicole"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben ,überlegeen Sie sich eine passende Reihenfolge der punkte, eine passende"
+   ],
+   "format": "writing",
+   "items": [
+    {
+     "id": "A",
+     "text": "Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:",
+     "minWords": 100,
+     "points": [
+      "Eigene Erfahrungen mit Geschwistern, Freunden,",
+      "Tipps für Nicole",
+      "Was Sie über den Bruder denken",
+      "Was Sie selbst gern gemeinsam mit anderen macchen"
+     ]
+    }
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45
   }
  ]
 }

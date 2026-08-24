@@ -1,6 +1,6 @@
 {
  "id": "modell-01",
- "title": "Modelltest 1",
+ "title": "PETRA",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -842,18 +842,25 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Eine Bekannte hat Ihnen folgenden Brief geschrieben: Liebe(r)........ Ich habe eine tolle Überraschung. stelle dir vor, was mir mein Onkel angeboten hat. Er rief mich am Samstag an. Er hat ein großes Ferienhaus im Schwarzwald. Das Haus kann ich für die Ferien kostenlos haben. Ich kann auch Freunde mitbringen! Wäre das nichts für uns? Wir könnten uns alle dort treffen. Du, deine Eltern und Freunde, und ich mit meiner Familie und meinen Freunden. Ich würde mich wahnsinnig freuen, wenn das klappen würde. Bitte schreibe mir so schnell du kannst, damit wir alles planen können. Urlaub im Schwarzwald - das wird traumhaft schön! Herzliche Grüße Petra Einleitung und einen passendenSchluss. Vergessen Sie nicht Datumund Anrede."
-    }
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:",
+   "brief": {
+    "intro": "Eine Bekannte hat Ihnen folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Ich habe eine tolle Überraschung. stelle dir vor, was mir mein Onkel angeboten hat. Er rief mich am Samstag an. Er hat ein großes Ferienhaus im Schwarzwald. Das Haus kann ich für die Ferien kostenlos haben. Ich kann auch Freunde mitbringen! Wäre das nichts für uns? Wir könnten uns alle dort treffen. Du, deine Eltern und Freunde, und ich mit meiner Familie und meinen Freunden. Ich würde mich wahnsinnig freuen, wenn das klappen würde. Bitte schreibe mir so schnell du kannst, damit wir alles planen können. Urlaub im Schwarzwald - das wird traumhaft schön!",
+     "Herzliche Grüße"
+    ],
+    "signature": "Petra"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben, überlegeen Sie sich eine passende Reihenfolge der punkte, eine passende",
+    "Schreiben Sie mindestens 100 Wörter."
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:",
      "minWords": 100,
      "points": [
       "Warum Sie gern nach Deutschland kommen möchten",

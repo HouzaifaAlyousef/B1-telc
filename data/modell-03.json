@@ -1,6 +1,6 @@
 {
  "id": "modell-03",
- "title": "Modelltest 3",
+ "title": "SOPHIE",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -785,18 +785,25 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben folgende E-Mail von Ihrer Freundin Sophie bekommen: Liebe(r)........ wir haben lange nichts mehr voreinander gehört. Ich hoffe, es geht dir gut. Gibt es bei dir Neuigkeiten? Ich bin nun schon seit zwei Monaten in Würzburg, und mein neuer Job gefällt mir sehr gut. In der Firma fühle ich mich wohl, mit meinen Kollegen verstehe ich mich prima und die Arbeit macht mir großen Spaß. Allerdings habe ich ein Problem: Außer meinen Kollegen kenne ich hier in der Stadt noch niemanden. In meiner Freizeit bin ich oft allein und weiß nicht, was ich machen soll. Wie könnte ich neue Leute kennenlernen? Hast du vielleicht einen Tipp für mich? Würzburg ist wirklich eine schöne Stadt mit vielen Sehenswürdigkeiten. Hast du Lust, mich mal an einem Wochenende zu besuchen? Ich würde mich sehr freuen. Viele Grüße Sophie"
-    }
+   "instruction": "Antworten Sie Sophie. Schreiben Sie etwas zu allen vier Punkten: Was es Neues bei Ihnen gibt",
+   "brief": {
+    "intro": "Sie haben folgende E-Mail von Ihrer Freundin Sophie bekommen:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "wir haben lange nichts mehr voreinander gehört. Ich hoffe, es geht dir gut. Gibt es bei dir Neuigkeiten? Ich bin nun schon seit zwei Monaten in Würzburg, und mein neuer Job gefällt mir sehr gut. In der Firma fühle ich mich wohl, mit meinen Kollegen verstehe ich mich prima und die Arbeit macht mir großen Spaß.",
+     "Allerdings habe ich ein Problem: Außer meinen Kollegen kenne ich hier in der Stadt noch niemanden. In meiner Freizeit bin ich oft allein und weiß nicht, was ich machen soll. Wie könnte ich neue Leute kennenlernen? Hast du vielleicht einen Tipp für mich? Würzburg ist wirklich eine schöne Stadt mit vielen Sehenswürdigkeiten. Hast du Lust, mich mal an einem Wochenende zu besuchen? Ich würde mich sehr freuen.",
+     "Viele Grüße"
+    ],
+    "signature": "Sophie"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Sophie. Schreiben Sie etwas zu allen vier Punkten: Was es Neues bei Ihnen gibt",
      "minWords": 100,
      "points": [
       "Was Sie selbst gerne in Ihrer Freizeit machen",

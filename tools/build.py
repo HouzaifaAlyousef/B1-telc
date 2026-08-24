@@ -75,6 +75,12 @@ HV_NOTE  = ('Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. '
             'mit der Lösung — nicht zum Hörtraining.')
 LV3_KEYS = list('ABCDEFGHIJKL') + ['X']
 
+# اسم كل نموذج متل الختم اللي بزاوية صفحة Schriftlicher Ausdruck بالـPDF.
+# الختم مرسوم كصورة مو نص، فما بينستخرج آلياً — انقرا مرة وانحفظ هون.
+NAMES = ['PETRA', 'EVA1', 'SOPHIE', 'NADIA2', 'NICOLE', 'ANDREAS', 'ANNIKA3',
+         'IRIS1', 'CAROLINA', 'VERA', 'JENNIFER', 'ANDREAS2', 'THOMAS',
+         'TAMARA', 'JAN', 'VIKTOR']
+
 
 def gap_context(passage, n, span=60):
     """جملة مختصرة حوالين الفراغ، تا تبيّن السياق بدون ما ترجع تقرا كل النص."""
@@ -143,12 +149,15 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         sec['note'] = HV_NOTE
     elif kind == 'SA':
         fmt = 'writing'
-        letter, points, minw = S.parse_sa(rows)
-        if not points:
+        d = S.parse_sa(rows)
+        if not d or not d['points']:
             return None
-        passages = [{'title': 'Brief', 'body': letter}]
-        items = [{'id': 'A', 'text': 'Antworten Sie auf diesen Brief.',
-                  'minWords': minw, 'points': points}]
+        sec['brief'] = {k: d[k] for k in
+                        ('intro', 'greeting', 'paragraphs', 'signature')}
+        sec['instruction'] = d['task']
+        sec['hints'] = d['hints']
+        items = [{'id': 'A', 'text': d['task'],
+                  'minWords': d['minWords'], 'points': d['points']}]
 
     sec['format'] = fmt
     if passages:
@@ -296,7 +305,7 @@ def main():
                                'parts': mine,
                                'maxPoints': round(sum(by_id[p]['maxPoints'] for p in mine), 1)})
 
-            data = {'id': f'modell-{i:02d}', 'title': f'Modelltest {i}',
+            data = {'id': f'modell-{i:02d}', 'title': NAMES[i - 1],
                     'blocks': blocks,
                     'subtitle': f'{sum(len(s["items"]) for s in secs)} Aufgaben · '
                                 f'{sum(b["minutes"] for b in blocks)} Minuten',

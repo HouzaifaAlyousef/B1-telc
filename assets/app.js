@@ -250,7 +250,26 @@ function screenExam(run){
 const shortTitle = t => t.replace('Leseverstehen', 'LV').replace('Sprachbausteine', 'SB')
                          .replace('Hörverstehen', 'HV').replace(', Teil ', ' ');
 
+function renderBrief(sec){
+  const b = sec.brief, it = sec.items[0];
+  return `
+    ${b.intro ? `<p class="briefintro">${esc(b.intro)}</p>` : ''}
+    <div class="brief">
+      <p class="anrede">${esc(b.greeting)}</p>
+      ${b.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
+      ${b.signature ? `<p class="sig">${esc(b.signature)}</p>` : ''}
+    </div>
+    <div class="task">
+      <p>${esc(sec.instruction)}</p>
+      <ul>${it.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
+      ${(sec.hints || []).map(h => `<p class="hint">${esc(h)}</p>`).join('')}
+      ${(sec.hints || []).some(h => /mindestens/i.test(h)) ? ''
+        : `<p class="hint">Schreiben Sie mindestens ${it.minWords} Wörter.</p>`}
+    </div>`;
+}
+
 function renderPassages(sec){
+  if (sec.brief) return renderBrief(sec);
   if (!sec.passages || !sec.passages.length) return '';
   return sec.passages.map(p => `
     <div class="passage">
@@ -280,6 +299,12 @@ function renderItem(sec, it){
     <span class="qtext grow">${esc(it.text)}</span></div>`;
   let body = '';
 
+  if (sec.format === 'writing'){
+    return `<div class="q" id="q_${esc(it.id)}">
+      <textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …"></textarea>
+      <div class="counter" id="wc_${esc(it.id)}">0 Wörter (mindestens ${it.minWords || 100})</div>
+    </div>`;
+  }
   if (sec.format === 'mc' || sec.format === 'truefalse'){
     const opts = sec.format === 'truefalse'
       ? [{ key: 'r', text: 'Richtig' }, { key: 'f', text: 'Falsch' }]
@@ -295,10 +320,6 @@ function renderItem(sec, it){
       <option value="">— bitte wählen —</option>
       ${sec.bank.map(o => `<option value="${esc(o.key)}">${esc(o.key)}${o.text ? ' — ' + esc(o.text).slice(0, 70) : ''}</option>`).join('')}
     </select>`;
-  }
-  else if (sec.format === 'writing'){
-    body = `<textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …"></textarea>
-            <div class="counter" id="wc_${esc(it.id)}">0 Wörter (mindestens ${it.minWords || 100})</div>`;
   }
   return `<div class="q" id="q_${esc(it.id)}">${head}${body}</div>`;
 }
@@ -471,10 +492,8 @@ function screenWriting(run){
         <div class="passage" style="margin:0"><div class="body">${esc(mine || '(kein Text geschrieben)')}</div></div>
       </div>
       <div class="card">
-        <h2>Leitpunkte</h2>
-        <ul class="partlist" style="margin-bottom:0">
-          ${it.points.map(pt => `<li><span class="grow">${esc(pt)}</span></li>`).join('')}
-        </ul>
+        <h2>Aufgabe</h2>
+        ${renderBrief(sec)}
       </div>
       <div class="card">
         <h2>Bewertung</h2>

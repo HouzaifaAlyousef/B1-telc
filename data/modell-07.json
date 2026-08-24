@@ -1,6 +1,6 @@
 {
  "id": "modell-07",
- "title": "Modelltest 7",
+ "title": "ANNIKA3",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -842,18 +842,25 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben von einer Freundin folgenden Brief erhalten: Liebe(r)........ Wie geht’s dir? Hattest du ein schönes Wochenende? Hier hat es die ganze Zeit geregnet, deshalb bin ich zuhause geblieben. Du hattest vorgeschlagen, dass wir im Sommer zusammen verreisen könnten. Die Idee finde ich super! An welches Reiseziel denkst du? Ich bin gerne am Meer, mag aber auch Städterreisen. Wichtig ist für mich nur, dass ich auch ein bisschen Sport machen kann. Die Reise sollte aber nicht zu viel kosten, denn ich habe vor Kurzem schon viel für eine Autoreparatur bezahlen müssen. Was meinst du: wie können wir günstig Urlaub machen? Es muss ja kein Luxushotel sein. Schreib mir bald, dann können wir anfangen zu planen. Viele Grüße Annika"
-    }
+   "instruction": "Antworten Sie Annika. Schreiben Sie etwas zu allen vier Punkten:",
+   "brief": {
+    "intro": "Sie haben von einer Freundin folgenden Brief erhalten:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Wie geht’s dir? Hattest du ein schönes Wochenende? Hier hat es die ganze Zeit geregnet, deshalb bin ich zuhause geblieben.",
+     "Du hattest vorgeschlagen, dass wir im Sommer zusammen verreisen könnten. Die Idee finde ich super! An welches Reiseziel denkst du? Ich bin gerne am Meer, mag aber auch Städterreisen. Wichtig ist für mich nur, dass ich auch ein bisschen Sport machen kann. Die Reise sollte aber nicht zu viel kosten, denn ich habe vor Kurzem schon viel für eine Autoreparatur bezahlen müssen. Was meinst du: wie können wir günstig Urlaub machen? Es muss ja kein Luxushotel sein. Schreib mir bald, dann können wir anfangen zu planen.",
+     "Viele Grüße"
+    ],
+    "signature": "Annika"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Annika. Schreiben Sie etwas zu allen vier Punkten:",
      "minWords": 100,
      "points": [
       "Was Sie am Wochenende unternommen haben",

@@ -1,6 +1,6 @@
 {
  "id": "modell-12",
- "title": "Modelltest 12",
+ "title": "ANDREAS2",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -477,24 +477,31 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Ein Bekannter hat Ihnen folgenden Brief geschrieben: Liebe(r)........ es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentliich viel am Computer? Lass doch mal wieder was von dir hören! Liebe Grüße und bis bald Andreas Betreff, eine passende Anrede, Einleitung und einen passendenSchluss."
-    }
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:",
+   "brief": {
+    "intro": "Ein Bekannter hat Ihnen folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentliich viel am Computer?",
+     "Lass doch mal wieder was von dir hören!",
+     "Liebe Grüße und bis bald"
+    ],
+    "signature": "Andreas"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben, überlegeen Sie sich eine passende Reihenfolge der punkte, eine passende"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:",
      "minWords": 100,
      "points": [
       "Ihre Erfahrungen mit dem Computer",
       "Etwas über Ihre Wohnung",
-      "Ob Sie Andreas besuchen möchten.",
-      "Was es bei Ihnen Neues gibt."
+      "Ob Sie Andreas besuchen möchten",
+      "Was es bei Ihnen Neues gibt"
      ]
     }
    ],

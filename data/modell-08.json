@@ -1,6 +1,6 @@
 {
  "id": "modell-08",
- "title": "Modelltest 8",
+ "title": "IRIS1",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -804,18 +804,26 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Eine Bekannte hat Ihnen den folgende E-Mail geschrieben: Liebe(r)........ endlich habe ich die Deutscheprüfung hinter mir. Ich glaube, es ist gut gelaufen. Jetzt soll für unseren Kurs eine Party organisieren. Du hast doch kürzlich erzählt, dass Du für Euren Kurs auch ein Abschlussfest organsiert hast. Sicher kannst du mir ein paar Tipps geben. Ich habe mir gedacht, wir könnten vielleicht in einem Restaurant feiern .Da kann jeder essen und trinken, was er will . Was meinst Du? Essen zu kochen ist doch ziemlich viel Arbeit. und natürlich brauchen wir Musik. Welche Musik ist am besten geeignet? Was schlägst Du vor? Melde Dich bald. Ich freue mich schon auf deine Antwort. Liebe Grüße Iris"
-    }
+   "instruction": "Antworten Sie Ihrer Bekannten. Schreiben Sie etwas zu allen vier Punkten: Reaktion auf die Prüfung",
+   "brief": {
+    "intro": "Eine Bekannte hat Ihnen den folgende E-Mail geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "endlich habe ich die Deutscheprüfung hinter mir. Ich glaube, es ist gut gelaufen. Jetzt soll für unseren Kurs eine Party organisieren. Du hast doch kürzlich erzählt, dass Du für Euren Kurs auch ein Abschlussfest organsiert hast. Sicher kannst du mir ein paar Tipps geben. Ich habe mir gedacht, wir könnten vielleicht in einem Restaurant feiern .Da kann jeder essen und trinken, was er will . Was meinst Du? Essen zu kochen ist doch ziemlich viel Arbeit. und natürlich brauchen wir Musik. Welche Musik ist am besten geeignet? Was schlägst Du vor?",
+     "Melde Dich bald.",
+     "Ich freue mich schon auf deine Antwort.",
+     "Liebe Grüße"
+    ],
+    "signature": "Iris"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Ihrer Bekannten. Schreiben Sie etwas zu allen vier Punkten: Reaktion auf die Prüfung",
      "minWords": 100,
      "points": [
       "Wo feiern? Restaurant- Ihre Meinung",

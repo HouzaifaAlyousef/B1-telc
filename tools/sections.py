@@ -303,24 +303,80 @@ def parse_sb1(rows, words, lo=21, hi=30):
 
 
 # ---------------- Schriftlicher Ausdruck ----------------
-def parse_sa(rows):
-    """رسالة + النقاط المطلوبة + الحد الأدنى للكلمات."""
-    rows = [(y, x, clean(t)) for y, x, t in rows if not is_noise(t)]
-    text = ' '.join(t for _, _, t in rows)
-    m = re.search(r'mindestens\s*(\d{2,3})\s*W', text)
-    min_words = int(m.group(1)) if m else 100
+GREETING = re.compile(r'^(Liebe|Lieber|Hallo|Sehr geehrte)', re.I)
+TASKLINE = re.compile(r'^(Schreiben|Antworten)\s+Sie\b', re.I)
+BULLET   = re.compile(r'^[.\u2022\u00b7\u2013-]\s*(.{4,})$')
+HINTLINE = re.compile(r'^(Bevor Sie|Überlegen Sie|Schreiben Sie mindestens)', re.I)
 
-    points, letter, in_points = [], [], False
-    for _, _, t in rows:
-        if re.match(r'^Antworten Sie|^Schreiben Sie etwas zu', t):
-            in_points = True
+
+def parse_sa(rows):
+    """رسالة + النقاط المطلوبة، مبنيّة متل النموذج الرسمي.
+
+    ترتيب الصفحة: سطر تمهيدي، خط منقّط، الرسالة (تحية + فقرات + اسم)،
+    سطر المهمة، النقاط المطلوبة، ملاحظات، والحد الأدنى للكلمات.
+
+    صيغ الخاتمة بتختلف كتير («Herzliche Grüße»، «Alles Liebe»،
+    «Hoffentlich bis bald»...)، فبدل ما نلاحقها منبلّش من النقاط المطلوبة
+    ومنرجع للورا: سطر المهمة قبلها، والاسم قبل سطر المهمة.
+    """
+    rs = [(y, x, clean(t)) for y, x, t in rows if not is_noise(t)]
+    rs = [(y, x, t) for y, x, t in rs if not DOTS_RE.match(t)]
+    if not rs:
+        return None
+    text = ' '.join(t for _, _, t in rs)
+
+    g = next((i for i, r in enumerate(rs) if GREETING.match(r[2])), -1)
+    b0 = next((i for i, r in enumerate(rs) if i > g and BULLET.match(r[2])), -1)
+    if g < 0 or b0 < 0:
+        return None
+
+    t0 = next((i for i in range(b0 - 1, g, -1) if TASKLINE.match(rs[i][2])), -1)
+    if t0 < 0:
+        return None
+    task = ' '.join(r[2] for r in rs[t0:b0])
+
+    sig = ''
+    end = t0                                    # آخر سطر بجسم الرسالة + ١
+    if t0 - 1 > g and len(rs[t0 - 1][2]) < 40:
+        sig = rs[t0 - 1][2]
+        end = t0 - 1
+
+    body = rs[g + 1:end]
+    base = min((x for _, x, _ in body), default=0)
+    paras, cur = [], []
+    for i, (_, x, t) in enumerate(body):
+        # سطر مزحزح لليمين = فقرة جديدة. والسطر القصير بآخر الرسالة (الخاتمة)
+        # بينحط لحاله — بس بشرط إنه السطر اللي قبله خلّص جملة، وإلا بيكون
+        # بقية سطر ملفوف (متل "traumhaft schön!") ولازم ينضم لفقرته.
+        starts_new = i == 0 or body[i - 1][2].rstrip().endswith(('.', '!', '?'))
+        tail = i >= len(body) - 3 and len(t) < 45 and starts_new
+        if cur and (x > base + 2 or tail):
+            paras.append(' '.join(cur))
+            cur = []
+        cur.append(t)
+        if tail:
+            paras.append(' '.join(cur))
+            cur = []
+    if cur:
+        paras.append(' '.join(cur))
+
+    points, hints = [], []
+    for _, _, t in rs[b0:]:
+        if HINTLINE.match(t):
+            hints.append(t)
             continue
-        if re.match(r'^(Bevor Sie|Schreiben Sie mindestens)', t):
-            in_points = False
-            continue
-        p = re.match(r'^[.\u2022\u00b7-]\s*(.{6,})$', t)
-        if in_points and p:
-            points.append(clean(p.group(1)))
-        elif not in_points and not re.match(r'^(Lesen|Markieren)', t):
-            letter.append(t)
-    return clean(' '.join(letter)), points, min_words
+        m = BULLET.match(t)
+        if m and not hints:
+            points.append(clean(m.group(1).rstrip(' .')))
+
+    m = re.search(r'mindestens\s*(\d{2,3})\s*W', text)
+    return {
+        'intro': clean(' '.join(r[2] for r in rs[:g])),
+        'greeting': rs[g][2],
+        'paragraphs': [p for p in paras if p],
+        'signature': sig,
+        'task': clean(task),
+        'points': points,
+        'hints': hints,
+        'minWords': int(m.group(1)) if m else 100,
+    }

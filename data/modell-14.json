@@ -1,6 +1,6 @@
 {
  "id": "modell-14",
- "title": "Modelltest 14",
+ "title": "TAMARA",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -728,18 +728,26 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Eine Freundin hat Ihnen den folgenden Brief geschrieben: Liebe(r)........ wie geht es Dir? Du hast mir schon so lange nicht mehr geschrieben, dass ich mir Sorgen mache. Hoffentlich isst bei Euch allles in Ordnung. Es wird wirklich Zeit, dass wir uns wiedersehen. Anfang des Jahres habe ich meinen Arbeitsplatz gewechselt. Meine neue Stelle ist sehr interessant, aber auch anstrengend. Ich bin nun beruflich sehr viel unterwegs. Demnächst muss ich auch in Eure Gegend reisen. Dann könnten wir uns doch einmal am Abend treffen und gemeinsam etwas unternehmen. Wie findest Du meine Idee? Ich würde auch sehr gerne Deine Familie kennenlernen. Bitte antworte mir bald! Herzliche Grüße Deine Tamara"
-    }
+   "instruction": "Antworten Sie Tamara. Schreiben Sie etwas zu allen vier Punkte:",
+   "brief": {
+    "intro": "Eine Freundin hat Ihnen den folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "wie geht es Dir? Du hast mir schon so lange nicht mehr geschrieben, dass ich mir Sorgen mache. Hoffentlich isst bei Euch allles in Ordnung. Es wird wirklich Zeit, dass wir uns wiedersehen. Anfang des Jahres habe ich meinen Arbeitsplatz gewechselt. Meine neue Stelle ist sehr interessant, aber auch anstrengend.",
+     "Ich bin nun beruflich sehr viel unterwegs. Demnächst muss ich auch in Eure Gegend reisen. Dann könnten wir uns doch einmal am Abend treffen und gemeinsam etwas unternehmen. Wie findest Du meine Idee? Ich würde auch sehr gerne Deine Familie kennenlernen.",
+     "Bitte antworte mir bald!",
+     "Herzliche Grüße"
+    ],
+    "signature": "Deine Tamara"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Tamara. Schreiben Sie etwas zu allen vier Punkte:",
      "minWords": 100,
      "points": [
       "Vorschlag zum Treffen",

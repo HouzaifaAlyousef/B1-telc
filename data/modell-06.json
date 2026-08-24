@@ -1,6 +1,6 @@
 {
  "id": "modell-06",
- "title": "Modelltest 6",
+ "title": "ANDREAS",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -842,23 +842,31 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben im Urlaub Andreas kennengelernt. Er hat Ihnen folgende E-Mail geschrieben: Liebe(r)........ Heute habe ich Zeit, dir ein paar Zeilen zu schreiben. Der Urlaub war so schön, aber seit ich zurück bin, habe ich im Büro sehr viel Arbeit. Bestimmt brauche ich schon bald wieder Urlaub! Während ich weg war, hat sich hier übrigens einiges geändert: Es gibt einen neuen Kollegen, er heißt Roberto. Was aber die größte Veränderung ist: Er arbeitet mit mir in meinem Büro, das heißt, ich habe endlich jemanden, mit dem ich mich Zwischendurch auch ein bisschen unterhalten kann! Roberrto ist aus Spanien hierher gezogen. Er kennt noch niemanden hier, außer mir natürlich, und ist meistens allein. Denkst du, dass ich ihn und ein paar andere Arbeitskollegen einmal einladen sollte? Was würdest du tun? Na gut, für heute muss ich Schluss machen. Melde dich doch bald einmal bei mir! Viele Grüße Andreas"
-    }
+   "instruction": "Antworten Sie Andreas. Schreiben Sie etwas zu allen vier Punkten: Vorschlag wie Andreas seinem Arbeitskollegen helfen kann.",
+   "brief": {
+    "intro": "Sie haben im Urlaub Andreas kennengelernt. Er hat Ihnen folgende E-Mail geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Heute habe ich Zeit, dir ein paar Zeilen zu schreiben. Der Urlaub war so schön, aber seit ich zurück bin, habe ich im Büro sehr viel Arbeit. Bestimmt brauche ich schon bald wieder Urlaub!",
+     "Während ich weg war, hat sich hier übrigens einiges geändert: Es gibt einen neuen Kollegen, er heißt Roberto. Was aber die größte Veränderung ist:",
+     "Er arbeitet mit mir in meinem Büro, das heißt, ich habe endlich jemanden, mit dem ich mich Zwischendurch auch ein bisschen unterhalten kann! Roberrto ist aus Spanien hierher gezogen. Er kennt noch niemanden hier, außer mir natürlich, und ist meistens allein. Denkst du, dass ich ihn und ein paar andere Arbeitskollegen einmal einladen sollte? Was würdest du tun? Na gut, für heute muss ich Schluss machen. Melde dich doch bald einmal bei mir!",
+     "Viele Grüße"
+    ],
+    "signature": "Andreas"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Andreas. Schreiben Sie etwas zu allen vier Punkten: Vorschlag wie Andreas seinem Arbeitskollegen helfen kann.",
      "minWords": 100,
      "points": [
-      "Wie Sie am liebsten arbeiten (alleine oder mit Kollegen).",
-      "Was Sie nach dem Urlaub gemacht haben.",
-      "Was es bei Ihnen Neues gibt."
+      "Wie Sie am liebsten arbeiten (alleine oder mit Kollegen)",
+      "Was Sie nach dem Urlaub gemacht haben",
+      "Was es bei Ihnen Neues gibt"
      ]
     }
    ],

@@ -1,6 +1,6 @@
 {
  "id": "modell-10",
- "title": "Modelltest 10",
+ "title": "VERA",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -804,23 +804,31 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Eine Freundin hat Ihnen den folgenden Brief geschrieben: Liebe(r)........ Wie geht es dir und deiner Familie? Bei mir läuft alles prima. Endlich habe ich eine neue Arbeitsstelle. Ich habe nur ein kleines Problem: Es ist ein bisschen zu weit, um zu Fuß zu gehen. Und der Bus fährt nur alle 30 Minuten. Früher bin ich meist mit dem Fahrrad gefahren, aber hier gibt es keine Fahrradwege. Und da ist ja auch noch mein Daniel, den ich morgens in den Kindergarten bringen muss. Der liegt zum Glück gleich neben meiner neuen Firma. – Wie kommst du denn zur Arbeit oder zum Deutschkurs? Wollen wir uns nicht mal wieder treffen und alle zusammen was unternehmen? Ich würde mich freuen. Liebe Grüße Vera"
-    }
+   "instruction": "Antworten Sie Vera. Schreiben Sie etwas zu allen vier Punkte:",
+   "brief": {
+    "intro": "Eine Freundin hat Ihnen den folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Wie geht es dir und deiner Familie? Bei mir läuft alles prima. Endlich habe ich eine neue Arbeitsstelle. Ich habe nur ein kleines Problem: Es ist ein bisschen zu weit, um zu Fuß zu gehen. Und der Bus fährt nur alle 30 Minuten. Früher bin ich meist mit dem Fahrrad gefahren, aber hier gibt es keine Fahrradwege. Und da ist ja auch noch mein Daniel, den ich morgens in den Kindergarten bringen muss.",
+     "Der liegt zum Glück gleich neben meiner neuen Firma. – Wie kommst du denn zur Arbeit oder zum Deutschkurs?",
+     "Wollen wir uns nicht mal wieder treffen und alle zusammen was unternehmen? Ich würde mich freuen.",
+     "Liebe Grüße"
+    ],
+    "signature": "Vera"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Vera. Schreiben Sie etwas zu allen vier Punkte:",
      "minWords": 100,
      "points": [
-      "Was es bei Ihnen Neues gibt .",
-      "Was Sie zur Arbeit kommen.",
-      "Was Sie über Veras neue Stelle wissen wollen .",
+      "Was es bei Ihnen Neues gibt",
+      "Was Sie zur Arbeit kommen",
+      "Was Sie über Veras neue Stelle wissen wollen",
       "Vorschlag für gemeinsame Unternehmung?"
      ]
     }

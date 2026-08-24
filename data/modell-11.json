@@ -1,6 +1,6 @@
 {
  "id": "modell-11",
- "title": "Modelltest 11",
+ "title": "JENNIFER",
  "blocks": [
   {
    "id": "block-lv-sb",
@@ -766,18 +766,25 @@
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben folgenden Brief von einer Freundin erhalten: Liebe(r)........ Entschuldige, dass ich mich erst jetzt wieder melde. Ich weiß, wir hatten ausgemacht, uns öfter mal zu schreiben. Aber es war so viel los in letzter Zeit. Ich habe eine Neuigkeit für dich: Meine kleine Schwester Janine heiratet im Oktober, und ich habe ihr versprochen, schon mal allen Freunden zu schreiben und Bescheid zu sagen. Die offizielle Einladung bekommst du natürlich noch von ihr direkt. Eddi, ihr zukünftiger Mann, ist echt nett, und wir mögen ihn alle sehr. Er ist koch und arbeitet hier in einem Hotel. Wir planen jetzt alles. Gib mir deshalb möglichst bald Bescheid, ob du kommst und mit wem. Herzliche Grüße Jennifer Einleitung und einen passendenSchluss. Vergessen Sie nicht DatumundAnrede."
-    }
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:",
+   "brief": {
+    "intro": "Sie haben folgenden Brief von einer Freundin erhalten:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Entschuldige, dass ich mich erst jetzt wieder melde. Ich weiß, wir hatten ausgemacht, uns öfter mal zu schreiben. Aber es war so viel los in letzter Zeit. Ich habe eine Neuigkeit für dich: Meine kleine Schwester Janine heiratet im Oktober, und ich habe ihr versprochen, schon mal allen Freunden zu schreiben und Bescheid zu sagen. Die offizielle Einladung bekommst du natürlich noch von ihr direkt. Eddi, ihr zukünftiger Mann, ist echt nett, und wir mögen ihn alle sehr. Er ist koch und arbeitet hier in einem Hotel.",
+     "Wir planen jetzt alles. Gib mir deshalb möglichst bald Bescheid, ob du kommst und mit wem.",
+     "Herzliche Grüße"
+    ],
+    "signature": "Jennifer"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben, überlegeen Sie sich eine passende Reihenfolge der punkte, eine passende"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:",
      "minWords": 100,
      "points": [
       "Reaktion auf Neuigkeit",
