@@ -66,3 +66,10 @@ python3 tools/build.py "Doku/B1 Telc.pdf" data
 | `wordbank`  | ملء فراغات من قائمة كلمات (`bank`)           |
 | `truefalse` | Richtig / Falsch                            |
 | `writing`   | تعبير كتابي مع نقاط مطلوبة وتقييم ذاتي       |
+
+## النشر على GitHub Pages
+Settings ← Pages ← Source: **Deploy from a branch** ← الفرع `main` والمجلد `/ (root)`.
+
+الملف `.nojekyll` بالجذر بيمنع GitHub من معالجة الموقع بـJekyll — التطبيق ملفات
+ثابتة جاهزة، فما بده معالجة، وبدون الملف Jekyll بيتجاهل أي ملف أو مجلد
+بيبلّش بشرطة سفلية.
