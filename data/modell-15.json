@@ -14,7 +14,9 @@
     "sb1",
     "sb2"
    ],
-   "maxPoints": 76.0
+   "maxPoints": 105.0,
+   "availablePoints": 76.0,
+   "missing": 12
   },
   {
    "id": "block-hv",
@@ -26,7 +28,9 @@
     "hv2",
     "hv3"
    ],
-   "maxPoints": 72.5
+   "maxPoints": 75.0,
+   "availablePoints": 72.5,
+   "missing": 1
   },
   {
    "id": "block-sa",
@@ -36,7 +40,9 @@
    "parts": [
     "sa"
    ],
-   "maxPoints": 45
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
   }
  ],
  "subtitle": "48 Aufgaben · 150 Minuten",
@@ -114,7 +120,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 20.0
+   "maxPoints": 25.0,
+   "availablePoints": 20.0,
+   "missing": 1
   },
   {
    "id": "lv2",
@@ -207,7 +215,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 20.0
+   "maxPoints": 25.0,
+   "availablePoints": 20.0,
+   "missing": 1
   },
   {
    "id": "lv3",
@@ -304,7 +314,9 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 15.0,
+   "maxPoints": 25.0,
+   "availablePoints": 15.0,
+   "missing": 4,
    "bankImage": "img/m15-lv3.jpg"
   },
   {
@@ -398,7 +410,9 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 6.0
+   "maxPoints": 15.0,
+   "availablePoints": 6.0,
+   "missing": 6
   },
   {
    "id": "sb2",
@@ -477,6 +491,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0,
    "bank": [
     {
      "key": "A",
@@ -576,7 +592,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 25.0
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
@@ -634,7 +652,9 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 22.5
+   "maxPoints": 25.0,
+   "availablePoints": 22.5,
+   "missing": 1
   },
   {
    "id": "hv3",
@@ -672,7 +692,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 25.0
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
@@ -738,7 +760,9 @@
     }
    ],
    "factor": 3,
-   "maxPoints": 45
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

@@ -12,6 +12,7 @@ const S = {
   modell: null,     // geöffneter Modelltest
   run: null,        // laufender Durchgang: ein Teil oder ein ganzer Prüfungsteil
   answers: {},      // { itemId: Antwort }
+  dropped: {},      // { itemId: [früher gewählte Buchstaben] } — werden durchgestrichen
   tick: null,       // Timer
   left: 0,          // verbleibende Sekunden
   view: 'home'
@@ -147,10 +148,13 @@ function screenModell(m){
       const parts = b.parts.map(part).filter(Boolean);
       const n = parts.reduce((a, p) => a + p.items.length, 0);
       const r = prog[b.id];
-      const badge = r
-        ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>`
-        : `<span class="pill">${b.minutes} Min.</span>`;
-      const sub = [b.hint, `${n} Aufgaben`, `${fmtP(b.maxPoints)} Punkte`]
+      const badge = `<span class="pills">
+        <span class="pill">${b.minutes} Min.</span>
+        ${r && r.points !== undefined
+          ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>`
+          : ''}</span>`;
+      const sub = [b.hint, `${n} Aufgaben`, `${fmtP(b.maxPoints)} Punkte`,
+                   b.missing ? `${b.missing} Aufgaben fehlen in der Vorlage` : '']
         .filter(Boolean).join(' · ');
       return `<button class="tile" data-block="${esc(b.id)}">
         <span class="grow"><span style="font-weight:600">${esc(b.title)}</span>
@@ -180,7 +184,8 @@ function blockRun(m, id){
   const b = m.blocks.find(x => x.id === id);
   const parts = b.parts.map(p => m.sections.find(s => s.id === p)).filter(Boolean);
   return { id: b.id, title: b.title, minutes: b.minutes, hint: b.hint,
-           maxPoints: b.maxPoints, parts };
+           maxPoints: b.maxPoints, availablePoints: b.availablePoints,
+           missing: b.missing, parts };
 }
 const runItems = run => run.parts.flatMap(p => p.items);
 
@@ -188,6 +193,7 @@ const runItems = run => run.parts.flatMap(p => p.items);
 function screenIntro(run){
   S.run = run;
   S.answers = {};
+  S.dropped = {};
   stopTimer();
   go('intro', () => {
     const n = runItems(run).length;
@@ -204,6 +210,10 @@ function screenIntro(run){
         <h2 style="margin-top:10px">${esc(run.title)}</h2>
         ${run.hint ? `<p class="sub" style="margin-bottom:14px">${esc(run.hint)}</p>` : ''}
         ${list}
+        ${run.missing ? `<div class="fb warn" style="margin-bottom:16px">
+          In diesem Modelltest fehlen ${run.missing} Aufgaben — sie sind in der
+          Vorlage abgeschnitten. Ihr Ergebnis wird auf die offiziellen
+          ${fmtP(run.maxPoints)} Punkte umgerechnet.</div>` : ''}
         ${notes.map(t => `<div class="fb warn" style="margin-bottom:16px">${esc(t)}</div>`).join('')}
         <div class="row" style="gap:24px;margin-bottom:16px">
           <div><div class="meta" style="color:var(--muted);font-size:13px">Aufgaben</div>
@@ -329,9 +339,18 @@ function bindInputs(sec){
   scope.querySelectorAll('[data-opt]').forEach(lb => {
     lb.onclick = () => {
       const [id, key] = lb.dataset.opt.split('|');
+      const before = S.answers[id];
+      if (before && before !== key){          // frühere Wahl durchstreichen
+        (S.dropped[id] ||= []).push(before);
+      }
+      S.dropped[id] = (S.dropped[id] || []).filter(k => k !== key);
       S.answers[id] = key;
-      lb.closest('.opts').querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
-      lb.classList.add('sel');
+      const box = lb.closest('.opts');
+      box.querySelectorAll('.opt').forEach(x => {
+        const k = x.dataset.opt.split('|')[1];
+        x.classList.toggle('sel', k === key);
+        x.classList.toggle('dropped', (S.dropped[id] || []).includes(k));
+      });
       updateProgress();
     };
   });
@@ -391,15 +410,18 @@ function finish(run, auto){
     if (run.parts.length === 1 && run.parts[0].format === 'writing')
       return screenWriting(run);
 
-    let points = 0, max = 0, right = 0, total = 0;
+    // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
+    // Damit alle Tests vergleichbar bleiben, wird das Ergebnis auf die
+    // offizielle Höchstpunktzahl umgerechnet.
+    let earned = 0, right = 0, total = 0;
     run.parts.forEach(p => {
       p.items.forEach(it => {
-        max += p.pointsPerItem; total++;
-        if (S.answers[it.id] === it.answer){ points += p.pointsPerItem; right++; }
+        total++;
+        if (S.answers[it.id] === it.answer){ earned += p.pointsPerItem; right++; }
       });
     });
-    points = Math.round(points * 10) / 10;
-    max = Math.round(max * 10) / 10;
+    const max = run.maxPoints;
+    const points = Math.round(earned / run.availablePoints * max * 10) / 10;
     screenResult(run, points, max, saveResult(run, points, max), right, total);
   };
 
@@ -436,7 +458,7 @@ function screenResult(run, points, max, pct, right, total){
   go('result', () => {
     const perPart = run.parts.map(p => {
       const ok = p.items.filter(it => S.answers[it.id] === it.answer).length;
-      const pts = Math.round(ok * p.pointsPerItem * 10) / 10;
+      const pts = Math.round(ok * p.pointsPerItem / p.availablePoints * p.maxPoints * 10) / 10;
       const head = run.parts.length > 1
         ? `<div class="partscore"><span class="grow">${esc(p.title)}</span>
              <span class="meta">${ok}/${p.items.length} richtig</span>

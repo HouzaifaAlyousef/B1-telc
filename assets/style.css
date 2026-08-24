@@ -269,3 +269,10 @@ textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
 .task ul{margin:0 0 12px; padding-inline-start:22px; display:grid; gap:6px}
 .task li{font-size:15px; font-weight:600}
 .task .hint{font-weight:400; font-size:14px; color:var(--muted); margin:0 0 6px}
+
+/* Zeit und Ergebnis nebeneinander auf der Kachel */
+.pills{display:flex; flex-direction:column; gap:6px; align-items:flex-end; flex:none}
+
+/* Früher gewählte Antwort: durchgestrichen */
+.opt.dropped{opacity:.55}
+.opt.dropped .k, .opt.dropped .grow{text-decoration:line-through}

@@ -14,7 +14,9 @@
     "sb1",
     "sb2"
    ],
-   "maxPoints": 84.0
+   "maxPoints": 105.0,
+   "availablePoints": 84.0,
+   "missing": 9
   },
   {
    "id": "block-hv",
@@ -26,7 +28,9 @@
     "hv2",
     "hv3"
    ],
-   "maxPoints": 75.0
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
   },
   {
    "id": "block-sa",
@@ -36,7 +40,9 @@
    "parts": [
     "sa"
    ],
-   "maxPoints": 45
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
   }
  ],
  "subtitle": "52 Aufgaben · 150 Minuten",
@@ -119,7 +125,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 25.0
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
@@ -212,7 +220,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 20.0
+   "maxPoints": 25.0,
+   "availablePoints": 20.0,
+   "missing": 1
   },
   {
    "id": "lv3",
@@ -309,7 +319,9 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 15.0,
+   "maxPoints": 25.0,
+   "availablePoints": 15.0,
+   "missing": 4,
    "bankImage": "img/m13-lv3.jpg"
   },
   {
@@ -441,7 +453,9 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 9.0
+   "maxPoints": 15.0,
+   "availablePoints": 9.0,
+   "missing": 4
   },
   {
    "id": "sb2",
@@ -581,7 +595,9 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",
@@ -619,7 +635,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 25.0
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
@@ -682,7 +700,9 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -720,7 +740,9 @@
     }
    ],
    "pointsPerItem": 5.0,
-   "maxPoints": 25.0
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
@@ -790,7 +812,9 @@
     }
    ],
    "factor": 3,
-   "maxPoints": 45
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

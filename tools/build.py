@@ -39,6 +39,11 @@ BLOCKS = [
 # مجموع الامتحان الكتابي ٢٢٥، والنجاح ٦٠٪ = ١٣٥ نقطة.
 POINTS = {'LV1': 5.0, 'LV2': 5.0, 'LV3': 2.5, 'SB1': 1.5, 'SB2': 1.5,
           'HV1': 5.0, 'HV2': 2.5, 'HV3': 5.0}
+# عدد الأسئلة الرسمي بكل جزء. بعض النماذج ناقصها أسئلة (مقصوصة من الـPDF)،
+# فمنحفظ الحدّ الرسمي والمتاح سوا، والتطبيق بيحوّل العلامة للسلّم الرسمي
+# تا تكون كل النماذج قابلة للمقارنة.
+COUNTS = {'LV1': 5, 'LV2': 5, 'LV3': 10, 'SB1': 10, 'SB2': 10,
+          'HV1': 5, 'HV2': 10, 'HV3': 5}
 
 # معايير تصحيح التعبير الكتابي (A=٥، B=٣، C=١، D=٠؛ المجموع × ٣ = ٤٥)
 SA_CRITERIA = [
@@ -208,9 +213,13 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         sec['grades'] = [{'key': k, 'points': p} for k, p in SA_GRADES]
         sec['factor'] = 3
         sec['maxPoints'] = len(SA_CRITERIA) * SA_GRADES[0][1] * 3
+        sec['availablePoints'] = sec['maxPoints']
+        sec['missing'] = 0
     else:
         sec['pointsPerItem'] = POINTS[kind]
-        sec['maxPoints'] = round(len(items) * POINTS[kind], 1)
+        sec['maxPoints'] = round(COUNTS[kind] * POINTS[kind], 1)      # رسمي
+        sec['availablePoints'] = round(len(items) * POINTS[kind], 1)  # المتاح فعلاً
+        sec['missing'] = COUNTS[kind] - len(items)
     return sec if items else None
 
 
@@ -301,9 +310,15 @@ def main():
                 mine = [p for p in parts if p in have]
                 if not mine:
                     continue
-                blocks.append({'id': bid, 'title': t, 'minutes': mins, 'hint': hint,
-                               'parts': mine,
-                               'maxPoints': round(sum(by_id[p]['maxPoints'] for p in mine), 1)})
+                official = {'block-lv-sb': 105.0, 'block-hv': 75.0, 'block-sa': 45.0}[bid]
+                blocks.append({
+                    'id': bid, 'title': t, 'minutes': mins, 'hint': hint,
+                    'parts': mine,
+                    'maxPoints': official,
+                    'availablePoints': round(sum(by_id[p]['availablePoints'] for p in mine), 1),
+                    'missing': sum(by_id[p]['missing'] for p in mine)
+                             + sum(COUNTS[k.upper()] for k, _, ps, _, _ in [(bid, t, parts, mins, hint)]
+                                   for k in ps if k not in mine and k != 'sa')})
 
             data = {'id': f'modell-{i:02d}', 'title': NAMES[i - 1],
                     'blocks': blocks,
