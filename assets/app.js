@@ -10,17 +10,34 @@ const elToast= document.getElementById('toast');
 const S = {
   index: null,      // Übersicht der Modelltests
   modell: null,     // geöffneter Modelltest
-  section: null,    // geöffneter Prüfungsteil
+  run: null,        // laufender Durchgang: ein Teil oder ein ganzer Prüfungsteil
   answers: {},      // { itemId: Antwort }
+  dropped: {},      // { itemId: [früher gewählte Buchstaben] } — werden durchgestrichen
   tick: null,       // Timer
   left: 0,          // verbleibende Sekunden
-  history: [],      // gespeicherte Ergebnisse
   view: 'home'
 };
 
 /* ============ Helfer ============ */
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const mmss = s => `${String(Math.floor(Math.max(0,s)/60)).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
+
+function ask(text, onYes, yes = 'Ja', no = 'Abbrechen'){
+  const back = document.createElement('div');
+  back.className = 'modalback';
+  back.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
+    <p>${esc(text)}</p>
+    <div class="modalbtns">
+      <button class="btn grey" data-no>${esc(no)}</button>
+      <button class="btn" data-yes>${esc(yes)}</button>
+    </div></div>`;
+  const close = () => back.remove();
+  back.querySelector('[data-no]').onclick = close;
+  back.querySelector('[data-yes]').onclick = () => { close(); onYes(); };
+  back.onclick = e => { if (e.target === back) close(); };
+  document.body.appendChild(back);
+  back.querySelector('[data-yes]').focus();
+}
 
 function toast(msg, ms = 2400){
   elToast.textContent = msg; elToast.hidden = false;
@@ -65,8 +82,10 @@ function go(view, fn){
   fn();
 }
 elBack.onclick = () => {
-  if (S.view === 'exam' || S.view === 'result'){
-    if (S.view === 'exam' && !confirm('Prüfung verlassen? Ihre Antworten gehen verloren.')) return;
+  if (S.view === 'exam'){
+    ask('Prüfung verlassen? Ihre Antworten gehen verloren.',
+        () => { stopTimer(); screenModell(S.modell); }, 'Verlassen');
+  } else if (S.view === 'result' || S.view === 'intro'){
     stopTimer();
     screenModell(S.modell);
   } else {
@@ -76,7 +95,6 @@ elBack.onclick = () => {
 
 /* ============ Startseite ============ */
 async function boot(){
-  S.history = load('b1.history', []);
   try {
     S.index = await (await fetch('data/index.json?v=' + Date.now())).json();
   } catch {
@@ -90,43 +108,22 @@ async function boot(){
 function screenHome(){
   stopTimer();
   go('home', () => {
-    const done = load('b1.progress', {});
-    const cards = S.index.modelle.map((m, i) => {
-      const p = done[m.id] || {};
-      const finished = Object.keys(p).length;
-      const meta = finished
-        ? `${finished} von ${m.sections} Teilen bearbeitet`
-        : `${m.sections} Teile · ${m.minutes} Minuten`;
-      return `<button class="tile" data-id="${esc(m.id)}">
+    const cards = S.index.modelle.map((m, i) => `
+      <button class="tile" data-id="${esc(m.id)}">
         <span class="n">${i + 1}</span>
         <span class="grow"><span style="font-weight:600">${esc(m.title)}</span>
-          <div class="meta">${esc(meta)}</div></span>
+          <div class="meta">${m.aufgaben} Aufgaben · ${m.minutes} Minuten</div></span>
         <span class="chev">›</span>
-      </button>`;
-    }).join('');
-
-    const last = S.history.slice(-3).reverse().map(h =>
-      `<div class="row" style="border-top:1px solid var(--line);padding-top:10px;margin-top:10px">
-        <span class="grow"><b>${esc(h.section)}</b>
-          <div class="meta" style="font-size:13px;color:var(--muted)">${esc(h.modell)} · ${esc(h.date)}</div></span>
-        <span class="pill ${h.pct >= 60 ? 'ok' : 'bad'}">${h.score}/${h.max}</span>
-      </div>`).join('');
+      </button>`).join('');
 
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
-      <p class="sub">Wählen Sie einen Modelltest und danach einen Prüfungsteil.
-        Der Timer startet, sobald Sie auf „Start“ tippen.</p>
-      ${cards}
-      ${last ? `<div class="card"><h3>Letzte Ergebnisse</h3>${last}
-        <button class="btn grey sm wide" id="clr" style="margin-top:12px">Verlauf löschen</button></div>` : ''}`;
+      <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die drei Prüfungsteile
+        der schriftlichen telc&nbsp;B1&nbsp;Prüfung — mit der echten Prüfungszeit.</p>
+      ${cards}`;
 
     app.querySelectorAll('.tile').forEach(b =>
       b.onclick = () => openModell(b.dataset.id));
-    const clr = document.getElementById('clr');
-    if (clr) clr.onclick = () => {
-      if (!confirm('Alle Ergebnisse und den Fortschritt löschen?')) return;
-      S.history = []; save('b1.history', []); save('b1.progress', {}); screenHome();
-    };
   });
 }
 
@@ -145,74 +142,144 @@ function screenModell(m){
   stopTimer();
   go('modell', () => {
     const prog = load('b1.progress', {})[m.id] || {};
-    const groups = {};
-    m.sections.forEach(s => { (groups[s.group] ||= []).push(s); });
+    const part = id => m.sections.find(s => s.id === id);
 
-    const html = Object.entries(groups).map(([g, list]) => `
-      <h3 style="margin:18px 0 8px">${esc(g)}</h3>
-      ${list.map(s => {
-        const r = prog[s.id];
-        const badge = r
-          ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${r.score}/${r.max}</span>`
-          : `<span class="pill">${s.minutes} Min.</span>`;
-        return `<button class="tile" data-sec="${esc(s.id)}">
-          <span class="grow"><span style="font-weight:600">${esc(s.title)}</span>
-            <div class="meta">${s.items.length} Aufgaben</div></span>
-          ${badge}
-        </button>`;
-      }).join('')}`).join('');
+    const blocks = m.blocks.map(b => {
+      const parts = b.parts.map(part).filter(Boolean);
+      const n = parts.reduce((a, p) => a + p.items.length, 0);
+      const r = prog[b.id];
+      const badge = `<span class="pills">
+        <span class="pill">${b.minutes} Min.</span>
+        ${r && r.points !== undefined
+          ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>`
+          : ''}</span>`;
+      const sub = [b.hint, `${n} Aufgaben`, `${fmtP(b.maxPoints)} Punkte`,
+                   b.missing ? `${b.missing} Aufgaben fehlen in der Vorlage` : '']
+        .filter(Boolean).join(' · ');
+      return `<button class="tile" data-block="${esc(b.id)}">
+        <span class="grow"><span style="font-weight:600">${esc(b.title)}</span>
+          <div class="meta">${esc(sub)}</div></span>
+        ${badge}
+      </button>`;
+    }).join('');
 
+    const total = m.blocks.reduce((a, b) => a + b.maxPoints, 0);
     app.innerHTML = `
       <h1>${esc(m.title)}</h1>
       <p class="sub">${esc(m.subtitle || '')}</p>
-      ${html}`;
+      ${blocks}
+      <p class="sub" style="margin-top:16px">Schriftliche Prüfung insgesamt
+        ${fmtP(total)} Punkte — bestanden ab ${fmtP(total * 0.6)} Punkten (60 %).</p>`;
 
-    app.querySelectorAll('[data-sec]').forEach(b =>
-      b.onclick = () => screenIntro(m.sections.find(s => s.id === b.dataset.sec)));
+    app.querySelectorAll('[data-block]').forEach(b =>
+      b.onclick = () => screenIntro(blockRun(m, b.dataset.block)));
   });
 }
 
-/* ============ Startbildschirm eines Teils ============ */
-function screenIntro(sec){
-  S.section = sec;
+/* Punkte kurz schreiben: 2.5 → "2,5", 25.0 → "25" */
+const fmtP = n => (Math.round(n * 10) / 10).toString().replace('.', ',');
+
+/* Ein Durchgang = Titel, Zeit, Punkte und die Teile, die dazugehören. */
+function blockRun(m, id){
+  const b = m.blocks.find(x => x.id === id);
+  const parts = b.parts.map(p => m.sections.find(s => s.id === p)).filter(Boolean);
+  return { id: b.id, title: b.title, minutes: b.minutes, hint: b.hint,
+           maxPoints: b.maxPoints, availablePoints: b.availablePoints,
+           missing: b.missing, parts };
+}
+const runItems = run => run.parts.flatMap(p => p.items);
+
+/* ============ Startbildschirm ============ */
+function screenIntro(run){
+  S.run = run;
   S.answers = {};
+  S.dropped = {};
   stopTimer();
   go('intro', () => {
+    const n = runItems(run).length;
+    const notes = [...new Set(run.parts.map(p => p.note).filter(Boolean))];
+    const list = run.parts.length > 1
+      ? `<ul class="partlist">${run.parts.map(p =>
+          `<li><span class="grow">${esc(p.title)}</span>
+             <span class="meta">${p.items.length} Aufgaben · ${fmtP(p.maxPoints)} P.</span></li>`).join('')}</ul>`
+      : `<div class="instr">${esc(run.parts[0].instruction)}</div>`;
+
     app.innerHTML = `
       <div class="card">
-        <span class="pill">${esc(sec.group)}</span>
-        <h2 style="margin-top:10px">${esc(sec.title)}</h2>
-        <div class="instr">${esc(sec.instruction)}</div>
-        ${sec.note ? `<div class="fb warn" style="margin-bottom:16px">${esc(sec.note)}</div>` : ''}
+        <span class="pill">Wie in der Prüfung</span>
+        <h2 style="margin-top:10px">${esc(run.title)}</h2>
+        ${run.hint ? `<p class="sub" style="margin-bottom:14px">${esc(run.hint)}</p>` : ''}
+        ${list}
+        ${run.missing ? `<div class="fb warn" style="margin-bottom:16px">
+          In diesem Modelltest fehlen ${run.missing} Aufgaben — sie sind in der
+          Vorlage abgeschnitten. Ihr Ergebnis wird auf die offiziellen
+          ${fmtP(run.maxPoints)} Punkte umgerechnet.</div>` : ''}
+        ${notes.map(t => `<div class="fb warn" style="margin-bottom:16px">${esc(t)}</div>`).join('')}
         <div class="row" style="gap:24px;margin-bottom:16px">
           <div><div class="meta" style="color:var(--muted);font-size:13px">Aufgaben</div>
-               <b style="font-size:18px">${sec.items.length}</b></div>
+               <b style="font-size:18px">${n}</b></div>
           <div><div class="meta" style="color:var(--muted);font-size:13px">Zeit</div>
-               <b style="font-size:18px">${sec.minutes} Minuten</b></div>
+               <b style="font-size:18px">${run.minutes} Minuten</b></div>
+          <div><div class="meta" style="color:var(--muted);font-size:13px">Punkte</div>
+               <b style="font-size:18px">${fmtP(run.maxPoints)}</b></div>
         </div>
         <button class="btn wide" id="start">Start ▶</button>
       </div>`;
-    document.getElementById('start').onclick = () => screenExam(sec);
+    document.getElementById('start').onclick = () => screenExam(run);
   });
 }
 
 /* ============ Prüfung ============ */
-function screenExam(sec){
+function screenExam(run){
   go('exam', () => {
-    app.innerHTML = renderPassages(sec) + renderBank(sec) +
-      `<div id="qs">${sec.items.map((it, i) => renderItem(sec, it, i)).join('')}</div>` +
+    const nav = run.parts.length > 1
+      ? `<nav class="partnav">${run.parts.map((p, i) =>
+          `<a href="#part-${esc(p.id)}">${esc(shortTitle(p.title))}</a>`).join('')}</nav>`
+      : '';
+
+    const body = run.parts.map(p => `
+      <section class="part" id="part-${esc(p.id)}">
+        ${run.parts.length > 1 ? `<h2 class="parthead">${esc(p.title)}</h2>
+          <div class="instr">${esc(p.instruction)}</div>` : ''}
+        ${renderPassages(p)}${renderBank(p)}
+        ${p.items.map(it => renderItem(p, it)).join('')}
+      </section>`).join('');
+
+    app.innerHTML = nav + body +
       `<div class="bottombar"><div class="inner">
-         <span class="progress" id="prog">0 / ${sec.items.length}</span>
+         <span class="progress" id="prog">0 / ${runItems(run).length}</span>
          <button class="btn grow" id="submit">Abgeben &amp; korrigieren</button>
        </div></div>`;
 
-    bindInputs(sec);
-    document.getElementById('submit').onclick = () => finish(sec, false);
-    startTimer(sec.minutes * 60, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(sec, true); });
+    run.parts.forEach(p => bindInputs(p));
+    document.getElementById('submit').onclick = () => finish(run, false);
+    startTimer(run.minutes * 60, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
   });
 }
 
+const shortTitle = t => t.replace('Leseverstehen', 'LV').replace('Sprachbausteine', 'SB')
+                         .replace('Hörverstehen', 'HV').replace(', Teil ', ' ');
+
+function renderBrief(sec){
+  const b = sec.brief, it = sec.items[0];
+  return `
+    ${b.intro ? `<p class="briefintro">${esc(b.intro)}</p>` : ''}
+    <div class="brief">
+      <p class="anrede">${esc(b.greeting)}</p>
+      ${b.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
+      ${b.signature ? `<p class="sig">${esc(b.signature)}</p>` : ''}
+    </div>
+    <div class="task">
+      <p>${esc(sec.instruction)}</p>
+      <ul>${it.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
+      ${(sec.hints || []).map(h => `<p class="hint">${esc(h)}</p>`).join('')}
+      ${(sec.hints || []).some(h => /mindestens/i.test(h)) ? ''
+        : `<p class="hint">Schreiben Sie mindestens ${it.minWords} Wörter.</p>`}
+    </div>`;
+}
+
 function renderPassages(sec){
+  if (sec.brief) return renderBrief(sec);
   if (!sec.passages || !sec.passages.length) return '';
   return sec.passages.map(p => `
     <div class="passage">
@@ -223,10 +290,13 @@ function renderPassages(sec){
 
 function renderBank(sec){
   if (sec.bankImage){
+    // Pfade in den JSON-Dateien sind relativ zum data-Ordner.
+    // In der Einzeldatei-Version steht hier schon eine data:-URI.
+    const src = sec.bankImage.startsWith('data:') ? sec.bankImage : 'data/' + sec.bankImage;
     return `<div class="bank"><h3>${esc(sec.bankTitle || 'Anzeigen')}</h3>
       <p class="sub" style="margin:0 0 10px">Zum Vergrößern auf das Bild tippen</p>
-      <a href="${esc(sec.bankImage)}" target="_blank" rel="noopener">
-        <img src="${esc(sec.bankImage)}" alt="Anzeigen" class="bankimg"></a></div>`;
+      <a href="${esc(src)}" target="_blank" rel="noopener">
+        <img src="${esc(src)}" alt="Anzeigen" class="bankimg"></a></div>`;
   }
   if (!sec.bank || !sec.bank.length) return '';
   return `<div class="bank"><h3>${esc(sec.bankTitle || 'Auswahl')}</h3>
@@ -234,11 +304,17 @@ function renderBank(sec){
       `<li><span class="k">${esc(o.key)}</span>${esc(o.text)}</li>`).join('')}</ul></div>`;
 }
 
-function renderItem(sec, it, i){
+function renderItem(sec, it){
   const head = `<div class="qhead"><span class="qnum">${esc(it.id)}</span>
     <span class="qtext grow">${esc(it.text)}</span></div>`;
   let body = '';
 
+  if (sec.format === 'writing'){
+    return `<div class="q" id="q_${esc(it.id)}">
+      <textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …"></textarea>
+      <div class="counter" id="wc_${esc(it.id)}">0 Wörter (mindestens ${it.minWords || 100})</div>
+    </div>`;
+  }
   if (sec.format === 'mc' || sec.format === 'truefalse'){
     const opts = sec.format === 'truefalse'
       ? [{ key: 'r', text: 'Richtig' }, { key: 'f', text: 'Falsch' }]
@@ -255,31 +331,59 @@ function renderItem(sec, it, i){
       ${sec.bank.map(o => `<option value="${esc(o.key)}">${esc(o.key)}${o.text ? ' — ' + esc(o.text).slice(0, 70) : ''}</option>`).join('')}
     </select>`;
   }
-  else if (sec.format === 'writing'){
-    body = `<textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …"></textarea>
-            <div class="counter" id="wc_${esc(it.id)}">0 Wörter (mindestens ${it.minWords || 100})</div>`;
-  }
-  return `<div class="q" id="q_${esc(it.id)}">${head}${body}<div class="fbslot"></div></div>`;
+  return `<div class="q" id="q_${esc(it.id)}">${head}${body}</div>`;
+}
+
+/* In Zuordnungsaufgaben passt jede Antwort nur einmal ("Jede Überschrift /
+   jedes Wort passt nur einmal"). Schon vergebene Antworten werden in den
+   anderen Aufgaben gesperrt. Ausnahme: X in Leseverstehen Teil 3 — das darf
+   mehrfach vorkommen, wenn zu einer Situation keine Anzeige passt. */
+function syncBank(sec){
+  if (sec.format !== 'matching' && sec.format !== 'wordbank') return;
+  const scope = document.getElementById('part-' + sec.id) || app;
+  const used = new Map();
+  sec.items.forEach(it => {
+    const v = S.answers[it.id];
+    if (v && v !== 'X') used.set(v, it.id);
+  });
+  scope.querySelectorAll('[data-sel]').forEach(sl => {
+    const id = sl.dataset.sel;
+    [...sl.options].forEach(o => {
+      if (o.value) o.disabled = used.has(o.value) && used.get(o.value) !== id;
+    });
+  });
 }
 
 function bindInputs(sec){
-  app.querySelectorAll('[data-opt]').forEach(lb => {
+  const scope = document.getElementById('part-' + sec.id) || app;
+  scope.querySelectorAll('[data-opt]').forEach(lb => {
     lb.onclick = () => {
       const [id, key] = lb.dataset.opt.split('|');
+      const before = S.answers[id];
+      if (before && before !== key){          // frühere Wahl durchstreichen
+        (S.dropped[id] ||= []).push(before);
+      }
+      S.dropped[id] = (S.dropped[id] || []).filter(k => k !== key);
       S.answers[id] = key;
-      lb.closest('.opts').querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
-      lb.classList.add('sel');
-      updateProgress(sec);
+      const box = lb.closest('.opts');
+      box.querySelectorAll('.opt').forEach(x => {
+        const k = x.dataset.opt.split('|')[1];
+        x.classList.toggle('sel', k === key);
+        x.classList.toggle('dropped', (S.dropped[id] || []).includes(k));
+      });
+      updateProgress();
     };
   });
-  app.querySelectorAll('[data-sel]').forEach(sl => {
+  scope.querySelectorAll('[data-sel]').forEach(sl => {
     sl.onchange = () => {
       const v = sl.value;
       if (v) S.answers[sl.dataset.sel] = v; else delete S.answers[sl.dataset.sel];
-      updateProgress(sec);
+      syncBank(sec);
+      updateProgress();
     };
   });
-  app.querySelectorAll('[data-txt]').forEach(ta => {
+  syncBank(sec);
+  scope.querySelectorAll('[data-txt]').forEach(ta => {
     ta.oninput = () => {
       const id = ta.dataset.txt;
       S.answers[id] = ta.value;
@@ -287,143 +391,190 @@ function bindInputs(sec){
       const c = document.getElementById('wc_' + id);
       const min = sec.items.find(x => x.id === id).minWords || 100;
       if (c){ c.textContent = `${n} Wörter (mindestens ${min})`; c.style.color = n >= min ? 'var(--ok)' : 'var(--muted)'; }
-      updateProgress(sec);
+      updateProgress();
     };
   });
 }
 
-function updateProgress(sec){
-  const n = sec.items.filter(it => {
-    const v = S.answers[it.id];
-    return v !== undefined && String(v).trim() !== '';
-  }).length;
+const answered = it => {
+  const v = S.answers[it.id];
+  return v !== undefined && String(v).trim() !== '';
+};
+
+function updateProgress(){
+  const items = runItems(S.run);
   const p = document.getElementById('prog');
-  if (p) p.textContent = `${n} / ${sec.items.length}`;
+  if (p) p.textContent = `${items.filter(answered).length} / ${items.length}`;
 }
 
 /* ============ Korrektur ============ */
-function finish(sec, auto){
-  if (!auto){
-    const missing = sec.items.length - sec.items.filter(it =>
-      S.answers[it.id] !== undefined && String(S.answers[it.id]).trim() !== '').length;
-    if (missing && !confirm(`${missing} Aufgabe(n) ohne Antwort. Trotzdem abgeben?`)) return;
-  }
-  stopTimer();
 
-  if (sec.format === 'writing') return screenWriting(sec);
-
-  let score = 0;
-  sec.items.forEach(it => { if (S.answers[it.id] === it.answer) score++; });
-  const max = sec.items.length;
-  const pct = Math.round(score / max * 100);
-
-  const prog = load('b1.progress', {});
-  (prog[S.modell.id] ||= {})[sec.id] = { score, max, pct };
-  save('b1.progress', prog);
-  S.history.push({
-    modell: S.modell.title, section: sec.title, score, max, pct,
-    date: new Date().toLocaleDateString('de-DE')
-  });
-  save('b1.history', S.history.slice(-50));
-
-  screenResult(sec, score, max, pct);
+/* Notenstufen laut telc: 90 / 80 / 70 / 60 % der Höchstpunktzahl. */
+function noteOf(pct){
+  if (pct >= 90) return 'sehr gut';
+  if (pct >= 80) return 'gut';
+  if (pct >= 70) return 'befriedigend';
+  if (pct >= 60) return 'ausreichend';
+  return 'nicht bestanden';
 }
 
-function screenResult(sec, score, max, pct){
-  go('result', () => {
-    const cls = pct >= 60 ? 'ok' : 'bad';
-    const verdict = pct >= 80 ? 'Sehr gut! 🎉'
-                  : pct >= 60 ? 'Bestanden ✅ — weiter üben!'
-                  : 'Noch nicht bestanden 💪';
+function saveResult(run, points, max){
+  const pct = Math.round(points / max * 100);
+  const prog = load('b1.progress', {});
+  (prog[S.modell.id] ||= {})[run.id] = { points, max, pct };
+  save('b1.progress', prog);
+  return pct;
+}
 
-    const corrections = sec.items.map(it => {
-      const mine = S.answers[it.id];
-      const ok = mine === it.answer;
-      const label = k => {
-        if (sec.format === 'truefalse') return k === 'r' ? 'Richtig' : k === 'f' ? 'Falsch' : '—';
-        if (sec.bank){ const o = sec.bank.find(x => x.key === k); return o ? (o.text ? `${k} — ${o.text}` : k) : '—'; }
-        const o = (it.options || []).find(x => x.key === k); return o ? `${k} — ${o.text}` : '—';
-      };
-      return `<div class="q ${ok ? 'isok' : 'isbad'}">
-        <div class="qhead"><span class="qnum">${esc(it.id)}</span>
-          <span class="qtext grow">${esc(it.text)}</span></div>
-        <div class="fb ${ok ? 'ok' : 'bad'}">
-          ${ok
-            ? '<b>✔ Richtig</b>'
-            : `<b>✘ Falsch</b>
+function finish(run, auto){
+  const go2 = () => {
+    stopTimer();
+    if (run.parts.length === 1 && run.parts[0].format === 'writing')
+      return screenWriting(run);
+
+    // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
+    // Damit alle Tests vergleichbar bleiben, wird das Ergebnis auf die
+    // offizielle Höchstpunktzahl umgerechnet.
+    let earned = 0, right = 0, total = 0;
+    run.parts.forEach(p => {
+      p.items.forEach(it => {
+        total++;
+        if (S.answers[it.id] === it.answer){ earned += p.pointsPerItem; right++; }
+      });
+    });
+    const max = run.maxPoints;
+    const points = Math.round(earned / run.availablePoints * max * 10) / 10;
+    screenResult(run, points, max, saveResult(run, points, max), right, total);
+  };
+
+  if (auto) return go2();
+  const missing = runItems(run).filter(it => !answered(it)).length;
+  if (!missing) return go2();
+  ask(`${missing} Aufgabe(n) ohne Antwort. Trotzdem abgeben?`, go2, 'Abgeben');
+}
+
+/* Antwort lesbar machen: "B — Bildband: Babys im Garten" */
+function answerLabel(sec, it, k){
+  if (!k) return 'keine Antwort';
+  if (sec.format === 'truefalse') return k === 'r' ? 'Richtig' : 'Falsch';
+  if (sec.bank){
+    const o = sec.bank.find(x => x.key === k);
+    return o ? (o.text ? `${k} — ${o.text}` : k) : '—';
+  }
+  const o = (it.options || []).find(x => x.key === k);
+  return o ? `${k} — ${o.text}` : '—';
+}
+
+function scoreCard(points, max, pct, extra){
+  const cls = pct >= 60 ? 'ok' : 'bad';
+  return `<div class="card score">
+    <div class="big" style="color:var(--${cls})">${fmtP(points)}<span style="font-size:26px;color:var(--muted)">/${fmtP(max)}</span></div>
+    <div class="pct">${pct} % · ${esc(noteOf(pct))}</div>
+    <div class="bar"><i class="${cls}" style="width:${pct}%"></i></div>
+    <div class="meta" style="color:var(--muted);font-size:13px">
+      bestanden ab ${fmtP(max * 0.6)} Punkten (60 %)${extra ? ' · ' + esc(extra) : ''}</div>
+  </div>`;
+}
+
+function screenResult(run, points, max, pct, right, total){
+  go('result', () => {
+    const perPart = run.parts.map(p => {
+      const ok = p.items.filter(it => S.answers[it.id] === it.answer).length;
+      const pts = Math.round(ok * p.pointsPerItem / p.availablePoints * p.maxPoints * 10) / 10;
+      const head = run.parts.length > 1
+        ? `<div class="partscore"><span class="grow">${esc(p.title)}</span>
+             <span class="meta">${ok}/${p.items.length} richtig</span>
+             <span class="pill ${pts / p.maxPoints >= 0.6 ? 'ok' : 'bad'}">${fmtP(pts)}/${fmtP(p.maxPoints)} P.</span>
+           </div>` : '';
+      const cards = p.items.map(it => {
+        const mine = S.answers[it.id];
+        const good = mine === it.answer;
+        return `<div class="q ${good ? 'isok' : 'isbad'}">
+          <div class="qhead"><span class="qnum">${esc(it.id)}</span>
+            <span class="qtext grow">${esc(it.text)}</span></div>
+          <div class="fb ${good ? 'ok' : 'bad'}">
+            ${good ? `<b>✔ Richtig · ${fmtP(p.pointsPerItem)} P.</b>` : `<b>✘ Falsch · 0 P.</b>
                <div class="fbrow"><span class="lbl">Ihre Antwort</span>
-                 <span class="val">${esc(mine ? label(mine) : 'keine Antwort')}</span></div>
+                 <span class="val">${esc(answerLabel(p, it, mine))}</span></div>
                <div class="fbrow"><span class="lbl">Lösung</span>
-                 <span class="val">${esc(label(it.answer))}</span></div>`}
-          ${it.explain ? `<div class="why">${esc(it.explain)}</div>` : ''}
-        </div>
-      </div>`;
+                 <span class="val">${esc(answerLabel(p, it, it.answer))}</span></div>`}
+            ${it.explain ? `<div class="why">${esc(it.explain)}</div>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+      return head + cards;
     }).join('');
 
-    app.innerHTML = `
-      <div class="card score">
-        <div class="big" style="color:var(--${cls})">${score}<span style="font-size:26px;color:var(--muted)">/${max}</span></div>
-        <div class="pct">${pct} % · ${esc(verdict)}</div>
-        <div class="bar"><i class="${cls}" style="width:${pct}%"></i></div>
-        <div class="meta" style="color:var(--muted);font-size:13px">Bestehensgrenze ca. 60 %</div>
-      </div>
-      <h2 style="margin:18px 0 10px">Korrektur</h2>
-      ${corrections}
+    app.innerHTML =
+      scoreCard(points, max, pct, `${right} von ${total} Aufgaben richtig`) +
+      `<h2 style="margin:18px 0 10px">Korrektur</h2>${perPart}
       <div class="bottombar"><div class="inner">
         <button class="btn ghost grow" id="again">Wiederholen</button>
-        <button class="btn grow" id="back">Andere Teile</button>
+        <button class="btn grow" id="back">Übersicht</button>
       </div></div>`;
 
-    document.getElementById('again').onclick = () => screenIntro(sec);
+    document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
   });
 }
 
-/* Schriftlicher Ausdruck: Selbstkontrolle über eine Checkliste */
-function screenWriting(sec){
+/* Schriftlicher Ausdruck: Selbstbewertung nach den drei telc Kriterien.
+   Jedes Kriterium A=5 / B=3 / C=1 / D=0, die Summe wird mit 3 multipliziert. */
+function screenWriting(run){
+  const sec = run.parts[0];
   const it = sec.items[0];
   const mine = (S.answers[it.id] || '').trim();
   const words = mine.split(/\s+/).filter(Boolean).length;
+  const grades = {};
 
   go('result', () => {
     app.innerHTML = `
       <div class="card">
         <h2>Ihr Text</h2>
-        <p class="sub">${words} Wörter</p>
+        <p class="sub">${words} Wörter${words < (it.minWords || 100)
+          ? ` — mindestens ${it.minWords || 100} verlangt` : ''}</p>
         <div class="passage" style="margin:0"><div class="body">${esc(mine || '(kein Text geschrieben)')}</div></div>
       </div>
       <div class="card">
-        <h2>Inhaltspunkte</h2>
-        <p class="sub">Haken Sie ab, was Sie wirklich geschrieben haben.</p>
-        ${it.points.map((p, i) => `<label class="opt" style="margin-bottom:8px">
-          <input type="checkbox" class="chk" data-i="${i}">
-          <span class="grow">${esc(p)}</span>
-        </label>`).join('')}
-        <div class="fb ok" id="wres" style="display:none"></div>
-        <button class="btn wide" id="calc" style="margin-top:12px">Ergebnis berechnen</button>
+        <h2>Aufgabe</h2>
+        ${renderBrief(sec)}
+      </div>
+      <div class="card">
+        <h2>Bewertung</h2>
+        <p class="sub">Bewerten Sie jedes Kriterium selbst — so wie telc bewertet.</p>
+        ${sec.criteria.map((c, i) => `
+          <div class="crit">
+            <h3>${esc(c.title)}</h3>
+            <p class="sub" style="margin:0 0 8px">${esc(c.hint)}</p>
+            <div class="opts inline">${sec.grades.map(g =>
+              `<label class="opt" data-crit="${i}|${esc(g.key)}">
+                 <input type="radio" name="crit${i}" value="${esc(g.key)}">
+                 <span class="k">${esc(g.key)}</span>
+                 <span class="grow">${g.points} P.</span>
+               </label>`).join('')}</div>
+          </div>`).join('')}
+        <div id="wres"></div>
       </div>
       <div class="bottombar"><div class="inner">
         <button class="btn ghost grow" id="again">Wiederholen</button>
-        <button class="btn grow" id="back">Andere Teile</button>
+        <button class="btn grow" id="back">Übersicht</button>
       </div></div>`;
 
-    document.getElementById('calc').onclick = () => {
-      const chks = [...app.querySelectorAll('.chk')];
-      const done = chks.filter(c => c.checked).length;
-      const long = words >= (it.minWords || 100);
-      const box = document.getElementById('wres');
-      box.style.display = 'block';
-      box.className = 'fb ' + (done === chks.length && long ? 'ok' : 'bad');
-      box.innerHTML = `${done} von ${chks.length} Inhaltspunkten bearbeitet.` +
-        (long ? ' Die Textlänge ist ausreichend ✔'
-              : ` Der Text ist zu kurz (${words} Wörter, mindestens ${it.minWords || 100}) ✘`);
+    app.querySelectorAll('[data-crit]').forEach(lb => {
+      lb.onclick = () => {
+        const [i, key] = lb.dataset.crit.split('|');
+        grades[i] = sec.grades.find(g => g.key === key).points;
+        lb.closest('.opts').querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
+        lb.classList.add('sel');
+        if (Object.keys(grades).length < sec.criteria.length) return;
 
-      const score = done + (long ? 1 : 0), max = chks.length + 1;
-      const prog = load('b1.progress', {});
-      (prog[S.modell.id] ||= {})[sec.id] = { score, max, pct: Math.round(score / max * 100) };
-      save('b1.progress', prog);
-    };
-    document.getElementById('again').onclick = () => screenIntro(sec);
+        const points = Object.values(grades).reduce((a, b) => a + b, 0) * sec.factor;
+        const pct = saveResult(run, points, sec.maxPoints);
+        document.getElementById('wres').innerHTML =
+          scoreCard(points, sec.maxPoints, pct, '');
+      };
+    });
+    document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
   });
 }

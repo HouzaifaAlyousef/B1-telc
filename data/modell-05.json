@@ -1,13 +1,57 @@
 {
  "id": "modell-05",
- "title": "Modelltest 5",
- "subtitle": "58 Aufgaben · 8 Prüfungsteile",
+ "title": "NICOLE",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 102.0,
+   "missing": 2
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "59 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -79,13 +123,17 @@
      "text": "Geschäfte über das Internet werden in Deutschland auch in Zukunft Milliarden Euro einbringen. In spätestens zwei Jahren werden 20 Prozent aller europäischen Geschäfte über das Internet abgewickelt, sagen die Fachleute. Heutzutage ist es kaum vorstellbar, dass ein Unternehmen allein mit klassischen Verkaufsmethoden und ohne zusätzliches Online- Marketing erfolgreich sein wird. Wer heute nicht anfängt, diese Möglichkeiten zu nutzen, kann in Zukunft seine Kunden verlieren. Das Argument, dass die angebotene Ware sich ja auch ohne Internet gut verkaufe, stimmt so nicht mehr. Denn das Internet beeinflusst auch das Käuferverhalten auf der Straße.",
      "answer": "F"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -189,7 +237,11 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -305,13 +357,17 @@
      "answer": "H"
     }
    ],
-   "bankImage": "img/m05-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bankImage": "img/m05-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -472,7 +528,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 12.0,
+   "missing": 2
   },
   {
    "id": "sb2",
@@ -610,7 +670,11 @@
      "answer": "M",
      "explain": "Das Wort lautet: UNTER"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",
@@ -646,13 +710,17 @@
      "text": "Die Sprecherin hätte gerne mehr Zeit für die Kultur.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -707,7 +775,11 @@
      "text": "Auf der Klassenfahrt darf nur mit Erlaubnis der Eltern geraucht werden.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -743,7 +815,81 @@
      "text": "Die Polizei informiert, dass alle Parkhäuser bei der Ausstellung besetzt sind.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:",
+   "brief": {
+    "intro": "Eine Freundin beschreibt in einem Brief, welche Probleme sie mit ihrem Bruder hat und bittet Sie um Rat:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "entschuldige, dass ich dir so lange nicht mehr geschrieben habe. Aber weißt du mein älterer Bruder, der schon lange im Ausland lebt, ist jetzt für zwei Monate bei uns. Wir unternehmen einiges zusammen, Z.B. gehen wir nachmittags ins Schwimmbad oder abends ins Kino.",
+     "Wir verstehen uns eigentlich ganz gut, aber dennoch habe ich ein Problem mit ihm: Wenn es im Fernsehen Sportsendungen gibt, dann bekomme ich ihn nicht mehr weg vom Fernseher! Er sitzt dann stundenlang nur da und sieht fern, ganz egal wie schön das Wetter draußen ist! Was soll ich bloß tun? Überhaupt nichts sagen oder soll ich mit ihm deswegen streiten? Er fährt bald wieder weg und ich möchte doch mit ihm zusammen sein. Was würdest du machen? Hast du vielleicht ein paar Tipps oder Ratschläge für mich?",
+     "Herzliche Grüße"
+    ],
+    "signature": "Nicole"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben ,überlegeen Sie sich eine passende Reihenfolge der punkte, eine passende"
+   ],
+   "format": "writing",
+   "items": [
+    {
+     "id": "A",
+     "text": "Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:",
+     "minWords": 100,
+     "points": [
+      "Eigene Erfahrungen mit Geschwistern, Freunden,",
+      "Tipps für Nicole",
+      "Was Sie über den Bruder denken",
+      "Was Sie selbst gern gemeinsam mit anderen macchen"
+     ]
+    }
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

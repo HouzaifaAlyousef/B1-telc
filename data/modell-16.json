@@ -1,13 +1,57 @@
 {
  "id": "modell-16",
- "title": "Modelltest 16",
- "subtitle": "45 Aufgaben · 9 Prüfungsteile",
+ "title": "VIKTOR",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 76.0,
+   "missing": 13
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 62.5,
+   "missing": 3
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "45 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -75,13 +119,17 @@
      "text": "Sie sind in der Schweiz zu einem Fest eingeladen aber auf der Einladung steht nur die Adresse? Kein Problem, auch ohne Auto: Seit einiger Zeit hat er Internet Fahrplan der Schweizerischen Bundesbahnen(www.sbb.ch) einen großen Brüder. Bis jetzt konnte man nur Verbindungen von Bahnhöfen zu Bahnhöfen oder Haltstellen zu abfragen. Neuerdings ist das auch für den",
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -166,7 +214,11 @@
      ],
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 20.0,
+   "missing": 1
   },
   {
    "id": "lv3",
@@ -252,13 +304,17 @@
      "answer": "C"
     }
    ],
-   "bankImage": "img/m16-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 10.0,
+   "missing": 6,
+   "bankImage": "img/m16-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -343,7 +399,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 6.0,
+   "missing": 6
   },
   {
    "id": "sb2",
@@ -420,6 +480,10 @@
      "explain": "Das Wort lautet: AUF"
     }
    ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0,
    "bank": [
     {
      "key": "A",
@@ -517,13 +581,17 @@
      "text": "Der Sprecher hätte auch gern ein Handy.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -573,7 +641,11 @@
      "text": "Frau Imbach möchte, dass die Freie Filmbühne umzieht.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 22.5,
+   "missing": 1
   },
   {
    "id": "hv3",
@@ -599,25 +671,33 @@
      "text": "Der Zug nach Wein fährt heute von einem anderen Bahnsteig ab.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 15.0,
+   "missing": 2
   },
   {
    "id": "sa",
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
+   "instruction": "Antworten Sie auf diesen Brief. Schreiben Sie in Ihrem Brief etwas zu den folgenden vier Punkten:",
+   "brief": {
+    "intro": "LAANGUAGE Tests Ihr Freund hat Ihnen folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "ich sende dir sonnige Grüße von der wunderschöne Insel Malta Katja, die Kinder und ich sind ganz glücklich! Strand, Kultur. Sport- all das ist hier möglich! Gestern haben wir uns sogar ein Auto gemietet und einen Ausflug gemacht. Und auch für mein Hobby. Das Fotografieren, habe ich sehr viel Zeit, ich habe schon ganz viele Fotos gemacht. Ich schicke dir mit diesem Brief auch ein Buch über Malta, damit du siehst wie interessant dieses Land ist. Hoffentlich gefällt dir das Buch. Leider ist unser Urlaub auch schon in wenigen Tagen vorbei. Wie wäre das - vielleicht können wir uns ja wieder einmal treffen?",
+     "Bis hoffentlich bald"
+    ],
+    "signature": "Viktor"
+   },
+   "hints": [],
    "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "LAANGUAGE Tests Ihr Freund hat Ihnen folgenden Brief geschrieben: Liebe(r)........ ich sende dir sonnige Grüße von der wunderschöne Insel Malta Katja, die Kinder und ich sind ganz glücklich! Strand, Kultur. Sport- all das ist hier möglich! Gestern haben wir uns sogar ein Auto gemietet und einen Ausflug gemacht. Und auch für mein Hobby. Das Fotografieren, habe ich sehr viel Zeit, ich habe schon ganz viele Fotos gemacht. Ich schicke dir mit diesem Brief auch ein Buch über Malta, damit du siehst wie interessant dieses Land ist. Hoffentlich gefällt dir das Buch. Leider ist unser Urlaub auch schon in wenigen Tagen vorbei. Wie wäre das - vielleicht können wir uns ja wieder einmal treffen? Bis hoffentlich bald Viktor"
-    }
-   ],
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie auf diesen Brief. Schreiben Sie in Ihrem Brief etwas zu den folgenden vier Punkten:",
      "minWords": 100,
      "points": [
       "Ihre Hobbys",
@@ -626,7 +706,43 @@
       "Treffen mit Viktor"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

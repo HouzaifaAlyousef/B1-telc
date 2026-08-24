@@ -1,13 +1,57 @@
 {
  "id": "modell-06",
- "title": "Modelltest 6",
- "subtitle": "61 Aufgaben · 9 Prüfungsteile",
+ "title": "ANDREAS",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 105.0,
+   "missing": 0
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -79,13 +123,17 @@
      "text": "Das Statistische Bundesamt berichtet, dass in deutschen Schulen allgemein wieder mehr Latein gelernt wird. Allein in Thüringen hat sich die Anzahl in den letzten beiden Jahren verdoppelt Während der Tiefpunkt bei Latein im vorletzten Jahr erreicht war, wählen zurzeit wieder mehr Schüler Latein als erste Fremdsprache. Als vorteilhaft hat sich offenbar vor allem das wittenbergische Modell erwiesen, das Latein in der fünften Klasse mit einer modernen Fremdsprache (Französisch, Englisch usw.) kombiniert Allerdinges sind hier meist nur drei Stunden für beide Sprachen pro Woche vorgesehen. Das sei bei Weitem zu wenig, Kritisieren Lateinlehrer Weitem zu wenig kritisieren Lateinlehrer.",
      "answer": "G"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -189,7 +237,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -305,13 +357,17 @@
      "answer": "A"
     }
    ],
-   "bankImage": "img/m06-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bankImage": "img/m06-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -510,7 +566,11 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -648,7 +708,11 @@
      "answer": "B",
      "explain": "Das Wort lautet: GEEIGNET"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",
@@ -684,13 +748,17 @@
      "text": "Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -745,7 +813,11 @@
      "text": "Frau Reiter möchte später Lokführer und Lokführerinnen ausbilden",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -781,33 +853,81 @@
      "text": "Das Wetter ist am Abend noch gut.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben im Urlaub Andreas kennengelernt. Er hat Ihnen folgende E-Mail geschrieben: Liebe(r)........ Heute habe ich Zeit, dir ein paar Zeilen zu schreiben. Der Urlaub war so schön, aber seit ich zurück bin, habe ich im Büro sehr viel Arbeit. Bestimmt brauche ich schon bald wieder Urlaub! Während ich weg war, hat sich hier übrigens einiges geändert: Es gibt einen neuen Kollegen, er heißt Roberto. Was aber die größte Veränderung ist: Er arbeitet mit mir in meinem Büro, das heißt, ich habe endlich jemanden, mit dem ich mich Zwischendurch auch ein bisschen unterhalten kann! Roberrto ist aus Spanien hierher gezogen. Er kennt noch niemanden hier, außer mir natürlich, und ist meistens allein. Denkst du, dass ich ihn und ein paar andere Arbeitskollegen einmal einladen sollte? Was würdest du tun? Na gut, für heute muss ich Schluss machen. Melde dich doch bald einmal bei mir! Viele Grüße Andreas"
-    }
+   "instruction": "Antworten Sie Andreas. Schreiben Sie etwas zu allen vier Punkten: Vorschlag wie Andreas seinem Arbeitskollegen helfen kann.",
+   "brief": {
+    "intro": "Sie haben im Urlaub Andreas kennengelernt. Er hat Ihnen folgende E-Mail geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Heute habe ich Zeit, dir ein paar Zeilen zu schreiben. Der Urlaub war so schön, aber seit ich zurück bin, habe ich im Büro sehr viel Arbeit. Bestimmt brauche ich schon bald wieder Urlaub!",
+     "Während ich weg war, hat sich hier übrigens einiges geändert: Es gibt einen neuen Kollegen, er heißt Roberto. Was aber die größte Veränderung ist:",
+     "Er arbeitet mit mir in meinem Büro, das heißt, ich habe endlich jemanden, mit dem ich mich Zwischendurch auch ein bisschen unterhalten kann! Roberrto ist aus Spanien hierher gezogen. Er kennt noch niemanden hier, außer mir natürlich, und ist meistens allein. Denkst du, dass ich ihn und ein paar andere Arbeitskollegen einmal einladen sollte? Was würdest du tun? Na gut, für heute muss ich Schluss machen. Melde dich doch bald einmal bei mir!",
+     "Viele Grüße"
+    ],
+    "signature": "Andreas"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Andreas. Schreiben Sie etwas zu allen vier Punkten: Vorschlag wie Andreas seinem Arbeitskollegen helfen kann.",
      "minWords": 100,
      "points": [
-      "Wie Sie am liebsten arbeiten (alleine oder mit Kollegen).",
-      "Was Sie nach dem Urlaub gemacht haben.",
-      "Was es bei Ihnen Neues gibt."
+      "Wie Sie am liebsten arbeiten (alleine oder mit Kollegen)",
+      "Was Sie nach dem Urlaub gemacht haben",
+      "Was es bei Ihnen Neues gibt"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

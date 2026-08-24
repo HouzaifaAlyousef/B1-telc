@@ -1,13 +1,57 @@
 {
  "id": "modell-10",
- "title": "Modelltest 10",
- "subtitle": "59 Aufgaben · 9 Prüfungsteile",
+ "title": "VERA",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 102.0,
+   "missing": 2
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "59 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -79,13 +123,17 @@
      "text": "Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeeben. Wir empfehlen unseren Gästen, bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.",
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -189,7 +237,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -305,13 +357,17 @@
      "answer": "H"
     }
    ],
-   "bankImage": "img/m10-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bankImage": "img/m10-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -472,7 +528,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 12.0,
+   "missing": 2
   },
   {
    "id": "sb2",
@@ -610,7 +670,11 @@
      "answer": "C",
      "explain": "Das Wort lautet: EINMAL"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",
@@ -646,13 +710,17 @@
      "text": "Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -707,7 +775,11 @@
      "text": "Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -743,34 +815,82 @@
      "text": "Am besten fahren Sie ab Northeim mit dem Bus.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Eine Freundin hat Ihnen den folgenden Brief geschrieben: Liebe(r)........ Wie geht es dir und deiner Familie? Bei mir läuft alles prima. Endlich habe ich eine neue Arbeitsstelle. Ich habe nur ein kleines Problem: Es ist ein bisschen zu weit, um zu Fuß zu gehen. Und der Bus fährt nur alle 30 Minuten. Früher bin ich meist mit dem Fahrrad gefahren, aber hier gibt es keine Fahrradwege. Und da ist ja auch noch mein Daniel, den ich morgens in den Kindergarten bringen muss. Der liegt zum Glück gleich neben meiner neuen Firma. – Wie kommst du denn zur Arbeit oder zum Deutschkurs? Wollen wir uns nicht mal wieder treffen und alle zusammen was unternehmen? Ich würde mich freuen. Liebe Grüße Vera"
-    }
+   "instruction": "Antworten Sie Vera. Schreiben Sie etwas zu allen vier Punkte:",
+   "brief": {
+    "intro": "Eine Freundin hat Ihnen den folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "Wie geht es dir und deiner Familie? Bei mir läuft alles prima. Endlich habe ich eine neue Arbeitsstelle. Ich habe nur ein kleines Problem: Es ist ein bisschen zu weit, um zu Fuß zu gehen. Und der Bus fährt nur alle 30 Minuten. Früher bin ich meist mit dem Fahrrad gefahren, aber hier gibt es keine Fahrradwege. Und da ist ja auch noch mein Daniel, den ich morgens in den Kindergarten bringen muss.",
+     "Der liegt zum Glück gleich neben meiner neuen Firma. – Wie kommst du denn zur Arbeit oder zum Deutschkurs?",
+     "Wollen wir uns nicht mal wieder treffen und alle zusammen was unternehmen? Ich würde mich freuen.",
+     "Liebe Grüße"
+    ],
+    "signature": "Vera"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Vera. Schreiben Sie etwas zu allen vier Punkte:",
      "minWords": 100,
      "points": [
-      "Was es bei Ihnen Neues gibt .",
-      "Was Sie zur Arbeit kommen.",
-      "Was Sie über Veras neue Stelle wissen wollen .",
+      "Was es bei Ihnen Neues gibt",
+      "Was Sie zur Arbeit kommen",
+      "Was Sie über Veras neue Stelle wissen wollen",
       "Vorschlag für gemeinsame Unternehmung?"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

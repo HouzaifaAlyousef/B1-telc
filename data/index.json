@@ -3,114 +3,130 @@
   {
    "id": "modell-01",
    "file": "modell-01.json",
-   "title": "Modelltest 1",
+   "title": "PETRA",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 61,
+   "minutes": 150
   },
   {
    "id": "modell-02",
    "file": "modell-02.json",
-   "title": "Modelltest 2",
-   "sections": 8,
-   "minutes": 123
+   "title": "EVA1",
+   "sections": 9,
+   "aufgaben": 61,
+   "minutes": 150
   },
   {
    "id": "modell-03",
    "file": "modell-03.json",
-   "title": "Modelltest 3",
+   "title": "SOPHIE",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 58,
+   "minutes": 150
   },
   {
    "id": "modell-04",
    "file": "modell-04.json",
-   "title": "Modelltest 4",
+   "title": "NADIA2",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 61,
+   "minutes": 150
   },
   {
    "id": "modell-05",
    "file": "modell-05.json",
-   "title": "Modelltest 5",
-   "sections": 8,
-   "minutes": 123
+   "title": "NICOLE",
+   "sections": 9,
+   "aufgaben": 59,
+   "minutes": 150
   },
   {
    "id": "modell-06",
    "file": "modell-06.json",
-   "title": "Modelltest 6",
+   "title": "ANDREAS",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 61,
+   "minutes": 150
   },
   {
    "id": "modell-07",
    "file": "modell-07.json",
-   "title": "Modelltest 7",
+   "title": "ANNIKA3",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 61,
+   "minutes": 150
   },
   {
    "id": "modell-08",
    "file": "modell-08.json",
-   "title": "Modelltest 8",
+   "title": "IRIS1",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 59,
+   "minutes": 150
   },
   {
    "id": "modell-09",
    "file": "modell-09.json",
-   "title": "Modelltest 9",
+   "title": "CAROLINA",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 60,
+   "minutes": 150
   },
   {
    "id": "modell-10",
    "file": "modell-10.json",
-   "title": "Modelltest 10",
+   "title": "VERA",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 59,
+   "minutes": 150
   },
   {
    "id": "modell-11",
    "file": "modell-11.json",
-   "title": "Modelltest 11",
+   "title": "JENNIFER",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 57,
+   "minutes": 150
   },
   {
    "id": "modell-12",
    "file": "modell-12.json",
-   "title": "Modelltest 12",
+   "title": "ANDREAS2",
    "sections": 6,
-   "minutes": 105
+   "aufgaben": 40,
+   "minutes": 150
   },
   {
    "id": "modell-13",
    "file": "modell-13.json",
-   "title": "Modelltest 13",
+   "title": "THOMAS",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 52,
+   "minutes": 150
   },
   {
    "id": "modell-14",
    "file": "modell-14.json",
-   "title": "Modelltest 14",
+   "title": "TAMARA",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 50,
+   "minutes": 150
   },
   {
    "id": "modell-15",
    "file": "modell-15.json",
-   "title": "Modelltest 15",
+   "title": "JAN",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 48,
+   "minutes": 150
   },
   {
    "id": "modell-16",
    "file": "modell-16.json",
-   "title": "Modelltest 16",
+   "title": "VIKTOR",
    "sections": 9,
-   "minutes": 153
+   "aufgaben": 45,
+   "minutes": 150
   }
  ]
 }

@@ -5,14 +5,23 @@
   --warn:#b7791f; --warn-soft:#fdf3e0;
   --radius:14px; --shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px rgba(16,24,40,.06);
 }
+/* الوضع الليلي: مرة حسب إعداد النظام (إلا إذا المستخدم اختار فاتح صراحةً)،
+   ومرة حسب اختياره الصريح — تا يشتغل بالحالتين */
 @media (prefers-color-scheme: dark){
-  :root{
+  :root:not([data-theme="light"]){
     --bg:#0f1520; --card:#182233; --ink:#e9eef7; --muted:#98a4bb;
     --line:#28344a; --brand:#5b8dff; --brand-dark:#7ba3ff; --brand-soft:#1c2b46;
     --ok:#43c795; --ok-soft:#122c24; --bad:#ff7d95; --bad-soft:#331a21;
     --warn:#e0b25e; --warn-soft:#31280f;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
   }
+}
+:root[data-theme="dark"]{
+    --bg:#0f1520; --card:#182233; --ink:#e9eef7; --muted:#98a4bb;
+    --line:#28344a; --brand:#5b8dff; --brand-dark:#7ba3ff; --brand-soft:#1c2b46;
+    --ok:#43c795; --ok-soft:#122c24; --bad:#ff7d95; --bad-soft:#331a21;
+    --warn:#e0b25e; --warn-soft:#31280f;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -199,3 +208,74 @@ textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
   width:100%; height:auto; border-radius:10px; border:1px solid var(--line);
   background:#fff; display:block;
 }
+
+/* Gruppen auf der Modelltest-Seite */
+.grouphead{margin:22px 0 2px; font-size:17px}
+.grouphead + .sub{margin-bottom:10px}
+
+/* Teile-Liste auf dem Startbildschirm eines Prüfungsteils */
+.partlist{list-style:none; margin:0 0 16px; padding:0; display:grid; gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:10px; overflow:hidden}
+.partlist li{display:flex; gap:12px; align-items:baseline;
+  background:var(--card); padding:10px 14px; font-size:15px}
+.partlist .meta{color:var(--muted); font-size:13px; white-space:nowrap}
+
+/* Sprungleiste zwischen den Teilen einer Prüfung */
+.partnav{position:sticky; top:53px; z-index:20; display:flex; gap:8px; overflow-x:auto;
+  padding:10px 0; margin:-4px 0 10px; background:var(--bg);
+  -webkit-overflow-scrolling:touch; scrollbar-width:none}
+.partnav::-webkit-scrollbar{display:none}
+.partnav a{flex:none; text-decoration:none; font-size:13.5px; font-weight:600;
+  color:var(--brand-dark); background:var(--brand-soft);
+  padding:6px 13px; border-radius:999px; white-space:nowrap}
+.partnav a:hover{filter:brightness(.95)}
+
+/* Überschrift eines Teils innerhalb einer laufenden Prüfung */
+.part{scroll-margin-top:110px}
+.part + .part{margin-top:34px; border-top:2px solid var(--line); padding-top:22px}
+.parthead{font-size:18px; margin:0 0 10px; color:var(--brand-dark)}
+
+/* Teil-Ergebnis in der Korrektur */
+.partscore{display:flex; gap:12px; align-items:center; margin:22px 0 10px;
+  font-weight:600; font-size:15.5px}
+
+/* Nachfrage-Fenster (das eingebaute confirm() ist im eingebetteten Rahmen blockiert) */
+.modalback{position:fixed; inset:0; z-index:100; display:grid; place-items:center;
+  background:rgba(9,14,24,.55); padding:24px}
+.modal{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:20px; max-width:380px; width:100%}
+.modal p{margin:0 0 18px; font-size:16px}
+.modalbtns{display:flex; gap:10px}
+.modalbtns .btn{flex:1}
+
+/* Ein Bewertungskriterium im Schriftlichen Ausdruck */
+.crit + .crit{margin-top:18px; border-top:1px solid var(--line); padding-top:16px}
+.crit h3{margin:0 0 2px; font-size:16px}
+.crit .opts.inline{grid-template-columns:repeat(4, 1fr)}
+.crit .opt{flex-direction:column; gap:2px; text-align:center; padding:8px 4px; font-size:13px}
+.crit .opt input{display:none}
+.crit .opt .k{font-size:16px}
+
+/* Schriftlicher Ausdruck: Aufbau wie im Prüfungsheft */
+.briefintro{margin:0 0 12px; font-size:15px}
+.brief{border:2px solid var(--warn); border-radius:10px; padding:16px 18px;
+  background:var(--card); margin-bottom:18px}
+.brief p{margin:0 0 10px; line-height:1.75; font-size:15px}
+.brief p:last-child{margin-bottom:0}
+.brief .anrede{font-weight:600}
+.brief .sig{font-weight:600; margin-top:14px}
+.task{margin-bottom:18px}
+.task > p{margin:0 0 10px; font-size:15px; font-weight:600}
+.task ul{margin:0 0 12px; padding-inline-start:22px; display:grid; gap:6px}
+.task li{font-size:15px; font-weight:600}
+.task .hint{font-weight:400; font-size:14px; color:var(--muted); margin:0 0 6px}
+
+/* Zeit und Ergebnis nebeneinander auf der Kachel */
+.pills{display:flex; flex-direction:column; gap:6px; align-items:flex-end; flex:none}
+
+/* Früher gewählte Antwort: durchgestrichen */
+.opt.dropped{opacity:.55}
+.opt.dropped .k, .opt.dropped .grow{text-decoration:line-through}
+
+/* Schon vergebene Zuordnung: im Auswahlfeld gesperrt */
+select option:disabled{color:var(--muted)}

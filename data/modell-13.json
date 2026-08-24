@@ -1,13 +1,57 @@
 {
  "id": "modell-13",
- "title": "Modelltest 13",
- "subtitle": "52 Aufgaben · 9 Prüfungsteile",
+ "title": "THOMAS",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 84.0,
+   "missing": 9
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "52 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -79,13 +123,17 @@
      "text": "Ob für die traditionelle Familie oder für Alleinerziehende: Der Verein für Familienherbergen in Gelsenkirchenbietet schonseit Jahrenpreisgünstige Ferien Über 1100 Zimmer und",
      "answer": "C"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -170,7 +218,11 @@
      ],
      "answer": "A"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 20.0,
+   "missing": 1
   },
   {
    "id": "lv3",
@@ -266,13 +318,17 @@
      "answer": "K"
     }
    ],
-   "bankImage": "img/m13-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 15.0,
+   "missing": 4,
+   "bankImage": "img/m13-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -395,7 +451,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 9.0,
+   "missing": 4
   },
   {
    "id": "sb2",
@@ -533,7 +593,11 @@
      "answer": "N",
      "explain": "Das Wort lautet: WÄREN"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",
@@ -569,13 +633,17 @@
      "text": "Der Sprecher möchte, dass sein Kind die eigenen Ideen realisieren kann.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -630,7 +698,11 @@
      "text": "Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -666,25 +738,38 @@
      "text": "Die Großmutter kann heute nicht kommen.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben von Ihnen Freund folgende E-Mail erhalten: Liebe(r)........ nach unserm schönen, gemeinsamen Erlebnis letztes Jahr möchte ich auch dieses Jahr wieder einen Ausflug für uns alle organisieren. Ich hoffe sehr, dass ihr Zeit habt und mitkommen könnt - ich freue mich schon jetzt, euch alle bald wieder zu sehen! Das Dumme ist nur, dass ich mir vor drei Wochen beim Basketball das Bein gebrochen habe und noch nicht so gut zu Fuß bin. Deshalb habe ich einen gemütlichen Ausflug mit Bus und Schiff geplant - hoffentlich ist dann auch das Wetter gut für die Schiffsfahrt! Wohin es geht, möchte ich euch aber noch nicht verraten - das soll eine Überraschung werden. Termin: übernächster Samstag. Zeit und Treffpunkt: 9:30 Uhr bei mir. Bitte schreibt mir doch, ob ihr beim Ausflug dabei sein könnt! Hoffentlich bis bald. Thomas"
-    }
+   "instruction": "Antworten Sie Thomas. Schreiben Sie etwas zu allen vier Punkten:",
+   "brief": {
+    "intro": "Sie haben von Ihnen Freund folgende E-Mail erhalten:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "nach unserm schönen, gemeinsamen Erlebnis letztes Jahr möchte ich auch dieses Jahr wieder einen Ausflug für uns alle organisieren. Ich hoffe sehr, dass ihr Zeit habt und mitkommen könnt - ich freue mich schon jetzt, euch alle bald wieder zu sehen! Das Dumme ist nur, dass ich mir vor drei Wochen beim Basketball das Bein gebrochen habe und noch nicht so gut zu Fuß bin. Deshalb habe ich einen gemütlichen Ausflug mit Bus und Schiff geplant - hoffentlich ist dann auch das Wetter gut für die Schiffsfahrt! Wohin es geht, möchte ich euch aber noch nicht verraten - das soll eine Überraschung werden.",
+     "Termin: übernächster Samstag.",
+     "Zeit und Treffpunkt: 9:30 Uhr bei mir.",
+     "Bitte schreibt mir doch, ob ihr beim Ausflug dabei sein könnt!",
+     "Hoffentlich bis bald."
+    ],
+    "signature": "Thomas"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Thomas. Schreiben Sie etwas zu allen vier Punkten:",
      "minWords": 100,
      "points": [
       "Alternativvorschlag für Schlechtes Wetter",
@@ -693,7 +778,43 @@
       "Auf Sportunfall reagieren"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

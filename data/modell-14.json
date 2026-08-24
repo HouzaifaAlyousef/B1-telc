@@ -1,13 +1,57 @@
 {
  "id": "modell-14",
- "title": "Modelltest 14",
- "subtitle": "50 Aufgaben · 9 Prüfungsteile",
+ "title": "TAMARA",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 81.0,
+   "missing": 11
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "50 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -79,13 +123,17 @@
      "text": "Wir wollen dir bei der Berufswahl helfen: Die deutsche Bahn, ein Unternehmen mit Zukunft. Viele Berufe ändern sich im Laufe der Zeit. Genauso wie die Interessen im Leben. Und trotzdem gibt es Neigungen und Fähigkeiten, die du lange Zeit in deinem Leben behalten wirst. So zum Beispiel die Freude am Kontakt mit Menschen. Oder die Begeisterung für fremde Sprachen. Oder das Arbeiten in der freien Natur und im Team. Oder das Interesse an Technik und die Freude am Handwerk. Je nachdem, wofür du dich interessierst, kannst du bei der Deutschen Bahn aus insgesamt 15 Lehrberufen wählen. Um die richttige Entscheidung zu",
      "answer": "E"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -170,7 +218,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 20.0,
+   "missing": 1
   },
   {
    "id": "lv3",
@@ -266,13 +318,17 @@
      "answer": "G"
     }
    ],
-   "bankImage": "img/m14-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 15.0,
+   "missing": 4,
+   "bankImage": "img/m14-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -414,7 +470,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 10.5,
+   "missing": 3
   },
   {
    "id": "sb2",
@@ -534,7 +594,11 @@
      "answer": "N",
      "explain": "Das Wort lautet: AUF"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 10.5,
+   "missing": 3
   },
   {
    "id": "hv1",
@@ -570,13 +634,17 @@
      "text": "Der Sprecher hat den Urlaub mit den Eltern gemeinsam geplant.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -631,7 +699,11 @@
      "text": "Nach Meinung von Herrn Schütz haben jüngere Taxifahrer weniger Angst, nachts zu an.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -667,25 +739,37 @@
      "text": "Katrin hätte am Dreiundzwanzigsten Zeit.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Eine Freundin hat Ihnen den folgenden Brief geschrieben: Liebe(r)........ wie geht es Dir? Du hast mir schon so lange nicht mehr geschrieben, dass ich mir Sorgen mache. Hoffentlich isst bei Euch allles in Ordnung. Es wird wirklich Zeit, dass wir uns wiedersehen. Anfang des Jahres habe ich meinen Arbeitsplatz gewechselt. Meine neue Stelle ist sehr interessant, aber auch anstrengend. Ich bin nun beruflich sehr viel unterwegs. Demnächst muss ich auch in Eure Gegend reisen. Dann könnten wir uns doch einmal am Abend treffen und gemeinsam etwas unternehmen. Wie findest Du meine Idee? Ich würde auch sehr gerne Deine Familie kennenlernen. Bitte antworte mir bald! Herzliche Grüße Deine Tamara"
-    }
+   "instruction": "Antworten Sie Tamara. Schreiben Sie etwas zu allen vier Punkte:",
+   "brief": {
+    "intro": "Eine Freundin hat Ihnen den folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "wie geht es Dir? Du hast mir schon so lange nicht mehr geschrieben, dass ich mir Sorgen mache. Hoffentlich isst bei Euch allles in Ordnung. Es wird wirklich Zeit, dass wir uns wiedersehen. Anfang des Jahres habe ich meinen Arbeitsplatz gewechselt. Meine neue Stelle ist sehr interessant, aber auch anstrengend.",
+     "Ich bin nun beruflich sehr viel unterwegs. Demnächst muss ich auch in Eure Gegend reisen. Dann könnten wir uns doch einmal am Abend treffen und gemeinsam etwas unternehmen. Wie findest Du meine Idee? Ich würde auch sehr gerne Deine Familie kennenlernen.",
+     "Bitte antworte mir bald!",
+     "Herzliche Grüße"
+    ],
+    "signature": "Deine Tamara"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie Tamara. Schreiben Sie etwas zu allen vier Punkte:",
      "minWords": 100,
      "points": [
       "Vorschlag zum Treffen",
@@ -694,7 +778,43 @@
       "Warum Sie nicht geschrieben haben"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }

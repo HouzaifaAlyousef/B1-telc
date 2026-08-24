@@ -1,13 +1,57 @@
 {
  "id": "modell-04",
- "title": "Modelltest 4",
- "subtitle": "61 Aufgaben · 9 Prüfungsteile",
+ "title": "NADIA2",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 105.0,
+   "missing": 0
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ],
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 1",
-   "minutes": 20,
+   "minutes": 15,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
    "bankTitle": "Überschriften",
    "format": "matching",
@@ -79,13 +123,17 @@
      "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus.",
      "answer": "I"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
    "group": "Leseverstehen",
    "title": "Leseverstehen, Teil 2",
-   "minutes": 25,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -189,7 +237,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -305,13 +357,17 @@
      "answer": "L"
     }
    ],
-   "bankImage": "img/m04-lv3.png"
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bankImage": "img/m04-lv3.jpg"
   },
   {
    "id": "sb1",
    "group": "Sprachbausteine",
    "title": "Sprachbausteine, Teil 1",
-   "minutes": 15,
+   "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
    "format": "mc",
    "passages": [
@@ -510,7 +566,11 @@
      ],
      "answer": "B"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -648,7 +708,11 @@
      "answer": "G",
      "explain": "Das Wort lautet: PAAR"
     }
-   ]
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",
@@ -684,13 +748,17 @@
      "text": "Die Sprecherin versteht sich sehr gut mit ihrem Bruder.",
      "answer": "r"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv2",
    "group": "Hörverstehen",
    "title": "Hörverstehen, Teil 2",
-   "minutes": 12,
+   "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
    "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
@@ -745,7 +813,11 @@
      "text": "Auf der Klassenfahrt darf nur mit Erlaubnis der Eltern geraucht werden.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -781,25 +853,36 @@
      "text": "Im Untergeschoss gibt es Winterkleidung zum halben Preis.",
      "answer": "f"
     }
-   ]
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",
    "group": "Schriftlicher Ausdruck",
    "title": "Schriftlicher Ausdruck",
    "minutes": 30,
-   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu allen Inhaltspunkten. Denken Sie an Datum, Anrede, Einleitung und Schluss.",
-   "format": "writing",
-   "passages": [
-    {
-     "title": "Brief",
-     "body": "Sie haben von einer Freundin folgenden Brief erhalten: Liebe(r)........ ich hoffe, dir geht’s gut. stell dir vor, bei mir gibt es Neuigkeiten Du weißt doch, dass wir schon lange von einem Garten geträumt haben. Jetzt haben wir endlich einen am Stadtrand gefunden. Da er sehr groß ist. Wollte ich dich fragen, ob du nicht Lust hast den Garten mit uns zu teilen. Die Miete ist gar nicht so hoch . Du könntest dort Salat und Gemüse anpflanzen, natürlich auch Blumen ganz wie du willst. Es gibt auch Obstbäume und eine große Wiese, auf der man sich einfach hinlegen, und wir könnten im Garten auch grillen. Was denkst du? Wäre das nicht toll. Antworte mir bald. Alles Liebe Deine Nadja"
-    }
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:",
+   "brief": {
+    "intro": "Sie haben von einer Freundin folgenden Brief erhalten:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "ich hoffe, dir geht’s gut. stell dir vor, bei mir gibt es Neuigkeiten Du weißt doch, dass wir schon lange von einem Garten geträumt haben. Jetzt haben wir endlich einen am Stadtrand gefunden. Da er sehr groß ist. Wollte ich dich fragen, ob du nicht Lust hast den Garten mit uns zu teilen. Die Miete ist gar nicht so hoch . Du könntest dort Salat und Gemüse anpflanzen, natürlich auch Blumen ganz wie du willst. Es gibt auch Obstbäume und eine große Wiese, auf der man sich einfach hinlegen, und wir könnten im Garten auch grillen. Was denkst du? Wäre das nicht toll.",
+     "Antworte mir bald.",
+     "Alles Liebe"
+    ],
+    "signature": "Deine Nadja"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
    ],
+   "format": "writing",
    "items": [
     {
      "id": "A",
-     "text": "Antworten Sie auf diesen Brief.",
+     "text": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:",
      "minWords": 100,
      "points": [
       "Reaktion auf den Vorschlag",
@@ -808,7 +891,43 @@
       "Was es bei Ihnen Neues gibt"
      ]
     }
-   ]
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
   }
  ]
 }
