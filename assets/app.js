@@ -307,12 +307,32 @@ function screenExam(run, resumeLeft){
 
     run.parts.forEach(p => bindInputs(p));
     updateProgress();
+    markCurrentPart();
     document.getElementById('submit').onclick = () => finish(run, false);
     document.getElementById('pause').onclick = () => pauseExam(run);
     startTimer(resumeLeft || run.minutes * 60,
                () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
   });
 }
+
+/* Der Teil, in dem man gerade liest, wird in der Sprungleiste markiert.
+   Ein einziger Zuhörer fürs Scrollen, der nichts tut, wenn keine Leiste da ist. */
+function markCurrentPart(){
+  const links = [...document.querySelectorAll('.partnav a')];
+  if (!links.length) return;
+  const line = 130;                    // knapp unter Kopf- und Sprungleiste
+  let cur = 0;
+  links.forEach((a, i) => {
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el && el.getBoundingClientRect().top <= line) cur = i;
+  });
+  links.forEach((a, i) => a.classList.toggle('active', i === cur));
+}
+
+let markRaf = 0;
+addEventListener('scroll', () => {
+  if (!markRaf) markRaf = requestAnimationFrame(() => { markRaf = 0; markCurrentPart(); });
+}, { passive: true });
 
 const shortTitle = t => t.replace('Leseverstehen', 'LV').replace('Sprachbausteine', 'SB')
                          .replace('Hörverstehen', 'HV').replace(', Teil ', ' ');
