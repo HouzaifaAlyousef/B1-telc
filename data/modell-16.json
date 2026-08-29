@@ -581,6 +581,68 @@
      ]
     }
    ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "AUF"
+    },
+    {
+     "key": "B",
+     "text": "DAFÜR"
+    },
+    {
+     "key": "C",
+     "text": "DARÜBER"
+    },
+    {
+     "key": "D",
+     "text": "HÄTTE"
+    },
+    {
+     "key": "E",
+     "text": "KANN"
+    },
+    {
+     "key": "F",
+     "text": "KÖNNEN"
+    },
+    {
+     "key": "G",
+     "text": "MÖCHTE"
+    },
+    {
+     "key": "H",
+     "text": "SEHR"
+    },
+    {
+     "key": "I",
+     "text": "SEIT"
+    },
+    {
+     "key": "J",
+     "text": "SPRECHEN"
+    },
+    {
+     "key": "K",
+     "text": "VOR"
+    },
+    {
+     "key": "L",
+     "text": "WENIG"
+    },
+    {
+     "key": "M",
+     "text": "WIE"
+    },
+    {
+     "key": "N",
+     "text": "WIE VIELE"
+    },
+    {
+     "key": "O",
+     "text": "WISSEN"
+    }
+   ],
    "items": [
     {
      "id": "31",
@@ -646,69 +708,7 @@
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
    "availablePoints": 15.0,
-   "missing": 0,
-   "bank": [
-    {
-     "key": "A",
-     "text": "AUF"
-    },
-    {
-     "key": "B",
-     "text": "DAFÜR"
-    },
-    {
-     "key": "C",
-     "text": "DARÜBER"
-    },
-    {
-     "key": "D",
-     "text": "HÄTTE"
-    },
-    {
-     "key": "E",
-     "text": "KANN"
-    },
-    {
-     "key": "F",
-     "text": "KÖNNEN"
-    },
-    {
-     "key": "G",
-     "text": "MÖCHTE"
-    },
-    {
-     "key": "H",
-     "text": "SEHR"
-    },
-    {
-     "key": "I",
-     "text": "SEIT"
-    },
-    {
-     "key": "J",
-     "text": "SPRECHEN"
-    },
-    {
-     "key": "K",
-     "text": "VOR"
-    },
-    {
-     "key": "L",
-     "text": "WENIG"
-    },
-    {
-     "key": "M",
-     "text": "WIE"
-    },
-    {
-     "key": "N",
-     "text": "WIE VIELE"
-    },
-    {
-     "key": "O",
-     "text": "WISSEN"
-    }
-   ]
+   "missing": 0
   },
   {
    "id": "hv1",

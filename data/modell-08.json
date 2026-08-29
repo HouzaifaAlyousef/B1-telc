@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 102.0,
-   "missing": 2
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "59 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -603,7 +603,7 @@
      "options": [
       {
        "key": "A",
-       "text": "am meisten 29."
+       "text": "am meisten"
       },
       {
        "key": "B",
@@ -636,6 +636,44 @@
      "answer": "B"
     },
     {
+     "id": "28",
+     "text": "… Platz (27) existiert? Leider habe ich noch keine Ahnung, (28) ich in Berlin ankommen werde. Jedenfalls (29) ich …",
+     "options": [
+      {
+       "key": "A",
+       "text": "als"
+      },
+      {
+       "key": "B",
+       "text": "wann"
+      },
+      {
+       "key": "C",
+       "text": "wenn"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "29",
+     "text": "… Ahnung, (28) ich in Berlin ankommen werde. Jedenfalls (29) ich versuchen, eine Mitfahrgelegenheit zu finden. Es gibt …",
+     "options": [
+      {
+       "key": "A",
+       "text": "darf"
+      },
+      {
+       "key": "B",
+       "text": "soll"
+      },
+      {
+       "key": "C",
+       "text": "will"
+      }
+     ],
+     "answer": "C"
+    },
+    {
      "id": "30",
      "text": "… zu finden. Es gibt ja im Internet die Mitfahrzentrale, (30) so etwas organisiert. Also mache dir keine Sorgen, wenn …",
      "options": [
@@ -657,8 +695,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 12.0,
-   "missing": 2
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",

@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 102.0,
-   "missing": 2
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "59 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -533,6 +533,21 @@
      "answer": "C"
     },
     {
+     "id": "23",
+     "text": "… gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mein"
+      },
+      {
+       "key": "B",
+       "text": "meinem"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "24",
      "text": "… mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich …",
      "options": [
@@ -569,6 +584,21 @@
       }
      ],
      "answer": "C"
+    },
+    {
+     "id": "26",
+     "text": "… (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "aber"
+      },
+      {
+       "key": "B",
+       "text": "obwohl"
+      }
+     ],
+     "answer": "B"
     },
     {
      "id": "27",
@@ -649,8 +679,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 12.0,
-   "missing": 2
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",

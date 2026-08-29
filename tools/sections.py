@@ -112,14 +112,23 @@ def windows(rows, lo, hi, tol=15.0):
     رقم السؤال ممكن يكون بنفس سطر النص أو بسطر لحاله فوقه/تحته بشوي نقاط،
     فمنقسّم حسب الارتفاع: السؤال n بياخد كل شي بين علامته وعلامة n+1.
     """
-    marks = []
+    # بعض الصفحات مصوّرة مرتين بالملف، فبتتكرر نفس الأرقام. منجمع كل
+    # سلسلة أرقام صاعدة لحالها، ومناخد أطول سلسلة (وإذا تساووا، الأخيرة).
+    runs = [[]]
     for y, x, t, *_ in rows:
         m = NUM_RE.match(clean(t))
         if not m:
             continue
         n = int(m.group(1))
-        if lo <= n <= hi and (not marks or n > marks[-1][0]):
-            marks.append((n, y))
+        if not lo <= n <= hi:
+            continue
+        if runs[-1] and n <= runs[-1][-1][0]:
+            runs.append([])
+        runs[-1].append((n, y))
+    marks = max(runs, key=len)
+    for r in runs:                      # عند التساوي: الأخيرة
+        if len(r) == len(marks):
+            marks = r
     if not marks:
         return {}
 
@@ -312,6 +321,19 @@ def parse_sb1(rows, words, lo=21, hi=30):
     الخيارات (A/B/C) أحياناً مو موجودة بطبقة النص، فمنعتمد على الترتيب
     العمودي: أول نص = A، والتاني = B، والتالت = C.
     """
+    # رقم الفراغ أحياناً بينلزق بنص الخيار اللي بالعمود اللي قبله
+    # ("besondere 26")، فبيضيع الرقم والنص سوا. منفصلهم أول شي.
+    split = []
+    for x0, x1, y, t in words:
+        m = re.match(r'^(.+?)\s+(\d{1,2})\.?$', t)
+        if m and lo <= int(m.group(2)) <= hi and len(m.group(1)) > 2:
+            cut = x0 + (x1 - x0) * len(m.group(1)) / len(t)
+            split.append((x0, cut, y, m.group(1)))
+            split.append((cut + 1, x1, y, m.group(2) + '.'))
+        else:
+            split.append((x0, x1, y, t))
+    words = split
+
     # الرقم أحياناً منفصل عن نقطته ("26 ."). والشبكة تحت الرسالة دايماً،
     # فإذا الرقم تكرر (مرة بالنص ومرة بالشبكة) مناخد الأسفل.
     best = {}
@@ -328,19 +350,14 @@ def parse_sb1(rows, words, lo=21, hi=30):
     grid_top = min(y for _, y, _ in marks) - 12
     passage = paragraphs([r for r in strip_instructions(rows) if r[0] < grid_top])
 
-    items = []
-    for mx, my, n in marks:
-        below = [m for m in marks if abs(m[0] - mx) < 25 and m[1] > my + 20]
-        bottom = min((m[1] for m in below), default=my + 135) - 12
-        cell = [w for w in words
-                if mx + 3 < w[0] < mx + 148 and my - 12 <= w[2] < bottom]
-
+    def cell_lines(cell):
+        """يرجّع سطور الخلية كنصوص، بدون حروف الخيارات ولا أرقام الفراغات."""
         # موقع عمود حروف الخيارات — منستعمله تا نفرق بين حرف الخيار
         # الملزوق بنصّه ("Aim") وبين كلمة بتبلّش بنفس الحرف ("Aber")
         letter_x = [w[0] for w in cell if re.fullmatch(r'[A-Ca-c]\s*\)?', w[3])]
         lx = min(letter_x) if letter_x else None
 
-        lines = []                       # جمّع كلمات الخلية بسطور
+        lines = []
         for w in sorted(cell, key=lambda w: (w[2], w[0])):
             if re.fullmatch(r'[A-Ca-c]\s*\)?', w[3]):     # حرف الخيار نفسه
                 continue
@@ -354,14 +371,62 @@ def parse_sb1(rows, words, lo=21, hi=30):
             else:
                 lines.append([w[2], [w]])
 
-        texts = [clean(' '.join(x[3] for x in sorted(ws, key=lambda w: w[0])))
-                 for _, ws in lines]
-        texts = [re.sub(r'^[.)\s\u2026]+', '', t) for t in texts]
-        texts = [t for t in texts if t and not is_noise(t)]
-        if len(texts) == 3:
+        out = []
+        for y, ws in lines:
+            t = clean(' '.join(x[3] for x in sorted(ws, key=lambda w: w[0])))
+            t = re.sub(r'^[.)\s\u2026]+', '', t)
+            # حرف مضاعف أول الخيار ("j jetzt") من ازدواج الطباعة
+            t = re.sub(r'^([A-Za-zÄÖÜäöüß])\s+(?=\1)', '', t, flags=re.I)
+            if t and not is_noise(t):
+                out.append((y, t))
+        return out
+
+    def add(n, texts):
+        # عادة ٣ خيارات. أحياناً التالت مقصوص من أسفل الصفحة — منقبل اتنين،
+        # وفحص كلمة مفتاح الحلول بعدين بيتأكد إنه الجواب من ضمنهم.
+        if 2 <= len(texts) <= 3:
             items.append({'id': str(n), 'text': f'Lücke ({n})',
                           'options': [{'key': k, 'text': t}
                                       for k, t in zip('ABC', texts)]})
+
+    # الشبكة أعمدة، وكل عمود فيه خلايا فوق بعض. رقم الفراغ أحياناً مطبوع
+    # أوطى شوي من أول خيار تبعه، فالحدود حسب رقم الخلية اللي تحت بتقص
+    # الخيار الأول وبتلزقه بالخلية اللي فوق. الأدق: منجمع سطور العمود كلها
+    # ومنقسّمها على الفراغات الكبيرة — المسافة جوّا الخلية أصغر بكتير من
+    # المسافة بين خليتين.
+    items = []
+    cols = {}
+    for mx, my, n in marks:
+        for cx in cols:
+            if abs(cx - mx) < 25:
+                cols[cx].append((mx, my, n))
+                break
+        else:
+            cols[mx] = [(mx, my, n)]
+
+    for cx, col in cols.items():
+        col.sort(key=lambda m: m[1])
+        # ما منطلع فوق الشبكة — وإلا بينحسب سطر التوقيع اللي قبلها خيار
+        top, bot = max(col[0][1] - 25, grid_top), col[-1][1] + 150
+        lines = cell_lines([w for w in words
+                            if cx + 3 < w[0] < cx + 148 and top <= w[2] < bot])
+        gaps = sorted(lines[i][0] - lines[i - 1][0] for i in range(1, len(lines)))
+        inner = gaps[len(gaps) // 2] if gaps else 0
+        groups = []
+        for y, t in lines:
+            if groups and y - groups[-1][-1][0] <= inner * 1.5:
+                groups[-1].append((y, t))
+            else:
+                groups.append([(y, t)])
+        if len(groups) == len(col):                  # قسمة نظيفة
+            for (mx, my, n), g in zip(col, groups):
+                add(n, [t for _, t in g])
+            continue
+        for mx, my, n in col:                        # احتياطي: حدّ لكل رقم
+            below = [m[1] for m in col if m[1] > my + 20]
+            end_y = min(below, default=my + 135) - 12
+            add(n, [t for y, t in lines if my - 12 <= y < end_y])
+
     return passage, items
 
 

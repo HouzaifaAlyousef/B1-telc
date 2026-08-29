@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 76.0,
-   "missing": 12
+   "availablePoints": 80.5,
+   "missing": 9
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "48 Aufgaben · 150 Minuten",
+ "subtitle": "51 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -486,6 +486,21 @@
      "answer": "B"
     },
     {
+     "id": "22",
+     "text": "… ganz Besonders ausgedacht: einen attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Mit"
+      },
+      {
+       "key": "B",
+       "text": "Von"
+      }
+     ],
+     "answer": "A"
+    },
+    {
      "id": "24",
      "text": "… Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte Antwortschreiben zurück und bestellen Sie …",
      "options": [
@@ -505,6 +520,21 @@
      "answer": "A"
     },
     {
+     "id": "25",
+     "text": "… – das Buch des Monats. Sie erhalten dieses Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, …",
+     "options": [
+      {
+       "key": "A",
+       "text": "unsere"
+      },
+      {
+       "key": "B",
+       "text": "unserem"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "27",
      "text": "… Gleichzeitig nehmen Sie an einem Preisausschreiben (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den …",
      "options": [
@@ -519,6 +549,21 @@
       {
        "key": "C",
        "text": "zu"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "… (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto …",
+     "options": [
+      {
+       "key": "A",
+       "text": "unter"
+      },
+      {
+       "key": "B",
+       "text": "neben"
       }
      ],
      "answer": "B"
@@ -545,8 +590,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 6.0,
-   "missing": 6
+   "availablePoints": 10.5,
+   "missing": 3
   },
   {
    "id": "sb2",
@@ -662,6 +707,68 @@
      ]
     }
    ],
+   "bank": [
+    {
+     "key": "A",
+     "text": "ALS"
+    },
+    {
+     "key": "B",
+     "text": "ANFANGEN"
+    },
+    {
+     "key": "C",
+     "text": "ARBEITEN"
+    },
+    {
+     "key": "D",
+     "text": "ERZÄHLT"
+    },
+    {
+     "key": "E",
+     "text": "FALLS"
+    },
+    {
+     "key": "F",
+     "text": "INFORMIERT"
+    },
+    {
+     "key": "G",
+     "text": "INTERESSIERT"
+    },
+    {
+     "key": "H",
+     "text": "MÖCHTEN"
+    },
+    {
+     "key": "I",
+     "text": "MÖGLICH"
+    },
+    {
+     "key": "J",
+     "text": "NUR"
+    },
+    {
+     "key": "K",
+     "text": "ÖFTER"
+    },
+    {
+     "key": "L",
+     "text": "UNBEKANNT"
+    },
+    {
+     "key": "M",
+     "text": "VOR"
+    },
+    {
+     "key": "N",
+     "text": "WÜRDE"
+    },
+    {
+     "key": "O",
+     "text": "ZWISCHEN"
+    }
+   ],
    "items": [
     {
      "id": "31",
@@ -727,69 +834,7 @@
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
    "availablePoints": 15.0,
-   "missing": 0,
-   "bank": [
-    {
-     "key": "A",
-     "text": "ALS"
-    },
-    {
-     "key": "B",
-     "text": "ANFANGEN"
-    },
-    {
-     "key": "C",
-     "text": "ARBEITEN"
-    },
-    {
-     "key": "D",
-     "text": "ERZÄHLT"
-    },
-    {
-     "key": "E",
-     "text": "FALLS"
-    },
-    {
-     "key": "F",
-     "text": "INFORMIERT"
-    },
-    {
-     "key": "G",
-     "text": "INTERESSIERT"
-    },
-    {
-     "key": "H",
-     "text": "MÖCHTEN"
-    },
-    {
-     "key": "I",
-     "text": "MÖGLICH"
-    },
-    {
-     "key": "J",
-     "text": "NUR"
-    },
-    {
-     "key": "K",
-     "text": "ÖFTER"
-    },
-    {
-     "key": "L",
-     "text": "UNBEKANNT"
-    },
-    {
-     "key": "M",
-     "text": "VOR"
-    },
-    {
-     "key": "N",
-     "text": "WÜRDE"
-    },
-    {
-     "key": "O",
-     "text": "ZWISCHEN"
-    }
-   ]
+   "missing": 0
   },
   {
    "id": "hv1",

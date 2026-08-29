@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 99.0,
-   "missing": 4
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "57 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -469,6 +469,21 @@
      "answer": "B"
     },
     {
+     "id": "23",
+     "text": "… anstrengen wollen. So kann man hier zum Beispiel (23) Fahrkarten kaufen, um mit dem Bus in einen anderen Ort zu …",
+     "options": [
+      {
+       "key": "A",
+       "text": "besondere"
+      },
+      {
+       "key": "B",
+       "text": "besonderem"
+      }
+     ],
+     "answer": "A"
+    },
+    {
      "id": "24",
      "text": "… zurück. Oder es gibt Angebote mit Schiffen, die das Rad (24) wenig Geld transportieren. Besonders (25) hat mich aber …",
      "options": [
@@ -486,6 +501,40 @@
       }
      ],
      "answer": "B"
+    },
+    {
+     "id": "25",
+     "text": "… die das Rad (24) wenig Geld transportieren. Besonders (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "beeindrucken"
+      },
+      {
+       "key": "B",
+       "text": "beeindruckend"
+      },
+      {
+       "key": "C",
+       "text": "beeindruckt"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "26",
+     "text": "… (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) Hafen sind mir die vielen Fahrräder aufgefallen. (27) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "am"
+      },
+      {
+       "key": "B",
+       "text": "im"
+      }
+     ],
+     "answer": "A"
     },
     {
      "id": "27",
@@ -526,6 +575,21 @@
      "answer": "A"
     },
     {
+     "id": "29",
+     "text": "… sich bei roten Ampeln vor die Autos zu stellen. (29) Ampeln schalten für Radfahrer sogar früher auf Grün als …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Einige"
+      },
+      {
+       "key": "B",
+       "text": "Einigen"
+      }
+     ],
+     "answer": "A"
+    },
+    {
      "id": "30",
      "text": "… Autos. Du siehst also: Es hat sich gelohnt, das Fahrrad (30). Liebe Grüße Lutz",
      "options": [
@@ -547,8 +611,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 9.0,
-   "missing": 4
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",

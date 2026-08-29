@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 102.0,
-   "missing": 2
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "59 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -565,6 +565,44 @@
      "answer": "B"
     },
     {
+     "id": "27",
+     "text": "… attraktive Dinge rund um das Thema Kaffee und Trinkwasser (27) Mitarbeiter und Besucher. Aber auch Tee, kleine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "für"
+      },
+      {
+       "key": "B",
+       "text": "von"
+      },
+      {
+       "key": "C",
+       "text": "wegen"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "… kleine Leckereien und nette Kalender für Büro und Zuhause (28) Ihnen unser Geschenkkatalog. Viel Spaß beim Blättern und …",
+     "options": [
+      {
+       "key": "A",
+       "text": "gezeigt"
+      },
+      {
+       "key": "B",
+       "text": "zeigen"
+      },
+      {
+       "key": "C",
+       "text": "zeigt"
+      }
+     ],
+     "answer": "C"
+    },
+    {
      "id": "29",
      "text": "… Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie! (30) Grüße aus Wallenhorst Ihr Kaffee …",
      "options": [
@@ -605,8 +643,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 12.0,
-   "missing": 2
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",

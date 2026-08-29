@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 81.0,
-   "missing": 11
+   "availablePoints": 85.5,
+   "missing": 8
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "50 Aufgaben · 150 Minuten",
+ "subtitle": "53 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -404,7 +404,7 @@
        "text": "Sie"
       }
      ],
-     "answer": "A"
+     "answer": "B"
     },
     {
      "id": "22",
@@ -650,6 +650,12 @@
      "explain": "Das Wort lautet: SONDERN"
     },
     {
+     "id": "32",
+     "text": "… zum Beispiel oder gegen Zucker, aber auch gegen Milch. so (32) man etwa, wer kein Fleisch isst, lebt nicht nur gesünder, …",
+     "answer": "F",
+     "explain": "Das Wort lautet: SAGT"
+    },
+    {
      "id": "33",
      "text": "… lebt nicht nur gesünder, sondern fühlt sich auch besser. (33) Durchsehen einer Zeitschrift ist mir Ihre Anzeige …",
      "answer": "B",
@@ -674,6 +680,12 @@
      "explain": "Das Wort lautet: WEGEN"
     },
     {
+     "id": "37",
+     "text": "… mit dem Magen bekommen. Außerdem kann man anstelle (37) Milch auch Mineralwasser trinken. Was soll ich jetzt …",
+     "answer": "I",
+     "explain": "Das Wort lautet: VON"
+    },
+    {
      "id": "38",
      "text": "… trinken. Was soll ich jetzt glauben? Für eine Antwort (38) meine Fragen danke ich Ihnen im Voraus. Könnten Sie mir …",
      "answer": "A",
@@ -684,12 +696,18 @@
      "text": "… noch eine Broschüre schicken? Das Thema Essen und Sport (39) mich besonders interessieren, (40) ich selber viel Sport …",
      "answer": "N",
      "explain": "Das Wort lautet: AUF"
+    },
+    {
+     "id": "40",
+     "text": "… Thema Essen und Sport (39) mich besonders interessieren, (40) ich selber viel Sport treibe. Mit freundlichen Grüßen …",
+     "answer": "L",
+     "explain": "Das Wort lautet: WEIL"
     }
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 10.5,
-   "missing": 3
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "hv1",

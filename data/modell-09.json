@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 103.5,
-   "missing": 1
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "60 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -549,6 +549,25 @@
      "answer": "C"
     },
     {
+     "id": "27",
+     "text": "… hat mich das Sprachgemisch (26) sehr verwirrt , aber (27)verstehe ich fast alles, wenn jemand auf Schweizerdeutsch …",
+     "options": [
+      {
+       "key": "A",
+       "text": "früher"
+      },
+      {
+       "key": "B",
+       "text": "jetzt"
+      },
+      {
+       "key": "C",
+       "text": "seit"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "28",
      "text": "… hier und unserem Schulsystem in Australien gibt es einige (28) : In der Schweiz sprechen die Lehrer viel und die Schüler …",
      "options": [
@@ -608,8 +627,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 13.5,
-   "missing": 1
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
