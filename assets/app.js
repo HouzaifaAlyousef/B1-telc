@@ -397,7 +397,8 @@ function renderPassages(sec){
   return sec.passages.map(p => `
     <div class="passage">
       ${p.title ? `<h3>${esc(p.title)}</h3>` : ''}
-      ${(p.paragraphs || [p.body]).map(t => `<p>${esc(t)}</p>`).join('')}
+      ${(p.paragraphs || []).map(x =>
+        `<p${x.b ? ' class="strong"' : ''}>${esc(x.t)}</p>`).join('')}
     </div>`).join('');
 }
 

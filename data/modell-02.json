@@ -139,17 +139,50 @@
    "passages": [
     {
      "paragraphs": [
-      "Geheimnisse des Schlafes",
-      "Schlafstörungen die meisten Ursachen sind harmlos",
-      "Lange Zeit hat man geglaubt, dass der Schlaf nur so etwas ist wie der kleine Bruder des Todes Ein Zustand der Körper Energie spart und alles langsamer läuft. Erst in den 50 er Jahren des letzten Jahrhunderts fand man heraus dass schlafen etwas sehr Aktives ist und Nacht für Nacht in unterschiedlichen Abschnitten verläuft. Der Schweizer Schlafforscher Alexander Borbely hat diesen Vorgang mit einer Treppe verglichen, über die wir jede Nacht mehrmals gehen.",
-      "Zunächst sind wir wach, dann schlafen wir ein und gehen bis tief hinab in den Keller in einen tiefen Schlaf. Danach geht es wieder hoch in einen leichten Schlaf, der von lebhaften, intensiven Träumen und schnellen Augenbewegungen begleitet wird Daher wird diese Phase auch REM-Schlaf ( rapid-eye-movements = schnelle Augenbewegung) genannt. Dieser Abschnitt ist im Gegensatz zu den anderen Phasen mit etwa 20 Minuten sehr kurz, soll aber äußerst wichtig für die physische Erholung sein.",
-      "Damit hat die Wissenschaft aber noch lange nicht alle Probleme des Schlafes gelöst. Erwiesen ist nur: Wir brauchen ihn zur körperlichen Erholung, auch wenn wir ihn manchmal als Zeitverschwendung empfinden – immerhin verbringen wir ein Drittel unseres Lebens mit schlafen.",
-      "Warum können wir aber nicht immer sofort einschlafen, wenn müde sind? Tatsächlich klagen viele Menschen in den westlichen Industrienationen über gelegentliche oder dauernde Schlafstörungen.",
-      "So muss unser Körper, ins besonders das Gehirn die Eindrücke des Tages erst einmal verarbeiten damit wir gesund schlafen. Diese System reagiert so sensibel, dass schon kleine Ursachen – äußere und innere – störend wirken können.",
-      "Äußere Ursachen können sein: Lärm, eine ungewohnte Umgebung, ein zu spätes, zu reichliches Essen, kälte oder wärme, alles wirkt sich auf unser Wohlbefinden und somit auch auf den Schlaf aus.",
-      "Als innere Ursachen kommen Schmerzen, Angst oder Ärger über ungelöste Konflikte in Frage.",
-      "Erkrankungen beeinflussen den Schlaf, auch Medikamente können eine störende Rolle spielen Alles was uns gedanklich stark beschäftigt, kann unseren Schlaf beeinträchtigen. Wer aber nur gelegentlich nachts aufwacht, oder auch einmal einige Tag schlecht schläft braucht sich keine Sorgen zu machen. Ein paar schlaflose Nächte lassen sich schnell wieder nachholen.",
-      "Ein echte Schlafstörung liegt erst dann vor wenn unsere Leistungsfähigkeit oder unsere Gesundheit auf Dauer stark beeinträchtigt werden. Dann sollte man auf jeden Fall ärztlichen Rat suchen."
+      {
+       "t": "Geheimnisse des Schlafes",
+       "b": true
+      },
+      {
+       "t": "Schlafstörungen die meisten Ursachen sind harmlos",
+       "b": true
+      },
+      {
+       "t": "Lange Zeit hat man geglaubt, dass der Schlaf nur so etwas ist wie der kleine Bruder des Todes Ein Zustand der Körper Energie spart und alles langsamer läuft. Erst in den 50 er Jahren des letzten Jahrhunderts fand man heraus dass schlafen etwas sehr Aktives ist und Nacht für Nacht in unterschiedlichen Abschnitten verläuft. Der Schweizer Schlafforscher Alexander Borbely hat diesen Vorgang mit einer Treppe verglichen, über die wir jede Nacht mehrmals gehen.",
+       "b": false
+      },
+      {
+       "t": "Zunächst sind wir wach, dann schlafen wir ein und gehen bis tief hinab in den Keller in einen tiefen Schlaf. Danach geht es wieder hoch in einen leichten Schlaf, der von lebhaften, intensiven Träumen und schnellen Augenbewegungen begleitet wird Daher wird diese Phase auch REM-Schlaf ( rapid-eye-movements = schnelle Augenbewegung) genannt. Dieser Abschnitt ist im Gegensatz zu den anderen Phasen mit etwa 20 Minuten sehr kurz, soll aber äußerst wichtig für die physische Erholung sein.",
+       "b": false
+      },
+      {
+       "t": "Damit hat die Wissenschaft aber noch lange nicht alle Probleme des Schlafes gelöst. Erwiesen ist nur: Wir brauchen ihn zur körperlichen Erholung, auch wenn wir ihn manchmal als Zeitverschwendung empfinden – immerhin verbringen wir ein Drittel unseres Lebens mit schlafen.",
+       "b": false
+      },
+      {
+       "t": "Warum können wir aber nicht immer sofort einschlafen, wenn müde sind? Tatsächlich klagen viele Menschen in den westlichen Industrienationen über gelegentliche oder dauernde Schlafstörungen.",
+       "b": false
+      },
+      {
+       "t": "So muss unser Körper, ins besonders das Gehirn die Eindrücke des Tages erst einmal verarbeiten damit wir gesund schlafen. Diese System reagiert so sensibel, dass schon kleine Ursachen – äußere und innere – störend wirken können.",
+       "b": false
+      },
+      {
+       "t": "Äußere Ursachen können sein: Lärm, eine ungewohnte Umgebung, ein zu spätes, zu reichliches Essen, kälte oder wärme, alles wirkt sich auf unser Wohlbefinden und somit auch auf den Schlaf aus.",
+       "b": false
+      },
+      {
+       "t": "Als innere Ursachen kommen Schmerzen, Angst oder Ärger über ungelöste Konflikte in Frage.",
+       "b": false
+      },
+      {
+       "t": "Erkrankungen beeinflussen den Schlaf, auch Medikamente können eine störende Rolle spielen Alles was uns gedanklich stark beschäftigt, kann unseren Schlaf beeinträchtigen. Wer aber nur gelegentlich nachts aufwacht, oder auch einmal einige Tag schlecht schläft braucht sich keine Sorgen zu machen. Ein paar schlaflose Nächte lassen sich schnell wieder nachholen.",
+       "b": false
+      },
+      {
+       "t": "Ein echte Schlafstörung liegt erst dann vor wenn unsere Leistungsfähigkeit oder unsere Gesundheit auf Dauer stark beeinträchtigt werden. Dann sollte man auf jeden Fall ärztlichen Rat suchen.",
+       "b": false
+      }
      ]
     }
    ],
@@ -385,15 +418,42 @@
    "passages": [
     {
      "paragraphs": [
-      "Herrn Das COMPUTER-MAGAZIN Matthias Buschhaus Alte Gasse 19 D-80344 München",
-      "München, den 21. Mai…. Ihre Kündigung vom 15. Mai",
-      "Sehr geehrter Herr Buschhaus,",
-      "schade, (21) Sie CHIP nicht weiter beziehen (22). Die Belieferung beenden wir mit unserem (23) Heft. Sie erhalten daher die darauf folgende Ausgabe nicht (24).",
-      "Wir (25) Sie natürlich nur ungern als Abonnenten und würden uns freuen, wenn Sie CHIP (26)",
-      "ab und zu am Kiosk kaufen. Vielleicht gelingt es uns, (27) wieder von der Qualität von CHIP zu überzeugen.",
-      "(28) Sie noch Fragen haben oder sich wieder für ein Abonnement entscheiden, stehen wir Ihnen gerne unter (29) Nummer 0781/639 6259 von montags bis freitags von 8 bis 18 Uhr zur Verfügung.",
-      "Mit (30) Grüßen",
-      "Ihr CHIP-Aboservice"
+      {
+       "t": "Herrn Das COMPUTER-MAGAZIN Matthias Buschhaus Alte Gasse 19 D-80344 München",
+       "b": false
+      },
+      {
+       "t": "München, den 21. Mai…. Ihre Kündigung vom 15. Mai",
+       "b": false
+      },
+      {
+       "t": "Sehr geehrter Herr Buschhaus,",
+       "b": false
+      },
+      {
+       "t": "schade, (21) Sie CHIP nicht weiter beziehen (22). Die Belieferung beenden wir mit unserem (23) Heft. Sie erhalten daher die darauf folgende Ausgabe nicht (24).",
+       "b": false
+      },
+      {
+       "t": "Wir (25) Sie natürlich nur ungern als Abonnenten und würden uns freuen, wenn Sie CHIP (26)",
+       "b": false
+      },
+      {
+       "t": "ab und zu am Kiosk kaufen. Vielleicht gelingt es uns, (27) wieder von der Qualität von CHIP zu überzeugen.",
+       "b": false
+      },
+      {
+       "t": "(28) Sie noch Fragen haben oder sich wieder für ein Abonnement entscheiden, stehen wir Ihnen gerne unter (29) Nummer 0781/639 6259 von montags bis freitags von 8 bis 18 Uhr zur Verfügung.",
+       "b": false
+      },
+      {
+       "t": "Mit (30) Grüßen",
+       "b": false
+      },
+      {
+       "t": "Ihr CHIP-Aboservice",
+       "b": false
+      }
      ]
     }
    ],
@@ -529,7 +589,7 @@
        "text": "Sie"
       }
      ],
-     "answer": "B"
+     "answer": "C"
     },
     {
      "id": "28",
@@ -605,13 +665,34 @@
    "passages": [
     {
      "paragraphs": [
-      "Sehr geehrter Herr Maier,",
-      "ich habe Ihre Anzeige in der Zeitung vom letzten (31) gelesen und interessiere mich sehr (32) das Angebot. Ich (33) mit meiner Mutter und ihrer Schwester, die beide schon etwas ältere Damen sind, im September ein paar (34) Urlaub machen und benötige daher einige Informationen.",
-      "Ist die Benutzung des Hallenbads und der Sauna im Preis enthalten oder (35) wir diese extra bezahlen? Weiters würde mich noch interessieren, (36) Pensionisten eine Ermäßigung bekommen. Sie schreiben darüber leider (37) in Ihrer Anzeige. (38) möchte ich wissen, ob man in der Gegend um das Hotel einfache Wanderungen unternehmen kann.",
-      "Ich wäre Ihnen sehr dankbar, (39) Sie mir Bildmaterial zum Hotel und der Landschaft sowie eine Preisliste zukommen lassen könnten.",
-      "Ich bedanke mich im(40) für die Informationen.",
-      "Mit freundlichen Grüßen",
-      "ANNELIESE SCHNEEBERGER"
+      {
+       "t": "Sehr geehrter Herr Maier,",
+       "b": false
+      },
+      {
+       "t": "ich habe Ihre Anzeige in der Zeitung vom letzten (31) gelesen und interessiere mich sehr (32) das Angebot. Ich (33) mit meiner Mutter und ihrer Schwester, die beide schon etwas ältere Damen sind, im September ein paar (34) Urlaub machen und benötige daher einige Informationen.",
+       "b": false
+      },
+      {
+       "t": "Ist die Benutzung des Hallenbads und der Sauna im Preis enthalten oder (35) wir diese extra bezahlen? Weiters würde mich noch interessieren, (36) Pensionisten eine Ermäßigung bekommen. Sie schreiben darüber leider (37) in Ihrer Anzeige. (38) möchte ich wissen, ob man in der Gegend um das Hotel einfache Wanderungen unternehmen kann.",
+       "b": false
+      },
+      {
+       "t": "Ich wäre Ihnen sehr dankbar, (39) Sie mir Bildmaterial zum Hotel und der Landschaft sowie eine Preisliste zukommen lassen könnten.",
+       "b": false
+      },
+      {
+       "t": "Ich bedanke mich im(40) für die Informationen.",
+       "b": false
+      },
+      {
+       "t": "Mit freundlichen Grüßen",
+       "b": false
+      },
+      {
+       "t": "ANNELIESE SCHNEEBERGER",
+       "b": false
+      }
      ]
     }
    ],

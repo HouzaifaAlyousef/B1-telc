@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 102.0,
-   "missing": 2
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "59 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -139,11 +139,30 @@
    "passages": [
     {
      "paragraphs": [
-      "Computerkurse sind schon für Kinder spannend",
-      "Schreiben, Rechnen, Programme installieren Schaden oder nützen Computer unseren Kindern? Fragen sich viele Eltern. Ein Computerkurs Veranstalter ist sich ganz sicher: wenn man den Kindern beibringt, den Computer richtig einzusetzen, ist sogar eine Lernhilfe. Seit fünf Jahren bietet Franz Krapfi Krapfen Bauer Computerkurse für Kinder zwischen sieben und vierzehn Jahren an und ist von seinen Schülern begeistert Am liebsten würden die Kinder drei Stunden ohne Pause durcharbeiten Und das obwohl in seinen Kursen nicht gespielt wird, sondern der Computer als Lernhilfe genutzt wird. Im ersten Kurs lernen die Kinder den Umgang mit dem Betriebssystem und erste Grundzüge der Textverarbeitung.",
-      "Das Geheimnis von Krapfen Bauer Ich erkläre die Programme in der Sprache der Kinder und langweile sie nicht mit technischen Details. Sein Talent entdeckte er, als sich seine eigenen Kinder für den PC) zu interessieren begannen. Seine Tochter brachte immer mehr Mitschüler zum Sonntäglich PC-Training mit, bis eines Tages klar war: Das muss auf professionelle Beine gestellt werden. Das schwierigste war, einen passenden und vor allem kostengünstige Raum zu finden, denn Geld brachten die Kinderkurse am Anfang sehr wenig ein; Ein Bekannte, der Direktor eines Hotels ist, hatte schließlich die passende Lösung Die Schulungsräume im Hotel stehen den Kindern nun an den Wochenenden zur Verfügung Allgemein rät Krapffen Bauer, Kinder so früh wie möglich an den Computer zu lassen, allerdings nur unter Aufsicht und mit den richtigen Programmen. Beim Computer ist es wie beim Fernseher wenn man ihn als Kindermädchen einsetzt, ohne sich darum zu kümmern, was die Kinder damit machen, kann das negativ Folgen haben schon für drei bis vierjährige Kinder gebe es sehr gute Spielprogramme, die mit Vorschulaufgaben vergleichbar wären. Gerade in der Zeit nach Weihnachten haben Krapfis Kindercomputerkurse Hochsaison. Viele Eltern haben einen Computer unter den Christbaum gestellt und wollen jetzt, dass ihre Kinder frühzeitig damit umgehen lernen. Wobei der Seminarleiter für manche Eltern sogar zu viel wissen weitergibt Einige Eltern haben sich schon beschwert, weil ihre Kinder jetzt Hausaufgaben am Computer lösen Die manchmal befürchtet Überordnung der Kinder hat Krapfen Bauer noch nicht erlebt. Ganz im Gegenteil, die kleinen sind oft gar nicht zu stoppen, wenn sie wieder etwas Neues erlernt haben. Viele Teilnehmer kommen dann auch gern zu den nächsten Kursen. Zeichenprogramm oder Spiele kommen in den Computerkursen höchstens als Belohnung am Rande vor.",
-      "Das größte Hindernis auf dem Weg zum Computerexperten ist für die Kinder in manchen Fällen die negative Einstellung der Eltern.",
-      "Die Erwachsene kennen oft nur die komplizierten Datenbankwendungen und Programme aus dem Büro und können sich gar nicht vorstellen, was man mit dem Computer noch alles machen kann bedauert Krapfen Bauer natürlich wirkt sich diese negative Grundeinstellung auch auf die Kinder aus, Überraschenderweise sind es dann oft die Großeltern, die für Computerkurse das Geld geben, damit ihre Enkelkinder mit dem PC richtig umgehen lernen. Information und Anmeldung Tel: 0664/ 33 33 14 E Mail: Krapfi@aon.at"
+      {
+       "t": "Computerkurse sind schon für Kinder spannend",
+       "b": true
+      },
+      {
+       "t": "Schreiben, Rechnen, Programme installieren",
+       "b": true
+      },
+      {
+       "t": "Schaden oder nützen Computer unseren Kindern? Fragen sich viele Eltern. Ein Computerkurs Veranstalter ist sich ganz sicher: wenn man den Kindern beibringt, den Computer richtig einzusetzen, ist sogar eine Lernhilfe. Seit fünf Jahren bietet Franz Krapfi Krapfen Bauer Computerkurse für Kinder zwischen sieben und vierzehn Jahren an und ist von seinen Schülern begeistert Am liebsten würden die Kinder drei Stunden ohne Pause durcharbeiten Und das obwohl in seinen Kursen nicht gespielt wird, sondern der Computer als Lernhilfe genutzt wird. Im ersten Kurs lernen die Kinder den Umgang mit dem Betriebssystem und erste Grundzüge der Textverarbeitung.",
+       "b": false
+      },
+      {
+       "t": "Das Geheimnis von Krapfen Bauer Ich erkläre die Programme in der Sprache der Kinder und langweile sie nicht mit technischen Details. Sein Talent entdeckte er, als sich seine eigenen Kinder für den PC) zu interessieren begannen. Seine Tochter brachte immer mehr Mitschüler zum Sonntäglich PC-Training mit, bis eines Tages klar war: Das muss auf professionelle Beine gestellt werden. Das schwierigste war, einen passenden und vor allem kostengünstige Raum zu finden, denn Geld brachten die Kinderkurse am Anfang sehr wenig ein; Ein Bekannte, der Direktor eines Hotels ist, hatte schließlich die passende Lösung Die Schulungsräume im Hotel stehen den Kindern nun an den Wochenenden zur Verfügung Allgemein rät Krapffen Bauer, Kinder so früh wie möglich an den Computer zu lassen, allerdings nur unter Aufsicht und mit den richtigen Programmen. Beim Computer ist es wie beim Fernseher wenn man ihn als Kindermädchen einsetzt, ohne sich darum zu kümmern, was die Kinder damit machen, kann das negativ Folgen haben schon für drei bis vierjährige Kinder gebe es sehr gute Spielprogramme, die mit Vorschulaufgaben vergleichbar wären. Gerade in der Zeit nach Weihnachten haben Krapfis Kindercomputerkurse Hochsaison. Viele Eltern haben einen Computer unter den Christbaum gestellt und wollen jetzt, dass ihre Kinder frühzeitig damit umgehen lernen. Wobei der Seminarleiter für manche Eltern sogar zu viel wissen weitergibt Einige Eltern haben sich schon beschwert, weil ihre Kinder jetzt Hausaufgaben am Computer lösen Die manchmal befürchtet Überordnung der Kinder hat Krapfen Bauer noch nicht erlebt. Ganz im Gegenteil, die kleinen sind oft gar nicht zu stoppen, wenn sie wieder etwas Neues erlernt haben. Viele Teilnehmer kommen dann auch gern zu den nächsten Kursen. Zeichenprogramm oder Spiele kommen in den Computerkursen höchstens als Belohnung am Rande vor.",
+       "b": false
+      },
+      {
+       "t": "Das größte Hindernis auf dem Weg zum Computerexperten ist für die Kinder in manchen Fällen die negative Einstellung der Eltern.",
+       "b": false
+      },
+      {
+       "t": "Die Erwachsene kennen oft nur die komplizierten Datenbankwendungen und Programme aus dem Büro und können sich gar nicht vorstellen, was man mit dem Computer noch alles machen kann bedauert Krapfen Bauer natürlich wirkt sich diese negative Grundeinstellung auch auf die Kinder aus, Überraschenderweise sind es dann oft die Großeltern, die für Computerkurse das Geld geben, damit ihre Enkelkinder mit dem PC richtig umgehen lernen. Information und Anmeldung Tel: 0664/ 33 33 14 E Mail: Krapfi@aon.at",
+       "b": false
+      }
      ]
     }
    ],
@@ -379,18 +398,54 @@
    "passages": [
     {
      "paragraphs": [
-      "Genuss mit Kaffee Partner",
-      "Sehr geehrte Frau Thoma,",
-      "schade, (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns,",
-      "weil wir (23) nicht das richtige Angebot gemacht haben, seit wir uns vor einiger Zeit in Köln",
-      "auf der ANUGA, der großen Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog nachholen, den Sie heute erhalten.",
-      "Sie (26) darin viele nützliche und attraktive Dinge rund um das Thema Kaffee und Trinkwasser",
-      "(27) Mitarbeiter und Besucher. Aber auch Tee, kleine Leckereien und nette Kalender für Büro",
-      "und Zuhause (28) Ihnen unser Geschenkkatalog.",
-      "Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie!",
-      "(30) Grüße aus Wallenhorst",
-      "Ihr Kaffee Partner-Team",
-      "Manfred Pflüger"
+      {
+       "t": "Genuss mit Kaffee Partner",
+       "b": false
+      },
+      {
+       "t": "Sehr geehrte Frau Thoma,",
+       "b": false
+      },
+      {
+       "t": "schade, (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns,",
+       "b": false
+      },
+      {
+       "t": "weil wir (23) nicht das richtige Angebot gemacht haben, seit wir uns vor einiger Zeit in Köln",
+       "b": false
+      },
+      {
+       "t": "auf der ANUGA, der großen Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog nachholen, den Sie heute erhalten.",
+       "b": false
+      },
+      {
+       "t": "Sie (26) darin viele nützliche und attraktive Dinge rund um das Thema Kaffee und Trinkwasser",
+       "b": false
+      },
+      {
+       "t": "(27) Mitarbeiter und Besucher. Aber auch Tee, kleine Leckereien und nette Kalender für Büro",
+       "b": false
+      },
+      {
+       "t": "und Zuhause (28) Ihnen unser Geschenkkatalog.",
+       "b": false
+      },
+      {
+       "t": "Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie!",
+       "b": false
+      },
+      {
+       "t": "(30) Grüße aus Wallenhorst",
+       "b": false
+      },
+      {
+       "t": "Ihr Kaffee Partner-Team",
+       "b": false
+      },
+      {
+       "t": "Manfred Pflüger",
+       "b": false
+      }
      ]
     }
    ],
@@ -510,6 +565,44 @@
      "answer": "B"
     },
     {
+     "id": "27",
+     "text": "… attraktive Dinge rund um das Thema Kaffee und Trinkwasser (27) Mitarbeiter und Besucher. Aber auch Tee, kleine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "für"
+      },
+      {
+       "key": "B",
+       "text": "von"
+      },
+      {
+       "key": "C",
+       "text": "wegen"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "… kleine Leckereien und nette Kalender für Büro und Zuhause (28) Ihnen unser Geschenkkatalog. Viel Spaß beim Blättern und …",
+     "options": [
+      {
+       "key": "A",
+       "text": "gezeigt"
+      },
+      {
+       "key": "B",
+       "text": "zeigen"
+      },
+      {
+       "key": "C",
+       "text": "zeigt"
+      }
+     ],
+     "answer": "C"
+    },
+    {
      "id": "29",
      "text": "… Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie! (30) Grüße aus Wallenhorst Ihr Kaffee …",
      "options": [
@@ -550,8 +643,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 12.0,
-   "missing": 2
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -564,11 +657,26 @@
    "passages": [
     {
      "paragraphs": [
-      "Sehr geehrte Damen und Herren,",
-      "mit großem Interesse und auch mit Hoffnung habe ich Ihre Anzeige gelesen. leider (31) ich Sie im Moment nicht anrufen, da das Telefon immer belegt ist. (32) schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind zurzeit nicht so gut. Ich mache (35) vor allem bei den Fächern Physik und Mathematik große Sorgen. Matthias ist nicht dumm, aber er ist etwas faul und denkt, er brauche (36) Fächer nicht.",
-      "Fragen wollte ich nun, (37) es bei Ihnen auch individuelle Physik und Mathematiknachhilfe gibt. Und (38) finden die Stunden statt? Am späten Nachmittag oder am frühen Abend? Mir wäre es jedenfalls sehr wichtig, dass Sie meinem Sohn helfen (39).",
-      "Ab 19.30 Uhr bin ich telefonisch (40) der Nummer 0428-1734 zu erreichen.",
-      "Mit freundlichen Grüßen JOSEF MARTINELL"
+      {
+       "t": "Sehr geehrte Damen und Herren,",
+       "b": false
+      },
+      {
+       "t": "mit großem Interesse und auch mit Hoffnung habe ich Ihre Anzeige gelesen. leider (31) ich Sie im Moment nicht anrufen, da das Telefon immer belegt ist. (32) schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind zurzeit nicht so gut. Ich mache (35) vor allem bei den Fächern Physik und Mathematik große Sorgen. Matthias ist nicht dumm, aber er ist etwas faul und denkt, er brauche (36) Fächer nicht.",
+       "b": false
+      },
+      {
+       "t": "Fragen wollte ich nun, (37) es bei Ihnen auch individuelle Physik und Mathematiknachhilfe gibt. Und (38) finden die Stunden statt? Am späten Nachmittag oder am frühen Abend? Mir wäre es jedenfalls sehr wichtig, dass Sie meinem Sohn helfen (39).",
+       "b": false
+      },
+      {
+       "t": "Ab 19.30 Uhr bin ich telefonisch (40) der Nummer 0428-1734 zu erreichen.",
+       "b": false
+      },
+      {
+       "t": "Mit freundlichen Grüßen JOSEF MARTINELL",
+       "b": false
+      }
      ]
     }
    ],

@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 99.0,
-   "missing": 4
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "57 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -139,13 +139,34 @@
    "passages": [
     {
      "paragraphs": [
-      "bis morgens 6 Uhr benutzen. Die Taxifahrer erhalten bei ihrer Zentrale dann den vollen",
-      "Fahrpreis erstattet.",
-      "Die neue Sir-Karl-Popper-Schule",
-      "Ein Schulversuch für besonders Klage Schüler",
-      "WIEN. Es ist eine ganz normale Schulstunde Geschichte in einer ganz normale Klasse. Während der Lehrer",
-      "– – einen Vortrag über das alle Rom hält, unterhalten sich die Schüler über den Schulball, kreieren die Kleidung des Lehrers, reichen Zettel unter der Schulbank weiter. Ganz normale Kinder Auch überdurchschnittlich intelligente Kinder sind ganz normale Kinder, betont Elfriede Wegricht, Psychologin in der Sir Karl Popper Schule, die im vergangen September Ihren Betrieb aufgenommen hat nur weil sie in der Schule gut sind, heißt das nicht, dass sie nicht genauso wie alle anderen Schüler Liebeskummer, Ärger mit den Eltern und andere Pubertätsporobleme haben Der Unterschied zwischen normalen und hochbegabten in ihrer bisherigen Schulkarriere nicht besonders anstrengen mussten und es nicht gewohnt sind, mit ihrer Zeit gut hauszuhalten Federung durch Forderung Um überdurchschnittlich intelligente Kinder nun entsprechend zu fördern, sieht das Konzept der Sir Karl Popper- Schule mehr Fremdsprachen projektorientiertes Arbeiten in kleinen Klassen und vor allem mehr Eigenverantwortung für den Lernenden vor. Dazu kommt die Förderung der individuellen Fähigkeiten: Wer in einem Fach gut ist und sich besonders für ein Thema interessiert bekommt Sonderaufgaben und tiefer gehen Ende Unterlagen. Anfangs war der plötzlich Mehr aufwand ein Schock für die Schüler, die eine 40 Stunden Woche zu bewältigen haben Aber es ist besser, sie erleben den Schock jetzt als zu Beginn des Studiums meint Herr Peters Lehrer und Schülerbetreuer an der Popper Schule denn oft scheitern besonders kluge Menschen Später weil sie mit ihrer Intelligenz nichts anzufangen wissen Denn zumeist erreichten sie mit wenig Aufwand und Mitarbeit relativ gute Ergebnisse Wer ist hochbegabt Zielgruppe der Sir Karl Popper Schule sind Kinder, die in mindestens einem Fach hochbegabt sind und überdurchschnittlich gute Ergebnisse haben, das sind 20 30 der Schüler. Nach einer Aufnahmeprüfung wurden von 64 Bewerben 28 geteilt sind und von insgesamt 28 Lehren betreut werden In diesen Klassen können die über durchschnittliche intelligenten Schüler dann endlich so sein, wie sie sind, ohne bei jeder Wortmeldung von ihren Klassenkameraden beschimpft zu werden meint die Schulpsychologien Ziel des Schulversuchs sei es jedoch laut Peters nicht, besonders kluge Schüler von normalen Kindern zu trennen, sondern Erfahrung im Umgang mit überdurchschnittlich die Begabtenförderung in die Normalschule zu üb h",
-      "übernehmen."
+      {
+       "t": "bis morgens 6 Uhr benutzen. Die Taxifahrer erhalten bei ihrer Zentrale dann den vollen",
+       "b": false
+      },
+      {
+       "t": "Fahrpreis erstattet.",
+       "b": false
+      },
+      {
+       "t": "Die neue Sir-Karl-Popper-Schule",
+       "b": true
+      },
+      {
+       "t": "Ein Schulversuch für besonders Klage Schüler",
+       "b": true
+      },
+      {
+       "t": "WIEN. Es ist eine ganz normale Schulstunde Geschichte in einer ganz normale Klasse. Während der Lehrer",
+       "b": false
+      },
+      {
+       "t": "– – einen Vortrag über das alle Rom hält, unterhalten sich die Schüler über den Schulball, kreieren die Kleidung des Lehrers, reichen Zettel unter der Schulbank weiter. Ganz normale Kinder Auch überdurchschnittlich intelligente Kinder sind ganz normale Kinder, betont Elfriede Wegricht, Psychologin in der Sir Karl Popper Schule, die im vergangen September Ihren Betrieb aufgenommen hat nur weil sie in der Schule gut sind, heißt das nicht, dass sie nicht genauso wie alle anderen Schüler Liebeskummer, Ärger mit den Eltern und andere Pubertätsporobleme haben Der Unterschied zwischen normalen und hochbegabten in ihrer bisherigen Schulkarriere nicht besonders anstrengen mussten und es nicht gewohnt sind, mit ihrer Zeit gut hauszuhalten Federung durch Forderung Um überdurchschnittlich intelligente Kinder nun entsprechend zu fördern, sieht das Konzept der Sir Karl Popper- Schule mehr Fremdsprachen projektorientiertes Arbeiten in kleinen Klassen und vor allem mehr Eigenverantwortung für den Lernenden vor. Dazu kommt die Förderung der individuellen Fähigkeiten: Wer in einem Fach gut ist und sich besonders für ein Thema interessiert bekommt Sonderaufgaben und tiefer gehen Ende Unterlagen. Anfangs war der plötzlich Mehr aufwand ein Schock für die Schüler, die eine 40 Stunden Woche zu bewältigen haben Aber es ist besser, sie erleben den Schock jetzt als zu Beginn des Studiums meint Herr Peters Lehrer und Schülerbetreuer an der Popper Schule denn oft scheitern besonders kluge Menschen Später weil sie mit ihrer Intelligenz nichts anzufangen wissen Denn zumeist erreichten sie mit wenig Aufwand und Mitarbeit relativ gute Ergebnisse Wer ist hochbegabt Zielgruppe der Sir Karl Popper Schule sind Kinder, die in mindestens einem Fach hochbegabt sind und überdurchschnittlich gute Ergebnisse haben, das sind 20 30 der Schüler. Nach einer Aufnahmeprüfung wurden von 64 Bewerben 28 geteilt sind und von insgesamt 28 Lehren betreut werden In diesen Klassen können die über durchschnittliche intelligenten Schüler dann endlich so sein, wie sie sind, ohne bei jeder Wortmeldung von ihren Klassenkameraden beschimpft zu werden meint die Schulpsychologien Ziel des Schulversuchs sei es jedoch laut Peters nicht, besonders kluge Schüler von normalen Kindern zu trennen, sondern Erfahrung im Umgang mit überdurchschnittlich die Begabtenförderung in die Normalschule zu üb h",
+       "b": false
+      },
+      {
+       "t": "übernehmen.",
+       "b": false
+      }
      ]
     }
    ],
@@ -381,12 +402,30 @@
    "passages": [
     {
      "paragraphs": [
-      "Liebe Olivia,",
-      "wie du ja weißt, mache ich gerade Urlaub auf Fehmarn. Und dass ich mein Fahrrad mitgenommen habe, war wirklich eine gute Idee. Radfahren macht hier nämlich viel Spaß trotz (21) Windes. Und es gibt auch Angebote für Radfahrer wie (22) , die sich vor allem erholen und nicht besonders anstrengen wollen.",
-      "So kann man hier zum Beispiel (23) Fahrkarten kaufen, um mit dem Bus in einen anderen Ort zu fahren und mit dem Rad zurück. Oder es gibt Angebote mit Schiffen, die das Rad (24) wenig Geld transportieren.",
-      "Besonders (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) Hafen sind mir die vielen Fahrräder aufgefallen. (27) gibt es Markierungen auf den Straßen, die den Radfahrern(28), sich bei roten Ampeln vor die Autos zu stellen. (29) Ampeln schalten für Radfahrer sogar früher auf Grün als für Autos.",
-      "Du siehst also: Es hat sich gelohnt, das Fahrrad (30). Liebe Grüße",
-      "Lutz"
+      {
+       "t": "Liebe Olivia,",
+       "b": false
+      },
+      {
+       "t": "wie du ja weißt, mache ich gerade Urlaub auf Fehmarn. Und dass ich mein Fahrrad mitgenommen habe, war wirklich eine gute Idee. Radfahren macht hier nämlich viel Spaß trotz (21) Windes. Und es gibt auch Angebote für Radfahrer wie (22) , die sich vor allem erholen und nicht besonders anstrengen wollen.",
+       "b": false
+      },
+      {
+       "t": "So kann man hier zum Beispiel (23) Fahrkarten kaufen, um mit dem Bus in einen anderen Ort zu fahren und mit dem Rad zurück. Oder es gibt Angebote mit Schiffen, die das Rad (24) wenig Geld transportieren.",
+       "b": false
+      },
+      {
+       "t": "Besonders (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) Hafen sind mir die vielen Fahrräder aufgefallen. (27) gibt es Markierungen auf den Straßen, die den Radfahrern(28), sich bei roten Ampeln vor die Autos zu stellen. (29) Ampeln schalten für Radfahrer sogar früher auf Grün als für Autos.",
+       "b": false
+      },
+      {
+       "t": "Du siehst also: Es hat sich gelohnt, das Fahrrad (30). Liebe Grüße",
+       "b": false
+      },
+      {
+       "t": "Lutz",
+       "b": false
+      }
      ]
     }
    ],
@@ -430,6 +469,21 @@
      "answer": "B"
     },
     {
+     "id": "23",
+     "text": "… anstrengen wollen. So kann man hier zum Beispiel (23) Fahrkarten kaufen, um mit dem Bus in einen anderen Ort zu …",
+     "options": [
+      {
+       "key": "A",
+       "text": "besondere"
+      },
+      {
+       "key": "B",
+       "text": "besonderem"
+      }
+     ],
+     "answer": "A"
+    },
+    {
      "id": "24",
      "text": "… zurück. Oder es gibt Angebote mit Schiffen, die das Rad (24) wenig Geld transportieren. Besonders (25) hat mich aber …",
      "options": [
@@ -447,6 +501,40 @@
       }
      ],
      "answer": "B"
+    },
+    {
+     "id": "25",
+     "text": "… die das Rad (24) wenig Geld transportieren. Besonders (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "beeindrucken"
+      },
+      {
+       "key": "B",
+       "text": "beeindruckend"
+      },
+      {
+       "key": "C",
+       "text": "beeindruckt"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "26",
+     "text": "… (25) hat mich aber die Stadt Burg auf Fehmarn. Schon (26) Hafen sind mir die vielen Fahrräder aufgefallen. (27) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "am"
+      },
+      {
+       "key": "B",
+       "text": "im"
+      }
+     ],
+     "answer": "A"
     },
     {
      "id": "27",
@@ -487,6 +575,21 @@
      "answer": "A"
     },
     {
+     "id": "29",
+     "text": "… sich bei roten Ampeln vor die Autos zu stellen. (29) Ampeln schalten für Radfahrer sogar früher auf Grün als …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Einige"
+      },
+      {
+       "key": "B",
+       "text": "Einigen"
+      }
+     ],
+     "answer": "A"
+    },
+    {
      "id": "30",
      "text": "… Autos. Du siehst also: Es hat sich gelohnt, das Fahrrad (30). Liebe Grüße Lutz",
      "options": [
@@ -508,8 +611,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 9.0,
-   "missing": 4
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -522,15 +625,42 @@
    "passages": [
     {
      "paragraphs": [
-      "besonderen zum Einiges",
-      "C C",
-      ") (  ",
-      "Sehr geehrte Damen und Herren,",
-      "unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen Entwicklungsprogrammen vorzubereiten.",
-      "Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt.",
-      "Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November.",
-      "Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen",
-      "ADRIAN SCHÖLLER EVD Trans GmbH"
+      {
+       "t": "besonderen zum Einiges",
+       "b": false
+      },
+      {
+       "t": "C C",
+       "b": false
+      },
+      {
+       "t": ") (  ",
+       "b": false
+      },
+      {
+       "t": "Sehr geehrte Damen und Herren,",
+       "b": false
+      },
+      {
+       "t": "unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen Entwicklungsprogrammen vorzubereiten.",
+       "b": false
+      },
+      {
+       "t": "Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt.",
+       "b": false
+      },
+      {
+       "t": "Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November.",
+       "b": false
+      },
+      {
+       "t": "Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen",
+       "b": false
+      },
+      {
+       "t": "ADRIAN SCHÖLLER EVD Trans GmbH",
+       "b": false
+      }
      ]
     }
    ],

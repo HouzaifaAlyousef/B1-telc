@@ -139,13 +139,34 @@
    "passages": [
     {
      "paragraphs": [
-      "Philipp Reis der wahre Erfinder des Telefons?",
-      "Erfinder, Lehrer, Familienvater Auf den Spuren von Philipp Reis besuchte Susanne Müller seinen Geburtsort.",
-      "Weil sein Vater nie aufgeschrieben habe, was er machte, ist mancher gute Gedanke verloren gegangen, klagt später einmal Karl Reis. Auch gibt es wenige offizielle Berichte und Dokumente über Philipp Reis in",
-      "Friedrichsdorf und in seiner Geburtsstadt Gelnhausen. Das gilt besonders für das private Leben der Familie Reis, die ab 1852 in unmittelbarer Nähe des berühmten Garnier – Instituts in Friedrichsdorf ein Haus gefunden hatte. Berichte des Sohnes Karl Reis erzählen ein wenig mehr über das Leben des Erfinders. Karl Reis, der beim Tod des Vaters erst elf Jahre alt war, berichtet von einem lieben und gerechten Vater, der sich sehr um seine Frau und seine Kinder gesorgt hat. Wenn der Vater aber seine Experimente machte, vergaß er alles um sich herum.",
-      "Philipp Reis lernte bereits als Junge viele technische Maschinen kennen und machte eine Reihe von Experimenten, die er als Lehrer am Garnier – Institut fortsetzte. Er entwickelte eine große Anzahl von technischen Geräten, die im Institut gut verwendet werden konnten. Auf die Schüler machte Philipp Reis einen oft sehr merkwürdigen Eindruck. Verunsichert waren die Schüler besonders dann, wenn Reis Aufsicht hatte, aber selbst im Klassenraum gar nicht anwesend war.",
-      "Trotzdem konnte Reis alles hören und wusste, was passiert war. Philipp Reis hatte eine besondere Kamera gebaut, mit der er von seinem Arbeitszimmer aus, in dem er gleichzeitig Experimente durchführte, in die Klassenräume schauen konnte. Ein Draht, der über den Schulhof in sein Arbeitszimmer führte, diente als Vorläufer des späteren Telefons. Bei den Schülern und Lehrern entstand so der Ruf, dass der Reis auf geheimnisvolle. Weise alles sehen kann.",
-      "1883 schrieb der englische Professor Silvanus Thompson einen Bericht über Reis und nannte ihn den wahren Erfinder des Telefons. Philipp Reis habe das Telefon entwickelt, und nicht Graham Bell oder Thomas Edison. Diese beiden amerikanischen Forscher hätten auch bei ihren Arbeite zur Entwicklung des Telefons auf Philipp Reis Experimente in Deutschland hingewiesen. Seine offizielle Anerkennung als Erfinder des Telefons hat Philipp Reis allerdings nicht mehr erlebt. Im Jahre 1874 ist er in Friedrichsdorf an einer Lungenkrankheit gestorben."
+      {
+       "t": "Philipp Reis der wahre Erfinder des Telefons?",
+       "b": true
+      },
+      {
+       "t": "Erfinder, Lehrer, Familienvater Auf den Spuren von Philipp Reis besuchte Susanne Müller seinen Geburtsort.",
+       "b": true
+      },
+      {
+       "t": "Weil sein Vater nie aufgeschrieben habe, was er machte, ist mancher gute Gedanke verloren gegangen, klagt später einmal Karl Reis. Auch gibt es wenige offizielle Berichte und Dokumente über Philipp Reis in",
+       "b": false
+      },
+      {
+       "t": "Friedrichsdorf und in seiner Geburtsstadt Gelnhausen. Das gilt besonders für das private Leben der Familie Reis, die ab 1852 in unmittelbarer Nähe des berühmten Garnier – Instituts in Friedrichsdorf ein Haus gefunden hatte. Berichte des Sohnes Karl Reis erzählen ein wenig mehr über das Leben des Erfinders. Karl Reis, der beim Tod des Vaters erst elf Jahre alt war, berichtet von einem lieben und gerechten Vater, der sich sehr um seine Frau und seine Kinder gesorgt hat. Wenn der Vater aber seine Experimente machte, vergaß er alles um sich herum.",
+       "b": false
+      },
+      {
+       "t": "Philipp Reis lernte bereits als Junge viele technische Maschinen kennen und machte eine Reihe von Experimenten, die er als Lehrer am Garnier – Institut fortsetzte. Er entwickelte eine große Anzahl von technischen Geräten, die im Institut gut verwendet werden konnten. Auf die Schüler machte Philipp Reis einen oft sehr merkwürdigen Eindruck. Verunsichert waren die Schüler besonders dann, wenn Reis Aufsicht hatte, aber selbst im Klassenraum gar nicht anwesend war.",
+       "b": false
+      },
+      {
+       "t": "Trotzdem konnte Reis alles hören und wusste, was passiert war. Philipp Reis hatte eine besondere Kamera gebaut, mit der er von seinem Arbeitszimmer aus, in dem er gleichzeitig Experimente durchführte, in die Klassenräume schauen konnte. Ein Draht, der über den Schulhof in sein Arbeitszimmer führte, diente als Vorläufer des späteren Telefons. Bei den Schülern und Lehrern entstand so der Ruf, dass der Reis auf geheimnisvolle. Weise alles sehen kann.",
+       "b": false
+      },
+      {
+       "t": "1883 schrieb der englische Professor Silvanus Thompson einen Bericht über Reis und nannte ihn den wahren Erfinder des Telefons. Philipp Reis habe das Telefon entwickelt, und nicht Graham Bell oder Thomas Edison. Diese beiden amerikanischen Forscher hätten auch bei ihren Arbeite zur Entwicklung des Telefons auf Philipp Reis Experimente in Deutschland hingewiesen. Seine offizielle Anerkennung als Erfinder des Telefons hat Philipp Reis allerdings nicht mehr erlebt. Im Jahre 1874 ist er in Friedrichsdorf an einer Lungenkrankheit gestorben.",
+       "b": false
+      }
      ]
     }
    ],
@@ -381,24 +402,74 @@
    "passages": [
     {
      "paragraphs": [
-      "An alle Kunden",
-      "Gewinnen",
-      "Sehr geehrter Herr Schröder,",
-      "zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz Besonders ausgedacht: einen",
-      "attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere erfolgreiche Buchidee.",
-      "Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit ihrer",
-      "Kundennummer können Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte",
-      "Antwortschreiben zurück und bestellen Sie damit – ohne Risiko – das Buch des Monats. Sie erhalten dieses",
-      "Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, sollte Ihnen das Buch nicht gefallen.",
-      "Ohne irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonst",
-      "üblichen Preises in einer Buchhandlung. Gleichzeitig nehmen Sie an einem Preisausschreiben (27).",
-      "Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto",
-      "eine Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance auf den Hauptgewinn - einen Mercedes der S-Klasse. Wenn Sie innerhalb der",
-      "kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil –",
-      "vorausgesetzt, Sie haben die richtige Kundennummer.",
-      "Mit freundlichen Grüßen",
-      "Petra Obermoser",
-      "Leiterin der Abteilung Marketing"
+      {
+       "t": "An alle Kunden Gewinnen",
+       "b": true
+      },
+      {
+       "t": "Sehr geehrter Herr Schröder,",
+       "b": true
+      },
+      {
+       "t": "zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz Besonders ausgedacht: einen",
+       "b": false
+      },
+      {
+       "t": "attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere erfolgreiche Buchidee.",
+       "b": false
+      },
+      {
+       "t": "Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit ihrer",
+       "b": false
+      },
+      {
+       "t": "Kundennummer können Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte",
+       "b": false
+      },
+      {
+       "t": "Antwortschreiben zurück und bestellen Sie damit – ohne Risiko – das Buch des Monats. Sie erhalten dieses",
+       "b": false
+      },
+      {
+       "t": "Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, sollte Ihnen das Buch nicht gefallen.",
+       "b": false
+      },
+      {
+       "t": "Ohne irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonst",
+       "b": false
+      },
+      {
+       "t": "üblichen Preises in einer Buchhandlung. Gleichzeitig nehmen Sie an einem Preisausschreiben (27).",
+       "b": false
+      },
+      {
+       "t": "Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto",
+       "b": false
+      },
+      {
+       "t": "eine Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance auf den Hauptgewinn - einen Mercedes der S-Klasse. Wenn Sie innerhalb der",
+       "b": false
+      },
+      {
+       "t": "kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil –",
+       "b": false
+      },
+      {
+       "t": "vorausgesetzt, Sie haben die richtige Kundennummer.",
+       "b": false
+      },
+      {
+       "t": "Mit freundlichen Grüßen",
+       "b": false
+      },
+      {
+       "t": "Petra Obermoser",
+       "b": false
+      },
+      {
+       "t": "Leiterin der Abteilung Marketing",
+       "b": false
+      }
      ]
     }
    ],
@@ -610,11 +681,26 @@
    "passages": [
     {
      "paragraphs": [
-      "Sehr geehrte Damen und Herren,",
-      "seit längerem plane ich eine Wanderreise in die Sahara-Länder. Nun ist mir beim Lesen der Zeitschrift Berge die Anzeige von Geo-Tours aufgefallen, denn (31) steht, dass Sie auf Erlebnisreisen in Wüstenregionen spezialisiert sind. Vielleicht haben Sie das richtige Angebot für uns - (32) für mich und meine 17-Jährige Tochter. Unsere Vorstellungen sind im Einzelnen diese:",
-      "Zuerst eine Wanderreise, etwa 10 Tage, möglichst leichte Tageswanderungen(ca. 4 – 5 Stunden), und (33) ein Erholungsurlaub am Meer. Bieten Sie solche Kombinationen an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch folgende Fragen: Wird das Gepäck von einem Übernachtungsort zum nächsten transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen zusammengesetzt sind, (38) Sprache die Reiseleiterin/ der Reiseleiter spricht und ob ein Arzt (39) ist.",
-      "Ich freue mich auf Ihr (40).",
-      "Mit freundlichen Grüßen ANNETTE LUCHSINGER"
+      {
+       "t": "Sehr geehrte Damen und Herren,",
+       "b": false
+      },
+      {
+       "t": "seit längerem plane ich eine Wanderreise in die Sahara-Länder. Nun ist mir beim Lesen der Zeitschrift Berge die Anzeige von Geo-Tours aufgefallen, denn (31) steht, dass Sie auf Erlebnisreisen in Wüstenregionen spezialisiert sind. Vielleicht haben Sie das richtige Angebot für uns - (32) für mich und meine 17-Jährige Tochter. Unsere Vorstellungen sind im Einzelnen diese:",
+       "b": false
+      },
+      {
+       "t": "Zuerst eine Wanderreise, etwa 10 Tage, möglichst leichte Tageswanderungen(ca. 4 – 5 Stunden), und (33) ein Erholungsurlaub am Meer. Bieten Sie solche Kombinationen an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch folgende Fragen: Wird das Gepäck von einem Übernachtungsort zum nächsten transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen zusammengesetzt sind, (38) Sprache die Reiseleiterin/ der Reiseleiter spricht und ob ein Arzt (39) ist.",
+       "b": false
+      },
+      {
+       "t": "Ich freue mich auf Ihr (40).",
+       "b": false
+      },
+      {
+       "t": "Mit freundlichen Grüßen ANNETTE LUCHSINGER",
+       "b": false
+      }
      ]
     }
    ],

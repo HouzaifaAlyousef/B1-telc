@@ -139,16 +139,46 @@
    "passages": [
     {
      "paragraphs": [
-      "Gelsenkirchen bietet schon seit Jahren preisgünstige Ferien. Über 1100 Zimmer und",
-      "– –",
-      "Wohnungen auch für das kleine Portemonnaie stehen zwischen Nordsee und Sizilien den",
-      "Mitgliedern im neuen Katalog zur Auswahl. Nichtmitglieder erhalten diesen Katalog gegen eine",
-      "Gebühr von 5 Euro. Infos: Telefon 061/981 25 25 oder",
-      "www.ferienwohnung.ch",
-      "Du oder Sie das ist hier die Frage",
-      "Sprachliche Regeln am Arbeitsplatz",
-      "Häufig erscheint Invar Kamprad, lekea-Gründer und-Besitzer, am Morgen unangemeldet angemeldet am Hintereingang einer seiner Filialen Guten Morgen ich bin der Invar Das schwedische Möbelbaus ist das beste Beispiel für die Du Kultur am Arbeitsplatz, denn alle Beschäftigten sprechen sich mit Du an. Die Gesellschaft für deutsche Sprache in Wiesbaden hat nun in einer Untersuchung festgestellt, dass mehr als 53 Prozent der befragten Personen alle Arbeitskollegen duzen. Wie zu erwarten sind es vor allem die 16 bis 29 jährigen (59 Prozent) die sich lieber schnell duzen Bei den über 60 Jährigen sank die Zahl auf 14 Prozent warum eigentlich sagt man am Arbeitsplatz immer öfter Du Zum Beispiel pflegen Ikea Greenpeace und McDonalds alle das obligatorische Du Damit wollen sie Vertrauen aufbauen und ein familiäres Umfeld schaffen. Gegenüber den Kunden ist an jedoch vorsichtiger geworden. So hat Ikea im Verkaufskatalog statt dem Du wieder das sie eingeführt Man hofft mit Sie mehr Leute nicht nur jüngere anzusprechen. Bis heute üblich ist das Du zum Beispiel in Schweizer Gewerkschaften Viele Mitglieder sind sogar beleidigt, wenn sie mit sie angesprochen werden Es gibt aber auch umgekehrten Fall, zwar bei der Polizei Wer in Deutschland einen Polizisten duzt riskiert eine Strafe in der Schweizer hingegen findet man eine Anzeige wegen Duzens eines Beamten übertrieben Polizisten werden sowieso kaum mit Du angesprochen meint Hanspeter Fäh von der Zürcher Stadtpolizei Der Trend zum Du kann jedoch auch als sozialer Druck oder Zwang empfunden werden. Ein Du abzulehnen gilt nämlich als unfreundlich. Das hat Dieter S Angestellter bei einem Textilgeschäft in Deutschland erfahren Ein Gericht entschied, dass er seine Kollegen weiterhin mit Du ansprechen musste.",
-      "So sehr das Du in der Gesellschaft auch an Bedeutung gewinnt das Sie hat immer noch eine feste soziale Basis und kann diese sogar ausbauen Benimmkurse, wo man Höflichkeit und die richtigen Umgangsformen lernt, sind heute im Trend immer mehr Firmen schulen ihre Mitarbeiter in stilvollem Verhalten. Dazu gehören folgende Grundregeln: Die ältere Person bietet der jüngeren das Du an Oft ist jedoch auch die Stellung entscheidend Der ältere Mitarbeiter bietet seinem jüngeren Chef nie das Du an."
+      {
+       "t": "Gelsenkirchen bietet schon seit Jahren preisgünstige Ferien. Über 1100 Zimmer und",
+       "b": false
+      },
+      {
+       "t": "– –",
+       "b": false
+      },
+      {
+       "t": "Wohnungen auch für das kleine Portemonnaie stehen zwischen Nordsee und Sizilien den",
+       "b": false
+      },
+      {
+       "t": "Mitgliedern im neuen Katalog zur Auswahl. Nichtmitglieder erhalten diesen Katalog gegen eine",
+       "b": false
+      },
+      {
+       "t": "Gebühr von 5 Euro. Infos: Telefon 061/981 25 25 oder",
+       "b": false
+      },
+      {
+       "t": "www.ferienwohnung.ch",
+       "b": false
+      },
+      {
+       "t": "Du oder Sie das ist hier die Frage",
+       "b": true
+      },
+      {
+       "t": "Sprachliche Regeln am Arbeitsplatz",
+       "b": true
+      },
+      {
+       "t": "Häufig erscheint Invar Kamprad, lekea-Gründer und-Besitzer, am Morgen unangemeldet angemeldet am Hintereingang einer seiner Filialen Guten Morgen ich bin der Invar Das schwedische Möbelbaus ist das beste Beispiel für die Du Kultur am Arbeitsplatz, denn alle Beschäftigten sprechen sich mit Du an. Die Gesellschaft für deutsche Sprache in Wiesbaden hat nun in einer Untersuchung festgestellt, dass mehr als 53 Prozent der befragten Personen alle Arbeitskollegen duzen. Wie zu erwarten sind es vor allem die 16 bis 29 jährigen (59 Prozent) die sich lieber schnell duzen Bei den über 60 Jährigen sank die Zahl auf 14 Prozent warum eigentlich sagt man am Arbeitsplatz immer öfter Du Zum Beispiel pflegen Ikea Greenpeace und McDonalds alle das obligatorische Du Damit wollen sie Vertrauen aufbauen und ein familiäres Umfeld schaffen. Gegenüber den Kunden ist an jedoch vorsichtiger geworden. So hat Ikea im Verkaufskatalog statt dem Du wieder das sie eingeführt Man hofft mit Sie mehr Leute nicht nur jüngere anzusprechen. Bis heute üblich ist das Du zum Beispiel in Schweizer Gewerkschaften Viele Mitglieder sind sogar beleidigt, wenn sie mit sie angesprochen werden Es gibt aber auch umgekehrten Fall, zwar bei der Polizei Wer in Deutschland einen Polizisten duzt riskiert eine Strafe in der Schweizer hingegen findet man eine Anzeige wegen Duzens eines Beamten übertrieben Polizisten werden sowieso kaum mit Du angesprochen meint Hanspeter Fäh von der Zürcher Stadtpolizei Der Trend zum Du kann jedoch auch als sozialer Druck oder Zwang empfunden werden. Ein Du abzulehnen gilt nämlich als unfreundlich. Das hat Dieter S Angestellter bei einem Textilgeschäft in Deutschland erfahren Ein Gericht entschied, dass er seine Kollegen weiterhin mit Du ansprechen musste.",
+       "b": false
+      },
+      {
+       "t": "So sehr das Du in der Gesellschaft auch an Bedeutung gewinnt das Sie hat immer noch eine feste soziale Basis und kann diese sogar ausbauen Benimmkurse, wo man Höflichkeit und die richtigen Umgangsformen lernt, sind heute im Trend immer mehr Firmen schulen ihre Mitarbeiter in stilvollem Verhalten. Dazu gehören folgende Grundregeln: Die ältere Person bietet der jüngeren das Du an Oft ist jedoch auch die Stellung entscheidend Der ältere Mitarbeiter bietet seinem jüngeren Chef nie das Du an.",
+       "b": false
+      }
      ]
     }
    ],
@@ -345,10 +375,22 @@
    "passages": [
     {
      "paragraphs": [
-      "Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien bestellt und diese zwei Tage vor Abflug am 27. Juni auch erhalten. Leider entsprachen die Tickets überhaupt nicht dem, was zuvor bei der Buchung am Telefon ausgemacht worden (22).",
-      "(23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro.",
-      "Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Bank of India in Mumbai bitten. Meine Bankdaten finden Sie unten. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.",
-      "Mit freundlichen Grüßen Luisa Martin"
+      {
+       "t": "Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien bestellt und diese zwei Tage vor Abflug am 27. Juni auch erhalten. Leider entsprachen die Tickets überhaupt nicht dem, was zuvor bei der Buchung am Telefon ausgemacht worden (22).",
+       "b": false
+      },
+      {
+       "t": "(23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro.",
+       "b": false
+      },
+      {
+       "t": "Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Bank of India in Mumbai bitten. Meine Bankdaten finden Sie unten. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.",
+       "b": false
+      },
+      {
+       "t": "Mit freundlichen Grüßen Luisa Martin",
+       "b": false
+      }
      ]
     }
    ],
@@ -370,7 +412,7 @@
        "text": "Sie"
       }
      ],
-     "answer": "A"
+     "answer": "B"
     },
     {
      "id": "22",
@@ -484,18 +526,54 @@
    "passages": [
     {
      "paragraphs": [
-      "3. anach an",
-      "Obwohl sondern bei",
-      "B B",
-      "Nämlich sonst vor",
-      "C C",
-      ") (",
-      "Sehr geehrte Damen und Herren,",
-      "unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen",
-      "Entwicklungsprogrammen vorzubereiten.",
-      "Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt.",
-      "Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen",
-      "ADRIAN SCHÖLLER EVD Trans GmbH"
+      {
+       "t": "3. anach an",
+       "b": false
+      },
+      {
+       "t": "Obwohl sondern bei",
+       "b": false
+      },
+      {
+       "t": "B B",
+       "b": false
+      },
+      {
+       "t": "Nämlich sonst vor",
+       "b": false
+      },
+      {
+       "t": "C C",
+       "b": false
+      },
+      {
+       "t": ") (",
+       "b": false
+      },
+      {
+       "t": "Sehr geehrte Damen und Herren,",
+       "b": false
+      },
+      {
+       "t": "unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen",
+       "b": false
+      },
+      {
+       "t": "Entwicklungsprogrammen vorzubereiten.",
+       "b": false
+      },
+      {
+       "t": "Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt.",
+       "b": false
+      },
+      {
+       "t": "Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen",
+       "b": false
+      },
+      {
+       "t": "ADRIAN SCHÖLLER EVD Trans GmbH",
+       "b": false
+      }
      ]
     }
    ],

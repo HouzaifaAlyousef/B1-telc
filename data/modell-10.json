@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 102.0,
-   "missing": 2
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "59 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -139,32 +139,110 @@
    "passages": [
     {
      "paragraphs": [
-      "Computerprobleme ein Kinderspiel",
-      "Anne und Melanie (beide 6) stehen Erzieherinnen mit Vorschlägen hilfreich zur Seite",
-      "Von Christiane Altenberger",
-      "Sie sind die Problemlöser im Kindergarten an der Munckerstraße. Wenn das Malprogram spinnt, plötzlich ein",
-      "Spiel auftaucht, das keiner kennt, dann rufen die Erzieherinnen nach Anne und Melanie. Die sind zwar erst",
-      "sechs Jahre alt, aber mit den Computerspielen kennen sie sich aus. Die Kinder wissen manchmal mehr als wir",
-      "sagt Eva Schilling. Leiterin des Kindergartens. Gelernt haben die beiden ihr Know-how bei Multimedia-",
-      "Landschaften für Kinder, einem Projekt, das das Schulamt zusammen mit dem Studio im Netz gestartet hat.",
-      "Im Rahmen dieses Projekts werden in städtischen Kindergärten zwei Wanderstationen mit je drei Multimedia-",
-      "Computern und einem Farbdrucker installiert. Die Stationen wandern durch 14 Kindergärten, wo sie jeweils",
-      "für vier Wochen installiert werden. Mit dabei in den Kindergärten: ein ganzer Satz von Spiel – Software.",
-      "Vierjährige am Computer? In Pädagogen kreisen sind viele Berührungsängste da, weiß Edith llg, Fachberaterin",
-      "für Kindergärten beim Schulamt, aber wir können uns aus dieser Entwicklung nicht ausklinken. Die Kinder",
-      "wollen sich mit ihrer Umwelt auseinandersetzen. Angefangen hat diese Auseinandersetzung im Studio im Netz – 193 Kinder waren eingeladen, um erste Erfahrungen am Computer zu sammeln. Die Kinder waren absolut",
-      "begeistert, haben immer wieder gefragt, wann gehen wir da wieder hin, so Frau llg.",
-      "Bevor jedoch die Computer in die Kindergärten kamen, waren die Eltern aufzuklären. Bei manchen Eltern löste",
-      "das Stichwort Computer akute Ängste aus nach dem Motto: Mein fröhliches, gesundes Kind setzt sich vor den",
-      "Computer und steht sechs Stunden später krank, sprachlos und einsam wieder auf.",
-      "Diese Ängste haben sich inzwischen gelegt und die Erfahrung vor Ort zeigt, dass sie weitgehend über flüssig",
-      "sind. Die Erzieherinnen achten auch darauf, dass die Kinder nie länger als 15 bis 20 Minuten vor den",
-      "Computern sitzen, und holen vor allem kreative Software auf den Bildschirm.",
-      "Das einsame Dämmern vor dem Computer ist wohl ohnehin eher Sache der Erwachsenen – die Kinder spielen",
-      "immer zu zweit oder zu dritt an der Maschine. Eva Schilling hat beobachtet, dass die Kinder am Computer sehr",
-      "friedlich miteinander umgehen, sie helfen sich gegenseitig, es gibt wenig Konflikte. Dabei entwickeln gerade",
-      "Kinder, die sich sonst nur schwer auf etwas konzentrieren können, plötzlich ungeahnte Konzentrationszeiten.",
-      "Eva Schilling kann sich deshalb die Computer als Dauereinrichtung im Kindergarten vorstellen."
+      {
+       "t": "Computerprobleme ein Kinderspiel",
+       "b": true
+      },
+      {
+       "t": "Anne und Melanie (beide 6) stehen Erzieherinnen mit Vorschlägen hilfreich zur Seite",
+       "b": true
+      },
+      {
+       "t": "Von Christiane Altenberger",
+       "b": true
+      },
+      {
+       "t": "Sie sind die Problemlöser im Kindergarten an der Munckerstraße. Wenn das Malprogram spinnt, plötzlich ein",
+       "b": false
+      },
+      {
+       "t": "Spiel auftaucht, das keiner kennt, dann rufen die Erzieherinnen nach Anne und Melanie. Die sind zwar erst",
+       "b": false
+      },
+      {
+       "t": "sechs Jahre alt, aber mit den Computerspielen kennen sie sich aus. Die Kinder wissen manchmal mehr als wir",
+       "b": false
+      },
+      {
+       "t": "sagt Eva Schilling. Leiterin des Kindergartens. Gelernt haben die beiden ihr Know-how bei Multimedia-",
+       "b": false
+      },
+      {
+       "t": "Landschaften für Kinder, einem Projekt, das das Schulamt zusammen mit dem Studio im Netz gestartet hat.",
+       "b": false
+      },
+      {
+       "t": "Im Rahmen dieses Projekts werden in städtischen Kindergärten zwei Wanderstationen mit je drei Multimedia-",
+       "b": false
+      },
+      {
+       "t": "Computern und einem Farbdrucker installiert. Die Stationen wandern durch 14 Kindergärten, wo sie jeweils",
+       "b": false
+      },
+      {
+       "t": "für vier Wochen installiert werden. Mit dabei in den Kindergärten: ein ganzer Satz von Spiel – Software.",
+       "b": false
+      },
+      {
+       "t": "Vierjährige am Computer? In Pädagogen kreisen sind viele Berührungsängste da, weiß Edith llg, Fachberaterin",
+       "b": false
+      },
+      {
+       "t": "für Kindergärten beim Schulamt, aber wir können uns aus dieser Entwicklung nicht ausklinken. Die Kinder",
+       "b": false
+      },
+      {
+       "t": "wollen sich mit ihrer Umwelt auseinandersetzen. Angefangen hat diese Auseinandersetzung im Studio im Netz – 193 Kinder waren eingeladen, um erste Erfahrungen am Computer zu sammeln. Die Kinder waren absolut",
+       "b": false
+      },
+      {
+       "t": "begeistert, haben immer wieder gefragt, wann gehen wir da wieder hin, so Frau llg.",
+       "b": false
+      },
+      {
+       "t": "Bevor jedoch die Computer in die Kindergärten kamen, waren die Eltern aufzuklären. Bei manchen Eltern löste",
+       "b": false
+      },
+      {
+       "t": "das Stichwort Computer akute Ängste aus nach dem Motto: Mein fröhliches, gesundes Kind setzt sich vor den",
+       "b": false
+      },
+      {
+       "t": "Computer und steht sechs Stunden später krank, sprachlos und einsam wieder auf.",
+       "b": false
+      },
+      {
+       "t": "Diese Ängste haben sich inzwischen gelegt und die Erfahrung vor Ort zeigt, dass sie weitgehend über flüssig",
+       "b": false
+      },
+      {
+       "t": "sind. Die Erzieherinnen achten auch darauf, dass die Kinder nie länger als 15 bis 20 Minuten vor den",
+       "b": false
+      },
+      {
+       "t": "Computern sitzen, und holen vor allem kreative Software auf den Bildschirm.",
+       "b": false
+      },
+      {
+       "t": "Das einsame Dämmern vor dem Computer ist wohl ohnehin eher Sache der Erwachsenen – die Kinder spielen",
+       "b": false
+      },
+      {
+       "t": "immer zu zweit oder zu dritt an der Maschine. Eva Schilling hat beobachtet, dass die Kinder am Computer sehr",
+       "b": false
+      },
+      {
+       "t": "friedlich miteinander umgehen, sie helfen sich gegenseitig, es gibt wenig Konflikte. Dabei entwickeln gerade",
+       "b": false
+      },
+      {
+       "t": "Kinder, die sich sonst nur schwer auf etwas konzentrieren können, plötzlich ungeahnte Konzentrationszeiten.",
+       "b": false
+      },
+      {
+       "t": "Eva Schilling kann sich deshalb die Computer als Dauereinrichtung im Kindergarten vorstellen.",
+       "b": false
+      }
      ]
     }
    ],
@@ -400,9 +478,18 @@
    "passages": [
     {
      "paragraphs": [
-      "Liebe Beatrice, wie du ja weißt, sind meine Eltern seit Anfang Mai in einem Haus (21)Mittelnehmer in Spanien. Zuerst wollen meine Eltern warten, bis ich mit dem Gymnasium fertig bin. Aber dann sind sie doch (22) früher gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich wohne jetzt mit drei (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine Probleme. Ich staune selbst über meine Noten, wenn ich (27) denke, wie (28) Zeit ich mir für Hausaufgaben nehme.",
-      "Manchmal schicken mir meine Eltern eine E-Mail. (29) sie rufen an.",
-      "(30) jetzt habe ich jede Woche von ihnen gehört. Das war’s für heute, bis bald und liebe Grüße Saskia"
+      {
+       "t": "Liebe Beatrice, wie du ja weißt, sind meine Eltern seit Anfang Mai in einem Haus (21)Mittelnehmer in Spanien. Zuerst wollen meine Eltern warten, bis ich mit dem Gymnasium fertig bin. Aber dann sind sie doch (22) früher gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich wohne jetzt mit drei (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine Probleme. Ich staune selbst über meine Noten, wenn ich (27) denke, wie (28) Zeit ich mir für Hausaufgaben nehme.",
+       "b": false
+      },
+      {
+       "t": "Manchmal schicken mir meine Eltern eine E-Mail. (29) sie rufen an.",
+       "b": false
+      },
+      {
+       "t": "(30) jetzt habe ich jede Woche von ihnen gehört. Das war’s für heute, bis bald und liebe Grüße Saskia",
+       "b": false
+      }
      ]
     }
    ],
@@ -446,6 +533,21 @@
      "answer": "C"
     },
     {
+     "id": "23",
+     "text": "… gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mein"
+      },
+      {
+       "key": "B",
+       "text": "meinem"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "24",
      "text": "… mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich …",
      "options": [
@@ -482,6 +584,21 @@
       }
      ],
      "answer": "C"
+    },
+    {
+     "id": "26",
+     "text": "… (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine …",
+     "options": [
+      {
+       "key": "A",
+       "text": "aber"
+      },
+      {
+       "key": "B",
+       "text": "obwohl"
+      }
+     ],
+     "answer": "B"
     },
     {
      "id": "27",
@@ -562,8 +679,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 12.0,
-   "missing": 2
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -576,14 +693,38 @@
    "passages": [
     {
      "paragraphs": [
-      "meinen trotz Sondern",
-      "C C",
-      "Chiffre 2063/9369 Sehr geehrter Unbekannter,",
-      "mein Mann und ich haben Ihre Anzeige in den Mitteilungen des Deutschen. Alpenvereins (31). Wir wohnen etwa 40 km außerhalb von Nürnberg und schreiben Ihnen, (32) wir Lust hätten, etwas in einer Gruppe zu machen.",
-      "Unseren Sommerurlaub verbringen wir eigentlich regelmäßig in den Bergen. Und (33) es unser Terminkalender erlaubt, gehen wir auch noch am Wochenende wandern, (34) fahren wir in die Gegend vom Wilden Kaiser, wo wir inzwischen alle Wanderwege (35).",
-      "Wir fahren zwar beide auch Ski, (36) der Winter den Bergen ist nicht so unbedingt unsere Sache. Dagegen macht es (37) viel Spaß. Fahrrad zu fahren,; hier in Leupoldstein haben wir tolle Radwege, die durch die Felder führen. Daher (38) wir uns auch auf gemeinsame Radtouren hier bei uns freuen.",
-      "Zum Schluss noch ein (39) Worte zu uns selbst. Wir sind 64 und 62. Jahre alt, lieben Musik und gehen ab und zu gern ins Theater. Rufen Sie uns doch einfach (40) an: Tel.: 09243/7448.",
-      "Viele Grüße Ilka und Heiner Grossmann"
+      {
+       "t": "meinen trotz Sondern",
+       "b": false
+      },
+      {
+       "t": "C C",
+       "b": false
+      },
+      {
+       "t": "Chiffre 2063/9369 Sehr geehrter Unbekannter,",
+       "b": false
+      },
+      {
+       "t": "mein Mann und ich haben Ihre Anzeige in den Mitteilungen des Deutschen. Alpenvereins (31). Wir wohnen etwa 40 km außerhalb von Nürnberg und schreiben Ihnen, (32) wir Lust hätten, etwas in einer Gruppe zu machen.",
+       "b": false
+      },
+      {
+       "t": "Unseren Sommerurlaub verbringen wir eigentlich regelmäßig in den Bergen. Und (33) es unser Terminkalender erlaubt, gehen wir auch noch am Wochenende wandern, (34) fahren wir in die Gegend vom Wilden Kaiser, wo wir inzwischen alle Wanderwege (35).",
+       "b": false
+      },
+      {
+       "t": "Wir fahren zwar beide auch Ski, (36) der Winter den Bergen ist nicht so unbedingt unsere Sache. Dagegen macht es (37) viel Spaß. Fahrrad zu fahren,; hier in Leupoldstein haben wir tolle Radwege, die durch die Felder führen. Daher (38) wir uns auch auf gemeinsame Radtouren hier bei uns freuen.",
+       "b": false
+      },
+      {
+       "t": "Zum Schluss noch ein (39) Worte zu uns selbst. Wir sind 64 und 62. Jahre alt, lieben Musik und gehen ab und zu gern ins Theater. Rufen Sie uns doch einfach (40) an: Tel.: 09243/7448.",
+       "b": false
+      },
+      {
+       "t": "Viele Grüße Ilka und Heiner Grossmann",
+       "b": false
+      }
      ]
     }
    ],

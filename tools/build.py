@@ -108,7 +108,11 @@ def norm(ans, fmt):
     return ans.upper() if ans and ans.isalpha() else None
 
 
-def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
+SB1_STATS = collections.Counter()
+
+
+def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc,
+                  extra_rows=()):
     grp, title, minutes = META[kind]
     sec = {'id': kind.lower(), 'group': grp, 'title': title, 'minutes': minutes}
     sec['instruction'] = INSTR.get(kind, HV_INSTR)
@@ -139,15 +143,15 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         if body:
             passages = [{'paragraphs': body}]
         for it in items:
-            it['text'] = gap_context(' '.join(body), it['id'])
+            it['text'] = gap_context(' '.join(x['t'] for x in body), it['id'])
     elif kind == 'SB2':
         fmt = 'wordbank'
-        bank, body = S.parse_sb2(rows)
+        bank, body = S.parse_sb2(rows, extra_rows)
         bank = [{'key': b['key'].upper(), 'text': b['text']} for b in bank]
         if body:
             passages = [{'paragraphs': body}]
         # الفراغات ٣١-٤٠ مرقّمة بالنص نفسه، فمنولّدها من مدى الأرقام
-        flat = ' '.join(body)
+        flat = ' '.join(x['t'] for x in body)
         items = [{'id': str(n), 'text': gap_context(flat, n)} for n in range(lo, hi + 1)]
         sec['bankTitle'] = 'Wörterliste'
     elif kind.startswith('HV'):
@@ -175,17 +179,33 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
     if kind == 'SB1':
         # مفتاح الحلول بيعطي الكلمة الصحيحة لكل فراغ — منستعمله للتأكد
         # من ربط الخيار بحرفه، ومنحذف السؤال إذا الكلمة مو موجودة بالخيارات
-        def key_norm(t):
-            return re.sub(r'[^a-zäöüß]', '', spelling.repair(t).lower())
+        def key_norm(t, lower=True):
+            t = spelling.repair(t)
+            t = t.lower() if lower else t
+            return re.sub(r'[^A-Za-zÄÖÜäöüß]', '', t)
         checked = []
         for it in items:
             w = keyword.get(int(it['id']))
             a = norm(key.get(int(it['id'])), 'mc')
             if not w or not a:
                 continue
-            match = [o['key'] for o in it['options'] if key_norm(o['text']) == key_norm(w)]
-            if not match:
+            # "sie" و "Sie" خيارين مختلفين — إذا التطابق بدون حساسية
+            # لحالة الحرف طلع أكتر من واحد، منعيدها بحساسية
+            match = [o['key'] for o in it['options']
+                     if key_norm(o['text']) == key_norm(w)]
+            if len(match) > 1:
+                match = [o['key'] for o in it['options']
+                         if key_norm(o['text'], False) == key_norm(w, False)]
+            if len(match) != 1 and len(key_norm(w)) >= 4:
+                # كلمة المفتاح أحياناً مقصوصة بالطباعة ("beeindruck" بدل
+                # "beeindruckt"). منقبلها إذا الحرف المكتوب بالمفتاح خيارُه
+                # بيبلّش فيها — الحرف والكلمة بيأكدوا بعض.
+                opt = {o['key']: o['text'] for o in it['options']}
+                if a in opt and key_norm(opt[a]).startswith(key_norm(w)):
+                    match = [a]
+            if len(match) != 1:
                 continue                       # التحليل مو موثوق — احذف السؤال
+            SB1_STATS['ok'] += 1
             if match[0] != a:
                 key[int(it['id'])] = match[0]  # صحّح الحرف حسب الكلمة
             checked.append(it)
@@ -273,8 +293,8 @@ def main():
 
     # مفردات الملف — منستعملها بتصحيح الكلمات المقطوعة
     vocab = collections.Counter(
-        w for rows in pages.values() for _, _, t in rows
-        for w in re.findall(r'[A-Za-zÄÖÜäöüßẞ]+', t))
+        w for rows in pages.values() for r in rows
+        for w in re.findall(r'[A-Za-zÄÖÜäöüßẞ]+', r[2]))
     spelling.learn(vocab)
     doc = pypdfium2.PdfDocument(PDF)
     reader = PdfReader(PDF)
@@ -289,22 +309,11 @@ def main():
                 if not ps:
                     continue
                 rows = telcpdf.rows_for(pages, ps)
+                extra = []
                 if kind == 'SB2':                      # البنك بيكمّل على الصفحة التالية
-                    nxt = max(ps) + 1
-                    rows_extra = telcpdf.body_rows(pages.get(nxt, []))
-                    bank, body = S.parse_sb2(rows, rows_extra)
-                    bank = [{'key': b['key'].upper(), 'text': b['text']} for b in bank]
-                    sec = build_section(kind, i, rows, [], key, keyword, doc)
-                    if sec:
-                        sec['bank'] = bank
-                        sec['passages'] = [{'paragraphs': body}] if body else []
-                        sec['items'] = [it for it in sec['items']
-                                        if it['answer'] in [b['key'] for b in bank]]
-                        if not sec['items']:
-                            sec = None
-                else:
-                    words = telcpdf.words_for(pdf, ps) if kind == 'SB1' else []
-                    sec = build_section(kind, i, rows, words, key, keyword, doc)
+                    extra = telcpdf.body_rows(pages.get(max(ps) + 1, []))
+                words = telcpdf.words_for(pdf, ps) if kind == 'SB1' else []
+                sec = build_section(kind, i, rows, words, key, keyword, doc, extra)
 
                 if kind == 'LV3' and sec:
                     sec['bankImage'] = f'img/{export_ads(doc, reader, ps, i)}'
@@ -344,6 +353,7 @@ def main():
 
     with open(os.path.join(OUT, 'index.json'), 'w', encoding='utf-8') as f:
         json.dump({'modelle': index}, f, ensure_ascii=False, indent=1)
+    print('SB1-Schlüsselwort:', dict(SB1_STATS))
     print('\nAufgaben gesamt:', sum(
         len(s['items']) for e in index
         for s in json.load(open(os.path.join(OUT, e['file']), encoding='utf-8'))['sections']))
