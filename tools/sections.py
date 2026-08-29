@@ -1,6 +1,8 @@
 """تحليل محتوى أقسام امتحان telc B1 من صفوف الصفحات."""
 import re
 
+import spelling
+
 NUM_RE   = re.compile(r'^(\d{1,2})\s*[.)]?\s*(.*)$')
 DOTS_RE  = re.compile(r'^[.…·\s]{6,}$')
 OPT_RE   = re.compile(r'^([A-Ca-c])\s*[.)]?\s+(.{2,})$')
@@ -10,7 +12,7 @@ BANK_RE  = re.compile(r'^([A-Ja-j])\s*\)\s*(.+)$')
 def clean(t):
     t = t.replace('\xa0', ' ')
     t = re.sub(r'\s+', ' ', t).strip()
-    return t
+    return spelling.repair(t)      # أخطاء الإملاء الناتجة عن نسخ الـPDF
 
 
 def paragraphs(rows, gap_factor=1.4):
