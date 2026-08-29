@@ -232,6 +232,7 @@ textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
   color:var(--brand-dark); background:var(--brand-soft);
   padding:6px 13px; border-radius:999px; white-space:nowrap}
 .partnav a:hover{filter:brightness(.95)}
+.partnav a.active{background:var(--brand); color:#fff}
 
 /* Überschrift eines Teils innerhalb einer laufenden Prüfung */
 .part{scroll-margin-top:110px}
