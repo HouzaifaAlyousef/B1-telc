@@ -60,6 +60,7 @@ function startTimer(seconds, onEnd){
   S.tick = setInterval(() => {
     S.left--;
     paint();
+    if (S.left % 5 === 0) saveSession(S.run);
     if (S.left <= 0){ stopTimer(); onEnd && onEnd(); }
   }, 1000);
 
@@ -233,6 +234,7 @@ function screenIntro(run){
   const draft = loadDraft(run.id);          // unfertigen Text weiterführen
   if (draft && run.parts.length === 1 && run.parts[0].format === 'writing')
     S.answers[run.parts[0].items[0].id] = draft;
+  const sess = loadSession(run.id);         // angefangene Prüfung fortsetzen
   stopTimer();
   go('intro', () => {
     const n = runItems(run).length;
@@ -262,14 +264,26 @@ function screenIntro(run){
           <div><div class="meta" style="color:var(--muted);font-size:13px">Punkte</div>
                <b style="font-size:18px">${fmtP(run.maxPoints)}</b></div>
         </div>
-        <button class="btn wide" id="start">Start ▶</button>
+        ${sess ? `<button class="btn wide" id="resume">Prüfung fortsetzen — ${mmss(sess.left)} übrig</button>
+             <button class="btn ghost wide" id="start" style="margin-top:10px">Neu beginnen</button>`
+               : `<button class="btn wide" id="start">Start ▶</button>`}
       </div>`;
-    document.getElementById('start').onclick = () => screenExam(run);
+    document.getElementById('start').onclick = () => {
+      clearSession(run.id);
+      clearDraft(run.id);
+      S.answers = {}; S.dropped = {};
+      screenExam(run);
+    };
+    const res = document.getElementById('resume');
+    if (res) res.onclick = () => {
+      S.answers = { ...sess.answers }; S.dropped = { ...sess.dropped };
+      screenExam(run, sess.left);
+    };
   });
 }
 
 /* ============ Prüfung ============ */
-function screenExam(run){
+function screenExam(run, resumeLeft){
   go('exam', () => {
     const nav = run.parts.length > 1
       ? `<nav class="partnav">${run.parts.map((p, i) =>
@@ -287,12 +301,16 @@ function screenExam(run){
     app.innerHTML = nav + body +
       `<div class="bottombar"><div class="inner">
          <span class="progress" id="prog">0 / ${runItems(run).length}</span>
+         <button class="btn grey" id="pause">Pause</button>
          <button class="btn grow" id="submit">Abgeben &amp; korrigieren</button>
        </div></div>`;
 
     run.parts.forEach(p => bindInputs(p));
+    updateProgress();
     document.getElementById('submit').onclick = () => finish(run, false);
-    startTimer(run.minutes * 60, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
+    document.getElementById('pause').onclick = () => pauseExam(run);
+    startTimer(resumeLeft || run.minutes * 60,
+               () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
   });
 }
 
@@ -361,16 +379,19 @@ function renderItem(sec, it){
     const opts = sec.format === 'truefalse'
       ? [{ key: 'r', text: 'Richtig' }, { key: 'f', text: 'Falsch' }]
       : it.options;
+    const chosen = S.answers[it.id];
+    const gone = S.dropped[it.id] || [];
     body = `<div class="opts ${sec.format === 'truefalse' ? 'inline' : ''}">${
-      opts.map(o => `<label class="opt" data-opt="${esc(it.id)}|${esc(o.key)}">
-        <input type="radio" name="q_${esc(it.id)}" value="${esc(o.key)}">
+      opts.map(o => `<label class="opt${o.key === chosen ? ' sel' : ''}${gone.includes(o.key) ? ' dropped' : ''}" data-opt="${esc(it.id)}|${esc(o.key)}">
+        <input type="radio" name="q_${esc(it.id)}" value="${esc(o.key)}"${o.key === chosen ? ' checked' : ''}>
         <span class="k">${esc(o.key)}</span><span class="grow">${esc(o.text)}</span>
       </label>`).join('')}</div>`;
   }
   else if (sec.format === 'matching' || sec.format === 'wordbank'){
+    const chosen = S.answers[it.id] || '';
     body = `<select data-sel="${esc(it.id)}">
       <option value="">— bitte wählen —</option>
-      ${sec.bank.map(o => `<option value="${esc(o.key)}">${esc(o.key)}${o.text ? ' — ' + esc(o.text).slice(0, 70) : ''}</option>`).join('')}
+      ${sec.bank.map(o => `<option value="${esc(o.key)}"${o.key === chosen ? ' selected' : ''}>${esc(o.key)}${o.text ? ' — ' + esc(o.text).slice(0, 70) : ''}</option>`).join('')}
     </select>`;
   }
   return `<div class="q" id="q_${esc(it.id)}">${head}${body}</div>`;
@@ -445,9 +466,35 @@ const answered = it => {
 };
 
 function updateProgress(){
+  saveSession(S.run);
   const items = runItems(S.run);
   const p = document.getElementById('prog');
   if (p) p.textContent = `${items.filter(answered).length} / ${items.length}`;
+}
+
+/* Pause: der Timer hält an und die Aufgaben werden verdeckt — wie eine
+   echte Pause. Der Stand ist gesichert, die App darf auch zugehen. */
+function pauseExam(run){
+  stopTimer();
+  saveSession(run);
+  document.body.classList.add('paused');     // Aufgaben verdecken
+  const box = document.createElement('div');
+  box.className = 'modalback';
+  box.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
+    <h2 style="margin:0 0 6px">Pause</h2>
+    <p>Der Timer steht. Sie können die App schließen und später weitermachen.</p>
+    <p class="pausetime">${mmss(S.left)} übrig</p>
+    <div class="modalbtns">
+      <button class="btn grey" data-exit>Beenden</button>
+      <button class="btn" data-go>Weiter</button>
+    </div></div>`;
+  document.body.appendChild(box);
+  const close = () => { box.remove(); document.body.classList.remove('paused'); };
+  box.querySelector('[data-go]').onclick = () => {
+    close();
+    startTimer(S.left, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
+  };
+  box.querySelector('[data-exit]').onclick = () => { close(); screenModell(S.modell); };
 }
 
 /* ============ Korrektur ============ */
@@ -486,6 +533,23 @@ function clearDraft(runId){
   try { localStorage.removeItem(draftKey(runId)); } catch {}
 }
 
+/* جلسة امتحان جارية: الإجابات والوقت المتبقّي. منحفظها باستمرار تا لو
+   سكّرت الصفحة أو طلعت تتغدّى، ترجع من وين وقّفتي — والمؤقّت ما بيمشي وأنت
+   برّا، لأنه بينحفظ الوقت المتبقّي مو وقت البداية. */
+const sessKey = runId => `b1.session.${S.modell.id}.${runId}`;
+
+function saveSession(run){
+  if (!run || S.view !== 'exam') return;
+  save(sessKey(run.id), {
+    answers: S.answers, dropped: S.dropped, left: S.left,
+    date: new Date().toLocaleDateString('de-DE')
+  });
+}
+const loadSession = runId => load(sessKey(runId), null);
+function clearSession(runId){
+  try { localStorage.removeItem(sessKey(runId)); } catch {}
+}
+
 function clearResult(modellId, runId){
   const prog = load('b1.progress', {});
   if (prog[modellId]) delete prog[modellId][runId];
@@ -496,6 +560,7 @@ function clearResult(modellId, runId){
 function finish(run, auto){
   const go2 = () => {
     stopTimer();
+    clearSession(run.id);
     if (run.parts.length === 1 && run.parts[0].format === 'writing'){
       // Den Text sofort sichern — auch wenn noch keine Bewertung erfolgt ist.
       saveResult(run, null, run.parts[0].maxPoints);
@@ -659,5 +724,9 @@ function screenWriting(run, saved){
     document.getElementById('back').onclick  = () => screenModell(S.modell);
   });
 }
+
+// beim Schließen/Wegwischen den Stand sichern
+addEventListener('pagehide', () => saveSession(S.run));
+addEventListener('visibilitychange', () => { if (document.hidden) saveSession(S.run); });
 
 boot();
