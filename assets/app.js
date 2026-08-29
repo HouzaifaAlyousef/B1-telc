@@ -329,6 +329,14 @@ function markCurrentPart(){
   links.forEach((a, i) => a.classList.toggle('active', i === cur));
 }
 
+/* Beim Antworten springt die Markierung sofort auf den Teil, in dem
+   die Aufgabe steht — man sieht also, wo man gerade löst. */
+function markPart(partId){
+  const links = [...document.querySelectorAll('.partnav a')];
+  links.forEach(a => a.classList.toggle('active',
+    a.getAttribute('href') === '#part-' + partId));
+}
+
 let markRaf = 0;
 addEventListener('scroll', () => {
   if (!markRaf) markRaf = requestAnimationFrame(() => { markRaf = 0; markCurrentPart(); });
@@ -448,6 +456,7 @@ function bindInputs(sec){
       }
       S.dropped[id] = (S.dropped[id] || []).filter(k => k !== key);
       S.answers[id] = key;
+      markPart(sec.id);
       const box = lb.closest('.opts');
       box.querySelectorAll('.opt').forEach(x => {
         const k = x.dataset.opt.split('|')[1];
@@ -461,6 +470,7 @@ function bindInputs(sec){
     sl.onchange = () => {
       const v = sl.value;
       if (v) S.answers[sl.dataset.sel] = v; else delete S.answers[sl.dataset.sel];
+      markPart(sec.id);
       syncBank(sec);
       updateProgress();
     };
@@ -470,6 +480,7 @@ function bindInputs(sec){
     ta.oninput = () => {
       const id = ta.dataset.txt;
       S.answers[id] = ta.value;
+      markPart(sec.id);
       const n = ta.value.trim().split(/\s+/).filter(Boolean).length;
       const c = document.getElementById('wc_' + id);
       const min = sec.items.find(x => x.id === id).minWords || 100;
