@@ -110,7 +110,7 @@ h3{font-size:16px; margin:0 0 4px}
 .passage h3{color:var(--brand-dark)}
 .passage p{margin:0 0 14px; line-height:1.85}
 .passage p:last-child{margin-bottom:0}
-.passage p:first-of-type{font-weight:600}    /* Überschrift des Textes */
+.passage p.strong{font-weight:700}          /* Überschrift im Originaltext */
 .passage .body{white-space:pre-wrap; line-height:1.85}
 .bank{
   background:var(--card); border:1px dashed var(--line); border-radius:var(--radius);

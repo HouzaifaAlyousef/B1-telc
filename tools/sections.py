@@ -1,5 +1,7 @@
 """تحليل محتوى أقسام امتحان telc B1 من صفوف الصفحات."""
+import collections
 import re
+import statistics
 
 import spelling
 
@@ -15,31 +17,69 @@ def clean(t):
     return spelling.repair(t)      # أخطاء الإملاء الناتجة عن نسخ الـPDF
 
 
-def paragraphs(rows, gap_factor=1.4):
-    """يقسّم صفوف نص لفقرات.
+def paragraphs(rows, gap_factor=1.4, head_factor=1.12):
+    """يقسّم صفوف نص لفقرات، ويميّز العناوين.
 
-    المسافة بين سطور الفقرة الوحدة ثابتة تقريباً (~١٩٫٥ نقطة)، وبين الفقرات
+    المسافة بين سطور الفقرة الوحدة ثابتة تقريباً (~١٩٫٥ نقطة) وبين الفقرات
     بتكبر (~٣٢). فمنحسب المسافة الشائعة ومنعتبر أي قفزة أكبر منها بمقدار
     معيّن بداية فقرة جديدة. والسطر المزحزح لليمين كمان بيبدأ فقرة.
+
+    العناوين: الـPDF ما بيسمّي الخط العريض، بس العنوان دايماً أكبر حجماً من
+    النص. فمنقارن حجم كل سطر بالحجم الشائع بالنص.
+
+    بيرجّع [{'t': النص, 'b': عنوان؟}].
     """
-    rs = [(y, x, clean(t)) for y, x, t in rows if not is_noise(t)]
+    rs = [(y, x, clean(t), (r[3] if len(r) > 3 else 0))
+          for r in rows for y, x, t in [r[:3]] if not is_noise(t)]
     if not rs:
         return []
     gaps = sorted(rs[i][0] - rs[i - 1][0] for i in range(1, len(rs)))
     line = gaps[len(gaps) // 2] if gaps else 0        # المسافة الشائعة
-    base = min(x for _, x, _ in rs)
+    base = min(x for _, x, _, _ in rs)
 
-    out, cur = [], []
-    for i, (y, x, t) in enumerate(rs):
+    # حجم النص العادي بينحسب لكل صفحة لحالها — الصفحات ممسوحة بمقاسات
+    # مختلفة شوي، فوسيط المجموع بيخلّي صفحة كاملة تبان عناوين.
+    per_page = {}
+    for y, _, _, sz in rs:
+        if sz:
+            per_page.setdefault(int(y // 10000), []).append(sz)
+    body = {pg: statistics.median(v) for pg, v in per_page.items()}
+    # حجم بيتكرر بسطور كتير = كتلة نص، مو عنوان (بيصير لما تكملة نص من
+    # صفحة سابقة تطلع بحجم أكبر من نص الصفحة الحالية)
+    common = {pg: {sz for sz, n in collections.Counter(v).items() if n >= 4}
+              for pg, v in per_page.items()}
+
+    out, cur, cur_head, cur_sz = [], [], False, 0
+    def flush():
+        if cur:
+            out.append({'t': clean(' '.join(cur)), 'b': cur_head, 'z': cur_sz})
+    for i, (y, x, t, sz) in enumerate(rs):
+        pg = int(y // 10000)
+        ref = body.get(pg, 0)
+        head = bool(ref) and sz > ref * head_factor and sz not in common.get(pg, ())
         newp = cur and ((line and y - rs[i - 1][0] > line * gap_factor)
-                        or x > base + 2)
+                        or x > base + 2 or head != cur_head)
         if newp:
-            out.append(' '.join(cur))
+            flush()
             cur = []
+        if not cur:
+            cur_head, cur_sz = head, sz
         cur.append(t)
-    if cur:
-        out.append(' '.join(cur))
-    return [clean(p) for p in out if clean(p)]
+    flush()
+
+    # عنوان فرعي بينلف على سطرين بيطلع فقرتين — منرجّعهم وحدة
+    merged = []
+    for p in out:
+        if merged and p['b'] and merged[-1]['b'] and p['z'] == merged[-1]['z']:
+            merged[-1]['t'] = clean(merged[-1]['t'] + ' ' + p['t'])
+        else:
+            merged.append(p)
+
+    # العنوان قصير بطبعه — الفقرة الطويلة نص عادي حتى لو طلع حجمها أكبر
+    for p in merged:
+        p['b'] = p['b'] and 2 < len(p['t']) <= 120 and any(c.isalpha() for c in p['t'])
+        p.pop('z', None)
+    return [p for p in merged if p['t']]
 
 
 def is_noise(t):
@@ -51,8 +91,8 @@ def is_noise(t):
 def strip_instructions(rows):
     """يشيل سطور التعليمات (Lesen Sie…، Markieren Sie…) من أول القسم."""
     out = []
-    for y, x, t in rows:
-        c = clean(t)
+    for r in rows:
+        c = clean(r[2])
         if re.match(r'^(Lesen|Markieren|Entscheiden|Sie hören|Antwortbogen|Benutzen|'
                     r'Schreiben Sie mindestens|Bevor Sie)', c):
             continue
@@ -62,7 +102,7 @@ def strip_instructions(rows):
             continue
         if re.search(r'Jedes Wort passt nur einmal|Welche Lösung.*richtig', c):
             continue
-        out.append((y, x, t))
+        out.append(r)                       # الحجم لازم يوصل لكشف العناوين
     return out
 
 
@@ -73,7 +113,7 @@ def windows(rows, lo, hi, tol=15.0):
     فمنقسّم حسب الارتفاع: السؤال n بياخد كل شي بين علامته وعلامة n+1.
     """
     marks = []
-    for y, x, t in rows:
+    for y, x, t, *_ in rows:
         m = NUM_RE.match(clean(t))
         if not m:
             continue
@@ -87,7 +127,7 @@ def windows(rows, lo, hi, tol=15.0):
     for i, (n, y) in enumerate(marks):
         top = y - tol
         bot = marks[i + 1][1] - tol if i + 1 < len(marks) else float('inf')
-        chunk = [(ry, rx, rt) for ry, rx, rt in rows if top <= ry < bot]
+        chunk = [r for r in rows if top <= r[0] < bot]
         out[n] = chunk
     return out
 
@@ -95,7 +135,7 @@ def windows(rows, lo, hi, tol=15.0):
 def join_rows(chunk, drop_num=None):
     """يجمع صفوف سؤال بنص واحد، مع شيل رقم السؤال من البداية."""
     parts = []
-    for _, _, t in chunk:
+    for _, _, t, *_r in chunk:
         c = clean(t)
         if is_noise(c):
             continue
@@ -129,7 +169,7 @@ def parse_bank_letters(rows, n=10, tol=12.0, xmax=105):
     فمنقسّم حسب الارتفاع متل أرقام الأسئلة، ومنشترط تسلسل الحروف.
     """
     want, marks = 0, []
-    for y, x, t in rows:
+    for y, x, t, *_ in rows:
         c = clean(t)
         m = re.match(r'^([A-Za-z])\s*\)?\s*(.*)$', c)
         if not m or x > xmax or want >= n:
@@ -194,7 +234,7 @@ def parse_sb2(rows, extra_rows=()):
     bank, body, seen = [], [], set()
 
     def take_bank(rs):
-        for _, _, t in rs:
+        for _, _, t, *_r in rs:
             for k, w in bank_line(clean(t)):
                 if k not in seen:
                     seen.add(k)
@@ -216,7 +256,7 @@ def parse_options(chunk, xmax=130, xtext=90, n=3):
     هو ترتيب الحروف، فمنعتمد على الترتيب ومنستعمل الحروف الموجودة للتأكيد.
     """
     slots, letters = [], []
-    for y, x, t in chunk:
+    for y, x, t, *_ in chunk:
         c = clean(t)
         m = re.fullmatch(r'([A-Ca-c])\s*\)?', c)
         if m and x <= xmax:
@@ -342,11 +382,11 @@ def parse_sa(rows):
     «Hoffentlich bis bald»...)، فبدل ما نلاحقها منبلّش من النقاط المطلوبة
     ومنرجع للورا: سطر المهمة قبلها، والاسم قبل سطر المهمة.
     """
-    rs = [(y, x, clean(t)) for y, x, t in rows if not is_noise(t)]
-    rs = [(y, x, t) for y, x, t in rs if not DOTS_RE.match(t)]
+    rs = [(y, x, clean(t)) for y, x, t, *_ in rows if not is_noise(t)]
+    rs = [r for r in rs if not DOTS_RE.match(r[2])]
     if not rs:
         return None
-    text = ' '.join(t for _, _, t in rs)
+    text = ' '.join(r[2] for r in rs)
 
     g = next((i for i, r in enumerate(rs) if GREETING.match(r[2])), -1)
     b0 = next((i for i, r in enumerate(rs) if i > g and BULLET.match(r[2])), -1)
@@ -384,7 +424,7 @@ def parse_sa(rows):
         paras.append(' '.join(cur))
 
     points, hints = [], []
-    for _, _, t in rs[b0:]:
+    for _, _, t, *_r in rs[b0:]:
         if HINTLINE.match(t):
             hints.append(t)
             continue

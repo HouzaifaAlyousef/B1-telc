@@ -1,5 +1,7 @@
 """قراءة ملف telc B1 من الـPDF: صفحات ← سطور بإحداثيات ← نماذج وأقسام."""
 import re
+import statistics
+
 import pdfplumber
 
 ROW_TOL = 2.5           # فرق ارتفاع بيعتبر نفس السطر
@@ -31,7 +33,11 @@ def dedupe(chars):
 
 
 def rows_of(page):
-    """يرجّع [(y, x0, نص)] مرتّبة من فوق لتحت، مع مسافات حسب الفراغات."""
+    """يرجّع [(y, x0, نص, حجم الخط)] مرتّبة من فوق لتحت.
+
+    حجم الخط بيميّز العناوين عن النص العادي — الـPDF ما بيسمّي الخط العريض
+    (كل الخطوط أسماؤها مموّهة متل font2/font4)، بس العناوين دايماً أكبر.
+    """
     groups = []
     for c in sorted(dedupe(page.chars), key=lambda c: (round(c['top'], 1), c['x0'])):
         if groups and abs(groups[-1][0] - c['top']) <= ROW_TOL:
@@ -54,7 +60,9 @@ def rows_of(page):
             prev = c
         text = ''.join(buf).strip()
         if text:
-            rows.append((round(top, 1), round(cs[0]['x0'], 1), text))
+            ink = [c for c in cs if c['text'].strip()] or cs
+            size = round(statistics.median(c['size'] for c in ink), 1)
+            rows.append((round(top, 1), round(cs[0]['x0'], 1), text, size))
     return rows
 
 
@@ -89,7 +97,7 @@ def words_of(page):
 def body_rows(rows):
     """يشيل الترويسة والتذييل وبقايا النص العربي المكتوب فوق الصفحة."""
     out = []
-    for y, x, t in rows:
+    for y, x, t, *rest in rows:
         flat = t.strip()
         if FOOTER.search(flat) or FOOTER.search(_DEDUP.sub(r'\1', flat)):
             continue
@@ -97,12 +105,12 @@ def body_rows(rows):
             continue
         if re.match(r'|'.join(p for p, _ in SECTIONS[:-1]), re.sub(r'[\s.,]', '', t)):
             continue
-        out.append((y, x, t))
+        out.append((y, x, t, *rest))
     return out
 
 
 def section_of(rows):
-    flat = re.sub(r'[\s.,]', '', ' '.join(t for _, _, t in rows))[:4000]
+    flat = re.sub(r'[\s.,]', '', ' '.join(r[2] for r in rows))[:4000]
     for pat, name in SECTIONS:
         if re.search(pat, flat):
             return name
@@ -173,8 +181,8 @@ def rows_for(pages, page_nums):
     """يجمع صفوف عدة صفحات مع إزاحة الارتفاع، تا ما تتداخل صفحة بصفحة."""
     out = []
     for i, p in enumerate(sorted(page_nums)):
-        for y, x, t in body_rows(pages.get(p, [])):
-            out.append((i * 10000 + y, x, t))
+        for y, x, t, *rest in body_rows(pages.get(p, [])):
+            out.append((i * 10000 + y, x, t, *rest))
     return out
 
 

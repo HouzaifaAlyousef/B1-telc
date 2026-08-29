@@ -139,7 +139,7 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         if body:
             passages = [{'paragraphs': body}]
         for it in items:
-            it['text'] = gap_context(' '.join(body), it['id'])
+            it['text'] = gap_context(' '.join(x['t'] for x in body), it['id'])
     elif kind == 'SB2':
         fmt = 'wordbank'
         bank, body = S.parse_sb2(rows)
@@ -147,7 +147,7 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         if body:
             passages = [{'paragraphs': body}]
         # الفراغات ٣١-٤٠ مرقّمة بالنص نفسه، فمنولّدها من مدى الأرقام
-        flat = ' '.join(body)
+        flat = ' '.join(x['t'] for x in body)
         items = [{'id': str(n), 'text': gap_context(flat, n)} for n in range(lo, hi + 1)]
         sec['bankTitle'] = 'Wörterliste'
     elif kind.startswith('HV'):
@@ -273,8 +273,8 @@ def main():
 
     # مفردات الملف — منستعملها بتصحيح الكلمات المقطوعة
     vocab = collections.Counter(
-        w for rows in pages.values() for _, _, t in rows
-        for w in re.findall(r'[A-Za-zÄÖÜäöüßẞ]+', t))
+        w for rows in pages.values() for r in rows
+        for w in re.findall(r'[A-Za-zÄÖÜäöüßẞ]+', r[2]))
     spelling.learn(vocab)
     doc = pypdfium2.PdfDocument(PDF)
     reader = PdfReader(PDF)

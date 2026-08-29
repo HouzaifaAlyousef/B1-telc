@@ -135,23 +135,70 @@
    "passages": [
     {
      "paragraphs": [
-      "Weg von einer Adresse zu einer anderen möglich. Der elektronische Fahrplan führt Sie",
-      "automatisch zum Haltepunkt des öffentlichen Verkehrs der am nächsten bei der Zieladresse",
-      "liegt. Das ist mit dem Verkehrsleitssystem für Autos vergleichbar, das Sie aber auch in der",
-      "Verkehrten Richtung durch Einbahnstraßen führen kann. Beim öffentlichen Verkehr kommt",
-      "das glücklicherweise nicht vor.",
-      "ist jeweils richtig?",
-      "Neue Berufe",
-      "Raumberater für harmonisches Wohnen",
-      "Räume nach der chinesischen Lehre Feng Shui zu gestalten, damit sich die Menschen wohl",
-      "Fühlen das ist der Beruf von Iris Eigenmann",
-      "Seit knapp einem Jahr bin ich nun selbstständig und bin voller Energie. So stehe ich jeden Tag mit einem Lächeln auf und gehe abends wieder mit einem Lächeln ins Bett. Die diplomierte Raumberaterin Iris Eigenmann ist von ihrem Beruf sichtlich begeistert. Da viele mit dem Wort Fengshui nichts anfangen können, bezeichnet sie sich selbst als Raumberaterin für harmonisches Wohnungen aber auch Büros und andere Arbeitsplätze so einzurichten, dass sich Menschen in diesen Räumen wohl fühlen können.",
-      "Ursprünglich ist Frau Eigenmann gelernte Hochbauzeichnerin und hat Jahrelang Bauprojekte geleitet. Diese Erfahrungen mit Architektur und Wohnbau helfen ihr nun sehr bei ihrer Tätigkeit als Raumberaterin. Ihre Arbeit besteht darin, den optimalen Energiefluss eines Wohn- oder Arbeitsumfeldes zu finden. Sie macht individuelle Vorschläge für die Raumanordnung, die Farbwahl der Wände oder für die Verwendung von Baumaterialien. Ich habe alle Ideen zuerst bei mir zu Hause ausprobiert und war selbst überrascht von der positiven Wirkung, erzählt sie begeistert.",
-      "Eine Raumberaterin arbeitet in der Regel folgendermaßen: Zuerst besprechen die Leute mit Frau Eigenmann, warum sie sich in ihrer Wohnung nicht wohl fühlen und wie sie ihren Wohnraum verbessen möchten. Dann bittet die Beraterin ihre Kunden, ihr einen genauen Plan der Wohnung zu schicken, auf dem sie die Möbelaufstellung und die genaue Ausrichtung des Hauses sehen kann. Daraufhin macht Frau Eigenmann einen detaillierten Wohnungsplan mit ausführlichen Erklärungen, wie man die Räume optimal einrichtet, um sich darin zufrieden zu fühlen. Für die Erstellung eines solchen Planes benötigt sie nach eigener Aussage je nach Größe der Wohnung oder des Gebäudes zwischen einem halben und einem ganzen Tag.",
-      "Anschließend geht Iris Eigenmann zu den Leuten nach Hause, um die Situation vor Ort zu analysieren und Verbesserungsmöglichkeiten aufzuzeigen.",
-      "Auch immer mehr Firmen suchen Rat bei einer Raumberaterin meistens dann, wenn das Unternehmen nicht mehr so erfolgreich arbeitet. Iris Eigenmann versucht dann, das Arbeitsumfeld so zu verändern, dass sich Kunden und Angestellte wohler fühlen. Das führt in den meisten Fällen dazu, dass auch die Geschäfte wieder besser gehen. Der Preis für die Raumberatung wird je nach Aufwand mit dem Kunden gemeinsam bestimmt. Das Geld aber ist für Frau Eigenmann weniger wichtig als die Möglichkeit, den Menschen zu helfen und ihre positiven Erfahrungen weiterzugeben.",
-      "p g g",
-      "Das persönliche Ziel der Feng-Shui-Raumberaterin für die Zukunft ist es, vermehrt auch im sozialen Bereich zu wirken zum Beispiel in Krankenhäusern oder Altersheimen. Sie meint, dass mit einfachen Maßnahmen dort die Lebensqualität der Menschen erheblich verbessert werden könnte."
+      {
+       "t": "Weg von einer Adresse zu einer anderen möglich. Der elektronische Fahrplan führt Sie",
+       "b": false
+      },
+      {
+       "t": "automatisch zum Haltepunkt des öffentlichen Verkehrs der am nächsten bei der Zieladresse",
+       "b": false
+      },
+      {
+       "t": "liegt. Das ist mit dem Verkehrsleitssystem für Autos vergleichbar, das Sie aber auch in der",
+       "b": false
+      },
+      {
+       "t": "Verkehrten Richtung durch Einbahnstraßen führen kann. Beim öffentlichen Verkehr kommt",
+       "b": false
+      },
+      {
+       "t": "das glücklicherweise nicht vor.",
+       "b": false
+      },
+      {
+       "t": "ist jeweils richtig?",
+       "b": false
+      },
+      {
+       "t": "Neue Berufe",
+       "b": true
+      },
+      {
+       "t": "Raumberater für harmonisches Wohnen",
+       "b": true
+      },
+      {
+       "t": "Räume nach der chinesischen Lehre Feng Shui zu gestalten, damit sich die Menschen wohl Fühlen das ist der Beruf von Iris Eigenmann",
+       "b": false
+      },
+      {
+       "t": "Seit knapp einem Jahr bin ich nun selbstständig und bin voller Energie. So stehe ich jeden Tag mit einem Lächeln auf und gehe abends wieder mit einem Lächeln ins Bett. Die diplomierte Raumberaterin Iris Eigenmann ist von ihrem Beruf sichtlich begeistert. Da viele mit dem Wort Fengshui nichts anfangen können, bezeichnet sie sich selbst als Raumberaterin für harmonisches Wohnungen aber auch Büros und andere Arbeitsplätze so einzurichten, dass sich Menschen in diesen Räumen wohl fühlen können.",
+       "b": false
+      },
+      {
+       "t": "Ursprünglich ist Frau Eigenmann gelernte Hochbauzeichnerin und hat Jahrelang Bauprojekte geleitet. Diese Erfahrungen mit Architektur und Wohnbau helfen ihr nun sehr bei ihrer Tätigkeit als Raumberaterin. Ihre Arbeit besteht darin, den optimalen Energiefluss eines Wohn- oder Arbeitsumfeldes zu finden. Sie macht individuelle Vorschläge für die Raumanordnung, die Farbwahl der Wände oder für die Verwendung von Baumaterialien. Ich habe alle Ideen zuerst bei mir zu Hause ausprobiert und war selbst überrascht von der positiven Wirkung, erzählt sie begeistert.",
+       "b": false
+      },
+      {
+       "t": "Eine Raumberaterin arbeitet in der Regel folgendermaßen: Zuerst besprechen die Leute mit Frau Eigenmann, warum sie sich in ihrer Wohnung nicht wohl fühlen und wie sie ihren Wohnraum verbessen möchten. Dann bittet die Beraterin ihre Kunden, ihr einen genauen Plan der Wohnung zu schicken, auf dem sie die Möbelaufstellung und die genaue Ausrichtung des Hauses sehen kann. Daraufhin macht Frau Eigenmann einen detaillierten Wohnungsplan mit ausführlichen Erklärungen, wie man die Räume optimal einrichtet, um sich darin zufrieden zu fühlen. Für die Erstellung eines solchen Planes benötigt sie nach eigener Aussage je nach Größe der Wohnung oder des Gebäudes zwischen einem halben und einem ganzen Tag.",
+       "b": false
+      },
+      {
+       "t": "Anschließend geht Iris Eigenmann zu den Leuten nach Hause, um die Situation vor Ort zu analysieren und Verbesserungsmöglichkeiten aufzuzeigen.",
+       "b": false
+      },
+      {
+       "t": "Auch immer mehr Firmen suchen Rat bei einer Raumberaterin meistens dann, wenn das Unternehmen nicht mehr so erfolgreich arbeitet. Iris Eigenmann versucht dann, das Arbeitsumfeld so zu verändern, dass sich Kunden und Angestellte wohler fühlen. Das führt in den meisten Fällen dazu, dass auch die Geschäfte wieder besser gehen. Der Preis für die Raumberatung wird je nach Aufwand mit dem Kunden gemeinsam bestimmt. Das Geld aber ist für Frau Eigenmann weniger wichtig als die Möglichkeit, den Menschen zu helfen und ihre positiven Erfahrungen weiterzugeben.",
+       "b": false
+      },
+      {
+       "t": "p g g",
+       "b": false
+      },
+      {
+       "t": "Das persönliche Ziel der Feng-Shui-Raumberaterin für die Zukunft ist es, vermehrt auch im sozialen Bereich zu wirken zum Beispiel in Krankenhäusern oder Altersheimen. Sie meint, dass mit einfachen Maßnahmen dort die Lebensqualität der Menschen erheblich verbessert werden könnte.",
+       "b": false
+      }
      ]
     }
    ],
@@ -338,12 +385,30 @@
    "passages": [
     {
      "paragraphs": [
-      "Liebe Dominique,",
-      "da ich dich telefonisch nicht erreiche, auch nicht per E-Mail, schreibe ich dir einen Brief. Es ist nämlich etwas ganz Besonderes (21) : Stelle (22) vor, ich habe die Stelle bei der EU in Brüssel bekommen!",
-      "Du weißt noch: Es gab ungefähr 300 Bewerber, und unter denen (23) die besten ausgesucht. Ich hatte mich auf das Vorstellungsgespräch schon (24) Zeit vorher vorbereitet. Trotzdem ohne meine Sprachkenntnisse und meine Auslandserfahrung (25) ich die Stelle sicher nicht bekommen. Aber ein bisschen Glück braucht man auch, (26) so etwas gelingt.",
-      "Nun bitte ich dich (27) ein paar gute Tipps. Vielleicht kennst du auch jemanden, von(28) ich Informationen über das Leben in Belgien bekommen kann? Ich würde dich am liebsten kürz (29) , um mit dir persönlich zu sprechen. Geht das vielleicht (30) zwei Wochen, Z.B. am übernächsten Wochenende? Bitte gib mir Beschreiben.",
-      "Herzlich Grüße",
-      "Katie"
+      {
+       "t": "Liebe Dominique,",
+       "b": true
+      },
+      {
+       "t": "da ich dich telefonisch nicht erreiche, auch nicht per E-Mail, schreibe ich dir einen Brief. Es ist nämlich etwas ganz Besonderes (21) : Stelle (22) vor, ich habe die Stelle bei der EU in Brüssel bekommen!",
+       "b": false
+      },
+      {
+       "t": "Du weißt noch: Es gab ungefähr 300 Bewerber, und unter denen (23) die besten ausgesucht. Ich hatte mich auf das Vorstellungsgespräch schon (24) Zeit vorher vorbereitet. Trotzdem ohne meine Sprachkenntnisse und meine Auslandserfahrung (25) ich die Stelle sicher nicht bekommen. Aber ein bisschen Glück braucht man auch, (26) so etwas gelingt.",
+       "b": false
+      },
+      {
+       "t": "Nun bitte ich dich (27) ein paar gute Tipps. Vielleicht kennst du auch jemanden, von(28) ich Informationen über das Leben in Belgien bekommen kann? Ich würde dich am liebsten kürz (29) , um mit dir persönlich zu sprechen. Geht das vielleicht (30) zwei Wochen, Z.B. am übernächsten Wochenende? Bitte gib mir Beschreiben.",
+       "b": false
+      },
+      {
+       "t": "Herzlich Grüße",
+       "b": true
+      },
+      {
+       "t": "Katie",
+       "b": true
+      }
      ]
     }
    ],
@@ -441,24 +506,78 @@
    "passages": [
     {
      "paragraphs": [
-      "dir B hätte den",
-      "Du würde denen",
-      "C C",
-      "A A A",
-      "26. 29.",
-      "23. halten als getroffen",
-      "wären damit treffe",
-      "B B B",
-      "wurden ob treffen",
-      "C C C",
-      ") (",
-      "Sehr geehrte Frau Campe,",
-      "mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in Deutsch anbieten.",
-      "Ich lerne (32) zwei Jahren Deutsch in Yverden, einer kleinen Stadt in der Westschweiz. Es gefällt mir hier, aber ich lebe in einer französischsprachigen Region und auch meine Arbeitskollegen (33) nur Französisch (oder Englisch) mit mir. So habe ich einfach zu (34). Gelegenheit, Deutsch zu sprechen. Deshalb interessiere ich mich (35) für Ihre Intensivkurse. Die Oberpfalz (36) ich schon seit langem einmal kennen lernen. Ich habe schon viel darüber gehört und gelesen, war aber selber noch nie dort.",
-      "Bevor ich mich für einen Sprachkurs in St. Anderasburg entscheide, (37) ich noch einige",
-      "Fragen. Bieten Sie auch Sprachkurse an, in denen man international anerkannte Diplome erwerben kann? (38). Studenten nehmen an einem Kurs teil? Kann man abends auch noch individuell mit dem Computer weiterlernen? Muss man für die Exkursionen extra bezahlen oder sind die Kosten (39) schon im Kursgeld enthalten?",
-      "Für Ihre Antwort (40) meine Fragen bedanke ich mich vielmals.",
-      "Mit freundlichen Grüßen Nadia Grade"
+      {
+       "t": "dir B hätte den",
+       "b": false
+      },
+      {
+       "t": "Du würde denen",
+       "b": false
+      },
+      {
+       "t": "C C",
+       "b": false
+      },
+      {
+       "t": "A A A",
+       "b": false
+      },
+      {
+       "t": "26. 29.",
+       "b": false
+      },
+      {
+       "t": "23. halten als getroffen",
+       "b": false
+      },
+      {
+       "t": "wären damit treffe",
+       "b": false
+      },
+      {
+       "t": "B B B",
+       "b": false
+      },
+      {
+       "t": "wurden ob treffen",
+       "b": false
+      },
+      {
+       "t": "C C C",
+       "b": false
+      },
+      {
+       "t": ") (",
+       "b": false
+      },
+      {
+       "t": "Sehr geehrte Frau Campe,",
+       "b": false
+      },
+      {
+       "t": "mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in Deutsch anbieten.",
+       "b": false
+      },
+      {
+       "t": "Ich lerne (32) zwei Jahren Deutsch in Yverden, einer kleinen Stadt in der Westschweiz. Es gefällt mir hier, aber ich lebe in einer französischsprachigen Region und auch meine Arbeitskollegen (33) nur Französisch (oder Englisch) mit mir. So habe ich einfach zu (34). Gelegenheit, Deutsch zu sprechen. Deshalb interessiere ich mich (35) für Ihre Intensivkurse. Die Oberpfalz (36) ich schon seit langem einmal kennen lernen. Ich habe schon viel darüber gehört und gelesen, war aber selber noch nie dort.",
+       "b": false
+      },
+      {
+       "t": "Bevor ich mich für einen Sprachkurs in St. Anderasburg entscheide, (37) ich noch einige",
+       "b": false
+      },
+      {
+       "t": "Fragen. Bieten Sie auch Sprachkurse an, in denen man international anerkannte Diplome erwerben kann? (38). Studenten nehmen an einem Kurs teil? Kann man abends auch noch individuell mit dem Computer weiterlernen? Muss man für die Exkursionen extra bezahlen oder sind die Kosten (39) schon im Kursgeld enthalten?",
+       "b": false
+      },
+      {
+       "t": "Für Ihre Antwort (40) meine Fragen bedanke ich mich vielmals.",
+       "b": false
+      },
+      {
+       "t": "Mit freundlichen Grüßen Nadia Grade",
+       "b": false
+      }
      ]
     }
    ],
