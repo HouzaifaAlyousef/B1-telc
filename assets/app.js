@@ -148,7 +148,8 @@ function screenModell(m){
       const parts = b.parts.map(part).filter(Boolean);
       const n = parts.reduce((a, p) => a + p.items.length, 0);
       const r = prog[b.id];
-      const done = r && r.points !== undefined;
+      const saved = r && r.answers;                 // Prüfung liegt vor
+      const done = r && r.points !== undefined && r.points !== null;
       const badge = `<span class="pills">
         <span class="pill">${b.minutes} Min.</span>
         ${done ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>` : ''}
@@ -162,9 +163,10 @@ function screenModell(m){
             <div class="meta">${esc(sub)}</div></span>
           ${badge}
         </button>
-        ${done && r.answers ? `<div class="lastrun">
+        ${saved ? `<div class="lastrun">
           <span>Letzte Prüfung${r.date ? ' · ' + esc(r.date) : ''}<br>
-            ${fmtP(r.points)}/${fmtP(r.max)} Punkte · ${r.pct} %</span>
+            ${done ? `${fmtP(r.points)}/${fmtP(r.max)} Punkte · ${r.pct} %`
+                   : 'noch nicht bewertet'}</span>
           <button class="btn ghost sm" data-review="${esc(b.id)}">Ansehen</button>
           <button class="btn grey sm" data-clear="${esc(b.id)}">Löschen</button>
         </div>` : ''}
@@ -228,6 +230,9 @@ function screenIntro(run){
   S.run = run;
   S.answers = {};
   S.dropped = {};
+  const draft = loadDraft(run.id);          // unfertigen Text weiterführen
+  if (draft && run.parts.length === 1 && run.parts[0].format === 'writing')
+    S.answers[run.parts[0].items[0].id] = draft;
   stopTimer();
   go('intro', () => {
     const n = runItems(run).length;
@@ -344,9 +349,12 @@ function renderItem(sec, it){
   let body = '';
 
   if (sec.format === 'writing'){
+    const draft = S.answers[it.id] || '';
+    const n = draft.trim().split(/\s+/).filter(Boolean).length;
     return `<div class="q" id="q_${esc(it.id)}">
-      <textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …"></textarea>
-      <div class="counter" id="wc_${esc(it.id)}">0 Wörter (mindestens ${it.minWords || 100})</div>
+      ${draft ? `<div class="fb warn" style="margin-bottom:10px">Entwurf wiederhergestellt.</div>` : ''}
+      <textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …">${esc(draft)}</textarea>
+      <div class="counter" id="wc_${esc(it.id)}">${n} Wörter (mindestens ${it.minWords || 100})</div>
     </div>`;
   }
   if (sec.format === 'mc' || sec.format === 'truefalse'){
@@ -425,6 +433,7 @@ function bindInputs(sec){
       const c = document.getElementById('wc_' + id);
       const min = sec.items.find(x => x.id === id).minWords || 100;
       if (c){ c.textContent = `${n} Wörter (mindestens ${min})`; c.style.color = n >= min ? 'var(--ok)' : 'var(--muted)'; }
+      saveDraft(S.run.id, ta.value);
       updateProgress();
     };
   });
@@ -453,7 +462,8 @@ function noteOf(pct){
 }
 
 function saveResult(run, points, max, extra = {}){
-  const pct = Math.round(points / max * 100);
+  // points === null: Text abgegeben, aber noch nicht bewertet
+  const pct = points === null ? null : Math.round(points / max * 100);
   const prog = load('b1.progress', {});
   // nur die letzte Prüfung je Prüfungsteil — eine neue ersetzt die alte
   (prog[S.modell.id] ||= {})[run.id] = {
@@ -466,6 +476,16 @@ function saveResult(run, points, max, extra = {}){
   return pct;
 }
 
+/* Der Text im Schriftlichen Ausdruck lebt sonst nur im Speicher — geht die
+   Seite zu, ist eine halbe Stunde Arbeit weg. Darum wird beim Tippen laufend
+   ein Entwurf gesichert und beim nächsten Start wieder eingesetzt. */
+const draftKey = runId => `b1.draft.${S.modell.id}.${runId}`;
+const loadDraft = runId => load(draftKey(runId), '');
+const saveDraft = (runId, text) => save(draftKey(runId), text);
+function clearDraft(runId){
+  try { localStorage.removeItem(draftKey(runId)); } catch {}
+}
+
 function clearResult(modellId, runId){
   const prog = load('b1.progress', {});
   if (prog[modellId]) delete prog[modellId][runId];
@@ -476,8 +496,12 @@ function clearResult(modellId, runId){
 function finish(run, auto){
   const go2 = () => {
     stopTimer();
-    if (run.parts.length === 1 && run.parts[0].format === 'writing')
+    if (run.parts.length === 1 && run.parts[0].format === 'writing'){
+      // Den Text sofort sichern — auch wenn noch keine Bewertung erfolgt ist.
+      saveResult(run, null, run.parts[0].maxPoints);
+      clearDraft(run.id);
       return screenWriting(run);
+    }
 
     // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
     // Damit alle Tests vergleichbar bleiben, wird das Ergebnis auf die
@@ -627,8 +651,9 @@ function screenWriting(run, saved){
         const lb = g && app.querySelector(`[data-crit="${i}|${g.key}"]`);
         if (lb){ lb.classList.add('sel'); lb.querySelector('input').checked = true; }
       });
-      document.getElementById('wres').innerHTML =
-        scoreCard(saved.points, sec.maxPoints, saved.pct, '');
+      if (saved.points !== null && saved.points !== undefined)
+        document.getElementById('wres').innerHTML =
+          scoreCard(saved.points, sec.maxPoints, saved.pct, '');
     }
     document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
