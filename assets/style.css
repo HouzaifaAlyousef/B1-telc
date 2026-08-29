@@ -303,3 +303,6 @@ select option:disabled{color:var(--muted)}
 
 /* Während der Pause sind die Aufgaben nicht lesbar */
 body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
+
+/* Kachel "Fehler wiederholen" */
+.tile.drill .n{background:var(--warn-soft); color:var(--warn); font-size:19px}
