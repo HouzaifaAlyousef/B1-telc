@@ -1,10 +1,11 @@
 """يبني ملفات data/*.json للتطبيق من ملف telc B1 PDF."""
-import io, json, os, re, sys
+import collections, io, json, os, re, sys
 import pdfplumber, pypdfium2
 from pypdf import PdfReader
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
+import spelling
 import telcpdf, sections as S
 
 PDF  = sys.argv[1] if len(sys.argv) > 1 else 'Doku/B1 Telc.pdf'
@@ -175,7 +176,7 @@ def build_section(kind, model_no, pages, words_by, key, keyword, pdfdoc):
         # مفتاح الحلول بيعطي الكلمة الصحيحة لكل فراغ — منستعمله للتأكد
         # من ربط الخيار بحرفه، ومنحذف السؤال إذا الكلمة مو موجودة بالخيارات
         def key_norm(t):
-            return re.sub(r'[^a-zäöüß]', '', t.lower())
+            return re.sub(r'[^a-zäöüß]', '', spelling.repair(t).lower())
         checked = []
         for it in items:
             w = keyword.get(int(it['id']))
@@ -269,6 +270,12 @@ def export_ads(doc, reader, pages_lv3, model_no):
 def main():
     os.makedirs(IMGS, exist_ok=True)
     pages, models = telcpdf.read(PDF)
+
+    # مفردات الملف — منستعملها بتصحيح الكلمات المقطوعة
+    vocab = collections.Counter(
+        w for rows in pages.values() for _, _, t in rows
+        for w in re.findall(r'[A-Za-zÄÖÜäöüßẞ]+', t))
+    spelling.learn(vocab)
     doc = pypdfium2.PdfDocument(PDF)
     reader = PdfReader(PDF)
     index = []

@@ -112,12 +112,12 @@
     },
     {
      "id": "4",
-     "text": "Am Montag wird in Stuttgart die BildungsDidacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.",
+     "text": "Am Montag wird in Stuttgart die Bildungs-Didacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.",
      "answer": "E"
     },
     {
      "id": "5",
-     "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das PlaudernundFreunden. 77 der BefragtenGrundfür denBesuch imKaffeehaus",
+     "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus",
      "answer": "I"
     }
    ],
@@ -436,7 +436,7 @@
     },
     {
      "id": "53",
-     "text": "Beim Schwimmen kann sich Herr Schütz voon einem anstrengenden Tag erholen.",
+     "text": "Beim Schwimmen kann sich Herr Schütz von einem anstrengenden Tag erholen.",
      "answer": "f"
     },
     {
@@ -505,14 +505,14 @@
     "intro": "Ein Bekannter hat Ihnen folgenden Brief geschrieben:",
     "greeting": "Liebe(r)........",
     "paragraphs": [
-     "es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentliich viel am Computer?",
+     "es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentlich viel am Computer?",
      "Lass doch mal wieder was von dir hören!",
      "Liebe Grüße und bis bald"
     ],
     "signature": "Andreas"
    },
    "hints": [
-    "Bevor Sie den Brief schreiben, überlegeen Sie sich eine passende Reihenfolge der punkte, eine passende"
+    "Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"
    ],
    "format": "writing",
    "items": [

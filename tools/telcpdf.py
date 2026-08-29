@@ -5,6 +5,9 @@ import pdfplumber
 ROW_TOL = 2.5           # فرق ارتفاع بيعتبر نفس السطر
 COL_GAP = 12            # فراغ أفقي كبير = فاصل أعمدة
 FOOTER  = re.compile(r'ABDELLAH\s*FARHAN|LANGUAGE\s*Test|^\d{1,3}$')
+# التذييل أحياناً بيطلع بحروف مضاعفة من الطبقة المكررة (LANGUUAGE، LLAANNGGUUAAGGEE)،
+# فمنشيل التكرار قبل المطابقة
+_DEDUP = re.compile(r'(.)\1+')
 
 SECTIONS = [
     (r'Leseverstehen,?Teil1',    'LV1'), (r'Leseverstehen,?Teil2', 'LV2'),
@@ -87,7 +90,8 @@ def body_rows(rows):
     """يشيل الترويسة والتذييل وبقايا النص العربي المكتوب فوق الصفحة."""
     out = []
     for y, x, t in rows:
-        if FOOTER.search(t.strip()):
+        flat = t.strip()
+        if FOOTER.search(flat) or FOOTER.search(_DEDUP.sub(r'\1', flat)):
             continue
         if re.search(r'[؀-ۿ]', t):        # كتابة عربية دخيلة
             continue

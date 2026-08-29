@@ -120,7 +120,7 @@
     },
     {
      "id": "5",
-     "text": "Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeeben. Wir empfehlen unseren Gästen, bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.",
+     "text": "Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeben. Wir empfehlen unseren Gästen, bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.",
      "answer": "C"
     }
    ],
@@ -142,7 +142,7 @@
       "Computerprobleme ein Kinderspiel",
       "Anne und Melanie (beide 6) stehen Erzieherinnen mit Vorschlägen hilfreich zur Seite",
       "Von Christiane Altenberger",
-      "Sie sind die Problemlöser im Kindergarten an der Munckerstraße. Wenn das Malprogram spinnt, plötzllich ein",
+      "Sie sind die Problemlöser im Kindergarten an der Munckerstraße. Wenn das Malprogram spinnt, plötzlich ein",
       "Spiel auftaucht, das keiner kennt, dann rufen die Erzieherinnen nach Anne und Melanie. Die sind zwar erst",
       "sechs Jahre alt, aber mit den Computerspielen kennen sie sich aus. Die Kinder wissen manchmal mehr als wir",
       "sagt Eva Schilling. Leiterin des Kindergartens. Gelernt haben die beiden ihr Know-how bei Multimedia-",
@@ -156,7 +156,7 @@
       "begeistert, haben immer wieder gefragt, wann gehen wir da wieder hin, so Frau llg.",
       "Bevor jedoch die Computer in die Kindergärten kamen, waren die Eltern aufzuklären. Bei manchen Eltern löste",
       "das Stichwort Computer akute Ängste aus nach dem Motto: Mein fröhliches, gesundes Kind setzt sich vor den",
-      "Computer und steht sechs Stunden später krank, sprachloss und einsam wieder auf.",
+      "Computer und steht sechs Stunden später krank, sprachlos und einsam wieder auf.",
       "Diese Ängste haben sich inzwischen gelegt und die Erfahrung vor Ort zeigt, dass sie weitgehend über flüssig",
       "sind. Die Erzieherinnen achten auch darauf, dass die Kinder nie länger als 15 bis 20 Minuten vor den",
       "Computern sitzen, und holen vor allem kreative Software auf den Bildschirm.",
@@ -350,7 +350,7 @@
     },
     {
      "id": "14",
-     "text": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einenn geeigneten Prakttikumsplatz.",
+     "text": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz.",
      "answer": "A"
     },
     {
@@ -400,10 +400,9 @@
    "passages": [
     {
      "paragraphs": [
-      "LANGUAGE Tessts",
       "Liebe Beatrice, wie du ja weißt, sind meine Eltern seit Anfang Mai in einem Haus (21)Mittelnehmer in Spanien. Zuerst wollen meine Eltern warten, bis ich mit dem Gymnasium fertig bin. Aber dann sind sie doch (22) früher gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich wohne jetzt mit drei (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine Probleme. Ich staune selbst über meine Noten, wenn ich (27) denke, wie (28) Zeit ich mir für Hausaufgaben nehme.",
       "Manchmal schicken mir meine Eltern eine E-Mail. (29) sie rufen an.",
-      "(30) jetzt habe ich jede Woche von ihnen gehört. Das war’s für heute, bis bald und liebe GrüßeSSaskia"
+      "(30) jetzt habe ich jede Woche von ihnen gehört. Das war’s für heute, bis bald und liebe Grüße Saskia"
      ]
     }
    ],
@@ -783,7 +782,7 @@
     },
     {
      "id": "49",
-     "text": "Der Spielpark bietet den Kindern Spielmöglichkeiten, die sie zu Hause nicht habben.",
+     "text": "Der Spielpark bietet den Kindern Spielmöglichkeiten, die sie zu Hause nicht haben.",
      "answer": "r"
     },
     {
@@ -880,7 +879,7 @@
     "signature": "Vera"
    },
    "hints": [
-    "Überlegen Sie sich vor dem Schreiben eine passendeReihenfolge der punkte, eine passende Betreff, eine"
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
    ],
    "format": "writing",
    "items": [
