@@ -30,8 +30,8 @@ js = js.replace(
     "S.index = await (await fetch('data/index.json?v=' + Date.now())).json();",
     "S.index = DATA.index;")
 js = js.replace(
-    "S.modell = await (await fetch(`data/${entry.file}?v=` + Date.now())).json();",
-    "S.modell = DATA.modelle[entry.file];")
+    "  await (await fetch(`data/${file}?v=` + Date.now())).json();",
+    "  DATA.modelle[file];")
 
 # "</" جوّا وسم script بينهي الوسم بدري، فلازم ينهرب
 blob = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')

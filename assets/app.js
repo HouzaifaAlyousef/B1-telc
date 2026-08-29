@@ -85,10 +85,11 @@ function go(view, fn){
 elBack.onclick = () => {
   if (S.view === 'exam'){
     ask('Prüfung verlassen? Ihre Antworten gehen verloren.',
-        () => { stopTimer(); screenModell(S.modell); }, 'Verlassen');
+        () => { stopTimer(); S.run && S.run.drill ? screenHome() : screenModell(S.modell); },
+        'Verlassen');
   } else if (S.view === 'result' || S.view === 'intro'){
     stopTimer();
-    screenModell(S.modell);
+    if (S.run && S.run.drill) screenHome(); else screenModell(S.modell);
   } else {
     screenHome();
   }
@@ -117,22 +118,44 @@ function screenHome(){
         <span class="chev">›</span>
       </button>`).join('');
 
+    const nMist = load(MIST, []).length;
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
       <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die drei Prüfungsteile
         der schriftlichen telc&nbsp;B1&nbsp;Prüfung — mit der echten Prüfungszeit.</p>
+      ${nMist ? `<button class="tile drill" id="drill">
+        <span class="n">↻</span>
+        <span class="grow"><span style="font-weight:600">Fehler wiederholen</span>
+          <div class="meta">${nMist} Aufgabe${nMist === 1 ? '' : 'n'} aus früheren Prüfungen · ohne Zeit</div></span>
+        <span class="chev">›</span>
+      </button>` : ''}
       ${cards}`;
 
-    app.querySelectorAll('.tile').forEach(b =>
+    app.querySelectorAll('.tile[data-id]').forEach(b =>
       b.onclick = () => openModell(b.dataset.id));
+    const dr = document.getElementById('drill');
+    if (dr) dr.onclick = async () => {
+      const run = await drillRun();
+      if (run) screenIntro(run); else toast('Keine Fehler gespeichert.');
+    };
   });
 }
 
 /* ============ Prüfungsteile eines Modelltests ============ */
-async function openModell(id){
+const fetchModell = async file =>
+  await (await fetch(`data/${file}?v=` + Date.now())).json();
+
+const modellCache = {};
+async function loadModell(id){
   const entry = S.index.modelle.find(m => m.id === id);
+  if (!entry) return null;
+  if (!modellCache[id]) modellCache[id] = await fetchModell(entry.file);
+  return modellCache[id];
+}
+
+async function openModell(id){
   try {
-    S.modell = await (await fetch(`data/${entry.file}?v=` + Date.now())).json();
+    S.modell = await loadModell(id);
   } catch {
     toast('Der Modelltest konnte nicht geladen werden.'); return;
   }
@@ -231,10 +254,11 @@ function screenIntro(run){
   S.run = run;
   S.answers = {};
   S.dropped = {};
-  const draft = loadDraft(run.id);          // unfertigen Text weiterführen
+  // Übungen kennen weder Entwurf noch angefangene Sitzung
+  const draft = run.drill ? '' : loadDraft(run.id);
   if (draft && run.parts.length === 1 && run.parts[0].format === 'writing')
     S.answers[run.parts[0].items[0].id] = draft;
-  const sess = loadSession(run.id);         // angefangene Prüfung fortsetzen
+  const sess = run.drill ? null : loadSession(run.id);
   stopTimer();
   go('intro', () => {
     const n = runItems(run).length;
@@ -247,7 +271,7 @@ function screenIntro(run){
 
     app.innerHTML = `
       <div class="card">
-        <span class="pill">Wie in der Prüfung</span>
+        <span class="pill">${run.drill ? 'Übung' : 'Wie in der Prüfung'}</span>
         <h2 style="margin-top:10px">${esc(run.title)}</h2>
         ${run.hint ? `<p class="sub" style="margin-bottom:14px">${esc(run.hint)}</p>` : ''}
         ${list}
@@ -260,8 +284,8 @@ function screenIntro(run){
           <div><div class="meta" style="color:var(--muted);font-size:13px">Aufgaben</div>
                <b style="font-size:18px">${n}</b></div>
           <div><div class="meta" style="color:var(--muted);font-size:13px">Zeit</div>
-               <b style="font-size:18px">${run.minutes} Minuten</b></div>
-          <div><div class="meta" style="color:var(--muted);font-size:13px">Punkte</div>
+               <b style="font-size:18px">${run.drill ? 'ohne' : run.minutes + ' Minuten'}</b></div>
+          <div><div class="meta" style="color:var(--muted);font-size:13px">${run.drill ? 'Richtig zu lösen' : 'Punkte'}</div>
                <b style="font-size:18px">${fmtP(run.maxPoints)}</b></div>
         </div>
         ${sess ? `<button class="btn wide" id="resume">Prüfung fortsetzen — ${mmss(sess.left)} übrig</button>
@@ -309,9 +333,13 @@ function screenExam(run, resumeLeft){
     updateProgress();
     markCurrentPart();
     document.getElementById('submit').onclick = () => finish(run, false);
-    document.getElementById('pause').onclick = () => pauseExam(run);
-    startTimer(resumeLeft || run.minutes * 60,
-               () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
+    const pz = document.getElementById('pause');
+    if (run.drill) { pz.remove(); stopTimer(); }     // Übung läuft ohne Uhr
+    else {
+      pz.onclick = () => pauseExam(run);
+      startTimer(resumeLeft || run.minutes * 60,
+                 () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
+    }
   });
 }
 
@@ -390,7 +418,7 @@ function renderBank(sec){
 }
 
 function renderItem(sec, it){
-  const head = `<div class="qhead"><span class="qnum">${esc(it.id)}</span>
+  const head = `<div class="qhead"><span class="qnum">${esc(it.num || it.id)}</span>
     <span class="qtext grow">${esc(it.text)}</span></div>`;
   let body = '';
 
@@ -528,6 +556,60 @@ function pauseExam(run){
   box.querySelector('[data-exit]').onclick = () => { close(); screenModell(S.modell); };
 }
 
+/* ============ Fehlerliste ============ */
+/* Nach jeder Prüfung wird festgehalten, welche Aufgaben falsch waren.
+   Wer sie später richtig beantwortet, fliegt wieder aus der Liste. */
+const MIST = 'b1.mistakes';
+const mistKey = x => `${x.m}|${x.s}|${x.i}`;
+
+function updateMistakes(run){
+  const seen = new Set(), wrong = [];
+  run.parts.forEach(p => {
+    if (p.format === 'writing') return;
+    const mid = p.mid || (S.modell && S.modell.id), sid = p.sid || p.id;
+    p.items.forEach(it => {
+      const rec = { m: mid, s: sid, i: it.num || it.id };
+      seen.add(mistKey(rec));
+      if (S.answers[it.id] !== it.answer) wrong.push(rec);
+    });
+  });
+  const rest = load(MIST, []).filter(x => !seen.has(mistKey(x)));
+  save(MIST, [...rest, ...wrong].slice(-500));
+}
+
+/* Baut aus den Fehlern einen Übungsdurchgang: je Modelltest und Teil ein
+   Abschnitt mit seinem Text und seiner Wortliste — sonst wären die Aufgaben
+   gar nicht lösbar — aber nur mit den Aufgaben, die falsch waren. */
+async function drillRun(){
+  const byModell = {};
+  load(MIST, []).forEach(x => (byModell[x.m] ||= []).push(x));
+
+  const parts = [];
+  for (const [mid, entries] of Object.entries(byModell)){
+    let m;
+    try { m = await loadModell(mid); } catch { continue; }
+    if (!m) continue;
+    const bySec = {};
+    entries.forEach(x => (bySec[x.s] ||= new Set()).add(x.i));
+    m.sections.forEach(sec => {
+      const ids = bySec[sec.id];
+      if (!ids || sec.format === 'writing') return;
+      const items = sec.items.filter(it => ids.has(it.id))
+        // eindeutige Kennung, sonst kollidieren gleiche Nummern aus zwei Tests
+        .map(it => ({ ...it, id: `${mid}~${sec.id}~${it.id}`, num: it.id }));
+      if (!items.length) return;
+      parts.push({ ...sec, mid, sid: sec.id, id: `${mid}-${sec.id}`,
+                   title: `${m.title} · ${sec.title}`, items,
+                   pointsPerItem: 1, maxPoints: items.length,
+                   availablePoints: items.length });
+    });
+  }
+  if (!parts.length) return null;
+  const n = parts.reduce((a, p) => a + p.items.length, 0);
+  return { id: 'drill', title: 'Fehler wiederholen', drill: true, parts,
+           minutes: 0, maxPoints: n, availablePoints: n, missing: 0 };
+}
+
 /* ============ Korrektur ============ */
 
 /* Notenstufen laut telc: 90 / 80 / 70 / 60 % der Höchstpunktzahl. */
@@ -557,7 +639,7 @@ function saveResult(run, points, max, extra = {}){
 /* Der Text im Schriftlichen Ausdruck lebt sonst nur im Speicher — geht die
    Seite zu, ist eine halbe Stunde Arbeit weg. Darum wird beim Tippen laufend
    ein Entwurf gesichert und beim nächsten Start wieder eingesetzt. */
-const draftKey = runId => `b1.draft.${S.modell.id}.${runId}`;
+const draftKey = runId => `b1.draft.${S.modell ? S.modell.id : '-'}.${runId}`;
 const loadDraft = runId => load(draftKey(runId), '');
 const saveDraft = (runId, text) => save(draftKey(runId), text);
 function clearDraft(runId){
@@ -567,10 +649,10 @@ function clearDraft(runId){
 /* جلسة امتحان جارية: الإجابات والوقت المتبقّي. منحفظها باستمرار تا لو
    سكّرت الصفحة أو طلعت تتغدّى، ترجع من وين وقّفتي — والمؤقّت ما بيمشي وأنت
    برّا، لأنه بينحفظ الوقت المتبقّي مو وقت البداية. */
-const sessKey = runId => `b1.session.${S.modell.id}.${runId}`;
+const sessKey = runId => `b1.session.${S.modell ? S.modell.id : '-'}.${runId}`;
 
 function saveSession(run){
-  if (!run || S.view !== 'exam') return;
+  if (!run || run.drill || S.view !== 'exam') return;
   save(sessKey(run.id), {
     answers: S.answers, dropped: S.dropped, left: S.left,
     date: new Date().toLocaleDateString('de-DE')
@@ -611,7 +693,11 @@ function finish(run, auto){
     });
     const max = run.maxPoints;
     const points = Math.round(earned / run.availablePoints * max * 10) / 10;
-    screenResult(run, points, max, saveResult(run, points, max), right, total);
+    updateMistakes(run);
+    // eine Übung ist keine Prüfung — sie überschreibt kein Ergebnis
+    const pct = run.drill ? Math.round(points / max * 100)
+                          : saveResult(run, points, max);
+    screenResult(run, points, max, pct, right, total);
   };
 
   if (auto) return go2();
@@ -657,7 +743,7 @@ function screenResult(run, points, max, pct, right, total){
         const mine = S.answers[it.id];
         const good = mine === it.answer;
         return `<div class="q ${good ? 'isok' : 'isbad'}">
-          <div class="qhead"><span class="qnum">${esc(it.id)}</span>
+          <div class="qhead"><span class="qnum">${esc(it.num || it.id)}</span>
             <span class="qtext grow">${esc(it.text)}</span></div>
           <div class="fb ${good ? 'ok' : 'bad'}">
             ${good ? `<b>✔ Richtig · ${fmtP(p.pointsPerItem)} P.</b>` : `<b>✘ Falsch · 0 P.</b>
@@ -680,8 +766,11 @@ function screenResult(run, points, max, pct, right, total){
         <button class="btn grow" id="back">Übersicht</button>
       </div></div>`;
 
-    document.getElementById('again').onclick = () => screenIntro(run);
-    document.getElementById('back').onclick  = () => screenModell(S.modell);
+    document.getElementById('again').onclick = () =>
+      run.drill ? drillRun().then(r => r ? screenIntro(r) : screenHome())
+                : screenIntro(run);
+    document.getElementById('back').onclick  = () =>
+      run.drill ? screenHome() : screenModell(S.modell);
   });
 }
 
