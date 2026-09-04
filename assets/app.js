@@ -15,7 +15,9 @@ const S = {
   dropped: {},      // { itemId: [früher gewählte Buchstaben] } — werden durchgestrichen
   tick: null,       // Timer
   left: 0,          // verbleibende Sekunden
-  view: 'home'
+  view: 'home',
+  level: 'b1',      // aktuelle Prüfungsstufe
+  sub: null         // laufendes Abonnement { levels, current_period_end }
 };
 
 /* ============ Helfer ============ */
@@ -95,20 +97,92 @@ elBack.onclick = () => {
   }
 };
 
-/* ============ Startseite ============ */
+/* ============ Start ============ */
+/* Die Inhalte liegen jetzt auf dem Server und sind an ein Abonnement
+   gebunden. Beim Start wird deshalb zuerst die Sitzung geprüft: ohne
+   gültigen Zugang kommt der Code-Bildschirm, sonst die Übersicht. */
 async function boot(){
+  if (!API.configured()){
+    app.innerHTML = `<div class="empty">Die App ist noch nicht mit dem Server
+      verbunden.<br>Bitte <code>assets/config.js</code> ausfüllen.</div>`;
+    return;
+  }
+  app.innerHTML = '<div class="empty">Einen Moment …</div>';
   try {
-    S.index = await (await fetch('data/index.json?v=' + Date.now())).json();
+    await API.ensureSession();
+    S.sub = API.hasSession() ? await API.subscription() : null;
+  } catch { S.sub = null; }
+
+  if (!S.sub) return screenCode();
+
+  S.level = S.sub.levels && S.sub.levels[0] || 'b1';
+  try {
+    S.index = await API.index(S.level);
   } catch {
-    app.innerHTML = `<div class="empty">Die Testdaten konnten nicht geladen werden.<br>
-      Bitte über einen lokalen Server öffnen: <code>python3 -m http.server</code></div>`;
+    app.innerHTML = `<div class="empty">Keine Verbindung zum Server.<br>
+      Bitte später noch einmal versuchen.</div>`;
     return;
   }
   screenHome();
 }
 
+/* Zugang per Code — es gibt keine E-Mail und kein Passwort. */
+function screenCode(msg){
+  stopTimer();
+  go('code', () => {
+    elBack.hidden = true;
+    app.innerHTML = `
+      <h1>Zugang</h1>
+      <p class="sub">Geben Sie Ihren Zugangscode ein. Sie haben ihn beim Kauf
+        erhalten. Der Code wird nur einmal gebraucht — danach bleibt dieses
+        Gerät angemeldet.</p>
+      ${msg ? `<div class="instr" style="color:var(--bad)">${esc(msg)}</div>` : ''}
+      <div class="card">
+        <input id="code" class="codeinput" type="text" inputmode="latin"
+               autocapitalize="characters" autocomplete="off"
+               placeholder="XX-XXXX-XXXX" aria-label="Zugangscode">
+        <button class="btn" id="godo" style="width:100%;margin-top:10px">Freischalten</button>
+      </div>`;
+
+    const inp = document.getElementById('code');
+    const btn = document.getElementById('godo');
+    const send = async () => {
+      const code = inp.value.trim();
+      if (!code) return inp.focus();
+      btn.disabled = true; btn.textContent = 'Wird geprüft …';
+      let r;
+      try { r = await API.redeem(code); }
+      catch { r = { ok: false, error: 'network' }; }
+      btn.disabled = false; btn.textContent = 'Freischalten';
+      if (r && r.ok) return boot();
+      screenCode({
+        invalid_code: 'Dieser Code ist unbekannt.',
+        already_used: 'Dieser Code wurde bereits verwendet.',
+        revoked:      'Dieser Code wurde gesperrt.',
+        device_limit: 'Die Höchstzahl an Geräten ist erreicht.',
+        network:      'Keine Verbindung. Bitte später versuchen.'
+      }[r && r.error] || 'Der Code konnte nicht eingelöst werden.');
+    };
+    btn.onclick = send;
+    inp.onkeydown = e => { if (e.key === 'Enter') send(); };
+    inp.focus();
+  });
+}
+
+let mistCount = 0;      // wird beim Start und nach jeder Prüfung aufgefrischt
+async function refreshMistakes(){
+  try { const r = await API.mistakes(); mistCount = r ? r.length : 0; }
+  catch { mistCount = 0; }
+}
+
 function screenHome(){
   stopTimer();
+  // Die Fehlerzahl kommt vom Server. Neu gezeichnet wird nur, wenn sie sich
+  // geändert hat — sonst ruft sich der Bildschirm endlos selbst auf.
+  const before = mistCount;
+  refreshMistakes().then(() => {
+    if (S.view === 'home' && mistCount !== before) screenHome();
+  });
   go('home', () => {
     const cards = S.index.modelle.map((m, i) => `
       <button class="tile" data-id="${esc(m.id)}">
@@ -118,7 +192,7 @@ function screenHome(){
         <span class="chev">›</span>
       </button>`).join('');
 
-    const nMist = load(MIST, []).length;
+    const nMist = mistCount;
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
       <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die drei Prüfungsteile
@@ -142,14 +216,11 @@ function screenHome(){
 }
 
 /* ============ Prüfungsteile eines Modelltests ============ */
-const fetchModell = async file =>
-  await (await fetch(`data/${file}?v=` + Date.now())).json();
-
+/* Die Aufgaben kommen ohne Lösungen vom Server. Die Lösungen erreichen die
+   App erst nach dem Abgeben, als Antwort von submit_attempt. */
 const modellCache = {};
 async function loadModell(id){
-  const entry = S.index.modelle.find(m => m.id === id);
-  if (!entry) return null;
-  if (!modellCache[id]) modellCache[id] = await fetchModell(entry.file);
+  if (!modellCache[id]) modellCache[id] = await API.test(id, S.level);
   return modellCache[id];
 }
 
@@ -241,12 +312,12 @@ function reviewRun(m, blockId){
   stopTimer();
   if (run.parts.length === 1 && run.parts[0].format === 'writing')
     return screenWriting(run, r);
-  let right = 0, total = 0;
-  run.parts.forEach(p => p.items.forEach(it => {
-    total++;
-    if (S.answers[it.id] === it.answer) right++;
-  }));
-  screenResult(run, r.points, r.max, r.pct, right, total);
+  // Die Lösungen stehen im gespeicherten Ergebnis — die Aufgaben selbst
+  // tragen sie nie. Ältere Ergebnisse ohne results sind nicht ansehbar.
+  if (!r.results) return toast('Für diese Prüfung liegen keine Lösungen vor.');
+  applyResults(run, r.results);
+  const right = r.results.filter(x => x.correct).length;
+  screenResult(run, r.points, r.max, r.pct, right, runItems(run).length);
 }
 
 /* ============ Startbildschirm ============ */
@@ -404,13 +475,19 @@ function renderPassages(sec){
 
 function renderBank(sec){
   if (sec.bankImage){
-    // Pfade in den JSON-Dateien sind relativ zum data-Ordner.
-    // In der Einzeldatei-Version steht hier schon eine data:-URI.
-    const src = sec.bankImage.startsWith('data:') ? sec.bankImage : 'data/' + sec.bankImage;
+    // Die Anzeigen sind Prüfungsinhalt wie die Aufgaben: sie liegen in einem
+    // privaten Bucket und werden über eine signierte URL nachgeladen.
+    const slot = `img_${Math.random().toString(36).slice(2)}`;
+    API.imageUrl(sec.bankImage).then(url => {
+      const el = document.getElementById(slot);
+      if (!el) return;
+      if (!url) return void (el.textContent = 'Die Anzeigen konnten nicht geladen werden.');
+      el.innerHTML = `<a href="${esc(url)}" target="_blank" rel="noopener">
+        <img src="${esc(url)}" alt="Anzeigen" class="bankimg"></a>`;
+    }).catch(() => {});
     return `<div class="bank"><h3>${esc(sec.bankTitle || 'Anzeigen')}</h3>
       <p class="sub" style="margin:0 0 10px">Zum Vergrößern auf das Bild tippen</p>
-      <a href="${esc(src)}" target="_blank" rel="noopener">
-        <img src="${esc(src)}" alt="Anzeigen" class="bankimg"></a></div>`;
+      <div id="${slot}" class="bankslot">Anzeigen werden geladen …</div></div>`;
   }
   if (!sec.bank || !sec.bank.length) return '';
   return `<div class="bank"><h3>${esc(sec.bankTitle || 'Auswahl')}</h3>
@@ -558,51 +635,41 @@ function pauseExam(run){
 }
 
 /* ============ Fehlerliste ============ */
-/* Nach jeder Prüfung wird festgehalten, welche Aufgaben falsch waren.
-   Wer sie später richtig beantwortet, fliegt wieder aus der Liste. */
-const MIST = 'b1.mistakes';
-const mistKey = x => `${x.m}|${x.s}|${x.i}`;
-
-function updateMistakes(run){
-  const seen = new Set(), wrong = [];
-  run.parts.forEach(p => {
-    if (p.format === 'writing') return;
-    const mid = p.mid || (S.modell && S.modell.id), sid = p.sid || p.id;
-    p.items.forEach(it => {
-      const rec = { m: mid, s: sid, i: it.num || it.id };
-      seen.add(mistKey(rec));
-      if (S.answers[it.id] !== it.answer) wrong.push(rec);
-    });
-  });
-  const rest = load(MIST, []).filter(x => !seen.has(mistKey(x)));
-  save(MIST, [...rest, ...wrong].slice(-500));
-}
+/* Die Fehler stehen jetzt in der Datenbank: submit_attempt trägt sie ein,
+   submit_drill nimmt sie wieder heraus, sobald die Aufgabe sitzt. Die App
+   holt sie nur noch ab. */
 
 /* Baut aus den Fehlern einen Übungsdurchgang: je Modelltest und Teil ein
    Abschnitt mit seinem Text und seiner Wortliste — sonst wären die Aufgaben
    gar nicht lösbar — aber nur mit den Aufgaben, die falsch waren. */
 async function drillRun(){
-  const byModell = {};
-  load(MIST, []).forEach(x => (byModell[x.m] ||= []).push(x));
+  let rows;
+  try { rows = await API.mistakes(); } catch { return null; }
+  if (!rows || !rows.length) return null;
+
+  // nach Modelltest und Abschnitt gruppieren
+  const bySec = new Map();
+  rows.forEach(row => {
+    const it  = row.items;         if (!it) return;
+    const sec = it.sections;       if (!sec || sec.format === 'writing') return;
+    const key = `${sec.tests ? sec.tests.slug : '?'}~${sec.section_id}`;
+    if (!bySec.has(key)) bySec.set(key, { sec, items: [] });
+    bySec.get(key).items.push({
+      id: it.id, num: it.item_id, text: it.text,
+      ...(it.options ? { options: it.options } : {}),
+      ...(it.meta || {})
+    });
+  });
 
   const parts = [];
-  for (const [mid, entries] of Object.entries(byModell)){
-    let m;
-    try { m = await loadModell(mid); } catch { continue; }
-    if (!m) continue;
-    const bySec = {};
-    entries.forEach(x => (bySec[x.s] ||= new Set()).add(x.i));
-    m.sections.forEach(sec => {
-      const ids = bySec[sec.id];
-      if (!ids || sec.format === 'writing') return;
-      const items = sec.items.filter(it => ids.has(it.id))
-        // eindeutige Kennung, sonst kollidieren gleiche Nummern aus zwei Tests
-        .map(it => ({ ...it, id: `${mid}~${sec.id}~${it.id}`, num: it.id }));
-      if (!items.length) return;
-      parts.push({ ...sec, mid, sid: sec.id, id: `${mid}-${sec.id}`,
-                   title: `${m.title} · ${sec.title}`, items,
-                   pointsPerItem: 1, maxPoints: items.length,
-                   availablePoints: items.length });
+  for (const [key, g] of bySec){
+    const cfg = g.sec.config || {};
+    parts.push({
+      ...cfg, id: key, sid: g.sec.section_id, format: g.sec.format,
+      title: `${g.sec.tests ? g.sec.tests.title : ''} · ${g.sec.title}`,
+      instruction: '', items: g.items,
+      pointsPerItem: 1, maxPoints: g.items.length,
+      availablePoints: g.items.length
     });
   }
   if (!parts.length) return null;
@@ -671,6 +738,54 @@ function clearResult(modellId, runId){
   save('b1.progress', prog);
 }
 
+/* Die Lösungen kommen mit der Korrektur zurück. Sie werden hier auf die
+   Aufgaben gelegt, damit die Ergebnisanzeige unverändert weiterläuft —
+   vor dem Abgeben ist it.answer schlicht nicht vorhanden. */
+function applyResults(run, results){
+  const by = {};
+  (results || []).forEach(r => { if (r.id) by[r.id] = r; });
+  run.parts.forEach(p => p.items.forEach(it => {
+    const r = by[it.id];
+    if (!r) return;
+    it.answer = r.answer;
+    if (r.explanation) it.explain = r.explanation;
+  }));
+}
+
+/* Korrigiert wird auf dem Server. Die App schickt die Antworten und
+   bekommt Punkte und Lösungen zurück; sie kann nicht selbst rechnen. */
+async function grade(run){
+  app.innerHTML = '<div class="empty">Wird korrigiert …</div>';
+  let res;
+  try {
+    res = run.drill
+      ? await API.submitDrill(S.answers)
+      : await API.submitAttempt(S.modell.uuid, run.id, S.answers);
+  } catch {
+    res = null;
+  }
+  if (!res || !res.ok){
+    app.innerHTML = `<div class="empty">Die Korrektur ist fehlgeschlagen.<br>
+      Ihre Antworten sind gespeichert — bitte mit Verbindung erneut abgeben.</div>`;
+    saveSession(run);
+    return;
+  }
+  applyResults(run, res.results);
+  refreshMistakes();
+
+  // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
+  // Der Server rechnet über die vorhandenen; hier wird auf die offizielle
+  // Höchstpunktzahl hochgerechnet, damit alle Tests vergleichbar bleiben.
+  const points = run.drill
+    ? res.right
+    : Math.round(res.points / (res.max_points || 1) * run.maxPoints * 10) / 10;
+  const total  = runItems(run).length;
+  const right  = (res.results || []).filter(r => r.correct).length;
+  const pct    = run.drill ? Math.round(points / max * 100)
+                           : saveResult(run, points, run.maxPoints, { results: res.results });
+  screenResult(run, points, run.drill ? max : run.maxPoints, pct, right, total);
+}
+
 function finish(run, auto){
   const go2 = () => {
     stopTimer();
@@ -682,23 +797,7 @@ function finish(run, auto){
       return screenWriting(run);
     }
 
-    // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
-    // Damit alle Tests vergleichbar bleiben, wird das Ergebnis auf die
-    // offizielle Höchstpunktzahl umgerechnet.
-    let earned = 0, right = 0, total = 0;
-    run.parts.forEach(p => {
-      p.items.forEach(it => {
-        total++;
-        if (S.answers[it.id] === it.answer){ earned += p.pointsPerItem; right++; }
-      });
-    });
-    const max = run.maxPoints;
-    const points = Math.round(earned / run.availablePoints * max * 10) / 10;
-    updateMistakes(run);
-    // eine Übung ist keine Prüfung — sie überschreibt kein Ergebnis
-    const pct = run.drill ? Math.round(points / max * 100)
-                          : saveResult(run, points, max);
-    screenResult(run, points, max, pct, right, total);
+    grade(run);
   };
 
   if (auto) return go2();

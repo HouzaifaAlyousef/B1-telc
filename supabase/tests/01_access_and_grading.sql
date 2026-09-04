@@ -82,7 +82,7 @@ begin
   ---------------------------------------------------------------- ٧ التصحيح
   -- منبني إجابات صح للكتلة الأولى كلها (منقراها كـsuperuser برّا هالجلسة)
   reset role;
-  select jsonb_object_agg(i.item_id, ia.answer) into got
+  select jsonb_object_agg(i.id::text, ia.answer) into got
     from items i
     join item_answers ia on ia.item_id = i.id
     join sections s on s.id = i.section_id
@@ -102,6 +102,21 @@ begin
                   (res->>'pct')::numeric = 0);
   perform t_check('الأخطاء انسجّلت للمراجعة',
                   (select count(*) from mistakes) > 0);
+
+  ---------------------------------------------------------------- ٧ب تكرار الأخطاء
+  reset role;
+  select jsonb_object_agg(m.item_id::text, ia.answer) into got
+    from mistakes m join item_answers ia on ia.item_id = m.item_id
+   where m.user_id = paid;
+  set local role authenticated;
+  perform set_config('request.jwt.claim.sub', paid::text, true);
+
+  select count(*) into n from mistakes where user_id = paid;
+  res := submit_drill(got);
+  perform t_check(format('تكرار الأخطاء: %s سؤال كلهن صح', res->>'total'),
+                  (res->>'pct')::numeric = 100);
+  perform t_check('الأسئلة المتقنة طلعت من قائمة الأخطاء',
+                  (select count(*) from mistakes where user_id = paid) = 0);
 
   ---------------------------------------------------------------- ٨
   -- العميل ما بيقدر يكتب علامته بإيده

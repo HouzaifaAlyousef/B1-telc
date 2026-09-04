@@ -102,6 +102,7 @@ create table tests (
   title      text not null,                  -- 'PETRA'
   subtitle   text,
   blocks     jsonb not null default '[]',    -- الكتل المؤقّتة (نفس شكل modell-XX.json)
+  aufgaben   int not null default 0,         -- عدد الأسئلة، للعرض بالقائمة
   is_free    boolean not null default false, -- عيّنة مجانية للتجربة
   published  boolean not null default false,
   sort       int not null default 0,

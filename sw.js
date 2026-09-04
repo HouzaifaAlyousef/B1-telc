@@ -1,10 +1,10 @@
 /* خدمة عامل: بتخزّن التطبيق تا يشتغل بدون إنترنت */
-const CACHE = 'telc-b1-v2';
+const CACHE = 'telc-b1-v3';
 const CORE = [
   './', './index.html', './manifest.webmanifest',
   './assets/style.css', './assets/app.js',
+  './assets/api.js', './assets/config.js',
   './assets/icons/icon-192.png', './assets/icons/icon-512.png',
-  './data/index.json',
 ];
 
 self.addEventListener('install', e => {
@@ -20,6 +20,9 @@ self.addEventListener('activate', e => {
 /* الشبكة أولاً وبعدها الكاش — تا تجي أحدث نسخة لما يكون في إنترنت */
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  /* نداءات Supabase ما بتنخزّن أبداً: فيها توكن الجلسة ونتائج التصحيح،
+     وتخزينها بكاش مشترك بيسرّب بيانات بين المستخدمين على نفس الجهاز. */
+  if (new URL(e.request.url).origin !== self.location.origin) return;
   e.respondWith(
     fetch(e.request)
       .then(res => {

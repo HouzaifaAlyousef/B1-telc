@@ -123,7 +123,7 @@ end $$;
 create or replace function submit_attempt(
   p_test_id  uuid,
   p_block_id text,
-  p_answers  jsonb          -- { "<item_id النصّي>": "<جواب المستخدم>" }
+  p_answers  jsonb          -- { "<uuid السؤال>": "<جواب المستخدم>" }
 ) returns jsonb
 language plpgsql security definer set search_path = public as $$
 declare
@@ -169,7 +169,7 @@ begin
   for r in
     select i.id, i.item_id, i.points, s.section_id, s.format,
            ia.answer, ia.explanation,
-           p_answers ->> i.item_id as given
+           p_answers ->> i.id::text as given
       from items i
       join sections s on s.id = i.section_id
       left join item_answers ia on ia.item_id = i.id
@@ -191,6 +191,7 @@ begin
     end if;
 
     v_results := v_results || jsonb_build_object(
+      'id',          r.id,
       'section',     r.section_id,
       'item',        r.item_id,
       'given',       r.given,
@@ -217,3 +218,61 @@ revoke all on function register_device(text,text)       from public;
 grant execute on function redeem_code(text,text,text)     to authenticated;
 grant execute on function submit_attempt(uuid,text,jsonb) to authenticated;
 grant execute on function register_device(text,text)      to authenticated;
+
+-- ---------------------------------------------------------------------
+-- تصحيح جولة «تكرار الأخطاء»
+-- بتختلف عن submit_attempt لأنها بتجمع أسئلة من امتحانات وأقسام مختلفة،
+-- فما إلها امتحان ولا كتلة واحدة. ما بتنكتب كمحاولة — هي تمرين مو امتحان.
+-- ---------------------------------------------------------------------
+create or replace function submit_drill(p_answers jsonb)
+returns jsonb
+language plpgsql security definer set search_path = public as $$
+declare
+  v_user    uuid := auth.uid();
+  v_right   int  := 0;
+  v_total   int  := 0;
+  v_results jsonb := '[]';
+  r         record;
+begin
+  if v_user is null then
+    return jsonb_build_object('ok', false, 'error', 'not_authenticated');
+  end if;
+
+  for r in
+    select i.id, i.item_id, s.section_id, t.slug, t.level_id,
+           ia.answer, ia.explanation,
+           p_answers ->> i.id::text as given
+      from items i
+      join item_answers ia on ia.item_id = i.id
+      join sections s on s.id = i.section_id
+      join tests   t on t.id = s.test_id
+     where i.id::text in (select jsonb_object_keys(p_answers))
+       -- نفس فحص الصلاحية: ما بينفع يتدرّب على مستوى مو مشترك فيه
+       and (t.is_free or has_access(v_user, t.level_id))
+  loop
+    v_total := v_total + 1;
+    if r.given is not null and r.given = r.answer then
+      v_right := v_right + 1;
+      -- جاوب صح ← بيطلع من قائمة الأخطاء
+      delete from mistakes where user_id = v_user and item_id = r.id;
+    else
+      insert into mistakes (user_id, item_id) values (v_user, r.id)
+      on conflict (user_id, item_id)
+        do update set wrong_count = mistakes.wrong_count + 1,
+                      last_seen_at = now();
+    end if;
+
+    v_results := v_results || jsonb_build_object(
+      'id', r.id, 'item', r.item_id, 'section', r.section_id, 'test', r.slug,
+      'given', r.given, 'answer', r.answer, 'explanation', r.explanation,
+      'correct', (r.given is not null and r.given = r.answer));
+  end loop;
+
+  return jsonb_build_object(
+    'ok', true, 'right', v_right, 'total', v_total,
+    'pct', case when v_total > 0 then round(100.0 * v_right / v_total, 1) else null end,
+    'results', v_results);
+end $$;
+
+revoke all on function submit_drill(jsonb) from public;
+grant execute on function submit_drill(jsonb) to authenticated;

@@ -67,12 +67,14 @@ def main():
 
         w("")
         w(f"-- ================= {slug} · {d.get('title','')} =================")
-        w("insert into tests (level_id, slug, title, subtitle, blocks, published, sort)")
+        w("insert into tests (level_id, slug, title, subtitle, blocks, aufgaben,"
+          " published, sort)")
         w(f"values ({q(L)}, {q(slug)}, {q(d.get('title'))}, {q(d.get('subtitle'))},")
-        w(f"        {qj(d.get('blocks', []))}, true, {n_tests})")
+        w(f"        {qj(d.get('blocks', []))}, {meta.get('aufgaben', 0)}, true, {n_tests})")
         w("on conflict (level_id, slug) do update set"
           " title = excluded.title, subtitle = excluded.subtitle,"
-          " blocks = excluded.blocks, sort = excluded.sort;")
+          " blocks = excluded.blocks, aufgaben = excluded.aufgaben,"
+          " sort = excluded.sort;")
 
         # ---- الأقسام ----
         rows = []

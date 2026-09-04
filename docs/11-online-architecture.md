@@ -191,6 +191,24 @@ is an admin action rather than a rebuild. The risk is concentrated rather than
 removed — a takedown reaches every test at once, because they share one source.
 This should be resolved before the first payment, not after.
 
+## Deploying
+
+The frontend is still a folder of static files, but **`data/` must never be
+deployed again**. It holds all 896 answer keys, and shipping it would defeat
+the entire protection design regardless of what the database does. It stays in
+the repository as the source the exporter reads, and nothing more.
+
+What ships: `index.html`, `manifest.webmanifest`, `sw.js`, `assets/`. What does
+not: `data/`, `Doku/`, `tools/`, `docs/`, `supabase/`, `tests/`.
+
+`assets/config.js` carries the Supabase URL and anon key. Neither is a secret —
+the anon key is designed to be public and RLS is what protects the data — but
+they are per-project, so the deployed copy needs your own values.
+
+The page images (`data/img/`) belong in a **private** Supabase Storage bucket
+named `exam-images`. They are exam content: `sections.config.bankImage` holds
+the object path, and the app fetches a signed URL at render time.
+
 ## Order of work
 
 1. **Schema and functions** — `supabase/migrations/`. Done.
@@ -207,4 +225,19 @@ This should be resolved before the first payment, not after.
 
 Steps 2, 3 and 5 are one change in practice: the moment answer keys leave the
 JSON files, the client can no longer grade, and the app must already have a
-session to ask the server. Plan them together.
+session to ask the server. They were done together.
+
+### Status
+
+Steps 1, 2, 3 and 5 are done and tested. `supabase/tests/run.sh` builds a
+Postgres from the migrations and asserts the access rules and grading against
+it; `tests/run.sh` drives the real app in Chromium against a stub API built
+from that same database.
+
+Not yet verified against a live Supabase project: the PostgREST query strings
+in `assets/api.js`, anonymous sign-in, and Storage signing. Those are the parts
+that depend on the hosted service rather than on Postgres, and they are the
+first thing to exercise once a project exists.
+
+Still open: the admin panel (step 6), further levels (step 7) and the import
+pipeline (step 8).
