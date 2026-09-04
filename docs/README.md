@@ -19,6 +19,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 08 | [Running & deploying](08-running-deploying.md) | `run.sh`, GitHub Pages, the single-file bundle |
 | 09 | [Code review](09-code-review.md) | Concrete defects and improvements, ranked |
 | 10 | [Commercialisation](10-commercialisation.md) | Path to a paid product, admin panel, competitor gap analysis |
+| 11 | [Going online](11-online-architecture.md) | Accounts, access codes, server-side grading, multiple levels, admin panel |
 
 ## Quick start
 
@@ -36,4 +37,4 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | Runtime deps | none |
 | Build deps | `pdfplumber pypdfium2 pillow pypdf pyspellchecker` (only to regenerate data) |
 | Storage | `localStorage` only |
-| Backend | none — see [10-commercialisation.md](10-commercialisation.md) |
+| Backend | none today — planned in [11-online-architecture.md](11-online-architecture.md) |
