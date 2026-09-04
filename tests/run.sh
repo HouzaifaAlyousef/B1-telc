@@ -26,4 +26,12 @@ select json_build_object(
 
 ln -sfn "$(npm root -g)" node_modules
 trap 'rm -f node_modules' EXIT
+
+echo "▸ تطبيق الطلاب"
 node tests/browser.mjs
+
+echo "▸ لوحة التحكّم"
+# اللوحة بدها بيانات اختبار اللوحة بقاعدة البيانات
+psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d telc -q \
+  -v ON_ERROR_STOP=1 -f supabase/tests/02_admin.sql >/dev/null
+node tests/admin.mjs

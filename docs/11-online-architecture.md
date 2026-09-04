@@ -156,6 +156,23 @@ Access is `profiles.is_admin`, enforced by RLS, not by hiding a URL. Supabase
 Studio is not a substitute: it grants full table access with no audit trail and
 no concept of "extend this subscription by 30 days".
 
+Reads go straight through PostgREST — the `admin_all` policy allows them and
+reading needs no audit. **Writes never do.** Every change goes through an
+`admin_*` function that checks `is_admin()` and writes `admin_audit_log` in the
+same transaction. If the panel wrote to `subscriptions` directly, an action
+could happen with no trace; routing writes through functions makes the trail
+impossible to skip rather than merely expected.
+
+Admins sign in with email and password, not an access code — a separate path
+from students, using an account you create in the Supabase dashboard. Promote
+it once by hand:
+
+```sql
+update profiles set is_admin = true where id = '<the auth.users id>';
+```
+
+The panel lives in `admin/` and is deployed separately from the student app.
+
 ## What is not in the schema yet, and should be considered
 
 **Audio for Hörverstehen.** One third of every telc exam is listening, and the
