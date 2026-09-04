@@ -1,5 +1,9 @@
 # Running and deploying
 
+> **Status — partly superseded.** Deployment becomes a static frontend **plus a Supabase project**.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 ## Locally
 
 ```bash

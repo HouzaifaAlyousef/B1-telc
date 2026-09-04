@@ -31,10 +31,10 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 
 | | |
 |---|---|
-| Type | Static PWA — no backend, no build step, no dependencies |
+| Type | Static PWA today; moving to static frontend + Supabase |
 | Code | ~1,200 lines JS/CSS/HTML, ~1,300 lines Python (build-time only) |
-| Content | 16 Modelltests, 912 questions, 460 KB JSON + 1.3 MB images |
+| Content | 16 Modelltests, 912 questions — moving into the database, multi-level |
 | Runtime deps | none |
 | Build deps | `pdfplumber pypdfium2 pillow pypdf pyspellchecker` (only to regenerate data) |
-| Storage | `localStorage` only |
+| Storage | `localStorage` today; Postgres via Supabase in progress |
 | Backend | none today — planned in [11-online-architecture.md](11-online-architecture.md) |

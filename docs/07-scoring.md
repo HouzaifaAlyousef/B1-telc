@@ -1,5 +1,9 @@
 # Scoring
 
+> **Status — partly superseded.** The point rules are unchanged, but scoring now runs **on the server** in `submit_attempt()`.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 The app reproduces telc's official point table rather than counting questions.
 This document is the reference for those rules and how the code applies them.
 

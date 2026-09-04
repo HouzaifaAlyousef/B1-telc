@@ -1,5 +1,9 @@
 # Data format
 
+> **Status — partly superseded.** This shape survives, but as **rows in Postgres**, not files — and **answer keys are split out** of the item.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 The JSON in `data/` is the contract between `tools/build.py` and `assets/app.js`.
 If you ever replace the PDF pipeline — or write new content by hand, or move to
 a database — this is the shape you must produce.

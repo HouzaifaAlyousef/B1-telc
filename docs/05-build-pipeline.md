@@ -1,5 +1,9 @@
 # The build pipeline — `tools/`
 
+> **Status — partly superseded.** Still valid for the existing 16 tests. New content arrives as **pasted text**, not PDFs.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 This is where the real engineering is. Turning a scanned, double-printed,
 watermarked PDF into 912 answer-checked questions is a much harder problem than
 the app that displays them, and the four Python files solve it with coordinate

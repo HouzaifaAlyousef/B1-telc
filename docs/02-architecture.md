@@ -1,5 +1,9 @@
 # Architecture
 
+> **Status — partly superseded.** The **no server / `localStorage` only** architecture below is being replaced by Supabase.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 ## The one idea worth understanding
 
 The project is split into **two stages that never run at the same time**:

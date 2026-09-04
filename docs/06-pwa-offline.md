@@ -1,5 +1,9 @@
 # PWA and offline
 
+> **Status — partly superseded.** Offline **exams** are being dropped deliberately: sitting an exam now requires a network. Review stays offline.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 The project is designed to install to a phone home screen and run without a
 network. The install half works. **The offline half is currently broken** — see
 the bug section below, which is the highest-priority fix in the repo.

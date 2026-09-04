@@ -130,6 +130,7 @@ create table items (
   text        text,
   options     jsonb,                         -- خيارات mc — بدون تعليم الصح
   points      numeric not null default 1,
+  meta        jsonb,                         -- خاص بـwriting: minWords والنقاط المطلوبة
   sort        int not null default 0,
   unique (section_id, item_id)
 );

@@ -98,3 +98,24 @@ create policy own_attempts_insert on attempts for insert to authenticated
 -- أخطاؤه
 create policy own_mistakes on mistakes for select to authenticated
   using (user_id = auth.uid());
+
+-- ---------------------------------------------------------------------
+-- الصلاحيات (GRANT) — منفصلة عن RLS ولازمة معها
+-- RLS بتحدّد أي صفوف، وGRANT بتحدّد إذا الجدول مسموح أصلاً. الاتنين لازم.
+-- item_answers مقصود إنه مو بالقائمة: لا سياسة ولا صلاحية.
+-- ---------------------------------------------------------------------
+grant usage on schema public to authenticated;
+
+do $$
+declare t text;
+begin
+  foreach t in array array['levels','profiles','access_codes','subscriptions',
+                           'devices','tests','sections','items','resources',
+                           'imports','attempts','mistakes','admin_audit_log']
+  loop
+    -- الصلاحية واسعة عمداً؛ RLS فوقها هي يلي بتقرّر مين بيعمل شو.
+    execute format('grant select, insert, update, delete on %I to authenticated', t);
+  end loop;
+end $$;
+
+revoke all on table item_answers from authenticated, anon;

@@ -1,5 +1,9 @@
 # Code review
 
+> **Status — partly superseded.** Findings #1, #2 (offline) and #7 (the shipped PDF) are overtaken by the rearchitecture.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 Findings from a full read of every file, ranked by what they cost you. Each one
 was verified against the running app or the data, not inferred.
 

@@ -1,5 +1,9 @@
 # From project to paid product
 
+> **Status — partly superseded.** Decisions now taken: Supabase, manual access codes, full content protection.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 Written against the stated goal: **sell this to students, with an admin panel
 that controls payments and subscriptions and gives a view of the data.**
 

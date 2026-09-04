@@ -1,5 +1,9 @@
 # The frontend app — `assets/app.js`
 
+> **Status — partly superseded.** `load`/`save` become async against Supabase, and grading moves out of the client.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 853 lines, no dependencies, no build step. This document walks it top to bottom.
 
 ## Shape of the file

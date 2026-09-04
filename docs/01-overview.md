@@ -1,5 +1,9 @@
 # Overview — what this project is
 
+> **Status — partly superseded.** The **no backend, no accounts, no network** decision below has been reversed.
+> See [11-online-architecture.md](11-online-architecture.md) for the new design.
+> What follows describes the code as it stands today.
+
 ## The core idea in one sentence
 
 **Take the official telc Deutsch B1 practice exams — which exist only as a
