@@ -1,0 +1,11 @@
+# Cloudflare Pages — إعدادات الكاش
+# (المكافئ لـvercel.json، لأن Cloudflare ما بيقرا ملفات Vercel)
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data/img/*
+  Cache-Control: public, max-age=31536000, immutable
