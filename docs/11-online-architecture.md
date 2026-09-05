@@ -62,11 +62,19 @@ device would hold your secret, and you could never tell two students apart.
 One student can hand their code to twenty friends. This is the single largest
 threat to the revenue model, and it is why `access_codes.max_devices` exists:
 
-- A code is redeemable **once**. It binds to the first account that uses it.
-- That account may register at most `max_devices` devices (default 2).
-- `register_device()` refuses the third and returns `device_limit`.
-- The admin panel shows the device count per user, so a code being passed
-  around is visible rather than silent.
+- A code carries a number of **activations** (`max_uses`, default 2). Each new
+  account that redeems it consumes one; re-entering it on an account that
+  already has it consumes nothing and extends nothing.
+- When the activations run out the code returns `code_exhausted`.
+- One code opens **one level**. A student who wants two levels gets two codes —
+  `admin_create_codes` rejects an array that is not exactly one level.
+- `code_redemptions` records who activated a code and when, so the panel shows
+  "2 / 2 used" with the names.
+
+Activations, not devices, is the unit that works here. Every device gets its
+own anonymous account — there is no email tying them together — so a per-account
+device cap could never let a student onto their second device at all. It
+counted the wrong thing.
 
 Device identity is a fingerprint stored in the browser. It is not
 tamper-proof — someone determined will clear it and re-register. The cap makes

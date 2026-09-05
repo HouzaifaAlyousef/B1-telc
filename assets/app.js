@@ -167,6 +167,8 @@ function screenCode(msg){
         invalid_code: 'Dieser Code ist unbekannt.',
         already_used: 'Dieser Code wurde bereits verwendet.',
         revoked:      'Dieser Code wurde gesperrt.',
+        code_exhausted: 'Dieser Code wurde bereits auf allen erlaubten Geräten '
+                      + 'benutzt. Bitte wenden Sie sich an Ihren Kurs.',
         device_limit: 'Die Höchstzahl an Geräten ist erreicht.',
         network:      'Keine Verbindung. Bitte später versuchen.'
       }[r && r.error] || 'Der Code konnte nicht eingelöst werden.');

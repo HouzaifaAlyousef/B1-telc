@@ -54,9 +54,11 @@ begin
                   (select current_period_end from subscriptions where user_id = u1) = d1);
 
   ---------------------------------------------------------------- بغ ١ب
+  -- من 0010: الكود صالح لعدد تفعيلات، مو لحساب واحد. الأكواد فوق
+  -- انعملت بالافتراضي (٢)، فالحساب التاني لازم ينفّذ ويستهلك التاني.
   perform set_config('request.jwt.claim.sub', u2::text, true);
-  perform t_check('★ كود غيره مرفوض',
-                  redeem_code('B1-ONCE-AAAA','dev-x')->>'error' = 'already_used');
+  perform t_check('★ الحساب التاني بيستهلك التفعيل التاني',
+                  (redeem_code('B1-ONCE-AAAA','dev-x')->>'ok')::boolean);
   perform t_check('بس كوده هو بينفّذ',
                   (redeem_code('B1-OTHR-BBBB','dev-y')->>'ok')::boolean);
 
@@ -144,6 +146,124 @@ begin
 
   raise notice '';
   raise notice '  كل اختبارات الانحدار نجحت ✓';
+end $$;
+
+drop function t_check(text, boolean);
+
+-- =====================================================================
+-- 0010: الكود صالح لعدد تفعيلات محدّد
+-- المشكلة الأصلية: كل جهاز = حساب مجهول جديد، فالكود «مرة وحدة» كان
+-- بيمنع الطالب من جهازه التاني نهائياً.
+-- =====================================================================
+\set ON_ERROR_STOP on
+
+delete from code_redemptions; delete from subscriptions; delete from devices;
+delete from access_codes; delete from profiles; delete from auth.users;
+
+insert into auth.users (id) values
+  ('bbbb0001-0000-0000-0000-000000000001'),
+  ('bbbb0002-0000-0000-0000-000000000002'),
+  ('bbbb0003-0000-0000-0000-000000000003'),
+  ('bbbb000a-0000-0000-0000-00000000000a');
+insert into profiles (id, is_admin) values
+  ('bbbb0001-0000-0000-0000-000000000001', false),
+  ('bbbb0002-0000-0000-0000-000000000002', false),
+  ('bbbb0003-0000-0000-0000-000000000003', false),
+  ('bbbb000a-0000-0000-0000-00000000000a', true);
+
+create or replace function t_check(label text, cond boolean)
+returns void language plpgsql as $$
+begin
+  if cond then raise notice '  ✓ %', label;
+  else raise exception '  ✗ فشل: %', label; end if;
+end $$;
+
+do $$
+declare
+  phone  uuid := 'bbbb0001-0000-0000-0000-000000000001';
+  laptop uuid := 'bbbb0002-0000-0000-0000-000000000002';
+  third  uuid := 'bbbb0003-0000-0000-0000-000000000003';
+  adm    uuid := 'bbbb000a-0000-0000-0000-00000000000a';
+  codes  text[];
+  cid    uuid;
+  r      jsonb;
+  n      int;
+begin
+  set local role authenticated;
+
+  ---------------------------------------------------------------- التوليد
+  perform set_config('request.jwt.claim.sub', adm::text, true);
+  select array_agg(c) into codes
+    from admin_create_codes(1, array['b1'], 30, 2, 'اختبار تفعيلات', 2) c;
+  select id into cid from access_codes where code = codes[1];
+  perform t_check('الكود انولّد بتفعيلين',
+                  (select max_uses from access_codes where id = cid) = 2);
+  perform t_check('★ الكود لمستوى واحد فقط',
+                  (select array_length(levels,1) from access_codes where id = cid) = 1);
+
+  begin
+    perform admin_create_codes(1, array['b1','a1'], 30, 2, null, 2);
+    perform t_check('★ كود لمستويين مرفوض', false);
+  exception when others then perform t_check('★ كود لمستويين مرفوض', true);
+  end;
+
+  ---------------------------------------------------------------- التفعيل
+  perform set_config('request.jwt.claim.sub', phone::text, true);
+  r := redeem_code(codes[1], 'fp-phone', 'Android');
+  perform t_check(format('١ الجوال فعّل (%s/%s)', r->>'uses', r->>'max_uses'),
+                  (r->>'ok')::boolean and (r->>'uses')::int = 1);
+
+  perform set_config('request.jwt.claim.sub', laptop::text, true);
+  r := redeem_code(codes[1], 'fp-laptop', 'Firefox');
+  perform t_check(format('★ ٢ اللابتوب فعّل كمان (%s/%s)', r->>'uses', r->>'max_uses'),
+                  (r->>'ok')::boolean and (r->>'uses')::int = 2);
+  perform t_check('واللابتوب صار عنده اشتراك',
+                  has_access(laptop, 'b1'));
+
+  perform set_config('request.jwt.claim.sub', third::text, true);
+  r := redeem_code(codes[1], 'fp-third');
+  perform t_check(format('★ ٣ التالت مرفوض (%s)', r->>'error'),
+                  r->>'error' = 'code_exhausted');
+  perform t_check('والتالت ما عنده وصول', not has_access(third, 'b1'));
+
+  ---------------------------------------------------------------- الإعادة
+  perform set_config('request.jwt.claim.sub', phone::text, true);
+  for n in 1..5 loop r := redeem_code(codes[1], 'fp-phone'); end loop;
+  perform t_check('★ إعادة الإدخال من نفس الجهاز ما بتستهلك تفعيل',
+                  (r->>'already')::boolean and (r->>'uses')::int = 2);
+  perform t_check('ولا بتمدّد',
+                  (select count(distinct current_period_end) from subscriptions
+                    where user_id = phone) = 1);
+
+  ---------------------------------------------------------------- +١
+  perform set_config('request.jwt.claim.sub', adm::text, true);
+  r := admin_add_code_use(cid, 1);
+  perform t_check(format('الأدمن فتح تفعيل زيادة (%s)', r->>'max_uses'),
+                  (r->>'max_uses')::int = 3);
+  perform set_config('request.jwt.claim.sub', third::text, true);
+  perform t_check('★ وبعدها التالت صار يقدر يفعّل',
+                  (redeem_code(codes[1], 'fp-third')->>'ok')::boolean);
+
+  ---------------------------------------------------------------- اللوحة
+  perform set_config('request.jwt.claim.sub', adm::text, true);
+  r := admin_codes();
+  perform t_check('اللوحة بتعرض ٣ تفعيلات من ٣',
+                  (r->0->>'uses')::int = 3 and (r->0->>'max_uses')::int = 3);
+  perform t_check('وبتعرض مين فعّل',
+                  jsonb_array_length(r->0->'redeemers') = 3);
+
+  ---------------------------------------------------------------- الإلغاء
+  perform admin_revoke_code(cid);
+  perform set_config('request.jwt.claim.sub', phone::text, true);
+  perform t_check('الكود الملغى ما بينفّذ ولا لمين فعّله قبل',
+                  redeem_code(codes[1], 'fp-phone')->>'error' = 'revoked');
+
+  ---------------------------------------------------------------- الخصوصية
+  perform t_check('★ الطالب ما بيشوف سجلّ التفعيلات',
+                  (select count(*) from code_redemptions) = 0);
+
+  raise notice '';
+  raise notice '  كل اختبارات التفعيلات نجحت ✓';
 end $$;
 
 drop function t_check(text, boolean);

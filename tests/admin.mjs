@@ -215,6 +215,17 @@ try {
   check('★ بيقول إن باقي المستويات بتضل مقفولة',
         /Andere Stufen bleiben zu/.test(hint) || /keine/.test(hint));
 
+  check('★ بيقول على كم جهاز الكود بينفّذ', /Gerät/.test(hint));
+  check('★ وبيقول إن المستوى التاني بده كود تاني',
+        /zweiten Code/.test(hint) || /keine/.test(hint));
+
+  // عدد التفعيلات بيتغيّر ← السطر بيتحدّث
+  await page.fill('#c_uses', '1');
+  await page.waitForTimeout(200);
+  check('تبديل عدد التفعيلات بيتحدّث بالسطر',
+        /1 Gerät\b/.test(await page.textContent('#c_hint')));
+  await page.fill('#c_uses', '2');
+
   // تبديل المدّة بيحدّث السطر
   await page.selectOption('#c_days', '90');
   await page.waitForTimeout(200);
@@ -229,6 +240,14 @@ try {
   const lastLevels = sql(`select levels::text from access_codes
     order by created_at desc limit 1;`);
   check(`★ الكود انولّد لمستوى واحد فقط (${lastLevels})`, lastLevels === `{${lvlNow}}`);
+  const lastUses = sql(`select max_uses::text from access_codes
+    order by created_at desc limit 1;`);
+  check(`★ وبتفعيلين (${lastUses})`, lastUses === '2');
+
+  // الجدول بيعرض العدّاد
+  await page.waitForTimeout(300);
+  const tbl = await page.textContent('table');
+  check('الجدول بيعرض «2× frei»', /2×\s*frei/.test(tbl));
 
   // ---- الاستيراد: المثال ----
   await page.evaluate(() => document.querySelector('[data-tab="import"]').click());
