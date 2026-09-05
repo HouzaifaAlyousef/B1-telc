@@ -24,6 +24,9 @@ const Markup = (() => {
     return Number.isFinite(n) ? n : null;
   };
 
+  /* الصيغ يلي التطبيق بيعرف يعرضها. غيرها بينستورد بس ما بينرسم. */
+  const FORMATS = ['matching','mc','wordbank','truefalse','writing'];
+
   /* سطر بينهي وضع النص المتعدّد الأسطر */
   const BOUNDARY_LABELS = new Set(['aufgaben','auswahl','text','extra']);
   function isBoundary(t){
@@ -94,6 +97,12 @@ const Markup = (() => {
       if (passages.length){ sec.passages = passages; passages = []; }
       if (sec.bank && !sec.bank.length) delete sec.bank;
       if (!sec.items.length) warn.push(`Teil ${sec.id} hat keine Aufgaben`);
+      // ohne Format weiß weder die Datenbank noch die App, was das ist
+      if (!sec.format)
+        warn.push(`Teil ${sec.id} hat kein Format (matching, mc, wordbank, truefalse, writing)`);
+      else if (!FORMATS.includes(sec.format))
+        warn.push(`Teil ${sec.id}: unbekanntes Format „${sec.format}" — `
+                + `möglich sind ${FORMATS.join(', ')}`);
       // المحسوب: النقاط المتاحة فعلياً من عدد الأسئلة
       const ppi = sec.pointsPerItem;
       if (ppi != null && sec.format !== 'writing'){

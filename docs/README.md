@@ -26,6 +26,8 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 15 | [Security review](15-security.md) | What was checked, how, and what is accepted |
 | 16 | [Audio](16-audio.md) | Hörverstehen playback, and what is still missing |
 
+> Tests, how to run them, and the twelve bugs they found: [../TESTING.md](../TESTING.md)
+
 ## Quick start
 
 ```bash

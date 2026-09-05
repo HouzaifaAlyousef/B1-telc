@@ -27,6 +27,15 @@ select json_build_object(
 ln -sfn "$(npm root -g)" node_modules
 trap 'rm -f node_modules' EXIT
 
+echo "▸ الأدوات (البناء، حارس التسريب، الرفع)"
+./tests/tools.sh
+
+echo "▸ المصدّر (JSON ← SQL ← قاعدة بيانات)"
+python3 tests/export.py
+
+echo "▸ المحلّل: حالات حدّية"
+node tests/parse.mjs
+
 echo "▸ صيغة الاستيراد (round-trip على الامتحانات الحقيقية)"
 node tests/markup.mjs
 

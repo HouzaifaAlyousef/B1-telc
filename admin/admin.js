@@ -710,7 +710,9 @@ function runParse(raw){
   importState.doc = test;
 
   // ما إله حل = مشكلة تمنع النشر (إلا التعبير الكتابي)
-  const fatal = warnings.filter(w => /keine Aufgaben|unbekannten Teil|doppelt|Kein Titel|Keine Teile/.test(w));
+  const fatal = warnings.filter(w =>
+    /keine Aufgaben|unbekannten Teil|doppelt|Kein Titel|Keine Teile|kein Format|unbekanntes Format/
+      .test(w));
   const ok = fatal.length === 0 && counts.items > 0;
 
   const preview = test.sections.map(s => `
