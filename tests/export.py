@@ -48,8 +48,19 @@ n_ans = sum(1 for d in src.values() for s in d['sections']
             for i in s.get('items', []) if 'answer' in i)
 
 # ---- ٣) العدّ الفعلي بقاعدة البيانات ----
-db = {k: int(psql(f'select count(*) from {k};'))
-      for k in ('tests', 'sections', 'items', 'item_answers')}
+# العدّ محصور بالمستوى يلي صدّرناه. اختبارات تانية بتضيف امتحانات
+# لمستويات تانية، وعدّ الكل بيقارن أشياء مو متقابلة.
+B1 = "join sections s on s.id = i.section_id join tests t on t.id = s.test_id" \
+     " where t.level_id = 'b1'"
+db = {
+    'tests': int(psql("select count(*) from tests where level_id = 'b1';")),
+    'sections': int(psql("select count(*) from sections s join tests t"
+                         " on t.id = s.test_id where t.level_id = 'b1';")),
+    'items': int(psql(f"select count(*) from items i {B1};")),
+    'item_answers': int(psql("select count(*) from item_answers ia"
+                             " join items i on i.id = ia.item_id"
+                             f" {B1};")),
+}
 check(f'الامتحانات: {len(src)} ← {db["tests"]}', db['tests'] == len(src))
 check(f'الأقسام: {n_sec} ← {db["sections"]}', db['sections'] == n_sec)
 check(f'الأسئلة: {n_it} ← {db["items"]}', db['items'] == n_it)
@@ -96,11 +107,12 @@ before = db['items']
 subprocess.run(['psql', '-h', '/tmp', '-p', PORT, '-U', 'postgres', '-d', 'telc',
                 '-q', '-v', 'ON_ERROR_STOP=1', '-f', str(out)],
                capture_output=True, text=True)
-after = int(psql('select count(*) from items;'))
+after = int(psql(f"select count(*) from items i {B1};"))
 check(f'إعادة التحميل ما كرّرت ({before} ← {after})', before == after)
 
 # ---- ٧) العدّ المخزّن يطابق الحقيقي ----
-bad = psql("""select count(*) from tests t where t.aufgaben <>
+bad = psql("""select count(*) from tests t
+  where t.level_id = 'b1' and t.aufgaben <>
   (select count(*) from items i join sections s on s.id = i.section_id
     where s.test_id = t.id);""")
 check(f'عمود aufgaben مطابق للعدّ الحقيقي ({bad} مخالف)', bad == '0')

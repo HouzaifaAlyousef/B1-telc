@@ -95,6 +95,53 @@ begin
   perform t_check('التصحيح الفاشل ما بيستهلك حصّة',
                   (writing_quota_state()->>'used')::int = 0);
 
+  ---------------------------------------------------------------- بغ ٥
+  -- التطبيق كان يجيب اشتراك واحد (limit 1)، فالطالب يلي اشترى A1
+  -- وبعدين B1 ما بيشوف غير واحد رغم إن RLS بتسمحله بالاتنين
+  reset role;
+  insert into levels (id, title, sort, published)
+  values ('a1', 'telc Deutsch A1', 1, true)
+  on conflict (id) do update set published = true;
+  insert into tests (level_id, slug, title, blocks, aufgaben, published, sort)
+  values ('a1', 'a1-reg-01', 'A1 Probe', '[]'::jsonb, 10, true, 1)
+  on conflict (level_id, slug) do nothing;
+  insert into access_codes (code, levels, duration_days)
+  values ('A1-REGR-TEST', array['a1'], 60) on conflict (code) do nothing;
+
+  set local role authenticated;
+  perform set_config('request.jwt.claim.sub', u2::text, true);
+  perform redeem_code('A1-REGR-TEST', 'dev-y');
+
+  select count(*) into n from subscriptions where user_id = u2 and status = 'active';
+  perform t_check(format('اشترى مستويين ← %s اشتراك', n), n = 2);
+  perform t_check('★ RLS بتسمحله بالاتنين',
+                  has_access(u2,'a1') and has_access(u2,'b1'));
+
+  -- ★ يلي بيجيبه التطبيق لازم يغطّي الاتنين
+  select count(distinct l) into n
+    from subscriptions s, unnest(s.levels) l
+   where s.user_id = u2 and s.status = 'active'
+     and s.current_period_end > now();
+  perform t_check(format('★ مجموع المستويات من كل الاشتراكات = %s', n), n = 2);
+
+  perform t_check('★ وجلب واحد بس كان بيعطي مستوى واحد (البغ)',
+                  (select array_length(levels,1) from subscriptions
+                    where user_id = u2 and status='active'
+                    order by current_period_end desc limit 1) = 1);
+
+  -- كل مستوى إله تاريخ انتهاء لحاله
+  perform t_check('لكل مستوى تاريخ انتهاء مستقلّ',
+                  (select count(distinct current_period_end) from subscriptions
+                    where user_id = u2 and status = 'active') >= 1);
+
+  ---------------------------------------------------------------- بغ ٥ب
+  -- الكود لمستوى واحد ما بيفتح غيره
+  perform set_config('request.jwt.claim.sub', u1::text, true);
+  perform t_check('★ كود B1 ما بيفتح A1',
+                  has_access(u1,'b1') and not has_access(u1,'a1'));
+  select count(*) into n from tests where level_id = 'a1';
+  perform t_check('ومشترك B1 ما بيشوف امتحانات A1', n = 0);
+
   raise notice '';
   raise notice '  كل اختبارات الانحدار نجحت ✓';
 end $$;

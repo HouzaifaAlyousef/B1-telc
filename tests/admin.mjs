@@ -97,10 +97,23 @@ const PORT = server.address().port;
 
 /* حالة نظيفة: الاختبار لازم يعطي نفس النتيجة كل مرة، فمنشيل يلي
    خلّفته تشغيلات سابقة قبل ما نبلّش. */
-sql(`delete from resources;
-     delete from imports;
+const ADMIN_ID = 'aaaaaaaa-0000-0000-0000-000000000001';
+const STUD_ID  = 'bbbbbbbb-0000-0000-0000-000000000002';
+sql(`delete from writing_feedback; delete from admin_audit_log; delete from mistakes;
+     delete from attempts; delete from imports; delete from resources;
      delete from tests where level_id <> 'b1';
-     delete from levels where id <> 'b1';`);
+     delete from levels where id <> 'b1';
+     delete from devices; delete from subscriptions; delete from access_codes;
+     delete from profiles; delete from auth.users;
+
+     insert into auth.users (id) values ('${ADMIN_ID}'), ('${STUD_ID}');
+     insert into profiles (id, is_admin, display_name, note) values
+       ('${ADMIN_ID}', true,  'Admin', null),
+       ('${STUD_ID}',  false, 'أحمد', 'واتساب 0176…');
+     insert into subscriptions (user_id, levels, current_period_end)
+     values ('${STUD_ID}', array['b1'], now() + interval '30 days');
+     insert into access_codes (code, levels, duration_days, redeemed_at, redeemed_by)
+     values ('B1-SEED-0001', array['b1'], 30, now(), '${STUD_ID}');`);
 
 const results = [];
 const check = (l, c) => { results.push([l, !!c]); console.log(`  ${c ? '✓' : '✗'} ${l}`); };
@@ -191,6 +204,31 @@ try {
   await page.waitForTimeout(300);
   check('حفظ مرجع منشور',
         sql(`select count(*) from resources where title='Wortschatz A1' and published;`) === '1');
+
+  // ---- الأكواد: شو بيفتح الكود ----
+  await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
+  await page.waitForSelector('#c_hint');
+  await page.waitForTimeout(400);
+  const hint = await page.textContent('#c_hint');
+  check(`سطر «شو بيفتح» ظاهر (${hint.replace(/\s+/g,' ').trim().slice(0,60)})`,
+        /Öffnet|Stufe hat gerade/.test(hint));
+  check('★ بيقول إن باقي المستويات بتضل مقفولة',
+        /Andere Stufen bleiben zu/.test(hint) || /keine/.test(hint));
+
+  // تبديل المدّة بيحدّث السطر
+  await page.selectOption('#c_days', '90');
+  await page.waitForTimeout(200);
+  check('السطر بيتحدّث مع تغيير المدّة',
+        (await page.textContent('#c_hint')).includes('90'));
+
+  // الكود المولّد بياخد المستوى المختار فقط
+  const lvlNow = await page.evaluate(() => document.getElementById('c_lvl').value);
+  await page.fill('#c_n', '1');
+  await page.evaluate(() => document.getElementById('c_go').click());
+  await page.waitForSelector('.codes');
+  const lastLevels = sql(`select levels::text from access_codes
+    order by created_at desc limit 1;`);
+  check(`★ الكود انولّد لمستوى واحد فقط (${lastLevels})`, lastLevels === `{${lvlNow}}`);
 
   // ---- الاستيراد: المثال ----
   await page.evaluate(() => document.querySelector('[data-tab="import"]').click());

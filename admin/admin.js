@@ -306,11 +306,16 @@ function userDialog(u){
 
 async function screenCodes(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
-  const [codes, levels] = await Promise.all([
+  const [codes, content] = await Promise.all([
     api('access_codes?select=id,code,levels,duration_days,max_devices,note,' +
         'created_at,redeemed_at,revoked_at&order=created_at.desc&limit=200'),
-    api('levels?select=id,title&order=sort')
+    rpc('admin_content')
   ]);
+  // wie viele Tests jede Stufe wirklich freischaltet — versteckte zählen nicht
+  const levels = (content.levels || []).map(l => ({
+    ...l,
+    live: (content.tests || []).filter(t => t.level_id === l.id && t.published).length
+  }));
 
   const state = c => c.revoked_at ? ['bad', 'gesperrt']
                    : c.redeemed_at ? ['', 'eingelöst']
@@ -324,7 +329,10 @@ async function screenCodes(){
       <div class="row">
         <label>Anzahl<input id="c_n" type="number" value="5" min="1" max="200"></label>
         <label>Stufe<select id="c_lvl">
-          ${levels.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}
+          ${levels.map(l => `<option value="${esc(l.id)}" data-live="${l.live}"
+            data-pub="${l.published ? 1 : 0}">${esc(l.title)}${
+            l.published ? '' : ' (versteckt)'}</option>`).join('')
+            || '<option value="">— zuerst eine Stufe anlegen —</option>'}
         </select></label>
         <label>Tage<select id="c_days">
           <option value="30" selected>30</option><option value="90">90</option>
@@ -334,6 +342,7 @@ async function screenCodes(){
         <label style="flex:2">Notiz<input id="c_note" placeholder="z. B. Kurs März"></label>
         <button class="btn" id="c_go">Erzeugen</button>
       </div>
+      <p class="sub" id="c_hint" style="margin:10px 0 0"></p>
       <div id="c_out"></div>
     </div>
 
@@ -351,10 +360,32 @@ async function screenCodes(){
       </tr>`; }).join('') || '<tr><td colspan="8" class="empty">Noch keine Codes</td></tr>'}
     </table></div></div>`;
 
+  /* Vor dem Erzeugen sichtbar machen, was der Code öffnet — eine Stufe,
+     nicht alles, und nur ihre veröffentlichten Tests. */
+  const sel = document.getElementById('c_lvl');
+  const hint = document.getElementById('c_hint');
+  const showHint = () => {
+    const o = sel.selectedOptions[0];
+    if (!o || !o.value){ hint.textContent = ''; return; }
+    const live = Number(o.dataset.live), pub = o.dataset.pub === '1';
+    const days = document.getElementById('c_days').value;
+    hint.innerHTML = pub && live
+      ? `Öffnet <b>${live} Test${live === 1 ? '' : 's'}</b> der Stufe
+         <b>${esc(o.textContent)}</b> für <b>${esc(days)} Tage</b>.
+         Andere Stufen bleiben zu.`
+      : `<span style="color:var(--warn)">Diese Stufe hat gerade
+         ${live ? 'keine veröffentlichten' : 'keine'} Tests — der Code
+         funktioniert, der Kurs sieht aber nichts.</span>`;
+  };
+  sel.onchange = showHint;
+  document.getElementById('c_days').onchange = showHint;
+  showHint();
+
   document.getElementById('c_go').onclick = async e => {
+    if (!sel.value) return toast('Zuerst eine Stufe anlegen (Inhalte → Stufen)');
     const made = await act(e.target, () => rpc('admin_create_codes', {
       p_count: Number(document.getElementById('c_n').value),
-      p_levels: [document.getElementById('c_lvl').value],
+      p_levels: [sel.value],
       p_days: Number(document.getElementById('c_days').value),
       p_max_devices: Number(document.getElementById('c_dev').value),
       p_note: document.getElementById('c_note').value.trim() || null

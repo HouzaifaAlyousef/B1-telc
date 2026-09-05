@@ -94,8 +94,12 @@ await page.addInitScript(fx => {
     configured: () => true,
     hasSession: () => true,
     ensureSession: async () => ({}),
-    subscription: async () => state.redeemed
-      ? { levels: ['b1','a2'], current_period_end: '2099-01-01T00:00:00Z' } : null,
+    // اشتراكين منفصلين: A2 بينتهي بعد ٣ أيام، B1 بعد سنين
+    subscription: async () => state.redeemed ? {
+      levels: ['b1','a2'],
+      until: { b1: '2099-01-01T00:00:00Z',
+               a2: new Date(Date.now() + 3*86400000).toISOString() },
+      current_period_end: '2099-01-01T00:00:00Z' } : null,
     myLevels: async sub => [{ id:'b1', title:'telc Deutsch B1' },
                             { id:'a2', title:'telc Deutsch A2' }]
       .filter(l => sub.levels.includes(l.id)),
@@ -241,12 +245,17 @@ check('الزرّ بيقول كم سؤال مستحقّ',
       /\d+ Aufgaben? fällig/.test(await page.textContent('#drill')));
 
 // ---- ٩) مبدّل المستويات ----
-check('مبدّل المستويات ظهر (اشتراك بمستويين)', await page.locator('.levels .lvl').count() === 2);
+check('مبدّل المستويات ظهر (مستويين من اشتراكين)',
+      await page.locator('.levels .lvl').count() === 2);
+check('★ المستوى القريب من الانتهاء معلّم',
+      await page.locator('.levels .lvl.soon').count() === 1);
+check('وبيقول كم يوم باقي', (await page.textContent('.levels')).includes('3T'));
 check('المستوى الحالي معلّم', await page.locator('.levels .lvl.on').textContent() === 'telc Deutsch B1');
 await page.evaluate(() => document.querySelector('[data-lvl="a2"]').click());
 await page.waitForTimeout(600);
 check('التبديل لـA2 بيغيّر القائمة', await page.locator('.tile[data-id]').count() === 0);
-check('A2 صار المعلّم', (await page.locator('.levels .lvl.on').textContent()) === 'telc Deutsch A2');
+check('A2 صار المعلّم',
+      (await page.locator('.levels .lvl.on').textContent()).startsWith('telc Deutsch A2'));
 check('الاختيار انحفظ', await page.evaluate(() => localStorage.getItem('b1.level')) === '"a2"');
 await page.evaluate(() => document.querySelector('[data-lvl="b1"]').click());
 await page.waitForTimeout(600);

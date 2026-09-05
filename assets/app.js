@@ -205,9 +205,18 @@ function screenHome(){
     const nMist = review.due;
     const lvl = S.levels.find(l => l.id === S.level);
     // Der Umschalter erscheint nur, wenn das Abo mehr als eine Stufe abdeckt.
+    // Läuft eine Stufe bald ab, steht das am Umschalter — sonst merkt es
+    // niemand, bis der Zugang weg ist.
+    const daysLeft = id => {
+      const d = S.sub && S.sub.until && S.sub.until[id];
+      return d ? Math.ceil((new Date(d) - Date.now()) / 86400000) : null;
+    };
     const picker = S.levels.length > 1 ? `<div class="levels">
-      ${S.levels.map(l => `<button class="lvl${l.id === S.level ? ' on' : ''}"
-        data-lvl="${esc(l.id)}">${esc(l.title)}</button>`).join('')}
+      ${S.levels.map(l => { const d = daysLeft(l.id);
+        return `<button class="lvl${l.id === S.level ? ' on' : ''}${
+          d != null && d <= 7 ? ' soon' : ''}" data-lvl="${esc(l.id)}"
+          ${d != null ? `title="noch ${d} Tage"` : ''}>${esc(l.title)}${
+          d != null && d <= 7 ? ` · ${d}T` : ''}</button>`; }).join('')}
     </div>` : '';
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
