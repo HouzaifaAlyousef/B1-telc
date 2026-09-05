@@ -115,8 +115,14 @@ begin
   res := submit_drill(got);
   perform t_check(format('تكرار الأخطاء: %s سؤال كلهن صح', res->>'total'),
                   (res->>'pct')::numeric = 100);
-  perform t_check('الأسئلة المتقنة طلعت من قائمة الأخطاء',
-                  (select count(*) from mistakes where user_id = paid) = 0);
+  -- من 0006: الجواب الصحيح ما بيحذف السؤال، بيصعّده صندوق وبيبعّد موعده.
+  -- فما بيضل شي مستحقّ اليوم، بس الصفوف بتضل موجودة للتاريخ.
+  perform t_check('الأسئلة الصحيحة ما بقيت مستحقّة',
+                  (select count(*) from mistakes
+                    where user_id = paid and due_at <= now()) = 0);
+  perform t_check('بس صفوفها لسا موجودة بالصندوق ٢',
+                  (select count(*) from mistakes
+                    where user_id = paid and box = 2) = 40);
 
   ---------------------------------------------------------------- ٨
   -- العميل ما بيقدر يكتب علامته بإيده

@@ -19,6 +19,23 @@ const asRole = (uid, q) => psql(
    select set_config('request.jwt.claim.sub','${uid}',true);
    ${q}`).split('\n').map(l=>l.trim()).filter(Boolean).pop();
 
+/* الاختبار بيبني حالته بنفسه بدل ما يتّكل على اختبار تاني شغّل قبله —
+   ترتيب التشغيل ما لازم يكون شرط للنجاح. */
+psql(`
+  delete from admin_audit_log; delete from mistakes; delete from attempts;
+  delete from imports; delete from resources;
+  delete from tests where level_id <> 'b1'; delete from levels where id <> 'b1';
+  delete from devices; delete from subscriptions; delete from access_codes;
+  delete from profiles; delete from auth.users;
+
+  insert into auth.users (id) values ('${ADMIN}'), ('${STUD}');
+  insert into profiles (id, is_admin, display_name) values
+    ('${ADMIN}', true,  'Admin'),
+    ('${STUD}',  false, 'Student');
+  insert into subscriptions (user_id, levels, current_period_end)
+  values ('${STUD}', array['b1'], now() + interval '30 days');
+`);
+
 const R = [];
 const check = (l, c) => { R.push([l,!!c]); console.log(`  ${c?'✓':'✗'} ${l}`); };
 
