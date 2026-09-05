@@ -201,18 +201,18 @@ const API = (() => {
   /* ---------- الصور ----------
      صور إعلانات Leseverstehen 3 هي محتوى امتحان متل الأسئلة، فبتنحفظ بدلو
      Storage خاص وبتنجاب برابط موقّع بينتهي. ما بينفع تكون عامة. */
-  const BUCKET = 'exam-images';
   const signCache = new Map();
 
-  async function imageUrl(path){
+  async function signed(bucket, path){
     if (!path) return null;
     if (path.startsWith('data:') || path.startsWith('http')) return path;
-    const hit = signCache.get(path);
+    const ck = bucket + '/' + path;
+    const hit = signCache.get(ck);
     if (hit && hit.until > Date.now()) return hit.url;
 
     await ensureSession();
     if (!session) return null;
-    const r = await fetch(`${BASE}/storage/v1/object/sign/${BUCKET}/${path}`, {
+    const r = await fetch(`${BASE}/storage/v1/object/sign/${bucket}/${path}`, {
       method: 'POST',
       headers: { apikey: KEY, authorization: `Bearer ${session.access_token}`,
                  'content-type': 'application/json' },
@@ -222,9 +222,13 @@ const API = (() => {
     const j = await r.json().catch(() => null);
     if (!j || !j.signedURL) return null;
     const url = BASE + '/storage/v1' + j.signedURL.replace(/^\/?(storage\/v1)?/, '/');
-    signCache.set(path, { url, until: Date.now() + 3000000 });   // أقصر من الصلاحية
+    signCache.set(ck, { url, until: Date.now() + 3000000 });   // أقصر من الصلاحية
     return url;
   }
+
+  const imageUrl = p => signed('exam-images', p);
+  /* الصوت متل الصور: محتوى امتحان، دلو خاص، رابط موقّع بينتهي */
+  const audioUrl = p => signed('exam-audio', p);
 
   /* ---------- تصحيح التعبير الكتابي ----------
      نداء لـEdge Function، مو لقاعدة البيانات: هي يلي بتحكي مع Claude
@@ -279,7 +283,7 @@ const API = (() => {
   }
 
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
-           redeem, subscription, levels, myLevels, index, test, resources, imageUrl,
+           redeem, subscription, levels, myLevels, index, test, resources, imageUrl, audioUrl,
            submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
            correctWriting, writingFeedback,
            signOut: () => storeSession(null),

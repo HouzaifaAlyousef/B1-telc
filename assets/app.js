@@ -422,7 +422,9 @@ function screenIntro(run){
   stopTimer();
   go('intro', () => {
     const n = runItems(run).length;
-    const notes = [...new Set(run.parts.map(p => p.note).filter(Boolean))];
+    // Der Hinweis „keine Hörtexte" gilt nur, solange kein Audio hinterlegt ist
+    const notes = [...new Set(run.parts
+      .filter(p => !p.audio).map(p => p.note).filter(Boolean))];
     const list = run.parts.length > 1
       ? `<ul class="partlist">${run.parts.map(p =>
           `<li><span class="grow">${esc(p.title)}</span>
@@ -551,10 +553,63 @@ function renderBrief(sec){
     </div>`;
 }
 
+/* ============ Hörverstehen ============
+   Wie in der Prüfung: begrenzt oft abspielbar, kein Vor- und Zurückspulen.
+   Der Text steht daneben erst nach der Abgabe. */
+function renderAudio(sec){
+  if (!sec.audio) return '';
+  const slot = `au_${Math.random().toString(36).slice(2)}`;
+  const plays = Math.max(1, Number(sec.audioPlays) || 1);
+
+  API.audioUrl(sec.audio).then(url => {
+    const el = document.getElementById(slot);
+    if (!el) return;
+    if (!url){ el.innerHTML = '<p class="sub">Der Hörtext konnte nicht geladen werden.</p>'; return; }
+
+    let left = plays;
+    el.innerHTML = `
+      <button class="btn" data-play>▶ Hörtext abspielen</button>
+      <span class="sub" data-left>noch ${left}×</span>
+      <div class="audiobar"><i></i></div>`;
+    const audio = new Audio(url);
+    audio.preload = 'auto';
+    const btn  = el.querySelector('[data-play]');
+    const info = el.querySelector('[data-left]');
+    const bar  = el.querySelector('.audiobar i');
+
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) bar.style.width = (audio.currentTime / audio.duration * 100) + '%';
+    });
+    audio.addEventListener('ended', () => {
+      left--;
+      btn.disabled = left <= 0;
+      btn.textContent = left > 0 ? '▶ Noch einmal' : '▶ Abgespielt';
+      info.textContent = left > 0 ? `noch ${left}×` : 'keine Wiedergabe mehr';
+      bar.style.width = '100%';
+    });
+    btn.onclick = () => {
+      if (left <= 0) return;
+      btn.disabled = true;
+      btn.textContent = '⏸ Läuft …';
+      // kein Zurückspulen: jede Wiedergabe startet von vorn und läuft durch
+      audio.currentTime = 0;
+      audio.play().catch(() => {
+        btn.disabled = false; btn.textContent = '▶ Hörtext abspielen';
+        info.textContent = 'Wiedergabe nicht möglich';
+      });
+    };
+  }).catch(() => {});
+
+  return `<div class="audio" id="${slot}"><p class="sub">Hörtext wird geladen …</p></div>`;
+}
+
 function renderPassages(sec){
   if (sec.brief) return renderBrief(sec);
-  if (!sec.passages || !sec.passages.length) return '';
-  return sec.passages.map(p => `
+  // Bei einem echten Hörtext ist das Transkript die Lösung — während der
+  // Prüfung bleibt es weg, in der Auswertung darf es erscheinen.
+  if (sec.audio && S.view === 'exam') return renderAudio(sec);
+  if (!sec.passages || !sec.passages.length) return renderAudio(sec);
+  return renderAudio(sec) + sec.passages.map(p => `
     <div class="passage">
       ${p.title ? `<h3>${esc(p.title)}</h3>` : ''}
       ${(p.paragraphs || []).map(x =>
@@ -937,6 +992,13 @@ function screenResult(run, points, max, pct, right, total){
   go('result', () => {
     const perPart = run.parts.map(p => {
       const ok = p.items.filter(it => S.answers[it.id] === it.answer).length;
+      // Nach der Abgabe darf das Transkript erscheinen: jetzt hilft es beim
+      // Nachlesen, statt die Lösung zu verraten.
+      const script = (p.audio && p.passages && p.passages.length)
+        ? `<div class="passage"><h3>Hörtext</h3>${p.passages.map(x =>
+             (x.paragraphs || []).map(y =>
+               `<p${y.b ? ' class="strong"' : ''}>${esc(y.t)}</p>`).join('')).join('')}</div>`
+        : '';
       const pts = Math.round(ok * p.pointsPerItem / p.availablePoints * p.maxPoints * 10) / 10;
       const head = run.parts.length > 1
         ? `<div class="partscore"><span class="grow">${esc(p.title)}</span>
@@ -959,7 +1021,7 @@ function screenResult(run, points, max, pct, right, total){
           </div>
         </div>`;
       }).join('');
-      return head + cards;
+      return head + script + cards;
     }).join('');
 
     app.innerHTML =

@@ -201,18 +201,18 @@ const API = (() => {
   /* ---------- الصور ----------
      صور إعلانات Leseverstehen 3 هي محتوى امتحان متل الأسئلة، فبتنحفظ بدلو
      Storage خاص وبتنجاب برابط موقّع بينتهي. ما بينفع تكون عامة. */
-  const BUCKET = 'exam-images';
   const signCache = new Map();
 
-  async function imageUrl(path){
+  async function signed(bucket, path){
     if (!path) return null;
     if (path.startsWith('data:') || path.startsWith('http')) return path;
-    const hit = signCache.get(path);
+    const ck = bucket + '/' + path;
+    const hit = signCache.get(ck);
     if (hit && hit.until > Date.now()) return hit.url;
 
     await ensureSession();
     if (!session) return null;
-    const r = await fetch(`${BASE}/storage/v1/object/sign/${BUCKET}/${path}`, {
+    const r = await fetch(`${BASE}/storage/v1/object/sign/${bucket}/${path}`, {
       method: 'POST',
       headers: { apikey: KEY, authorization: `Bearer ${session.access_token}`,
                  'content-type': 'application/json' },
@@ -222,8 +222,37 @@ const API = (() => {
     const j = await r.json().catch(() => null);
     if (!j || !j.signedURL) return null;
     const url = BASE + '/storage/v1' + j.signedURL.replace(/^\/?(storage\/v1)?/, '/');
-    signCache.set(path, { url, until: Date.now() + 3000000 });   // أقصر من الصلاحية
+    signCache.set(ck, { url, until: Date.now() + 3000000 });   // أقصر من الصلاحية
     return url;
+  }
+
+  const imageUrl = p => signed('exam-images', p);
+  /* الصوت متل الصور: محتوى امتحان، دلو خاص، رابط موقّع بينتهي */
+  const audioUrl = p => signed('exam-audio', p);
+
+  /* ---------- تصحيح التعبير الكتابي ----------
+     نداء لـEdge Function، مو لقاعدة البيانات: هي يلي بتحكي مع Claude
+     وبتحمل المفتاح. بتاخد وقت (نصف دقيقة أحياناً). */
+  async function correctWriting(attemptId){
+    await ensureSession();
+    if (!session) throw new Error('no_session');
+    const r = await fetch(`${BASE}/functions/v1/correct-writing`, {
+      method: 'POST',
+      headers: { apikey: KEY, authorization: `Bearer ${session.access_token}`,
+                 'content-type': 'application/json' },
+      body: JSON.stringify({ attempt_id: attemptId })
+    });
+    return r.json().catch(() => ({ ok: false, error: 'bad_response' }));
+  }
+
+  /* تصحيح سابق لنفس المحاولة — تا ما ندفع مرتين على نفس النص */
+  async function writingFeedback(attemptId){
+    const rows = await rest(
+      'writing_feedback?select=id,status,points,max_points,grades,errors,' +
+      'summary,corrected,word_count,created_at' +
+      `&attempt_id=eq.${encodeURIComponent(attemptId)}` +
+      '&status=eq.done&order=created_at.desc&limit=1');
+    return rows && rows[0] || null;
   }
 
   /* ---------- التصحيح ---------- */
@@ -232,14 +261,20 @@ const API = (() => {
 
   const submitDrill = answers => rpc('submit_drill', { p_answers: answers });
 
-  /* أسئلة أخطأ فيها سابقاً، مع سياق قسمها — بدونه ما بتنحلّ */
+  /* أسئلة مستحقّة للمراجعة اليوم، مع سياق قسمها — بدونه ما بتنحلّ.
+     المتقن (صندوق > ٥) وغير المستحقّ ما بينجابوا. */
   async function mistakes(){
+    const now = new Date().toISOString();
     return rest(
-      'mistakes?select=item_id,wrong_count,' +
+      'mistakes?select=item_id,wrong_count,box,due_at,' +
       'items(id,item_id,text,options,points,meta,' +
       'sections(section_id,title,format,config,test_id,tests(slug,title)))' +
-      '&order=last_seen_at.desc&limit=200');
+      `&due_at=lte.${encodeURIComponent(now)}&box=lte.5` +
+      '&order=due_at.asc&limit=60');
   }
+
+  /* أرقام المراجعة للشاشة الرئيسية — نداء واحد بدل جلب كل الصفوف */
+  const reviewSummary = () => rpc('review_summary');
 
   async function attempts(testUuid){
     return rest(`attempts?select=id,block_id,points,max_points,pct,answers,submitted_at` +
@@ -248,8 +283,9 @@ const API = (() => {
   }
 
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
-           redeem, subscription, levels, myLevels, index, test, resources, imageUrl,
-           submitAttempt, submitDrill, mistakes, attempts,
+           redeem, subscription, levels, myLevels, index, test, resources, imageUrl, audioUrl,
+           submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
+           correctWriting, writingFeedback,
            signOut: () => storeSession(null),
            hasSession: () => !!session };
 })();

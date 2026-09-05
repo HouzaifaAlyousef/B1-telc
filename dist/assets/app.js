@@ -177,19 +177,21 @@ function screenCode(msg){
   });
 }
 
-let mistCount = 0;      // wird beim Start und nach jeder Prüfung aufgefrischt
+/* Wiederholung: nur was heute fällig ist. Der Rest wartet auf sein Datum —
+   das ist der Sinn der Kästen. */
+let review = { due: 0, total: 0, mastered: 0, next_due: null };
 async function refreshMistakes(){
-  try { const r = await API.mistakes(); mistCount = r ? r.length : 0; }
-  catch { mistCount = 0; }
+  try { review = await API.reviewSummary() || review; }
+  catch { review = { due: 0, total: 0, mastered: 0, next_due: null }; }
 }
 
 function screenHome(){
   stopTimer();
   // Die Fehlerzahl kommt vom Server. Neu gezeichnet wird nur, wenn sie sich
   // geändert hat — sonst ruft sich der Bildschirm endlos selbst auf.
-  const before = mistCount;
+  const before = review.due;
   refreshMistakes().then(() => {
-    if (S.view === 'home' && mistCount !== before) screenHome();
+    if (S.view === 'home' && review.due !== before) screenHome();
   });
   go('home', () => {
     const cards = S.index.modelle.map((m, i) => `
@@ -200,7 +202,7 @@ function screenHome(){
         <span class="chev">›</span>
       </button>`).join('');
 
-    const nMist = mistCount;
+    const nMist = review.due;
     const lvl = S.levels.find(l => l.id === S.level);
     // Der Umschalter erscheint nur, wenn das Abo mehr als eine Stufe abdeckt.
     const picker = S.levels.length > 1 ? `<div class="levels">
@@ -221,10 +223,17 @@ function screenHome(){
       </button>
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
-        <span class="grow"><span style="font-weight:600">Fehler wiederholen</span>
-          <div class="meta">${nMist} Aufgabe${nMist === 1 ? '' : 'n'} aus früheren Prüfungen · ohne Zeit</div></span>
+        <span class="grow"><span style="font-weight:600">Wiederholen</span>
+          <div class="meta">${nMist} Aufgabe${nMist === 1 ? '' : 'n'} fällig${
+            review.mastered ? ` · ${review.mastered} sitzen schon` : ''} · ohne Zeit</div></span>
         <span class="chev">›</span>
-      </button>` : ''}
+      </button>`
+      : (review.total ? `<div class="tile drill done">
+        <span class="n">✓</span>
+        <span class="grow"><span style="font-weight:600">Nichts fällig</span>
+          <div class="meta">${review.mastered ? `${review.mastered} Aufgaben sitzen` : 'Alles wiederholt'}${
+            review.next_due ? ` · weiter am ${new Date(review.next_due).toLocaleDateString('de-DE')}` : ''}</div></span>
+      </div>` : '')}
       ${cards}`;
 
     app.querySelectorAll('.tile[data-id]').forEach(b =>
@@ -413,7 +422,9 @@ function screenIntro(run){
   stopTimer();
   go('intro', () => {
     const n = runItems(run).length;
-    const notes = [...new Set(run.parts.map(p => p.note).filter(Boolean))];
+    // Der Hinweis „keine Hörtexte" gilt nur, solange kein Audio hinterlegt ist
+    const notes = [...new Set(run.parts
+      .filter(p => !p.audio).map(p => p.note).filter(Boolean))];
     const list = run.parts.length > 1
       ? `<ul class="partlist">${run.parts.map(p =>
           `<li><span class="grow">${esc(p.title)}</span>
@@ -542,10 +553,63 @@ function renderBrief(sec){
     </div>`;
 }
 
+/* ============ Hörverstehen ============
+   Wie in der Prüfung: begrenzt oft abspielbar, kein Vor- und Zurückspulen.
+   Der Text steht daneben erst nach der Abgabe. */
+function renderAudio(sec){
+  if (!sec.audio) return '';
+  const slot = `au_${Math.random().toString(36).slice(2)}`;
+  const plays = Math.max(1, Number(sec.audioPlays) || 1);
+
+  API.audioUrl(sec.audio).then(url => {
+    const el = document.getElementById(slot);
+    if (!el) return;
+    if (!url){ el.innerHTML = '<p class="sub">Der Hörtext konnte nicht geladen werden.</p>'; return; }
+
+    let left = plays;
+    el.innerHTML = `
+      <button class="btn" data-play>▶ Hörtext abspielen</button>
+      <span class="sub" data-left>noch ${left}×</span>
+      <div class="audiobar"><i></i></div>`;
+    const audio = new Audio(url);
+    audio.preload = 'auto';
+    const btn  = el.querySelector('[data-play]');
+    const info = el.querySelector('[data-left]');
+    const bar  = el.querySelector('.audiobar i');
+
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) bar.style.width = (audio.currentTime / audio.duration * 100) + '%';
+    });
+    audio.addEventListener('ended', () => {
+      left--;
+      btn.disabled = left <= 0;
+      btn.textContent = left > 0 ? '▶ Noch einmal' : '▶ Abgespielt';
+      info.textContent = left > 0 ? `noch ${left}×` : 'keine Wiedergabe mehr';
+      bar.style.width = '100%';
+    });
+    btn.onclick = () => {
+      if (left <= 0) return;
+      btn.disabled = true;
+      btn.textContent = '⏸ Läuft …';
+      // kein Zurückspulen: jede Wiedergabe startet von vorn und läuft durch
+      audio.currentTime = 0;
+      audio.play().catch(() => {
+        btn.disabled = false; btn.textContent = '▶ Hörtext abspielen';
+        info.textContent = 'Wiedergabe nicht möglich';
+      });
+    };
+  }).catch(() => {});
+
+  return `<div class="audio" id="${slot}"><p class="sub">Hörtext wird geladen …</p></div>`;
+}
+
 function renderPassages(sec){
   if (sec.brief) return renderBrief(sec);
-  if (!sec.passages || !sec.passages.length) return '';
-  return sec.passages.map(p => `
+  // Bei einem echten Hörtext ist das Transkript die Lösung — während der
+  // Prüfung bleibt es weg, in der Auswertung darf es erscheinen.
+  if (sec.audio && S.view === 'exam') return renderAudio(sec);
+  if (!sec.passages || !sec.passages.length) return renderAudio(sec);
+  return renderAudio(sec) + sec.passages.map(p => `
     <div class="passage">
       ${p.title ? `<h3>${esc(p.title)}</h3>` : ''}
       ${(p.paragraphs || []).map(x =>
@@ -856,13 +920,16 @@ async function grade(run){
   // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
   // Der Server rechnet über die vorhandenen; hier wird auf die offizielle
   // Höchstpunktzahl hochgerechnet, damit alle Tests vergleichbar bleiben.
+  if (run.drill && res.mastered)
+    toast(`${res.mastered} Aufgabe${res.mastered === 1 ? '' : 'n'} sitzt jetzt ✓`, 3500);
   const points = run.drill
     ? res.right
     : Math.round(res.points / (res.max_points || 1) * run.maxPoints * 10) / 10;
   const total  = runItems(run).length;
   const right  = (res.results || []).filter(r => r.correct).length;
   const pct    = run.drill ? Math.round(points / max * 100)
-                           : saveResult(run, points, run.maxPoints, { results: res.results });
+                           : saveResult(run, points, run.maxPoints,
+                                        { results: res.results, attemptId: res.attempt_id });
   screenResult(run, points, run.drill ? max : run.maxPoints, pct, right, total);
 }
 
@@ -871,10 +938,22 @@ function finish(run, auto){
     stopTimer();
     clearSession(run.id);
     if (run.parts.length === 1 && run.parts[0].format === 'writing'){
-      // Den Text sofort sichern — auch wenn noch keine Bewertung erfolgt ist.
+      // Der Text wird sofort gesichert. Die Abgabe wandert auch auf den
+      // Server — ohne attempt_id gibt es keine KI-Korrektur.
       saveResult(run, null, run.parts[0].maxPoints);
       clearDraft(run.id);
-      return screenWriting(run);
+      screenWriting(run);
+      API.submitAttempt(S.modell.uuid, run.id, S.answers)
+        .then(res => {
+          if (!res || !res.ok) return;
+          const prog = load('b1.progress', {});
+          const rec = (prog[S.modell.id] || {})[run.id];
+          if (rec){ rec.attemptId = res.attempt_id; save('b1.progress', prog); }
+          const el = document.getElementById('aiwrap');
+          if (el) renderAiBox(el, run, res.attempt_id, null);
+        })
+        .catch(() => {});
+      return;
     }
 
     grade(run);
@@ -913,6 +992,13 @@ function screenResult(run, points, max, pct, right, total){
   go('result', () => {
     const perPart = run.parts.map(p => {
       const ok = p.items.filter(it => S.answers[it.id] === it.answer).length;
+      // Nach der Abgabe darf das Transkript erscheinen: jetzt hilft es beim
+      // Nachlesen, statt die Lösung zu verraten.
+      const script = (p.audio && p.passages && p.passages.length)
+        ? `<div class="passage"><h3>Hörtext</h3>${p.passages.map(x =>
+             (x.paragraphs || []).map(y =>
+               `<p${y.b ? ' class="strong"' : ''}>${esc(y.t)}</p>`).join('')).join('')}</div>`
+        : '';
       const pts = Math.round(ok * p.pointsPerItem / p.availablePoints * p.maxPoints * 10) / 10;
       const head = run.parts.length > 1
         ? `<div class="partscore"><span class="grow">${esc(p.title)}</span>
@@ -935,7 +1021,7 @@ function screenResult(run, points, max, pct, right, total){
           </div>
         </div>`;
       }).join('');
-      return head + cards;
+      return head + script + cards;
     }).join('');
 
     app.innerHTML =
@@ -991,6 +1077,10 @@ function screenWriting(run, saved){
           </div>`).join('')}
         <div id="wres"></div>
       </div>
+      <div class="card" id="aiwrap">
+        <h2>Korrektur</h2>
+        <p class="sub" style="margin:0">Wird vorbereitet …</p>
+      </div>
       <div class="bottombar"><div class="inner">
         <button class="btn ghost grow" id="again">Wiederholen</button>
         <button class="btn grow" id="back">Übersicht</button>
@@ -1022,7 +1112,77 @@ function screenWriting(run, saved){
     }
     document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
+
+    const box = document.getElementById('aiwrap');
+    if (box) renderAiBox(box, run, saved && saved.attemptId, mine);
   });
+}
+
+/* ============ KI-Korrektur des Briefs ============
+   Die Selbstbewertung oben bleibt: sie ist die Übung, die telc verlangt.
+   Die Korrektur kommt daneben — sie sagt, was tatsächlich im Text steht. */
+function renderAiBox(box, run, attemptId, text){
+  if (!attemptId){
+    box.innerHTML = `<h2>Korrektur</h2>
+      <p class="sub" style="margin:0">Ohne Verbindung ist keine Korrektur möglich.</p>`;
+    return;
+  }
+  box.innerHTML = `<h2>Korrektur</h2>
+    <p class="sub" style="margin:0 0 10px">Ihr Brief wird gelesen und nach den
+      telc-Kriterien bewertet — mit Hinweisen zu jedem Fehler.</p>
+    <button class="btn" id="aigo">Korrektur anfordern</button>
+    <div id="aiout"></div>`;
+
+  const out = document.getElementById('aiout');
+  const btn = document.getElementById('aigo');
+
+  // schon einmal korrigiert? dann nicht noch einmal bezahlen
+  API.writingFeedback(attemptId).then(fb => { if (fb) showAi(out, btn, fb); })
+    .catch(() => {});
+
+  btn.onclick = async () => {
+    btn.disabled = true; btn.textContent = 'Wird korrigiert … (bis zu 1 Minute)';
+    let r;
+    try { r = await API.correctWriting(attemptId); }
+    catch { r = { ok: false, error: 'network' }; }
+    btn.disabled = false; btn.textContent = 'Korrektur anfordern';
+    if (r && r.ok) return showAi(out, btn, r);
+    out.innerHTML = `<p class="sub" style="color:var(--bad)">${esc({
+      quota_exceeded: 'Das Korrektur-Kontingent für diesen Zeitraum ist aufgebraucht.',
+      not_entitled:   'Kein aktives Abo.',
+      empty_text:     'Es ist kein Text zum Korrigieren da.',
+      not_configured: 'Die Korrektur ist noch nicht eingerichtet.',
+      refused:        'Der Text konnte nicht bewertet werden.',
+      network:        'Keine Verbindung.'
+    }[r && r.error] || 'Die Korrektur ist fehlgeschlagen.')}</p>`;
+  };
+}
+
+function showAi(out, btn, fb){
+  if (btn) btn.hidden = true;
+  const GRADE_PTS = g => (g && g.points != null) ? g.points : '';
+  out.innerHTML = `
+    ${fb.points != null ? scoreCard(fb.points, fb.max_points,
+        Math.round(fb.points / fb.max_points * 100), 'KI-Korrektur') : ''}
+    ${(fb.grades || []).map(g => `<div class="crit">
+      <h3>${esc(g.criterion)} <span class="pill">${esc(g.key)}</span></h3>
+      <p class="sub" style="margin:0">${esc(g.why)}</p>
+    </div>`).join('')}
+    ${fb.summary ? `<div class="why" style="margin:12px 0">${esc(fb.summary)}</div>` : ''}
+    ${(fb.errors || []).length ? `<h3 style="margin:14px 0 6px">Fehler im Einzelnen</h3>
+      ${fb.errors.map(e => `<div class="q isbad">
+        <div class="qhead"><span class="qnum">${esc(e.type)}</span></div>
+        <div class="fb bad">
+          <div class="fbrow"><span class="lbl">Ihr Text</span>
+            <span class="val">${esc(e.original)}</span></div>
+          <div class="fbrow"><span class="lbl">Besser</span>
+            <span class="val">${esc(e.correction)}</span></div>
+          ${e.why ? `<div class="why">${esc(e.why)}</div>` : ''}
+        </div></div>`).join('')}` : ''}
+    ${fb.corrected ? `<details style="margin-top:12px">
+       <summary class="sub">Korrigierte Fassung ansehen</summary>
+       <div class="passage" style="margin:8px 0 0"><div class="body">${esc(fb.corrected)}</div></div>
+     </details>` : ''}`;
 }
 
 // beim Schließen/Wegwischen den Stand sichern

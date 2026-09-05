@@ -38,7 +38,8 @@ const Markup = (() => {
   const SECTION_LABELS = {
     format: 'format', titel: 'title', gruppe: 'group', minuten: 'minutes',
     punkte: 'pointsPerItem', maximum: 'maxPoints', anweisung: 'instruction',
-    hinweis: 'note', auswahltitel: 'bankTitle', bild: 'bankImage'
+    hinweis: 'note', auswahltitel: 'bankTitle', bild: 'bankImage',
+    hoertext: 'audio', wiedergaben: 'audioPlays'
   };
 
   /* ============================================================
@@ -226,7 +227,8 @@ const Markup = (() => {
           if (k === 'extra'){ flushBuffer(); mode = 'extra'; continue; }
           const key = SECTION_LABELS[k];
           if (key){
-            sec[key] = ['minutes','pointsPerItem','maxPoints'].includes(key) ? num(v) : v;
+            sec[key] = ['minutes','pointsPerItem','maxPoints','audioPlays']
+                         .includes(key) ? num(v) : v;
             continue;
           }
           warn.push(`Teil ${sec.id}: unbekannte Angabe „${lab[1]}“`);
@@ -307,6 +309,8 @@ const Markup = (() => {
       if (s.note)                  L.push(`Hinweis: ${s.note}`);
       if (s.bankTitle)             L.push(`AuswahlTitel: ${s.bankTitle}`);
       if (s.bankImage)             L.push(`Bild: ${s.bankImage}`);
+      if (s.audio)                 L.push(`Hörtext: ${s.audio}`);
+      if (s.audioPlays != null)    L.push(`Wiedergaben: ${s.audioPlays}`);
 
       const extra = {};
       EXTRA_KEYS.forEach(k => { if (s[k] !== undefined) extra[k] = s[k]; });

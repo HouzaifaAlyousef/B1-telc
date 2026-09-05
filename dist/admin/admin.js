@@ -541,6 +541,60 @@ async function screenContent(){
   });
 }
 
+/* ============ الاستماع ============
+   ثلث الامتحان. بدون ملفات صوت هالقسم مراجعة مو تدريب. */
+async function screenAudio(){
+  app.innerHTML = '<div class="empty">Lädt …</div>';
+  const rows = await rpc('admin_audio_status');
+  const missing = rows.filter(r => !r.audio).length;
+
+  app.innerHTML = `
+    <h1>Hörtexte</h1>
+    <p class="sub">Ein Drittel jeder Prüfung ist Hören. Ohne Datei zeigt der
+      Abschnitt nur das Transkript — zum Nachlesen, nicht zum Üben.</p>
+    ${missing ? `<div class="stats"><div class="stat warn">
+      <b>${missing}</b><span>Abschnitte ohne Hörtext</span></div>
+      <div class="stat"><b>${rows.length - missing}</b><span>mit Hörtext</span></div>
+    </div>` : ''}
+    <div class="card">
+      <p class="sub" style="margin-top:0">Dateien zuerst hochladen:
+        <code>python3 tools/upload_audio.py audio/</code> — danach hier den
+        Dateinamen eintragen.</p>
+      <div class="wrap"><table>
+        <tr><th>Test</th><th>Teil</th><th>Aufg.</th><th>Datei</th>
+            <th>Wiedergaben</th><th></th></tr>
+        ${rows.map(r => `<tr>
+          <td>${esc(r.test_title)}
+            <div class="mono" style="color:var(--muted);font-size:12px">${esc(r.test)}</div></td>
+          <td class="mono">${esc(r.section)}</td>
+          <td>${r.items}</td>
+          <td><input data-path="${esc(r.section_id)}" value="${esc(r.audio || '')}"
+                placeholder="m01-hv1.mp3" style="min-width:150px"></td>
+          <td><input data-plays="${esc(r.section_id)}" type="number" min="1" max="5"
+                value="${r.plays}" style="width:70px"></td>
+          <td style="white-space:nowrap">
+            <button class="btn sm" data-save="${esc(r.section_id)}">Speichern</button>
+            ${r.audio ? `<button class="btn sm grey" data-clear="${esc(r.section_id)}">leeren</button>` : ''}
+          </td></tr>`).join('') ||
+          '<tr><td colspan="6" class="empty">Keine Hörverstehen-Abschnitte</td></tr>'}
+      </table></div>
+    </div>`;
+
+  app.querySelectorAll('[data-save]').forEach(b => b.onclick = async () => {
+    const id = b.dataset.save;
+    const path = app.querySelector(`[data-path="${id}"]`).value.trim();
+    const plays = Number(app.querySelector(`[data-plays="${id}"]`).value) || 1;
+    await act(b, () => rpc('admin_set_section_audio', {
+      p_section_id: id, p_path: path || null, p_plays: plays }), 'Gespeichert');
+    screenAudio();
+  });
+  app.querySelectorAll('[data-clear]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_set_section_audio', {
+      p_section_id: b.dataset.clear, p_path: null, p_plays: 1 }), 'Entfernt');
+    screenAudio();
+  });
+}
+
 /* ============ الاستيراد ============ */
 const SAMPLE = `# PETRA
 Untertitel: 61 Aufgaben · 150 Minuten
@@ -720,7 +774,8 @@ async function saveImport(btn, status){
 
 /* ============ التشغيل ============ */
 const TABS = { home: screenHome, users: screenUsers, codes: screenCodes,
-               content: screenContent, import: screenImport, audit: screenAudit };
+               content: screenContent, audio: screenAudio,
+               import: screenImport, audit: screenAudit };
 
 async function show(name){
   tab = name;

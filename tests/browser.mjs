@@ -9,12 +9,31 @@ import path from 'path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const fx = JSON.parse(readFileSync(path.join(ROOT, 'tests/fixture.json'), 'utf8'));
 
-const MIME = { '.html':'text/html', '.js':'text/javascript', '.css':'text/css',
+/* نغمة WAV مولّدة بالاختبار — أنضف من رفع ملف ثنائي بالمستودع */
+function makeWav(seconds = 0.6, rate = 8000, hz = 440){
+  const n = Math.floor(seconds * rate);
+  const buf = Buffer.alloc(44 + n * 2);
+  buf.write('RIFF', 0); buf.writeUInt32LE(36 + n * 2, 4); buf.write('WAVE', 8);
+  buf.write('fmt ', 12); buf.writeUInt32LE(16, 16); buf.writeUInt16LE(1, 20);
+  buf.writeUInt16LE(1, 22); buf.writeUInt32LE(rate, 24);
+  buf.writeUInt32LE(rate * 2, 28); buf.writeUInt16LE(2, 32); buf.writeUInt16LE(16, 34);
+  buf.write('data', 36); buf.writeUInt32LE(n * 2, 40);
+  for (let i = 0; i < n; i++)
+    buf.writeInt16LE(Math.round(8000 * Math.sin(2 * Math.PI * hz * i / rate)), 44 + i * 2);
+  return buf;
+}
+const TONE = makeWav();
+
+const MIME = { '.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.wav':'audio/wav',
                '.json':'application/json', '.webmanifest':'application/json',
                '.png':'image/png', '.jpg':'image/jpeg' };
 const server = http.createServer((req, res) => {
   let f = req.url.split('?')[0];
   if (f === '/') f = '/index.html';
+  if (f === '/tone.wav'){
+    res.writeHead(200, { 'content-type':'audio/wav', 'content-length': TONE.length });
+    return res.end(TONE);
+  }
   try {
     const body = readFileSync(path.join(ROOT, f));
     res.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'application/octet-stream' });
@@ -43,6 +62,8 @@ await page.addInitScript(fx => {
     sections: fx.sections.map(s => ({
       id: s.section_id, group: s.group, title: s.title, minutes: s.minutes,
       instruction: s.instruction, format: s.format,
+      ...(s.section_id === 'hv1' ? { audio: 'test.wav', audioPlays: 2,
+          passages: [{ paragraphs: [{ t: 'TRANSKRIPT-GEHEIM', b: false }] }] } : {}),
       items: s.items.map(i => ({ id: i.id, num: i.item_id, text: i.text,
         ...(i.options ? { options: i.options } : {}), ...(i.meta || {}) })),
       ...(s.config || {})
@@ -91,6 +112,7 @@ await page.addInitScript(fx => {
       minutes: fx.test.blocks.reduce((a,b) => a + b.minutes, 0) }] }),
     test: async () => shape(),
     imageUrl: async () => null,
+    audioUrl: async () => '/tone.wav',
     reviewSummary: async () => ({
       due: state.mistakes.length, total: state.mistakes.length,
       mastered: state.mastered || 0, next_due: null }),
@@ -239,6 +261,40 @@ await page.waitForTimeout(300);
 const rb = await page.textContent('.readable');
 check('المرجع بينعرض مع عناوينه', rb.includes('Verben') && rb.includes('fahren, fliegen'));
 check('العناوين انعملت h2', await page.locator('.readable h2').count() === 2);
+
+// ---- ١٠ب) مشغّل الاستماع ----
+await page.evaluate(() => screenHome());
+await page.waitForSelector('.tile[data-id]');
+await page.evaluate(() => document.querySelector('.tile[data-id]').click());
+await page.waitForSelector('[data-block]');
+await page.evaluate(() => document.querySelector('[data-block="block-hv"]').click());
+await page.waitForTimeout(300);
+await page.evaluate(() => {
+  const b = [...document.querySelectorAll('button')].find(x => /Start/i.test(x.textContent));
+  if (b) b.click();
+});
+await page.waitForSelector('.audio [data-play]', { timeout: 8000 });
+check('مشغّل الصوت ظهر بقسم الاستماع', true);
+check('بيقول كم مرة باقية', (await page.textContent('.audio [data-left]')).includes('2'));
+check('★ نص الاستماع المكتوب مخفي وقت الامتحان',
+      !(await page.textContent('#app')).includes('TRANSKRIPT-GEHEIM'));
+
+// نشغّله مرتين ونشوف إذا الزرّ بينقفل
+for (let k = 0; k < 2; k++){
+  await page.evaluate(() => document.querySelector('.audio [data-play]').click());
+  await page.waitForFunction(
+    () => /Noch einmal|Abgespielt/.test(document.querySelector('.audio [data-play]').textContent),
+    { timeout: 8000 });
+}
+check('★ بعد مرتين الزرّ بينقفل',
+      await page.locator('.audio [data-play]').isDisabled());
+check('الرسالة صارت «ما في تشغيل بعد»',
+      (await page.textContent('.audio [data-left]')).includes('keine'));
+
+await page.evaluate(() => { S.answers = {}; finish(S.run, true); });
+await page.waitForSelector('.score');
+check('★ وبعد التسليم النص بيبيّن للمراجعة',
+      (await page.textContent('#app')).includes('TRANSKRIPT-GEHEIM'));
 
 // ---- ١١) تصحيح التعبير الكتابي ----
 await page.evaluate(() => screenHome());
