@@ -134,6 +134,14 @@ The student app is at the root, the panel at `/admin/`. Both are protected by
 The result is about 200 KB. Everything else — questions, answers, images — comes
 from Supabase, per request, only for people with an active subscription.
 
+## 10. Optional: AI correction of the writing task
+
+Not required to launch. See
+[14-writing-correction.md](14-writing-correction.md) — it needs an Anthropic
+API key stored as a Supabase secret and one `supabase functions deploy`.
+Without it the app works exactly as described above; the correction button
+just says it is not set up.
+
 ## Day-to-day
 
 | Task | Where |

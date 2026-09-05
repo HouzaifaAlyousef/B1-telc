@@ -62,6 +62,11 @@ h3{font-size:16px; margin:0 0 4px}
 }
 .row{display:flex; align-items:center; gap:12px}
 .grow{flex:1; min-width:0}
+/* السمة hidden ما بتشتغل لحالها لما يكون في display صريح بالقاعدة —
+   وكل الأزرار والشريط عندهن display. بدون هالسطر، elem.hidden = true
+   ما بيخفي شي. */
+[hidden]{display:none !important}
+
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   background:var(--brand); color:#fff; border:0; border-radius:10px;

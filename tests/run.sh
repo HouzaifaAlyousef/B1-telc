@@ -36,6 +36,17 @@ node tests/browser.mjs
 echo "▸ الاستيراد من الطرف للطرف"
 node tests/import.mjs
 
+echo "▸ Edge Function (Deno الحقيقي، Claude مزيّف)"
+if command -v deno >/dev/null 2>&1; then
+  # Deno بينشئ node_modules حقيقي وبيكسر رابط playwright — فمنشغّله بمعزل
+  rm -f node_modules
+  ( cd . && deno run --allow-all --node-modules-dir=auto tests/edge/run.ts )
+  rm -rf node_modules
+  ln -sfn "$(npm root -g)" node_modules
+else
+  echo "  · deno مو مثبّت — تخطّي (npm i -g deno)"
+fi
+
 echo "▸ لوحة التحكّم"
 # اللوحة بدها بيانات اختبار اللوحة بقاعدة البيانات
 psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d telc -q \

@@ -226,6 +226,31 @@ const API = (() => {
     return url;
   }
 
+  /* ---------- تصحيح التعبير الكتابي ----------
+     نداء لـEdge Function، مو لقاعدة البيانات: هي يلي بتحكي مع Claude
+     وبتحمل المفتاح. بتاخد وقت (نصف دقيقة أحياناً). */
+  async function correctWriting(attemptId){
+    await ensureSession();
+    if (!session) throw new Error('no_session');
+    const r = await fetch(`${BASE}/functions/v1/correct-writing`, {
+      method: 'POST',
+      headers: { apikey: KEY, authorization: `Bearer ${session.access_token}`,
+                 'content-type': 'application/json' },
+      body: JSON.stringify({ attempt_id: attemptId })
+    });
+    return r.json().catch(() => ({ ok: false, error: 'bad_response' }));
+  }
+
+  /* تصحيح سابق لنفس المحاولة — تا ما ندفع مرتين على نفس النص */
+  async function writingFeedback(attemptId){
+    const rows = await rest(
+      'writing_feedback?select=id,status,points,max_points,grades,errors,' +
+      'summary,corrected,word_count,created_at' +
+      `&attempt_id=eq.${encodeURIComponent(attemptId)}` +
+      '&status=eq.done&order=created_at.desc&limit=1');
+    return rows && rows[0] || null;
+  }
+
   /* ---------- التصحيح ---------- */
   const submitAttempt = (testUuid, blockId, answers) =>
     rpc('submit_attempt', { p_test_id: testUuid, p_block_id: blockId, p_answers: answers });
@@ -256,6 +281,7 @@ const API = (() => {
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
            redeem, subscription, levels, myLevels, index, test, resources, imageUrl,
            submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
+           correctWriting, writingFeedback,
            signOut: () => storeSession(null),
            hasSession: () => !!session };
 })();

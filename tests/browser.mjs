@@ -34,7 +34,7 @@ page.on('pageerror', e => { console.log('  ✗ JS-Fehler:', e.message); results.
 
 // نحقن API مزيّف قبل ما يشتغل app.js
 await page.addInitScript(fx => {
-  const state = { redeemed: false, mistakes: [], mastered: 0 };
+  const state = { redeemed: false, mistakes: [], mastered: 0, fb: null };
   const items = fx.sections.flatMap(s => s.items.map(i => ({ ...i, sec: s })));
 
   const shape = () => ({
@@ -102,7 +102,18 @@ await page.addInitScript(fx => {
                     format: i.sec.format, config: i.sec.config,
                     test_id: fx.test.id, tests: { slug: fx.test.slug, title: fx.test.title } } } };
     }),
-    submitAttempt: async (uuid, blockId, answers) => grade(blockId, answers),
+    submitAttempt: async (uuid, blockId, answers) => ({
+      ...grade(blockId, answers), attempt_id: 'att-1' }),
+    writingFeedback: async () => state.fb || null,
+    correctWriting: async () => {
+      state.fb = { id:'f1', status:'done', points:39, max_points:45,
+        grades:[{criterion:'Aufgabenbewältigung',key:'A',why:'Alle Punkte da.'},
+                {criterion:'Kommunikative Gestaltung',key:'B',why:'Gruß knapp.'},
+                {criterion:'Formale Richtigkeit',key:'A',why:'Wenige Fehler.'}],
+        errors:[{type:'Grammatik',original:'Ich fliege',correction:'Ich fliege gern',why:'Adverb.'}],
+        summary:'Guter Brief.', corrected:'Liebe Anna, …' };
+      return { ok:true, ...state.fb };
+    },
     submitDrill: async answers => {
       let right = 0; const out = [];
       for (const [id, given] of Object.entries(answers)){
@@ -228,6 +239,39 @@ await page.waitForTimeout(300);
 const rb = await page.textContent('.readable');
 check('المرجع بينعرض مع عناوينه', rb.includes('Verben') && rb.includes('fahren, fliegen'));
 check('العناوين انعملت h2', await page.locator('.readable h2').count() === 2);
+
+// ---- ١١) تصحيح التعبير الكتابي ----
+await page.evaluate(() => screenHome());
+await page.waitForSelector('.tile[data-id]');
+await page.evaluate(() => document.querySelector('.tile[data-id]').click());
+await page.waitForSelector('[data-block]');
+await page.evaluate(() => document.querySelector('[data-block="block-sa"]').click());
+await page.waitForTimeout(300);
+await page.evaluate(() => {
+  const b = [...document.querySelectorAll('button')].find(x => /Start/i.test(x.textContent));
+  if (b) b.click();
+});
+await page.waitForTimeout(400);
+await page.evaluate(() => {
+  const it = runItems(S.run)[0];
+  S.answers[it.id] = 'Liebe Anna, danke fuer deinen Brief. Ich moechte gern kommen.';
+  finish(S.run, true);
+});
+await page.waitForSelector('#aiwrap');
+await page.waitForTimeout(600);
+check('صندوق التصحيح ظهر بشاشة الكتابة',
+      (await page.textContent('#aiwrap')).includes('Korrektur'));
+check('التقييم الذاتي لسا موجود جنبه',
+      (await page.textContent('body')).includes('Bewerten Sie jedes Kriterium selbst'));
+await page.waitForSelector('#aigo');
+await page.evaluate(() => document.getElementById('aigo').click());
+await page.waitForSelector('#aiout .crit', { timeout: 8000 });
+const ai = await page.textContent('#aiwrap');
+check('النتيجة ٣٩ نقطة بتبيّن', ai.includes('39'));
+check('المعايير الثلاثة مع تبريرها', await page.locator('#aiout .crit').count() === 3);
+check('الخطأ معروض مع البديل',
+      ai.includes('Ich fliege') && ai.includes('Ich fliege gern'));
+check('زرّ الطلب اختفى بعد النجاح', await page.locator('#aigo').isHidden());
 
 await browser.close();
 server.close();

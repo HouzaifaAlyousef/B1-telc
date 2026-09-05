@@ -873,7 +873,8 @@ async function grade(run){
   const total  = runItems(run).length;
   const right  = (res.results || []).filter(r => r.correct).length;
   const pct    = run.drill ? Math.round(points / max * 100)
-                           : saveResult(run, points, run.maxPoints, { results: res.results });
+                           : saveResult(run, points, run.maxPoints,
+                                        { results: res.results, attemptId: res.attempt_id });
   screenResult(run, points, run.drill ? max : run.maxPoints, pct, right, total);
 }
 
@@ -882,10 +883,22 @@ function finish(run, auto){
     stopTimer();
     clearSession(run.id);
     if (run.parts.length === 1 && run.parts[0].format === 'writing'){
-      // Den Text sofort sichern — auch wenn noch keine Bewertung erfolgt ist.
+      // Der Text wird sofort gesichert. Die Abgabe wandert auch auf den
+      // Server — ohne attempt_id gibt es keine KI-Korrektur.
       saveResult(run, null, run.parts[0].maxPoints);
       clearDraft(run.id);
-      return screenWriting(run);
+      screenWriting(run);
+      API.submitAttempt(S.modell.uuid, run.id, S.answers)
+        .then(res => {
+          if (!res || !res.ok) return;
+          const prog = load('b1.progress', {});
+          const rec = (prog[S.modell.id] || {})[run.id];
+          if (rec){ rec.attemptId = res.attempt_id; save('b1.progress', prog); }
+          const el = document.getElementById('aiwrap');
+          if (el) renderAiBox(el, run, res.attempt_id, null);
+        })
+        .catch(() => {});
+      return;
     }
 
     grade(run);
@@ -1002,6 +1015,10 @@ function screenWriting(run, saved){
           </div>`).join('')}
         <div id="wres"></div>
       </div>
+      <div class="card" id="aiwrap">
+        <h2>Korrektur</h2>
+        <p class="sub" style="margin:0">Wird vorbereitet …</p>
+      </div>
       <div class="bottombar"><div class="inner">
         <button class="btn ghost grow" id="again">Wiederholen</button>
         <button class="btn grow" id="back">Übersicht</button>
@@ -1033,7 +1050,77 @@ function screenWriting(run, saved){
     }
     document.getElementById('again').onclick = () => screenIntro(run);
     document.getElementById('back').onclick  = () => screenModell(S.modell);
+
+    const box = document.getElementById('aiwrap');
+    if (box) renderAiBox(box, run, saved && saved.attemptId, mine);
   });
+}
+
+/* ============ KI-Korrektur des Briefs ============
+   Die Selbstbewertung oben bleibt: sie ist die Übung, die telc verlangt.
+   Die Korrektur kommt daneben — sie sagt, was tatsächlich im Text steht. */
+function renderAiBox(box, run, attemptId, text){
+  if (!attemptId){
+    box.innerHTML = `<h2>Korrektur</h2>
+      <p class="sub" style="margin:0">Ohne Verbindung ist keine Korrektur möglich.</p>`;
+    return;
+  }
+  box.innerHTML = `<h2>Korrektur</h2>
+    <p class="sub" style="margin:0 0 10px">Ihr Brief wird gelesen und nach den
+      telc-Kriterien bewertet — mit Hinweisen zu jedem Fehler.</p>
+    <button class="btn" id="aigo">Korrektur anfordern</button>
+    <div id="aiout"></div>`;
+
+  const out = document.getElementById('aiout');
+  const btn = document.getElementById('aigo');
+
+  // schon einmal korrigiert? dann nicht noch einmal bezahlen
+  API.writingFeedback(attemptId).then(fb => { if (fb) showAi(out, btn, fb); })
+    .catch(() => {});
+
+  btn.onclick = async () => {
+    btn.disabled = true; btn.textContent = 'Wird korrigiert … (bis zu 1 Minute)';
+    let r;
+    try { r = await API.correctWriting(attemptId); }
+    catch { r = { ok: false, error: 'network' }; }
+    btn.disabled = false; btn.textContent = 'Korrektur anfordern';
+    if (r && r.ok) return showAi(out, btn, r);
+    out.innerHTML = `<p class="sub" style="color:var(--bad)">${esc({
+      quota_exceeded: 'Das Korrektur-Kontingent für diesen Zeitraum ist aufgebraucht.',
+      not_entitled:   'Kein aktives Abo.',
+      empty_text:     'Es ist kein Text zum Korrigieren da.',
+      not_configured: 'Die Korrektur ist noch nicht eingerichtet.',
+      refused:        'Der Text konnte nicht bewertet werden.',
+      network:        'Keine Verbindung.'
+    }[r && r.error] || 'Die Korrektur ist fehlgeschlagen.')}</p>`;
+  };
+}
+
+function showAi(out, btn, fb){
+  if (btn) btn.hidden = true;
+  const GRADE_PTS = g => (g && g.points != null) ? g.points : '';
+  out.innerHTML = `
+    ${fb.points != null ? scoreCard(fb.points, fb.max_points,
+        Math.round(fb.points / fb.max_points * 100), 'KI-Korrektur') : ''}
+    ${(fb.grades || []).map(g => `<div class="crit">
+      <h3>${esc(g.criterion)} <span class="pill">${esc(g.key)}</span></h3>
+      <p class="sub" style="margin:0">${esc(g.why)}</p>
+    </div>`).join('')}
+    ${fb.summary ? `<div class="why" style="margin:12px 0">${esc(fb.summary)}</div>` : ''}
+    ${(fb.errors || []).length ? `<h3 style="margin:14px 0 6px">Fehler im Einzelnen</h3>
+      ${fb.errors.map(e => `<div class="q isbad">
+        <div class="qhead"><span class="qnum">${esc(e.type)}</span></div>
+        <div class="fb bad">
+          <div class="fbrow"><span class="lbl">Ihr Text</span>
+            <span class="val">${esc(e.original)}</span></div>
+          <div class="fbrow"><span class="lbl">Besser</span>
+            <span class="val">${esc(e.correction)}</span></div>
+          ${e.why ? `<div class="why">${esc(e.why)}</div>` : ''}
+        </div></div>`).join('')}` : ''}
+    ${fb.corrected ? `<details style="margin-top:12px">
+       <summary class="sub">Korrigierte Fassung ansehen</summary>
+       <div class="passage" style="margin:8px 0 0"><div class="body">${esc(fb.corrected)}</div></div>
+     </details>` : ''}`;
 }
 
 // beim Schließen/Wegwischen den Stand sichern
