@@ -12,7 +12,7 @@ create extension if not exists "pgcrypto";
 -- ---------------------------------------------------------------------
 -- المستويات
 -- ---------------------------------------------------------------------
-create table levels (
+create table if not exists levels (
   id          text primary key,              -- 'a1','a2','b1','b2','c1'
   title       text not null,                 -- 'telc Deutsch B1'
   sort        int  not null default 0,
@@ -24,7 +24,7 @@ create table levels (
 -- الحساب بينعمل بتسجيل دخول مجهول (anonymous) لما ينفدّ كود الوصول.
 -- ما في إيميل ولا كلمة سر — الكود هو نقطة الدخول الوحيدة.
 -- ---------------------------------------------------------------------
-create table profiles (
+create table if not exists profiles (
   id            uuid primary key references auth.users on delete cascade,
   display_name  text,                        -- بتحطّيه إنتي من اللوحة
   note          text,                        -- «أحمد - واتساب 0176...»
@@ -36,7 +36,7 @@ create table profiles (
 -- ---------------------------------------------------------------------
 -- أكواد الوصول — بتولّديها من اللوحة وبتعطيها للمستخدم
 -- ---------------------------------------------------------------------
-create table access_codes (
+create table if not exists access_codes (
   id             uuid primary key default gen_random_uuid(),
   code           text unique not null,       -- 'B1-7K2M-9XQP'
   levels         text[] not null,            -- شو بيفتحله: {'b1'} أو {'a1','a2'}
@@ -50,12 +50,12 @@ create table access_codes (
   redeemed_by    uuid references profiles(id) on delete set null,
   revoked_at     timestamptz
 );
-create index on access_codes (redeemed_by);
+create index if not exists access_codes_redeemed_by_idx on access_codes (redeemed_by);
 
 -- ---------------------------------------------------------------------
 -- الاشتراكات — هي مصدر الحقيقة لـ«هل هالمستخدم مسموحله»
 -- ---------------------------------------------------------------------
-create table subscriptions (
+create table if not exists subscriptions (
   id                  uuid primary key default gen_random_uuid(),
   user_id             uuid not null references profiles(id) on delete cascade,
   levels              text[] not null,
@@ -66,7 +66,7 @@ create table subscriptions (
   created_at          timestamptz not null default now(),
   updated_at          timestamptz not null default now()
 );
-create index on subscriptions (user_id);
+create index if not exists subscriptions_user_id_idx on subscriptions (user_id);
 
 -- الدالة يلي كل شي بيتعلّق فيها: هل الاشتراك ساري لهالمستوى؟
 create or replace function has_access(p_user uuid, p_level text)
@@ -83,7 +83,7 @@ $$;
 -- ---------------------------------------------------------------------
 -- الأجهزة — سقف عدد الأجهزة هو يلي بيمنع مشاركة الكود
 -- ---------------------------------------------------------------------
-create table devices (
+create table if not exists devices (
   id           uuid primary key default gen_random_uuid(),
   user_id      uuid not null references profiles(id) on delete cascade,
   fingerprint  text not null,
@@ -96,7 +96,7 @@ create table devices (
 -- ---------------------------------------------------------------------
 -- المحتوى: امتحان ← أقسام ← أسئلة
 -- ---------------------------------------------------------------------
-create table tests (
+create table if not exists tests (
   id         uuid primary key default gen_random_uuid(),
   level_id   text not null references levels(id),
   slug       text not null,                  -- 'modell-01'
@@ -111,7 +111,7 @@ create table tests (
   unique (level_id, slug)
 );
 
-create table sections (
+create table if not exists sections (
   id           uuid primary key default gen_random_uuid(),
   test_id      uuid not null references tests(id) on delete cascade,
   section_id   text not null,                -- 'lv1','sb2','hv3','sa'
@@ -125,7 +125,7 @@ create table sections (
   unique (test_id, section_id)
 );
 
-create table items (
+create table if not exists items (
   id          uuid primary key default gen_random_uuid(),
   section_id  uuid not null references sections(id) on delete cascade,
   item_id     text not null,                 -- '1','2',... رقم السؤال بالامتحان
@@ -138,7 +138,7 @@ create table items (
 );
 
 -- ★ الجدول الحسّاس: هون بس مفاتيح الحلول، ومحدا بيقرا منه من العميل
-create table item_answers (
+create table if not exists item_answers (
   item_id     uuid primary key references items(id) on delete cascade,
   answer      text not null,
   explanation text                           -- شرح اختياري بينعرض بعد التسليم
@@ -147,7 +147,7 @@ create table item_answers (
 -- ---------------------------------------------------------------------
 -- المراجع — النقطة ٤: نصوص بتلصقيها من اللوحة والمستخدم بيقراها أي وقت
 -- ---------------------------------------------------------------------
-create table resources (
+create table if not exists resources (
   id         uuid primary key default gen_random_uuid(),
   level_id   text references levels(id),     -- null = بتنعرض لكل المستويات
   title      text not null,
@@ -162,7 +162,7 @@ create table resources (
 -- ---------------------------------------------------------------------
 -- الاستيراد — بتلصقي نص الامتحان الخام، وبينتحوّل لأسئلة بعد مراجعتك
 -- ---------------------------------------------------------------------
-create table imports (
+create table if not exists imports (
   id          uuid primary key default gen_random_uuid(),
   level_id    text references levels(id),
   raw_text    text not null,                 -- يلي لصقتيه
@@ -177,7 +177,7 @@ create table imports (
 -- ---------------------------------------------------------------------
 -- تقدّم المستخدم
 -- ---------------------------------------------------------------------
-create table attempts (
+create table if not exists attempts (
   id            uuid primary key default gen_random_uuid(),
   user_id       uuid not null references profiles(id) on delete cascade,
   test_id       uuid not null references tests(id) on delete cascade,
@@ -189,9 +189,9 @@ create table attempts (
   max_points    numeric,
   pct           numeric
 );
-create index on attempts (user_id, test_id);
+create index if not exists attempts_user_id_test_id_idx on attempts (user_id, test_id);
 
-create table mistakes (
+create table if not exists mistakes (
   id           uuid primary key default gen_random_uuid(),
   user_id      uuid not null references profiles(id) on delete cascade,
   item_id      uuid not null references items(id) on delete cascade,
@@ -200,7 +200,7 @@ create table mistakes (
   unique (user_id, item_id)
 );
 
-create table admin_audit_log (
+create table if not exists admin_audit_log (
   id          uuid primary key default gen_random_uuid(),
   admin_id    uuid references profiles(id) on delete set null,
   action      text not null,                 -- 'code.create','sub.extend','sub.revoke'

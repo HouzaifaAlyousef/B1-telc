@@ -12,7 +12,7 @@
 --     كانت مسموحة للطالب، بيقدر يبعت لحاله ٤٥ نقطة.
 -- =====================================================================
 
-create table writing_feedback (
+create table if not exists writing_feedback (
   id           uuid primary key default gen_random_uuid(),
   attempt_id   uuid not null references attempts(id) on delete cascade,
   user_id      uuid not null references profiles(id) on delete cascade,
@@ -31,14 +31,16 @@ create table writing_feedback (
   created_at   timestamptz not null default now(),
   completed_at timestamptz
 );
-create index on writing_feedback (user_id, created_at desc);
-create index on writing_feedback (attempt_id);
+create index if not exists writing_feedback_user_id_created_at_desc_idx on writing_feedback (user_id, created_at desc);
+create index if not exists writing_feedback_attempt_id_idx on writing_feedback (attempt_id);
 
 alter table writing_feedback enable row level security;
 grant select on writing_feedback to authenticated;
 
+drop policy if exists own_feedback on writing_feedback;
 create policy own_feedback on writing_feedback for select to authenticated
   using (user_id = auth.uid());
+drop policy if exists admin_feedback on writing_feedback;
 create policy admin_feedback on writing_feedback for all to authenticated
   using (is_admin()) with check (is_admin());
 

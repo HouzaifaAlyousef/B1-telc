@@ -74,6 +74,44 @@ mkdir -p "$TMP/audio" && : > "$TMP/audio/m01-hv1.mp3"
 python3 tools/upload_audio.py "$TMP/audio" --dry-run 2>/dev/null | grep -q "^  m01-hv1.mp3"
 check "الصوت بينرفع بلا بادئة" $?
 
+# ---------- setup.sql مطابق للترحيلات ----------
+./tools/build_setup.sh >/dev/null 2>&1
+git diff --quiet -- supabase/setup.sql 2>/dev/null
+check "★ setup.sql محدّث من الترحيلات (ما نسيت تعيدي التوليد)" $?
+
+# آمن للإعادة: ثلاث تشغيلات على قاعدة نظيفة بلا خطأ
+if psql -h /tmp -p "${PGPORT:-5433}" -U postgres -c '' 2>/dev/null; then
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -q \
+    -c "drop database if exists setuptest;" -c "create database setuptest;" >/dev/null 2>&1
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d setuptest -q >/dev/null 2>&1 <<'SQL'
+create schema if not exists auth;
+create table auth.users (id uuid primary key default gen_random_uuid());
+create or replace function auth.uid() returns uuid language sql stable as
+  $$ select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
+do $r$ begin
+  if not exists (select 1 from pg_roles where rolname='anon') then create role anon; end if;
+  if not exists (select 1 from pg_roles where rolname='authenticated') then create role authenticated; end if;
+end $r$;
+SQL
+  ERRS=0
+  for _ in 1 2 3; do
+    N=$(psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d setuptest \
+        -f supabase/setup.sql 2>&1 | grep -cE "^psql.*ERROR")
+    ERRS=$((ERRS + N))
+  done
+  [ "$ERRS" = 0 ]
+  check "★ setup.sql بيمرق ٣ مرات بلا خطأ (آمن للإعادة)" $?
+
+  # والفاحص لازم يشتكي من قاعدة بلا محتوى ولا أدمن
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d setuptest -f supabase/verify.sql 2>&1 \
+    | grep -q "فحص فشل"
+  check "★ verify.sql بيمسك التركيب الناقص" $?
+
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -q -c "drop database setuptest;" >/dev/null 2>&1
+else
+  echo "  · Postgres مو شغّال — تخطّي فحص setup.sql"
+fi
+
 # ---------- run.sh ----------
 bash -n run.sh;             check "run.sh سليم" $?
 bash -n tools/build_dist.sh; check "build_dist.sh سليم" $?

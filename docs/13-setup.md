@@ -27,41 +27,24 @@ Students have no email and no password. Redeeming a code creates an anonymous
 account and binds the code to it. Without this the code screen fails with
 `Signups not allowed`.
 
-## 3. Run the migrations
+## 3. Create the schema — one paste
 
-**SQL Editor → New query.** Paste and run each file in order, one at a time:
+**SQL Editor → New query.** Paste the whole of `supabase/setup.sql` and Run.
 
-```
-supabase/migrations/0001_init.sql     tables
-supabase/migrations/0002_rls.sql      access rules and grants
-supabase/migrations/0003_functions.sql  redeem, devices, grading
-supabase/migrations/0004_admin.sql    admin actions
-supabase/migrations/0005_content.sql  import, resources, levels
-```
-
-**Check:** Table Editor should list 14 tables. `item_answers` should be there
-and should be empty.
+It is every migration in order, in one file, and it is safe to run again:
+tables, indexes and policies all use `if not exists` / `drop … if exists`, so a
+paste that half-succeeded can simply be re-run rather than leaving you stuck.
 
 ## 4. Load the B1 content
+
+Paste `supabase/seed/b1.sql` and Run. It is ~430 KB — if the editor struggles,
+split it at any `-- =====` comment line.
+
+Regenerate it first only if you changed `data/`:
 
 ```bash
 python3 tools/export_sql.py data supabase/seed/b1.sql --level b1
 ```
-
-Then paste `supabase/seed/b1.sql` into the SQL Editor and run it. It is about
-430 KB — if the editor struggles, split it at a `-- =====` comment.
-
-**Check:**
-
-```sql
-select
-  (select count(*) from tests)        as tests,        -- 16
-  (select count(*) from sections)     as sections,     -- 141
-  (select count(*) from items)        as items,        -- 912
-  (select count(*) from item_answers) as answers;      -- 896
-```
-
-The 16 items without answers are the writing tasks. That is correct.
 
 ## 5. Upload the exam images
 
@@ -90,7 +73,19 @@ on conflict (id) do update set is_admin = true;
 
 **Check:** `select is_admin from profiles where id = '<UID>';` → `t`
 
-## 7. Point the app at the project
+## 7. Check the install
+
+**SQL Editor → New query → paste `supabase/verify.sql` → Run.**
+
+Sixteen checks with a ✓ or ✗ each, and for anything that failed, the exact
+thing to do about it. The important ones: that `item_answers` has RLS with no
+policy and no privilege (the answer keys), that `items` has no answer column at
+all, that `writing_finish` is out of reach of students, and that the content
+actually landed.
+
+Do not go further while anything is ✗.
+
+## 8. Point the app at the project
 
 Edit `assets/config.js`:
 
@@ -101,7 +96,7 @@ window.TELC_CONFIG = {
 };
 ```
 
-## 8. Try it locally
+## 9. Try it locally
 
 ```bash
 ./run.sh
@@ -117,7 +112,7 @@ window.TELC_CONFIG = {
 If all of that works, the whole chain works: auth, entitlement, content,
 server-side grading and the audit log.
 
-## 9. Deploy
+## 10. Deploy
 
 ```bash
 ./tools/build_dist.sh
@@ -134,7 +129,7 @@ The student app is at the root, the panel at `/admin/`. Both are protected by
 The result is about 200 KB. Everything else — questions, answers, images — comes
 from Supabase, per request, only for people with an active subscription.
 
-## 10. Optional: AI correction of the writing task
+## 11. Optional: AI correction of the writing task
 
 Not required to launch. See
 [14-writing-correction.md](14-writing-correction.md) — it needs an Anthropic
