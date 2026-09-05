@@ -177,19 +177,21 @@ function screenCode(msg){
   });
 }
 
-let mistCount = 0;      // wird beim Start und nach jeder Prüfung aufgefrischt
+/* Wiederholung: nur was heute fällig ist. Der Rest wartet auf sein Datum —
+   das ist der Sinn der Kästen. */
+let review = { due: 0, total: 0, mastered: 0, next_due: null };
 async function refreshMistakes(){
-  try { const r = await API.mistakes(); mistCount = r ? r.length : 0; }
-  catch { mistCount = 0; }
+  try { review = await API.reviewSummary() || review; }
+  catch { review = { due: 0, total: 0, mastered: 0, next_due: null }; }
 }
 
 function screenHome(){
   stopTimer();
   // Die Fehlerzahl kommt vom Server. Neu gezeichnet wird nur, wenn sie sich
   // geändert hat — sonst ruft sich der Bildschirm endlos selbst auf.
-  const before = mistCount;
+  const before = review.due;
   refreshMistakes().then(() => {
-    if (S.view === 'home' && mistCount !== before) screenHome();
+    if (S.view === 'home' && review.due !== before) screenHome();
   });
   go('home', () => {
     const cards = S.index.modelle.map((m, i) => `
@@ -200,7 +202,7 @@ function screenHome(){
         <span class="chev">›</span>
       </button>`).join('');
 
-    const nMist = mistCount;
+    const nMist = review.due;
     const lvl = S.levels.find(l => l.id === S.level);
     // Der Umschalter erscheint nur, wenn das Abo mehr als eine Stufe abdeckt.
     const picker = S.levels.length > 1 ? `<div class="levels">
@@ -221,10 +223,17 @@ function screenHome(){
       </button>
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
-        <span class="grow"><span style="font-weight:600">Fehler wiederholen</span>
-          <div class="meta">${nMist} Aufgabe${nMist === 1 ? '' : 'n'} aus früheren Prüfungen · ohne Zeit</div></span>
+        <span class="grow"><span style="font-weight:600">Wiederholen</span>
+          <div class="meta">${nMist} Aufgabe${nMist === 1 ? '' : 'n'} fällig${
+            review.mastered ? ` · ${review.mastered} sitzen schon` : ''} · ohne Zeit</div></span>
         <span class="chev">›</span>
-      </button>` : ''}
+      </button>`
+      : (review.total ? `<div class="tile drill done">
+        <span class="n">✓</span>
+        <span class="grow"><span style="font-weight:600">Nichts fällig</span>
+          <div class="meta">${review.mastered ? `${review.mastered} Aufgaben sitzen` : 'Alles wiederholt'}${
+            review.next_due ? ` · weiter am ${new Date(review.next_due).toLocaleDateString('de-DE')}` : ''}</div></span>
+      </div>` : '')}
       ${cards}`;
 
     app.querySelectorAll('.tile[data-id]').forEach(b =>
@@ -856,6 +865,8 @@ async function grade(run){
   // In manchen Modelltests fehlen Aufgaben (in der Vorlage abgeschnitten).
   // Der Server rechnet über die vorhandenen; hier wird auf die offizielle
   // Höchstpunktzahl hochgerechnet, damit alle Tests vergleichbar bleiben.
+  if (run.drill && res.mastered)
+    toast(`${res.mastered} Aufgabe${res.mastered === 1 ? '' : 'n'} sitzt jetzt ✓`, 3500);
   const points = run.drill
     ? res.right
     : Math.round(res.points / (res.max_points || 1) * run.maxPoints * 10) / 10;

@@ -319,3 +319,7 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 .readable h2{font-size:17px;margin:18px 0 6px}
 .readable h2:first-child{margin-top:0}
 .readable p{margin:0 0 12px}
+
+/* ---- Wiederholung erledigt ---- */
+.tile.drill.done{opacity:.75;cursor:default}
+.tile.drill.done .n{background:var(--ok,#177a4c);color:#fff}

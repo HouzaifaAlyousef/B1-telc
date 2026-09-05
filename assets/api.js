@@ -232,14 +232,20 @@ const API = (() => {
 
   const submitDrill = answers => rpc('submit_drill', { p_answers: answers });
 
-  /* أسئلة أخطأ فيها سابقاً، مع سياق قسمها — بدونه ما بتنحلّ */
+  /* أسئلة مستحقّة للمراجعة اليوم، مع سياق قسمها — بدونه ما بتنحلّ.
+     المتقن (صندوق > ٥) وغير المستحقّ ما بينجابوا. */
   async function mistakes(){
+    const now = new Date().toISOString();
     return rest(
-      'mistakes?select=item_id,wrong_count,' +
+      'mistakes?select=item_id,wrong_count,box,due_at,' +
       'items(id,item_id,text,options,points,meta,' +
       'sections(section_id,title,format,config,test_id,tests(slug,title)))' +
-      '&order=last_seen_at.desc&limit=200');
+      `&due_at=lte.${encodeURIComponent(now)}&box=lte.5` +
+      '&order=due_at.asc&limit=60');
   }
+
+  /* أرقام المراجعة للشاشة الرئيسية — نداء واحد بدل جلب كل الصفوف */
+  const reviewSummary = () => rpc('review_summary');
 
   async function attempts(testUuid){
     return rest(`attempts?select=id,block_id,points,max_points,pct,answers,submitted_at` +
@@ -249,7 +255,7 @@ const API = (() => {
 
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
            redeem, subscription, levels, myLevels, index, test, resources, imageUrl,
-           submitAttempt, submitDrill, mistakes, attempts,
+           submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
            signOut: () => storeSession(null),
            hasSession: () => !!session };
 })();

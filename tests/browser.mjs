@@ -34,7 +34,7 @@ page.on('pageerror', e => { console.log('  ✗ JS-Fehler:', e.message); results.
 
 // نحقن API مزيّف قبل ما يشتغل app.js
 await page.addInitScript(fx => {
-  const state = { redeemed: false, mistakes: [] };
+  const state = { redeemed: false, mistakes: [], mastered: 0 };
   const items = fx.sections.flatMap(s => s.items.map(i => ({ ...i, sec: s })));
 
   const shape = () => ({
@@ -91,6 +91,9 @@ await page.addInitScript(fx => {
       minutes: fx.test.blocks.reduce((a,b) => a + b.minutes, 0) }] }),
     test: async () => shape(),
     imageUrl: async () => null,
+    reviewSummary: async () => ({
+      due: state.mistakes.length, total: state.mistakes.length,
+      mastered: state.mastered || 0, next_due: null }),
     mistakes: async () => state.mistakes.map(id => {
       const i = items.find(x => x.id === id);
       return { item_id: id, wrong_count: 1, items: { id: i.id, item_id: i.item_id,
@@ -104,11 +107,13 @@ await page.addInitScript(fx => {
       let right = 0; const out = [];
       for (const [id, given] of Object.entries(answers)){
         const ok = given === fx.answers[id];
-        if (ok){ right++; state.mistakes = state.mistakes.filter(m => m !== id); }
+        if (ok){ right++; state.mistakes = state.mistakes.filter(m => m !== id);
+                 state.mastered++; }
         out.push({ id, given, answer: fx.answers[id], correct: ok });
       }
       const n = Object.keys(answers).length;
-      return { ok: true, right, total: n, pct: n ? Math.round(1000*right/n)/10 : null, results: out };
+      return { ok: true, right, total: n, mastered: 0,
+               pct: n ? Math.round(1000*right/n)/10 : null, results: out };
     },
     __answers: fx.answers
   };
@@ -198,7 +203,9 @@ check('الحل الصحيح بيبيّن بعد التسليم',
 // ---- ٨) تكرار الأخطاء ----
 await page.evaluate(() => screenHome());
 await page.waitForTimeout(600);
-check('زرّ «تكرار الأخطاء» ظهر', await page.locator('#drill').count() === 1);
+check('زرّ المراجعة ظهر', await page.locator('#drill').count() === 1);
+check('الزرّ بيقول كم سؤال مستحقّ',
+      /\d+ Aufgaben? fällig/.test(await page.textContent('#drill')));
 
 // ---- ٩) مبدّل المستويات ----
 check('مبدّل المستويات ظهر (اشتراك بمستويين)', await page.locator('.levels .lvl').count() === 2);
