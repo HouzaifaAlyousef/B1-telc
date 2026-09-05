@@ -1,8 +1,23 @@
 # Code review
 
-> **Status — partly superseded.** Findings #1, #2 (offline) and #7 (the shipped PDF) are overtaken by the rearchitecture.
-> See [11-online-architecture.md](11-online-architecture.md) for the new design.
-> What follows describes the code as it stands today.
+> **Status — mostly resolved.** Where each finding stands after the move to
+> Supabase:
+>
+> | # | Finding | Now |
+> |---|---|---|
+> | 1, 2 | Offline broken | Superseded — exams require a network by design ([11](11-online-architecture.md)) |
+> | 3 | `bundle.py` breaks silently | **Deleted** — its premise (all tests in one file) is what the architecture now prevents |
+> | 4 | „1 Aufgaben" | **Fixed** — one `plural()` helper |
+> | 5 | Dead dark-mode toggle | Was already gone |
+> | 6 | Wrong dependency list | Superseded — the README no longer lists build deps |
+> | 7 | 11 MB PDF ships to visitors | **Fixed** — `tools/build_dist.sh` refuses to build if `data/` or any answer key reaches the output |
+> | 8 | Two persistence mechanisms | **Fixed** — the draft is gone; the session already saved the same text, and the misleading "Entwurf wiederhergestellt" banner went with it |
+> | 9 | Convoluted `missing` | Still there in `tools/build.py`, which only runs when regenerating from the PDF |
+> | 10 | Unused parameters | Minor, unchanged |
+> | 11 | README stale | **Fixed** — rewritten |
+> | 12 | No tests, no CI | **Fixed** — 245 assertions across five runners; CI still not set up |
+>
+> The findings below are the original text, kept for the reasoning.
 
 Findings from a full read of every file, ranked by what they cost you. Each one
 was verified against the running app or the data, not inferred.

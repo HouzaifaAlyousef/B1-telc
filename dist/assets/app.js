@@ -198,7 +198,7 @@ function screenHome(){
       <button class="tile" data-id="${esc(m.id)}">
         <span class="n">${i + 1}</span>
         <span class="grow"><span style="font-weight:600">${esc(m.title)}</span>
-          <div class="meta">${m.aufgaben} Aufgaben · ${m.minutes} Minuten</div></span>
+          <div class="meta">${plural(m.aufgaben, 'Aufgabe', 'Aufgaben')} · ${plural(m.minutes, 'Minute', 'Minuten')}</div></span>
         <span class="chev">›</span>
       </button>`).join('');
 
@@ -224,14 +224,14 @@ function screenHome(){
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
         <span class="grow"><span style="font-weight:600">Wiederholen</span>
-          <div class="meta">${nMist} Aufgabe${nMist === 1 ? '' : 'n'} fällig${
+          <div class="meta">${plural(nMist, 'Aufgabe', 'Aufgaben')} fällig${
             review.mastered ? ` · ${review.mastered} sitzen schon` : ''} · ohne Zeit</div></span>
         <span class="chev">›</span>
       </button>`
       : (review.total ? `<div class="tile drill done">
         <span class="n">✓</span>
         <span class="grow"><span style="font-weight:600">Nichts fällig</span>
-          <div class="meta">${review.mastered ? `${review.mastered} Aufgaben sitzen` : 'Alles wiederholt'}${
+          <div class="meta">${review.mastered ? `${plural(review.mastered, 'Aufgabe sitzt', 'Aufgaben sitzen')}` : 'Alles wiederholt'}${
             review.next_due ? ` · weiter am ${new Date(review.next_due).toLocaleDateString('de-DE')}` : ''}</div></span>
       </div>` : '')}
       ${cards}`;
@@ -276,7 +276,7 @@ async function screenResources(){
       return;
     }
     app.innerHTML = `<h1>Lesematerial</h1>
-      <p class="sub">${rows.length} Text${rows.length === 1 ? '' : 'e'}. Zum Öffnen tippen.</p>
+      <p class="sub">${plural(rows.length, 'Text', 'Texte')}. Zum Öffnen tippen.</p>
       ${rows.map((r, i) => `<div class="blockcard">
         <button class="tile" data-res="${i}">
           <span class="grow"><span style="font-weight:600">${esc(r.title)}</span></span>
@@ -338,8 +338,8 @@ function screenModell(m){
         <span class="pill">${b.minutes} Min.</span>
         ${done ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>` : ''}
       </span>`;
-      const sub = [b.hint, `${n} Aufgaben`, `${fmtP(b.maxPoints)} Punkte`,
-                   b.missing ? `${b.missing} Aufgaben fehlen in der Vorlage` : '']
+      const sub = [b.hint, plural(n, 'Aufgabe', 'Aufgaben'), `${fmtP(b.maxPoints)} Punkte`,
+                   b.missing ? `${plural(b.missing, 'Aufgabe fehlt', 'Aufgaben fehlen')} in der Vorlage` : '']
         .filter(Boolean).join(' · ');
       return `<div class="blockcard">
         <button class="tile" data-block="${esc(b.id)}">
@@ -380,6 +380,9 @@ function screenModell(m){
 /* Punkte kurz schreiben: 2.5 → "2,5", 25.0 → "25" */
 const fmtP = n => (Math.round(n * 10) / 10).toString().replace('.', ',');
 
+/* „1 Aufgabe", nicht „1 Aufgaben" — deutsche Zählung an einer Stelle. */
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+
 /* Ein Durchgang = Titel, Zeit, Punkte und die Teile, die dazugehören. */
 function blockRun(m, id){
   const b = m.blocks.find(x => x.id === id);
@@ -415,9 +418,6 @@ function screenIntro(run){
   S.answers = {};
   S.dropped = {};
   // Übungen kennen weder Entwurf noch angefangene Sitzung
-  const draft = run.drill ? '' : loadDraft(run.id);
-  if (draft && run.parts.length === 1 && run.parts[0].format === 'writing')
-    S.answers[run.parts[0].items[0].id] = draft;
   const sess = run.drill ? null : loadSession(run.id);
   stopTimer();
   go('intro', () => {
@@ -428,7 +428,7 @@ function screenIntro(run){
     const list = run.parts.length > 1
       ? `<ul class="partlist">${run.parts.map(p =>
           `<li><span class="grow">${esc(p.title)}</span>
-             <span class="meta">${p.items.length} Aufgaben · ${fmtP(p.maxPoints)} P.</span></li>`).join('')}</ul>`
+             <span class="meta">${plural(p.items.length, 'Aufgabe', 'Aufgaben')} · ${fmtP(p.maxPoints)} P.</span></li>`).join('')}</ul>`
       : `<div class="instr">${esc(run.parts[0].instruction)}</div>`;
 
     app.innerHTML = `
@@ -456,7 +456,6 @@ function screenIntro(run){
       </div>`;
     document.getElementById('start').onclick = () => {
       clearSession(run.id);
-      clearDraft(run.id);
       S.answers = {}; S.dropped = {};
       screenExam(run);
     };
@@ -648,7 +647,6 @@ function renderItem(sec, it){
     const draft = S.answers[it.id] || '';
     const n = draft.trim().split(/\s+/).filter(Boolean).length;
     return `<div class="q" id="q_${esc(it.id)}">
-      ${draft ? `<div class="fb warn" style="margin-bottom:10px">Entwurf wiederhergestellt.</div>` : ''}
       <textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …">${esc(draft)}</textarea>
       <div class="counter" id="wc_${esc(it.id)}">${n} Wörter (mindestens ${it.minWords || 100})</div>
     </div>`;
@@ -735,7 +733,6 @@ function bindInputs(sec){
       const c = document.getElementById('wc_' + id);
       const min = sec.items.find(x => x.id === id).minWords || 100;
       if (c){ c.textContent = `${n} Wörter (mindestens ${min})`; c.style.color = n >= min ? 'var(--ok)' : 'var(--muted)'; }
-      saveDraft(S.run.id, ta.value);
       updateProgress();
     };
   });
@@ -851,12 +848,6 @@ function saveResult(run, points, max, extra = {}){
 /* Der Text im Schriftlichen Ausdruck lebt sonst nur im Speicher — geht die
    Seite zu, ist eine halbe Stunde Arbeit weg. Darum wird beim Tippen laufend
    ein Entwurf gesichert und beim nächsten Start wieder eingesetzt. */
-const draftKey = runId => `b1.draft.${S.modell ? S.modell.id : '-'}.${runId}`;
-const loadDraft = runId => load(draftKey(runId), '');
-const saveDraft = (runId, text) => save(draftKey(runId), text);
-function clearDraft(runId){
-  try { localStorage.removeItem(draftKey(runId)); } catch {}
-}
 
 /* جلسة امتحان جارية: الإجابات والوقت المتبقّي. منحفظها باستمرار تا لو
    سكّرت الصفحة أو طلعت تتغدّى، ترجع من وين وقّفتي — والمؤقّت ما بيمشي وأنت
@@ -921,7 +912,7 @@ async function grade(run){
   // Der Server rechnet über die vorhandenen; hier wird auf die offizielle
   // Höchstpunktzahl hochgerechnet, damit alle Tests vergleichbar bleiben.
   if (run.drill && res.mastered)
-    toast(`${res.mastered} Aufgabe${res.mastered === 1 ? '' : 'n'} sitzt jetzt ✓`, 3500);
+    toast(`${plural(res.mastered, 'Aufgabe sitzt', 'Aufgaben sitzen')} jetzt ✓`, 3500);
   const points = run.drill
     ? res.right
     : Math.round(res.points / (res.max_points || 1) * run.maxPoints * 10) / 10;
@@ -941,7 +932,6 @@ function finish(run, auto){
       // Der Text wird sofort gesichert. Die Abgabe wandert auch auf den
       // Server — ohne attempt_id gibt es keine KI-Korrektur.
       saveResult(run, null, run.parts[0].maxPoints);
-      clearDraft(run.id);
       screenWriting(run);
       API.submitAttempt(S.modell.uuid, run.id, S.answers)
         .then(res => {
