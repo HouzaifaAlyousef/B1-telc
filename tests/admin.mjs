@@ -149,6 +149,13 @@ try {
   check('الدخول نجح وطلعت الأرقام', stats.includes('Nutzer'));
   check('بيعرض المستخدم والاشتراك الفعّال', /1[\s\S]*Nutzer/.test(stats));
 
+  // ---- نشاط إدخال الأكواد ----
+  const home = await page.textContent('#app');
+  check('بطاقة نشاط الأكواد ظاهرة بالصفحة الرئيسية',
+        /Code-Eingaben/.test(home));
+  check('★ وبتشرح متى بينقفل الإدخال',
+        /Fehlversuchen in \d+/.test(home));
+
   // ---- المستخدمون ----
   await page.evaluate(() => document.querySelector('[data-tab="users"]').click());
   await page.waitForSelector('table');

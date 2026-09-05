@@ -93,8 +93,15 @@ that script.
 ## Not covered
 
 - No penetration testing of Supabase itself.
-- No rate limiting on `redeem_code` — a brute-force search of the code space is
-  not blocked in the application. The space is 31^8 ≈ 8×10^11, and Supabase
-  applies its own request limits, but a determined attacker is not stopped by
-  anything we wrote.
+- The tests run in CI on every push (`.github/workflows/tests.yml`), but CI has
+  never executed against a hosted Supabase project — only the local Postgres.
+- Rate limiting on `redeem_code` stops hammering from one client, not a
+  distributed attack. Eight failed attempts within fifteen minutes lock the
+  entry — counted per account *and* per device fingerprint, so clearing one is
+  not enough — and even a correct code is refused while locked, so an attacker
+  cannot grind until they hit. Someone creating fresh anonymous accounts and
+  rotating fingerprints gets past it; that is Supabase's own request limits to
+  handle, not ours. `07_rate_limit.sql` covers the lockout, that a second
+  student is unaffected, that repeated *successful* entries never lock anyone
+  out, and that the window expires on its own.
 - Nothing about payment handling, because there is none yet.

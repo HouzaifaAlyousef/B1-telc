@@ -163,10 +163,17 @@ function screenCode(msg){
       catch { r = { ok: false, error: 'network' }; }
       btn.disabled = false; btn.textContent = 'Freischalten';
       if (r && r.ok) return boot();
+      if (r && r.error === 'too_many_attempts'){
+        const m = Math.ceil((r.retry_after || 900) / 60);
+        return screenCode(`Zu viele Versuche. Bitte in ${m} Minute${
+          m === 1 ? '' : 'n'} noch einmal probieren.`);
+      }
       screenCode({
         invalid_code: 'Dieser Code ist unbekannt.',
         already_used: 'Dieser Code wurde bereits verwendet.',
         revoked:      'Dieser Code wurde gesperrt.',
+        code_exhausted: 'Dieser Code wurde bereits auf allen erlaubten Geräten '
+                      + 'benutzt. Bitte wenden Sie sich an Ihren Kurs.',
         device_limit: 'Die Höchstzahl an Geräten ist erreicht.',
         network:      'Keine Verbindung. Bitte später versuchen.'
       }[r && r.error] || 'Der Code konnte nicht eingelöst werden.');
@@ -205,9 +212,18 @@ function screenHome(){
     const nMist = review.due;
     const lvl = S.levels.find(l => l.id === S.level);
     // Der Umschalter erscheint nur, wenn das Abo mehr als eine Stufe abdeckt.
+    // Läuft eine Stufe bald ab, steht das am Umschalter — sonst merkt es
+    // niemand, bis der Zugang weg ist.
+    const daysLeft = id => {
+      const d = S.sub && S.sub.until && S.sub.until[id];
+      return d ? Math.ceil((new Date(d) - Date.now()) / 86400000) : null;
+    };
     const picker = S.levels.length > 1 ? `<div class="levels">
-      ${S.levels.map(l => `<button class="lvl${l.id === S.level ? ' on' : ''}"
-        data-lvl="${esc(l.id)}">${esc(l.title)}</button>`).join('')}
+      ${S.levels.map(l => { const d = daysLeft(l.id);
+        return `<button class="lvl${l.id === S.level ? ' on' : ''}${
+          d != null && d <= 7 ? ' soon' : ''}" data-lvl="${esc(l.id)}"
+          ${d != null ? `title="noch ${d} Tage"` : ''}>${esc(l.title)}${
+          d != null && d <= 7 ? ` · ${d}T` : ''}</button>`; }).join('')}
     </div>` : '';
     app.innerHTML = `
       <h1>Willkommen 👋</h1>

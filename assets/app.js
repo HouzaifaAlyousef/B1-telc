@@ -163,6 +163,11 @@ function screenCode(msg){
       catch { r = { ok: false, error: 'network' }; }
       btn.disabled = false; btn.textContent = 'Freischalten';
       if (r && r.ok) return boot();
+      if (r && r.error === 'too_many_attempts'){
+        const m = Math.ceil((r.retry_after || 900) / 60);
+        return screenCode(`Zu viele Versuche. Bitte in ${m} Minute${
+          m === 1 ? '' : 'n'} noch einmal probieren.`);
+      }
       screenCode({
         invalid_code: 'Dieser Code ist unbekannt.',
         already_used: 'Dieser Code wurde bereits verwendet.',

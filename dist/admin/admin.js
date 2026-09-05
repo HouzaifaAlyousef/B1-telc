@@ -131,7 +131,10 @@ function screenLogin(err){
 /* ============ الأقسام ============ */
 async function screenHome(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
-  const o = await rpc('admin_overview');
+  const [o, act] = await Promise.all([
+    rpc('admin_overview'),
+    rpc('admin_redeem_activity').catch(() => null)
+  ]);
   const stat = (n, label, cls = '') =>
     `<div class="stat ${cls}"><b>${n}</b><span>${esc(label)}</span></div>`;
   app.innerHTML = `
@@ -146,6 +149,21 @@ async function screenHome(){
       ${stat(o.attempts_7d, 'Prüfungen (7 Tage)')}
       ${stat(o.tests_published, 'Tests online')}
     </div>
+    ${act ? `<h2>Code-Eingaben</h2>
+    <p class="sub" style="margin-bottom:10px">Viele Fehlversuche heißt entweder
+      vertippt — oder jemand probiert Codes durch. Nach
+      ${act.limits.max_failed} Fehlversuchen in ${act.limits.window_minutes}
+      Minuten wird die Eingabe gesperrt.</p>
+    <div class="stats">
+      <div class="stat"><b>${act.ok_24h}</b><span>eingelöst (24 h)</span></div>
+      <div class="stat ${act.failed_1h > 5 ? 'warn' : ''}">
+        <b>${act.failed_1h}</b><span>Fehlversuche (1 h)</span></div>
+      <div class="stat ${act.failed_24h > 20 ? 'warn' : ''}">
+        <b>${act.failed_24h}</b><span>Fehlversuche (24 h)</span></div>
+      ${act.blocked ? `<div class="stat warn"><b>${act.blocked}</b>
+        <span>gerade gesperrt</span></div>` : ''}
+    </div>` : ''}
+
     <h2>Stufen</h2>
     <div class="card"><div class="wrap"><table>
       <tr><th>Stufe</th><th>Titel</th><th>Status</th></tr>
@@ -306,15 +324,20 @@ function userDialog(u){
 
 async function screenCodes(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
-  const [codes, levels] = await Promise.all([
-    api('access_codes?select=id,code,levels,duration_days,max_devices,note,' +
-        'created_at,redeemed_at,revoked_at&order=created_at.desc&limit=200'),
-    api('levels?select=id,title&order=sort')
+  const [codes, content] = await Promise.all([
+    rpc('admin_codes'),
+    rpc('admin_content')
   ]);
+  // wie viele Tests jede Stufe wirklich freischaltet — versteckte zählen nicht
+  const levels = (content.levels || []).map(l => ({
+    ...l,
+    live: (content.tests || []).filter(t => t.level_id === l.id && t.published).length
+  }));
 
-  const state = c => c.revoked_at ? ['bad', 'gesperrt']
-                   : c.redeemed_at ? ['', 'eingelöst']
-                   : ['ok', 'frei'];
+  const state = c => c.revoked_at        ? ['bad', 'gesperrt']
+                   : c.uses >= c.max_uses ? ['', 'aufgebraucht']
+                   : c.uses > 0           ? ['warn', `${c.uses}/${c.max_uses} benutzt`]
+                   :                        ['ok', `${c.max_uses}× frei`];
   app.innerHTML = `
     <h1>Zugangscodes</h1>
     <p class="sub">Erzeugen, ausdrucken, weitergeben. Ein Code wird einmal
@@ -324,40 +347,80 @@ async function screenCodes(){
       <div class="row">
         <label>Anzahl<input id="c_n" type="number" value="5" min="1" max="200"></label>
         <label>Stufe<select id="c_lvl">
-          ${levels.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}
+          ${levels.map(l => `<option value="${esc(l.id)}" data-live="${l.live}"
+            data-pub="${l.published ? 1 : 0}">${esc(l.title)}${
+            l.published ? '' : ' (versteckt)'}</option>`).join('')
+            || '<option value="">— zuerst eine Stufe anlegen —</option>'}
         </select></label>
         <label>Tage<select id="c_days">
           <option value="30" selected>30</option><option value="90">90</option>
           <option value="180">180</option><option value="365">365</option>
         </select></label>
-        <label>Geräte<input id="c_dev" type="number" value="2" min="1" max="10"></label>
+        <label>Aktivierungen<input id="c_uses" type="number" value="2"
+          min="1" max="10" title="Wie oft der Code eingelöst werden kann"></label>
         <label style="flex:2">Notiz<input id="c_note" placeholder="z. B. Kurs März"></label>
         <button class="btn" id="c_go">Erzeugen</button>
       </div>
+      <p class="sub" id="c_hint" style="margin:10px 0 0"></p>
       <div id="c_out"></div>
     </div>
 
     <div class="card"><div class="wrap"><table>
       <tr><th>Code</th><th>Status</th><th>Stufen</th><th>Tage</th>
-          <th>Geräte</th><th>Notiz</th><th>erstellt</th><th></th></tr>
+          <th>Aktivierungen</th><th>Notiz</th><th>erstellt</th><th></th></tr>
       ${codes.map(c => { const [cls, txt] = state(c); return `<tr>
         <td class="mono"><b>${esc(c.code)}</b></td>
         <td><span class="pill ${cls}">${txt}</span></td>
         <td>${esc((c.levels || []).join(', '))}</td>
-        <td>${c.duration_days}</td><td>${c.max_devices}</td>
+        <td>${c.duration_days}</td>
+        <td>${c.uses} / ${c.max_uses}
+          ${(c.redeemers || []).length ? `<div style="color:var(--muted);font-size:12px">
+            ${c.redeemers.map(x => esc(x.name || 'ohne Namen') + ' · ' + fmtDate(x.at)).join('<br>')}
+          </div>` : ''}</td>
         <td>${esc(c.note || '—')}</td><td>${fmtDate(c.created_at)}</td>
-        <td>${!c.revoked_at && !c.redeemed_at
-              ? `<button class="btn sm danger" data-rev="${esc(c.id)}">sperren</button>` : ''}</td>
+        <td style="white-space:nowrap">
+          ${!c.revoked_at && c.uses >= c.max_uses
+            ? `<button class="btn sm grey" data-more1="${esc(c.id)}"
+                 title="Eine weitere Aktivierung freigeben">+1</button>` : ''}
+          ${!c.revoked_at && c.uses === 0
+            ? `<button class="btn sm danger" data-rev="${esc(c.id)}">sperren</button>` : ''}
+        </td>
       </tr>`; }).join('') || '<tr><td colspan="8" class="empty">Noch keine Codes</td></tr>'}
     </table></div></div>`;
 
+  /* Vor dem Erzeugen sichtbar machen, was der Code öffnet — eine Stufe,
+     nicht alles, und nur ihre veröffentlichten Tests. */
+  const sel = document.getElementById('c_lvl');
+  const hint = document.getElementById('c_hint');
+  const showHint = () => {
+    const o = sel.selectedOptions[0];
+    if (!o || !o.value){ hint.textContent = ''; return; }
+    const live = Number(o.dataset.live), pub = o.dataset.pub === '1';
+    const days = document.getElementById('c_days').value;
+    const uses = document.getElementById('c_uses').value;
+    hint.innerHTML = pub && live
+      ? `Öffnet <b>${live} Test${live === 1 ? '' : 's'}</b> der Stufe
+         <b>${esc(o.textContent)}</b> für <b>${esc(days)} Tage</b>,
+         einlösbar auf <b>${esc(uses)} Gerät${uses === '1' ? '' : 'en'}</b>.
+         Andere Stufen bleiben zu — dafür braucht es einen zweiten Code.`
+      : `<span style="color:var(--warn)">Diese Stufe hat gerade
+         ${live ? 'keine veröffentlichten' : 'keine'} Tests — der Code
+         funktioniert, der Kurs sieht aber nichts.</span>`;
+  };
+  sel.onchange = showHint;
+  document.getElementById('c_days').onchange = showHint;
+  document.getElementById('c_uses').oninput = showHint;
+  showHint();
+
   document.getElementById('c_go').onclick = async e => {
+    if (!sel.value) return toast('Zuerst eine Stufe anlegen (Inhalte → Stufen)');
     const made = await act(e.target, () => rpc('admin_create_codes', {
       p_count: Number(document.getElementById('c_n').value),
-      p_levels: [document.getElementById('c_lvl').value],
+      p_levels: [sel.value],
       p_days: Number(document.getElementById('c_days').value),
-      p_max_devices: Number(document.getElementById('c_dev').value),
-      p_note: document.getElementById('c_note').value.trim() || null
+      p_max_devices: Number(document.getElementById('c_uses').value),
+      p_note: document.getElementById('c_note').value.trim() || null,
+      p_max_uses: Number(document.getElementById('c_uses').value)
     }), 'Codes erzeugt');
     if (!made) return;
     document.getElementById('c_out').innerHTML =
@@ -371,6 +434,12 @@ async function screenCodes(){
   };
   app.querySelectorAll('[data-rev]').forEach(b => b.onclick = async () => {
     await act(b, () => rpc('admin_revoke_code', { p_code_id: b.dataset.rev }), 'Code gesperrt');
+    screenCodes();
+  });
+  // Gerät verloren, Browser gelöscht: eine Aktivierung nachlegen
+  app.querySelectorAll('[data-more1]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_add_code_use',
+      { p_code_id: b.dataset.more1, p_extra: 1 }), 'Eine Aktivierung freigegeben');
     screenCodes();
   });
 }
@@ -710,7 +779,9 @@ function runParse(raw){
   importState.doc = test;
 
   // ما إله حل = مشكلة تمنع النشر (إلا التعبير الكتابي)
-  const fatal = warnings.filter(w => /keine Aufgaben|unbekannten Teil|doppelt|Kein Titel|Keine Teile/.test(w));
+  const fatal = warnings.filter(w =>
+    /keine Aufgaben|unbekannten Teil|doppelt|Kein Titel|Keine Teile|kein Format|unbekanntes Format/
+      .test(w));
   const ok = fatal.length === 0 && counts.items > 0;
 
   const preview = test.sections.map(s => `

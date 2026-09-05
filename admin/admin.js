@@ -131,7 +131,10 @@ function screenLogin(err){
 /* ============ الأقسام ============ */
 async function screenHome(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
-  const o = await rpc('admin_overview');
+  const [o, act] = await Promise.all([
+    rpc('admin_overview'),
+    rpc('admin_redeem_activity').catch(() => null)
+  ]);
   const stat = (n, label, cls = '') =>
     `<div class="stat ${cls}"><b>${n}</b><span>${esc(label)}</span></div>`;
   app.innerHTML = `
@@ -146,6 +149,21 @@ async function screenHome(){
       ${stat(o.attempts_7d, 'Prüfungen (7 Tage)')}
       ${stat(o.tests_published, 'Tests online')}
     </div>
+    ${act ? `<h2>Code-Eingaben</h2>
+    <p class="sub" style="margin-bottom:10px">Viele Fehlversuche heißt entweder
+      vertippt — oder jemand probiert Codes durch. Nach
+      ${act.limits.max_failed} Fehlversuchen in ${act.limits.window_minutes}
+      Minuten wird die Eingabe gesperrt.</p>
+    <div class="stats">
+      <div class="stat"><b>${act.ok_24h}</b><span>eingelöst (24 h)</span></div>
+      <div class="stat ${act.failed_1h > 5 ? 'warn' : ''}">
+        <b>${act.failed_1h}</b><span>Fehlversuche (1 h)</span></div>
+      <div class="stat ${act.failed_24h > 20 ? 'warn' : ''}">
+        <b>${act.failed_24h}</b><span>Fehlversuche (24 h)</span></div>
+      ${act.blocked ? `<div class="stat warn"><b>${act.blocked}</b>
+        <span>gerade gesperrt</span></div>` : ''}
+    </div>` : ''}
+
     <h2>Stufen</h2>
     <div class="card"><div class="wrap"><table>
       <tr><th>Stufe</th><th>Titel</th><th>Status</th></tr>

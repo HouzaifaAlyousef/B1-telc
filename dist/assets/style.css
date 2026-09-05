@@ -339,3 +339,5 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
   background:var(--line,#e2e7f0);overflow:hidden}
 .audiobar i{display:block;height:100%;width:0;background:var(--brand,#2f6bed);
   transition:width .2s linear}
+.levels .lvl.soon{border-color:var(--warn,#b7791f);color:var(--warn,#b7791f)}
+.levels .lvl.on.soon{background:var(--warn,#b7791f);border-color:var(--warn,#b7791f);color:#fff}
