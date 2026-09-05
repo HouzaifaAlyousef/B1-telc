@@ -1,0 +1,15 @@
+{
+  // إعداد Cloudflare Workers — موقع ثابت بلا كود خادم.
+  //
+  // البناء بيصير بـtools/build_dist.sh، يلي بينسخ ملفات التطبيق فقط
+  // وبيفشل لو وصل أي مفتاح حل للناتج. Cloudflare بينشر dist/ بس،
+  // فمجلد data/ (٨٩٦ حل) ما بيوصل للنت أبداً.
+  //
+  // ملف _headers جوّا dist/ بينقرا تلقائياً لقواعد الكاش.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "b1-telc",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
