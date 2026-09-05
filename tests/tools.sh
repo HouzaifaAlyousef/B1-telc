@@ -17,8 +17,28 @@ echo "=== الأدوات ==="
 check "البناء العادي بينجح" $?
 
 [ -f "$TMP/ok/index.html" ] && [ -f "$TMP/ok/assets/app.js" ] \
-  && [ -f "$TMP/ok/admin/index.html" ] && [ -f "$TMP/ok/sw.js" ]
+  && [ -f "$TMP/ok/sw.js" ]
 check "الملفات اللازمة موجودة" $?
+
+# ---------- مسار اللوحة السرّي ----------
+# اللوحة لازم تكون على المسار المضبوط، ومو على /admin/ — وإلا المسار
+# السرّي بلا فايدة وأي حدا بيلاقي صفحة الدخول.
+[ -f "$TMP/ok/kmh123475674/index.html" ] && [ ! -e "$TMP/ok/admin" ]
+check "★ اللوحة على المسار السرّي، ومو على /admin/" $?
+
+# قاعدة الـnoindex لازم تتبع المسار، وإلا بتضل تشير لمجلد مو موجود
+grep -q '^/kmh123475674/\*' "$TMP/ok/_headers" && ! grep -q '^/admin/\*' "$TMP/ok/_headers"
+check "قاعدة _headers اتبعت المسار" $?
+
+# مسار مخصّص من البيئة
+ADMIN_PATH=zzz9 ./tools/build_dist.sh "$TMP/custom" >/dev/null 2>&1 \
+  && [ -f "$TMP/custom/zzz9/index.html" ] && [ ! -e "$TMP/custom/kmh123475674" ] \
+  && grep -q '^/zzz9/\*' "$TMP/custom/_headers"
+check "ADMIN_PATH بيغيّر المسار والترويسات" $?
+
+# مسار فيه شرطة مائلة لازم ينرفض — بيعمل مجلدات متداخلة بلا قصد
+! ADMIN_PATH=a/b ./tools/build_dist.sh "$TMP/bad" >/dev/null 2>&1
+check "ADMIN_PATH فيه / بينرفض" $?
 
 [ ! -e "$TMP/ok/data" ] && [ ! -e "$TMP/ok/Doku" ] && [ ! -e "$TMP/ok/tools" ] \
   && [ ! -e "$TMP/ok/supabase" ] && [ ! -e "$TMP/ok/tests" ] && [ ! -e "$TMP/ok/docs" ]

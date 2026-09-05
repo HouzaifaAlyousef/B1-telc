@@ -180,27 +180,39 @@ async function screenUsers(){
   const rows = await rpc('admin_users', { p_search: userSearch || null });
 
   const line = u => {
-    const s = u.sub;
-    const live = s && s.status === 'active' && new Date(s.current_period_end) > new Date();
-    const cls  = !s ? '' : live ? (s.days_left <= 7 ? 'warn' : 'ok') : 'bad';
-    const txt  = !s ? 'kein Abo'
-               : live ? `${s.days_left} Tage` : (s.status === 'revoked' ? 'gesperrt' : 'abgelaufen');
+    /* Ein Nutzer kann mehrere Abos haben — ein Code öffnet genau eine
+       Stufe, wer A1 und B1 will, löst zwei Codes ein. Jede Zeile der
+       drei Spalten Abo/Stufen/Aktion gehört zum selben Abo. */
+    const subs = u.subs || [];
+    const cell = (html) => subs.length
+      ? subs.map(html).join('') : '<span style="color:var(--muted)">—</span>';
+
     return `<tr data-u="${esc(u.id)}">
       <td>
         <b>${esc(u.name || 'ohne Namen')}</b>
         ${u.note ? `<div style="color:var(--muted);font-size:13px">${esc(u.note)}</div>` : ''}
-        ${u.code ? `<div class="mono" style="color:var(--muted);font-size:12px">${esc(u.code)}</div>` : ''}
+        ${(u.codes || []).map(c =>
+          `<div class="mono" style="color:var(--muted);font-size:12px">${esc(c.code)}</div>`
+        ).join('')}
       </td>
-      <td><span class="pill ${cls}">${esc(txt)}</span>
-        ${s ? `<div style="color:var(--muted);font-size:12px;margin-top:3px">
-                bis ${fmtDate(s.current_period_end)}</div>` : ''}</td>
-      <td>${esc((s && s.levels || []).join(', ') || '—')}</td>
+      <td>${subs.length ? subs.map(s => {
+        const live = s.status === 'active' && new Date(s.current_period_end) > new Date();
+        const cls  = live ? (s.days_left <= 7 ? 'warn' : 'ok') : 'bad';
+        const txt  = live ? `${s.days_left} Tage`
+                   : (s.status === 'revoked' ? 'gesperrt' : 'abgelaufen');
+        return `<div class="subrow"><span class="pill ${cls}">${esc(txt)}</span>
+          <span style="color:var(--muted);font-size:12px;margin-inline-start:6px"
+            >bis ${fmtDate(s.current_period_end)}</span></div>`;
+      }).join('') : '<span class="pill">kein Abo</span>'}</td>
+      <td>${cell(s => `<div class="subrow mono">${esc((s.levels || []).join(', '))}</div>`)}</td>
       <td>${u.devices}</td>
       <td>${u.attempts}${u.best_pct != null ? ` · best ${u.best_pct}%` : ''}</td>
       <td>${fmtDate(u.last_seen_at || u.created_at)}</td>
       <td style="white-space:nowrap">
-        ${s ? `<button class="btn sm grey" data-shift="30"  data-sub="${esc(s.id)}">+30</button>
-               <button class="btn sm grey" data-shift="-30" data-sub="${esc(s.id)}">−30</button>` : ''}
+        ${subs.map(s => `<div class="subrow">
+          <button class="btn sm grey" data-shift="30"  data-sub="${esc(s.id)}">+30</button>
+          <button class="btn sm grey" data-shift="-30" data-sub="${esc(s.id)}">−30</button>
+        </div>`).join('')}
         <button class="btn sm grey" data-more="${esc(u.id)}">…</button>
       </td></tr>`;
   };
@@ -242,16 +254,43 @@ async function screenUsers(){
 /* تفاصيل مستخدم: كل الإجراءات الباقية */
 function userDialog(u){
   if (!u) return;
-  const s = u.sub;
+  const subs = u.subs || [];
   const back = document.createElement('div');
   back.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.45);' +
     'display:flex;align-items:center;justify-content:center;padding:16px;z-index:40';
+
+  /* Ein Block pro Abo. Die Knöpfe tragen die Abo-ID, damit +30 auf B1
+     nicht versehentlich das A1-Abo verlängert. */
+  const aboBlock = (s, i) => `
+    <h2>Abo ${esc((s.levels || []).join(', ') || '—')}</h2>
+    <p class="sub" style="margin-bottom:8px">
+      ${esc(s.status)} · läuft bis ${fmtDate(s.current_period_end)}
+      ${s.code ? ` · Code <span class="mono">${esc(s.code)}</span>` : ''}</p>
+    <div class="row">
+      <label>Enddatum
+        <input id="d_end${i}" type="date"
+               value="${new Date(s.current_period_end).toISOString().slice(0,10)}"></label>
+      <button class="btn sm" data-end="${esc(s.id)}" data-i="${i}">Setzen</button>
+    </div>
+    <div class="row" style="margin-top:10px">
+      ${[7, 30, 90, -7, -30].map(d =>
+        `<button class="btn sm grey" data-d="${d}" data-sub="${esc(s.id)}"
+          >${d > 0 ? '+' : '−'}${Math.abs(d)}</button>`).join('')}
+    </div>
+    <div class="row" style="margin-top:10px">
+      ${s.status === 'active'
+        ? `<button class="btn sm danger" data-st="revoked" data-sub="${esc(s.id)}"
+            >Abo sperren</button>`
+        : `<button class="btn sm" data-st="active" data-sub="${esc(s.id)}"
+            >Abo entsperren</button>`}
+    </div>`;
+
   back.innerHTML = `
     <div class="card" style="max-width:460px;width:100%;margin:0;max-height:90vh;overflow:auto">
       <h2 style="margin-top:0">${esc(u.name || 'Nutzer ohne Namen')}</h2>
       <p class="sub" style="margin-bottom:12px">
         ${u.attempts} Prüfungen · ${u.mistakes} offene Fehler · ${u.devices} Geräte<br>
-        angelegt ${fmtDate(u.created_at)}${u.code ? ` · Code <span class="mono">${esc(u.code)}</span>` : ''}
+        angelegt ${fmtDate(u.created_at)}
       </p>
 
       <label style="font-size:13px;color:var(--muted)">Name
@@ -261,28 +300,17 @@ function userDialog(u){
                placeholder="z. B. WhatsApp-Nummer, bezahlt am …" style="margin-top:4px"></label>
       <button class="btn sm" id="d_save" style="margin-top:10px">Speichern</button>
 
-      ${s ? `
-      <h2>Abo</h2>
-      <p class="sub" style="margin-bottom:8px">
-        ${esc(s.status)} · läuft bis ${fmtDate(s.current_period_end)}</p>
-      <div class="row">
-        <label>Enddatum
-          <input id="d_end" type="date"
-                 value="${new Date(s.current_period_end).toISOString().slice(0,10)}"></label>
-        <button class="btn sm" id="d_end_go">Setzen</button>
-      </div>
-      <div class="row" style="margin-top:10px">
-        <button class="btn sm grey" data-d="7">+7</button>
-        <button class="btn sm grey" data-d="30">+30</button>
-        <button class="btn sm grey" data-d="90">+90</button>
-        <button class="btn sm grey" data-d="-7">−7</button>
-        <button class="btn sm grey" data-d="-30">−30</button>
-      </div>
-      <div class="row" style="margin-top:10px">
-        ${s.status === 'active'
-          ? '<button class="btn sm danger" id="d_rev">Abo sperren</button>'
-          : '<button class="btn sm" id="d_act">Abo entsperren</button>'}
-      </div>` : '<h2>Abo</h2><p class="sub">Kein Abo vorhanden.</p>'}
+      <h2>Eingelöste Codes</h2>
+      ${(u.codes || []).length ? `<div class="wrap"><table>
+        <tr><th>Code</th><th>Stufe</th><th>eingelöst</th></tr>
+        ${u.codes.map(c => `<tr>
+          <td class="mono">${esc(c.code)}</td>
+          <td class="mono">${esc((c.levels || []).join(', '))}</td>
+          <td>${fmtDate(c.at)}</td></tr>`).join('')}
+      </table></div>` : '<p class="sub">Noch keinen Code eingelöst.</p>'}
+
+      ${subs.length ? subs.map(aboBlock).join('')
+                    : '<h2>Abo</h2><p class="sub">Kein Abo vorhanden.</p>'}
 
       <h2>Geräte</h2>
       <p class="sub" style="margin-bottom:8px">${u.devices} registriert.
@@ -307,19 +335,20 @@ function userDialog(u){
     () => rpc('admin_reset_devices', { p_user_id: u.id }), 'Geräte zurückgesetzt')
     .then(close);
 
-  if (s){
-    back.querySelectorAll('[data-d]').forEach(b => b.onclick = () =>
-      act(b, () => rpc('admin_shift_subscription',
-        { p_sub_id: s.id, p_days: Number(b.dataset.d) }), 'Abo angepasst').then(close));
-    $('d_end_go').onclick = e => act(e.target, () => rpc('admin_set_period_end',
-      { p_sub_id: s.id, p_end: new Date($('d_end').value + 'T12:00:00Z').toISOString() }),
-      'Enddatum gesetzt').then(close);
-    const rev = $('d_rev'), ac = $('d_act');
-    if (rev) rev.onclick = e => act(e.target, () => rpc('admin_set_subscription_status',
-      { p_sub_id: s.id, p_status: 'revoked' }), 'Abo gesperrt').then(close);
-    if (ac) ac.onclick = e => act(e.target, () => rpc('admin_set_subscription_status',
-      { p_sub_id: s.id, p_status: 'active' }), 'Abo entsperrt').then(close);
-  }
+  back.querySelectorAll('[data-d]').forEach(b => b.onclick = () =>
+    act(b, () => rpc('admin_shift_subscription',
+      { p_sub_id: b.dataset.sub, p_days: Number(b.dataset.d) }), 'Abo angepasst').then(close));
+
+  back.querySelectorAll('[data-end]').forEach(b => b.onclick = () =>
+    act(b, () => rpc('admin_set_period_end', {
+      p_sub_id: b.dataset.end,
+      p_end: new Date($('d_end' + b.dataset.i).value + 'T12:00:00Z').toISOString() }),
+      'Enddatum gesetzt').then(close));
+
+  back.querySelectorAll('[data-st]').forEach(b => b.onclick = () =>
+    act(b, () => rpc('admin_set_subscription_status',
+      { p_sub_id: b.dataset.sub, p_status: b.dataset.st }),
+      b.dataset.st === 'revoked' ? 'Abo gesperrt' : 'Abo entsperrt').then(close));
 }
 
 async function screenCodes(){

@@ -41,6 +41,13 @@ tr:last-child td{border-bottom:0}
 .pill.ok{color:var(--ok);border-color:currentColor}
 .pill.bad{color:var(--bad);border-color:currentColor}
 .pill.warn{color:var(--warn);border-color:currentColor}
+
+/* Mehrere Abos pro Nutzer: ein Code öffnet genau eine Stufe, wer zwei
+   Stufen will, löst zwei Codes ein. Die Spalten Abo/Stufen/Aktion
+   stapeln dann je eine Zeile pro Abo — feste Zeilenhöhe hält sie auf
+   gleicher Linie, sonst steht die Stufe neben dem falschen Abo. */
+.subrow{display:flex;align-items:center;min-height:32px;white-space:nowrap;gap:6px}
+td:has(> .subrow){vertical-align:top}
 button.btn,input,select,textarea{font:inherit}
 .btn{background:var(--blue);color:#fff;border:0;border-radius:9px;
   padding:9px 14px;font-weight:600;cursor:pointer}

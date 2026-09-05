@@ -11,7 +11,8 @@ delete from profiles; delete from auth.users;
 
 insert into auth.users (id) values
   ('aaaaaaaa-0000-0000-0000-000000000001'),   -- أدمن
-  ('bbbbbbbb-0000-0000-0000-000000000002');   -- طالب
+  ('bbbbbbbb-0000-0000-0000-000000000002'),   -- طالب
+  ('cccccccc-0000-0000-0000-000000000003');   -- طالب تاني، بيفعّل نفس الكود
 insert into profiles (id, is_admin, display_name) values
   ('aaaaaaaa-0000-0000-0000-000000000001', true,  'Admin'),
   ('bbbbbbbb-0000-0000-0000-000000000002', false, null);
@@ -33,6 +34,8 @@ declare
   res   jsonb;
   ov    jsonb;
   n     int;
+  stud2   uuid := 'cccccccc-0000-0000-0000-000000000003';
+  a1codes text[];
   d1    timestamptz;
   d2    timestamptz;
 begin
@@ -138,15 +141,52 @@ begin
   perform t_check('قائمة المستخدمين فيها الطالب مع اشتراكه',
                   jsonb_array_length(res) = 1
                   and res->0->>'name' = 'أحمد'
-                  and res->0->'sub'->>'status' = 'active');
+                  and res->0->'subs'->0->>'status' = 'active');
+  perform t_check('الكود يلي فعّله الطالب ظاهر بصفّه',
+                  res->0->'codes'->0->>'code' = codes[1]);
   perform t_check('البحث بالكود بيلاقي المستخدم',
                   jsonb_array_length(admin_users(codes[1])) = 1);
   perform t_check('البحث بكلمة مو موجودة بيرجّع فاضي',
                   jsonb_array_length(admin_users('zzzznope')) = 0);
 
+  ------------------------------------------------ ٩ب مفعّل تاني لنفس الكود
+  -- الخلل: عمود الكود كان بيقرا access_codes.redeemed_by، وهاد بينحط
+  -- لأول مفعّل بس. الطالب التاني يلي بيفعّل نفس الكود (والكود بيسمح
+  -- بتفعيلين) كان يطلع باللوحة بلا كود — يعني ما بتعرفي مين هو أصلاً.
+  perform set_config('request.jwt.claim.sub', stud2::text, true);
+  perform redeem_code(codes[1], 'dev-b');
+  perform set_config('request.jwt.claim.sub', adm::text, true);
+  perform admin_set_profile(stud2, 'سامر', null);
+
+  res := admin_users('سامر');
+  perform t_check('★ المفعّل التاني كمان بيبيّن كوده',
+                  jsonb_array_length(res) = 1
+                  and res->0->'codes'->0->>'code' = codes[1]);
+  perform t_check('★ البحث بالكود بيلاقي المفعّلين الاتنين',
+                  jsonb_array_length(admin_users(codes[1])) = 2);
+
+  ------------------------------------------- ٩ج مستخدم بمستويين = كودين
+  -- كود واحد بيفتح مستوى واحد. يلي بدو A1 وB1 بيفعّل كودين، فبيصير
+  -- عنده اشتراكين. 'sub' القديمة (limit 1) كانت تبيّن واحد وتخفي التاني،
+  -- واللوحة ما بتعطي طريقة لتمديد المخفي.
+  perform admin_upsert_level('a1', 'telc Deutsch A1', 0, true);
+  select array_agg(c) into a1codes
+    from admin_create_codes(1, array['a1'], 30, 2, 'اختبار A1', 2) c;
+  perform set_config('request.jwt.claim.sub', stud::text, true);
+  perform redeem_code(a1codes[1], 'dev-1');
+  perform set_config('request.jwt.claim.sub', adm::text, true);
+
+  res := admin_users('أحمد');
+  perform t_check('★ المستخدم بمستويين بيبيّن اشتراكين',
+                  jsonb_array_length(res->0->'subs') = 2);
+  perform t_check('★ وكوديه الاتنين',
+                  jsonb_array_length(res->0->'codes') = 2);
+  perform t_check('لكل اشتراك id لحاله تا ينمدّد لحاله',
+                  res->0->'subs'->0->>'id' <> res->0->'subs'->1->>'id');
+
   ---------------------------------------------------------------- ١٠ التدقيق
   select count(*) into n from admin_audit_log where admin_id = adm;
-  perform t_check(format('★ كل إجراء انسجّل (%s سطر)', n), n >= 12);
+  perform t_check(format('★ كل إجراء انسجّل (%s سطر)', n), n >= 15);
 
   raise notice '';
   raise notice '  كل اختبارات اللوحة نجحت ✓';

@@ -5,32 +5,50 @@
 # ونشره بيلغي كل الحماية مهما عملت قاعدة البيانات. بدل ما نتذكّر نستثنيه
 # كل مرة، هالسكربت بينسخ يلي لازم فقط — وبيفحص الناتج قبل ما يخلص.
 #
-#   ./tools/build_dist.sh            → dist/
-#   ./tools/build_dist.sh out/       → out/
+# مسار اللوحة سرّي بالقصد: ما بدنا صفحة تسجيل دخول على /admin/ يلاقيها
+# أي حدا. هاد مو الحارس — الحارس profiles.is_admin بقاعدة البيانات —
+# بس بيوفّر عليكي محاولات دخول عمياء وفهرسة محرّكات البحث.
+#
+#   ./tools/build_dist.sh                    → dist/
+#   ./tools/build_dist.sh out/               → out/
+#   ADMIN_PATH=xyz ./tools/build_dist.sh     → اللوحة على /xyz/
 set -euo pipefail
 cd "$(dirname "$0")/.."
 OUT="${1:-dist}"
+ADMIN_PATH="${ADMIN_PATH:-kmh123475674}"
+ADMIN_PATH="${ADMIN_PATH#/}"; ADMIN_PATH="${ADMIN_PATH%/}"
+case "$ADMIN_PATH" in
+  ''|*/*|.*) echo "✗ ADMIN_PATH لازم يكون مقطع واحد بلا شرطات مائلة" >&2; exit 1 ;;
+esac
 
 rm -rf "$OUT"
-mkdir -p "$OUT/assets" "$OUT/admin"
+mkdir -p "$OUT/assets" "$OUT/$ADMIN_PATH"
 
 # ---- تطبيق الطلاب ----
 cp index.html manifest.webmanifest sw.js "$OUT/"
 cp assets/app.js assets/api.js assets/config.js assets/style.css "$OUT/assets/"
 cp -r assets/icons "$OUT/assets/"
 
-# ترويسات Cloudflare Pages — لازم تكون بجذر الناتج
-[ -f _headers ] && cp _headers "$OUT/"
+# ترويسات Cloudflare — لازم تكون بجذر الناتج. قاعدة الـnoindex مكتوبة
+# على /admin/ بالمصدر وبتتحوّل هون للمسار الفعلي.
+if [ -f _headers ]; then
+  sed "s|^/admin/\*|/$ADMIN_PATH/*|" _headers > "$OUT/_headers"
+fi
 
-# ---- لوحة التحكّم على /admin/ ----
+# ---- لوحة التحكّم ----
 # نفس الموقع بمسار تاني: الحارس بقاعدة البيانات (profiles.is_admin) مو
 # بسرّية الرابط. للنشر بمكان تاني، انسخي assets/config.js معها.
-cp admin/index.html admin/admin.js admin/admin.css admin/parse.js "$OUT/admin/"
+cp admin/index.html admin/admin.js admin/admin.css admin/parse.js "$OUT/$ADMIN_PATH/"
 
 # ---- الفحص: ولا حل يطلع برّا ----
 fail=0
 if [ -e "$OUT/data" ]; then
   echo "✗ data/ وصل للناتج — كل مفاتيح الحلول مكشوفة" >&2; fail=1
+fi
+# اللوحة لازم تكون بمسارها الجديد بس — لو انلقت على /admin/ كمان يعني
+# السكربت انكسر والمسار السرّي بلا فايدة
+if [ "$ADMIN_PATH" != admin ] && [ -e "$OUT/admin" ]; then
+  echo "✗ اللوحة لسا على /admin/ — المسار السرّي ما انطبّق" >&2; fail=1
 fi
 for bad in Doku tools docs supabase tests; do
   [ -e "$OUT/$bad" ] && { echo "✗ $bad/ وصل للناتج" >&2; fail=1; }
@@ -47,5 +65,5 @@ fi
 [ "$fail" = 0 ] || { echo; echo "البناء فشل الفحص. ما ينتشر." >&2; exit 1; }
 
 echo "✓ $OUT/ جاهز — $(find "$OUT" -type f | wc -l) ملف، $(du -sh "$OUT" | cut -f1)"
-echo "  الطلاب:  $OUT/           →  الجذر"
-echo "  اللوحة:  $OUT/admin/     →  /admin/"
+echo "  الطلاب:  $OUT/                 →  الجذر"
+echo "  اللوحة:  $OUT/$ADMIN_PATH/  →  /$ADMIN_PATH/"
