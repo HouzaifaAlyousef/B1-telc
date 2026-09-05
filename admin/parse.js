@@ -8,7 +8,10 @@
    إذا عندك نص خام غير منظّم، حوّليه لهالصيغة برّا التطبيق — وبعدين
    الصقيه هون وشوفي بعينك شو انقرا قبل ما تنشري.
 
+   سطر بيبلّش بـ// تعليق، بينشال قبل التحليل (إلا جوّا Extra:).
+
    المثال الكامل بـdocs/12-import-format.md
+   قالب فاضي بكل الـ٦١ سؤال بـdocs/vorlage/b1-leer.txt
    ============================================================ */
 'use strict';
 
@@ -127,6 +130,12 @@ const Markup = (() => {
     for (let raw of lines){
       const line = raw.replace(/\s+$/, '');
       const t = line.trim();
+
+      /* تعليق: سطر بيبلّش بـ// بينشال قبل أي تحليل. بدونه القوالب
+         الفاضية ما بتقدر تحمل شرحها جوّاتها — و«# شرح» بينقرا عنوان
+         للامتحان وبيدعس الاسم الحقيقي. جوّا Extra: ما منشيله، لأنه JSON
+         وأي سطر جوّاته جزء منه. */
+      if (mode !== 'extra' && t.startsWith('//')) continue;
 
       /* ---- رؤوس ---- */
       if (/^###\s*(Teil|Section)\s*:/i.test(t)){
@@ -268,6 +277,28 @@ const Markup = (() => {
         seen.add(it.id);
       });
     });
+
+    /* خانات القالب يلي ما انتعبّت.
+       القالب الفاضي بيمرق بلا خطأ — وهاد مقصود، تا تقدري تفحصي الهيكل
+       قبل التعبئة. بس هيك، خانة واحدة نسيها اللي عم يعبّي (أو الذكاء
+       الاصطناعي) بتنستورد كأنها محتوى: «Lösung: <A bis J>» بتصير حل
+       ما بيطلع صح ولا مرة، والطالب ما بيعرف ليش. فمنبلّغ عنها. */
+    const holes = [];
+    const hunt = (v, where) => {
+      if (typeof v === 'string'){
+        if (/<[^<>]{0,80}>/.test(v)) holes.push(where);
+      } else if (Array.isArray(v)){
+        v.forEach((x, i) => hunt(x, `${where}[${i}]`));
+      } else if (v && typeof v === 'object'){
+        Object.entries(v).forEach(([k, x]) => hunt(x, where ? `${where}.${k}` : k));
+      }
+    };
+    hunt(test, '');
+    if (holes.length){
+      warn.push(`${holes.length} Stelle${holes.length === 1 ? '' : 'n'} `
+              + `noch nicht ausgefüllt (<…>): ${holes.slice(0, 5).join(', ')}`
+              + (holes.length > 5 ? ' …' : ''));
+    }
 
     // النقاط المتاحة لكل كتلة
     test.blocks.forEach(b => {

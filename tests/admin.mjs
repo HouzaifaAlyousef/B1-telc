@@ -262,9 +262,27 @@ try {
   await page.evaluate(() => document.getElementById('i_sample').click());
   await page.waitForSelector('.preview');
   const nums = await page.locator('.stat b').allTextContents();
-  check(`المعاينة عدّت صح (${nums.join('/')})`, nums[2] === '2' && nums[3] === '2');
+  // المثال امتحان B1 كامل الهيكل: ٣ كتل، ٩ أقسام، ١٧ سؤال، ١٦ حل
+  // (التعبير الكتابي بلا حل — بيتصحّح بالذكاء الاصطناعي).
+  check(`المعاينة عدّت صح (${nums.join('/')})`,
+        nums[0] === '3' && nums[1] === '9' && nums[2] === '17' && nums[3] === '16');
   check('زرّ النشر مفتوح لأن ما في أخطاء',
         !(await page.locator('#i_apply').isDisabled()));
+
+  // ---- الاستيراد: القالب الفاضي ----
+  // لازم يمرق بالهيكل الكامل (٦١ سؤال) بس ينبّه على الخانات الفاضية،
+  // وإلا بينتشر امتحان حلوله «<A bis J>» وما بيطلع صح ولا مرة.
+  await page.evaluate(() => document.getElementById('i_leer').click());
+  await page.waitForSelector('.preview');
+  const leerNums = await page.locator('.stat b').allTextContents();
+  check(`القالب الفاضي: ${leerNums.join('/')} (٦١ سؤال)`, leerNums[2] === '61');
+  const leerWarn = await page.textContent('.warns');
+  check('★ القالب الفاضي بينبّه على الخانات <…>',
+        /nicht ausgefüllt/.test(leerWarn));
+
+  // ونرجّع المثال المعبّى للاختبارات الجاية
+  await page.evaluate(() => document.getElementById('i_sample').click());
+  await page.waitForSelector('.preview');
 
   // ---- الاستيراد: نص فيه خطأ ----
   await page.fill('#i_text', '# KAPUTT\n\n## Block: b1\nTeile: nichtda\n');
@@ -288,7 +306,13 @@ try {
     join sections s on s.id=i.section_id join tests t on t.id=s.test_id
     where t.slug='probe-a1-01';`);
   check(`النشر أنشأ الامتحان بقاعدة البيانات (${made} سؤال، ${ans} حل)`,
-        made === '2' && ans === '2');
+        made === '17' && ans === '16');
+
+  // الصورة والصوت بيسافروا جوّا config مو بأعمدة — هني يلي بينضاعوا
+  check('★ الصورة والصوت وصلوا للقاعدة عبر اللوحة',
+        sql(`select count(*) from sections s join tests t on t.id=s.test_id
+             where t.slug='probe-a1-01'
+               and (s.config ? 'bankImage' or s.config ? 'audio');`) === '4');
   check('الحلول راحت للجدول المقفول مو للأسئلة',
         sql(`select count(*) from items i join sections s on s.id=i.section_id
              join tests t on t.id=s.test_id where t.slug='probe-a1-01'

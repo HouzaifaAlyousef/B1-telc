@@ -694,29 +694,10 @@ async function screenAudio(){
 }
 
 /* ============ الاستيراد ============ */
-const SAMPLE = `# PETRA
-Untertitel: 61 Aufgaben · 150 Minuten
-
-## Block: block-lv
-Titel: Leseverstehen
-Minuten: 45
-Teile: lv1
-
-### Teil: lv1
-Format: matching
-Titel: Leseverstehen, Teil 1
-Gruppe: Leseverstehen
-Punkte: 5
-Maximum: 25
-Anweisung: Lesen Sie die Texte und die Überschriften.
-Auswahl:
-A = Bildband: Babys im Garten
-B = Ratgeber für junge Eltern
-Aufgaben:
-[1] Ich möchte, dass Menschen die Welt mit anderen Augen sehen.
-Lösung: A
-[2] Ein Buch für alle, die gerade Eltern geworden sind.
-Lösung: B`;
+/* القوالب بـadmin/vorlagen.js، مولّدة من docs/vorlage/*.txt.
+   المختصر تحت للعين بس؛ الكامل بالزرّين. */
+const SAMPLE = VORLAGE_BEISPIEL.split('\n').filter(l => !l.startsWith('//'))
+  .join('\n').split('### Teil: lv2')[0].trim();
 
 let importState = { id: null, doc: null, raw: '' };
 
@@ -738,6 +719,7 @@ async function screenImport(){
         <label style="flex:2">Kennung des Tests
           <input id="i_slug" placeholder="modell-a2-01"></label>
         <button class="btn grey" id="i_sample">Beispiel einfügen</button>
+        <button class="btn grey" id="i_leer">Leere Vorlage</button>
       </div>
 
       <textarea id="i_text" class="paste" style="margin-top:10px"
@@ -760,6 +742,11 @@ async function screenImport(){
           Bei <b>truefalse</b>: <code>Lösung: richtig</code> oder <code>falsch</code>.
           Bei Lesetexten: <code>Text:</code> und dann die Absätze, <code>**fett**</code> für Überschriften.
           Alles, was das Format nicht kennt, kann als <code>Extra:</code> mit JSON angehängt werden.
+          Zeilen mit <code>//</code> sind Kommentare und werden ignoriert.<br>
+          <b>Beispiel einfügen</b> lädt eine vollständige B1-Prüfung mit allen fünf
+          Formaten, Bild und Hörtext. <b>Leere Vorlage</b> lädt dasselbe Gerüst mit
+          allen 61 Aufgaben zum Ausfüllen — jede noch offene Stelle
+          <code>&lt;…&gt;</code> wird beim Prüfen gemeldet.
         </p>
       </details>
     </div>
@@ -778,7 +765,12 @@ async function screenImport(){
     </table></div></div>`;
 
   const $ = id => document.getElementById(id);
-  $('i_sample').onclick = () => { $('i_text').value = SAMPLE; $('i_parse').click(); };
+  const fill = txt => { $('i_text').value = txt; $('i_text').scrollTop = 0; $('i_parse').click(); };
+  // المثال معبّى وبيمرق بلا تحذير — بيبيّن الشكل الصح.
+  $('i_sample').onclick = () => fill(VORLAGE_BEISPIEL);
+  // القالب الفاضي فيه كل الـ٦١ سؤال وكل خاناته <…>. المحلّل بينبّه على
+  // كل خانة باقية، فبتعرفي إذا الذكاء الاصطناعي نسي شي قبل النشر.
+  $('i_leer').onclick   = () => fill(VORLAGE_LEER);
   $('i_clear').onclick  = () => { $('i_text').value = ''; $('i_result').innerHTML = '';
                                   importState = { id:null, doc:null, raw:'' }; };
   $('i_parse').onclick  = () => runParse($('i_text').value);

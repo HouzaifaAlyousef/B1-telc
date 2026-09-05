@@ -1,0 +1,416 @@
+// =====================================================================
+// LEERE VORLAGE — telc Deutsch B1
+//
+// Alle 61 Aufgaben, richtige Punkte, richtige Struktur. Fuellen Sie
+// nur die <...> Stellen aus. Nichts anderes aendern: Punkte, Maximum
+// und Teile-Listen ergeben zusammen die 225 Punkte der echten Pruefung.
+//
+// Zeilen mit // sind Kommentare und werden beim Pruefen ignoriert —
+// Sie koennen sie stehen lassen oder loeschen.
+//
+// Ausgefuelltes Beispiel: docs/vorlage/b1-beispiel.txt
+// Anleitung fuer die KI:  docs/vorlage/ki-prompt.md
+// =====================================================================
+
+# <PRUEFUNGSNAME>
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Punkte: 45
+Teile: sa
+
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+Auswahltitel: Überschriften
+// 10 Überschriften, 5 Texte — 5 Überschriften passen zu keinem Text.
+Auswahl:
+A = <Überschrift>
+B = <Überschrift>
+C = <Überschrift>
+D = <Überschrift>
+E = <Überschrift>
+F = <Überschrift>
+G = <Überschrift>
+H = <Überschrift>
+I = <Überschrift>
+J = <Überschrift>
+Aufgaben:
+[1] <Text 1>
+Lösung: <A bis J>
+[2] <Text 2>
+Lösung: <A bis J>
+[3] <Text 3>
+Lösung: <A bis J>
+[4] <Text 4>
+Lösung: <A bis J>
+[5] <Text 5>
+Lösung: <A bis J>
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+// Der ganze Lesetext. Eine Zeile = ein Absatz. **Fett** fuer Ueberschriften.
+// Leerzeilen sind egal. §§§ trennt zwei getrennte Texte.
+Text:
+**<Überschrift des Artikels>**
+<Absatz 1>
+<Absatz 2>
+<Absatz 3>
+Aufgaben:
+[6] <Frage 6>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[7] <Frage 7>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[8] <Frage 8>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[9] <Frage 9>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[10] <Frage 10>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+Auswahltitel: Anzeigen
+// Die Anzeigen sind ein Bild aus der PDF. Dateiname frei waehlbar, aber
+// er muss spaeter genauso in den Bucket "exam-images" hochgeladen werden:
+//   python3 tools/upload_images.py img/
+// Der Text hinter dem = bleibt leer — die Anzeigen stehen ja im Bild.
+Bild: img/<pruefungsname>-lv3.jpg
+Auswahl:
+A = <Text A>
+B = <Text B>
+C = <Text C>
+D = <Text D>
+E = <Text E>
+F = <Text F>
+G = <Text G>
+H = <Text H>
+I = <Text I>
+J = <Text J>
+K = <Text K>
+L = <Text L>
+X = <Text X>
+Aufgaben:
+[11] <Situation 11>
+Lösung: <A bis L, oder X>
+[12] <Situation 12>
+Lösung: <A bis L, oder X>
+[13] <Situation 13>
+Lösung: <A bis L, oder X>
+[14] <Situation 14>
+Lösung: <A bis L, oder X>
+[15] <Situation 15>
+Lösung: <A bis L, oder X>
+[16] <Situation 16>
+Lösung: <A bis L, oder X>
+[17] <Situation 17>
+Lösung: <A bis L, oder X>
+[18] <Situation 18>
+Lösung: <A bis L, oder X>
+[19] <Situation 19>
+Lösung: <A bis L, oder X>
+[20] <Situation 20>
+Lösung: <A bis L, oder X>
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+// Der Lueckentext. Die Luecken als (21), (22) … mitten im Satz lassen.
+Text:
+<Anrede>
+<Text mit den Lücken (21) bis (30)>
+<Gruß>
+Aufgaben:
+[21] <Lücke 21>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[22] <Lücke 22>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[23] <Lücke 23>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[24] <Lücke 24>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[25] <Lücke 25>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[26] <Lücke 26>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[27] <Lücke 27>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[28] <Lücke 28>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[29] <Lücke 29>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[30] <Lücke 30>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+Auswahltitel: Wörterliste
+// 15 Woerter fuer 10 Luecken — 5 passen zu keiner.
+Auswahl:
+A = <WORT>
+B = <WORT>
+C = <WORT>
+D = <WORT>
+E = <WORT>
+F = <WORT>
+G = <WORT>
+H = <WORT>
+I = <WORT>
+J = <WORT>
+K = <WORT>
+L = <WORT>
+M = <WORT>
+N = <WORT>
+O = <WORT>
+Aufgaben:
+[31] <Lücke 31>
+Lösung: <A bis O>
+[32] <Lücke 32>
+Lösung: <A bis O>
+[33] <Lücke 33>
+Lösung: <A bis O>
+[34] <Lücke 34>
+Lösung: <A bis O>
+[35] <Lücke 35>
+Lösung: <A bis O>
+[36] <Lücke 36>
+Lösung: <A bis O>
+[37] <Lücke 37>
+Lösung: <A bis O>
+[38] <Lücke 38>
+Lösung: <A bis O>
+[39] <Lücke 39>
+Lösung: <A bis O>
+[40] <Lücke 40>
+Lösung: <A bis O>
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Sie hören fünf kurze Texte. Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+// Audiodatei. Erst in den Bucket "exam-audio" hochladen:
+//   python3 tools/upload_audio.py audio/
+// Ohne Audiodatei diese zwei Zeilen loeschen — der Teil laesst sich dann
+// nur lesen und mit der Loesung vergleichen, nicht hoeren.
+Hoertext: <pruefungsname>-hv1.mp3
+Wiedergaben: 1
+Aufgaben:
+[41] <Aussage 41>
+Lösung: <richtig oder falsch>
+[42] <Aussage 42>
+Lösung: <richtig oder falsch>
+[43] <Aussage 43>
+Lösung: <richtig oder falsch>
+[44] <Aussage 44>
+Lösung: <richtig oder falsch>
+[45] <Aussage 45>
+Lösung: <richtig oder falsch>
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Sie hören ein Gespräch. Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+// Audiodatei. Erst in den Bucket "exam-audio" hochladen:
+//   python3 tools/upload_audio.py audio/
+// Ohne Audiodatei diese zwei Zeilen loeschen — der Teil laesst sich dann
+// nur lesen und mit der Loesung vergleichen, nicht hoeren.
+Hoertext: <pruefungsname>-hv2.mp3
+Wiedergaben: 1
+Aufgaben:
+[46] <Aussage 46>
+Lösung: <richtig oder falsch>
+[47] <Aussage 47>
+Lösung: <richtig oder falsch>
+[48] <Aussage 48>
+Lösung: <richtig oder falsch>
+[49] <Aussage 49>
+Lösung: <richtig oder falsch>
+[50] <Aussage 50>
+Lösung: <richtig oder falsch>
+[51] <Aussage 51>
+Lösung: <richtig oder falsch>
+[52] <Aussage 52>
+Lösung: <richtig oder falsch>
+[53] <Aussage 53>
+Lösung: <richtig oder falsch>
+[54] <Aussage 54>
+Lösung: <richtig oder falsch>
+[55] <Aussage 55>
+Lösung: <richtig oder falsch>
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Sie hören fünf kurze Ansagen. Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+// Audiodatei. Erst in den Bucket "exam-audio" hochladen:
+//   python3 tools/upload_audio.py audio/
+// Ohne Audiodatei diese zwei Zeilen loeschen — der Teil laesst sich dann
+// nur lesen und mit der Loesung vergleichen, nicht hoeren.
+Hoertext: <pruefungsname>-hv3.mp3
+Wiedergaben: 2
+Aufgaben:
+[56] <Aussage 56>
+Lösung: <richtig oder falsch>
+[57] <Aussage 57>
+Lösung: <richtig oder falsch>
+[58] <Aussage 58>
+Lösung: <richtig oder falsch>
+[59] <Aussage 59>
+Lösung: <richtig oder falsch>
+[60] <Aussage 60>
+Lösung: <richtig oder falsch>
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:
+// Alles zwischen { } ist JSON und muss gueltig bleiben: jeder Text in
+// "Anfuehrungszeichen", Komma zwischen den Eintraegen, keins vor } oder ].
+// criteria, grades und factor sind bei telc B1 immer gleich — nicht aendern:
+// 3 Kriterien × 5 Punkte × Faktor 3 = 45 Punkte.
+Extra:
+{
+  "brief": {
+    "intro": "Eine Bekannte hat Ihnen folgenden Brief geschrieben:",
+    "greeting": "<Anrede, z. B. Liebe(r) ........>",
+    "paragraphs": [
+      "<Der Brief, an den der Prüfling antworten soll>",
+      "<Grußformel>"
+    ],
+    "signature": "<Name des Absenders>"
+  },
+  "hints": [
+    "<Hinweis 1 aus der Aufgabenstellung>",
+    "Schreiben Sie mindestens 100 Wörter."
+  ],
+  "criteria": [
+    { "title": "Aufgabenbewältigung",
+      "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?" },
+    { "title": "Kommunikative Gestaltung",
+      "hint": "Anrede, Gruß, passendes Register und verbundene Sätze?" },
+    { "title": "Formale Richtigkeit",
+      "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?" }
+  ],
+  "grades": [
+    { "key": "A", "points": 5 },
+    { "key": "B", "points": 3 },
+    { "key": "C", "points": 1 },
+    { "key": "D", "points": 0 }
+  ],
+  "factor": 3
+}
+Aufgaben:
+// Genau eine Aufgabe. Die vier "Punkt:"-Zeilen sind die Leitpunkte aus
+// der PDF — immer vier, in der Reihenfolge der Aufgabenstellung.
+// Keine "Lösung:" — das korrigiert die KI im Betrieb.
+[61] <Aufgabenstellung, z. B. Schreiben Sie eine Antwort an Petra.>
+Mindestwörter: 100
+Punkt: <Leitpunkt 1>
+Punkt: <Leitpunkt 2>
+Punkt: <Leitpunkt 3>
+Punkt: <Leitpunkt 4>

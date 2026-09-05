@@ -94,6 +94,17 @@ mkdir -p "$TMP/audio" && : > "$TMP/audio/m01-hv1.mp3"
 python3 tools/upload_audio.py "$TMP/audio" --dry-run 2>/dev/null | grep -q "^  m01-hv1.mp3"
 check "الصوت بينرفع بلا بادئة" $?
 
+# ---------- vorlagen.js مطابق لملفات القوالب ----------
+# القوالب مصدرها الـ.txt، واللوحة بتقرا النسخة المولّدة. لو انحرفوا،
+# الزرّ بيلزق شي غير يلي انفحص بالاختبارات.
+./tools/build_vorlagen.sh >/dev/null 2>&1
+git diff --quiet -- admin/vorlagen.js 2>/dev/null
+check "★ vorlagen.js محدّث من docs/vorlage/*.txt" $?
+
+# اللوحة لازم تحمّل الملف، وإلا VORLAGE_* مو معرّفة والزرّ بيرمي خطأ
+grep -q 'src="vorlagen.js"' admin/index.html
+check "اللوحة بتحمّل vorlagen.js" $?
+
 # ---------- setup.sql مطابق للترحيلات ----------
 ./tools/build_setup.sh >/dev/null 2>&1
 git diff --quiet -- supabase/setup.sql 2>/dev/null

@@ -1,5 +1,20 @@
 # The paste format
 
+> **Ready-made templates** — you rarely need to write this by hand:
+>
+> | File | What it is |
+> |---|---|
+> | [`vorlage/b1-beispiel.txt`](vorlage/b1-beispiel.txt) | A complete telc B1 exam: all three blocks, all nine parts, all five formats, image and audio. Loads from **Beispiel einfügen**. |
+> | [`vorlage/b1-leer.txt`](vorlage/b1-leer.txt) | The same skeleton with all 61 task slots empty. Loads from **Leere Vorlage**. |
+> | [`vorlage/ki-prompt.md`](vorlage/ki-prompt.md) | The prompt to hand an AI together with a telc PDF, so it fills the blank template for you. |
+>
+> Lines starting with `//` are comments and are stripped before parsing —
+> except inside `Extra:`, where every line is part of the JSON.
+>
+> Any `<…>` left over from a template is reported as a warning. A slot the
+> AI forgot would otherwise import as content: `Lösung: <A bis J>` becomes
+> an answer no student can ever match.
+
 How exam text becomes an exam. The admin panel parses what you paste, shows you
 what it understood, and only then offers to publish it.
 

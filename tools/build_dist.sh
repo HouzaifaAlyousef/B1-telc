@@ -38,7 +38,8 @@ fi
 # ---- لوحة التحكّم ----
 # نفس الموقع بمسار تاني: الحارس بقاعدة البيانات (profiles.is_admin) مو
 # بسرّية الرابط. للنشر بمكان تاني، انسخي assets/config.js معها.
-cp admin/index.html admin/admin.js admin/admin.css admin/parse.js "$OUT/$ADMIN_PATH/"
+cp admin/index.html admin/admin.js admin/admin.css admin/parse.js admin/vorlagen.js \
+   "$OUT/$ADMIN_PATH/"
 
 # ---- الفحص: ولا حل يطلع برّا ----
 fail=0

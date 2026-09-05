@@ -123,7 +123,70 @@ try {
   catch { blocked = true; }
   check('★ الطالب ممنوع من الاستيراد', blocked);
 
-  // ---- ١١) التدقيق ----
+  // ---- ١١) القالب المرجعي: docs/vorlage/b1-beispiel.txt ----
+  // هاد الملف هو يلي بينلزق من زر «Beispiel einfügen» وهو الأساس يلي
+  // بيتعبّى منه الذكاء الاصطناعي. لازم يمرق للقاعدة بلا تحذير، ولازم
+  // الصورة والصوت وملحقات التعبير الكتابي يوصلوا لآخر الطريق — هني
+  // بالذات يلي بينضاعوا لأنهن بيسافروا جوّا config مو بأعمدة.
+  const muster = readFileSync(path.join(ROOT,'docs/vorlage/b1-beispiel.txt'),'utf8');
+  const mp = M.parse(muster);
+  check(`القالب المرجعي: ${mp.counts.sections} قسم، ${mp.counts.items} سؤال، `
+      + `${mp.warnings.length} تحذير`,
+        mp.counts.sections === 9 && mp.warnings.length === 0
+        && mp.test.title === 'MUSTER-01');
+  check('القالب فيه الصيغ الخمسة كلها',
+        new Set(mp.test.sections.map(x => x.format)).size === 5);
+
+  const mId = psql(`insert into imports (level_id, raw_text, parsed, status, created_by)
+    values ('a2', $raw$${muster.replace(/\$/g,'')}$raw$,
+            $doc$${JSON.stringify(mp.test)}$doc$::jsonb, 'parsed', '${ADMIN}') returning id;`);
+  const mApp = JSON.parse(asRole(ADMIN,
+    `select admin_apply_import('${mId}','a2','muster-01', true);`));
+  check('القالب المرجعي انعتمد', mApp.ok && mApp.sections === 9);
+
+  const cfg = k => psql(`select config->>'${k}' from sections s
+    join tests t on t.id=s.test_id where t.slug='muster-01' and s.section_id='lv3';`);
+  check('★ مسار الصورة وصل للقاعدة', cfg('bankImage') === 'img/muster-01-lv3.jpg');
+
+  const au = psql(`select config->>'audio' || '×' || (config->>'audioPlays') from sections s
+    join tests t on t.id=s.test_id where t.slug='muster-01' and s.section_id='hv3';`);
+  check('★ الهörtext وعدد التشغيلات وصلوا', au === 'muster-01-hv3.mp3×2');
+
+  const sa = psql(`select jsonb_array_length(config->'criteria') || '/' ||
+      (config->>'factor') || '/' || (config->'brief'->>'signature')
+    from sections s join tests t on t.id=s.test_id
+    where t.slug='muster-01' and s.section_id='sa';`);
+  check('★ ملحقات التعبير الكتابي (معايير/معامل/رسالة) وصلوا', sa === '3/3/Petra');
+
+  const wItem = psql(`select (i.meta->>'minWords') || '/' ||
+      jsonb_array_length(i.meta->'points')
+    from items i join sections s on s.id=i.section_id
+    join tests t on t.id=s.test_id where t.slug='muster-01' and s.section_id='sa';`);
+  check('★ الحد الأدنى للكلمات والنقاط الأربعة وصلوا', wItem === '100/4');
+
+  const expl = psql(`select ia.explanation is not null from item_answers ia
+    join items i on i.id=ia.item_id join sections s on s.id=i.section_id
+    join tests t on t.id=s.test_id where t.slug='muster-01'
+    and s.section_id='lv1' and i.item_id='1';`);
+  check('شرح الحل وصل لجدول الحلول', expl === 't');
+
+  // ---- ١٢) القالب الفاضي: نفس الهيكل، بلا حلول ----
+  const leer = readFileSync(path.join(ROOT,'docs/vorlage/b1-leer.txt'),'utf8');
+  const lp = M.parse(leer);
+  check(`القالب الفاضي: ${lp.counts.sections} قسم، ${lp.counts.items} سؤال`,
+        lp.counts.sections === 9 && lp.counts.items === 61);
+  check('القالب الفاضي بيوصل نفس ٢٢٥ نقطة يلي بيوصلها امتحان حقيقي',
+        lp.test.blocks.reduce((a,b) => a + b.maxPoints, 0) === 225);
+  // ★ القالب الفاضي لازم يمرق بالهيكل، بس **ما** يمرق بصمت: كل خانة
+  // <…> ما انتعبّت لازم تنبلّغ. بلا هالفحص، خانة نسيها الذكاء
+  // الاصطناعي بتنستورد كأنها محتوى — «Lösung: <A bis J>» بتصير حل
+  // ما بيطلع صح ولا مرة والطالب ما بيعرف ليش.
+  const holes = lp.warnings.filter(w => /nicht ausgefüllt/.test(w));
+  check('★ القالب الفاضي بينبّه على الخانات الفاضية', holes.length === 1);
+  check('القالب المعبّى ما بينبّه ولا خانة',
+        mp.warnings.filter(w => /nicht ausgefüllt/.test(w)).length === 0);
+
+  // ---- ١٣) التدقيق ----
   const log = psql(`select count(*) from admin_audit_log
     where action in ('import.apply','level.upsert','resource.create','test.publish');`);
   check(`إجراءات المحتوى انسجّلت (${log})`, Number(log) >= 5);
