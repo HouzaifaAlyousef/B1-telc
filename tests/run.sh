@@ -33,6 +33,9 @@ node tests/markup.mjs
 echo "▸ تطبيق الطلاب"
 node tests/browser.mjs
 
+echo "▸ حقن XSS (تطبيق + لوحة)"
+node tests/xss.mjs
+
 echo "▸ الاستيراد من الطرف للطرف"
 node tests/import.mjs
 

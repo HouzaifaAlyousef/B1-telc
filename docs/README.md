@@ -23,6 +23,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 12 | [Paste format](12-import-format.md) | How pasted exam text becomes an exam |
 | 13 | [Setup](13-setup.md) | Empty Supabase project → working app, step by step |
 | 14 | [Writing correction](14-writing-correction.md) | AI correction of the Schriftlicher Ausdruck |
+| 15 | [Security review](15-security.md) | What was checked, how, and what is accepted |
 
 ## Quick start
 
