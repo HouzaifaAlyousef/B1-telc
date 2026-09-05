@@ -43,10 +43,11 @@ create table access_codes (
   duration_days  int  not null,              -- ٣٠، ٩٠، ٣٦٥...
   max_devices    int  not null default 2,    -- الدفاع الأساسي ضد مشاركة الكود
   note           text,                       -- لمين هالكود ومتى دفع
-  created_by     uuid references profiles(id),
+  -- مراجع تأليف: حذف حساب أدمن ما لازم يحبس ولا يمحي التاريخ
+  created_by     uuid references profiles(id) on delete set null,
   created_at     timestamptz not null default now(),
   redeemed_at    timestamptz,
-  redeemed_by    uuid references profiles(id),
+  redeemed_by    uuid references profiles(id) on delete set null,
   revoked_at     timestamptz
 );
 create index on access_codes (redeemed_by);
@@ -61,7 +62,7 @@ create table subscriptions (
   status              text not null default 'active',   -- active|expired|revoked
   current_period_end  timestamptz not null,             -- بتمدّديها أو بتقصّريها من اللوحة
   source              text not null default 'manual',   -- manual | stripe (لاحقاً)
-  access_code_id      uuid references access_codes(id),
+  access_code_id      uuid references access_codes(id) on delete set null,
   created_at          timestamptz not null default now(),
   updated_at          timestamptz not null default now()
 );
@@ -168,8 +169,8 @@ create table imports (
   parsed      jsonb,                         -- ناتج التحليل — بتراجعيه قبل الاعتماد
   status      text not null default 'draft', -- draft|parsed|needs_review|applied|failed
   error       text,
-  test_id     uuid references tests(id),     -- بينتعبّى بعد الاعتماد
-  created_by  uuid references profiles(id),
+  test_id     uuid references tests(id) on delete set null,  -- بينتعبّى بعد الاعتماد
+  created_by  uuid references profiles(id) on delete set null,
   created_at  timestamptz not null default now()
 );
 
@@ -201,7 +202,7 @@ create table mistakes (
 
 create table admin_audit_log (
   id          uuid primary key default gen_random_uuid(),
-  admin_id    uuid references profiles(id),
+  admin_id    uuid references profiles(id) on delete set null,
   action      text not null,                 -- 'code.create','sub.extend','sub.revoke'
   target_type text,
   target_id   text,

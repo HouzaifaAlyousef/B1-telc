@@ -395,8 +395,332 @@ async function screenAudit(){
     </table></div></div>`;
 }
 
+
+/* ============ الإنشاء: مستويات، امتحانات، مراجع ============ */
+let contentCache = null;
+
+async function screenContent(){
+  app.innerHTML = '<div class="empty">Lädt …</div>';
+  const c = contentCache = await rpc('admin_content');
+
+  const lvlRow = l => `<tr>
+    <td class="mono">${esc(l.id)}</td>
+    <td>${esc(l.title)}</td>
+    <td>${l.tests}</td>
+    <td><span class="pill ${l.published ? 'ok' : ''}">${l.published ? 'online' : 'versteckt'}</span></td>
+    <td><button class="btn sm grey" data-lvl="${esc(l.id)}"
+          data-pub="${l.published ? 0 : 1}" data-title="${esc(l.title)}"
+          data-sort="${l.sort}">${l.published ? 'verstecken' : 'online stellen'}</button></td>
+  </tr>`;
+
+  const testRow = t => `<tr>
+    <td class="mono">${esc(t.level_id)}</td>
+    <td><b>${esc(t.title)}</b>
+      <div class="mono" style="color:var(--muted);font-size:12px">${esc(t.slug)}</div></td>
+    <td>${t.sections} / ${t.aufgaben}</td>
+    <td>${t.answers}</td>
+    <td><span class="pill ${t.published ? 'ok' : ''}">${t.published ? 'online' : 'Entwurf'}</span></td>
+    <td style="white-space:nowrap">
+      <button class="btn sm grey" data-tpub="${esc(t.id)}" data-v="${t.published ? 0 : 1}">
+        ${t.published ? 'verstecken' : 'online'}</button>
+      <button class="btn sm danger" data-tdel="${esc(t.id)}" data-n="${esc(t.title)}">löschen</button>
+    </td></tr>`;
+
+  const resRow = r => `<tr>
+    <td class="mono">${esc(r.level_id || 'alle')}</td>
+    <td>${esc(r.title)}</td>
+    <td>${r.length} Zeichen</td>
+    <td><span class="pill ${r.published ? 'ok' : ''}">${r.published ? 'online' : 'Entwurf'}</span></td>
+    <td style="white-space:nowrap">
+      <button class="btn sm grey" data-redit="${esc(r.id)}">bearbeiten</button>
+      <button class="btn sm danger" data-rdel="${esc(r.id)}" data-n="${esc(r.title)}">löschen</button>
+    </td></tr>`;
+
+  app.innerHTML = `
+    <h1>Inhalte</h1>
+    <p class="sub">Stufen, Modelltests und Lesematerial.</p>
+
+    <h2>Stufen</h2>
+    <div class="card">
+      <div class="row">
+        <label>Kennung<input id="l_id" placeholder="a2" maxlength="16"></label>
+        <label style="flex:2">Titel<input id="l_title" placeholder="telc Deutsch A2"></label>
+        <label>Reihenfolge<input id="l_sort" type="number" value="0"></label>
+        <button class="btn" id="l_go">Anlegen / ändern</button>
+      </div>
+      <div class="wrap" style="margin-top:12px"><table>
+        <tr><th>Kennung</th><th>Titel</th><th>Tests</th><th>Status</th><th></th></tr>
+        ${c.levels.map(lvlRow).join('')}
+      </table></div>
+    </div>
+
+    <h2>Modelltests</h2>
+    <div class="card"><div class="wrap"><table>
+      <tr><th>Stufe</th><th>Test</th><th>Teile / Aufg.</th><th>Lösungen</th><th>Status</th><th></th></tr>
+      ${c.tests.map(testRow).join('') || '<tr><td colspan="6" class="empty">Noch keine Tests</td></tr>'}
+    </table></div></div>
+
+    <h2>Lesematerial</h2>
+    <p class="sub">Texte, die im Kurs jederzeit lesbar sind — kein Test, keine Zeit.</p>
+    <div class="card">
+      <div class="row">
+        <label>Stufe<select id="r_lvl">
+          <option value="">alle Stufen</option>
+          ${c.levels.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}
+        </select></label>
+        <label style="flex:2">Titel<input id="r_title" placeholder="z. B. Wortschatz Reisen"></label>
+        <label>Reihenfolge<input id="r_sort" type="number" value="0"></label>
+      </div>
+      <textarea id="r_body" class="paste" style="margin-top:10px;min-height:180px"
+        placeholder="Text hier einfügen. Leerzeile trennt Absätze, ## macht eine Überschrift."></textarea>
+      <input type="hidden" id="r_id">
+      <div class="row" style="margin-top:10px">
+        <button class="btn" id="r_save">Speichern &amp; veröffentlichen</button>
+        <button class="btn grey" id="r_draft">Als Entwurf speichern</button>
+        <button class="btn grey" id="r_new" hidden>Neu</button>
+      </div>
+      <div class="wrap" style="margin-top:12px"><table>
+        <tr><th>Stufe</th><th>Titel</th><th>Länge</th><th>Status</th><th></th></tr>
+        ${c.resources.map(resRow).join('') || '<tr><td colspan="5" class="empty">Noch nichts</td></tr>'}
+      </table></div>
+    </div>`;
+
+  const $ = id => document.getElementById(id);
+
+  $('l_go').onclick = async e => {
+    const id = $('l_id').value.trim().toLowerCase();
+    if (!/^[a-z][a-z0-9_]{0,15}$/.test(id))
+      return toast('Kennung: Kleinbuchstaben, z. B. a2');
+    await act(e.target, () => rpc('admin_upsert_level', {
+      p_id: id, p_title: $('l_title').value.trim() || id.toUpperCase(),
+      p_sort: Number($('l_sort').value) || 0, p_published: false }), 'Stufe gespeichert');
+    screenContent();
+  };
+  app.querySelectorAll('[data-lvl]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_upsert_level', {
+      p_id: b.dataset.lvl, p_title: b.dataset.title,
+      p_sort: Number(b.dataset.sort), p_published: b.dataset.pub === '1' }), 'Gespeichert');
+    screenContent();
+  });
+  app.querySelectorAll('[data-tpub]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_set_test_published',
+      { p_test_id: b.dataset.tpub, p_published: b.dataset.v === '1' }), 'Gespeichert');
+    screenContent();
+  });
+  app.querySelectorAll('[data-tdel]').forEach(b => b.onclick = async () => {
+    if (!confirm(`„${b.dataset.n}“ mit allen Aufgaben und Lösungen löschen?`)) return;
+    await act(b, () => rpc('admin_delete_test', { p_test_id: b.dataset.tdel }), 'Gelöscht');
+    screenContent();
+  });
+
+  const saveRes = pub => async e => {
+    const id = $('r_id').value || null;
+    if (!$('r_title').value.trim()) return toast('Titel fehlt');
+    await act(e.target, () => rpc('admin_save_resource', {
+      p_id: id, p_level_id: $('r_lvl').value || null,
+      p_title: $('r_title').value.trim(), p_body: $('r_body').value,
+      p_published: pub, p_sort: Number($('r_sort').value) || 0 }), 'Gespeichert');
+    screenContent();
+  };
+  $('r_save').onclick  = saveRes(true);
+  $('r_draft').onclick = saveRes(false);
+  app.querySelectorAll('[data-rdel]').forEach(b => b.onclick = async () => {
+    if (!confirm(`„${b.dataset.n}“ löschen?`)) return;
+    await act(b, () => rpc('admin_delete_resource', { p_id: b.dataset.rdel }), 'Gelöscht');
+    screenContent();
+  });
+  app.querySelectorAll('[data-redit]').forEach(b => b.onclick = async () => {
+    const rows = await api(`resources?select=id,level_id,title,body,sort&id=eq.${b.dataset.redit}`);
+    const r = rows[0]; if (!r) return;
+    $('r_id').value = r.id; $('r_title').value = r.title || '';
+    $('r_body').value = r.body || ''; $('r_lvl').value = r.level_id || '';
+    $('r_sort').value = r.sort || 0;
+    $('r_new').hidden = false;
+    $('r_new').onclick = () => screenContent();
+    $('r_title').scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+}
+
+/* ============ الاستيراد ============ */
+const SAMPLE = `# PETRA
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv
+Titel: Leseverstehen
+Minuten: 45
+Teile: lv1
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Texte und die Überschriften.
+Auswahl:
+A = Bildband: Babys im Garten
+B = Ratgeber für junge Eltern
+Aufgaben:
+[1] Ich möchte, dass Menschen die Welt mit anderen Augen sehen.
+Lösung: A
+[2] Ein Buch für alle, die gerade Eltern geworden sind.
+Lösung: B`;
+
+let importState = { id: null, doc: null, raw: '' };
+
+async function screenImport(){
+  app.innerHTML = '<div class="empty">Lädt …</div>';
+  const c = contentCache = await rpc('admin_content');
+
+  app.innerHTML = `
+    <h1>Import</h1>
+    <p class="sub">Prüfungstext einfügen, prüfen, dann veröffentlichen.
+      Nichts geht online, bevor Sie die Vorschau gesehen haben.</p>
+
+    <div class="card">
+      <div class="row">
+        <label>Stufe<select id="i_lvl">
+          ${c.levels.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')
+            || '<option value="">— zuerst eine Stufe anlegen —</option>'}
+        </select></label>
+        <label style="flex:2">Kennung des Tests
+          <input id="i_slug" placeholder="modell-a2-01"></label>
+        <button class="btn grey" id="i_sample">Beispiel einfügen</button>
+      </div>
+
+      <textarea id="i_text" class="paste" style="margin-top:10px"
+        placeholder="Hier den Prüfungstext einfügen …"></textarea>
+
+      <div class="row" style="margin-top:10px">
+        <button class="btn" id="i_parse">Prüfen</button>
+        <button class="btn grey" id="i_clear">Leeren</button>
+      </div>
+
+      <div id="i_result"></div>
+
+      <details class="help">
+        <summary>Format — kurz erklärt</summary>
+        <pre>${esc(SAMPLE)}</pre>
+        <p class="sub" style="margin:8px 0 0">
+          <code>#</code> Testname · <code>## Block:</code> Prüfungsteil mit Zeit ·
+          <code>### Teil:</code> Abschnitt · <code>[1]</code> Aufgabe ·
+          <code>A)</code> Antwortmöglichkeit · <code>Lösung:</code> richtige Antwort.<br>
+          Bei <b>truefalse</b>: <code>Lösung: richtig</code> oder <code>falsch</code>.
+          Bei Lesetexten: <code>Text:</code> und dann die Absätze, <code>**fett**</code> für Überschriften.
+          Alles, was das Format nicht kennt, kann als <code>Extra:</code> mit JSON angehängt werden.
+        </p>
+      </details>
+    </div>
+
+    <h2>Frühere Importe</h2>
+    <div class="card"><div class="wrap"><table>
+      <tr><th>Titel</th><th>Stufe</th><th>Status</th><th>Größe</th><th>Datum</th><th></th></tr>
+      ${c.imports.map(i => `<tr>
+        <td>${esc(i.title || '—')}</td><td class="mono">${esc(i.level_id || '')}</td>
+        <td><span class="pill ${i.status === 'applied' ? 'ok' : ''}">${esc(i.status)}</span></td>
+        <td>${i.raw_length} Zeichen</td><td>${fmtDate(i.created_at)}</td>
+        <td style="white-space:nowrap">
+          <button class="btn sm grey" data-iload="${esc(i.id)}">laden</button>
+          <button class="btn sm danger" data-idel="${esc(i.id)}">löschen</button>
+        </td></tr>`).join('') || '<tr><td colspan="6" class="empty">Noch keine Importe</td></tr>'}
+    </table></div></div>`;
+
+  const $ = id => document.getElementById(id);
+  $('i_sample').onclick = () => { $('i_text').value = SAMPLE; $('i_parse').click(); };
+  $('i_clear').onclick  = () => { $('i_text').value = ''; $('i_result').innerHTML = '';
+                                  importState = { id:null, doc:null, raw:'' }; };
+  $('i_parse').onclick  = () => runParse($('i_text').value);
+
+  app.querySelectorAll('[data-iload]').forEach(b => b.onclick = async () => {
+    const rows = await api(`imports?select=id,level_id,raw_text&id=eq.${b.dataset.iload}`);
+    const r = rows[0]; if (!r) return;
+    importState.id = r.id;
+    $('i_lvl').value = r.level_id || '';
+    $('i_text').value = r.raw_text || '';
+    runParse(r.raw_text || '');
+    $('i_text').scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+  app.querySelectorAll('[data-idel]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_delete_import', { p_id: b.dataset.idel }), 'Gelöscht');
+    screenImport();
+  });
+}
+
+/* التحليل + المعاينة. الاعتماد ما بينفتح إلا لما التحليل ينجح. */
+function runParse(raw){
+  const box = document.getElementById('i_result');
+  if (!raw.trim()){ box.innerHTML = ''; return; }
+
+  const { test, warnings, counts } = Markup.parse(raw);
+  importState.raw = raw;
+  importState.doc = test;
+
+  // ما إله حل = مشكلة تمنع النشر (إلا التعبير الكتابي)
+  const fatal = warnings.filter(w => /keine Aufgaben|unbekannten Teil|doppelt|Kein Titel|Keine Teile/.test(w));
+  const ok = fatal.length === 0 && counts.items > 0;
+
+  const preview = test.sections.map(s => `
+    <h4>${esc(s.id)} · ${esc(s.format)} · ${s.items.length} Aufgaben
+      ${s.pointsPerItem != null ? `· ${s.pointsPerItem} P./Aufgabe` : ''}</h4>
+    ${s.items.slice(0, 4).map(it => `<div class="it">
+       <b>${esc(it.id)}</b> ${esc(String(it.text || '').slice(0, 90))}
+       ${it.answer != null ? `<span class="ans">→ ${esc(it.answer)}</span>`
+         : (s.format === 'writing' ? '' : '<span class="no">→ keine Lösung</span>')}
+     </div>`).join('')}
+    ${s.items.length > 4 ? `<div class="it" style="color:var(--muted)">
+       … ${s.items.length - 4} weitere</div>` : ''}`).join('');
+
+  box.innerHTML = `
+    <div class="stats" style="margin-top:14px">
+      <div class="stat"><b>${counts.blocks}</b><span>Prüfungsteile</span></div>
+      <div class="stat"><b>${counts.sections}</b><span>Abschnitte</span></div>
+      <div class="stat"><b>${counts.items}</b><span>Aufgaben</span></div>
+      <div class="stat ${counts.answers < counts.items - counts.sections ? 'warn' : ''}">
+        <b>${counts.answers}</b><span>Lösungen</span></div>
+    </div>
+    ${warnings.length ? `<ul class="warns ${fatal.length ? 'bad' : ''}">
+      ${warnings.slice(0, 12).map(w => `<li>${esc(w)}</li>`).join('')}
+      ${warnings.length > 12 ? `<li>… ${warnings.length - 12} weitere</li>` : ''}
+    </ul>` : ''}
+    <div class="preview">${preview || '<div class="empty">Nichts erkannt</div>'}</div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn grey" id="i_save">Als Entwurf sichern</button>
+      <button class="btn" id="i_apply" ${ok ? '' : 'disabled'}>
+        ${ok ? 'Veröffentlichen' : 'Erst Fehler beheben'}</button>
+    </div>`;
+
+  document.getElementById('i_save').onclick = e => saveImport(e.target, 'parsed');
+  const ap = document.getElementById('i_apply');
+  if (ok) ap.onclick = async e => {
+    const slug = document.getElementById('i_slug').value.trim().toLowerCase();
+    if (!/^[a-z0-9][a-z0-9_-]{0,63}$/.test(slug))
+      return toast('Kennung fehlt oder ist ungültig (z. B. modell-a2-01)');
+    await saveImport(e.target, 'parsed');
+    const r = await act(e.target, () => rpc('admin_apply_import', {
+      p_import_id: importState.id,
+      p_level_id: document.getElementById('i_lvl').value,
+      p_slug: slug, p_publish: true }));
+    if (r && r.ok){
+      toast(`${r.sections} Abschnitte, ${r.items} Aufgaben, ${r.answers} Lösungen`, 5000);
+      importState = { id:null, doc:null, raw:'' };
+      screenImport();
+    }
+  };
+}
+
+async function saveImport(btn, status){
+  const r = await act(btn, () => rpc('admin_save_import', {
+    p_id: importState.id,
+    p_level_id: document.getElementById('i_lvl').value || null,
+    p_raw: importState.raw, p_parsed: importState.doc, p_status: status }),
+    status === 'parsed' ? 'Entwurf gesichert' : null);
+  if (r && r.id) importState.id = r.id;
+  return r;
+}
+
 /* ============ التشغيل ============ */
-const TABS = { home: screenHome, users: screenUsers, codes: screenCodes, audit: screenAudit };
+const TABS = { home: screenHome, users: screenUsers, codes: screenCodes,
+               content: screenContent, import: screenImport, audit: screenAudit };
 
 async function show(name){
   tab = name;

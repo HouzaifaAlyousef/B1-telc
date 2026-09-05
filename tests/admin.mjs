@@ -48,10 +48,15 @@ const server = http.createServer(async (req, res) => {
     const fn = u.pathname.split('/').pop();
     let b = ''; for await (const c of req) b += c;
     const args = JSON.parse(b || '{}');
-    const lit = v => v === null || v === undefined ? 'null'
-      : Array.isArray(v) ? `array[${v.map(x => `'${String(x).replace(/'/g,"''")}'`)}]::text[]`
-      : typeof v === 'number' ? String(v)
-      : `'${String(v).replace(/'/g, "''")}'`;
+    // PostgREST بيحوّل JSON للأنواع المناسبة — منقلّده هون
+    const q = x => `'${String(x).replace(/'/g, "''")}'`;
+    const lit = v =>
+        v === null || v === undefined ? 'null'
+      : Array.isArray(v) ? `array[${v.map(x => q(x))}]::text[]`
+      : typeof v === 'object' ? `${q(JSON.stringify(v))}::jsonb`
+      : typeof v === 'number'  ? String(v)
+      : typeof v === 'boolean' ? String(v)
+      : q(v);
     const named = Object.entries(args).map(([k, v]) => `${k} => ${lit(v)}`).join(', ');
     try {
       // admin_create_codes بترجّع setof، الباقي قيمة وحدة
@@ -89,6 +94,13 @@ const server = http.createServer(async (req, res) => {
 });
 await new Promise(r => server.listen(0, r));
 const PORT = server.address().port;
+
+/* حالة نظيفة: الاختبار لازم يعطي نفس النتيجة كل مرة، فمنشيل يلي
+   خلّفته تشغيلات سابقة قبل ما نبلّش. */
+sql(`delete from resources;
+     delete from imports;
+     delete from tests where level_id <> 'b1';
+     delete from levels where id <> 'b1';`);
 
 const results = [];
 const check = (l, c) => { results.push([l, !!c]); console.log(`  ${c ? '✓' : '✗'} ${l}`); };
@@ -158,6 +170,65 @@ try {
   await page.waitForSelector('table');
   check('صفحة التدقيق بتعرض الإجراءات',
         (await page.textContent('table')).includes('code.create'));
+
+  // ---- المحتوى: إنشاء مستوى ----
+  await page.evaluate(() => document.querySelector('[data-tab="content"]').click());
+  await page.waitForSelector('#l_go');
+  await page.fill('#l_id', 'a1'); await page.fill('#l_title', 'telc Deutsch A1');
+  await page.evaluate(() => document.getElementById('l_go').click());
+  // ننتظر إعادة الرسم فعلياً بدل مهلة عمياء — إعادة الرسم بتمسح الحقول
+  await page.waitForFunction(() =>
+    document.querySelector('table') && document.body.textContent.includes('telc Deutsch A1'));
+  await page.waitForTimeout(300);
+  check('إنشاء مستوى A1 وصل لقاعدة البيانات',
+        sql(`select title from levels where id='a1';`) === 'telc Deutsch A1');
+
+  // ---- المراجع ----
+  await page.fill('#r_title', 'Wortschatz A1');
+  await page.fill('#r_body', '## Verben\n\nsein, haben');
+  await page.evaluate(() => document.getElementById('r_save').click());
+  await page.waitForFunction(() => document.body.textContent.includes('Wortschatz A1'));
+  await page.waitForTimeout(300);
+  check('حفظ مرجع منشور',
+        sql(`select count(*) from resources where title='Wortschatz A1' and published;`) === '1');
+
+  // ---- الاستيراد: المثال ----
+  await page.evaluate(() => document.querySelector('[data-tab="import"]').click());
+  await page.waitForSelector('#i_sample');
+  await page.evaluate(() => document.getElementById('i_sample').click());
+  await page.waitForSelector('.preview');
+  const nums = await page.locator('.stat b').allTextContents();
+  check(`المعاينة عدّت صح (${nums.join('/')})`, nums[2] === '2' && nums[3] === '2');
+  check('زرّ النشر مفتوح لأن ما في أخطاء',
+        !(await page.locator('#i_apply').isDisabled()));
+
+  // ---- الاستيراد: نص فيه خطأ ----
+  await page.fill('#i_text', '# KAPUTT\n\n## Block: b1\nTeile: nichtda\n');
+  await page.evaluate(() => document.getElementById('i_parse').click());
+  await page.waitForSelector('.warns');
+  check('النص الناقص بيعطي تحذير وبيقفل النشر',
+        (await page.textContent('.warns')).includes('nichtda')
+        && await page.locator('#i_apply').isDisabled());
+
+  // ---- الاستيراد: نشر فعلي ----
+  await page.evaluate(() => document.getElementById('i_sample').click());
+  await page.waitForSelector('.preview');
+  await page.selectOption('#i_lvl', 'a1');
+  await page.fill('#i_slug', 'probe-a1-01');
+  await page.evaluate(() => document.getElementById('i_apply').click());
+  await page.waitForTimeout(1500);
+  const made = sql(`select count(*) from items i
+    join sections s on s.id=i.section_id join tests t on t.id=s.test_id
+    where t.slug='probe-a1-01';`);
+  const ans = sql(`select count(*) from item_answers ia join items i on i.id=ia.item_id
+    join sections s on s.id=i.section_id join tests t on t.id=s.test_id
+    where t.slug='probe-a1-01';`);
+  check(`النشر أنشأ الامتحان بقاعدة البيانات (${made} سؤال، ${ans} حل)`,
+        made === '2' && ans === '2');
+  check('الحلول راحت للجدول المقفول مو للأسئلة',
+        sql(`select count(*) from items i join sections s on s.id=i.section_id
+             join tests t on t.id=s.test_id where t.slug='probe-a1-01'
+             and i.options::text like '%answer%';`) === '0');
 
   // ---- الحارس: مستخدم عادي ما بيدخل ----
   await page.evaluate(() => localStorage.clear());

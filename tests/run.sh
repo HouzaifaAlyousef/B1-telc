@@ -27,8 +27,14 @@ select json_build_object(
 ln -sfn "$(npm root -g)" node_modules
 trap 'rm -f node_modules' EXIT
 
+echo "▸ صيغة الاستيراد (round-trip على الامتحانات الحقيقية)"
+node tests/markup.mjs
+
 echo "▸ تطبيق الطلاب"
 node tests/browser.mjs
+
+echo "▸ الاستيراد من الطرف للطرف"
+node tests/import.mjs
 
 echo "▸ لوحة التحكّم"
 # اللوحة بدها بيانات اختبار اللوحة بقاعدة البيانات

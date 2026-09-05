@@ -74,11 +74,18 @@ await page.addInitScript(fx => {
     hasSession: () => true,
     ensureSession: async () => ({}),
     subscription: async () => state.redeemed
-      ? { levels: ['b1'], current_period_end: '2099-01-01T00:00:00Z' } : null,
+      ? { levels: ['b1','a2'], current_period_end: '2099-01-01T00:00:00Z' } : null,
+    myLevels: async sub => [{ id:'b1', title:'telc Deutsch B1' },
+                            { id:'a2', title:'telc Deutsch A2' }]
+      .filter(l => sub.levels.includes(l.id)),
+    resources: async lvl => lvl === 'b1'
+      ? [{ id:'r1', title:'Wortschatz Reisen', kind:'text',
+           body:'## Verben\n\nfahren, fliegen, ankommen\n\n## Nomen\n\nder Zug, das Gleis' }]
+      : [],
     redeem: async code => code === 'B1-TEST-0001'
       ? (state.redeemed = true, { ok: true, levels: ['b1'] })
       : { ok: false, error: 'invalid_code' },
-    index: async () => ({ modelle: [{ id: fx.test.slug, uuid: fx.test.id,
+    index: async (lvl) => lvl !== 'b1' ? { modelle: [] } : ({ modelle: [{ id: fx.test.slug, uuid: fx.test.id,
       title: fx.test.title, subtitle: fx.test.subtitle,
       blocks: fx.test.blocks, aufgaben: 61,
       minutes: fx.test.blocks.reduce((a,b) => a + b.minutes, 0) }] }),
@@ -192,6 +199,28 @@ check('الحل الصحيح بيبيّن بعد التسليم',
 await page.evaluate(() => screenHome());
 await page.waitForTimeout(600);
 check('زرّ «تكرار الأخطاء» ظهر', await page.locator('#drill').count() === 1);
+
+// ---- ٩) مبدّل المستويات ----
+check('مبدّل المستويات ظهر (اشتراك بمستويين)', await page.locator('.levels .lvl').count() === 2);
+check('المستوى الحالي معلّم', await page.locator('.levels .lvl.on').textContent() === 'telc Deutsch B1');
+await page.evaluate(() => document.querySelector('[data-lvl="a2"]').click());
+await page.waitForTimeout(600);
+check('التبديل لـA2 بيغيّر القائمة', await page.locator('.tile[data-id]').count() === 0);
+check('A2 صار المعلّم', (await page.locator('.levels .lvl.on').textContent()) === 'telc Deutsch A2');
+check('الاختيار انحفظ', await page.evaluate(() => localStorage.getItem('b1.level')) === '"a2"');
+await page.evaluate(() => document.querySelector('[data-lvl="b1"]').click());
+await page.waitForTimeout(600);
+check('الرجوع لـB1 بيرجّع الامتحانات', await page.locator('.tile[data-id]').count() === 1);
+
+// ---- ١٠) المراجع ----
+await page.evaluate(() => document.getElementById('resbtn').click());
+await page.waitForTimeout(500);
+check('قائمة المراجع بتفتح', (await page.textContent('body')).includes('Wortschatz Reisen'));
+await page.evaluate(() => document.querySelector('[data-res]').click());
+await page.waitForTimeout(300);
+const rb = await page.textContent('.readable');
+check('المرجع بينعرض مع عناوينه', rb.includes('Verben') && rb.includes('fahren, fliegen'));
+check('العناوين انعملت h2', await page.locator('.readable h2').count() === 2);
 
 await browser.close();
 server.close();

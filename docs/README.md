@@ -20,6 +20,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 09 | [Code review](09-code-review.md) | Concrete defects and improvements, ranked |
 | 10 | [Commercialisation](10-commercialisation.md) | Path to a paid product, admin panel, competitor gap analysis |
 | 11 | [Going online](11-online-architecture.md) | Accounts, access codes, server-side grading, multiple levels, admin panel |
+| 12 | [Paste format](12-import-format.md) | How pasted exam text becomes an exam |
 
 ## Quick start
 

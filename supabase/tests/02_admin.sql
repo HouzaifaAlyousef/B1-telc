@@ -2,7 +2,10 @@
 \set ON_ERROR_STOP on
 \pset pager off
 
+-- ترتيب الحذف بيتبع المراجع: المحتوى أول، بعدين الحسابات
 delete from admin_audit_log; delete from mistakes; delete from attempts;
+delete from imports; delete from resources;
+delete from tests where level_id <> 'b1'; delete from levels where id <> 'b1';
 delete from devices; delete from subscriptions; delete from access_codes;
 delete from profiles; delete from auth.users;
 

@@ -17,7 +17,9 @@ const S = {
   left: 0,          // verbleibende Sekunden
   view: 'home',
   level: 'b1',      // aktuelle Prüfungsstufe
-  sub: null         // laufendes Abonnement { levels, current_period_end }
+  levels: [],       // Stufen, die das Abo abdeckt
+  sub: null,        // laufendes Abonnement { levels, current_period_end }
+  resources: null   // Lesematerial, beim ersten Öffnen geladen
 };
 
 /* ============ Helfer ============ */
@@ -92,6 +94,8 @@ elBack.onclick = () => {
   } else if (S.view === 'result' || S.view === 'intro'){
     stopTimer();
     if (S.run && S.run.drill) screenHome(); else screenModell(S.modell);
+  } else if (S.view === 'resource'){
+    screenResources();
   } else {
     screenHome();
   }
@@ -115,7 +119,11 @@ async function boot(){
 
   if (!S.sub) return screenCode();
 
-  S.level = S.sub.levels && S.sub.levels[0] || 'b1';
+  try { S.levels = await API.myLevels(S.sub); } catch { S.levels = []; }
+  // die zuletzt gewählte Stufe merken, sonst die erste des Abos
+  const saved = load('b1.level', null);
+  S.level = (saved && S.sub.levels.includes(saved)) ? saved
+          : (S.sub.levels && S.sub.levels[0]) || 'b1';
   try {
     S.index = await API.index(S.level);
   } catch {
@@ -193,10 +201,24 @@ function screenHome(){
       </button>`).join('');
 
     const nMist = mistCount;
+    const lvl = S.levels.find(l => l.id === S.level);
+    // Der Umschalter erscheint nur, wenn das Abo mehr als eine Stufe abdeckt.
+    const picker = S.levels.length > 1 ? `<div class="levels">
+      ${S.levels.map(l => `<button class="lvl${l.id === S.level ? ' on' : ''}"
+        data-lvl="${esc(l.id)}">${esc(l.title)}</button>`).join('')}
+    </div>` : '';
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
-      <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die drei Prüfungsteile
-        der schriftlichen telc&nbsp;B1&nbsp;Prüfung — mit der echten Prüfungszeit.</p>
+      ${picker}
+      <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile
+        der schriftlichen Prüfung${lvl ? ` ${esc(lvl.title)}` : ''} — mit der echten
+        Prüfungszeit.</p>
+      <button class="tile" id="resbtn">
+        <span class="n">📖</span>
+        <span class="grow"><span style="font-weight:600">Lesematerial</span>
+          <div class="meta">Wortschatz und Hinweise · jederzeit</div></span>
+        <span class="chev">›</span>
+      </button>
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
         <span class="grow"><span style="font-weight:600">Fehler wiederholen</span>
@@ -207,11 +229,69 @@ function screenHome(){
 
     app.querySelectorAll('.tile[data-id]').forEach(b =>
       b.onclick = () => openModell(b.dataset.id));
+    app.querySelectorAll('[data-lvl]').forEach(b =>
+      b.onclick = () => switchLevel(b.dataset.lvl));
+    document.getElementById('resbtn').onclick = screenResources;
     const dr = document.getElementById('drill');
     if (dr) dr.onclick = async () => {
       const run = await drillRun();
       if (run) screenIntro(run); else toast('Keine Fehler gespeichert.');
     };
+  });
+}
+
+/* Stufe wechseln: Inhalte, Cache und Merkposten hängen alle daran. */
+async function switchLevel(id){
+  if (id === S.level) return;
+  S.level = id;
+  save('b1.level', id);
+  Object.keys(modellCache).forEach(k => delete modellCache[k]);
+  app.innerHTML = '<div class="empty">Einen Moment …</div>';
+  try { S.index = await API.index(id); }
+  catch { return void toast('Die Stufe konnte nicht geladen werden.'); }
+  screenHome();
+}
+
+/* ============ Lesematerial ============ */
+/* Kein Test, keine Zeit: Texte, die die Kursleitung eingestellt hat. */
+async function screenResources(){
+  stopTimer();
+  go('resources', () => { app.innerHTML = '<div class="empty">Lädt …</div>'; });
+  let rows;
+  try { rows = await API.resources(S.level); }
+  catch { rows = null; }
+  go('resources', () => {
+    if (!rows || !rows.length){
+      app.innerHTML = `<h1>Lesematerial</h1>
+        <div class="empty">Für diese Stufe ist noch nichts hinterlegt.</div>`;
+      return;
+    }
+    app.innerHTML = `<h1>Lesematerial</h1>
+      <p class="sub">${rows.length} Text${rows.length === 1 ? '' : 'e'}. Zum Öffnen tippen.</p>
+      ${rows.map((r, i) => `<div class="blockcard">
+        <button class="tile" data-res="${i}">
+          <span class="grow"><span style="font-weight:600">${esc(r.title)}</span></span>
+          <span class="chev">›</span>
+        </button></div>`).join('')}`;
+    app.querySelectorAll('[data-res]').forEach(b =>
+      b.onclick = () => showResource(rows[Number(b.dataset.res)]));
+  });
+}
+
+/* Sehr einfache Textdarstellung: ## Überschrift, Leerzeile trennt Absätze.
+   Absichtlich kein Markdown-Parser — der Text kommt aus dem Adminbereich
+   und soll als Text erscheinen, nicht als HTML. */
+function showResource(r){
+  go('resource', () => {
+    const html = String(r.body || '').split(/\n{2,}/).map(p => {
+      const t = p.trim();
+      if (!t) return '';
+      if (/^##\s+/.test(t)) return `<h2>${esc(t.replace(/^##\s+/, ''))}</h2>`;
+      if (/^#\s+/.test(t))  return `<h2>${esc(t.replace(/^#\s+/, ''))}</h2>`;
+      return `<p>${esc(t).replace(/\n/g, '<br>')}</p>`;
+    }).join('');
+    app.innerHTML = `<h1>${esc(r.title)}</h1>
+      <div class="card readable">${html || '<p class="sub">Leer.</p>'}</div>`;
   });
 }
 

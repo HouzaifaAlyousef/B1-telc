@@ -129,11 +129,12 @@ raw_text  →  parsed (jsonb)  →  you review and correct  →  applied
  draft          parsed              needs_review            applied
 ```
 
-Parsing raw exam text into the section/item shape is the one step that cannot
-be done with a regex across arbitrary sources. An LLM converting text to the
-known JSON schema is the realistic mechanism, with the review step as the
-safety net — never publishing a parse a human has not looked at. Keeping
-`raw_text` means a bad parse is re-runnable without re-pasting.
+Parsing happens in the browser, deterministically, against a documented paste
+format — no API key, no cost, and no invented questions. Unstructured source
+text is converted to that format outside the app, which is where an LLM belongs;
+what reaches the database is only what you saw in the preview. Keeping
+`raw_text` means a bad parse is re-runnable without re-pasting. The format is
+proven against all 16 existing tests by a round-trip test.
 
 `resources` is the simpler sibling: text you paste, published per level, read
 inside the app at any time.
@@ -256,5 +257,10 @@ in `assets/api.js`, anonymous sign-in, and Storage signing. Those are the parts
 that depend on the hosted service rather than on Postgres, and they are the
 first thing to exercise once a project exists.
 
-Still open: the admin panel (step 6), further levels (step 7) and the import
-pipeline (step 8).
+Steps 6, 7 and 8 are done too: the admin panel is in `admin/`, the student app
+switches between the levels a subscription covers and remembers the choice, and
+pasted text becomes an exam through `admin/parse.js` and `admin_apply_import()`
+— see [12-import-format.md](12-import-format.md).
+
+Still open: audio for Hörverstehen, AI correction of the writing task, spaced
+repetition over `mistakes`, and Stripe.

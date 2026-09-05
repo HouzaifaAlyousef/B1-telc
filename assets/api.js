@@ -134,6 +134,18 @@ const API = (() => {
     return rest('levels?select=id,title,sort&order=sort&published=is.true');
   }
 
+  /* المستويات يلي اشتراكه بيغطّيها فعلاً، مرتّبة ومسمّاة */
+  async function myLevels(sub){
+    if (!sub || !sub.levels || !sub.levels.length) return [];
+    const all = await levels();
+    const mine = all.filter(l => sub.levels.includes(l.id));
+    // مستوى بالاشتراك بس مو منشور بعد: منعرضه باسمه الخام
+    sub.levels.forEach(id => {
+      if (!mine.some(l => l.id === id)) mine.push({ id, title: id.toUpperCase() });
+    });
+    return mine;
+  }
+
   async function index(levelId){
     const rows = await rest(
       `tests?select=id,slug,title,subtitle,blocks,aufgaben,level_id,is_free` +
@@ -236,7 +248,7 @@ const API = (() => {
   }
 
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
-           redeem, subscription, levels, index, test, resources, imageUrl,
+           redeem, subscription, levels, myLevels, index, test, resources, imageUrl,
            submitAttempt, submitDrill, mistakes, attempts,
            signOut: () => storeSession(null),
            hasSession: () => !!session };

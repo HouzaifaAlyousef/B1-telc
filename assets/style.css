@@ -306,3 +306,16 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 
 /* Kachel "Fehler wiederholen" */
 .tile.drill .n{background:var(--warn-soft); color:var(--warn); font-size:19px}
+
+/* ---- Stufenumschalter ---- */
+.levels{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.levels .lvl{background:var(--card,#fff);border:1px solid var(--line,#e2e7f0);
+  color:var(--muted,#68758a);border-radius:99px;padding:7px 14px;
+  font:inherit;font-weight:600;font-size:14px;cursor:pointer}
+.levels .lvl.on{background:var(--blue,#2f6bed);border-color:var(--blue,#2f6bed);color:#fff}
+
+/* ---- Lesematerial ---- */
+.readable{line-height:1.7}
+.readable h2{font-size:17px;margin:18px 0 6px}
+.readable h2:first-child{margin-top:0}
+.readable p{margin:0 0 12px}
