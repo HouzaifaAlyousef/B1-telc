@@ -406,11 +406,8 @@ async function screenCodes(){
     <div class="card">
       <div class="row">
         <label>Anzahl<input id="c_n" type="number" value="5" min="1" max="200"></label>
-        <label>Prüfung<select id="c_lvl">
-          ${levelOptions(levels, codeLevel,
-              l => `data-live="${l.live}" data-pub="${l.published ? 1 : 0}"`)
-            || '<option value="">— zuerst eine Prüfung anlegen —</option>'}
-        </select></label>
+        ${pickerHTML('c_lvl', levels, codeLevel, {
+          extra: l => `data-live="${l.live}" data-pub="${l.published ? 1 : 0}"` })}
         <label>Art<select id="c_kind">
           <option value="full" selected>Vollzugang</option>
           <option value="demo">Demo</option>
@@ -527,7 +524,10 @@ async function screenCodes(){
   };
 
   wireNewLevel(sel, id => { if (id) codeLevel = id; screenCodes(); });
-  sel.onchange     = () => { fillTests(); showHint(); };
+  // تبديل المؤسسة بيغيّر قائمة الدرجات، وتبديل الدرجة بيغيّر قائمة
+  // الامتحانات وسطر «شو بيفتح»
+  wirePicker('c_lvl', levels, id => { codeLevel = id; fillTests(); showHint(); },
+             { extra: l => `data-live="${l.live}" data-pub="${l.published ? 1 : 0}"` });
   kind.onchange    = showHint;
   tsel.onchange    = showHint;
   $c('c_days').onchange  = showHint;
@@ -682,10 +682,7 @@ async function screenContent(){
     <h2>Modelltests</h2>
     <div class="card">
       <div class="row">
-        <label>Prüfung<select id="t_lvl">
-          <option value="">alle Prüfungen</option>
-          ${levelOptions(c.levels, contentLevel)}
-        </select></label>
+        ${pickerHTML('t_lvl', c.levels, contentLevel, { all: true })}
         <p class="sub" style="flex:2;align-self:flex-end;margin:0">
           <b>bearbeiten</b> öffnet den Test im Import-Editor — dieselbe
           Vorlagensprache wie beim Anlegen. Speichern ersetzt ihn.</p>
@@ -703,10 +700,7 @@ async function screenContent(){
       Punkte, ohne Lösung. Wer die Stufe abonniert hat, sieht sie.</p>
     <div class="card">
       <div class="row">
-        <label>Prüfung<select id="r_lvl">
-          <option value="">alle Prüfungen</option>
-          ${levelOptions(c.levels, '')}
-        </select></label>
+        ${pickerHTML('r_lvl', c.levels, '', { all: true })}
         <label style="flex:2">Titel<input id="r_title" placeholder="z. B. Wortschatz Reisen"></label>
         <label>Reihenfolge<input id="r_sort" type="number" value="0"></label>
       </div>
@@ -726,7 +720,8 @@ async function screenContent(){
 
   const $ = id => document.getElementById(id);
 
-  $('t_lvl').onchange = e => { contentLevel = e.target.value; screenContent(); };
+  wirePicker('t_lvl', c.levels, id => { contentLevel = id; screenContent(); },
+             { all: true });
 
   /* التعديل: القراءة رجوعاً من القاعدة، تحويل لنص القالب، وفتح المحرّر.
      نفس اللغة يلي بتنكتب فيها الامتحانات الجديدة — ما في صيغة تانية
@@ -816,20 +811,63 @@ const ANBIETER  = ['telc', 'Goethe', 'ÖSD', 'TestDaF', 'DTZ'];
 const lvlName = l => l.provider && l.stufe
   ? `${l.provider} · ${l.stufe}` : (l.title || l.id);
 
-/* قائمة مجمّعة بالمؤسسة: بعشر مستويات بتصير القائمة المسطّحة غير
-   مقروءة، والمجموعات بتخلّي «كل telc» واضحة بنظرة. */
-function levelOptions(levels, selected, extra = ''){
-  const groups = new Map();
-  for (const l of levels){
-    const g = l.provider || 'ohne Anbieter';
-    if (!groups.has(g)) groups.set(g, []);
-    groups.get(g).push(l);
-  }
-  return [...groups].map(([g, list]) => `<optgroup label="${esc(g)}">
-    ${list.map(l => `<option value="${esc(l.id)}"${
-      l.id === selected ? ' selected' : ''}${extra ? ' ' + extra(l) : ''}
-      >${esc(l.stufe || l.title)}${l.published ? '' : ' (versteckt)'}</option>`).join('')}
-  </optgroup>`).join('');
+/* منتقي الامتحان: **منتقيين** — مؤسسة، ثم درجة.
+   جرّبت قائمة وحدة مجمّعة بـoptgroup: بتخفي المؤسسة. الصندوق المقفول
+   بيعرض «B1» بس، والمؤسسة ما بتبيّن إلا لما تفتحيه — وهي نص القرار.
+
+   idBase هو معرّف منتقي الدرجة (يلي قيمته = معرّف المستوى)، ومنتقي
+   المؤسسة بياخد نفس الاسم + «_prov».  */
+const NO_PROV = 'ohne Anbieter';
+const provOf  = l => l.provider || NO_PROV;
+
+/* خيارات منتقي الدرجة. مركزيّة بالقصد: الرسم الأول وإعادة الملء بعد
+   تبديل المؤسسة لازم يتطابقوا، وإلا بتختلف الخيارات بين الحالتين.
+
+   لما المؤسسة «الكل»، بتتعرض كل المستويات باسم «telc · B1» — وإلا
+   القائمة بتطلع فاضية وما بتقدري تقفزي لواحد مباشرة. */
+function stufeOptions(levels, curProv, selected, withAll, extra){
+  const list = curProv ? levels.filter(l => provOf(l) === curProv) : levels;
+  const label = l => curProv ? (l.stufe || l.title)
+                             : `${provOf(l)} · ${l.stufe || l.title}`;
+  return (withAll && !curProv ? '<option value="">alle</option>' : '')
+    + list.map(l => `<option value="${esc(l.id)}"${
+        l.id === selected ? ' selected' : ''} ${extra(l)}>${esc(label(l))}${
+        l.published ? '' : ' (versteckt)'}</option>`).join('');
+}
+
+function pickerHTML(idBase, levels, selected, opts = {}){
+  const withAll = !!opts.all;
+  const extra   = opts.extra || (() => '');
+  const provs   = [...new Set(levels.map(provOf))];
+  const cur     = levels.find(l => l.id === selected);
+  // بلا اختيار: «الكل» إذا مسموح، وإلا أول مؤسسة
+  const curProv = cur ? provOf(cur) : (withAll ? '' : (provs[0] || ''));
+
+  return `
+    <label>${esc(opts.label || 'Anbieter')}<select id="${idBase}_prov">
+      ${withAll ? `<option value=""${curProv ? '' : ' selected'}>alle</option>` : ''}
+      ${provs.map(pr => `<option value="${esc(pr)}"${
+        pr === curProv ? ' selected' : ''}>${esc(pr)}</option>`).join('')}
+    </select></label>
+    <label>Stufe<select id="${idBase}">
+      ${stufeOptions(levels, curProv, selected, withAll, extra)}
+    </select></label>`;
+}
+
+/* تبديل المؤسسة بيعيد ملء الدرجات وبينده onChange بالمستوى الجديد.
+   بلا هالربط، منتقي الدرجة بيضل على درجات المؤسسة القديمة. */
+function wirePicker(idBase, levels, onChange, opts = {}){
+  const withAll = !!opts.all;
+  const extra   = opts.extra || (() => '');
+  const selP = document.getElementById(idBase + '_prov');
+  const selS = document.getElementById(idBase);
+  if (!selP || !selS) return;
+
+  selP.onchange = () => {
+    selS.innerHTML = stufeOptions(levels, selP.value, null, withAll, extra);
+    onChange(selS.value);
+  };
+  selS.addEventListener('change', () => onChange(selS.value));
 }
 
 const NEW_LEVEL = '__neu__';
@@ -872,29 +910,12 @@ function wireNewLevel(sel, redraw){
 }
 
 /* ============ الملفات: صور وصوت ============ */
-/* مكان واحد لكل ملف بيحتاجه امتحان. الرفع بيصير من هون مباشرة — ما عاد
-   يلزم مفتاح service_role ولا سكربت بايثون على الجهاز.
+/* جدول الملفات بينرسم بمكانين — شاشة «Dateien» لكل الامتحانات، وصندوق
+   أسفل الاستيراد للامتحان يلي عم تشتغلي عليه. نسختين من هالمنطق معناها
+   إن الرفع بيتصلّح بمكان وبيضل مكسور بالتاني، فالرسم والربط مشتركين. */
 
-   الاسم بالدلو لازم يطابق يلي بـconfig حرف بحرف: ملف مرفوع باسم تاني
-   ما بيظهر للطالب أبداً، وسياسة Storage كمان ما بتلاقيه. فالجدول
-   بيعرض الاسم المتوقّع، والرفع بيستعمله — مو اسم الملف يلي عالجهاز. */
-let assetLevel = '';
-
-async function screenAssets(){
-  app.innerHTML = '<div class="empty">Lädt …</div>';
-  const [rows, content] = await Promise.all([
-    rpc('admin_assets', { p_level_id: assetLevel || null }),
-    rpc('admin_content')
-  ]);
-
-  const img = rows.filter(r => r.kind === 'image');
-  const aud = rows.filter(r => r.kind === 'audio');
-  const fehlt = rows.filter(r => !r.uploaded).length;
-
-  /* الصوت بده سطر أطول من الصورة: اسم الملف قابل للتعديل (القسم ممكن
-     يكون لسا ما إله ملف مربوط) وعدد الوجيدات. الصورة اسمها جاي من
-     الاستيراد ومو قابل للتعديل هون — تغييره لازم يصير بالنص. */
-  const block = (title, list, bucket, hint) => `
+function assetBlock(title, list, bucket, hint){
+  return `
     <h2>${title}</h2>
     <div class="card">
       <p class="sub" style="margin-top:0">${hint}</p>
@@ -929,6 +950,60 @@ async function screenAssets(){
           </td></tr>`).join('')}
       </table></div>` : '<p class="empty">Nichts nötig</p>'}
     </div>`;
+}
+
+function wireAssets(root, refresh){
+  root.querySelectorAll('[data-pick]').forEach(b => b.onclick = () =>
+    root.querySelector(`[data-file="${b.dataset.pick}"]`).click());
+
+  root.querySelectorAll('[data-file]').forEach(inp => inp.onchange = async () => {
+    const file = inp.files && inp.files[0];
+    if (!file) return;
+    const id  = inp.dataset.file;
+    const btn = root.querySelector(`[data-pick="${id}"]`);
+    // اسم الملف بالدلو هو يلي بالحقل، مو اسم الملف عالجهاز — لازم يطابق
+    // يلي بـconfig حرف بحرف وإلا الطالب ما بيشوفه
+    const nameEl = root.querySelector(`[data-name="${id}"]`);
+    const path = (nameEl ? nameEl.value.trim() : inp.dataset.path);
+    if (!path) return toast('Zuerst einen Dateinamen eintragen');
+    try {
+      await act(btn, async () => {
+        // للصوت: نربط المسار بالقسم أول، وإلا بيوصل الملف للدلو وما حدا
+        // بيعرف إنه إله
+        if (inp.dataset.bucket === 'exam-audio'){
+          const plays = Number(root.querySelector(`[data-plays="${id}"]`).value) || 1;
+          await rpc('admin_set_section_audio',
+                    { p_section_id: id, p_path: path, p_plays: plays });
+        }
+        await upload(inp.dataset.bucket, path, file);
+      }, 'Hochgeladen');
+    } catch { /* act أصلاً بيعرض الخطأ */ }
+    refresh();
+  });
+
+  root.querySelectorAll('[data-unlink]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_set_section_audio',
+      { p_section_id: b.dataset.unlink, p_path: null, p_plays: 1 }), 'Getrennt');
+    refresh();
+  });
+}
+
+const IMG_HINT = 'Die Anzeigenseite aus der PDF, als Bild. Der Dateiname steht '
+  + 'im Test unter <code>Bild:</code> — er wird beim Hochladen übernommen, egal '
+  + 'wie die Datei auf Ihrem Rechner heißt.';
+const AUD_HINT = 'Die Aufnahme zum Abschnitt. Wie oft sie abgespielt werden darf, '
+  + 'steht im Test unter <code>Wiedergaben:</code>.';
+
+let assetLevel = '';
+
+async function screenAssets(){
+  app.innerHTML = '<div class="empty">Lädt …</div>';
+  const [rows, content] = await Promise.all([
+    rpc('admin_assets', { p_level_id: assetLevel || null }),
+    rpc('admin_content')
+  ]);
+
+  const fehlt = rows.filter(r => !r.uploaded).length;
 
   app.innerHTML = `
     <h1>Dateien</h1>
@@ -941,61 +1016,16 @@ async function screenAssets(){
       <div class="stat"><b>${rows.length - fehlt}</b><span>hochgeladen</span></div>
     </div>
 
-    <div class="card">
-      <div class="row">
-        <label>Prüfung<select id="as_lvl">
-          <option value="">alle Prüfungen</option>
-          ${levelOptions(content.levels || [], assetLevel)}
-        </select></label>
-      </div>
-    </div>
+    <div class="card"><div class="row">
+      ${pickerHTML('as_lvl', content.levels || [], assetLevel, { all: true })}
+    </div></div>
 
-    ${block('Bilder', img, 'exam-images',
-      'Die Anzeigenseite aus der PDF, als Bild. Der Dateiname steht im Test ' +
-      'unter <code>Bild:</code> — er wird beim Hochladen übernommen, egal wie ' +
-      'die Datei auf Ihrem Rechner heißt.')}
+    ${assetBlock('Bilder',   rows.filter(r => r.kind === 'image'), 'exam-images', IMG_HINT)}
+    ${assetBlock('Hörtexte', rows.filter(r => r.kind === 'audio'), 'exam-audio',  AUD_HINT)}`;
 
-    ${block('Hörtexte', aud, 'exam-audio',
-      'Die Aufnahme zum Abschnitt. Wie oft sie abgespielt werden darf, ' +
-      'steht im Test unter <code>Wiedergaben:</code>.')}`;
-
-  document.getElementById('as_lvl').onchange = e => {
-    assetLevel = e.target.value; screenAssets();
-  };
-
-  app.querySelectorAll('[data-pick]').forEach(b => b.onclick = () =>
-    app.querySelector(`[data-file="${b.dataset.pick}"]`).click());
-
-  app.querySelectorAll('[data-file]').forEach(inp => inp.onchange = async () => {
-    const file = inp.files && inp.files[0];
-    if (!file) return;
-    const id  = inp.dataset.file;
-    const btn = app.querySelector(`[data-pick="${id}"]`);
-    // اسم الملف بالدلو هو يلي بالحقل، مو اسم الملف عالجهاز — لازم يطابق
-    // يلي بـconfig حرف بحرف وإلا الطالب ما بيشوفه.
-    const nameEl = app.querySelector(`[data-name="${id}"]`);
-    const path = (nameEl ? nameEl.value.trim() : inp.dataset.path);
-    if (!path) return toast('Zuerst einen Dateinamen eintragen');
-    try {
-      await act(btn, async () => {
-        // للصوت: نربط المسار بالقسم أول، وإلا بيوصل الملف للدلو وما حدا
-        // بيعرف إنه إله
-        if (inp.dataset.bucket === 'exam-audio'){
-          const plays = Number(app.querySelector(`[data-plays="${id}"]`).value) || 1;
-          await rpc('admin_set_section_audio',
-                    { p_section_id: id, p_path: path, p_plays: plays });
-        }
-        await upload(inp.dataset.bucket, path, file);
-      }, 'Hochgeladen');
-    } catch { /* act أصلاً بيعرض الخطأ */ }
-    screenAssets();
-  });
-
-  app.querySelectorAll('[data-unlink]').forEach(b => b.onclick = async () => {
-    await act(b, () => rpc('admin_set_section_audio',
-      { p_section_id: b.dataset.unlink, p_path: null, p_plays: 1 }), 'Getrennt');
-    screenAssets();
-  });
+  wirePicker('as_lvl', content.levels || [], id => { assetLevel = id; screenAssets(); },
+             { all: true });
+  wireAssets(app, screenAssets);
 }
 
 /* ============ الاستيراد ============ */
@@ -1008,11 +1038,20 @@ let importState = { id: null, doc: null, raw: '' };
 /* لما تضغطي «bearbeiten» بالإنهالته، منخزّن الامتحان هون ومنقفز لشاشة
    الاستيراد — هي يلي بترسم المحرّر، فما بينفع نملا الحقول قبلها. */
 let pendingEdit = null;
+/* بعد النشر: الصفحة بتنعاد ترسم، وهاد بيضيّع الاسم — منمرّره تا يفتح
+   صندوق الملفات على الامتحان يلي لسا انتشر */
+let pendingFiles = null;
 let importLevel = '';
 
 async function screenImport(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
   const c = contentCache = await rpc('admin_content');
+
+  /* امتحان جاي للتعديل: لازم المنتقي يتبنى مؤسسته **قبل** الرسم.
+     المنتقي حقلين، وحقل الدرجة بيعرض درجات المؤسسة المختارة بس — فتعيين
+     القيمة بعد الرسم بيفشل بصمت لما يكون الامتحان من مؤسسة تانية. */
+  if (pendingEdit)  importLevel = pendingEdit.level;
+  if (pendingFiles) importLevel = pendingFiles.level;
 
   app.innerHTML = `
     <h1>Import</h1>
@@ -1021,9 +1060,7 @@ async function screenImport(){
 
     <div class="card">
       <div class="row">
-        <label>Prüfung<select id="i_lvl">
-          ${levelOptions(c.levels, importLevel)}
-        </select></label>
+        ${pickerHTML('i_lvl', c.levels, importLevel)}
         <label style="flex:2">Kennung des Tests
           <input id="i_slug" placeholder="modell-a2-01"></label>
         <button class="btn grey" id="i_sample">Beispiel einfügen</button>
@@ -1059,6 +1096,8 @@ async function screenImport(){
       </details>
     </div>
 
+    <div id="i_files"></div>
+
     <h2>Frühere Importe</h2>
     <div class="card"><div class="wrap"><table>
       <tr><th>Titel</th><th>Stufe</th><th>Status</th><th>Größe</th><th>Datum</th><th></th></tr>
@@ -1073,20 +1112,55 @@ async function screenImport(){
     </table></div></div>`;
 
   const $ = id => document.getElementById(id);
+
+  /* ملفات هالامتحان بالذات، تحت المحرّر مباشرة. الملفات بتخصّ امتحان
+     محدّد، فمنطقي تكون معه — مو بتبويب تاني لازم تدوّري فيه على اسمه
+     بين كل الامتحانات. بتظهر بس لما الامتحان يكون موجود بالقاعدة. */
+  async function loadFiles(){
+    const box  = $('i_files');
+    const slug = $('i_slug').value.trim().toLowerCase();
+    const lvl  = $('i_lvl').value;
+    if (!box) return;
+    if (!slug || !lvl){ box.innerHTML = ''; return; }
+
+    const exists = (c.tests || []).some(t => t.slug === slug && t.level_id === lvl);
+    if (!exists){
+      box.innerHTML = `<h2>Dateien</h2><p class="sub">Bilder und Hörtexte
+        erscheinen hier, sobald der Test veröffentlicht ist.</p>`;
+      return;
+    }
+    const rows = (await rpc('admin_assets', { p_level_id: lvl }))
+      .filter(r => r.slug === slug);
+    const fehlt = rows.filter(r => !r.uploaded).length;
+    box.innerHTML = `
+      <h2>Dateien von „${esc(slug)}"</h2>
+      <div class="stats">
+        <div class="stat ${fehlt ? 'warn' : 'ok'}"><b>${fehlt}</b><span>fehlen</span></div>
+        <div class="stat"><b>${rows.length - fehlt}</b><span>hochgeladen</span></div>
+      </div>
+      ${assetBlock('Bilder',   rows.filter(r => r.kind === 'image'),
+                   'exam-images', IMG_HINT)}
+      ${assetBlock('Hörtexte', rows.filter(r => r.kind === 'audio'),
+                   'exam-audio',  AUD_HINT)}`;
+    wireAssets(box, loadFiles);
+  }
+
   const fill = txt => {
     $('i_text').value = txt; $('i_text').scrollTop = 0;
     runParse(txt);
   };
 
   wireNewLevel($('i_lvl'), id => { if (id) importLevel = id; screenImport(); });
+  wirePicker('i_lvl', c.levels, id => { importLevel = id; loadFiles(); });
+  $('i_slug').addEventListener('change', loadFiles);
+  if (pendingFiles){ $('i_slug').value = pendingFiles.slug; pendingFiles = null; }
+  loadFiles();
 
   // امتحان جاي للتعديل: الستوفة والاسم لازم يكونوا نفسهن، وإلا الحفظ
   // بيعمل امتحان تاني بدل ما يستبدل هاد.
   if (pendingEdit){
     const { level, slug, text } = pendingEdit;
     pendingEdit = null;
-    importLevel = level;
-    $('i_lvl').value = level;
     $('i_slug').value = slug;
     fill(text);
     toast(`„${slug}" geladen — Speichern ersetzt den Test`);
@@ -1174,6 +1248,9 @@ function runParse(raw){
     if (r && r.ok){
       toast(`${r.sections} Abschnitte, ${r.items} Aufgaben, ${r.answers} Lösungen`, 5000);
       importState = { id:null, doc:null, raw:'' };
+      // ما منعيد رسم الصفحة كاملة: الامتحان لسا بالمحرّر، وصندوق
+      // الملفات لازم يظهر فوراً — هون بالضبط لازم ترفعي الصور والصوت
+      pendingFiles = { level: document.getElementById('i_lvl').value, slug };
       screenImport();
     }
   };

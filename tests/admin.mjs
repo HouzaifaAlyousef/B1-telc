@@ -116,6 +116,15 @@ sql(`delete from writing_feedback; delete from admin_audit_log; delete from mist
      values ('B1-SEED-0001', array['b1'], 30, now(), '${STUD_ID}');`);
 
 const results = [];
+/* منتقي الامتحان حقلين: المؤسسة ثم الدرجة. الاختيار المباشر للدرجة
+   بينجح فقط إذا مؤسستها هي المختارة — وهاد بالضبط سلوك الواجهة. */
+async function pick(page, base, provider, levelId){
+  await page.selectOption(`#${base}_prov`, provider);
+  await page.waitForTimeout(250);
+  if (levelId != null) await page.selectOption(`#${base}`, levelId);
+  await page.waitForTimeout(350);
+}
+
 const check = (l, c) => { results.push([l, !!c]); console.log(`  ${c ? '✓' : '✗'} ${l}`); };
 
 const HARD = setTimeout(() => { console.log('\n✗ انتهت المهلة'); process.exit(2); }, 80000);
@@ -301,8 +310,7 @@ try {
   const allTests = await page.locator('[data-tedit]').count();
   check(`كل الامتحانات ظاهرة (${allTests})`, allTests > 0);
 
-  await page.selectOption('#t_lvl', 'telc-a1');
-  await page.waitForTimeout(400);
+  await pick(page, 't_lvl', 'telc', 'telc-a1');
   const a1Tests = await page.locator('[data-tedit]').count();
   check(`★ التصفية بالستوفة بتشتغل (a1: ${a1Tests})`, a1Tests < allTests);
 
@@ -310,8 +318,7 @@ try {
   // واحد منهن، الحفظ بيعمل امتحان جديد بدل ما يستبدل هاد.
   // منرجّع التصفية لكل الستوفات: a1 لسا بلا امتحانات، ولف الفحص جوّا
   // شرط بيخلّيه ينجح بصمت لما ما يكون في شي يُضغط.
-  await page.selectOption('#t_lvl', '');
-  await page.waitForTimeout(400);
+  await pick(page, 't_lvl', '');
   await page.locator('[data-tedit]').first().click();
   await page.waitForSelector('#i_text');
   await page.waitForTimeout(1200);
@@ -326,24 +333,38 @@ try {
   check(`★ والمعاينة انفحصت لحالها (${st.join('/')})`,
         st[1] === '9' && Number(st[2]) > 40);
 
-  await page.selectOption('#t_lvl', '').catch(() => {});
-
-  // ---- المنتقيات مجمّعة بالمؤسسة ----
+  // ---- المنتقي حقلين: مؤسسة ثم درجة ----
+  // جرّبنا قائمة وحدة مجمّعة بـoptgroup: بتخفي المؤسسة. الصندوق المقفول
+  // بيعرض «B1» بس، والمؤسسة ما بتبيّن إلا لما تفتحيه — وهي نص القرار.
   await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
   await page.waitForSelector('#c_lvl');
   await page.waitForTimeout(300);
-  // بعشر امتحانات، قائمة مسطّحة بتصير غير مقروءة. والأهم: الخيار لازم
-  // يبيّن الدرجة، مو العنوان الكامل، وإلا «telc Deutsch B1» و«Goethe
-  // Deutsch B1» بيطولوا وبيتشابهوا.
-  const groups = await page.locator('#c_lvl optgroup').count();
-  check(`★ منتقي الأكواد مجمّع بالمؤسسة (${groups} مجموعة)`, groups >= 1);
-  const gLabel = await page.locator('#c_lvl optgroup').first().getAttribute('label');
-  check(`اسم المجموعة هو المؤسسة (${gLabel})`, /telc|Goethe|ÖSD/.test(gLabel));
+
+  check('★ في منتقي مؤسسة منفصل بالأكواد',
+        (await page.locator('#c_lvl_prov').count()) === 1);
+  const provOpts = await page.locator('#c_lvl_prov option').allTextContents();
+  check(`وبيعرض المؤسسات (${provOpts.join(', ')})`,
+        provOpts.includes('telc') && provOpts.includes('Goethe'));
+
+  // تبديل المؤسسة لازم يعيد ملء الدرجات — وإلا بتضل درجات القديمة
+  await page.selectOption('#c_lvl_prov', 'Goethe');
+  await page.waitForTimeout(300);
+  const gStufen = await page.locator('#c_lvl option').allTextContents();
+  check(`★ تبديل المؤسسة بيعيد ملء الدرجات (${gStufen.join(', ')})`,
+        gStufen.length > 0 && gStufen.every(t => !/A1|B1/.test(t) || /C1/.test(t)));
+
+  await page.selectOption('#c_lvl_prov', 'telc');
+  await page.waitForTimeout(300);
+  const tStufen = await page.locator('#c_lvl option').allTextContents();
+  check(`وبالرجوع لـtelc بتطلع درجاته (${tStufen.join(', ')})`,
+        tStufen.some(t => /B1/.test(t)) && tStufen.some(t => /A1/.test(t)));
 
   // والافتراضي لازم يقع على امتحان إله محتوى، مو على أول صف بالترتيب
+  await page.selectOption('#c_lvl', 'b1');
+  await page.waitForTimeout(400);
   const hint0 = await page.textContent('#c_hint');
-  check('★ الافتراضي امتحان إله محتوى منشور',
-        /Öffnet/.test(hint0) && !/keine Tests/.test(hint0));
+  check('★ سطر «شو بيفتح» بيتبع الاختيار',
+        /Öffnet/.test(hint0) && /16/.test(hint0));
 
   // ---- الملفات: رفع من اللوحة ----
   // الرفع الحقيقي بده Storage شغّال، وما عندنا هون. يلي منفحصه إنو
@@ -365,12 +386,10 @@ try {
   check(`الاسم المقترح شكله ملف صوت (${firstName})`, /\.mp3$/.test(firstName));
 
   // التصفية بالستوفة
-  await page.selectOption('#as_lvl', 'telc-a1');
-  await page.waitForTimeout(400);
+  await pick(page, 'as_lvl', 'telc', 'telc-a1');
   check('★ التصفية بالستوفة بتشتغل',
         (await page.locator('[data-pick]').count()) < rowsN);
-  await page.selectOption('#as_lvl', '');
-  await page.waitForTimeout(400);
+  await pick(page, 'as_lvl', '');
 
   await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
   await page.waitForSelector('#c_kind');
@@ -444,7 +463,7 @@ try {
   // ---- الاستيراد: نشر فعلي ----
   await page.evaluate(() => document.getElementById('i_sample').click());
   await page.waitForSelector('.preview');
-  await page.selectOption('#i_lvl', 'telc-a1');
+  await pick(page, 'i_lvl', 'telc', 'telc-a1');
   await page.fill('#i_slug', 'probe-a1-01');
   await page.evaluate(() => document.getElementById('i_apply').click());
   await page.waitForTimeout(1500);
@@ -456,6 +475,29 @@ try {
     where t.slug='probe-a1-01';`);
   check(`النشر أنشأ الامتحان بقاعدة البيانات (${made} سؤال، ${ans} حل)`,
         made === '17' && ans === '16');
+
+  // ---- الملفات بصفحة الاستيراد نفسها ----
+  // الملفات بتخصّ امتحان محدّد، فمنطقي تكون معه — مو بتبويب تاني لازم
+  // تدوّري فيه على اسمه بين كل الامتحانات.
+  await page.waitForTimeout(1200);
+  const box = await page.textContent('#i_files');
+  check('★ صندوق الملفات ظهر بعد النشر باسم الامتحان',
+        /probe-a1-01/.test(box) && /Bilder/.test(box) && /Hörtexte/.test(box));
+
+  const upBtns = await page.locator('#i_files [data-pick]').count();
+  check(`★ وفيه أزرار رفع لملفات هالامتحان (${upBtns})`, upBtns >= 4);
+
+  // ما بيعرض ملفات امتحانات تانية
+  const slugsInBox = await page.locator('#i_files td .mono').allTextContents();
+  check('★ وبس ملفات هالامتحان',
+        slugsInBox.filter(t => /^modell-/.test(t)).length === 0);
+
+  // امتحان مو موجود: بيقول متى بيظهر بدل ما يفضى
+  await page.fill('#i_slug', 'gibt-es-nicht');
+  await page.dispatchEvent('#i_slug', 'change');
+  await page.waitForTimeout(700);
+  check('★ امتحان لسا ما انتشر بيشرح بدل ما يفضى',
+        /sobald der Test veröffentlicht/.test(await page.textContent('#i_files')));
 
   // الصورة والصوت بيسافروا جوّا config مو بأعمدة — هني يلي بينضاعوا
   check('★ الصورة والصوت وصلوا للقاعدة عبر اللوحة',

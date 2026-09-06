@@ -167,7 +167,7 @@ just says it is not set up.
 | **Codes** | Generate access codes. *Vollzugang* opens a whole level for days; *Demo* opens the tests you pick for hours. |
 | **Inhalte** | Levels, model tests, reading material. Filter by level; **bearbeiten** opens a test back in the import editor. |
 | **Dateien** | Every image and audio file an exam needs, what is missing, upload straight from the browser. |
-| **Import** | Paste a new exam. **Beispiel einfügen** for a worked example, **Leere Vorlage** for the blank 61-slot template. |
+| **Import** | Paste a new exam. **Beispiel einfügen** for a worked example, **Leere Vorlage** for the blank 61-slot template. Once the test is published, its own files appear at the bottom of the same page — upload them there, no tab switch. |
 | **Protokoll** | Every admin action, who did it and when. |
 
 **Lesematerial** (under Inhalte) is not a test: free text your students can read
@@ -199,6 +199,10 @@ Create one under **Inhalte → Prüfungen** (Anbieter + Stufe; id and title are
 generated), or from the level selector in Import or Codes — last entry,
 *+ neue Stufe anlegen*. It starts hidden, because a published product with no
 exams in it is what the student would see.
+
+Everywhere you choose an exam, it is **two fields**: Anbieter, then Stufe. One
+grouped dropdown was tried first and rejected — a closed `<select>` shows only
+`B1`, hiding the provider, which is half the decision.
 
 ## Day-to-day
 
