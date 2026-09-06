@@ -218,18 +218,21 @@ function screenHome(){
       const d = S.sub && S.sub.until && S.sub.until[id];
       return d ? Math.ceil((new Date(d) - Date.now()) / 86400000) : null;
     };
+    // «telc · B1». مستوى قديم بلا مؤسسة بيضل بعنوانه — ما منخترع وحدة.
+    const name = l => l.provider && l.stufe
+      ? `${l.provider} · ${l.stufe}` : (l.title || l.id);
     const picker = S.levels.length > 1 ? `<div class="levels">
       ${S.levels.map(l => { const d = daysLeft(l.id);
         return `<button class="lvl${l.id === S.level ? ' on' : ''}${
           d != null && d <= 7 ? ' soon' : ''}" data-lvl="${esc(l.id)}"
-          ${d != null ? `title="noch ${d} Tage"` : ''}>${esc(l.title)}${
+          ${d != null ? `title="noch ${d} Tage"` : ''}>${esc(name(l))}${
           d != null && d <= 7 ? ` · ${d}T` : ''}</button>`; }).join('')}
     </div>` : '';
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
       ${picker}
       <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile
-        der schriftlichen Prüfung${lvl ? ` ${esc(lvl.title)}` : ''} — mit der echten
+        der schriftlichen Prüfung${lvl ? ` ${esc(name(lvl))}` : ''} — mit der echten
         Prüfungszeit.</p>
       <button class="tile" id="resbtn">
         <span class="n">📖</span>

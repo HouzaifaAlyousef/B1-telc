@@ -43,6 +43,10 @@ def main():
     ap.add_argument('out', help='ملف SQL الناتج')
     ap.add_argument('--level', default='b1')
     ap.add_argument('--level-title', default='telc Deutsch B1')
+    # المؤسسة والدرجة عمودين بـlevels من ترحيل 0017. محتوى هالمستودع
+    # كله telc B1، فالبذور بتقولها صراحةً بدل ما نستنتجها من العنوان.
+    ap.add_argument('--provider', default='telc')
+    ap.add_argument('--stufe',    default='B1')
     a = ap.parse_args()
 
     src = Path(a.src)
@@ -54,9 +58,11 @@ def main():
     w(f"-- مولّد من {a.src} بـtools/export_sql.py — لا تعدّله بالإيد")
     w("begin;")
     w("")
-    w("insert into levels (id, title, sort, published) values "
-      f"({q(L)}, {q(a.level_title)}, 0, true)")
-    w("on conflict (id) do update set title = excluded.title;")
+    w("insert into levels (id, title, sort, published, provider, stufe) values "
+      f"({q(L)}, {q(a.level_title)}, 0, true, {q(a.provider)}, {q(a.stufe)})")
+    w("on conflict (id) do update set title = excluded.title,")
+    w("  provider = coalesce(levels.provider, excluded.provider),")
+    w("  stufe    = coalesce(levels.stufe,    excluded.stufe);")
 
     n_tests = n_sections = n_items = n_answers = 0
 

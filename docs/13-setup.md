@@ -179,9 +179,26 @@ test comes back as the same template language you paste in, you change what you
 need, and saving replaces it. Verified lossless: questions, answers and
 explanations come back byte-identical through a full read-edit-save cycle.
 
-**A new level** (A1, A2, B2 …) can be created from the level selector in Import
-or Codes — last entry, *+ neue Stufe anlegen*. It starts hidden, because a
-published level with no exams in it is what the student would see.
+### A "level" is provider + stufe
+
+`A1` on its own is not a product. There is a telc A1, a Goethe A1, an ÖSD A1 —
+different exams, different structure. So one row in `levels` is one **exam
+product**:
+
+| id | provider | stufe | what it sells |
+|---|---|---|---|
+| `b1` | telc | B1 | the 16 exams in this repo |
+| `goethe-b1` | Goethe | B1 | a separate product |
+| `oesd-a2` | ÖSD | A2 | a separate product |
+
+A code for telc·B1 does **not** open Goethe·B1. Everything that already guarded
+access — subscriptions, codes, RLS, storage — hangs off this one id and did not
+have to change; `provider` and `stufe` are two descriptive columns on top.
+
+Create one under **Inhalte → Prüfungen** (Anbieter + Stufe; id and title are
+generated), or from the level selector in Import or Codes — last entry,
+*+ neue Stufe anlegen*. It starts hidden, because a published product with no
+exams in it is what the student would see.
 
 ## Day-to-day
 

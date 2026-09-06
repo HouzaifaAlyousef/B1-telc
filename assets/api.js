@@ -147,7 +147,10 @@ const API = (() => {
 
   /* ---------- المحتوى ---------- */
   async function levels(){
-    return rest('levels?select=id,title,sort&order=sort&published=is.true');
+    /* provider وstufe من ترحيل 0017: «المستوى» صار (مؤسسة، درجة) —
+       telc·B1 وGoethe·B1 منتجين مختلفين، والطالب لازم يشوف الفرق. */
+    return rest('levels?select=id,title,sort,provider,stufe' +
+                '&order=provider.asc,stufe.asc,sort.asc&published=is.true');
   }
 
   /* المستويات يلي اشتراكه بيغطّيها فعلاً، مرتّبة ومسمّاة */

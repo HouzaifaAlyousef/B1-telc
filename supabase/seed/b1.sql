@@ -1,8 +1,10 @@
 -- مولّد من data بـtools/export_sql.py — لا تعدّله بالإيد
 begin;
 
-insert into levels (id, title, sort, published) values ('b1', 'telc Deutsch B1', 0, true)
-on conflict (id) do update set title = excluded.title;
+insert into levels (id, title, sort, published, provider, stufe) values ('b1', 'telc Deutsch B1', 0, true, 'telc', 'B1')
+on conflict (id) do update set title = excluded.title,
+  provider = coalesce(levels.provider, excluded.provider),
+  stufe    = coalesce(levels.stufe,    excluded.stufe);
 
 -- ================= modell-01 · PETRA =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)

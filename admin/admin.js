@@ -187,13 +187,14 @@ async function screenHome(){
         <span>gerade gesperrt</span></div>` : ''}
     </div>` : ''}
 
-    <h2>Stufen</h2>
+    <h2>Prüfungen</h2>
     <div class="card"><div class="wrap"><table>
-      <tr><th>Stufe</th><th>Titel</th><th>Status</th></tr>
+      <tr><th>Anbieter</th><th>Stufe</th><th>Titel</th><th>Status</th></tr>
       ${(o.levels || []).map(l => `<tr>
-        <td class="mono">${esc(l.id)}</td><td>${esc(l.title)}</td>
+        <td>${esc(l.provider || '—')}</td>
+        <td class="mono">${esc(l.stufe || l.id)}</td><td>${esc(l.title)}</td>
         <td><span class="pill ${l.published ? 'ok' : ''}">${l.published ? 'online' : 'versteckt'}</span></td>
-      </tr>`).join('') || '<tr><td colspan="3" class="empty">Keine Stufen</td></tr>'}
+      </tr>`).join('') || '<tr><td colspan="4" class="empty">Keine Prüfungen</td></tr>'}
     </table></div></div>`;
 }
 
@@ -387,6 +388,11 @@ async function screenCodes(){
     ...l,
     live: (content.tests || []).filter(t => t.level_id === l.id && t.published).length
   }));
+  /* الافتراضي: أول امتحان إله محتوى منشور. بلاه بيوقع الاختيار على أول
+     صف بالترتيب — وهاد ممكن يكون مستوى فاضي لسا ما انبنى، فبيطلعلك
+     تحذير «ما فيه امتحانات» بلا سبب واضح أول ما تفتحي الصفحة. */
+  if (!codeLevel || !levels.some(l => l.id === codeLevel))
+    codeLevel = (levels.find(l => l.live > 0) || levels[0] || {}).id || '';
 
   const state = c => c.revoked_at        ? ['bad', 'gesperrt']
                    : c.uses >= c.max_uses ? ['', 'aufgebraucht']
@@ -400,11 +406,10 @@ async function screenCodes(){
     <div class="card">
       <div class="row">
         <label>Anzahl<input id="c_n" type="number" value="5" min="1" max="200"></label>
-        <label>Stufe<select id="c_lvl">
-          ${levels.map(l => `<option value="${esc(l.id)}" data-live="${l.live}"
-            data-pub="${l.published ? 1 : 0}"${l.id === codeLevel ? ' selected' : ''}
-            >${esc(l.title)}${l.published ? '' : ' (versteckt)'}</option>`).join('')
-            || '<option value="">— zuerst eine Stufe anlegen —</option>'}
+        <label>Prüfung<select id="c_lvl">
+          ${levelOptions(levels, codeLevel,
+              l => `data-live="${l.live}" data-pub="${l.published ? 1 : 0}"`)
+            || '<option value="">— zuerst eine Prüfung anlegen —</option>'}
         </select></label>
         <label>Art<select id="c_kind">
           <option value="full" selected>Vollzugang</option>
@@ -601,13 +606,19 @@ async function screenContent(){
   const tests = (c.tests || []).filter(t => !contentLevel || t.level_id === contentLevel);
 
   const lvlRow = l => `<tr>
-    <td class="mono">${esc(l.id)}</td>
-    <td>${esc(l.title)}</td>
+    <td>${l.provider
+      ? `<b>${esc(l.provider)}</b>`
+      : '<span style="color:var(--warn)">ohne Anbieter</span>'}</td>
+    <td class="mono">${esc(l.stufe || '—')}</td>
+    <td>${esc(l.title)}
+      <div class="mono" style="color:var(--muted);font-size:12px">${esc(l.id)}</div></td>
     <td>${l.tests}</td>
     <td><span class="pill ${l.published ? 'ok' : ''}">${l.published ? 'online' : 'versteckt'}</span></td>
     <td><button class="btn sm grey" data-lvl="${esc(l.id)}"
           data-pub="${l.published ? 0 : 1}" data-title="${esc(l.title)}"
-          data-sort="${l.sort}">${l.published ? 'verstecken' : 'online stellen'}</button></td>
+          data-sort="${l.sort}" data-prov="${esc(l.provider || '')}"
+          data-stufe="${esc(l.stufe || '')}"
+          >${l.published ? 'verstecken' : 'online stellen'}</button></td>
   </tr>`;
 
   const testRow = t => `<tr>
@@ -637,29 +648,43 @@ async function screenContent(){
 
   app.innerHTML = `
     <h1>Inhalte</h1>
-    <p class="sub">Stufen, Modelltests und Lesematerial.</p>
+    <p class="sub">Prüfungen, Modelltests und Lesematerial.</p>
 
-    <h2>Stufen</h2>
+    <h2>Prüfungen</h2>
+    <p class="sub">Eine Prüfung ist <b>Anbieter + Stufe</b>: telc·B1 und
+      Goethe·B1 sind zwei verschiedene Produkte mit eigenen Modelltests,
+      eigenen Codes und eigenem Abo. Ein Code für telc·B1 öffnet Goethe·B1
+      nicht.</p>
     <div class="card">
       <div class="row">
-        <label>Kennung<input id="l_id" placeholder="a2" maxlength="16"></label>
-        <label style="flex:2">Titel<input id="l_title" placeholder="telc Deutsch A2"></label>
+        <label>Anbieter<input id="l_prov" list="anbieter" placeholder="telc"></label>
+        <datalist id="anbieter">
+          ${ANBIETER.map(a => `<option value="${esc(a)}">`).join('')}
+        </datalist>
+        <label>Stufe<input id="l_stufe" list="stufen" placeholder="B1"
+          maxlength="12" style="max-width:110px"></label>
+        <datalist id="stufen">
+          ${STUFEN.map(x => `<option value="${esc(x)}">`).join('')}
+        </datalist>
+        <label style="flex:2">Titel <span style="color:var(--muted)">(optional)</span>
+          <input id="l_title" placeholder="wird aus Anbieter + Stufe gebildet"></label>
         <label>Reihenfolge<input id="l_sort" type="number" value="0"></label>
         <button class="btn" id="l_go">Anlegen / ändern</button>
       </div>
       <div class="wrap" style="margin-top:12px"><table>
-        <tr><th>Kennung</th><th>Titel</th><th>Tests</th><th>Status</th><th></th></tr>
-        ${c.levels.map(lvlRow).join('')}
+        <tr><th>Anbieter</th><th>Stufe</th><th>Titel</th><th>Tests</th>
+            <th>Status</th><th></th></tr>
+        ${c.levels.map(lvlRow).join('')
+          || '<tr><td colspan="6" class="empty">Noch keine Prüfung</td></tr>'}
       </table></div>
     </div>
 
     <h2>Modelltests</h2>
     <div class="card">
       <div class="row">
-        <label>Stufe<select id="t_lvl">
-          <option value="">alle Stufen</option>
-          ${c.levels.map(l => `<option value="${esc(l.id)}"${
-            l.id === contentLevel ? ' selected' : ''}>${esc(l.title)}</option>`).join('')}
+        <label>Prüfung<select id="t_lvl">
+          <option value="">alle Prüfungen</option>
+          ${levelOptions(c.levels, contentLevel)}
         </select></label>
         <p class="sub" style="flex:2;align-self:flex-end;margin:0">
           <b>bearbeiten</b> öffnet den Test im Import-Editor — dieselbe
@@ -678,9 +703,9 @@ async function screenContent(){
       Punkte, ohne Lösung. Wer die Stufe abonniert hat, sieht sie.</p>
     <div class="card">
       <div class="row">
-        <label>Stufe<select id="r_lvl">
-          <option value="">alle Stufen</option>
-          ${c.levels.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}
+        <label>Prüfung<select id="r_lvl">
+          <option value="">alle Prüfungen</option>
+          ${levelOptions(c.levels, '')}
         </select></label>
         <label style="flex:2">Titel<input id="r_title" placeholder="z. B. Wortschatz Reisen"></label>
         <label>Reihenfolge<input id="r_sort" type="number" value="0"></label>
@@ -716,18 +741,23 @@ async function screenContent(){
   });
 
   $('l_go').onclick = async e => {
-    const id = $('l_id').value.trim().toLowerCase();
-    if (!/^[a-z][a-z0-9_]{0,15}$/.test(id))
-      return toast('Kennung: Kleinbuchstaben, z. B. a2');
+    const provider = $('l_prov').value.trim();
+    const stufe    = $('l_stufe').value.trim().toUpperCase();
+    if (!provider || !stufe)
+      return toast('Anbieter und Stufe sind beide nötig');
+    // المعرّف والعنوان بيتولّدوا بقاعدة البيانات لما ما ينعطوا
     await act(e.target, () => rpc('admin_upsert_level', {
-      p_id: id, p_title: $('l_title').value.trim() || id.toUpperCase(),
-      p_sort: Number($('l_sort').value) || 0, p_published: false }), 'Stufe gespeichert');
+      p_id: null, p_title: $('l_title').value.trim() || null,
+      p_sort: Number($('l_sort').value) || 0, p_published: false,
+      p_provider: provider, p_stufe: stufe }), 'Prüfung gespeichert');
     screenContent();
   };
   app.querySelectorAll('[data-lvl]').forEach(b => b.onclick = async () => {
     await act(b, () => rpc('admin_upsert_level', {
       p_id: b.dataset.lvl, p_title: b.dataset.title,
-      p_sort: Number(b.dataset.sort), p_published: b.dataset.pub === '1' }), 'Gespeichert');
+      p_sort: Number(b.dataset.sort), p_published: b.dataset.pub === '1',
+      p_provider: b.dataset.prov || null, p_stufe: b.dataset.stufe || null }),
+      'Gespeichert');
     screenContent();
   });
   app.querySelectorAll('[data-tpub]').forEach(b => b.onclick = async () => {
@@ -774,28 +804,56 @@ async function screenContent(){
 /* منتقي الستوفة بيعرض يلي موجود بس، فالمستخدم يلي بده A1 وما عنده
    بيوقف. الخيار الأخير بيفتح سؤالين وبيعمل الستوفة على طول، بلا ما
    يترك الشاشة يلي هو فيها. */
+/* ============ المؤسسة + الدرجة ============ */
+/* «A1» لحالها مو منتج: في A1 من telc وA1 من Goethe وA1 من ÖSD، وكل
+   وحدة امتحان مختلف. فصف المستوى الواحد بقاعدة البيانات = (مؤسسة،
+   درجة)، والاشتراك والكود معلّقين عليه متل ما كانوا. */
+const STUFEN    = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const ANBIETER  = ['telc', 'Goethe', 'ÖSD', 'TestDaF', 'DTZ'];
+
+/* اسم للعرض: «telc · B1». المستويات القديمة ممكن تكون بلا مؤسسة —
+   منبيّن عنوانها متل ما هو بدل ما نخترع وحدة. */
+const lvlName = l => l.provider && l.stufe
+  ? `${l.provider} · ${l.stufe}` : (l.title || l.id);
+
+/* قائمة مجمّعة بالمؤسسة: بعشر مستويات بتصير القائمة المسطّحة غير
+   مقروءة، والمجموعات بتخلّي «كل telc» واضحة بنظرة. */
+function levelOptions(levels, selected, extra = ''){
+  const groups = new Map();
+  for (const l of levels){
+    const g = l.provider || 'ohne Anbieter';
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(l);
+  }
+  return [...groups].map(([g, list]) => `<optgroup label="${esc(g)}">
+    ${list.map(l => `<option value="${esc(l.id)}"${
+      l.id === selected ? ' selected' : ''}${extra ? ' ' + extra(l) : ''}
+      >${esc(l.stufe || l.title)}${l.published ? '' : ' (versteckt)'}</option>`).join('')}
+  </optgroup>`).join('');
+}
+
 const NEW_LEVEL = '__neu__';
 const newLevelOption = '<option value="' + NEW_LEVEL + '">+ neue Stufe anlegen …</option>';
 
 async function askNewLevel(){
-  const id = (prompt('Kennung der Stufe (Kleinbuchstaben, z. B. a2):') || '')
-    .trim().toLowerCase();
-  if (!id) return null;
-  if (!/^[a-z][a-z0-9_]{0,15}$/.test(id)){
-    toast('Kennung: Kleinbuchstaben und Ziffern, z. B. a2');
-    return null;
-  }
-  const title = (prompt('Titel der Stufe:', 'telc Deutsch ' + id.toUpperCase())
-                 || '').trim() || id.toUpperCase();
+  const provider = (prompt(
+    `Anbieter der Prüfung?\n(${ANBIETER.join(', ')} … oder ein anderer)`) || '').trim();
+  if (!provider) return null;
+  const stufe = (prompt(
+    `Stufe?\n(${STUFEN.join(', ')})`, 'B1') || '').trim().toUpperCase();
+  if (!stufe) return null;
   try {
     // مخفية أول ما تنعمل: ما في محتوى فيها بعد، ونشرها فاضية بيوصّل
-    // للطالب ستوفة بلا امتحانات
-    await rpc('admin_upsert_level',
-              { p_id: id, p_title: title, p_sort: 0, p_published: false });
-    toast(`Stufe „${title}" angelegt (noch versteckt)`);
-    return id;
+    // للطالب مستوى بلا امتحانات. المعرّف بيتولّد بقاعدة البيانات.
+    const r = await rpc('admin_upsert_level', {
+      p_id: null, p_title: null, p_sort: 0, p_published: false,
+      p_provider: provider, p_stufe: stufe });
+    toast(`„${provider} · ${stufe}" angelegt (noch versteckt)`);
+    return r.id;
   } catch (e){
-    toast(`Fehler: ${e.message}`, 4000);
+    toast(e.message === 'provider_and_stufe_required'
+      ? 'Anbieter und Stufe sind beide nötig'
+      : `Fehler: ${e.message}`, 4000);
     return null;
   }
 }
@@ -885,10 +943,9 @@ async function screenAssets(){
 
     <div class="card">
       <div class="row">
-        <label>Stufe<select id="as_lvl">
-          <option value="">alle Stufen</option>
-          ${(content.levels || []).map(l => `<option value="${esc(l.id)}"${
-            l.id === assetLevel ? ' selected' : ''}>${esc(l.title)}</option>`).join('')}
+        <label>Prüfung<select id="as_lvl">
+          <option value="">alle Prüfungen</option>
+          ${levelOptions(content.levels || [], assetLevel)}
         </select></label>
       </div>
     </div>
@@ -964,9 +1021,8 @@ async function screenImport(){
 
     <div class="card">
       <div class="row">
-        <label>Stufe<select id="i_lvl">
-          ${c.levels.map(l => `<option value="${esc(l.id)}"${
-            l.id === importLevel ? ' selected' : ''}>${esc(l.title)}</option>`).join('')}
+        <label>Prüfung<select id="i_lvl">
+          ${levelOptions(c.levels, importLevel)}
         </select></label>
         <label style="flex:2">Kennung des Tests
           <input id="i_slug" placeholder="modell-a2-01"></label>
