@@ -256,6 +256,66 @@ try {
   const tbl = await page.textContent('table');
   check('الجدول بيعرض «2× frei»', /2×\s*frei/.test(tbl));
 
+  // ---- إنشاء ستوفة من المنتقي مباشرة ----
+  // كان لازم المستخدم يروح للإنهالته يعمل الستوفة ويرجع. الخيار الأخير
+  // بالمنتقي بيعملها بمكانها. الفحص: الخيار موجود بكل منتقي، والستوفة
+  // بتوصل للقاعدة، وبتنعمل مخفية (نشرها فاضية بتوصّل ستوفة بلا امتحانات).
+  await page.evaluate(() => document.querySelector('[data-tab="import"]').click());
+  await page.waitForSelector('#i_lvl');
+  check('★ خيار «neue Stufe» بمنتقي الاستيراد',
+        (await page.locator('#i_lvl option[value="__neu__"]').count()) === 1);
+
+  const answers = ['a9', 'telc Deutsch A9'];
+  const onDialog = d => d.accept(answers.shift() ?? '');
+  page.on('dialog', onDialog);
+  await page.selectOption('#i_lvl', '__neu__');
+  await page.waitForTimeout(1500);
+
+  page.off('dialog', onDialog);
+  const newLvl = sql(`select id||'/'||title||'/'||published from levels where id='a9';`);
+  check(`★ الستوفة انعملت من المنتقي (${newLvl})`,
+        newLvl === 'a9/telc Deutsch A9/false');
+  check('وانختارت بعد الإنشاء',
+        (await page.locator('#i_lvl').inputValue()) === 'a9');
+
+  await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
+  await page.waitForSelector('#c_lvl');
+  check('★ ونفس الخيار بمنتقي الأكواد',
+        (await page.locator('#c_lvl option[value="__neu__"]').count()) === 1);
+
+  // ---- الإنهالته: تصفية وتعديل ----
+  await page.evaluate(() => document.querySelector('[data-tab="content"]').click());
+  await page.waitForSelector('#t_lvl');
+  const allTests = await page.locator('[data-tedit]').count();
+  check(`كل الامتحانات ظاهرة (${allTests})`, allTests > 0);
+
+  await page.selectOption('#t_lvl', 'a1');
+  await page.waitForTimeout(400);
+  const a1Tests = await page.locator('[data-tedit]').count();
+  check(`★ التصفية بالستوفة بتشتغل (a1: ${a1Tests})`, a1Tests < allTests);
+
+  // «bearbeiten» لازم يفتح المحرّر بنفس الستوفة ونفس الاسم — لو اختلف
+  // واحد منهن، الحفظ بيعمل امتحان جديد بدل ما يستبدل هاد.
+  // منرجّع التصفية لكل الستوفات: a1 لسا بلا امتحانات، ولف الفحص جوّا
+  // شرط بيخلّيه ينجح بصمت لما ما يكون في شي يُضغط.
+  await page.selectOption('#t_lvl', '');
+  await page.waitForTimeout(400);
+  await page.locator('[data-tedit]').first().click();
+  await page.waitForSelector('#i_text');
+  await page.waitForTimeout(1200);
+  const lvl  = await page.locator('#i_lvl').inputValue();
+  const slug = await page.locator('#i_slug').inputValue();
+  const txt  = await page.locator('#i_text').inputValue();
+  check(`★ التعديل فتح المحرّر بالستوفة والاسم (${lvl}/${slug})`,
+        lvl === 'b1' && /^modell-/.test(slug));
+  check('★ والنص طالع بصيغة القالب',
+        /^# /.test(txt) && /### Teil:/.test(txt) && /Lösung:/.test(txt));
+  const st = await page.locator('.stat b').allTextContents();
+  check(`★ والمعاينة انفحصت لحالها (${st.join('/')})`,
+        st[1] === '9' && Number(st[2]) > 40);
+
+  await page.selectOption('#t_lvl', '').catch(() => {});
+
   // ---- الملفات: رفع من اللوحة ----
   // الرفع الحقيقي بده Storage شغّال، وما عندنا هون. يلي منفحصه إنو
   // الشاشة بتعرف شو ناقص وإنها بتربط اسم الملف بالقسم قبل الرفع —

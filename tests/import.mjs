@@ -67,6 +67,15 @@ try {
   check('حالة المسوّدة صارت applied',
         psql(`select status from imports where id='${impId}';`) === 'applied');
 
+  // بصمة المحتوى قبل أي تعديل — للمقارنة بعد دورة التحرير
+  const sigBefore = psql(`select md5(string_agg(x, '|' order by x)) from (
+      select i.item_id || '»' || coalesce(i.text,'') || '»' ||
+             coalesce(ia.answer,'') || '»' || coalesce(ia.explanation,'') as x
+        from items i join sections s on s.id = i.section_id
+        join tests t on t.id = s.test_id
+        left join item_answers ia on ia.item_id = i.id
+       where t.slug = 'modell-a2-01') q;`);
+
   // ---- ٤) الحلول بالجدول المقفول ----
   const inItems = psql(`select count(*) from items i join sections s on s.id=i.section_id
     join tests t on t.id=s.test_id where t.slug='modell-a2-01'
@@ -185,6 +194,43 @@ try {
   check('★ القالب الفاضي بينبّه على الخانات الفاضية', holes.length === 1);
   check('القالب المعبّى ما بينبّه ولا خانة',
         mp.warnings.filter(w => /nicht ausgefüllt/.test(w)).length === 0);
+
+  // ---- ١٣) التعديل: قاعدة ← نص ← تعديل ← قاعدة ----
+  // هاد أخطر مسار بالنظام: الاستيراد بيبدّل الأقسام كلها، فأي شي ما
+  // بيرجع من admin_test_doc بينمحي. لازم الدورة تكون بلا فقدان.
+  const tid2 = psql(`select id from tests where slug='modell-a2-01';`);
+  const doc2 = JSON.parse(asRole(ADMIN, `select admin_test_doc('${tid2}');`));
+  const raw2 = M.serialize(doc2);
+  const re2  = M.parse(raw2);
+  check(`القراءة رجوعاً: ${re2.counts.sections} قسم، ${re2.counts.items} سؤال، `
+      + `${re2.counts.answers} حل، ${re2.warnings.length} تحذير`,
+        re2.counts.sections === 9 && re2.counts.items === 61
+        && re2.counts.answers === 60 && re2.warnings.length === 0);
+
+  const imp2 = psql(`insert into imports (level_id, raw_text, parsed, status, created_by)
+    values ('a2', $raw$${raw2.replace(/\$/g,'')}$raw$,
+            $doc$${JSON.stringify(re2.test)}$doc$::jsonb, 'parsed', '${ADMIN}') returning id;`);
+  const back = JSON.parse(asRole(ADMIN,
+    `select admin_apply_import('${imp2}','a2','modell-a2-01', true);`));
+  check(`إعادة الحفظ: ${back.items} سؤال، ${back.answers} حل`,
+        back.ok && back.items === 61 && back.answers === 60);
+
+  // ★ نفس الأسئلة ونفس الحلول حرف بحرف
+  const sig = () => psql(`select md5(string_agg(x, '|' order by x)) from (
+      select i.item_id || '»' || coalesce(i.text,'') || '»' ||
+             coalesce(ia.answer,'') || '»' || coalesce(ia.explanation,'') as x
+        from items i join sections s on s.id = i.section_id
+        join tests t on t.id = s.test_id
+        left join item_answers ia on ia.item_id = i.id
+       where t.slug = 'modell-a2-01') q;`);
+  const after = sig();
+  check('★ دورة التعديل ما غيّرت ولا سؤال ولا حل', after === sigBefore);
+
+  // والإعدادات يلي بتسافر جوّا config
+  const cfg2 = psql(`select count(*) from sections s join tests t on t.id=s.test_id
+    where t.slug='modell-a2-01' and (s.config ? 'bank' or s.config ? 'passages'
+      or s.config ? 'brief' or s.config ? 'bankImage');`);
+  check(`★ وإعدادات الأقسام (بنوك، نصوص، رسالة) نجت (${cfg2} قسم)`, Number(cfg2) >= 5);
 
   // ---- ١٣) التدقيق ----
   const log = psql(`select count(*) from admin_audit_log

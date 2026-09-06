@@ -374,6 +374,8 @@ function userDialog(u){
       b.dataset.st === 'revoked' ? 'Abo gesperrt' : 'Abo entsperrt').then(close));
 }
 
+let codeLevel = '';
+
 async function screenCodes(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
   const [codes, content] = await Promise.all([
@@ -400,8 +402,8 @@ async function screenCodes(){
         <label>Anzahl<input id="c_n" type="number" value="5" min="1" max="200"></label>
         <label>Stufe<select id="c_lvl">
           ${levels.map(l => `<option value="${esc(l.id)}" data-live="${l.live}"
-            data-pub="${l.published ? 1 : 0}">${esc(l.title)}${
-            l.published ? '' : ' (versteckt)'}</option>`).join('')
+            data-pub="${l.published ? 1 : 0}"${l.id === codeLevel ? ' selected' : ''}
+            >${esc(l.title)}${l.published ? '' : ' (versteckt)'}</option>`).join('')
             || '<option value="">— zuerst eine Stufe anlegen —</option>'}
         </select></label>
         <label>Art<select id="c_kind">
@@ -519,6 +521,7 @@ async function screenCodes(){
     }
   };
 
+  wireNewLevel(sel, id => { if (id) codeLevel = id; screenCodes(); });
   sel.onchange     = () => { fillTests(); showHint(); };
   kind.onchange    = showHint;
   tsel.onchange    = showHint;
@@ -588,9 +591,14 @@ async function screenAudit(){
 /* ============ الإنشاء: مستويات، امتحانات، مراجع ============ */
 let contentCache = null;
 
+let contentLevel = '';
+
 async function screenContent(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
   const c = contentCache = await rpc('admin_content');
+  // مرشّح الستوفة بينطبق هون بالعميل: admin_content بترجّع كل شي مرة
+  // وحدة، والقوائم صغيرة — نداء تاني لكل تبديل مو مستاهل.
+  const tests = (c.tests || []).filter(t => !contentLevel || t.level_id === contentLevel);
 
   const lvlRow = l => `<tr>
     <td class="mono">${esc(l.id)}</td>
@@ -610,6 +618,8 @@ async function screenContent(){
     <td>${t.answers}</td>
     <td><span class="pill ${t.published ? 'ok' : ''}">${t.published ? 'online' : 'Entwurf'}</span></td>
     <td style="white-space:nowrap">
+      <button class="btn sm" data-tedit="${esc(t.id)}"
+        title="Im Import-Editor öffnen">bearbeiten</button>
       <button class="btn sm grey" data-tpub="${esc(t.id)}" data-v="${t.published ? 0 : 1}">
         ${t.published ? 'verstecken' : 'online'}</button>
       <button class="btn sm danger" data-tdel="${esc(t.id)}" data-n="${esc(t.title)}">löschen</button>
@@ -644,13 +654,28 @@ async function screenContent(){
     </div>
 
     <h2>Modelltests</h2>
-    <div class="card"><div class="wrap"><table>
-      <tr><th>Stufe</th><th>Test</th><th>Teile / Aufg.</th><th>Lösungen</th><th>Status</th><th></th></tr>
-      ${c.tests.map(testRow).join('') || '<tr><td colspan="6" class="empty">Noch keine Tests</td></tr>'}
-    </table></div></div>
+    <div class="card">
+      <div class="row">
+        <label>Stufe<select id="t_lvl">
+          <option value="">alle Stufen</option>
+          ${c.levels.map(l => `<option value="${esc(l.id)}"${
+            l.id === contentLevel ? ' selected' : ''}>${esc(l.title)}</option>`).join('')}
+        </select></label>
+        <p class="sub" style="flex:2;align-self:flex-end;margin:0">
+          <b>bearbeiten</b> öffnet den Test im Import-Editor — dieselbe
+          Vorlagensprache wie beim Anlegen. Speichern ersetzt ihn.</p>
+      </div>
+      <div class="wrap" style="margin-top:12px"><table>
+        <tr><th>Stufe</th><th>Test</th><th>Teile / Aufg.</th><th>Lösungen</th><th>Status</th><th></th></tr>
+        ${tests.map(testRow).join('')
+          || '<tr><td colspan="6" class="empty">Keine Tests in dieser Stufe</td></tr>'}
+      </table></div>
+    </div>
 
     <h2>Lesematerial</h2>
-    <p class="sub">Texte, die im Kurs jederzeit lesbar sind — kein Test, keine Zeit.</p>
+    <p class="sub">Kein Modelltest: freie Texte, die im Kurs jederzeit lesbar
+      sind — Wortschatzlisten, Grammatik, Prüfungstipps. Ohne Uhr, ohne
+      Punkte, ohne Lösung. Wer die Stufe abonniert hat, sieht sie.</p>
     <div class="card">
       <div class="row">
         <label>Stufe<select id="r_lvl">
@@ -675,6 +700,20 @@ async function screenContent(){
     </div>`;
 
   const $ = id => document.getElementById(id);
+
+  $('t_lvl').onchange = e => { contentLevel = e.target.value; screenContent(); };
+
+  /* التعديل: القراءة رجوعاً من القاعدة، تحويل لنص القالب، وفتح المحرّر.
+     نفس اللغة يلي بتنكتب فيها الامتحانات الجديدة — ما في صيغة تانية
+     تتعلّميها، والحفظ بيستبدل الامتحان على نفس الـslug. */
+  app.querySelectorAll('[data-tedit]').forEach(b => b.onclick = async () => {
+    const t = (c.tests || []).find(x => x.id === b.dataset.tedit);
+    const doc = await act(b, () => rpc('admin_test_doc', { p_test_id: b.dataset.tedit }));
+    if (!doc) return;
+    importState = { id: null, doc: null, raw: '' };
+    pendingEdit = { level: t.level_id, slug: t.slug, text: Markup.serialize(doc) };
+    show('import');
+  });
 
   $('l_go').onclick = async e => {
     const id = $('l_id').value.trim().toLowerCase();
@@ -732,6 +771,48 @@ async function screenContent(){
 
 /* ============ الاستماع ============
    ثلث الامتحان. بدون ملفات صوت هالقسم مراجعة مو تدريب. */
+/* منتقي الستوفة بيعرض يلي موجود بس، فالمستخدم يلي بده A1 وما عنده
+   بيوقف. الخيار الأخير بيفتح سؤالين وبيعمل الستوفة على طول، بلا ما
+   يترك الشاشة يلي هو فيها. */
+const NEW_LEVEL = '__neu__';
+const newLevelOption = '<option value="' + NEW_LEVEL + '">+ neue Stufe anlegen …</option>';
+
+async function askNewLevel(){
+  const id = (prompt('Kennung der Stufe (Kleinbuchstaben, z. B. a2):') || '')
+    .trim().toLowerCase();
+  if (!id) return null;
+  if (!/^[a-z][a-z0-9_]{0,15}$/.test(id)){
+    toast('Kennung: Kleinbuchstaben und Ziffern, z. B. a2');
+    return null;
+  }
+  const title = (prompt('Titel der Stufe:', 'telc Deutsch ' + id.toUpperCase())
+                 || '').trim() || id.toUpperCase();
+  try {
+    // مخفية أول ما تنعمل: ما في محتوى فيها بعد، ونشرها فاضية بيوصّل
+    // للطالب ستوفة بلا امتحانات
+    await rpc('admin_upsert_level',
+              { p_id: id, p_title: title, p_sort: 0, p_published: false });
+    toast(`Stufe „${title}" angelegt (noch versteckt)`);
+    return id;
+  } catch (e){
+    toast(`Fehler: ${e.message}`, 4000);
+    return null;
+  }
+}
+
+/* بيربط منتقي بالخيار: لما ينختار، بيسأل وبيعيد رسم الشاشة */
+function wireNewLevel(sel, redraw){
+  if (!sel) return;
+  sel.insertAdjacentHTML('beforeend', newLevelOption);
+  const prev = sel.value;
+  sel.addEventListener('change', async () => {
+    if (sel.value !== NEW_LEVEL) return;
+    sel.value = prev;
+    const id = await askNewLevel();
+    redraw(id);
+  });
+}
+
 /* ============ الملفات: صور وصوت ============ */
 /* مكان واحد لكل ملف بيحتاجه امتحان. الرفع بيصير من هون مباشرة — ما عاد
    يلزم مفتاح service_role ولا سكربت بايثون على الجهاز.
@@ -867,6 +948,10 @@ const SAMPLE = VORLAGE_BEISPIEL.split('\n').filter(l => !l.startsWith('//'))
   .join('\n').split('### Teil: lv2')[0].trim();
 
 let importState = { id: null, doc: null, raw: '' };
+/* لما تضغطي «bearbeiten» بالإنهالته، منخزّن الامتحان هون ومنقفز لشاشة
+   الاستيراد — هي يلي بترسم المحرّر، فما بينفع نملا الحقول قبلها. */
+let pendingEdit = null;
+let importLevel = '';
 
 async function screenImport(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
@@ -880,8 +965,8 @@ async function screenImport(){
     <div class="card">
       <div class="row">
         <label>Stufe<select id="i_lvl">
-          ${c.levels.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')
-            || '<option value="">— zuerst eine Stufe anlegen —</option>'}
+          ${c.levels.map(l => `<option value="${esc(l.id)}"${
+            l.id === importLevel ? ' selected' : ''}>${esc(l.title)}</option>`).join('')}
         </select></label>
         <label style="flex:2">Kennung des Tests
           <input id="i_slug" placeholder="modell-a2-01"></label>
@@ -932,7 +1017,24 @@ async function screenImport(){
     </table></div></div>`;
 
   const $ = id => document.getElementById(id);
-  const fill = txt => { $('i_text').value = txt; $('i_text').scrollTop = 0; $('i_parse').click(); };
+  const fill = txt => {
+    $('i_text').value = txt; $('i_text').scrollTop = 0;
+    runParse(txt);
+  };
+
+  wireNewLevel($('i_lvl'), id => { if (id) importLevel = id; screenImport(); });
+
+  // امتحان جاي للتعديل: الستوفة والاسم لازم يكونوا نفسهن، وإلا الحفظ
+  // بيعمل امتحان تاني بدل ما يستبدل هاد.
+  if (pendingEdit){
+    const { level, slug, text } = pendingEdit;
+    pendingEdit = null;
+    importLevel = level;
+    $('i_lvl').value = level;
+    $('i_slug').value = slug;
+    fill(text);
+    toast(`„${slug}" geladen — Speichern ersetzt den Test`);
+  }
   // المثال معبّى وبيمرق بلا تحذير — بيبيّن الشكل الصح.
   $('i_sample').onclick = () => fill(VORLAGE_BEISPIEL);
   // القالب الفاضي فيه كل الـ٦١ سؤال وكل خاناته <…>. المحلّل بينبّه على
