@@ -256,6 +256,36 @@ try {
   const tbl = await page.textContent('table');
   check('الجدول بيعرض «2× frei»', /2×\s*frei/.test(tbl));
 
+  // ---- الملفات: رفع من اللوحة ----
+  // الرفع الحقيقي بده Storage شغّال، وما عندنا هون. يلي منفحصه إنو
+  // الشاشة بتعرف شو ناقص وإنها بتربط اسم الملف بالقسم قبل الرفع —
+  // هاد الجزء يلي بينكسر بصمت لو انعكس ترتيبه.
+  await page.evaluate(() => document.querySelector('[data-tab="assets"]').click());
+  await page.waitForSelector('#as_lvl');
+  const asTxt = await page.textContent('#app');
+  check('شاشة الملفات فيها الصور والهörtexte',
+        /Bilder/.test(asTxt) && /Hörtexte/.test(asTxt));
+
+  const rowsN = await page.locator('[data-pick]').count();
+  check(`فيها صفوف للرفع (${rowsN})`, rowsN > 0);
+
+  // أقسام الاستماع بلا ملف لازم تطلع باسم مقترح قابل للتعديل
+  const nameN = await page.locator('[data-name]').count();
+  check(`★ أقسام الاستماع إلها حقل اسم (${nameN})`, nameN > 0);
+  const firstName = await page.locator('[data-name]').first().inputValue();
+  check(`الاسم المقترح شكله ملف صوت (${firstName})`, /\.mp3$/.test(firstName));
+
+  // التصفية بالستوفة
+  await page.selectOption('#as_lvl', 'a1');
+  await page.waitForTimeout(400);
+  check('★ التصفية بالستوفة بتشتغل',
+        (await page.locator('[data-pick]').count()) < rowsN);
+  await page.selectOption('#as_lvl', '');
+  await page.waitForTimeout(400);
+
+  await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
+  await page.waitForSelector('#c_kind');
+
   // ---- الكود التجريبي ----
   // زرّ واحد بيبدّل بين يومين نموذجين: كامل بالأيام، تجريبي بالساعات
   // وامتحان محدّد. لازم النداء يوصل بالقيم الصح، وإلا الكود «التجريبي»

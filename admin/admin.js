@@ -82,6 +82,29 @@ async function api(path, opts = {}, retry = true){
 const rpc = (fn, args) =>
   api(`rpc/${fn}`, { method:'POST', body: JSON.stringify(args || {}) });
 
+/* رفع ملف لـStorage بجلسة الأدمن نفسها.
+   ما بده مفتاح service_role: سياسة 0015 بتسمح الكتابة لـis_admin() وبالدلوين
+   بس. x-upsert بيخلّي الرفع التاني بيستبدل بدل ما يفشل بـ409. */
+async function upload(bucket, path, file, retry = true){
+  if (!session) throw new Error('no_session');
+  const r = await fetch(`${BASE}/storage/v1/object/${bucket}/${path}`, {
+    method: 'POST',
+    headers: { apikey: KEY, authorization: `Bearer ${session.access_token}`,
+               'x-upsert': 'true',
+               'content-type': file.type || 'application/octet-stream' },
+    body: file
+  });
+  if (r.status === 401 && retry){
+    if (await refresh()) return upload(bucket, path, file, false);
+    throw new Error('no_session');
+  }
+  if (!r.ok){
+    const j = await r.json().catch(() => null);
+    throw new Error(j?.message || j?.error || `Upload fehlgeschlagen (${r.status})`);
+  }
+  return true;
+}
+
 /* نلفّ كل إجراء: بيوقف الزرّ، بيعرض الخطأ، وبيعيد الرسم لما يخلص */
 async function act(btn, fn, okMsg){
   const old = btn && btn.textContent;
@@ -709,55 +732,131 @@ async function screenContent(){
 
 /* ============ الاستماع ============
    ثلث الامتحان. بدون ملفات صوت هالقسم مراجعة مو تدريب. */
-async function screenAudio(){
-  app.innerHTML = '<div class="empty">Lädt …</div>';
-  const rows = await rpc('admin_audio_status');
-  const missing = rows.filter(r => !r.audio).length;
+/* ============ الملفات: صور وصوت ============ */
+/* مكان واحد لكل ملف بيحتاجه امتحان. الرفع بيصير من هون مباشرة — ما عاد
+   يلزم مفتاح service_role ولا سكربت بايثون على الجهاز.
 
-  app.innerHTML = `
-    <h1>Hörtexte</h1>
-    <p class="sub">Ein Drittel jeder Prüfung ist Hören. Ohne Datei zeigt der
-      Abschnitt nur das Transkript — zum Nachlesen, nicht zum Üben.</p>
-    ${missing ? `<div class="stats"><div class="stat warn">
-      <b>${missing}</b><span>Abschnitte ohne Hörtext</span></div>
-      <div class="stat"><b>${rows.length - missing}</b><span>mit Hörtext</span></div>
-    </div>` : ''}
+   الاسم بالدلو لازم يطابق يلي بـconfig حرف بحرف: ملف مرفوع باسم تاني
+   ما بيظهر للطالب أبداً، وسياسة Storage كمان ما بتلاقيه. فالجدول
+   بيعرض الاسم المتوقّع، والرفع بيستعمله — مو اسم الملف يلي عالجهاز. */
+let assetLevel = '';
+
+async function screenAssets(){
+  app.innerHTML = '<div class="empty">Lädt …</div>';
+  const [rows, content] = await Promise.all([
+    rpc('admin_assets', { p_level_id: assetLevel || null }),
+    rpc('admin_content')
+  ]);
+
+  const img = rows.filter(r => r.kind === 'image');
+  const aud = rows.filter(r => r.kind === 'audio');
+  const fehlt = rows.filter(r => !r.uploaded).length;
+
+  /* الصوت بده سطر أطول من الصورة: اسم الملف قابل للتعديل (القسم ممكن
+     يكون لسا ما إله ملف مربوط) وعدد الوجيدات. الصورة اسمها جاي من
+     الاستيراد ومو قابل للتعديل هون — تغييره لازم يصير بالنص. */
+  const block = (title, list, bucket, hint) => `
+    <h2>${title}</h2>
     <div class="card">
-      <p class="sub" style="margin-top:0">Dateien zuerst hochladen:
-        <code>python3 tools/upload_audio.py audio/</code> — danach hier den
-        Dateinamen eintragen.</p>
-      <div class="wrap"><table>
-        <tr><th>Test</th><th>Teil</th><th>Aufg.</th><th>Datei</th>
-            <th>Wiedergaben</th><th></th></tr>
-        ${rows.map(r => `<tr>
+      <p class="sub" style="margin-top:0">${hint}</p>
+      ${list.length ? `<div class="wrap"><table>
+        <tr><th>Test</th><th>Teil</th><th>Dateiname</th>
+            ${bucket === 'exam-audio' ? '<th>Wdh.</th>' : ''}
+            <th>Status</th><th></th></tr>
+        ${list.map(r => `<tr>
           <td>${esc(r.test_title)}
-            <div class="mono" style="color:var(--muted);font-size:12px">${esc(r.test)}</div></td>
+            <div class="mono" style="color:var(--muted);font-size:12px">${esc(r.slug)}</div></td>
           <td class="mono">${esc(r.section)}</td>
-          <td>${r.items}</td>
-          <td><input data-path="${esc(r.section_id)}" value="${esc(r.audio || '')}"
-                placeholder="m01-hv1.mp3" style="min-width:150px"></td>
-          <td><input data-plays="${esc(r.section_id)}" type="number" min="1" max="5"
-                value="${r.plays}" style="width:70px"></td>
+          <td>${bucket === 'exam-audio'
+            ? `<input class="mono" data-name="${esc(r.section_id)}"
+                 value="${esc(r.path)}" style="min-width:170px;font-size:12px">`
+            : `<span class="mono" style="font-size:12px">${esc(r.path)}</span>`}</td>
+          ${bucket === 'exam-audio'
+            ? `<td><input data-plays="${esc(r.section_id)}" type="number" min="1" max="5"
+                 value="${r.plays}" style="width:64px"></td>` : ''}
+          <td><span class="pill ${r.uploaded ? 'ok' : r.assigned ? 'warn' : ''}">${
+            r.uploaded ? 'da' : r.assigned ? 'fehlt' : 'offen'}</span></td>
           <td style="white-space:nowrap">
-            <button class="btn sm" data-save="${esc(r.section_id)}">Speichern</button>
-            ${r.audio ? `<button class="btn sm grey" data-clear="${esc(r.section_id)}">leeren</button>` : ''}
-          </td></tr>`).join('') ||
-          '<tr><td colspan="6" class="empty">Keine Hörverstehen-Abschnitte</td></tr>'}
-      </table></div>
+            <input type="file" hidden
+                   accept="${bucket === 'exam-audio' ? 'audio/*' : 'image/*'}"
+                   data-file="${esc(r.section_id)}" data-bucket="${bucket}"
+                   data-path="${esc(r.path)}">
+            <button class="btn sm ${r.uploaded ? 'grey' : ''}"
+                    data-pick="${esc(r.section_id)}">${
+              r.uploaded ? 'ersetzen' : 'hochladen'}</button>
+            ${bucket === 'exam-audio' && r.assigned
+              ? `<button class="btn sm grey" data-unlink="${esc(r.section_id)}"
+                   title="Verknüpfung lösen">trennen</button>` : ''}
+          </td></tr>`).join('')}
+      </table></div>` : '<p class="empty">Nichts nötig</p>'}
     </div>`;
 
-  app.querySelectorAll('[data-save]').forEach(b => b.onclick = async () => {
-    const id = b.dataset.save;
-    const path = app.querySelector(`[data-path="${id}"]`).value.trim();
-    const plays = Number(app.querySelector(`[data-plays="${id}"]`).value) || 1;
-    await act(b, () => rpc('admin_set_section_audio', {
-      p_section_id: id, p_path: path || null, p_plays: plays }), 'Gespeichert');
-    screenAudio();
+  app.innerHTML = `
+    <h1>Dateien</h1>
+    <p class="sub">Bilder der Anzeigen und die Hörtexte. Ohne sie fehlt dem
+      Kurs ein Teil der Prüfung — Leseverstehen 3 bleibt leer, Hörverstehen
+      lässt sich nur nachlesen.</p>
+
+    <div class="stats">
+      <div class="stat ${fehlt ? 'warn' : 'ok'}"><b>${fehlt}</b><span>fehlen</span></div>
+      <div class="stat"><b>${rows.length - fehlt}</b><span>hochgeladen</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <label>Stufe<select id="as_lvl">
+          <option value="">alle Stufen</option>
+          ${(content.levels || []).map(l => `<option value="${esc(l.id)}"${
+            l.id === assetLevel ? ' selected' : ''}>${esc(l.title)}</option>`).join('')}
+        </select></label>
+      </div>
+    </div>
+
+    ${block('Bilder', img, 'exam-images',
+      'Die Anzeigenseite aus der PDF, als Bild. Der Dateiname steht im Test ' +
+      'unter <code>Bild:</code> — er wird beim Hochladen übernommen, egal wie ' +
+      'die Datei auf Ihrem Rechner heißt.')}
+
+    ${block('Hörtexte', aud, 'exam-audio',
+      'Die Aufnahme zum Abschnitt. Wie oft sie abgespielt werden darf, ' +
+      'steht im Test unter <code>Wiedergaben:</code>.')}`;
+
+  document.getElementById('as_lvl').onchange = e => {
+    assetLevel = e.target.value; screenAssets();
+  };
+
+  app.querySelectorAll('[data-pick]').forEach(b => b.onclick = () =>
+    app.querySelector(`[data-file="${b.dataset.pick}"]`).click());
+
+  app.querySelectorAll('[data-file]').forEach(inp => inp.onchange = async () => {
+    const file = inp.files && inp.files[0];
+    if (!file) return;
+    const id  = inp.dataset.file;
+    const btn = app.querySelector(`[data-pick="${id}"]`);
+    // اسم الملف بالدلو هو يلي بالحقل، مو اسم الملف عالجهاز — لازم يطابق
+    // يلي بـconfig حرف بحرف وإلا الطالب ما بيشوفه.
+    const nameEl = app.querySelector(`[data-name="${id}"]`);
+    const path = (nameEl ? nameEl.value.trim() : inp.dataset.path);
+    if (!path) return toast('Zuerst einen Dateinamen eintragen');
+    try {
+      await act(btn, async () => {
+        // للصوت: نربط المسار بالقسم أول، وإلا بيوصل الملف للدلو وما حدا
+        // بيعرف إنه إله
+        if (inp.dataset.bucket === 'exam-audio'){
+          const plays = Number(app.querySelector(`[data-plays="${id}"]`).value) || 1;
+          await rpc('admin_set_section_audio',
+                    { p_section_id: id, p_path: path, p_plays: plays });
+        }
+        await upload(inp.dataset.bucket, path, file);
+      }, 'Hochgeladen');
+    } catch { /* act أصلاً بيعرض الخطأ */ }
+    screenAssets();
   });
-  app.querySelectorAll('[data-clear]').forEach(b => b.onclick = async () => {
-    await act(b, () => rpc('admin_set_section_audio', {
-      p_section_id: b.dataset.clear, p_path: null, p_plays: 1 }), 'Entfernt');
-    screenAudio();
+
+  app.querySelectorAll('[data-unlink]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_set_section_audio',
+      { p_section_id: b.dataset.unlink, p_path: null, p_plays: 1 }), 'Getrennt');
+    screenAssets();
   });
 }
 
@@ -934,7 +1033,7 @@ async function saveImport(btn, status){
 
 /* ============ التشغيل ============ */
 const TABS = { home: screenHome, users: screenUsers, codes: screenCodes,
-               content: screenContent, audio: screenAudio,
+               content: screenContent, assets: screenAssets,
                import: screenImport, audit: screenAudit };
 
 async function show(name){

@@ -59,7 +59,12 @@ The buckets and their read policy come from `0013_storage.sql`, which
 > file to the level that references it, so a B1 image is unreachable for an
 > A1 subscriber.
 
-The Leseverstehen 3 pages are exam content, so they go in a **private** bucket:
+**The panel can do this for you.** Adminpanel → **Dateien** lists every file
+an exam needs, marks what is missing, and uploads straight from the browser
+under your admin session — no `service_role` key on your machine, no script.
+It also names the file for you, so it always matches what the exam expects.
+
+The script below still works and is faster for the initial 16 at once:
 
 ```bash
 export SUPABASE_URL=https://xxxxxxxx.supabase.co

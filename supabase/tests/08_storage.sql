@@ -17,6 +17,11 @@ insert into auth.users (id) values
   ('dddddddd-0000-0000-0000-000000000001'),   -- مشترك b1
   ('dddddddd-0000-0000-0000-000000000002'),   -- مشترك a1 بس
   ('dddddddd-0000-0000-0000-000000000003');   -- بلا اشتراك
+insert into auth.users (id) values ('dddddddd-0000-0000-0000-00000000000a')
+  on conflict do nothing;
+insert into profiles (id, is_admin) values
+  ('dddddddd-0000-0000-0000-00000000000a', true)
+  on conflict (id) do update set is_admin = true;
 insert into profiles (id) values
   ('dddddddd-0000-0000-0000-000000000001'),
   ('dddddddd-0000-0000-0000-000000000002'),
@@ -49,6 +54,13 @@ begin
    where id = v_sec;
   insert into storage.objects (bucket_id, name) values ('exam-audio', 'm01-hv1.mp3');
 
+  -- قسم استماع تاني إله مسار بس بلا ملف: تا يكون في «ناقص» تنفحصه
+  select s.id into v_sec from sections s join tests t on t.id = s.test_id
+   where t.level_id = 'b1' and s.format = 'truefalse'
+     and not (s.config ? 'audio') limit 1;
+  update sections set config = config || '{"audio":"m01-hv2.mp3"}'::jsonb
+   where id = v_sec;
+
   -- ملف ما إله قسم بيشير إله
   insert into storage.objects (bucket_id, name) values ('exam-images', 'img/waise.jpg');
 end $seed$;
@@ -68,6 +80,8 @@ declare
   nou   uuid := 'dddddddd-0000-0000-0000-000000000003';
   v_img text;
   n     int;
+  res   jsonb;
+  adm   uuid := 'dddddddd-0000-0000-0000-00000000000a';
 begin
   -- اسم الملف بينقرا قبل ما نلبس دور authenticated: بعدها السياسة
   -- بتحكم، وبلا مستخدم محدّد بترجّع صفر صفوف
@@ -126,6 +140,50 @@ begin
   perform t_check('★ الطالب ممنوع يمسح ملف (لسا موجود)', n = 1);
   select count(*) into n from storage.objects where name = 'img/hack.jpg';
   perform t_check('★ وما انرفع ولا ملف جديد', n = 0);
+
+  ------------------------------------------------------------ الأدمن
+  -- الأدمن ما إله اشتراك، فسياسة القراءة المبنية على الاشتراك كانت
+  -- بتخفي عنه كل شي — يعني لوحته ما بتعرف شو مرفوع وشو ناقص.
+  perform set_config('request.jwt.claim.sub', adm::text, true);
+  select count(*) into n from storage.objects;
+  perform t_check(format('★ الأدمن بيشوف كل الملفات (%s) بلا اشتراك', n), n = 3);
+
+  insert into storage.objects (bucket_id, name) values ('exam-images','img/neu.jpg');
+  select count(*) into n from storage.objects where name = 'img/neu.jpg';
+  perform t_check('★ الأدمن بيقدر يرفع', n = 1);
+
+  delete from storage.objects where name = 'img/neu.jpg';
+  select count(*) into n from storage.objects where name = 'img/neu.jpg';
+  perform t_check('★ والأدمن بيقدر يمسح', n = 0);
+
+  -- ودلو تالت؟ السياسة محصورة بالاتنين
+  begin
+    insert into storage.objects (bucket_id, name) values ('anderer','x.jpg');
+    perform t_check('★ الأدمن ممنوع يكتب بدلو تاني', false);
+  exception when insufficient_privilege or foreign_key_violation then
+    perform t_check('★ الأدمن ممنوع يكتب بدلو تاني', true);
+  end;
+
+  -- ولائحة اللوحة بتقول شو ناقص
+  res := admin_assets('b1');
+  perform t_check(format('admin_assets بترجّع %s ملف مطلوب',
+                         jsonb_array_length(res)),
+                  jsonb_array_length(res) >= 2);
+  -- تصفية الستوفة لازم تشيل الصور كمان، مو الصوت بس: and بتربط أقوى من
+  -- or، فبلا قوس خارجي بالـwhere صور المستويات التانية بتضل ظاهرة.
+  perform t_check('★ تصفية الستوفة بتشيل كل شي مو من هالستوفة',
+    (select count(*) from jsonb_array_elements(admin_assets('a1')) e) = 0
+    and jsonb_array_length(admin_assets('b1')) > 0);
+
+  perform t_check('أقسام الاستماع بلا ملف ظاهرة مع اسم مقترح',
+    exists (select 1 from jsonb_array_elements(admin_assets(null)) e
+             where e->>'kind' = 'audio' and not (e->>'assigned')::boolean
+               and e->>'path' like '%.mp3'));
+
+  perform t_check('★ وبتميّز المرفوع عن الناقص',
+    exists (select 1 from jsonb_array_elements(res) e where (e->>'uploaded')::boolean)
+    and exists (select 1 from jsonb_array_elements(res) e
+                 where not (e->>'uploaded')::boolean));
 
   raise notice '';
   raise notice '  كل اختبارات التخزين نجحت ✓';
