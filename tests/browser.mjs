@@ -59,15 +59,22 @@ await page.addInitScript(fx => {
   const shape = () => ({
     id: fx.test.slug, uuid: fx.test.id, title: fx.test.title,
     subtitle: fx.test.subtitle, blocks: fx.test.blocks,
-    sections: fx.sections.map(s => ({
-      id: s.section_id, group: s.group, title: s.title, minutes: s.minutes,
-      instruction: s.instruction, format: s.format,
-      ...(s.section_id === 'hv1' ? { audio: 'test.wav', audioPlays: 2,
-          passages: [{ paragraphs: [{ t: 'TRANSKRIPT-GEHEIM', b: false }] }] } : {}),
-      items: s.items.map(i => ({ id: i.id, num: i.item_id, text: i.text,
-        ...(i.options ? { options: i.options } : {}), ...(i.meta || {}) })),
-      ...(s.config || {})
-    }))
+    sections: fx.sections.map(s => {
+      /* الصوت بينتحدّد هون بالتجهيزة، ما بينورث من قاعدة البيانات: أي
+         اختبار SQL بيربط ملف بقسم تاني كان بيرسم مشغّل ثاني بالصفحة،
+         والمنتقي بالوضع الصارم بيفشل على عنصرين. والحقن بيجي بعد نشر
+         config تا يفوز — قبله كان config بيدعسه. */
+      const { audio, audioPlays, ...cfg } = s.config || {};
+      return {
+        id: s.section_id, group: s.group, title: s.title, minutes: s.minutes,
+        instruction: s.instruction, format: s.format,
+        items: s.items.map(i => ({ id: i.id, num: i.item_id, text: i.text,
+          ...(i.options ? { options: i.options } : {}), ...(i.meta || {}) })),
+        ...cfg,
+        ...(s.section_id === 'hv1' ? { audio: 'test.wav', audioPlays: 2,
+            passages: [{ paragraphs: [{ t: 'TRANSKRIPT-GEHEIM', b: false }] }] } : {})
+      };
+    })
   });
 
   // نفس منطق submit_attempt: التصحيح من الحلول، والأسئلة ما بتحملها
@@ -284,6 +291,10 @@ await page.evaluate(() => {
 });
 await page.waitForSelector('.audio [data-play]', { timeout: 8000 });
 check('مشغّل الصوت ظهر بقسم الاستماع', true);
+// ★ مشغّل واحد بالضبط. أكتر يعني إن التجهيزة ورّثت صوت من قاعدة
+// البيانات — وهاد بيفشّل كل منتقي بالوضع الصارم تحت.
+check('★ مشغّل واحد بالضبط بالصفحة',
+      await page.locator('.audio [data-play]').count() === 1);
 check('بيقول كم مرة باقية', (await page.textContent('.audio [data-left]')).includes('2'));
 check('★ نص الاستماع المكتوب مخفي وقت الامتحان',
       !(await page.textContent('#app')).includes('TRANSKRIPT-GEHEIM'));

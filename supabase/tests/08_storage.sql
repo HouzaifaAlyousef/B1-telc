@@ -49,7 +49,8 @@ begin
 
   -- ونربط صوت بقسم استماع b1 تا نفحص الدلو التاني كمان
   select s.id into v_sec from sections s join tests t on t.id = s.test_id
-   where t.level_id = 'b1' and s.format = 'truefalse' limit 1;
+   where t.level_id = 'b1' and s.format = 'truefalse'
+   order by t.sort, s.sort limit 1;
   update sections set config = config || '{"audio":"m01-hv1.mp3"}'::jsonb
    where id = v_sec;
   insert into storage.objects (bucket_id, name) values ('exam-audio', 'm01-hv1.mp3');
@@ -57,7 +58,8 @@ begin
   -- قسم استماع تاني إله مسار بس بلا ملف: تا يكون في «ناقص» تنفحصه
   select s.id into v_sec from sections s join tests t on t.id = s.test_id
    where t.level_id = 'b1' and s.format = 'truefalse'
-     and not (s.config ? 'audio') limit 1;
+     and not (s.config ? 'audio')
+   order by t.sort, s.sort limit 1;
   update sections set config = config || '{"audio":"m01-hv2.mp3"}'::jsonb
    where id = v_sec;
 
@@ -188,5 +190,12 @@ begin
   raise notice '';
   raise notice '  كل اختبارات التخزين نجحت ✓';
 end $$;
+
+-- ★ ترجيع: هالملف بيعدّل config لأقسام البذور تا يبني حالته. اختبارات
+-- المتصفّح بتصدّر تجهيزتها من نفس القاعدة، فأي تعديل بيضل هون بيوصلها.
+-- (هيك بالضبط انكسر اختبار مشغّل الصوت: قسم تاني إله audio ← مشغّلين
+-- بالصفحة ← المنتقي الصارم بيفشل على عنصرين.)
+update sections set config = config - 'audio' - 'audioPlays'
+ where config->>'audio' in ('m01-hv1.mp3', 'm01-hv2.mp3');
 
 drop function t_check(text, boolean);
