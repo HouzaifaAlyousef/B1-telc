@@ -497,7 +497,16 @@ try {
   await page.dispatchEvent('#i_slug', 'change');
   await page.waitForTimeout(700);
   check('★ امتحان لسا ما انتشر بيشرح بدل ما يفضى',
-        /sobald der Test veröffentlicht/.test(await page.textContent('#i_files')));
+        /noch nicht veröffentlicht/.test(await page.textContent('#i_files')));
+
+  // ★ وبلا اسم كمان لازم يشرح. أول نسخة كانت تفرّغ الصندوق، فالمستخدم
+  // ما بيشوف ولا إشارة إنه في رفع ملفات أصلاً.
+  await page.fill('#i_slug', '');
+  await page.dispatchEvent('#i_slug', 'change');
+  await page.waitForTimeout(700);
+  const emptyBox = await page.textContent('#i_files');
+  check('★ وبلا اسم بيضل يشرح، ما بيفضى',
+        /Bilder und Hörtexte/.test(emptyBox) && emptyBox.trim().length > 40);
 
   // الصورة والصوت بيسافروا جوّا config مو بأعمدة — هني يلي بينضاعوا
   check('★ الصورة والصوت وصلوا للقاعدة عبر اللوحة',
@@ -508,6 +517,32 @@ try {
         sql(`select count(*) from items i join sections s on s.id=i.section_id
              join tests t on t.id=s.test_id where t.slug='probe-a1-01'
              and i.options::text like '%answer%';`) === '0');
+
+  // ---- قاعدة بيانات لسا ما انحدّثت ----
+  // اللوحة بتنرفع لـCloudflare قبل ما ينشغل setup.sql — وهاد بيصير فعلاً.
+  // لازم تقول شو لازم يعمل المستخدم، مو تطلع فاضية ولا برسالة عامة.
+  try {
+    sql('drop function if exists admin_assets(text);');
+    await page.evaluate(() => document.querySelector('[data-tab="assets"]').click());
+    await page.waitForTimeout(1200);
+    const stale = await page.textContent('#app');
+    check('★ قاعدة قديمة: شاشة الملفات بتقول شغّلي setup.sql',
+          /setup\.sql/.test(stale) && /nicht aktualisiert/.test(stale));
+
+    await page.evaluate(() => document.querySelector('[data-tab="import"]').click());
+    await page.waitForSelector('#i_slug');
+    await page.fill('#i_slug', 'probe-a1-01');
+    await pick(page, 'i_lvl', 'telc', 'telc-a1');
+    await page.dispatchEvent('#i_slug', 'change');
+    await page.waitForTimeout(900);
+    check('★ ونفس الرسالة بصندوق ملفات الاستيراد',
+          /setup\.sql/.test(await page.textContent('#i_files')));
+  } finally {
+    // نرجّعها تا ما نكسّر أي تشغيل جاي على نفس القاعدة
+    execFileSync('psql', ['-h','/tmp','-p', process.env.PGPORT || '5433','-U','postgres',
+      '-d','telc','-q','-v','ON_ERROR_STOP=1','-f','supabase/migrations/0015_admin_upload.sql'],
+      { encoding:'utf8' });
+  }
 
   // ---- الحارس: مستخدم عادي ما بيدخل ----
   await page.evaluate(() => localStorage.clear());

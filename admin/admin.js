@@ -988,6 +988,15 @@ function wireAssets(root, refresh){
   });
 }
 
+/* نداء لدالة لسا مو موجودة بالقاعدة. بيصير لما تنرفع نسخة جديدة من
+   اللوحة قبل ما ينشغل setup.sql — والرسالة العامة «Fehler beim Laden»
+   ما بتقول شو لازم تعملي. */
+const isStale = e => /schema cache|does not exist|admin_assets|admin_test_doc/i
+  .test(e && e.message || '');
+const STALE_MSG = '⚠ Die Datenbank ist noch nicht aktualisiert — bitte '
+  + '<code>supabase/setup.sql</code> im SQL-Editor ausführen. Ohne sie fehlen '
+  + 'Datei-Upload, Demo-Codes und Anbieter.';
+
 const IMG_HINT = 'Die Anzeigenseite aus der PDF, als Bild. Der Dateiname steht '
   + 'im Test unter <code>Bild:</code> — er wird beim Hochladen übernommen, egal '
   + 'wie die Datei auf Ihrem Rechner heißt.';
@@ -998,10 +1007,19 @@ let assetLevel = '';
 
 async function screenAssets(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
-  const [rows, content] = await Promise.all([
-    rpc('admin_assets', { p_level_id: assetLevel || null }),
-    rpc('admin_content')
-  ]);
+  let rows, content;
+  try {
+    [rows, content] = await Promise.all([
+      rpc('admin_assets', { p_level_id: assetLevel || null }),
+      rpc('admin_content')
+    ]);
+  } catch (e){
+    if (!isStale(e)) throw e;
+    // نفس الرسالة يلي بصفحة الاستيراد: «Fehler beim Laden» العامة ما
+    // بتقول للمستخدم شو لازم يعمل
+    app.innerHTML = `<h1>Dateien</h1><p class="sub">${STALE_MSG}</p>`;
+    return;
+  }
 
   const fehlt = rows.filter(r => !r.uploaded).length;
 
@@ -1118,22 +1136,40 @@ async function screenImport(){
      بين كل الامتحانات. بتظهر بس لما الامتحان يكون موجود بالقاعدة. */
   async function loadFiles(){
     const box  = $('i_files');
+    if (!box) return;
     const slug = $('i_slug').value.trim().toLowerCase();
     const lvl  = $('i_lvl').value;
-    if (!box) return;
-    if (!slug || !lvl){ box.innerHTML = ''; return; }
 
-    const exists = (c.tests || []).some(t => t.slug === slug && t.level_id === lvl);
-    if (!exists){
-      box.innerHTML = `<h2>Dateien</h2><p class="sub">Bilder und Hörtexte
-        erscheinen hier, sobald der Test veröffentlicht ist.</p>`;
-      return;
+    // القسم بيضل ظاهر دايماً. أول نسخة كانت تفرّغه لما ما يكون في اسم،
+    // فالمستخدم ما بيشوف ولا إشارة إنه في رفع ملفات أصلاً — وبيسأل وين هو.
+    const note = t => { box.innerHTML =
+      `<h2>Bilder und Hörtexte</h2><p class="sub">${t}</p>`; };
+
+    if (!slug || !lvl)
+      return note('Erst eine Kennung eintragen und den Test veröffentlichen — '
+                + 'danach stehen seine Bilder und Hörtexte hier, zum Hochladen.');
+
+    if (!(c.tests || []).some(t => t.slug === slug && t.level_id === lvl))
+      return note(`„${esc(slug)}" ist noch nicht veröffentlicht. `
+                + 'Nach dem Veröffentlichen erscheinen hier seine Bilder und '
+                + 'Hörtexte, zum Hochladen.');
+
+    let rows;
+    try {
+      rows = (await rpc('admin_assets', { p_level_id: lvl }))
+        .filter(r => r.slug === slug);
+    } catch (e){
+      // النداء بيفشل لو قاعدة البيانات لسا ما انحدّثت. بلا هالفحص
+      // بينهار الوعد بصمت والصندوق بيضل فاضي بلا سبب ظاهر.
+      return note(isStale(e) ? STALE_MSG : `Fehler: ${esc(e.message)}`);
     }
-    const rows = (await rpc('admin_assets', { p_level_id: lvl }))
-      .filter(r => r.slug === slug);
+
+    if (!rows.length)
+      return note(`„${esc(slug)}" braucht weder Bilder noch Hörtexte.`);
+
     const fehlt = rows.filter(r => !r.uploaded).length;
     box.innerHTML = `
-      <h2>Dateien von „${esc(slug)}"</h2>
+      <h2>Bilder und Hörtexte von „${esc(slug)}"</h2>
       <div class="stats">
         <div class="stat ${fehlt ? 'warn' : 'ok'}"><b>${fehlt}</b><span>fehlen</span></div>
         <div class="stat"><b>${rows.length - fehlt}</b><span>hochgeladen</span></div>
