@@ -381,27 +381,50 @@ async function screenCodes(){
             l.published ? '' : ' (versteckt)'}</option>`).join('')
             || '<option value="">— zuerst eine Stufe anlegen —</option>'}
         </select></label>
-        <label>Tage<select id="c_days">
+        <label>Art<select id="c_kind">
+          <option value="full" selected>Vollzugang</option>
+          <option value="demo">Demo</option>
+        </select></label>
+        <label id="c_days_l">Tage<select id="c_days">
           <option value="30" selected>30</option><option value="90">90</option>
           <option value="180">180</option><option value="365">365</option>
         </select></label>
+        <label id="c_hours_l" hidden>Stunden<input id="c_hours" type="number"
+          value="24" min="1" max="720"></label>
         <label>Aktivierungen<input id="c_uses" type="number" value="2"
           min="1" max="10" title="Wie oft der Code eingelöst werden kann"></label>
         <label style="flex:2">Notiz<input id="c_note" placeholder="z. B. Kurs März"></label>
         <button class="btn" id="c_go">Erzeugen</button>
       </div>
+
+      <!-- Nur für Demo: welche Tests der Code öffnet. Ohne Auswahl öffnet
+           er die ganze Stufe, und das ist dann kein Demo mehr. -->
+      <div class="row" id="c_tests_row" hidden style="margin-top:10px">
+        <label style="flex:1">Tests im Demo
+          <select id="c_tests" multiple size="4"></select></label>
+        <p class="sub" style="flex:1;align-self:flex-end;margin:0">
+          Mehrere mit Strg/Cmd anklicken. Korrektur und Lösungen sind dabei —
+          nur die anderen Modelltests bleiben zu.</p>
+      </div>
+
       <p class="sub" id="c_hint" style="margin:10px 0 0"></p>
       <div id="c_out"></div>
     </div>
 
     <div class="card"><div class="wrap"><table>
-      <tr><th>Code</th><th>Status</th><th>Stufen</th><th>Tage</th>
+      <tr><th>Code</th><th>Status</th><th>Stufen</th><th>Gültig</th><th>Umfang</th>
           <th>Aktivierungen</th><th>Notiz</th><th>erstellt</th><th></th></tr>
       ${codes.map(c => { const [cls, txt] = state(c); return `<tr>
         <td class="mono"><b>${esc(c.code)}</b></td>
         <td><span class="pill ${cls}">${txt}</span></td>
         <td>${esc((c.levels || []).join(', '))}</td>
-        <td>${c.duration_days}</td>
+        <td>${c.duration_days ? c.duration_days + ' Tage' : ''}${
+          c.duration_days && c.duration_hours ? ' + ' : ''}${
+          c.duration_hours ? c.duration_hours + ' Std' : ''}</td>
+        <td>${(c.test_slugs || []).length
+          ? `<span class="pill warn">Demo</span> <span class="mono"
+               style="font-size:12px">${esc(c.test_slugs.join(', '))}</span>`
+          : 'ganze Stufe'}</td>
         <td>${c.uses} / ${c.max_uses}
           ${(c.redeemers || []).length ? `<div style="color:var(--muted);font-size:12px">
             ${c.redeemers.map(x => esc(x.name || 'ohne Namen') + ' · ' + fmtDate(x.at)).join('<br>')}
@@ -414,42 +437,87 @@ async function screenCodes(){
           ${!c.revoked_at && c.uses === 0
             ? `<button class="btn sm danger" data-rev="${esc(c.id)}">sperren</button>` : ''}
         </td>
-      </tr>`; }).join('') || '<tr><td colspan="8" class="empty">Noch keine Codes</td></tr>'}
+      </tr>`; }).join('') || '<tr><td colspan="9" class="empty">Noch keine Codes</td></tr>'}
     </table></div></div>`;
 
   /* Vor dem Erzeugen sichtbar machen, was der Code öffnet — eine Stufe,
      nicht alles, und nur ihre veröffentlichten Tests. */
-  const sel = document.getElementById('c_lvl');
-  const hint = document.getElementById('c_hint');
+  const $c = id => document.getElementById(id);
+  const sel = $c('c_lvl'), hint = $c('c_hint'), kind = $c('c_kind'), tsel = $c('c_tests');
+
+  /* Die Testliste hängt an der Stufe: ein Demo-Code für B1 darf keinen
+     A1-Test anbieten. Nur veröffentlichte — ein verstecktes sieht der
+     Kurs ohnehin nicht, und der Code sähe leer aus. */
+  const testsOf = lvl => (content.tests || [])
+    .filter(t => t.level_id === lvl && t.published);
+
+  const fillTests = () => {
+    const list = testsOf(sel.value);
+    tsel.innerHTML = list.map((t, i) =>
+      `<option value="${esc(t.slug)}"${i === 0 ? ' selected' : ''}>${
+        esc(t.title)} <span>(${esc(t.slug)})</span></option>`).join('')
+      || '<option value="" disabled>— keine veröffentlichten Tests —</option>';
+  };
+
+  const isDemo = () => kind.value === 'demo';
+  const picked = () => [...tsel.selectedOptions].map(o => o.value).filter(Boolean);
+
   const showHint = () => {
+    $c('c_days_l').hidden   = isDemo();
+    $c('c_hours_l').hidden  = !isDemo();
+    $c('c_tests_row').hidden = !isDemo();
+
     const o = sel.selectedOptions[0];
     if (!o || !o.value){ hint.textContent = ''; return; }
     const live = Number(o.dataset.live), pub = o.dataset.pub === '1';
-    const days = document.getElementById('c_days').value;
-    const uses = document.getElementById('c_uses').value;
-    hint.innerHTML = pub && live
-      ? `Öffnet <b>${live} Test${live === 1 ? '' : 's'}</b> der Stufe
-         <b>${esc(o.textContent)}</b> für <b>${esc(days)} Tage</b>,
-         einlösbar auf <b>${esc(uses)} Gerät${uses === '1' ? '' : 'en'}</b>.
-         Andere Stufen bleiben zu — dafür braucht es einen zweiten Code.`
-      : `<span style="color:var(--warn)">Diese Stufe hat gerade
-         ${live ? 'keine veröffentlichten' : 'keine'} Tests — der Code
-         funktioniert, der Kurs sieht aber nichts.</span>`;
+    const uses = $c('c_uses').value;
+    const geraete = `<b>${esc(uses)} Gerät${uses === '1' ? '' : 'en'}</b>`;
+
+    if (!pub || !live){
+      hint.innerHTML = `<span style="color:var(--warn)">Diese Stufe hat gerade
+        ${live ? 'keine veröffentlichten' : 'keine'} Tests — der Code
+        funktioniert, der Kurs sieht aber nichts.</span>`;
+      return;
+    }
+    if (isDemo()){
+      const n = picked().length;
+      hint.innerHTML = n
+        ? `Öffnet <b>${n} Test${n === 1 ? '' : 's'}</b> der Stufe
+           <b>${esc(o.textContent)}</b> für <b>${esc($c('c_hours').value)} Stunden</b>,
+           einlösbar auf ${geraete}. Mit Korrektur und Lösungen.
+           Die anderen ${live - n} Test${live - n === 1 ? '' : 's'} bleiben zu.`
+        : `<span style="color:var(--warn)">Kein Test ausgewählt — bitte
+           mindestens einen anklicken.</span>`;
+    } else {
+      hint.innerHTML = `Öffnet <b>${live} Test${live === 1 ? '' : 's'}</b> der Stufe
+        <b>${esc(o.textContent)}</b> für <b>${esc($c('c_days').value)} Tage</b>,
+        einlösbar auf ${geraete}.
+        Andere Stufen bleiben zu — dafür braucht es einen zweiten Code.`;
+    }
   };
-  sel.onchange = showHint;
-  document.getElementById('c_days').onchange = showHint;
-  document.getElementById('c_uses').oninput = showHint;
-  showHint();
+
+  sel.onchange     = () => { fillTests(); showHint(); };
+  kind.onchange    = showHint;
+  tsel.onchange    = showHint;
+  $c('c_days').onchange  = showHint;
+  $c('c_hours').oninput  = showHint;
+  $c('c_uses').oninput   = showHint;
+  fillTests(); showHint();
 
   document.getElementById('c_go').onclick = async e => {
     if (!sel.value) return toast('Zuerst eine Stufe anlegen (Inhalte → Stufen)');
+    if (isDemo() && !picked().length)
+      return toast('Beim Demo mindestens einen Test auswählen');
     const made = await act(e.target, () => rpc('admin_create_codes', {
-      p_count: Number(document.getElementById('c_n').value),
+      p_count: Number($c('c_n').value),
       p_levels: [sel.value],
-      p_days: Number(document.getElementById('c_days').value),
-      p_max_devices: Number(document.getElementById('c_uses').value),
-      p_note: document.getElementById('c_note').value.trim() || null,
-      p_max_uses: Number(document.getElementById('c_uses').value)
+      // Demo zählt in Stunden, nicht in Tagen — 0 Tage + 24 Stunden
+      p_days:  isDemo() ? 0 : Number($c('c_days').value),
+      p_hours: isDemo() ? Number($c('c_hours').value) : 0,
+      p_tests: isDemo() ? picked() : null,
+      p_max_devices: Number($c('c_uses').value),
+      p_note: $c('c_note').value.trim() || null,
+      p_max_uses: Number($c('c_uses').value)
     }), 'Codes erzeugt');
     if (!made) return;
     document.getElementById('c_out').innerHTML =

@@ -256,6 +256,36 @@ try {
   const tbl = await page.textContent('table');
   check('الجدول بيعرض «2× frei»', /2×\s*frei/.test(tbl));
 
+  // ---- الكود التجريبي ----
+  // زرّ واحد بيبدّل بين يومين نموذجين: كامل بالأيام، تجريبي بالساعات
+  // وامتحان محدّد. لازم النداء يوصل بالقيم الصح، وإلا الكود «التجريبي»
+  // بيفتح المستوى كامل ٣٠ يوم وحدا بياخد كل شي ببلاش.
+  await page.selectOption('#c_kind', 'demo');
+  await page.waitForTimeout(200);
+  check('★ Demo بيبيّن الساعات وبيخفي الأيام',
+        !(await page.locator('#c_hours_l').isHidden())
+        && await page.locator('#c_days_l').isHidden());
+  check('★ وبيبيّن قائمة الامتحانات',
+        !(await page.locator('#c_tests_row').isHidden()));
+
+  const nOpts = await page.locator('#c_tests option').count();
+  check(`قائمة الامتحانات معبّاية (${nOpts})`, nOpts > 0);
+
+  await page.fill('#c_hours', '24');
+  await page.fill('#c_uses', '3');
+  await page.evaluate(() => document.getElementById('c_go').click());
+  await page.waitForTimeout(1200);
+
+  const demoRow = sql(`select duration_days||'/'||duration_hours||'/'||
+      coalesce(array_length(test_slugs,1),0)||'/'||max_uses
+    from access_codes order by created_at desc limit 1;`);
+  check(`★ الكود التجريبي انحفظ صح (${demoRow} = يوم/ساعة/امتحان/تفعيل)`,
+        demoRow === '0/24/1/3');
+
+  // ونرجّع النموذج لوضع الكامل تا ما نأثّر على الاختبارات الجاية
+  await page.selectOption('#c_kind', 'full');
+  await page.waitForTimeout(200);
+
   // ---- الاستيراد: المثال ----
   await page.evaluate(() => document.querySelector('[data-tab="import"]').click());
   await page.waitForSelector('#i_sample');

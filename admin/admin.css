@@ -57,6 +57,11 @@ button.btn,input,select,textarea{font:inherit}
 .btn.danger{background:var(--bad)}
 .ghost{background:none;border:1px solid var(--line);color:var(--muted);
   border-radius:9px;padding:7px 12px;cursor:pointer;font:inherit}
+/* Mehrfachauswahl (Demo-Tests): ohne Höhe rendert der Browser sie als
+   einzeilige Liste, in der man nichts findet. */
+select[multiple]{height:auto;padding:4px}
+select[multiple] option{padding:3px 6px;border-radius:5px}
+
 input,select,textarea{background:var(--card);color:var(--ink);
   border:1px solid var(--line);border-radius:9px;padding:9px 11px;width:100%}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}
