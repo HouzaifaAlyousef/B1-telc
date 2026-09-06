@@ -125,21 +125,25 @@ const API = (() => {
      عن الواجهة رغم إن قاعدة البيانات بتسمح فيه. */
   async function subscription(){
     const rows = await rest(
-      'subscriptions?select=levels,status,current_period_end' +
+      'subscriptions?select=levels,status,current_period_end,test_slugs' +
       '&status=eq.active&order=current_period_end.desc');
     const now = Date.now();
     const live = (rows || []).filter(s => new Date(s.current_period_end).getTime() > now);
     if (!live.length) return null;
 
-    // متى بينتهي كل مستوى — تا نقدر نقول «A1 باقيله ٣ أيام»
-    const until = {};
+    /* لكل مستوى: متى بينتهي، وشو بيفتح.
+       الصفوف مرتّبة بالأبعد أولاً، فأول ظهور للمستوى هو الاشتراك الأطول —
+       ومنه بناخد الاتنين سوا. لو أخدنا التاريخ من صف والنطاق من صف تاني،
+       بيطلع «٣٠ يوم» مع «امتحان واحد» لواحد عنده اشتراك كامل وكود تجريبي. */
+    const until = {}, scope = {};
     live.forEach(s => (s.levels || []).forEach(l => {
-      if (!until[l] || new Date(s.current_period_end) > new Date(until[l]))
-        until[l] = s.current_period_end;
+      if (until[l]) return;
+      until[l] = s.current_period_end;
+      scope[l] = s.test_slugs || null;      // null = كل امتحانات المستوى
     }));
     return {
       levels: Object.keys(until),
-      until,
+      until, scope,
       status: 'active',
       current_period_end: live[0].current_period_end   // الأبعد
     };

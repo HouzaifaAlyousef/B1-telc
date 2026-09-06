@@ -211,26 +211,65 @@ function screenHome(){
 
     const nMist = review.due;
     const lvl = S.levels.find(l => l.id === S.level);
-    // Der Umschalter erscheint nur, wenn das Abo mehr als eine Stufe abdeckt.
-    // Läuft eine Stufe bald ab, steht das am Umschalter — sonst merkt es
-    // niemand, bis der Zugang weg ist.
-    const daysLeft = id => {
-      const d = S.sub && S.sub.until && S.sub.until[id];
-      return d ? Math.ceil((new Date(d) - Date.now()) / 86400000) : null;
-    };
-    // «telc · B1». مستوى قديم بلا مؤسسة بيضل بعنوانه — ما منخترع وحدة.
+
+    /* «telc · B1». مستوى قديم بلا مؤسسة بيضل بعنوانه — ما منخترع وحدة. */
     const name = l => l.provider && l.stufe
       ? `${l.provider} · ${l.stufe}` : (l.title || l.id);
-    const picker = S.levels.length > 1 ? `<div class="levels">
-      ${S.levels.map(l => { const d = daysLeft(l.id);
-        return `<button class="lvl${l.id === S.level ? ' on' : ''}${
-          d != null && d <= 7 ? ' soon' : ''}" data-lvl="${esc(l.id)}"
-          ${d != null ? `title="noch ${d} Tage"` : ''}>${esc(name(l))}${
-          d != null && d <= 7 ? ` · ${d}T` : ''}</button>`; }).join('')}
-    </div>` : '';
+
+    /* الوقت الباقي. بالساعات لما يكون أقل من يومين: كود تجريبي مدّته
+       ٢٤ ساعة كان بيطلع «١ يوم» طول عمره، وهاد مضلّل — الطالب بيظن
+       إنه باقيله يوم كامل وهو باقيله ساعتين. */
+    const leftMs = id => {
+      const d = S.sub && S.sub.until && S.sub.until[id];
+      return d ? new Date(d) - Date.now() : null;
+    };
+    const remaining = ms => {
+      if (ms == null) return '';
+      if (ms <= 0) return 'abgelaufen';
+      if (ms >= 48 * 3600000) return `noch ${Math.ceil(ms / 86400000)} Tage`;
+      const h = Math.ceil(ms / 3600000);
+      if (h >= 1) return `noch ${h} Stunde${h === 1 ? '' : 'n'}`;
+      return 'weniger als 1 Stunde';
+    };
+    const endsFmt = id => {
+      const d = S.sub && S.sub.until && S.sub.until[id];
+      if (!d) return '';
+      const x = new Date(d);
+      return x.toLocaleDateString('de-DE',
+        { day: '2-digit', month: '2-digit', year: 'numeric' });
+    };
+
+    /* بطاقة الاشتراك: شو عنده، وكم باقيله — دايماً ظاهرة.
+       قبل، هالمعلومة كانت تطلع بس لما يكون عنده أكتر من مستوى، فالطالب
+       العادي ما كان يعرف لا شو اشترى ولا إمتى بينتهي. */
+    const aboRow = l => {
+      const ms = leftMs(l.id);
+      const h  = ms == null ? null : Math.floor(ms / 3600000);
+      const soon = h != null && h < 24 * 7;
+      const only = S.sub && S.sub.scope && S.sub.scope[l.id];
+      const n = only ? only.length
+              : (l.id === S.level ? (S.index && S.index.modelle || []).length : 0);
+      return `<button class="abo${l.id === S.level ? ' on' : ''}${
+        soon ? ' soon' : ''}" data-lvl="${esc(l.id)}"
+        ${S.levels.length > 1 ? '' : 'disabled'}>
+        <span class="grow">
+          <span class="who">${esc(name(l))}</span>
+          <span class="what">${only
+            ? `Demo · ${plural(only.length, 'Modelltest', 'Modelltests')}`
+            : `Voller Zugang${n ? ` · ${plural(n, 'Modelltest', 'Modelltests')}` : ''}`}</span>
+        </span>
+        <span class="when">
+          <b>${esc(remaining(ms))}</b>
+          <span class="bis">bis ${esc(endsFmt(l.id))}</span>
+        </span>
+      </button>`;
+    };
+    const abo = S.levels.length
+      ? `<div class="abos">${S.levels.map(aboRow).join('')}</div>` : '';
+
     app.innerHTML = `
       <h1>Willkommen 👋</h1>
-      ${picker}
+      ${abo}
       <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile
         der schriftlichen Prüfung${lvl ? ` ${esc(name(lvl))}` : ''} — mit der echten
         Prüfungszeit.</p>

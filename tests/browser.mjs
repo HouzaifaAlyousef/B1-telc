@@ -101,14 +101,17 @@ await page.addInitScript(fx => {
     configured: () => true,
     hasSession: () => true,
     ensureSession: async () => ({}),
-    // اشتراكين منفصلين: A2 بينتهي بعد ٣ أيام، B1 بعد سنين
+    // اشتراكين منفصلين: B1 كامل لسنين، A2 تجريبي بينتهي بعد ٣ أيام
     subscription: async () => state.redeemed ? {
       levels: ['b1','a2'],
       until: { b1: '2099-01-01T00:00:00Z',
                a2: new Date(Date.now() + 3*86400000).toISOString() },
+      scope: { b1: null, a2: ['modell-a2-01'] },
       current_period_end: '2099-01-01T00:00:00Z' } : null,
-    myLevels: async sub => [{ id:'b1', title:'telc Deutsch B1' },
-                            { id:'a2', title:'telc Deutsch A2' }]
+    myLevels: async sub => [{ id:'b1', title:'telc Deutsch B1',
+                              provider:'telc', stufe:'B1' },
+                            { id:'a2', title:'telc Deutsch A2',
+                              provider:'telc', stufe:'A2' }]
       .filter(l => sub.levels.includes(l.id)),
     resources: async lvl => lvl === 'b1'
       ? [{ id:'r1', title:'Wortschatz Reisen', kind:'text',
@@ -251,22 +254,56 @@ check('زرّ المراجعة ظهر', await page.locator('#drill').count() ===
 check('الزرّ بيقول كم سؤال مستحقّ',
       /\d+ Aufgaben? fällig/.test(await page.textContent('#drill')));
 
-// ---- ٩) مبدّل المستويات ----
-check('مبدّل المستويات ظهر (مستويين من اشتراكين)',
-      await page.locator('.levels .lvl').count() === 2);
-check('★ المستوى القريب من الانتهاء معلّم',
-      await page.locator('.levels .lvl.soon').count() === 1);
-check('وبيقول كم يوم باقي', (await page.textContent('.levels')).includes('3T'));
-check('المستوى الحالي معلّم', await page.locator('.levels .lvl.on').textContent() === 'telc Deutsch B1');
+// ---- ٩) بطاقة الاشتراك ----
+// كانت المعلومة تطلع بس لما يكون في أكتر من مستوى، فالطالب العادي ما
+// كان يعرف لا شو اشترى ولا إمتى بينتهي. صارت بطاقة دايمة.
+check('بطاقة الاشتراك ظهرت لكل مستوى', await page.locator('.abo').count() === 2);
+const aboTxt = await page.textContent('.abos');
+check(`★ بتقول شو عنده (${aboTxt.replace(/\s+/g,' ').trim().slice(0,60)})`,
+      /telc · B1/.test(aboTxt) && /telc · A2/.test(aboTxt));
+check('★ وبتقول كم باقي', /noch 3 Tage/.test(aboTxt));
+check('★ وبتفرّق التجريبي عن الكامل',
+      /Voller Zugang/.test(aboTxt) && /Demo · 1 Modelltest/.test(aboTxt));
+check('وبتقول لإيمتى بالتاريخ', /bis \d{2}\.\d{2}\.\d{4}/.test(aboTxt));
+// ★ عدد الامتحانات لازم يجي من المستوى الصح. S.index هي قائمة المستوى
+// المعروض حالياً، فاستعمالها لصفّ مستوى تاني بيعطي رقم غلط.
+check('★ عدد الامتحانات مو مأخوذ من المستوى الغلط',
+      (aboTxt.match(/Voller Zugang · 1 Modelltest/g) || []).length === 1
+      && !/Voller Zugang · \d+ Modelltests? *\n?.*Voller Zugang/.test(aboTxt));
+check('★ القريب من الانتهاء معلّم', await page.locator('.abo.soon').count() === 1);
+check('المستوى الحالي معلّم',
+      /telc · B1/.test(await page.locator('.abo.on').textContent()));
+
 await page.evaluate(() => document.querySelector('[data-lvl="a2"]').click());
 await page.waitForTimeout(600);
 check('التبديل لـA2 بيغيّر القائمة', await page.locator('.tile[data-id]').count() === 0);
 check('A2 صار المعلّم',
-      (await page.locator('.levels .lvl.on').textContent()).startsWith('telc Deutsch A2'));
+      /telc · A2/.test(await page.locator('.abo.on').textContent()));
 check('الاختيار انحفظ', await page.evaluate(() => localStorage.getItem('b1.level')) === '"a2"');
 await page.evaluate(() => document.querySelector('[data-lvl="b1"]').click());
 await page.waitForTimeout(600);
 check('الرجوع لـB1 بيرجّع الامتحانات', await page.locator('.tile[data-id]').count() === 1);
+
+// ★ كود تجريبي مدّته ٢٤ ساعة: «١ يوم» طول عمره بيضلّل — الطالب بيظن
+// إنه باقيله يوم كامل وهو باقيله ساعتين. تحت اليومين منعدّ بالساعات.
+await page.evaluate(() => {
+  const s = window.__MOCK_API;
+  const orig = s.subscription;
+  s.subscription = async () => ({
+    levels: ['b1'], scope: { b1: ['modell-01'] },
+    until: { b1: new Date(Date.now() + 5*3600000).toISOString() },
+    current_period_end: new Date(Date.now() + 5*3600000).toISOString() });
+  s.__orig = orig;
+});
+await page.evaluate(() => boot());
+await page.waitForSelector('.abo');
+const demoTxt = await page.textContent('.abos');
+check(`★ أقل من يومين بينعدّ بالساعات (${demoTxt.replace(/\s+/g,' ').trim().slice(0,44)})`,
+      /noch [45] Stunden/.test(demoTxt) && !/Tage/.test(demoTxt));
+check('وبيقول إنه تجريبي', /Demo · 1 Modelltest/.test(demoTxt));
+await page.evaluate(() => { window.__MOCK_API.subscription = window.__MOCK_API.__orig; });
+await page.evaluate(() => boot());
+await page.waitForSelector('.abo');
 
 // ---- ١٠) المراجع ----
 await page.evaluate(() => document.getElementById('resbtn').click());

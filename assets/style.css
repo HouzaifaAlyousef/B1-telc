@@ -312,12 +312,24 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 /* Kachel "Fehler wiederholen" */
 .tile.drill .n{background:var(--warn-soft); color:var(--warn); font-size:19px}
 
-/* ---- Stufenumschalter ---- */
-.levels{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
-.levels .lvl{background:var(--card,#fff);border:1px solid var(--line,#e2e7f0);
-  color:var(--muted,#68758a);border-radius:99px;padding:7px 14px;
-  font:inherit;font-weight:600;font-size:14px;cursor:pointer}
-.levels .lvl.on{background:var(--blue,#2f6bed);border-color:var(--blue,#2f6bed);color:#fff}
+/* ---- Abo-Karte: was habe ich, wie lange noch ----
+   Steht immer da, auch bei einer einzigen Stufe. Vorher zeigte nur der
+   Umschalter die Restzeit, und der erschien erst ab zwei Stufen — der
+   normale Kursteilnehmer sah also weder sein Produkt noch sein Ablaufdatum. */
+.abos{display:flex;flex-direction:column;gap:8px;margin:0 0 16px}
+.abo{display:flex;align-items:center;gap:12px;width:100%;text-align:start;
+  background:var(--card,#fff);border:1px solid var(--line,#e2e7f0);
+  border-radius:12px;padding:12px 14px;font:inherit;cursor:pointer}
+.abo[disabled]{cursor:default}
+.abo .grow{flex:1;min-width:0}
+.abo .who{display:block;font-weight:600;font-size:15px}
+.abo .what{display:block;color:var(--muted,#68758a);font-size:13px;margin-top:2px}
+.abo .when{text-align:end;white-space:nowrap}
+.abo .when b{display:block;font-size:14px}
+.abo .bis{display:block;color:var(--muted,#68758a);font-size:12px;margin-top:2px}
+.abo.on{border-color:var(--blue,#2f6bed)}
+.abo.soon{border-color:var(--warn,#b7791f)}
+.abo.soon .when b{color:var(--warn,#b7791f)}
 
 /* ---- Lesematerial ---- */
 .readable{line-height:1.7}
@@ -339,5 +351,3 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
   background:var(--line,#e2e7f0);overflow:hidden}
 .audiobar i{display:block;height:100%;width:0;background:var(--brand,#2f6bed);
   transition:width .2s linear}
-.levels .lvl.soon{border-color:var(--warn,#b7791f);color:var(--warn,#b7791f)}
-.levels .lvl.on.soon{background:var(--warn,#b7791f);border-color:var(--warn,#b7791f);color:#fff}
