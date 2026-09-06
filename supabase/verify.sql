@@ -8,7 +8,7 @@
 with checks as (
 
   -- ---------- الجداول ----------
-  select 1 as ord, 'الجداول' as المجموعة,
+  select 1::numeric as ord, 'الجداول' as المجموعة,
     format('%s جدول من ١٦', count(*)) as الفحص,
     (count(*) >= 16) as تمام,
     'شغّلي supabase/setup.sql كامل' as الحل
@@ -114,6 +114,31 @@ with checks as (
     'اعملي مستخدم بـAuthentication ثم: update profiles set is_admin=true where id=''<UID>'';'
   from profiles where is_admin
 
+  -- ---------- التخزين ----------
+  union all
+  select 14.1, 'التخزين',
+    'الدلوان موجودان وخاصّان',
+    (select count(*) from storage.buckets
+      where id in ('exam-images','exam-audio') and not public) = 2,
+    'شغّلي 0013_storage.sql. دلو عام = أي حدا معه الرابط بيفوت'
+
+  union all
+  select 14.2, 'التخزين',
+    'سياسة قراءة الملفات موجودة',
+    exists (select 1 from pg_policy
+             where polrelid = 'storage.objects'::regclass
+               and polname = 'exam_assets_read'),
+    'بلا سياسة، كل طلب توقيع بيرجع 403 والصور ما بتظهر بلا خطأ ظاهر'
+
+  union all
+  select 14.3, 'التخزين',
+    format('%s صورة مرفوعة من %s لازمة',
+      (select count(*) from storage.objects where bucket_id = 'exam-images'),
+      (select count(*) from sections where config ? 'bankImage')),
+    (select count(*) from storage.objects where bucket_id = 'exam-images')
+      >= (select count(*) from sections where config ? 'bankImage'),
+    'ارفعي الصور: python3 tools/upload_images.py data/img/'
+
   -- ---------- Supabase نفسها ----------
   union all
   select 15, 'Supabase',
@@ -129,26 +154,23 @@ with checks as (
     'مو مشروع Supabase؟'
 )
 
-select
-  case when تمام then '✓' else '✗' end as "حالة",
-  المجموعة, الفحص,
-  case when تمام then '' else الحل end as "شو تعملي"
-from checks
-order by ord;
-
--- ملخّص
-select case
-  when count(*) filter (where not تمام) = 0
-    then '✓ كل الفحوص نجحت — التركيب تمام'
-  else format('✗ %s فحص فشل — شوفي الجدول فوق', count(*) filter (where not تمام))
-end as "النتيجة"
+-- الملخّص بينحسب من نفس الفحوص فوق، مو من قائمة شروط منسوخة: النسخة
+-- المكرّرة بتنسى الفحوص الجديدة وبتقول «كل شي تمام» وفي فحص فاشل.
+select "حالة", المجموعة, الفحص, "شو تعملي"
 from (
-  select (select relrowsecurity from pg_class where relname='item_answers')
-     and not exists (select 1 from pg_policy where polrelid='item_answers'::regclass)
-     and not has_table_privilege('authenticated','item_answers','SELECT')
-     and (select count(*) from tests where published) > 0
-     and (select count(*) from item_answers) > 0
-     and (select count(*) from profiles where is_admin) > 0
-     and (select count(*) from pg_proc where proname='admin_create_codes') = 1
-   as تمام
-) x;
+  select ord,
+    case when تمام then '✓' else '✗' end as "حالة",
+    المجموعة, الفحص,
+    case when تمام then '' else الحل end as "شو تعملي"
+  from checks
+
+  union all
+  select 999,
+    case when (select count(*) from checks where not تمام) = 0 then '✓' else '✗' end,
+    '—', 'النتيجة',
+    case when (select count(*) from checks where not تمام) = 0
+      then 'كل الفحوص نجحت — التركيب تمام'
+      else format('%s فحص فشل — شوفي العمود الأخير',
+                  (select count(*) from checks where not تمام)) end
+) x
+order by ord;

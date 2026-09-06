@@ -37,8 +37,10 @@ paste that half-succeeded can simply be re-run rather than leaving you stuck.
 
 ## 4. Load the B1 content
 
-Paste `supabase/seed/b1.sql` and Run. It is ~430 KB — if the editor struggles,
-split it at any `-- =====` comment line.
+Paste `supabase/seed/b1.sql` and Run. It is ~430 KB, which the SQL editor
+often chokes on. Pre-split copies are in `supabase/seed/parts/` — paste
+`b1-1.sql` … `b1-4.sql` one after the other instead. Both routes load the same
+16 exams, 912 questions and 896 answers; each part is safe to re-run.
 
 Regenerate it first only if you changed `data/`:
 
@@ -47,6 +49,15 @@ python3 tools/export_sql.py data supabase/seed/b1.sql --level b1
 ```
 
 ## 5. Upload the exam images
+
+The buckets and their read policy come from `0013_storage.sql`, which
+`setup.sql` already applied in step 3. Nothing to create by hand.
+
+> Storage enforces its own RLS on `storage.objects`, separate from the table
+> policies. Without that migration every signing request returns 403 and the
+> image simply never appears — no error anywhere. The policy also ties each
+> file to the level that references it, so a B1 image is unreachable for an
+> A1 subscriber.
 
 The Leseverstehen 3 pages are exam content, so they go in a **private** bucket:
 
@@ -57,8 +68,13 @@ python3 tools/upload_images.py data/img
 ```
 
 **Check:** Storage → `exam-images` shows 16 files under `img/`, and the bucket
-is marked **Private**. If it says Public, fix it — a public bucket hands out the
-exam pages to anyone with the URL.
+is marked **Private**. `verify.sql` (step 7) checks both, plus that every
+section needing an image has one uploaded.
+
+If you have no terminal, the dashboard works too: Storage → `exam-images` →
+create a folder `img` → drag the 16 files from `data/img/` into it. The name in
+the bucket must match `bankImage` exactly, or the policy will not find the row
+that authorises it.
 
 ## 6. Create your admin account
 

@@ -23,17 +23,8 @@ fi
 echo "▸ قاعدة نظيفة"
 $PSQL -c "drop database if exists telc;" -c "create database telc;"
 
-# محاكاة ما بتوفّره Supabase جاهزاً: سكيما auth ودالة auth.uid() وأدوار الوصول
-$PSQL -d telc <<'SQL'
-create schema if not exists auth;
-create table auth.users (id uuid primary key default gen_random_uuid());
-create or replace function auth.uid() returns uuid language sql stable as
-  $$ select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
-do $r$ begin
-  if not exists (select 1 from pg_roles where rolname='anon')          then create role anon;          end if;
-  if not exists (select 1 from pg_roles where rolname='authenticated') then create role authenticated; end if;
-end $r$;
-SQL
+# ما بتوفّره Supabase جاهزاً — المصدر مشترك مع tests/tools.sh
+$PSQL -d telc -f supabase/tests/bootstrap.sql
 
 echo "▸ الترحيلات"
 for f in supabase/migrations/*.sql; do echo "   $(basename "$f")"; $PSQL -d telc -f "$f"; done
