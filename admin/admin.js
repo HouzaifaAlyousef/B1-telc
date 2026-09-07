@@ -997,6 +997,37 @@ const STALE_MSG = '⚠ Die Datenbank ist noch nicht aktualisiert — bitte '
   + '<code>supabase/setup.sql</code> im SQL-Editor ausführen. Ohne sie fehlen '
   + 'Datei-Upload, Demo-Codes und Anbieter.';
 
+/* ★ نسخة المخطّط.
+   اللوحة بتنرفع لـCloudflare فوراً، والقاعدة ما بتتحدّث إلا بالإيد —
+   فبينفتح فرق: واجهة جديدة بتنادي دوال لسا مو موجودة. وقتها كل ميزة
+   بتفشل بصمت بطريقتها، وولا وحدة بتقول السبب. الرقم بيخلّي اللوحة تقوله.
+
+   لما يتضاف ترحيل: يزيد الرقم هون وبـ0019_version.sql. */
+const SCHEMA_MIN = 19;
+let schemaHave = null;      // null = لسا ما انفحص
+
+async function checkSchema(){
+  try { schemaHave = await rpc('schema_version'); }
+  catch { schemaHave = 0; }   // الدالة نفسها ناقصة = قاعدة قديمة جداً
+  return schemaHave;
+}
+
+/* شريط بيطلع فوق كل شاشة لما القاعدة تكون ورا. مو toast: الـtoast
+   بيروح بعد ثانيتين، وهاد لازم يضل لحد ما ينحلّ. */
+function schemaBanner(){
+  if (schemaHave == null || schemaHave >= SCHEMA_MIN) return '';
+  return `<div class="stale">
+    <b>Die Datenbank ist ${SCHEMA_MIN - schemaHave} Migration${
+      SCHEMA_MIN - schemaHave === 1 ? '' : 'en'} zurück</b>
+    (Stand ${schemaHave}, gebraucht ${SCHEMA_MIN}).
+    <br>Öffnen Sie <code>supabase/setup.sql</code> aus dem Repository,
+    kopieren Sie alles und führen Sie es im <b>SQL Editor</b> aus.
+    Die Datei ist gefahrlos wiederholbar — Nutzer, Codes und Abos bleiben.
+    <br><span class="sub">Bis dahin fehlen: gesperrte Modelltests in der
+    Demo, Datei-Upload, Demo-Codes, Anbieter und das Bearbeiten von Tests.</span>
+  </div>`;
+}
+
 const IMG_HINT = 'Die Anzeigenseite aus der PDF, als Bild. Der Dateiname steht '
   + 'im Test unter <code>Bild:</code> — er wird beim Hochladen übernommen, egal '
   + 'wie die Datei auf Ihrem Rechner heißt.';
@@ -1311,7 +1342,12 @@ async function show(name){
   tab = name;
   nav.querySelectorAll('button').forEach(b =>
     b.classList.toggle('on', b.dataset.tab === name));
-  try { await TABS[name](); }
+  try {
+    await TABS[name]();
+    // الشريط بينحقن بعد الرسم تا كل شاشة تعرضه بلا ما تتذكّره
+    const b = schemaBanner();
+    if (b) app.insertAdjacentHTML('afterbegin', b);
+  }
   catch (e){
     if (e.message === 'no_session') return screenLogin('Sitzung abgelaufen.');
     app.innerHTML = `<div class="empty">Fehler beim Laden.<br>${esc(e.message)}</div>`;
@@ -1320,6 +1356,7 @@ async function show(name){
 
 async function start(){
   // Der Guard sitzt in der Datenbank: admin_overview wirft für Nicht-Admins.
+  await checkSchema();
   try { await rpc('admin_overview'); }
   catch (e){
     storeSession(null);

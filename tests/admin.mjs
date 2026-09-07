@@ -522,6 +522,25 @@ try {
   // اللوحة بتنرفع لـCloudflare قبل ما ينشغل setup.sql — وهاد بيصير فعلاً.
   // لازم تقول شو لازم يعمل المستخدم، مو تطلع فاضية ولا برسالة عامة.
   try {
+    // ★ نسخة أقدم: الشريط لازم يطلع بكل شاشة ويقول كم ترحيل ناقص.
+    // بلاه، كل ميزة بتفشل بصمت بطريقتها وما حدا بيعرف السبب — وهاد صار
+    // فعلاً: المستخدم دفع اللوحة وما شغّل setup.sql، فالامتحانات
+    // المقفولة ما ظهرت ولا شي قال ليش.
+    sql("create or replace function schema_version() returns int "
+        + "language sql immutable as $x$ select 12 $x$;");
+    await page.evaluate(() => location.reload());
+    await page.waitForSelector('[data-tab="home"]');
+    await page.waitForTimeout(1500);
+    const banner = await page.textContent('#app');
+    check('★ شريط «القاعدة ورا» ظهر',
+          /Datenbank ist \d+ Migration/.test(banner) && /setup\.sql/.test(banner));
+    check(`★ وبيقول كم ترحيل ناقص`,
+          /Stand 12/.test(banner) && /gebraucht 19/.test(banner));
+    await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
+    await page.waitForTimeout(900);
+    check('★ وبيطلع بالشاشات التانية كمان',
+          /Datenbank ist \d+ Migration/.test(await page.textContent('#app')));
+
     sql('drop function if exists admin_assets(text);');
     await page.evaluate(() => document.querySelector('[data-tab="assets"]').click());
     await page.waitForTimeout(1200);
@@ -538,10 +557,12 @@ try {
     check('★ ونفس الرسالة بصندوق ملفات الاستيراد',
           /setup\.sql/.test(await page.textContent('#i_files')));
   } finally {
-    // نرجّعها تا ما نكسّر أي تشغيل جاي على نفس القاعدة
-    execFileSync('psql', ['-h','/tmp','-p', process.env.PGPORT || '5433','-U','postgres',
-      '-d','telc','-q','-v','ON_ERROR_STOP=1','-f','supabase/migrations/0015_admin_upload.sql'],
-      { encoding:'utf8' });
+    // نرجّعهن تا ما نكسّر أي تشغيل جاي على نفس القاعدة
+    for (const f of ['supabase/migrations/0015_admin_upload.sql',
+                     'supabase/migrations/0019_version.sql']){
+      execFileSync('psql', ['-h','/tmp','-p', process.env.PGPORT || '5433','-U','postgres',
+        '-d','telc','-q','-v','ON_ERROR_STOP=1','-f', f], { encoding:'utf8' });
+    }
   }
 
   // ---- الحارس: مستخدم عادي ما بيدخل ----
