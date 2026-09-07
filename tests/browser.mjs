@@ -7,6 +7,11 @@ import http from 'http';
 import path from 'path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
+/* SERVE_FROM=dist بيشغّل نفس الجولة على الناتج المنشور بدل المصدر.
+   الناتج بتنشال منه التعليقات، والماسح ممكن يكسر شي — والاختبارات
+   بتشتغل على المصدر، يعني الكسر بيوصل للمستخدم وحده. */
+const SERVE = process.env.SERVE_FROM
+  ? path.resolve(ROOT, process.env.SERVE_FROM) : ROOT;
 const fx = JSON.parse(readFileSync(path.join(ROOT, 'tests/fixture.json'), 'utf8'));
 
 /* نغمة WAV مولّدة بالاختبار — أنضف من رفع ملف ثنائي بالمستودع */
@@ -35,7 +40,7 @@ const server = http.createServer((req, res) => {
     return res.end(TONE);
   }
   try {
-    const body = readFileSync(path.join(ROOT, f));
+    const body = readFileSync(path.join(SERVE, f));
     res.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'application/octet-stream' });
     res.end(body);
   } catch { res.writeHead(404); res.end('nope'); }

@@ -25,9 +25,15 @@ rm -rf "$OUT"
 mkdir -p "$OUT/assets" "$OUT/$ADMIN_PATH"
 
 # ---- تطبيق الطلاب ----
-cp index.html manifest.webmanifest sw.js "$OUT/"
-cp assets/app.js assets/api.js assets/i18n.js assets/config.js assets/style.css \
-   "$OUT/assets/"
+# كل ملف بينزل لمتصفّح الطالب بينقرا بأدوات المطوّر — هيك كل تطبيق ويب،
+# وما في سرّ بالكود (المفتاح العام عام بالتصميم، والحلول بالسيرفر). بس
+# تعليقات التطوير ما إلها شغل بمنتج بيدفع فيه ناس، فبتنشال بالنشر.
+strip(){ python3 tools/strip_comments.py "$1" "$2"; }
+
+cp index.html manifest.webmanifest "$OUT/"
+strip sw.js "$OUT/sw.js"
+for f in app api i18n config; do strip "assets/$f.js" "$OUT/assets/$f.js"; done
+strip assets/style.css "$OUT/assets/style.css"
 cp -r assets/icons "$OUT/assets/"
 
 # ترويسات Cloudflare — لازم تكون بجذر الناتج. قاعدة الـnoindex مكتوبة
@@ -39,8 +45,10 @@ fi
 # ---- لوحة التحكّم ----
 # نفس الموقع بمسار تاني: الحارس بقاعدة البيانات (profiles.is_admin) مو
 # بسرّية الرابط. للنشر بمكان تاني، انسخي assets/config.js معها.
-cp admin/index.html admin/admin.js admin/admin.css admin/parse.js admin/vorlagen.js \
-   "$OUT/$ADMIN_PATH/"
+cp admin/index.html "$OUT/$ADMIN_PATH/"
+for f in admin/admin.js admin/parse.js admin/vorlagen.js admin/admin.css; do
+  strip "$f" "$OUT/$ADMIN_PATH/$(basename "$f")"
+done
 
 # ---- الفحص: ولا حل يطلع برّا ----
 fail=0
@@ -56,6 +64,13 @@ for bad in Doku tools docs supabase tests; do
   [ -e "$OUT/$bad" ] && { echo "✗ $bad/ وصل للناتج" >&2; fail=1; }
 done
 # فحص محتوى: نبحث عن أي بصمة لمفاتيح الحلول بالملفات المنشورة
+# التعليقات لازم تكون انشالت فعلاً — الفحص على الناتج مو على النية
+if grep -rlE '^[[:space:]]*(//|/\*)' "$OUT" --include='*.js' --include='*.css' \
+     2>/dev/null | grep -q .; then
+  echo "✗ في تعليقات بالناتج:" >&2
+  grep -rlE '^[[:space:]]*(//|/\*)' "$OUT" --include='*.js' --include='*.css' >&2
+  fail=1
+fi
 if grep -rlE '"answer"[[:space:]]*:' "$OUT" 2>/dev/null | grep -q .; then
   echo "✗ في ملف بالناتج فيه مفاتيح حلول:" >&2
   grep -rlE '"answer"[[:space:]]*:' "$OUT" >&2

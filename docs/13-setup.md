@@ -204,6 +204,27 @@ Everywhere you choose an exam, it is **two fields**: Anbieter, then Stufe. One
 grouped dropdown was tried first and rejected — a closed `<select>` shows only
 `B1`, hiding the provider, which is half the decision.
 
+## What students can see
+
+Everything the browser downloads — HTML, CSS, JavaScript — is readable in the
+browser's developer tools. That is true of every web app and cannot be changed;
+it is also not a problem here, because nothing secret is in it:
+
+| In the browser | Why it is fine |
+|---|---|
+| `config.js` with the anon key | Public by design. RLS decides what it may read. |
+| All app JavaScript | Logic only. Scoring runs in `submit_attempt()` on the server. |
+| Exam questions of the open test | The student paid to see them. |
+| **Answer keys** | Never sent. `item_answers` has RLS and no policy at all. |
+| **Locked tests' content** | Never sent. Only title and task count, from `level_catalog`. |
+
+What the build does remove is developer comments: `tools/build_dist.sh` strips
+them from every JS and CSS file it publishes. The stripper is a state-machine
+scanner, not a regular expression — `//` inside a string, `/*` inside a
+template literal and `//` inside a regex literal all survive — and the full
+browser suite runs a second time against the stripped output, so a scanner bug
+cannot reach a student.
+
 ## Languages
 
 The student app runs in **German, Arabic and Ukrainian**, switchable in the top
