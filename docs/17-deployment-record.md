@@ -140,10 +140,11 @@ python3 tools/upload_images.py data/img
 ./run.sh --dist   # serves the published build instead (no comments)
 ```
 
-The local pages talk to the **same Supabase project**, so the local admin panel
-edits live data. To work safely, create a second free Supabase project, run
-`setup.sql` and the seed in it, and put its keys in `assets/config.local.js` —
-that file overrides `config.js`, is ignored by git and never reaches the build.
+The local pages talk to the **same Supabase project** — there is only one.
+So the local admin panel edits live data: codes you generate and exams you
+import land in the real database. That is a deliberate choice (one project,
+one source of truth), so remember to clean up test codes and test imports
+afterwards — both are deletable from the panel.
 
 Note: locally the admin panel is at `/admin/`; in production it is at the
 `ADMIN_PATH` directory.

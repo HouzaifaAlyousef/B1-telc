@@ -30,11 +30,7 @@ mkdir -p "$OUT/assets" "$OUT/$ADMIN_PATH"
 # تعليقات التطوير ما إلها شغل بمنتج بيدفع فيه ناس، فبتنشال بالنشر.
 strip(){ python3 tools/strip_comments.py "$1" "$2"; }
 
-# config.local.js تطوير محلّي بس — سطره بينشال من الناتج، وإلا بيطلع
-# ٤٠٤ بكونسول كل زائر
-sed '/config\.local\.js/d; /إعداد محلّي اختياري/d; /بيخلّيك تشغّل محلياً/d' \
-  index.html > "$OUT/index.html"
-cp manifest.webmanifest "$OUT/"
+cp index.html manifest.webmanifest "$OUT/"
 strip sw.js "$OUT/sw.js"
 for f in app api i18n config; do strip "assets/$f.js" "$OUT/assets/$f.js"; done
 strip assets/style.css "$OUT/assets/style.css"
@@ -49,7 +45,7 @@ fi
 # ---- لوحة التحكّم ----
 # نفس الموقع بمسار تاني: الحارس بقاعدة البيانات (profiles.is_admin) مو
 # بسرّية الرابط. للنشر بمكان تاني، انسخي assets/config.js معها.
-sed '/config\.local\.js/d' admin/index.html > "$OUT/$ADMIN_PATH/index.html"
+cp admin/index.html "$OUT/$ADMIN_PATH/"
 for f in admin/admin.js admin/parse.js admin/vorlagen.js admin/admin.css; do
   strip "$f" "$OUT/$ADMIN_PATH/$(basename "$f")"
 done

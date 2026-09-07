@@ -6,11 +6,9 @@
 #   ./run.sh --no-open       بلا فتح متصفّح
 #   ./run.sh --dist          يخدم الناتج المنشور (بلا تعليقات) بدل المصدر
 #
-# ★ البيانات بتجي من Supabase متل ما هي. يعني اللوحة المحلّية بتعدّل على
-#   نفس قاعدة بياناتك الحقيقية. لو بدك تجرّب بأمان (تولّد أكواد، تستورد
-#   امتحانات تجريبية) اعمل مشروع Supabase تاني وحطّ مفاتيحه بـ
-#   assets/config.local.js — الملف مستثنى من git وبيغلب config.js محلياً.
-#   التفاصيل بـdocs/14-deploy.md.
+# ★ البيانات بتجي من Supabase الحقيقي. يعني اللوحة المحلّية بتعدّل على
+#   نفس قاعدة بياناتك — الأكواد يلي بتولّدها والامتحانات يلي بتستوردها
+#   بتروح لبيانات زبائنك. تذكّر تمسحها بعد التجربة.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -19,7 +17,7 @@ for a in "$@"; do
   case "$a" in
     --no-open) OPEN=0 ;;
     --dist)    ROOT="dist" ;;
-    --help|-h) sed -n '2,17p' "$0" | sed 's/^# \?//'; exit 0 ;;
+    --help|-h) sed -n '2,/^[^#]/p' "$0" | sed '$d; s/^# \?//'; exit 0 ;;
     [0-9]*)    PORT="$a" ;;
     *) echo "خيار مو معروف: $a" >&2; exit 1 ;;
   esac
@@ -34,9 +32,6 @@ if [ "$ROOT" = dist ]; then
   ADMIN_DIR=$(ls dist | grep -v -E '^(assets|index.html|manifest|sw.js|_headers)$' | head -1)
 else
   ADMIN_DIR="admin"
-  # ملف فاضي بيمنع خطأ 404 بالكونسول لما ما يكون في إعداد محلّي
-  [ -f assets/config.local.js ] || echo "/* إعداد محلّي اختياري — شوف run.sh */" \
-    > assets/config.local.js
 fi
 
 # بلا مفاتيح التطبيق ما بيشتغل — أحسن نقولها هلق مو بالمتصفّح

@@ -88,8 +88,11 @@ const server = http.createServer(async (req, res) => {
   // ---- ملفات ----
   let f = u.pathname === '/' ? '/admin/index.html' : u.pathname;
   try {
+    // القراءة قبل الترويسة — بالعكس، ملف ناقص بينهي العملية بـ
+    // ERR_HTTP_HEADERS_SENT بدل ما يرجّع ٤٠٤
+    const body = readFileSync(path.join(ROOT, f));
     res.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'text/plain' });
-    res.end(readFileSync(path.join(ROOT, f)));
+    res.end(body);
   } catch { res.writeHead(404); res.end('nope'); }
 });
 await new Promise(r => server.listen(0, r));

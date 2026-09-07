@@ -19,15 +19,30 @@ const PAY2 = `"><script>window.__XSS=(window.__XSS||0)+1<\/script>`;
 const MIME = { '.html':'text/html', '.js':'text/javascript', '.css':'text/css' };
 const srv = http.createServer((req, res) => {
   let f = req.url.split('?')[0]; if (f === '/') f = '/index.html';
-  try { res.writeHead(200,{'content-type':MIME[path.extname(f)]||'text/plain'});
-        res.end(readFileSync(path.join(ROOT,f))); }
-  catch { res.writeHead(404); res.end('x'); }
+  // القراءة قبل الترويسة: لو انبعتت الترويسة أول وفشلت القراءة، الـcatch
+  // بيحاول يبعت ٤٠٤ على ردّ مبعوت — ERR_HTTP_HEADERS_SENT وانهيار السيرفر.
+  let body;
+  try { body = readFileSync(path.join(ROOT, f)); }
+  catch { res.writeHead(404); return res.end('x'); }
+  res.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'text/plain' });
+  res.end(body);
 });
 await new Promise(r => srv.listen(0, r));
 const PORT = srv.address().port;
 
 const R = [];
 const check = (l,c) => { R.push([l,!!c]); console.log(`  ${c?'✓':'✗'} ${l}`); };
+
+/* ★ ملف ناقص لازم يرجّع ٤٠٤، مو ينهي العملية.
+   هيك بالضبط انهار CI: سطر <script> لملف مستثنى من git — موجود عندي،
+   مفقود على العدّاء — خلّى السيرفر يرمي ERR_HTTP_HEADERS_SENT ويفشّل
+   الجولة كلها بدل ما يرجّع ٤٠٤ عادي. */
+{
+  const r = await fetch(`http://127.0.0.1:${PORT}/assets/gibt-es-nicht.js`);
+  check(`★ ملف ناقص بيرجّع ٤٠٤ وما بينهي السيرفر (${r.status})`, r.status === 404);
+  const ok = await fetch(`http://127.0.0.1:${PORT}/index.html`);
+  check('★ والسيرفر لسا شغّال بعدها', ok.status === 200);
+}
 
 const browser = await chromium.launch({ args:['--no-sandbox','--disable-dev-shm-usage'] });
 const page = await browser.newPage();
