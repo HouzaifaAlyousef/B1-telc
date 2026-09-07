@@ -61,8 +61,10 @@ jobs:
             node --check "$f" && echo "  ✓ $f"
           done
 
-      - name: فحص أنواع Edge Function
-        run: deno check supabase/functions/correct-writing/index.ts
+      - name: فحص أنواع Edge Functions
+        run: |
+          deno check supabase/functions/correct-writing/index.ts
+          deno check supabase/functions/telegram/index.ts
 
       - name: قاعدة البيانات + اختبارات SQL
         run: sudo -E ./supabase/tests/run.sh

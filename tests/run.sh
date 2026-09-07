@@ -24,8 +24,13 @@ select json_build_object(
      join item_answers ia on ia.item_id=i.id where s.test_id=t.id)
 ) from tests t where t.slug='modell-01';" > tests/fixture.json
 
+# ★ rm -rf مو rm -f: مرحلة Deno بتنشئ node_modules **مجلّد** حقيقي، ولو
+# انقطعت الجولة بينبقى. وقتها ln -sfn بتحطّ الرابط جوّاه (node_modules/
+# node_modules) بدل ما تبدّله، والجولة الجاية بتفشل بـ«Cannot find package
+# 'playwright'» — رسالة ما إلها علاقة بالسبب.
+rm -rf node_modules
 ln -sfn "$(npm root -g)" node_modules
-trap 'rm -f node_modules' EXIT
+trap 'rm -rf node_modules' EXIT
 
 echo "▸ الأدوات (البناء، حارس التسريب، الرفع)"
 ./tests/tools.sh
@@ -61,11 +66,12 @@ node tests/xss.mjs
 echo "▸ الاستيراد من الطرف للطرف"
 node tests/import.mjs
 
-echo "▸ Edge Function (Deno الحقيقي، Claude مزيّف)"
+echo "▸ Edge Functions (Deno الحقيقي، Claude وتلغرام مزيّفين)"
 if command -v deno >/dev/null 2>&1; then
   # Deno بينشئ node_modules حقيقي وبيكسر رابط playwright — فمنشغّله بمعزل
   rm -f node_modules
   ( cd . && deno run --allow-all --node-modules-dir=auto tests/edge/run.ts )
+  ( cd . && deno run --allow-all --node-modules-dir=auto tests/edge/telegram.ts )
   rm -rf node_modules
   ln -sfn "$(npm root -g)" node_modules
 else

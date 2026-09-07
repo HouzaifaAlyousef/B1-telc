@@ -121,7 +121,7 @@ const STUD_ID  = 'bbbbbbbb-0000-0000-0000-000000000002';
   const have = Number(sql('select schema_version();') || 0);
   const fns  = sql(`select count(*) from pg_proc
                      where proname in ('admin_assets','code_norm');`);
-  if (have < 21 || fns !== '2'){
+  if (have < 22 || fns !== '2'){
     console.log(`\n✗ القاعدة ناقصة (schema_version=${have}, دوال=${fns}/2).`);
     console.log('  شغّل: sudo -E ./supabase/tests/run.sh');
     process.exit(2);
@@ -602,7 +602,7 @@ try {
     check('★ شريط «القاعدة ورا» ظهر',
           /Datenbank ist \d+ Migration/.test(banner) && /setup\.sql/.test(banner));
     check(`★ وبيقول كم ترحيل ناقص`,
-          /Stand 12/.test(banner) && /gebraucht 21/.test(banner));
+          /Stand 12/.test(banner) && /gebraucht 22/.test(banner));
     await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
     await page.waitForTimeout(900);
     check('★ وبيطلع بالشاشات التانية كمان',

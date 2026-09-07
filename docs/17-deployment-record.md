@@ -162,3 +162,11 @@ Note: locally the admin panel is at `/admin/`; in production it is at the
 8. Upload images from the panel's **Dateien** tab
 9. Optional: deploy the writing-correction Edge Function
    ([`14-writing-correction.md`](14-writing-correction.md))
+
+## Telegram bot
+
+Not deployed yet. Setup is nine steps in
+[18-telegram-bot.md](18-telegram-bot.md) — BotFather, three secrets, one
+`supabase functions deploy telegram --no-verify-jwt`, one `setWebhook`.
+It shares the Edge Function runtime with `correct-writing`, so deploying
+either one teaches you the other.
