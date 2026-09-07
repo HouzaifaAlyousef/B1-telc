@@ -1,0 +1,70 @@
+# Das Briefing - die einzige Eingabe, die dieses Projekt liefert.
+#
+# Sechs Fragen:
+#   Wer ist meine Zielgruppe?          audiences
+#   Wo ist sie?                        locations / market
+#   Welche Sprache spricht sie?        languages
+#   Welche Themen interessieren sie?   categories / topics / keywords
+#   Was vermarkte ich?                 offering
+#   Was ist mein Ziel?                 goal
+#
+# Alles Weitere - Suchanfragen, Provider, Cache, Deduplizierung,
+# Klassifikation, Scoring, Speicherung - ist Sache des Moduls.
+
+brief_id: b1-telc-2026
+
+audiences:
+  - ukrainians
+  - syrians
+  - arabs
+
+locations:
+  # "de" heisst: alles, was IN Deutschland liegt, zaehlt als voller Treffer.
+  # Einzelne Staedte hier zu nennen macht die Suche genauer und die Bewertung
+  # strenger - eine Berliner Gruppe waere dann bei "de-koeln" kein Treffer.
+  - de
+
+languages:
+  - uk
+  - ar
+  - de
+
+categories:
+  - community
+  - deutschkurs
+
+topics:
+  - Integrationskurs
+  - Einbürgerungstest
+
+market: Deutschland
+industry: Bildung
+
+# Steht als {offering} in den Beitragsvorlagen. Ein Satz, kein Werbetext -
+# er wird woertlich eingesetzt. Die Zahlen stammen aus dem Bestand der App
+# (16 Modelltests, 912 Fragen); wachsen sie, waechst dieser Satz mit.
+offering: >-
+  telc-B1-Prüfungstraining online: 16 vollständige Modelltests nach den
+  offiziellen telc-Prüfungsteilen, mit echtem Timer und sofortiger Korrektur.
+
+# Wohin der Beitrag fuehrt. Diese Zeilen gehoeren dem PROJEKT.
+#
+#   tracking: true   -> {link} = base_url + Code, je Gruppe verschieden.
+#                       Die Basis kommt aus APP_BASE_URL, ausser hier steht
+#                       ein eigenes base_url.
+#   tracking: false  -> {link} = das Feld "link", unveraendert. Kein Code.
+#
+# Diese App ist die eigene - also wird gemessen. Ein Projekt, das auf einen
+# Telegram-Kanal verlinkt, schriebe stattdessen:
+#   tracking: false
+#   link: https://t.me/mein-kanal
+tracking: true
+
+# acquisition hebt audience_match und activity an und senkt reach:
+# Wer Nutzer gewinnen will, braucht Orte, an denen etwas geschieht -
+# nicht die groessten.
+goal: acquisition
+
+# Leer hiesse: alle aktiven Adapter. Hier ausdruecklich nur Gruppen.
+source_types:
+  - facebook_group

@@ -1,0 +1,19 @@
+# Freie Begriffslisten je Thema.
+#
+# Anders als "categories" tragen sie keine Kategorie und keinen Score. Sie
+# sind Rohstoff fuer die Anfrageplanung und fuer den thematischen Abgleich,
+# wenn ein Briefing "topics" oder "keywords" nennt.
+
+keywords:
+  neuzugewandert:
+    - Neuankömmlinge
+    - "neu in Deutschland"
+    - Ankommen
+    - وافدين جدد
+    - новоприбул
+  ehrenamt:
+    - Ehrenamt
+    - Helfer
+    - Unterstützung
+    - تطوع
+    - волонтер

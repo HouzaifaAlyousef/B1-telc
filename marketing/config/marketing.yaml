@@ -1,0 +1,286 @@
+# Was dieses Projekt an den Vorgaben aendert.
+#
+# Alles, was hier NICHT steht, kommt aus den mitgelieferten Vorgaben
+# (marketing/config/marketing.yaml). Genau das ist die Zusage: Du schreibst
+# nur, was du aenderst.
+
+# --- Projekt -----------------------------------------------------------------
+# Nur die Ueberschrift des Dashboards. Sie steht hier, damit zwei Projekte auf
+# demselben Rechner auseinanderzuhalten sind - sonst heissen beide "Marketing".
+project:
+  name: telc B1 Training
+
+# --- Scoring -----------------------------------------------------------------
+scoring:
+  weights:
+    # Dieses Projekt sucht Orte, an denen etwas geschieht - eine grosse tote
+    # Gruppe nuetzt nichts. Aktivitaet und Zielgruppe wiegen deshalb schwerer
+    # als in der Vorgabe, Reichweite entsprechend weniger.
+    audience_match: 25
+    activity: 25
+    topic_match: 20
+    location_match: 15
+    reach: 10
+    language_match: 5
+
+  # Prioritaet nach dem ANTEIL der erreichten an den erreichbaren Punkten.
+  priority:
+    high: 0.75
+    medium: 0.55
+    normal: 0.35
+
+# --- Kampagnen ---------------------------------------------------------------
+campaigns:
+  tracking:
+    # OB getrackt wird, entscheidet das Briefing ("tracking: true|false").
+    # Hier steht nur, wie der Link aussieht, wenn getrackt wird.
+    channel: FB
+    # Aus der Umgebung, damit dieselbe Konfiguration lokal und auf der echten
+    # Domain laeuft. Ohne gesetzte Variable bleibt der Link LEER - und der
+    # Platzhalterschutz laesst dann keinen Text entstehen, statt einen halben
+    # Link zu veroeffentlichen.
+    base_url: "${APP_BASE_URL}"
+    path: r
+    number_width: 3
+
+  pacing:
+    # 25 Beitraege am Tag ueber ALLE Kampagnen. Bei 300 Zielen sind das zwoelf
+    # Tage. Die Zahl darf steigen - aber jede Erhoehung ist genau der Handel,
+    # den dieser Block beschreibt.
+    actions_per_day: 25
+    min_interval_minutes: 4
+    jitter_low: 0.8
+    jitter_high: 1.3
+    long_break_every: 7
+    long_break_minutes: 20
+    max_attempts: 3
+
+# --- Textvorlagen ------------------------------------------------------------
+# Diese Vorlagen sind GLOBAL. Ein zweites Projekt kopiert sie unveraendert und
+# schreibt nur ein anderes brief.yaml - {offering} und {link} kommen von dort,
+# {audience}, {place_in} und {category} aus der erkannten Gruppe.
+#
+# Ohne Freigabeschritt ist das die Pruefstelle. Gibt es fuer die Sprache einer
+# Gruppe keine Vorlage, entsteht KEIN Text - ein deutschsprachiger Beitrag in
+# einer arabischen Gruppe kostet die Gruppe und nicht nur den Versuch.
+#
+# Je Sprache stehen hier drei Fassungen, und das ist Absicht:
+#
+#   * eine fuer Sprachkurs-Gruppen ("categories: [deutschkurs]") - enger, also
+#     gewinnt sie dort;
+#   * zwei allgemeine, zwischen denen die Kennung der Gruppe entscheidet.
+#     Dreihundert wortgleiche Beitraege aus einem Konto sind ein Muster;
+#   * eine mit "fallback: true" ohne Ortsnamen. Sie kommt nur zum Zug, wenn
+#     keine andere durchgeht - etwa weil die Gruppe keinen erkannten Ort hat
+#     oder der Stadt die Beugungsform fehlt.
+#
+# {place_in} ist der Ort in dem Fall, den die Sprache verlangt: "у Берліні",
+# nicht "у Берлін". Die Formen stehen in locations.yaml.
+templates:
+  publish_post:
+    # --- Ukrainisch ---
+    - id: uk_kurs
+      languages: [uk]
+      categories: [deutschkurs]
+      text: |
+        Для тих, хто у {place_in} вчить німецьку 🇺🇦
+
+        {offering}
+
+        Детальніше тут: {link}
+
+    - id: uk_ort
+      languages: [uk]
+      text: |
+        Привіт, {audience} у {place_in}! 🇺🇦
+
+        {offering}
+
+        Детальніше тут: {link}
+
+    - id: uk_frage
+      languages: [uk]
+      text: |
+        Хтось у {place_in} готується до іспиту з німецької? 🇺🇦
+
+        {offering}
+
+        Детальніше тут: {link}
+
+    - id: uk_ohne_ort
+      languages: [uk]
+      fallback: true
+      text: |
+        Привіт, {audience}! 🇺🇦
+
+        {offering}
+
+        Детальніше тут: {link}
+
+    # --- Arabisch ---
+    - id: ar_kurs
+      languages: [ar]
+      categories: [deutschkurs]
+      text: |
+        لمن يدرس الألمانية في {place_in}
+
+        {offering}
+
+        التفاصيل هنا: {link}
+
+    - id: ar_ort
+      languages: [ar]
+      text: |
+        مرحبا {audience} في {place_in}
+
+        {offering}
+
+        التفاصيل هنا: {link}
+
+    - id: ar_frage
+      languages: [ar]
+      text: |
+        هل يستعد أحد في {place_in} لامتحان الألمانية؟
+
+        {offering}
+
+        التفاصيل هنا: {link}
+
+    - id: ar_ohne_ort
+      languages: [ar]
+      fallback: true
+      text: |
+        مرحبا {audience}
+
+        {offering}
+
+        التفاصيل هنا: {link}
+
+    # --- Deutsch ---
+    - id: de_kurs
+      languages: [de]
+      categories: [deutschkurs]
+      text: |
+        Für alle, die in {place_in} Deutsch lernen:
+
+        {offering}
+
+        Mehr dazu: {link}
+
+    - id: de_ort
+      languages: [de]
+      text: |
+        Hallo {audience} in {place_in},
+
+        {offering}
+
+        Mehr dazu: {link}
+
+    - id: de_frage
+      languages: [de]
+      text: |
+        Bereitet sich jemand in {place_in} auf die Deutschprüfung vor?
+
+        {offering}
+
+        Mehr dazu: {link}
+
+    - id: de_ohne_ort
+      languages: [de]
+      fallback: true
+      text: |
+        Hallo {audience},
+
+        {offering}
+
+        Mehr dazu: {link}
+
+  # Ein Kommentar ist kuerzer als ein Beitrag. Den Ort nennt er nur dort, wo
+  # er etwas beitraegt: In einer Gruppe, die ohnehin einer Stadt gehoert,
+  # klingt "in Köln" nach Vorlage.
+  comment:
+    # --- Ukrainisch ---
+    - id: uk_kommentar_kurs
+      languages: [uk]
+      categories: [deutschkurs]
+      text: |
+        Для підготовки до іспиту: {offering}
+        {link}
+
+    - id: uk_kommentar
+      languages: [uk]
+      text: |
+        Можливо, стане у пригоді: {offering}
+        {link}
+
+    - id: uk_kommentar_2
+      languages: [uk]
+      text: |
+        Якщо комусь потрібно: {offering}
+        {link}
+
+    # --- Arabisch ---
+    - id: ar_kommentar_kurs
+      languages: [ar]
+      categories: [deutschkurs]
+      text: |
+        للتحضير للامتحان: {offering}
+        {link}
+
+    - id: ar_kommentar
+      languages: [ar]
+      text: |
+        ربما يفيدكم هذا: {offering}
+        {link}
+
+    - id: ar_kommentar_2
+      languages: [ar]
+      text: |
+        لمن يحتاج: {offering}
+        {link}
+
+    # --- Deutsch ---
+    - id: de_kommentar_kurs
+      languages: [de]
+      categories: [deutschkurs]
+      text: |
+        Zur Prüfungsvorbereitung: {offering}
+        {link}
+
+    - id: de_kommentar
+      languages: [de]
+      text: |
+        Vielleicht hilfreich: {offering}
+        {link}
+
+    - id: de_kommentar_2
+      languages: [de]
+      text: |
+        Falls jemand sucht: {offering}
+        {link}
+
+# --- Auswertung --------------------------------------------------------------
+# Die Stufen dieses Projekts. "click" muss hier nicht stehen - der Dienst
+# schreibt sie selbst; alles Weitere meldet die Anwendung ueber POST /events.
+#
+# Ein anderes Projekt schreibt hier andere Stufen und benutzt dieselbe
+# Tabelle, dieselbe Auswertung und dasselbe Dashboard.
+analytics:
+  events:
+    - id: landing
+      label: { de: Seite besucht, uk: Відвідав сторінку, ar: زار الصفحة }
+    - id: code_redeemed
+      label: { de: Zugang eingelöst, uk: Активував код, ar: فعّل الرمز }
+      # Je Mensch einmal. Ein Klick darf sich wiederholen, das Einloesen nicht.
+      once_per_visitor: true
+    - id: test_started
+      label: { de: Test begonnen, uk: Почав тест, ar: بدأ الاختبار }
+
+# --- Integrationen -----------------------------------------------------------
+integrations:
+  facebook:
+    # Sichtbar - was das Programm tut, soll man sehen koennen.
+    headless: false
+    locale: de-DE
+    timezone: Europe/Berlin
+    typing_delay_ms: 40

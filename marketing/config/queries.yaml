@@ -1,0 +1,42 @@
+# Anfragemuster.
+#
+# Im Code steht keine einzige Anfrage. "marketing plan" rendert diese Datei
+# und zeigt das Ergebnis, ohne etwas abzufragen.
+#
+# ZWEI REGELN, die man beim Schreiben im Kopf haben muss:
+#
+# 1. "vary" sagt, worueber iteriert wird. Alles andere wird EINMAL eingesetzt.
+#    Ohne die Angabe entstuende das Kreuzprodukt: 3 Zielgruppen x 9 Orte x 5
+#    Kategorien sind 135 Anfragen aus einer Zeile, und die Rechnung sieht man
+#    ihr nicht an.
+#
+# 2. "languages" begrenzt das Muster auf Werte, die es in DIESER Sprache
+#    ueberhaupt gibt. Ein arabisches Muster rendert keine Zielgruppe ohne
+#    arabischen Namen - sonst entstuende "Ukrainer برلين".
+
+settings:
+  max_results_per_query: 10
+  # Der Suchbegriff kommt in Anfuehrungszeichen. Ohne sie liefert die Suche
+  # auch Treffer, die die Worte nur einzeln enthalten - und jeder davon kostet
+  # Guthaben, ohne etwas beizutragen.
+  #
+  # Die Kehrseite: In Anfuehrungszeichen ist jede Schreibweise eine eigene
+  # Zeichenkette. Deshalb stehen Varianten als eigene Muster darunter.
+  quote_phrase: true
+
+templates:
+  # --- Deutsch ---
+  - { id: zg_ort_de,   pattern: "{audience} {place}",    vary: [audience, place], languages: [de] }
+  - { id: zg_in_de,    pattern: "{audience} in {place}", vary: [audience, place], languages: [de] }
+  - { id: zg_land_de,  pattern: "{audience}",            vary: [audience],        languages: [de] }
+  - { id: thema_ort_de, pattern: "{category} {place}",   vary: [category, place], languages: [de] }
+
+  # --- Arabisch ---
+  - { id: zg_ort_ar,   pattern: "{audience} {place}",     vary: [audience, place], languages: [ar] }
+  - { id: zg_fi_ar,    pattern: "{audience} في {place}",  vary: [audience, place], languages: [ar] }
+  - { id: zg_land_ar,  pattern: "{audience}",             vary: [audience],        languages: [ar] }
+
+  # --- Ukrainisch ---
+  - { id: zg_ort_uk,   pattern: "{audience} {place}",     vary: [audience, place], languages: [uk] }
+  - { id: zg_v_uk,     pattern: "{audience} в {place}",   vary: [audience, place], languages: [uk] }
+  - { id: zg_land_uk,  pattern: "{audience}",             vary: [audience],        languages: [uk] }

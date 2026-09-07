@@ -1,0 +1,66 @@
+# Themenkategorien dieses Projekts.
+#
+# Eine Quelle kann mehrere treffen. Die staerkste wird zur Hauptkategorie und
+# traegt die Note; die uebrigen heben sie an - gedeckelt, weil zehn Themen zu
+# streifen nicht dasselbe ist wie eines zu treffen.
+#
+# Reihenfolge bei Gleichstand = Reihenfolge in dieser Datei.
+
+categories:
+  - id: community
+    labels: { de: "Community & Gemeinschaft" }
+    phase: 1
+    terms:
+      de: [Community, Gemeinschaft, Verein, Gruppe, Treffen, Landsleute]
+      ar: [مجموعة, جالية, تجمع, لقاء]
+      uk: [спільнот, громад, група, зустріч]
+      ru: [сообществ, группа, землячество]
+
+  - id: deutschkurs
+    labels: { de: "Deutsch lernen & Pruefungen" }
+    phase: 1
+    terms:
+      de: [Deutschkurs, "Deutsch lernen", Sprachkurs, telc, Goethe, Prüfung,
+           Integrationskurs, B1, B2, Zertifikat]
+      ar: [تعلم الالمانية, دورة لغة, امتحان, شهادة, اندماج]
+      uk: [німецьк, мова, курс, іспит, сертифікат, інтеграційн]
+      ru: [немецк, курс, экзамен, сертификат]
+
+  - id: jobs
+    labels: { de: "Jobs & Arbeit" }
+    phase: 1
+    terms:
+      de: [Job, Jobs, Arbeit, Stellenangebote, Minijob, Ausbildung, Bewerbung, Praktikum]
+      ar: [وظائف, عمل, شغل, وظيفة, تدريب]
+      uk: [робот, вакансі, працевлаштуванн, навчанн]
+      ru: [работа, вакансии, трудоустройство]
+
+  - id: wohnen
+    labels: { de: "Wohnen & Immobilien" }
+    phase: 1
+    terms:
+      de: [Wohnung, Wohnungen, WG, Zimmer, Wohnungssuche, Miete, Untermiete]
+      ar: [سكن, شقة, شقق, غرفة, ايجار, إيجار]
+      uk: [житл, квартир, кімнат, оренд]
+      ru: [жилье, квартира, комната, аренда]
+
+  - id: behoerden
+    labels: { de: "Behoerden & Aufenthalt" }
+    phase: 1
+    terms:
+      de: [Jobcenter, Auslaenderbehörde, Aufenthalt, Anerkennung, Einbürgerung,
+           Amt, Antrag, Bürgergeld]
+      ar: [إقامة, جوازات, معاملات, طلب, تجنيس]
+      uk: [документ, посвідк, дозвіл, відомств, заяв]
+      ru: [документы, разрешение, ведомство]
+
+  # Der Fall, an dem sich der Kategorie-Ausschluss zeigt: "Essen" ist eine
+  # Stadt mit 583.000 Einwohnern UND ein Speisebegriff. Ohne den Ausschluss
+  # stuende "Syrer in Essen" als Essensgruppe in der Uebersicht.
+  - id: essen
+    labels: { de: "Essen & Restaurants" }
+    phase: 1
+    terms:
+      de: [Essen, Restaurant, Küche, Lebensmittel, halal]
+      ar: [طعام, مطعم, حلال, مأكولات]
+      uk: [їж, ресторан, кухн]

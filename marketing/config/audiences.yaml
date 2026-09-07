@@ -1,0 +1,63 @@
+# Zielgruppen dieses Projekts.
+#
+# Die Begriffe je Sprache sind keine Dopplung - sie entscheiden, wonach
+# gesucht und womit verglichen wird. Ein Muster mit "languages: [ar]" rendert
+# nur Zielgruppen, die einen arabischen Namen tragen; sonst entstuende
+# "Ukrainer برلين", eine Anfrage, die Guthaben kostet und nichts findet.
+#
+# short_labels ist die Anrede in Beitragsvorlagen. "Ukrainer in Deutschland"
+# ergaebe dort "Ukrainer in Deutschland in Köln".
+
+audiences:
+  ukrainians:
+    labels:       { de: "Ukrainer in Deutschland", uk: "Українці в Німеччині" }
+    short_labels: { de: Ukrainer, uk: Українці }
+    priority: 1
+    phase: 1
+    code: UKR
+    terms:
+      de: [Ukrainer, Ukrainerin, ukrainisch, ukrainische]
+      # Wortstaemme statt vollstaendiger Formen: Die Flexion haengt hinten an,
+      # und der Abgleich ist am Wortanfang geschlossen und am Ende offen.
+      # "українц" trifft українці, українцям, українців.
+      uk: [українц, українськ, біженц, переселенц]
+      ru: [украинц, беженц]
+      translit: [Ukrainian, Ukrainians, Ukrayintsi]
+
+  syrians:
+    labels:       { de: "Syrer in Deutschland", ar: "السوريين في ألمانيا" }
+    short_labels: { de: Syrer, ar: السوريين }
+    priority: 1
+    phase: 1
+    code: SYR
+    terms:
+      de: [Syrer, Syrerin, syrisch, syrische, Syrien]
+      # Mit und ohne Artikel als eigene Begriffe: Im Arabischen haengt der
+      # Artikel am Wort, und der Abgleich laeuft dort als Teilzeichenkette -
+      # "سوريين" trifft "السوريين" deshalb ohnehin. Die Varianten stehen
+      # trotzdem da, weil sie in Suchanfragen verschiedene Zeichenketten sind.
+      ar: [سوريين, السوريين, سوريون, سوري, سورية, سوريا]
+      translit: [Suriyeen, Suriyin, Syrian, Syrians]
+
+  arabs:
+    labels:       { de: "Araber in Deutschland", ar: "العرب في ألمانيا" }
+    short_labels: { de: Araber, ar: العرب }
+    priority: 2
+    phase: 1
+    code: ARB
+    terms:
+      de: [Araber, Araberin, arabisch, arabische, "Arabische Community"]
+      ar: [عرب, العرب, عربي, عربية]
+      translit: [Arab, Arabs, Arabic]
+
+  # Noch nicht freigeschaltet. "phase: 2" -> "phase: 1" genuegt; im Code
+  # aendert sich nichts.
+  russian_speakers:
+    labels:       { de: "Russischsprachige in Deutschland", ru: "Русскоязычные в Германии" }
+    short_labels: { de: Russischsprachige, ru: Русскоязычные }
+    priority: 3
+    phase: 2
+    code: RUS
+    terms:
+      de: [russischsprachig, Russischsprachige]
+      ru: [русскоязычн, россияне]

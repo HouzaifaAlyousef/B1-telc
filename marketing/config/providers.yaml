@@ -1,0 +1,28 @@
+# Discovery-Provider.
+#
+# Zugangsdaten stehen NIE hier, sondern in der Umgebung - providers.yaml nennt
+# nur den Variablennamen. Diese Datei wandert in die Versionsverwaltung, ein
+# Schluessel darf das nicht.
+
+# Vorgabe: laeuft offline, ohne Konto, ohne Kosten. Zum echten Suchen auf
+# "serper" umstellen und SERPER_API_KEY setzen.
+active: fixture
+
+# Bewusst leer. Ein automatischer Wechsel koennte Guthaben eines Kontos
+# verbrauchen, das gerade nicht eingesetzt werden soll.
+fallback_chain: []
+
+providers:
+  fixture:
+    enabled: true
+    fixtures_dir: fixtures
+    strict: false
+
+  serper:
+    enabled: true
+    api_key_env: 08ec7783386d1cfc9084f37cc2ebfa447aa2bddd
+    max_results_per_call: 10    # 1 Credit; ab 11 Ergebnissen kostet es 2
+    credits_per_query: 1
+    country: de
+    language: de
+    min_interval_seconds: 0.5

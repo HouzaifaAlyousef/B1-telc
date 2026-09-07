@@ -1,0 +1,19 @@
+# Was dieses Projekt an den mitgelieferten Sprachen aendert.
+#
+# Nur eine Zeile - und die ist eine Angabe ueber den MARKT, nicht ueber die
+# Sprache: Eine lateinisch geschriebene Gruppe in einem deutschen Markt ist
+# deutsch, solange nichts anderes darauf hindeutet. Ohne diese Erklaerung
+# bliebe jede lateinische Quelle ohne Sprache - Deutsch, Englisch,
+# Franzoesisch und Tuerkisch teilen sich das Alphabet vollstaendig, und das
+# Modul raet nicht.
+#
+# Wer in Frankreich sucht, schreibt hier "fr". Wer in mehreren Maerkten
+# sucht, laesst es weg und nimmt in Kauf, dass das Sprachsignal bei
+# lateinischen Quellen unbekannt bleibt.
+#
+# Arabisch, Ukrainisch und Russisch brauchen das nicht: Sie sind an ihrer
+# Schrift beziehungsweise an ihren eigenen Buchstaben erkennbar.
+
+languages:
+  de:
+    base: true

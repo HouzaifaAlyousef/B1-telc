@@ -1,0 +1,22 @@
+# Welche Quellenarten gesucht werden.
+#
+# Reihenfolge und Prioritaet sind zweierlei: Die Prioritaet im Adapter
+# entscheidet, WER ein Ergebnis beansprucht (facebook_groups steht auf 100,
+# website auf 0). Diese Liste sagt nur, welche Adapter ueberhaupt laufen - und
+# damit auch, welche Anfragen geplant werden.
+#
+# "website" mitlaufen zu lassen kostet die doppelte Zahl Anfragen. Wer nur
+# Facebook-Gruppen sucht, nimmt es heraus.
+
+active: [facebook_groups]
+
+sources:
+  facebook_groups:
+    enabled: true
+    site_filter: "facebook.com/groups/"
+    text_fallback: "facebook gruppe"
+
+  website:
+    enabled: true
+    granularity: domain
+    ignore_hosts: []

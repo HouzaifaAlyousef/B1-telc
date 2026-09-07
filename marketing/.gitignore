@@ -1,0 +1,9 @@
+# Bestand und Cache des Moduls: Gruppen-URLs, Trefferverlauf, Kampagnenstand.
+# Gehoert nicht ins Repo - es ist Laufzeitzustand, kein Quelltext.
+data/
+
+# Exporte (CSV/XLSX).
+out/
+
+# Falls jemand Schluessel in eine Datei legt statt in die Umgebung.
+.env

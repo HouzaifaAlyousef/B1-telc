@@ -1,0 +1,152 @@
+# Orte dieses Projekts.
+#
+# Hierarchie ueber "parent". Der Pfad von grob nach fein IST die geografische
+# Genauigkeit: Wer "de" sucht und "de/de-nw/de-koeln" findet, hat vollstaendig
+# getroffen - Koeln liegt in Deutschland. Wer "de-koeln" sucht und "de-berlin"
+# findet, hat NICHT getroffen; Berlin ist ein Geschwisterort.
+#
+# "weight" ist ausschliesslich Tiebreak bei Namensgleichheit ("Frankfurt") -
+# ausdruecklich keine Bewertung. Eine kleine Stadt ist nicht die schlechtere
+# Chance.
+#
+# Die Namen in fremder Schrift sind nicht Kosmetik: Sie sind das, wonach
+# gesucht wird und woran ein Gruppenname erkannt wird.
+#
+# "forms" sind gebeugte Namen. Ukrainisch und Russisch beugen Ortsnamen, und
+# languages.yaml sagt, welchen Fall sie am Ort verlangen. Ohne die Form bleibt
+# {place_in} leer und es entsteht kein Text - lieber keiner als "у Кельн",
+# was kein holpriges Ukrainisch ist, sondern falsch. Deutsch und Arabisch
+# brauchen nichts davon.
+
+locations:
+  - id: de
+    kind: country
+    names: { de: Deutschland, ar: ألمانيا, uk: Німеччина, ru: Германия, en: Germany }
+    forms:
+      uk: { locative: Німеччині }      # "у Німеччині"
+      ru: { prepositional: Германии }
+    phase: 1
+
+  # --- Nordrhein-Westfalen ---
+  - id: de-nw
+    kind: region
+    parent: de
+    names: { de: Nordrhein-Westfalen }
+    phase: 1
+
+  - id: de-koeln
+    kind: city
+    parent: de-nw
+    names: { de: Köln, ar: كولونيا, uk: Кельн, ru: Кёльн, en: Cologne }
+    forms:
+      uk: { locative: Кельні }
+      ru: { prepositional: Кёльне }
+    aliases: [Koeln, Cologne]
+    weight: 1080000
+    code: CGN
+    phase: 1
+
+  - id: de-duesseldorf
+    kind: city
+    parent: de-nw
+    names: { de: Düsseldorf, ar: دوسلدورف, uk: Дюссельдорф }
+    forms:
+      uk: { locative: Дюссельдорфі }
+    aliases: [Duesseldorf]
+    weight: 620000
+    code: DUS
+    phase: 1
+
+  - id: de-dortmund
+    kind: city
+    parent: de-nw
+    names: { de: Dortmund, ar: دورتموند, uk: Дортмунд }
+    forms:
+      uk: { locative: Дортмунді }
+    weight: 590000
+    code: DTM
+    phase: 1
+
+  # --- Berlin ---
+  - id: de-be
+    kind: region
+    parent: de
+    names: { de: Berlin }
+    phase: 1
+
+  - id: de-berlin
+    kind: city
+    parent: de-be
+    names: { de: Berlin, ar: برلين, uk: Берлін, ru: Берлин }
+    forms:
+      uk: { locative: Берліні }
+      ru: { prepositional: Берлине }
+    weight: 3850000
+    code: BER
+    phase: 1
+
+  # --- Hamburg ---
+  - id: de-hh
+    kind: region
+    parent: de
+    names: { de: Hamburg }
+    phase: 1
+
+  - id: de-hamburg
+    kind: city
+    parent: de-hh
+    names: { de: Hamburg, ar: هامبورغ, uk: Гамбург }
+    forms:
+      # g -> z vor dem Lokativ: "у Гамбурзі", nicht "у Гамбургі".
+      uk: { locative: Гамбурзі }
+    aliases: [هامبورج]
+    weight: 1900000
+    code: HAM
+    phase: 1
+
+  # --- Bayern ---
+  - id: de-by
+    kind: region
+    parent: de
+    names: { de: Bayern }
+    phase: 1
+
+  - id: de-muenchen
+    kind: city
+    parent: de-by
+    names: { de: München, ar: ميونخ, uk: Мюнхен }
+    forms:
+      uk: { locative: Мюнхені }
+    aliases: [Muenchen, Munich]
+    weight: 1510000
+    code: MUC
+    phase: 1
+
+  # --- Hessen ---
+  - id: de-he
+    kind: region
+    parent: de
+    names: { de: Hessen }
+    phase: 1
+
+  - id: de-frankfurt
+    kind: city
+    parent: de-he
+    names: { de: Frankfurt, ar: فرانكفورت, uk: Франкфурт }
+    forms:
+      uk: { locative: Франкфурті }
+    aliases: ["Frankfurt am Main"]
+    weight: 770000
+    code: FRA
+    phase: 1
+
+  # Phase 2 - freischalten heisst "phase: 1" schreiben.
+  - id: de-stuttgart
+    kind: city
+    parent: de
+    names: { de: Stuttgart, ar: شتوتغارت, uk: Штутгарт }
+    forms:
+      uk: { locative: Штутгарті }
+    weight: 630000
+    code: STR
+    phase: 2
