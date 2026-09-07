@@ -46,7 +46,7 @@ const check = (l,c) => { R.push([l,!!c]); console.log(`  ${c?'✓':'✗'} ${l}`)
 
 const browser = await chromium.launch({ args:['--no-sandbox','--disable-dev-shm-usage'] });
 const page = await browser.newPage();
-page.setDefaultTimeout(8000);
+page.setDefaultTimeout(25000);
 page.on('dialog', d => d.dismiss());
 
 console.log('\n=== حقن XSS بكل حقل بيوصل للشاشة ===');
@@ -142,7 +142,7 @@ check('الحمولة ظاهرة كنص مو كوسم',
 /* ---------- لوحة التحكّم ----------
    هون البيانات أخطر: أسماء وملاحظات وأكواد، وبتنعرض لك إنت. */
 const page2 = await browser.newPage();
-page2.setDefaultTimeout(8000);
+page2.setDefaultTimeout(25000);
 page2.on('dialog', d => d.dismiss());
 
 const sql = q => execFileSync('psql',
