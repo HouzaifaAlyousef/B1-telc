@@ -26,7 +26,8 @@ mkdir -p "$OUT/assets" "$OUT/$ADMIN_PATH"
 
 # ---- تطبيق الطلاب ----
 cp index.html manifest.webmanifest sw.js "$OUT/"
-cp assets/app.js assets/api.js assets/config.js assets/style.css "$OUT/assets/"
+cp assets/app.js assets/api.js assets/i18n.js assets/config.js assets/style.css \
+   "$OUT/assets/"
 cp -r assets/icons "$OUT/assets/"
 
 # ترويسات Cloudflare — لازم تكون بجذر الناتج. قاعدة الـnoindex مكتوبة

@@ -33,6 +33,9 @@ echo "▸ الأدوات (البناء، حارس التسريب، الرفع)"
 echo "▸ المصدّر (JSON ← SQL ← قاعدة بيانات)"
 python3 tests/export.py
 
+echo "▸ الترجمة (اكتمال المفاتيح والجمع)"
+node tests/i18n.mjs
+
 echo "▸ المحلّل: حالات حدّية"
 node tests/parse.mjs
 

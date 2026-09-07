@@ -312,6 +312,17 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 /* Kachel "Fehler wiederholen" */
 .tile.drill .n{background:var(--warn-soft); color:var(--warn); font-size:19px}
 
+/* ---- Sprachumschalter ---- */
+.langsel{background:transparent;border:1px solid var(--line,#e2e7f0);
+  color:var(--muted,#68758a);border-radius:8px;padding:4px 6px;
+  font:inherit;font-size:13px;margin-inline-start:8px;cursor:pointer}
+
+/* Arabisch läuft von rechts nach links. Die Pfeile zeigen sonst in die
+   falsche Richtung, und Ränder sitzen auf der falschen Seite. */
+[dir="rtl"] .chev{transform:scaleX(-1)}
+[dir="rtl"] .icon-btn{transform:scaleX(-1)}
+[dir="rtl"] .icon-btn>*{transform:scaleX(-1);display:inline-block}
+
 /* ---- Abo-Karte: was habe ich, wie lange noch ----
    Steht immer da, auch bei einer einzigen Stufe. Vorher zeigte nur der
    Umschalter die Restzeit, und der erschien erst ab zwei Stufen — der

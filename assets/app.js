@@ -26,7 +26,8 @@ const S = {
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const mmss = s => `${String(Math.floor(Math.max(0,s)/60)).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
 
-function ask(text, onYes, yes = 'Ja', no = 'Abbrechen'){
+function ask(text, onYes, yes, no){
+  yes = yes || t('yes'); no = no || t('no');
   const back = document.createElement('div');
   back.className = 'modalback';
   back.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
@@ -82,15 +83,48 @@ function stopTimer(){
 /* ============ Navigation ============ */
 function go(view, fn){
   S.view = view;
+  // آخر دالة رسم: تبديل اللغة بيعيد نداءها بمكانها. الشاشات بتاخد
+  // وسائط (نتيجة، جولة…)، فإعادة بنائها من اسم الشاشة بيضيّعهن.
+  S.render = fn;
   elBack.hidden = (view === 'home');
+  elBack.textContent = t('back');
   window.scrollTo(0, 0);
   fn();
 }
+/* منتقي اللغة. الواجهة بس: محتوى الامتحان بيضل ألماني — ترجمته بتلغي
+   الامتحان، لأن قراءة التعليمة الألمانية جزء من الاختبار. */
+const elLang = document.getElementById('lang');
+if (elLang){
+  elLang.innerHTML = I18N.LANGS.map(l =>
+    `<option value="${l.id}"${l.id === I18N.lang ? ' selected' : ''}>${
+      esc(l.name)}</option>`).join('');
+  elLang.onchange = () => {
+    I18N.setLang(elLang.value);
+    // إعادة رسم الشاشة الحالية باللغة الجديدة
+    redraw();
+  };
+}
+I18N.apply();
+
+/* الكتالوج بيعرض الامتحانات المقفولة للتشويق — تحسين، مو شرط.
+   فشله (قاعدة قديمة، أو واجهة ما بتعرفه) ما لازم يمنع التطبيق يشتغل. */
+async function loadCatalog(id){
+  try { return (API.catalog ? await API.catalog(id) : []) || []; }
+  catch { return []; }
+}
+
+/* إعادة رسم الشاشة الحالية بمكانها — بعد تبديل اللغة. بلا تمرير
+   لفوق: المستخدم بدّل اللغة، مو بدّه يطلع من مكانه. */
+function redraw(){
+  elBack.textContent = t('back');
+  if (S.render) S.render(); else screenHome();
+}
+
 elBack.onclick = () => {
   if (S.view === 'exam'){
-    ask('Prüfung verlassen? Ihre Antworten gehen verloren.',
+    ask(t('leaveAsk'),
         () => { stopTimer(); S.run && S.run.drill ? screenHome() : screenModell(S.modell); },
-        'Verlassen');
+        t('leave'));
   } else if (S.view === 'result' || S.view === 'intro'){
     stopTimer();
     if (S.run && S.run.drill) screenHome(); else screenModell(S.modell);
@@ -107,11 +141,11 @@ elBack.onclick = () => {
    gültigen Zugang kommt der Code-Bildschirm, sonst die Übersicht. */
 async function boot(){
   if (!API.configured()){
-    app.innerHTML = `<div class="empty">Die App ist noch nicht mit dem Server
-      verbunden.<br>Bitte <code>assets/config.js</code> ausfüllen.</div>`;
+    app.innerHTML = `<div class="empty">${esc(t('notConfigured'))}
+<br>${esc(t('fillConfig'))}</div>`;
     return;
   }
-  app.innerHTML = '<div class="empty">Einen Moment …</div>';
+  app.innerHTML = `<div class="empty">${esc(t('moment'))}</div>`;
   try {
     await API.ensureSession();
     S.sub = API.hasSession() ? await API.subscription() : null;
@@ -126,12 +160,11 @@ async function boot(){
           : (S.sub.levels && S.sub.levels[0]) || 'b1';
   try {
     S.index = await API.index(S.level);
-    S.catalog = await API.catalog(S.level);
   } catch {
-    app.innerHTML = `<div class="empty">Keine Verbindung zum Server.<br>
-      Bitte später noch einmal versuchen.</div>`;
+    app.innerHTML = `<div class="empty">${esc(t('noServer'))}<br>${esc(t('tryLater'))}</div>`;
     return;
   }
+  S.catalog = await loadCatalog(S.level);
   screenHome();
 }
 
@@ -141,16 +174,14 @@ function screenCode(msg){
   go('code', () => {
     elBack.hidden = true;
     app.innerHTML = `
-      <h1>Zugang</h1>
-      <p class="sub">Geben Sie Ihren Zugangscode ein. Sie haben ihn beim Kauf
-        erhalten. Der Code wird nur einmal gebraucht — danach bleibt dieses
-        Gerät angemeldet.</p>
+      <h1>${esc(t('codeTitle'))}</h1>
+      <p class="sub">${esc(t('codeHint'))}</p>
       ${msg ? `<div class="instr" style="color:var(--bad)">${esc(msg)}</div>` : ''}
       <div class="card">
         <input id="code" class="codeinput" type="text" inputmode="latin"
                autocapitalize="characters" autocomplete="off"
                placeholder="XX-XXXX-XXXX" aria-label="Zugangscode">
-        <button class="btn" id="godo" style="width:100%;margin-top:10px">Freischalten</button>
+        <button class="btn" id="godo" style="width:100%;margin-top:10px">${esc(t('codeButton'))}</button>
       </div>`;
 
     const inp = document.getElementById('code');
@@ -216,8 +247,8 @@ function screenHome(){
         ${frei ? `data-id="${esc(m.id)}"` : 'disabled'}>
         <span class="n">${frei ? i + 1 : '🔒'}</span>
         <span class="grow"><span style="font-weight:600">${esc(m.title)}</span>
-          <div class="meta">${plural(m.aufgaben, 'Aufgabe', 'Aufgaben')} · ${
-            plural(m.minutes, 'Minute', 'Minuten')}</div></span>
+          <div class="meta">${plural(m.aufgaben, 'nTask')} · ${
+            plural(m.minutes, 'nMinute')}</div></span>
         <span class="chev">${frei ? '›' : ''}</span>
       </button>`;
     }).join('');
@@ -240,11 +271,11 @@ function screenHome(){
     };
     const remaining = ms => {
       if (ms == null) return '';
-      if (ms <= 0) return 'abgelaufen';
-      if (ms >= 48 * 3600000) return `noch ${Math.ceil(ms / 86400000)} Tage`;
+      if (ms <= 0) return t('expired');
+      if (ms >= 48 * 3600000) return plural(Math.ceil(ms / 86400000), 'daysLeft');
       const h = Math.ceil(ms / 3600000);
-      if (h >= 1) return `noch ${h} Stunde${h === 1 ? '' : 'n'}`;
-      return 'weniger als 1 Stunde';
+      if (h >= 1) return plural(h, 'hoursLeft');
+      return t('lessThanHour');
     };
     const endsFmt = id => {
       const d = S.sub && S.sub.until && S.sub.until[id];
@@ -270,12 +301,12 @@ function screenHome(){
         <span class="grow">
           <span class="who">${esc(name(l))}</span>
           <span class="what">${only
-            ? `Demo · ${plural(only.length, 'Modelltest', 'Modelltests')}`
-            : `Voller Zugang${n ? ` · ${plural(n, 'Modelltest', 'Modelltests')}` : ''}`}</span>
+            ? `${esc(t('demo'))} · ${esc(plural(only.length, 'nTest'))}`
+            : `${esc(t('fullAccess'))}${n ? ` · ${esc(plural(n, 'nTest'))}` : ''}`}</span>
         </span>
         <span class="when">
           <b>${esc(remaining(ms))}</b>
-          <span class="bis">bis ${esc(endsFmt(l.id))}</span>
+          <span class="bis">${esc(t('until', { date: endsFmt(l.id) }))}</span>
         </span>
       </button>`;
     };
@@ -283,33 +314,30 @@ function screenHome(){
       ? `<div class="abos">${S.levels.map(aboRow).join('')}</div>` : '';
 
     app.innerHTML = `
-      <h1>Willkommen 👋</h1>
+      <h1>${esc(t('welcome'))}</h1>
       ${abo}
-      <p class="sub">Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile
-        der schriftlichen Prüfung${lvl ? ` ${esc(name(lvl))}` : ''} — mit der echten
-        Prüfungszeit.</p>
+      <p class="sub">${lvl ? esc(t('homeIntro', { level: name(lvl) }))
+                            : esc(t('homeIntroPlain'))}</p>
       <button class="tile" id="resbtn">
         <span class="n">📖</span>
-        <span class="grow"><span style="font-weight:600">Lesematerial</span>
-          <div class="meta">Wortschatz und Hinweise · jederzeit</div></span>
+        <span class="grow"><span style="font-weight:600">${esc(t('material'))}</span>
+          <div class="meta">${esc(t('materialMeta'))}</div></span>
         <span class="chev">›</span>
       </button>
       ${nLocked ? `<div class="upsell">
-        <b>${plural(nLocked, 'weiterer Modelltest', 'weitere Modelltests')}</b>
-        ${nLocked === 1 ? 'ist' : 'sind'} in dieser Prüfung enthalten.
-        Mit dem vollen Zugang stehen alle offen — mit Korrektur und Lösungen.
+        ${esc(t('upsell', { n: plural(nLocked, 'nMore') }))}
       </div>` : ''}
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
-        <span class="grow"><span style="font-weight:600">Wiederholen</span>
-          <div class="meta">${plural(nMist, 'Aufgabe', 'Aufgaben')} fällig${
+        <span class="grow"><span style="font-weight:600">${esc(t('repeat'))}</span>
+          <div class="meta">${plural(nMist, 'nTask')} fällig${
             review.mastered ? ` · ${review.mastered} sitzen schon` : ''} · ohne Zeit</div></span>
         <span class="chev">›</span>
       </button>`
       : (review.total ? `<div class="tile drill done">
         <span class="n">✓</span>
-        <span class="grow"><span style="font-weight:600">Nichts fällig</span>
-          <div class="meta">${review.mastered ? `${plural(review.mastered, 'Aufgabe sitzt', 'Aufgaben sitzen')}` : 'Alles wiederholt'}${
+        <span class="grow"><span style="font-weight:600">${esc(t('nothingDue'))}</span>
+          <div class="meta">${review.mastered ? `${plural(review.mastered, 'nSits')}` : 'Alles wiederholt'}${
             review.next_due ? ` · weiter am ${new Date(review.next_due).toLocaleDateString('de-DE')}` : ''}</div></span>
       </div>` : '')}
       ${cards}`;
@@ -322,7 +350,7 @@ function screenHome(){
     const dr = document.getElementById('drill');
     if (dr) dr.onclick = async () => {
       const run = await drillRun();
-      if (run) screenIntro(run); else toast('Keine Fehler gespeichert.');
+      if (run) screenIntro(run); else toast(t('noMistakes'));
     };
   });
 }
@@ -333,9 +361,10 @@ async function switchLevel(id){
   S.level = id;
   save('b1.level', id);
   Object.keys(modellCache).forEach(k => delete modellCache[k]);
-  app.innerHTML = '<div class="empty">Einen Moment …</div>';
-  try { S.index = await API.index(id); S.catalog = await API.catalog(id); }
-  catch { return void toast('Die Stufe konnte nicht geladen werden.'); }
+  app.innerHTML = `<div class="empty">${esc(t('moment'))}</div>`;
+  try { S.index = await API.index(id); }
+  catch { return void toast(t('levelFailed')); }
+  S.catalog = await loadCatalog(id);
   screenHome();
 }
 
@@ -343,18 +372,18 @@ async function switchLevel(id){
 /* Kein Test, keine Zeit: Texte, die die Kursleitung eingestellt hat. */
 async function screenResources(){
   stopTimer();
-  go('resources', () => { app.innerHTML = '<div class="empty">Lädt …</div>'; });
+  go('resources', () => { app.innerHTML = `<div class="empty">${esc(t('loading'))}</div>`; });
   let rows;
   try { rows = await API.resources(S.level); }
   catch { rows = null; }
   go('resources', () => {
     if (!rows || !rows.length){
-      app.innerHTML = `<h1>Lesematerial</h1>
-        <div class="empty">Für diese Stufe ist noch nichts hinterlegt.</div>`;
+      app.innerHTML = `<h1>${esc(t('material'))}</h1>
+        <div class="empty">${esc(t('materialEmpty'))}</div>`;
       return;
     }
-    app.innerHTML = `<h1>Lesematerial</h1>
-      <p class="sub">${plural(rows.length, 'Text', 'Texte')}. Zum Öffnen tippen.</p>
+    app.innerHTML = `<h1>${esc(t('material'))}</h1>
+      <p class="sub">${plural(rows.length, 'nText')}. Zum Öffnen tippen.</p>
       ${rows.map((r, i) => `<div class="blockcard">
         <button class="tile" data-res="${i}">
           <span class="grow"><span style="font-weight:600">${esc(r.title)}</span></span>
@@ -378,7 +407,7 @@ function showResource(r){
       return `<p>${esc(t).replace(/\n/g, '<br>')}</p>`;
     }).join('');
     app.innerHTML = `<h1>${esc(r.title)}</h1>
-      <div class="card readable">${html || '<p class="sub">Leer.</p>'}</div>`;
+      <div class="card readable">${html || `<p class="sub">${esc(t('empty'))}</p>`}</div>`;
   });
 }
 
@@ -395,7 +424,7 @@ async function openModell(id){
   try {
     S.modell = await loadModell(id);
   } catch {
-    toast('Der Modelltest konnte nicht geladen werden.'); return;
+    toast(t('loadFailed')); return;
   }
   screenModell(S.modell);
 }
@@ -416,8 +445,8 @@ function screenModell(m){
         <span class="pill">${b.minutes} Min.</span>
         ${done ? `<span class="pill ${r.pct >= 60 ? 'ok' : 'bad'}">${fmtP(r.points)}/${fmtP(r.max)}</span>` : ''}
       </span>`;
-      const sub = [b.hint, plural(n, 'Aufgabe', 'Aufgaben'), `${fmtP(b.maxPoints)} Punkte`,
-                   b.missing ? `${plural(b.missing, 'Aufgabe fehlt', 'Aufgaben fehlen')} in der Vorlage` : '']
+      const sub = [b.hint, plural(n, 'nTask'), `${fmtP(b.maxPoints)} Punkte`,
+                   b.missing ? `${plural(b.missing, 'nMissing')} in der Vorlage` : '']
         .filter(Boolean).join(' · ');
       return `<div class="blockcard">
         <button class="tile" data-block="${esc(b.id)}">
@@ -429,8 +458,8 @@ function screenModell(m){
           <span>Letzte Prüfung${r.date ? ' · ' + esc(r.date) : ''}<br>
             ${done ? `${fmtP(r.points)}/${fmtP(r.max)} Punkte · ${r.pct} %`
                    : 'noch nicht bewertet'}</span>
-          <button class="btn ghost sm" data-review="${esc(b.id)}">Ansehen</button>
-          <button class="btn grey sm" data-clear="${esc(b.id)}">Löschen</button>
+          <button class="btn ghost sm" data-review="${esc(b.id)}">${esc(t('view'))}</button>
+          <button class="btn grey sm" data-clear="${esc(b.id)}">${esc(t('remove'))}</button>
         </div>` : ''}
       </div>`;
     }).join('');
@@ -459,7 +488,10 @@ function screenModell(m){
 const fmtP = n => (Math.round(n * 10) / 10).toString().replace('.', ',');
 
 /* „1 Aufgabe", nicht „1 Aufgaben" — deutsche Zählung an einer Stelle. */
-const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+/* الترجمة بـassets/i18n.js. plural القديمة كانت شكلين ثابتين — والعربي
+   ستة أشكال والأوكراني تلاتة، فالجمع صار من I18N حسب قواعد كل لغة. */
+const t = (k, v) => I18N.t(k, v);
+const plural = (n, key) => I18N.plural(n, key);
 
 /* Ein Durchgang = Titel, Zeit, Punkte und die Teile, die dazugehören. */
 function blockRun(m, id){
@@ -484,7 +516,7 @@ function reviewRun(m, blockId){
     return screenWriting(run, r);
   // Die Lösungen stehen im gespeicherten Ergebnis — die Aufgaben selbst
   // tragen sie nie. Ältere Ergebnisse ohne results sind nicht ansehbar.
-  if (!r.results) return toast('Für diese Prüfung liegen keine Lösungen vor.');
+  if (!r.results) return toast(t('noSolutions'));
   applyResults(run, r.results);
   const right = r.results.filter(x => x.correct).length;
   screenResult(run, r.points, r.max, r.pct, right, runItems(run).length);
@@ -506,7 +538,7 @@ function screenIntro(run){
     const list = run.parts.length > 1
       ? `<ul class="partlist">${run.parts.map(p =>
           `<li><span class="grow">${esc(p.title)}</span>
-             <span class="meta">${plural(p.items.length, 'Aufgabe', 'Aufgaben')} · ${fmtP(p.maxPoints)} P.</span></li>`).join('')}</ul>`
+             <span class="meta">${plural(p.items.length, 'nTask')} · ${fmtP(p.maxPoints)} P.</span></li>`).join('')}</ul>`
       : `<div class="instr">${esc(run.parts[0].instruction)}</div>`;
 
     app.innerHTML = `
@@ -521,16 +553,16 @@ function screenIntro(run){
           ${fmtP(run.maxPoints)} Punkte umgerechnet.</div>` : ''}
         ${notes.map(t => `<div class="fb warn" style="margin-bottom:16px">${esc(t)}</div>`).join('')}
         <div class="row" style="gap:24px;margin-bottom:16px">
-          <div><div class="meta" style="color:var(--muted);font-size:13px">Aufgaben</div>
+          <div><div class="meta" style="color:var(--muted);font-size:13px">${esc(t('tasks'))}</div>
                <b style="font-size:18px">${n}</b></div>
-          <div><div class="meta" style="color:var(--muted);font-size:13px">Zeit</div>
+          <div><div class="meta" style="color:var(--muted);font-size:13px">${esc(t('time'))}</div>
                <b style="font-size:18px">${run.drill ? 'ohne' : run.minutes + ' Minuten'}</b></div>
           <div><div class="meta" style="color:var(--muted);font-size:13px">${run.drill ? 'Richtig zu lösen' : 'Punkte'}</div>
                <b style="font-size:18px">${fmtP(run.maxPoints)}</b></div>
         </div>
         ${sess ? `<button class="btn wide" id="resume">Prüfung fortsetzen — ${mmss(sess.left)} übrig</button>
-             <button class="btn ghost wide" id="start" style="margin-top:10px">Neu beginnen</button>`
-               : `<button class="btn wide" id="start">Start ▶</button>`}
+             <button class="btn ghost wide" id="start" style="margin-top:10px">${esc(t('restart'))}</button>`
+               : `<button class="btn wide" id="start">${esc(t('start'))}</button>`}
       </div>`;
     document.getElementById('start').onclick = () => {
       clearSession(run.id);
@@ -564,8 +596,8 @@ function screenExam(run, resumeLeft){
     app.innerHTML = nav + body +
       `<div class="bottombar"><div class="inner">
          <span class="progress" id="prog">0 / ${runItems(run).length}</span>
-         <button class="btn grey" id="pause">Pause</button>
-         <button class="btn grow" id="submit">Abgeben &amp; korrigieren</button>
+         <button class="btn grey" id="pause">${esc(t('pause'))}</button>
+         <button class="btn grow" id="submit">${esc(t('submit'))}</button>
        </div></div>`;
 
     run.parts.forEach(p => bindInputs(p));
@@ -577,7 +609,7 @@ function screenExam(run, resumeLeft){
     else {
       pz.onclick = () => pauseExam(run);
       startTimer(resumeLeft || run.minutes * 60,
-                 () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
+                 () => { toast(t('timeUp')); finish(run, true); });
     }
   });
 }
@@ -641,12 +673,12 @@ function renderAudio(sec){
   API.audioUrl(sec.audio).then(url => {
     const el = document.getElementById(slot);
     if (!el) return;
-    if (!url){ el.innerHTML = '<p class="sub">Der Hörtext konnte nicht geladen werden.</p>'; return; }
+    if (!url){ el.innerHTML = `<p class="sub">${esc(t('audioFailed'))}</p>`; return; }
 
     let left = plays;
     el.innerHTML = `
-      <button class="btn" data-play>▶ Hörtext abspielen</button>
-      <span class="sub" data-left>noch ${left}×</span>
+      <button class="btn" data-play>${esc(t('audioPlay'))}</button>
+      <span class="sub" data-left>${esc(plural(left, 'audioLeft'))}</span>
       <div class="audiobar"><i></i></div>`;
     const audio = new Audio(url);
     audio.preload = 'auto';
@@ -660,8 +692,8 @@ function renderAudio(sec){
     audio.addEventListener('ended', () => {
       left--;
       btn.disabled = left <= 0;
-      btn.textContent = left > 0 ? '▶ Noch einmal' : '▶ Abgespielt';
-      info.textContent = left > 0 ? `noch ${left}×` : 'keine Wiedergabe mehr';
+      btn.textContent = left > 0 ? t('audioAgain') : t('audioDone');
+      info.textContent = left > 0 ? plural(left, 'audioLeft') : t('audioNone');
       bar.style.width = '100%';
     });
     btn.onclick = () => {
@@ -671,13 +703,13 @@ function renderAudio(sec){
       // kein Zurückspulen: jede Wiedergabe startet von vorn und läuft durch
       audio.currentTime = 0;
       audio.play().catch(() => {
-        btn.disabled = false; btn.textContent = '▶ Hörtext abspielen';
+        btn.disabled = false; btn.textContent = t('audioPlay');
         info.textContent = 'Wiedergabe nicht möglich';
       });
     };
   }).catch(() => {});
 
-  return `<div class="audio" id="${slot}"><p class="sub">Hörtext wird geladen …</p></div>`;
+  return `<div class="audio" id="${slot}"><p class="sub">${esc(t('audioLoading'))}</p></div>`;
 }
 
 function renderPassages(sec){
@@ -707,8 +739,8 @@ function renderBank(sec){
         <img src="${esc(url)}" alt="Anzeigen" class="bankimg"></a>`;
     }).catch(() => {});
     return `<div class="bank"><h3>${esc(sec.bankTitle || 'Anzeigen')}</h3>
-      <p class="sub" style="margin:0 0 10px">Zum Vergrößern auf das Bild tippen</p>
-      <div id="${slot}" class="bankslot">Anzeigen werden geladen …</div></div>`;
+      <p class="sub" style="margin:0 0 10px">${esc(t('imgTap'))}</p>
+      <div id="${slot}" class="bankslot">${esc(t('imgLoading'))}</div></div>`;
   }
   if (!sec.bank || !sec.bank.length) return '';
   return `<div class="bank"><h3>${esc(sec.bankTitle || 'Auswahl')}</h3>
@@ -744,7 +776,7 @@ function renderItem(sec, it){
   else if (sec.format === 'matching' || sec.format === 'wordbank'){
     const chosen = S.answers[it.id] || '';
     body = `<select data-sel="${esc(it.id)}">
-      <option value="">— bitte wählen —</option>
+      <option value="">${esc(t('choose'))}</option>
       ${sec.bank.map(o => `<option value="${esc(o.key)}"${o.key === chosen ? ' selected' : ''}>${esc(o.key)}${o.text ? ' — ' + esc(o.text).slice(0, 70) : ''}</option>`).join('')}
     </select>`;
   }
@@ -837,18 +869,18 @@ function pauseExam(run){
   const box = document.createElement('div');
   box.className = 'modalback';
   box.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
-    <h2 style="margin:0 0 6px">Pause</h2>
-    <p>Der Timer steht. Sie können die App schließen und später weitermachen.</p>
+    <h2 style="margin:0 0 6px">${esc(t('pause'))}</h2>
+    <p>${esc(t('timerPaused'))}</p>
     <p class="pausetime">${mmss(S.left)} übrig</p>
     <div class="modalbtns">
-      <button class="btn grey" data-exit>Beenden</button>
-      <button class="btn" data-go>Weiter</button>
+      <button class="btn grey" data-exit>${esc(t('finish'))}</button>
+      <button class="btn" data-go>${esc(t('resume'))}</button>
     </div></div>`;
   document.body.appendChild(box);
   const close = () => { box.remove(); document.body.classList.remove('paused'); };
   box.querySelector('[data-go]').onclick = () => {
     close();
-    startTimer(S.left, () => { toast('Die Zeit ist abgelaufen ⏱'); finish(run, true); });
+    startTimer(S.left, () => { toast(t('timeUp')); finish(run, true); });
   };
   box.querySelector('[data-exit]').onclick = () => { close(); screenModell(S.modell); };
 }
@@ -968,7 +1000,7 @@ function applyResults(run, results){
 /* Korrigiert wird auf dem Server. Die App schickt die Antworten und
    bekommt Punkte und Lösungen zurück; sie kann nicht selbst rechnen. */
 async function grade(run){
-  app.innerHTML = '<div class="empty">Wird korrigiert …</div>';
+  app.innerHTML = `<div class="empty">${esc(t('aiWorking'))}</div>`;
   let res;
   try {
     res = run.drill
@@ -978,8 +1010,8 @@ async function grade(run){
     res = null;
   }
   if (!res || !res.ok){
-    app.innerHTML = `<div class="empty">Die Korrektur ist fehlgeschlagen.<br>
-      Ihre Antworten sind gespeichert — bitte mit Verbindung erneut abgeben.</div>`;
+    app.innerHTML = `<div class="empty">${esc(t('aiFailed'))}<br>${
+      esc(t('savedOffline'))}</div>`;
     saveSession(run);
     return;
   }
@@ -990,7 +1022,7 @@ async function grade(run){
   // Der Server rechnet über die vorhandenen; hier wird auf die offizielle
   // Höchstpunktzahl hochgerechnet, damit alle Tests vergleichbar bleiben.
   if (run.drill && res.mastered)
-    toast(`${plural(res.mastered, 'Aufgabe sitzt', 'Aufgaben sitzen')} jetzt ✓`, 3500);
+    toast(`${plural(res.mastered, 'nSits')} jetzt ✓`, 3500);
   const points = run.drill
     ? res.right
     : Math.round(res.points / (res.max_points || 1) * run.maxPoints * 10) / 10;
@@ -1052,7 +1084,8 @@ function scoreCard(points, max, pct, extra){
     <div class="pct">${pct} % · ${esc(noteOf(pct))}</div>
     <div class="bar"><i class="${cls}" style="width:${pct}%"></i></div>
     <div class="meta" style="color:var(--muted);font-size:13px">
-      bestanden ab ${fmtP(max * 0.6)} Punkten (60 %)${extra ? ' · ' + esc(extra) : ''}</div>
+      ${esc(t('passFrom', { p: fmtP(max * 0.6) }))}${
+        extra ? ' · ' + esc(extra) : ''}</div>
   </div>`;
 }
 
@@ -1063,7 +1096,7 @@ function screenResult(run, points, max, pct, right, total){
       // Nach der Abgabe darf das Transkript erscheinen: jetzt hilft es beim
       // Nachlesen, statt die Lösung zu verraten.
       const script = (p.audio && p.passages && p.passages.length)
-        ? `<div class="passage"><h3>Hörtext</h3>${p.passages.map(x =>
+        ? `<div class="passage"><h3>${esc(t('transcript'))}</h3>${p.passages.map(x =>
              (x.paragraphs || []).map(y =>
                `<p${y.b ? ' class="strong"' : ''}>${esc(y.t)}</p>`).join('')).join('')}</div>`
         : '';
@@ -1080,10 +1113,10 @@ function screenResult(run, points, max, pct, right, total){
           <div class="qhead"><span class="qnum">${esc(it.num || it.id)}</span>
             <span class="qtext grow">${esc(it.text)}</span></div>
           <div class="fb ${good ? 'ok' : 'bad'}">
-            ${good ? `<b>✔ Richtig · ${fmtP(p.pointsPerItem)} P.</b>` : `<b>✘ Falsch · 0 P.</b>
-               <div class="fbrow"><span class="lbl">Ihre Antwort</span>
+            ${good ? `<b>✔ Richtig · ${fmtP(p.pointsPerItem)} P.</b>` : `<b>${esc(t('wrong'))}</b>
+               <div class="fbrow"><span class="lbl">${esc(t('yourAnswer'))}</span>
                  <span class="val">${esc(answerLabel(p, it, mine))}</span></div>
-               <div class="fbrow"><span class="lbl">Lösung</span>
+               <div class="fbrow"><span class="lbl">${esc(t('solution'))}</span>
                  <span class="val">${esc(answerLabel(p, it, it.answer))}</span></div>`}
             ${it.explain ? `<div class="why">${esc(it.explain)}</div>` : ''}
           </div>
@@ -1094,10 +1127,10 @@ function screenResult(run, points, max, pct, right, total){
 
     app.innerHTML =
       scoreCard(points, max, pct, `${right} von ${total} Aufgaben richtig`) +
-      `<h2 style="margin:18px 0 10px">Korrektur</h2>${perPart}
+      `<h2 style="margin:18px 0 10px">${esc(t('correction'))}</h2>${perPart}
       <div class="bottombar"><div class="inner">
-        <button class="btn ghost grow" id="again">Wiederholen</button>
-        <button class="btn grow" id="back">Übersicht</button>
+        <button class="btn ghost grow" id="again">${esc(t('again'))}</button>
+        <button class="btn grow" id="back">${esc(t('overview'))}</button>
       </div></div>`;
 
     document.getElementById('again').onclick = () =>
@@ -1120,18 +1153,19 @@ function screenWriting(run, saved){
   go('result', () => {
     app.innerHTML = `
       <div class="card">
-        <h2>Ihr Text</h2>
-        <p class="sub">${words} Wörter${words < (it.minWords || 100)
-          ? ` — mindestens ${it.minWords || 100} verlangt` : ''}</p>
+        <h2>${esc(t('yourText'))}</h2>
+        <p class="sub">${esc(plural(words, 'words'))}${
+          words < (it.minWords || 100)
+            ? ' ' + esc(t('minWords', { n: it.minWords || 100 })) : ''}</p>
         <div class="passage" style="margin:0"><div class="body">${esc(mine || '(kein Text geschrieben)')}</div></div>
       </div>
       <div class="card">
-        <h2>Aufgabe</h2>
+        <h2>${esc(t('taskHead'))}</h2>
         ${renderBrief(sec)}
       </div>
       <div class="card">
-        <h2>Bewertung</h2>
-        <p class="sub">Bewerten Sie jedes Kriterium selbst — so wie telc bewertet.</p>
+        <h2>${esc(t('grading'))}</h2>
+        <p class="sub">${esc(t('rateSelf'))}</p>
         ${sec.criteria.map((c, i) => `
           <div class="crit">
             <h3>${esc(c.title)}</h3>
@@ -1146,12 +1180,12 @@ function screenWriting(run, saved){
         <div id="wres"></div>
       </div>
       <div class="card" id="aiwrap">
-        <h2>Korrektur</h2>
-        <p class="sub" style="margin:0">Wird vorbereitet …</p>
+        <h2>${esc(t('correction'))}</h2>
+        <p class="sub" style="margin:0">${esc(t('preparing'))}</p>
       </div>
       <div class="bottombar"><div class="inner">
-        <button class="btn ghost grow" id="again">Wiederholen</button>
-        <button class="btn grow" id="back">Übersicht</button>
+        <button class="btn ghost grow" id="again">${esc(t('again'))}</button>
+        <button class="btn grow" id="back">${esc(t('overview'))}</button>
       </div></div>`;
 
     app.querySelectorAll('[data-crit]').forEach(lb => {
@@ -1191,14 +1225,13 @@ function screenWriting(run, saved){
    Die Korrektur kommt daneben — sie sagt, was tatsächlich im Text steht. */
 function renderAiBox(box, run, attemptId, text){
   if (!attemptId){
-    box.innerHTML = `<h2>Korrektur</h2>
-      <p class="sub" style="margin:0">Ohne Verbindung ist keine Korrektur möglich.</p>`;
+    box.innerHTML = `<h2>${esc(t('correction'))}</h2>
+      <p class="sub" style="margin:0">${esc(t('aiOffline'))}</p>`;
     return;
   }
-  box.innerHTML = `<h2>Korrektur</h2>
-    <p class="sub" style="margin:0 0 10px">Ihr Brief wird gelesen und nach den
-      telc-Kriterien bewertet — mit Hinweisen zu jedem Fehler.</p>
-    <button class="btn" id="aigo">Korrektur anfordern</button>
+  box.innerHTML = `<h2>${esc(t('correction'))}</h2>
+    <p class="sub" style="margin:0 0 10px">${esc(t('aiIntro'))}</p>
+    <button class="btn" id="aigo">${esc(t('aiRequest'))}</button>
     <div id="aiout"></div>`;
 
   const out = document.getElementById('aiout');
@@ -1237,18 +1270,18 @@ function showAi(out, btn, fb){
       <p class="sub" style="margin:0">${esc(g.why)}</p>
     </div>`).join('')}
     ${fb.summary ? `<div class="why" style="margin:12px 0">${esc(fb.summary)}</div>` : ''}
-    ${(fb.errors || []).length ? `<h3 style="margin:14px 0 6px">Fehler im Einzelnen</h3>
+    ${(fb.errors || []).length ? `<h3 style="margin:14px 0 6px">${esc(t('errorDetail'))}</h3>
       ${fb.errors.map(e => `<div class="q isbad">
         <div class="qhead"><span class="qnum">${esc(e.type)}</span></div>
         <div class="fb bad">
           <div class="fbrow"><span class="lbl">Ihr Text</span>
             <span class="val">${esc(e.original)}</span></div>
-          <div class="fbrow"><span class="lbl">Besser</span>
+          <div class="fbrow"><span class="lbl">${esc(t('better'))}</span>
             <span class="val">${esc(e.correction)}</span></div>
           ${e.why ? `<div class="why">${esc(e.why)}</div>` : ''}
         </div></div>`).join('')}` : ''}
     ${fb.corrected ? `<details style="margin-top:12px">
-       <summary class="sub">Korrigierte Fassung ansehen</summary>
+       <summary class="sub">${esc(t('aiView'))}</summary>
        <div class="passage" style="margin:8px 0 0"><div class="body">${esc(fb.corrected)}</div></div>
      </details>` : ''}`;
 }

@@ -287,6 +287,41 @@ const loaded = await page.evaluate(() => window.__loaded || []);
 check(`★ ولا نداء لتحميل امتحان مقفول (${loaded.join(', ') || 'ولا واحد'})`,
       !loaded.includes('modell-02') && !loaded.includes('modell-03'));
 
+// ---- ٨ج) لغة الواجهة ----
+// الواجهة بس بتنترجم. محتوى الامتحان بيضل ألماني: قراءة التعليمة
+// الألمانية جزء من الاختبار، وترجمتها بتلغي التدرّب.
+check('منتقي اللغة موجود بتلات لغات',
+      await page.locator('#lang option').count() === 3);
+
+await page.selectOption('#lang', 'ar');
+await page.waitForTimeout(500);
+check('★ الواجهة صارت عربي',
+      /أهلاً/.test(await page.textContent('#app')));
+check('★ والاتجاه انقلب لليمين',
+      await page.getAttribute('html', 'dir') === 'rtl');
+check('★ والجمع العربي صح (مثنّى)',
+      /نموذجين|نموذج/.test(await page.textContent('.upsell')));
+
+await page.selectOption('#lang', 'uk');
+await page.waitForTimeout(500);
+check('★ والأوكرانية شغّالة',
+      /Вітаємо/.test(await page.textContent('#app')));
+check('والاتجاه رجع لليسار',
+      await page.getAttribute('html', 'dir') === 'ltr');
+
+// الاختيار لازم ينحفظ بين الجلسات
+check('★ اللغة انحفظت',
+      await page.evaluate(() => localStorage.getItem('b1.lang')) === 'uk');
+
+// ★ ولا اسم امتحان انترجم — العناوين محتوى، مو واجهة
+check('★ عناوين الامتحانات ضلّت متل ما هي',
+      /PETRA/.test(await page.textContent('#app')));
+
+await page.selectOption('#lang', 'de');
+await page.waitForTimeout(500);
+check('والرجوع للألماني شغّال',
+      /Willkommen/.test(await page.textContent('#app')));
+
 // ---- ٩) بطاقة الاشتراك ----
 // كانت المعلومة تطلع بس لما يكون في أكتر من مستوى، فالطالب العادي ما
 // كان يعرف لا شو اشترى ولا إمتى بينتهي. صارت بطاقة دايمة.

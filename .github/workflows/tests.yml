@@ -56,7 +56,7 @@ jobs:
 
       - name: فحص JavaScript
         run: |
-          for f in assets/app.js assets/api.js assets/config.js sw.js \
+          for f in assets/app.js assets/api.js assets/i18n.js assets/config.js sw.js \
                    admin/admin.js admin/parse.js; do
             node --check "$f" && echo "  ✓ $f"
           done

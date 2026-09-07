@@ -17,15 +17,18 @@
 <body>
 
 <header class="topbar">
-  <button id="btnBack" class="icon-btn" hidden>‹ Zurück</button>
+  <button id="btnBack" class="icon-btn" hidden></button>
   <div class="brand">telc <span>B1</span></div>
   <div id="timer" class="timer" hidden><span id="timerText">00:00</span></div>
+  <!-- لغة الواجهة. محتوى الامتحان بيضل ألماني — ترجمته بتلغي الامتحان. -->
+  <select id="lang" class="langsel" aria-label="Sprache"></select>
 </header>
 
 <main id="app"></main>
 
 <div id="toast" class="toast" hidden></div>
 
+<script src="assets/i18n.js"></script>
 <script src="assets/config.js"></script>
 <script src="assets/api.js"></script>
 <script src="assets/app.js"></script>
