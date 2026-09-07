@@ -235,10 +235,27 @@ try {
   await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
   await page.waitForSelector('#c_go');
   const codesBefore = Number(sql('select count(*) from access_codes;'));
+
+  // ★ الافتراضي كود واحد: الغالب إنّ الأدمن بده كود لطالب واحد.
+  //   كان ٥، فكل مرة بده يمسح ويكتب ١.
+  check(`★ الافتراضي كود واحد (${await page.inputValue('#c_n')})`,
+        await page.inputValue('#c_n') === '1');
+
+  // ★ «Art» أول حقل: هي يلي بتقرّر شو بيعني يلي بعدها — أيام ولا
+  //   ساعات، وهل في اختيار امتحانات أصلاً.
+  const order = await page.evaluate(() => [...document.querySelectorAll(
+    '#c_kind, #c_n, #c_lvl_prov, #c_lvl, #c_days, #c_uses')].map(e => e.id));
+  check(`★ «Art» قبل باقي المنتقيات (${order.slice(0,3).join(' → ')})`,
+        order[0] === 'c_kind');
+
   await page.fill('#c_n', '3');
   await page.evaluate(() => document.getElementById('c_go').click());
   await page.waitForSelector('.codes');
   const shown = await page.locator('.codes div').count();
+  // ★ بلا فراغات: الكود بينوزّع بواتساب، وفراغ زيادة بيصير سؤال
+  const shownCodes = await page.locator('.codes div').allTextContents();
+  check(`★ الكود بينعرض بلا فراغات (${shownCodes[0]})`,
+        shownCodes.every(c => /^[A-Z0-9]+$/.test(c.trim())));
   const codesAfter = Number(sql('select count(*) from access_codes;'));
   check(`توليد ٣ أكواد: ظهروا ${shown} وانحفظوا ${codesAfter - codesBefore}`,
         shown === 3 && codesAfter - codesBefore === 3);

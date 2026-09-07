@@ -40,10 +40,15 @@ main{max-width:820px; margin:0 auto; padding:18px 16px 90px}
 }
 .brand{font-weight:700; font-size:18px; margin-inline-end:auto}
 .brand span{color:var(--brand)}
+/* ★ «Zurück» كان نص أزرق بلا إطار ولا أرضية: بيقرا كعنوان، مو كزرّ،
+   وهدف اللمس فيه كان أصغر من إصبع. صار إله إطار وأرضية وارتفاع ٤٤. */
 .icon-btn{
-  background:transparent; border:0; color:var(--brand); font-size:16px;
-  font-weight:600; cursor:pointer; padding:6px 4px; font-family:inherit;
+  background:var(--brand-soft); border:2px solid var(--brand);
+  color:var(--brand-dark); font-size:15px; font-weight:700;
+  cursor:pointer; padding:8px 14px; min-height:44px; border-radius:11px;
+  font-family:inherit; white-space:nowrap;
 }
+.icon-btn:hover{background:var(--brand); color:#fff}
 .timer{
   font-variant-numeric:tabular-nums; font-weight:700; font-size:17px;
   background:var(--brand-soft); color:var(--brand-dark);
@@ -357,31 +362,26 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 .key[disabled]{opacity:.3; cursor:default}
 .key.clr{font-weight:400; color:var(--muted); border-style:dashed}
 
-/* ---- Einstellungen: große, eindeutige Schaltflächen ----
-   Zielgruppe sind Kursteilnehmer, die mit Technik wenig anfangen können.
-   Ein Dropdown verlangt: antippen, lesen, scrollen, treffen. Eine Reihe
-   großer Knöpfe zeigt alles auf einmal und braucht einen Tipp. */
-.icon-btn.set{font-size:20px; padding:6px 10px; line-height:1}
-
-.pickrow{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 18px}
-.pick{
-  flex:1 1 auto; min-width:110px; min-height:52px;
+/* ---- Einstellungen: direkt auf der Startseite ----
+   Sprache, Aussehen, Schriftgröße stehen oben auf der Startseite statt
+   hinter einem ⚙. Wer kein Deutsch liest, erkennt an einem Zahnrad nicht,
+   dass dort seine Sprache steckt — an seiner Flagge schon. */
+.setbar{
+  display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center;
+  margin:0 0 16px; padding:8px 0 14px; border-bottom:1px solid var(--line);
+}
+.setgrp{display:flex; gap:6px; align-items:center}
+.chip{
+  min-width:48px; min-height:44px; padding:6px 10px;
   background:var(--card); color:var(--ink);
-  border:2px solid var(--line); border-radius:12px;
-  padding:12px 16px; font:inherit; font-size:1em; font-weight:600;
+  border:2px solid var(--line); border-radius:11px;
+  font:inherit; font-size:1.1em; font-weight:700; line-height:1;
   cursor:pointer; transition:border-color .12s, background .12s;
 }
-.pick:hover:not([disabled]){border-color:var(--brand)}
-.pick.on{border-color:var(--brand); background:var(--brand-soft); color:var(--brand-dark)}
-.pick[disabled]{opacity:.4; cursor:default}
-.pick.big{flex:0 0 auto; min-width:76px; font-size:1.25em}
+.chip:hover:not([disabled]){border-color:var(--brand)}
+.chip.on{border-color:var(--brand); background:var(--brand-soft); color:var(--brand-dark)}
+.chip[disabled]{opacity:.35; cursor:default}
 
-/* النقاط بتقول وين وقفت بمقياس الحجم — بلاها A+ بيصير تخمين */
-.sizedot{display:inline-flex; gap:6px; align-items:center; padding:0 4px}
-.sizedot i{width:9px; height:9px; border-radius:99px; background:var(--line)}
-.sizedot i.on{background:var(--brand); transform:scale(1.25)}
-
-.sample{margin:0 0 20px}
 .btn.wide{width:100%; justify-content:center; min-height:54px}
 
 /* Arabisch läuft von rechts nach links. Die Pfeile zeigen sonst in die

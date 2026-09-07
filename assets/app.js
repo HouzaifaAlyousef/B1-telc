@@ -112,58 +112,55 @@ function applyLook(){
   document.documentElement.style.setProperty('--fs', (16 * sz) + 'px');
 }
 
-function screenSettings(){
-  go('settings', () => {
-    const th = load('b1.theme', 'system');
+/* ★ الإعدادات بترويسة الصفحة الرئيسية، مو ورا زرّ ⚙.
+   الزرّ كان بيفتح شاشة لحالها: يعني ضغطتين وخروج من الصفحة تا يكبّر
+   الخط أو يبدّل لغته. ومين ما بيقرا الألماني ما كان يعرف إنّ ⚙ تعني
+   إعدادات أصلاً. هلق الأعلام والأزرار ظاهرة أول ما يفتح التطبيق. */
+function setbarHTML(){
+  const th = load('b1.theme', 'system');
+  let sz = load('b1.size', 1);
+  if (!SIZES.includes(sz)) sz = 1;
+  const i = SIZES.indexOf(sz);
+  const ic = { system: '🖥', light: '☀', dark: '🌙' };
+
+  return `<div class="setbar" role="group" aria-label="${esc(t('settings'))}">
+    <div class="setgrp">
+      ${I18N.LANGS.map(l => `<button class="chip${l.id === I18N.lang ? ' on' : ''}"
+        data-lang="${esc(l.id)}" title="${esc(l.name)}"
+        aria-label="${esc(l.name)}">${esc(l.flag)}</button>`).join('')}
+    </div>
+    <div class="setgrp">
+      ${THEMES.map(x => `<button class="chip${x === th ? ' on' : ''}"
+        data-theme="${esc(x)}" title="${esc(t(x === 'system' ? 'themeSystem'
+          : x === 'light' ? 'themeLight' : 'themeDark'))}">${ic[x]}</button>`).join('')}
+    </div>
+    <div class="setgrp">
+      <button class="chip" data-size="-" ${i === 0 ? 'disabled' : ''}
+        title="${esc(t('smaller'))}" aria-label="${esc(t('smaller'))}">A−</button>
+      <button class="chip" data-size="+" ${i === SIZES.length - 1 ? 'disabled' : ''}
+        title="${esc(t('bigger'))}" aria-label="${esc(t('bigger'))}">A+</button>
+    </div>
+  </div>`;
+}
+
+/* بعد أي تبديل منعيد رسم الرئيسية: العلم المعلّم بيتغيّر، والاتجاه
+   بينقلب مع العربي، وحجم الخط بيبان فوراً على نفس الصفحة. */
+function wireSetbar(){
+  app.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
+    I18N.setLang(b.dataset.lang); screenHome();
+  });
+  app.querySelectorAll('[data-theme]').forEach(b => b.onclick = () => {
+    save('b1.theme', b.dataset.theme); applyLook(); screenHome();
+  });
+  app.querySelectorAll('[data-size]').forEach(b => b.onclick = () => {
     let sz = load('b1.size', 1);
     if (!SIZES.includes(sz)) sz = 1;
-    const i = SIZES.indexOf(sz);
-
-    app.innerHTML = `
-      <h1>${esc(t('settings'))}</h1>
-
-      <h2>${esc(t('language'))}</h2>
-      <div class="pickrow">
-        ${I18N.LANGS.map(l => `<button class="pick${
-          l.id === I18N.lang ? ' on' : ''}" data-lang="${l.id}">${esc(l.name)}</button>`).join('')}
-      </div>
-
-      <h2>${esc(t('theme'))}</h2>
-      <div class="pickrow">
-        ${THEMES.map(x => `<button class="pick${x === th ? ' on' : ''}" data-theme="${x}">${
-          esc(t(x === 'system' ? 'themeSystem' : x === 'light' ? 'themeLight' : 'themeDark'))
-        }</button>`).join('')}
-      </div>
-
-      <h2>${esc(t('textSize'))}</h2>
-      <div class="pickrow">
-        <button class="pick big" data-size="-" ${i === 0 ? 'disabled' : ''}
-          aria-label="${esc(t('smaller'))}">A−</button>
-        <span class="sizedot">${SIZES.map((_, k) =>
-          `<i class="${k === i ? 'on' : ''}"></i>`).join('')}</span>
-        <button class="pick big" data-size="+" ${i === SIZES.length - 1 ? 'disabled' : ''}
-          aria-label="${esc(t('bigger'))}">A+</button>
-      </div>
-      <p class="card sample">${esc(t('sizeNow'))}</p>
-
-      <button class="btn wide" id="setdone">${esc(t('close'))}</button>`;
-
-    app.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
-      I18N.setLang(b.dataset.lang); screenSettings();
-    });
-    app.querySelectorAll('[data-theme]').forEach(b => b.onclick = () => {
-      save('b1.theme', b.dataset.theme); applyLook(); screenSettings();
-    });
-    app.querySelectorAll('[data-size]').forEach(b => b.onclick = () => {
-      const k = Math.min(SIZES.length - 1, Math.max(0, i + (b.dataset.size === '+' ? 1 : -1)));
-      save('b1.size', SIZES[k]); applyLook(); screenSettings();
-    });
-    document.getElementById('setdone').onclick = () => screenHome();
+    const k = Math.min(SIZES.length - 1,
+                Math.max(0, SIZES.indexOf(sz) + (b.dataset.size === '+' ? 1 : -1)));
+    save('b1.size', SIZES[k]); applyLook(); screenHome();
   });
 }
 
-const elSet = document.getElementById('btnSet');
-if (elSet) elSet.onclick = () => screenSettings();
 applyLook();
 I18N.apply();
 
@@ -234,8 +231,8 @@ function screenCode(msg){
       <div class="card">
         <input id="code" class="codeinput" type="text" inputmode="text"
                autocapitalize="characters" autocorrect="off" spellcheck="false"
-               autocomplete="one-time-code" maxlength="15"
-               placeholder="B1 4827 5193 66" aria-label="${esc(t('codeTitle'))}">
+               autocomplete="one-time-code"
+               placeholder="B14827519366" aria-label="${esc(t('codeTitle'))}">
         <p class="sub" style="margin:6px 0 0">${esc(t('codeExample'))}</p>
         <button class="btn" id="godo" style="width:100%;margin-top:10px">${esc(t('codeButton'))}</button>
       </div>`;
@@ -243,12 +240,16 @@ function screenCode(msg){
     const inp = document.getElementById('code');
     const btn = document.getElementById('godo');
 
-    /* بيكتب وهو عم يكتب: حرفين، بعدين مجموعات أربعة. الشرطات والمسافات
-       ما بتوصل للخادم — code_norm بتشيلهن — بس بتخلّي العين تتابع مكانها. */
+    /* الكود بينكتب متل ما هو مكتوب بالرسالة: بلا فراغات ولا شرطات.
+       كنا منضيف فراغات للقراءة، بس الكود بيوصل عبر واتساب — وهناك ما
+       بينعرف إذا الفراغ واحد أو اتنين، فبيصير سؤال بلا داعي. يلي
+       بيلصق كود قديم بشرطات ما بينكسر: بينشالوا هون وبـcode_norm.
+
+       ★ وبلا maxlength: المتصفّح بيقصّ الملصوق **قبل** ما يوصلنا، فكود
+       منسوخ من واتساب مع فراغاته (١٥ خانة) كان بيوصل ناقص آخر رقمين.
+       الحدّ هون، بعد التنضيف، على الخانات الحقيقية. */
     inp.oninput = () => {
-      const raw = inp.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
-      const rest = raw.slice(2).replace(/(.{4})/g, '$1 ').trim();
-      inp.value = (raw.slice(0, 2) + (rest ? ' ' + rest : '')).trim();
+      inp.value = inp.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
     };
 
     const send = async () => {
@@ -377,6 +378,7 @@ function screenHome(){
       ? `<div class="abos">${S.levels.map(aboRow).join('')}</div>` : '';
 
     app.innerHTML = `
+      ${setbarHTML()}
       <h1>${esc(t('welcome'))}</h1>
       ${abo}
       <p class="sub">${lvl ? esc(t('homeIntro', { level: name(lvl) }))
@@ -407,6 +409,7 @@ function screenHome(){
       </div>` : '')}
       ${cards}`;
 
+    wireSetbar();
     app.querySelectorAll('.tile[data-id]').forEach(b =>
       b.onclick = () => openModell(b.dataset.id));
     app.querySelectorAll('[data-lvl]').forEach(b =>
@@ -1149,10 +1152,11 @@ function finish(run, auto){
     grade(run);
   };
 
-  if (auto) return go2();
-  const missing = runItems(run).filter(it => !answered(it)).length;
-  if (!missing) return go2();
-  ask(`${missing} Aufgabe(n) ohne Antwort. Trotzdem abgeben?`, go2, 'Abgeben');
+  /* ★ السؤال عن الأسئلة الفاضية بيصير عند زرّ التسليم، مو هون.
+     كان بالاتنين — فالطالب يلي بيسلّم ناقص كان يشوف نفس التحذير مرتين
+     ورا بعض. وهاد كمان كان آخر نص ألماني مثبّت بالتطبيق.
+     هون منسلّم على طول: مين وصل لهون خلص قرّر. */
+  go2();
 }
 
 /* Antwort lesbar machen: "B — Bildband: Babys im Garten" */

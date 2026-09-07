@@ -10,10 +10,14 @@
 
 const I18N = (() => {
 
+  /* العلم بيتعرف من بعيد وبلا قراءة — وهاد المطلوب من منتقي لغة: مين
+     ما بيقرا الألماني لازم يلاقي لغته بلا ما يقرا شي.
+     العربي ما إله علم: هي لغة عشرين بلد، وأي علم منختاره بيقصي الباقي.
+     فبيوقف حرف «ع» مكانه — بينقرا من أي عربي وما بينسب اللغة لبلد. */
   const LANGS = [
-    { id: 'de', name: 'Deutsch',    dir: 'ltr' },
-    { id: 'ar', name: 'العربية',    dir: 'rtl' },
-    { id: 'uk', name: 'Українська', dir: 'ltr' }
+    { id: 'de', name: 'Deutsch',    flag: '🇩🇪', dir: 'ltr' },
+    { id: 'ar', name: 'العربية',    flag: 'ع',  dir: 'rtl' },
+    { id: 'uk', name: 'Українська', flag: '🇺🇦', dir: 'ltr' }
   ];
 
   const DICT = {
@@ -33,7 +37,7 @@ const I18N = (() => {
                 'dieses Gerät angemeldet.',
       codeButton: 'Freischalten',
       codeChecking: 'Wird geprüft …',
-      codeExample: 'Beispiel: B1 4827 5193 66',
+      codeExample: 'Beispiel: B14827519366',
       codeErrTooMany: 'Zu viele Versuche. Bitte in {t} noch einmal probieren.',
       codeErrUnknown: 'Dieser Code ist unbekannt. Bitte die Ziffern noch einmal prüfen.',
       codeErrUsed: 'Dieser Code wurde bereits verwendet.',
@@ -133,16 +137,11 @@ const I18N = (() => {
       taskHead: 'Aufgabe',
 
       settings: 'Einstellungen',
-      language: 'Sprache',
-      theme: 'Darstellung',
       themeSystem: 'Wie das Gerät',
       themeLight: 'Hell',
       themeDark: 'Dunkel',
-      textSize: 'Schriftgröße',
       smaller: 'Kleiner',
       bigger: 'Größer',
-      sizeNow: 'Beispieltext in dieser Größe.',
-      close: 'Fertig',
       progress: '{done} von {total} beantwortet',
       openAsk: '{n} ohne Antwort. Trotzdem abgeben?',
       submitAnyway: 'Trotzdem abgeben',
@@ -174,7 +173,7 @@ const I18N = (() => {
                 'وحدة — وبعدها بيضل هالجهاز مسجّل.',
       codeButton: 'تفعيل',
       codeChecking: 'عم نفحص …',
-      codeExample: 'مثال: B1 4827 5193 66',
+      codeExample: 'مثال: B14827519366',
       codeErrTooMany: 'محاولات كتير. جرّب بعد {t}.',
       codeErrUnknown: 'هالرمز مو معروف. راجع الأرقام مرة تانية.',
       codeErrUsed: 'هالرمز مستعمل من قبل.',
@@ -279,16 +278,11 @@ const I18N = (() => {
       taskHead: 'السؤال',
 
       settings: 'الإعدادات',
-      language: 'اللغة',
-      theme: 'المظهر',
       themeSystem: 'متل الجهاز',
       themeLight: 'فاتح',
       themeDark: 'غامق',
-      textSize: 'حجم الخط',
       smaller: 'أصغر',
       bigger: 'أكبر',
-      sizeNow: 'نص تجريبي بهالحجم.',
-      close: 'تمّ',
       progress: 'انحلّ {done} من {total}',
       openAsk: '{n} بلا إجابة. تسلّم برضو؟',
       submitAnyway: 'سلّم برضو',
@@ -331,7 +325,7 @@ const I18N = (() => {
                 'підключеним.',
       codeButton: 'Активувати',
       codeChecking: 'Перевіряємо …',
-      codeExample: 'Приклад: B1 4827 5193 66',
+      codeExample: 'Приклад: B14827519366',
       codeErrTooMany: 'Забагато спроб. Спробуйте через {t}.',
       codeErrUnknown: 'Такий код невідомий. Перевірте цифри ще раз.',
       codeErrUsed: 'Цей код уже використано.',
@@ -434,16 +428,11 @@ const I18N = (() => {
       taskHead: 'Завдання',
 
       settings: 'Налаштування',
-      language: 'Мова',
-      theme: 'Вигляд',
       themeSystem: 'Як на пристрої',
       themeLight: 'Світлий',
       themeDark: 'Темний',
-      textSize: 'Розмір тексту',
       smaller: 'Менше',
       bigger: 'Більше',
-      sizeNow: 'Зразок тексту в цьому розмірі.',
-      close: 'Готово',
       progress: '{done} з {total} виконано',
       openAsk: '{n} без відповіді. Усе одно здати?',
       submitAnyway: 'Усе одно здати',

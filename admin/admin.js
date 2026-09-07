@@ -32,15 +32,13 @@ const dtf = new Intl.DateTimeFormat('de-DE',
 const fmtDate = s => s ? dtf.format(new Date(s)) : '—';
 const fmtDT   = s => s ? new Date(s).toLocaleString('de-DE') : '—';
 
-/* Der Code wird gespeichert wie er ist (B14827519366), aber gelesen und
-   weitergegeben in Gruppen: B1 4827 5193 66. Nur Anzeige — beim Einlösen
-   räumt code_norm() Leerzeichen und Bindestriche ohnehin weg.
-   Alte Codes (B1-7K2M-9XQP) haben ihre Bindestriche schon und bleiben. */
-const fmtCode = c => {
-  const raw = String(c ?? '');
-  if (!/^[A-Z0-9]+$/.test(raw)) return raw;
-  return (raw.slice(0, 2) + ' ' + raw.slice(2).replace(/(.{4})/g, '$1 ')).trim();
-};
+/* Der Code wird genau so angezeigt, wie er gespeichert ist: B14827519366.
+   Vorher standen hier Leerzeichen als Lesehilfe — aber weitergegeben wird
+   der Code über WhatsApp, und dort ist nicht zu erkennen, ob es ein oder
+   zwei Leerzeichen sind. Der Code selbst hat keine, also zeigt ihn auch
+   niemand mit. (Beim Einlösen räumt code_norm() sie ohnehin weg, falls
+   sie doch jemand tippt.) */
+const fmtCode = c => String(c ?? '');
 
 /* ============ الاتصال ============ */
 function storeSession(s){
@@ -415,13 +413,15 @@ async function screenCodes(){
 
     <div class="card">
       <div class="row">
-        <label>Anzahl<input id="c_n" type="number" value="5" min="1" max="200"></label>
-        ${pickerHTML('c_lvl', levels, codeLevel, {
-          extra: l => `data-live="${l.live}" data-pub="${l.published ? 1 : 0}"` })}
+        <!-- Die Art steht zuerst: sie entscheidet, welche der folgenden
+             Felder überhaupt gelten (Tage oder Stunden, Testauswahl). -->
         <label>Art<select id="c_kind">
           <option value="full" selected>Vollzugang</option>
           <option value="demo">Demo</option>
         </select></label>
+        <label>Anzahl<input id="c_n" type="number" value="1" min="1" max="200"></label>
+        ${pickerHTML('c_lvl', levels, codeLevel, {
+          extra: l => `data-live="${l.live}" data-pub="${l.published ? 1 : 0}"` })}
         <label id="c_days_l">Tage<select id="c_days">
           <option value="30" selected>30</option><option value="90">90</option>
           <option value="180">180</option><option value="365">365</option>
@@ -564,8 +564,9 @@ async function screenCodes(){
     document.getElementById('c_out').innerHTML =
       `<h2>Neu erzeugt</h2><div class="codes">
          ${made.map(c => `<div class="mono">${esc(fmtCode(c))}</div>`).join('')}</div>
-       <p class="sub" style="margin:8px 0 0">Genau so weitergeben. Beim Einlösen
-          sind Leerzeichen, Bindestriche und Groß-/Kleinschreibung egal.</p>
+       <p class="sub" style="margin:8px 0 0">Genau so weitergeben — ohne
+          Leerzeichen. Beim Einlösen sind Leerzeichen, Bindestriche und
+          Groß-/Kleinschreibung trotzdem egal.</p>
        <button class="btn sm grey" id="c_copy" style="margin-top:10px">Kopieren</button>`;
     document.getElementById('c_copy').onclick = () => {
       navigator.clipboard?.writeText(made.map(fmtCode).join('\n'))
