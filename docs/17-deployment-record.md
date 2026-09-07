@@ -109,7 +109,6 @@ The build also:
 - strips developer comments from every JS and CSS file
 - puts the admin panel on a non-obvious path (`ADMIN_PATH`, default
   `kmh123475674`) and rewrites the `_headers` noindex rule to match
-- drops the `config.local.js` line so production does not 404 on it
 
 The secret admin path is **not** the guard — `profiles.is_admin` in the
 database is. It just keeps a login form off `/admin/`.

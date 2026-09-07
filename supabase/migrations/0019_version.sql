@@ -16,6 +16,6 @@
 -- =====================================================================
 
 create or replace function schema_version()
-returns int language sql immutable as $$ select 19 $$;
+returns int language sql immutable as $$ select 20 $$;
 
 grant execute on function schema_version() to authenticated, anon;

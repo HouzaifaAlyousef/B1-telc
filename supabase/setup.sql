@@ -3484,6 +3484,20 @@ grant execute on function level_catalog(text) to authenticated;
 -- =====================================================================
 
 create or replace function schema_version()
-returns int language sql immutable as $$ select 19 $$;
+returns int language sql immutable as $$ select 20 $$;
 
 grant execute on function schema_version() to authenticated, anon;
+
+-- ═══════════════════════════════════════════════
+-- 0020_cleanup.sql
+-- ═══════════════════════════════════════════════
+-- =====================================================================
+-- 0020_cleanup — شيل دالة ما عاد إلها مستعمل
+--
+-- admin_audio_status كانت تخدم تبويب «Hörtexte» القديم. التبويب انبدّل
+-- بـ«Dateien»، يلي بيغطّي الصور والصوت سوا عبر admin_assets. الدالة
+-- القديمة ضلّت معرّفة ومصرّح فيها لـauthenticated: سطح API زيادة بلا
+-- فايدة، وسؤال «أي وحدة الصح؟» لأي حدا بيقرا الكود بعدين.
+-- =====================================================================
+
+drop function if exists admin_audio_status(text);

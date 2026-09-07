@@ -410,6 +410,29 @@ check('«Fertig» بيرجّع للرئيسية',
 check('★ عناوين الامتحانات ضلّت متل ما هي',
       /PETRA/.test(await page.textContent('#app')));
 
+// ★ ولا كلمة ألمانية بواجهة غير ألمانية.
+// بلاطة «المراجعة» ضلّت ألمانية بالعربي شهر كامل — المفاتيح كانت
+// بالقاموس، بس نسيت أستعملها. الفحص بيدوّر على الكلمات الألمانية
+// الشائعة بالواجهة بدل ما يتّكل على المراجعة بالعين.
+await page.evaluate(() => document.getElementById('btnSet').click());
+await page.waitForSelector('[data-lang]');
+await page.evaluate(() => document.querySelector('[data-lang="ar"]').click());
+await page.waitForTimeout(300);
+await page.evaluate(() => document.getElementById('setdone').click());
+await page.waitForSelector('.tile');
+const arTxt = await page.textContent('#app');
+const leftDe = ['fällig', 'sitzen schon', 'ohne Zeit', 'Wörter', 'Willkommen',
+                'Modelltest', 'beantwortet'].filter(w => arTxt.includes(w));
+check(`★ ما ضلّت كلمة ألمانية بالواجهة العربية${
+        leftDe.length ? ' — ' + leftDe.join(', ') : ''}`, leftDe.length === 0);
+
+await page.evaluate(() => document.getElementById('btnSet').click());
+await page.waitForSelector('[data-lang]');
+await page.evaluate(() => document.querySelector('[data-lang="de"]').click());
+await page.waitForTimeout(300);
+await page.evaluate(() => document.getElementById('setdone').click());
+await page.waitForSelector('.tile');
+
 // ---- ٩) بطاقة الاشتراك ----
 // كانت المعلومة تطلع بس لما يكون في أكتر من مستوى، فالطالب العادي ما
 // كان يعرف لا شو اشترى ولا إمتى بينتهي. صارت بطاقة دايمة.

@@ -174,13 +174,6 @@ async function loadCatalog(id){
   catch { return []; }
 }
 
-/* إعادة رسم الشاشة الحالية بمكانها — بعد تبديل اللغة. بلا تمرير
-   لفوق: المستخدم بدّل اللغة، مو بدّه يطلع من مكانه. */
-function redraw(){
-  elBack.textContent = t('back');
-  if (S.render) S.render(); else screenHome();
-}
-
 elBack.onclick = () => {
   if (S.view === 'exam'){
     ask(t('leaveAsk'),
@@ -391,8 +384,10 @@ function screenHome(){
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
         <span class="grow"><span style="font-weight:600">${esc(t('repeat'))}</span>
-          <div class="meta">${plural(nMist, 'nTask')} fällig${
-            review.mastered ? ` · ${review.mastered} sitzen schon` : ''} · ohne Zeit</div></span>
+          <div class="meta">${esc(t('due', { n: plural(nMist, 'nTask') }))}${
+            review.mastered
+              ? ' · ' + esc(t('sitting', { n: plural(review.mastered, 'nSits') })) : ''
+            } · ${esc(t('noTime'))}</div></span>
         <span class="chev">›</span>
       </button>`
       : (review.total ? `<div class="tile drill done">

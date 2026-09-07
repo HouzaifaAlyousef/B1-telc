@@ -538,7 +538,7 @@ try {
     check('★ شريط «القاعدة ورا» ظهر',
           /Datenbank ist \d+ Migration/.test(banner) && /setup\.sql/.test(banner));
     check(`★ وبيقول كم ترحيل ناقص`,
-          /Stand 12/.test(banner) && /gebraucht 19/.test(banner));
+          /Stand 12/.test(banner) && /gebraucht 20/.test(banner));
     await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
     await page.waitForTimeout(900);
     check('★ وبيطلع بالشاشات التانية كمان',
