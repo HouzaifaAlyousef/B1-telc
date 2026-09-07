@@ -113,6 +113,12 @@ await page.addInitScript(fx => {
                             { id:'a2', title:'telc Deutsch A2',
                               provider:'telc', stufe:'A2' }]
       .filter(l => sub.levels.includes(l.id)),
+    // كتالوج: امتحان مفتوح وواحد مقفول — حالة الكود التجريبي
+    catalog: async lvl => lvl === 'b1' ? [
+      { id: 'modell-01', title: 'PETRA', aufgaben: 61, minutes: 150, open: true },
+      { id: 'modell-02', title: 'EVA1',  aufgaben: 60, minutes: 150, open: false },
+      { id: 'modell-03', title: 'SOPHIE',aufgaben: 59, minutes: 150, open: false }
+    ] : [],
     resources: async lvl => lvl === 'b1'
       ? [{ id:'r1', title:'Wortschatz Reisen', kind:'text',
            body:'## Verben\n\nfahren, fliegen, ankommen\n\n## Nomen\n\nder Zug, das Gleis' }]
@@ -124,7 +130,9 @@ await page.addInitScript(fx => {
       title: fx.test.title, subtitle: fx.test.subtitle,
       blocks: fx.test.blocks, aufgaben: 61,
       minutes: fx.test.blocks.reduce((a,b) => a + b.minutes, 0) }] }),
-    test: async () => shape(),
+    // منسجّل كل نداء تحميل: «ما بينحمّل محتوى المقفول» خاصية سلوكية،
+    // مو شي بينفحص بالبحث عن كلمات بالصفحة
+    test: async (id) => { (window.__loaded ||= []).push(id); return shape(); },
     imageUrl: async () => null,
     audioUrl: async () => '/tone.wav',
     reviewSummary: async () => ({
@@ -253,6 +261,31 @@ await page.waitForTimeout(600);
 check('زرّ المراجعة ظهر', await page.locator('#drill').count() === 1);
 check('الزرّ بيقول كم سؤال مستحقّ',
       /\d+ Aufgaben? fällig/.test(await page.textContent('#drill')));
+
+// ---- ٨ب) الامتحانات المقفولة ----
+// هدفها التسويق: صاحب التجريبي لازم يشوف إنه في غير امتحان. بس
+// محتواها ما لازم يوصل الصفحة أبداً.
+check('البلاطات: مفتوح + مقفولين', await page.locator('.tile.locked').count() === 2);
+check('★ المقفولة ما بتنضغط',
+      await page.locator('.tile.locked').first().isDisabled());
+check('★ وما إلها data-id، فما في طريقة تفتحها',
+      await page.locator('.tile.locked[data-id]').count() === 0);
+const lockedTxt = await page.textContent('.tile.locked');
+check(`عنوانها ظاهر للتشويق (${lockedTxt.replace(/\s+/g,' ').trim().slice(0,30)})`,
+      /EVA1/.test(lockedTxt) && /60 Aufgaben/.test(lockedTxt));
+check('★ وسطر «في غيرهن» ظاهر',
+      /weitere Modelltests/.test(await page.textContent('.upsell')));
+
+// ★ محتوى المقفول ما بينحمّل: منحاول نفتحه بالضغط ومنشوف إذا انطلب
+await page.evaluate(() => {
+  const b = document.querySelector('.tile.locked');
+  b.disabled = false;            // نشيل القفل البصري ومنجرّب
+  b.click();
+});
+await page.waitForTimeout(600);
+const loaded = await page.evaluate(() => window.__loaded || []);
+check(`★ ولا نداء لتحميل امتحان مقفول (${loaded.join(', ') || 'ولا واحد'})`,
+      !loaded.includes('modell-02') && !loaded.includes('modell-03'));
 
 // ---- ٩) بطاقة الاشتراك ----
 // كانت المعلومة تطلع بس لما يكون في أكتر من مستوى، فالطالب العادي ما

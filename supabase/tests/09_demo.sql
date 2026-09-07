@@ -107,6 +107,28 @@ begin
   res := submit_attempt(id1, 'block-lv-sb', '{}'::jsonb);
   perform t_check('بس بيقدر يصحّح امتحانه', (res->>'ok')::boolean);
 
+  --------------------------------------------------- الكتالوج (للتسويق)
+  -- صاحب التجريبي لازم يشوف إنه في امتحانات تانية — بعنوانها بس.
+  res := level_catalog('b1');
+  perform t_check(format('الكتالوج بيرجّع كل امتحانات المستوى (%s)',
+                         jsonb_array_length(res)),
+                  jsonb_array_length(res) = 16);
+  perform t_check('★ واحد مفتوح والباقي مقفول',
+    (select count(*) from jsonb_array_elements(res) e
+      where (e->>'open')::boolean) = 1);
+  perform t_check('★ الكتالوج ما بيحوي أقسام ولا أسئلة ولا حلول',
+    not (res::text ~* '(sections|items|answer|"loesung")'));
+
+  -- بلا اشتراك: ولا عنوان. ما منعطي كتالوج مجاني لكل من دقّ الباب.
+  set local role postgres;
+  update subscriptions set status = 'revoked' where user_id = demo;
+  set local role authenticated;
+  perform t_check('★ بلا اشتراك ساري ما في كتالوج',
+                  jsonb_array_length(level_catalog('b1')) = 0);
+  set local role postgres;
+  update subscriptions set status = 'active' where user_id = demo;
+  set local role authenticated;
+
   ------------------------------------------------------------ الحدّ بالملفات
   perform t_check('★ ما بيشوف إلا صورة امتحانه',
                   (select count(*) from storage.objects) <= 1);

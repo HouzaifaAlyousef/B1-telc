@@ -169,6 +169,14 @@ const API = (() => {
     return mine;
   }
 
+  /* كتالوج المستوى: عناوين كل امتحاناته، مع علامة مفتوح/مقفول.
+     بيانات وصفية فقط — الأقسام والأسئلة والحلول بتضل محكومة بـRLS.
+     بيخدم التسويق: صاحب التجريبي بيشوف إنه في غير امتحان، وليش يشتري. */
+  async function catalog(levelId){
+    try { return await rpc('level_catalog', { p_level_id: levelId }) || []; }
+    catch { return []; }        // قاعدة لسا ما انحدّثت: منكمّل بلا كتالوج
+  }
+
   async function index(levelId){
     const rows = await rest(
       `tests?select=id,slug,title,subtitle,blocks,aufgaben,level_id,is_free` +
@@ -306,7 +314,7 @@ const API = (() => {
   }
 
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
-           redeem, subscription, levels, myLevels, index, test, resources, imageUrl, audioUrl,
+           redeem, subscription, levels, myLevels, index, catalog, test, resources, imageUrl, audioUrl,
            submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
            correctWriting, writingFeedback,
            signOut: () => storeSession(null),

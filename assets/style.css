@@ -331,6 +331,17 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 .abo.soon{border-color:var(--warn,#b7791f)}
 .abo.soon .when b{color:var(--warn,#b7791f)}
 
+/* ---- Gesperrter Modelltest ----
+   Sichtbar, aber nicht anklickbar: der Demo-Nutzer soll sehen, dass es
+   mehr gibt. Der Inhalt wird nie geladen — nur Titel und Aufgabenzahl
+   kommen aus level_catalog. */
+.tile.locked{opacity:.55;cursor:default}
+.tile.locked .n{background:var(--line,#e2e7f0);color:var(--muted,#68758a)}
+.upsell{background:var(--card,#fff);border:1px dashed var(--brand,#2f6bed);
+  border-radius:12px;padding:12px 14px;margin:0 0 12px;
+  font-size:14px;color:var(--muted,#68758a)}
+.upsell b{color:var(--ink,#101828)}
+
 /* ---- Lesematerial ---- */
 .readable{line-height:1.7}
 .readable h2{font-size:17px;margin:18px 0 6px}

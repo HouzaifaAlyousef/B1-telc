@@ -126,6 +126,7 @@ async function boot(){
           : (S.sub.levels && S.sub.levels[0]) || 'b1';
   try {
     S.index = await API.index(S.level);
+    S.catalog = await API.catalog(S.level);
   } catch {
     app.innerHTML = `<div class="empty">Keine Verbindung zum Server.<br>
       Bitte später noch einmal versuchen.</div>`;
@@ -201,13 +202,27 @@ function screenHome(){
     if (S.view === 'home' && review.due !== before) screenHome();
   });
   go('home', () => {
-    const cards = S.index.modelle.map((m, i) => `
-      <button class="tile" data-id="${esc(m.id)}">
-        <span class="n">${i + 1}</span>
+    /* المقفولة بتنعرض بعنوانها وعدد أسئلتها بس — محتواها ما بينحمّل
+       ولا بينوجد بالصفحة. هدفها إن صاحب التجريبي يعرف إنه في غير
+       امتحان. المصدر level_catalog، وهي بترجّع بيانات وصفية فقط. */
+    const open = new Set(S.index.modelle.map(m => m.id));
+    const list = (S.catalog && S.catalog.length)
+      ? S.catalog
+      : S.index.modelle.map(m => ({ ...m, open: true }));
+
+    const cards = list.map((m, i) => {
+      const frei = m.open !== false && open.has(m.id);
+      return `<button class="tile${frei ? '' : ' locked'}"
+        ${frei ? `data-id="${esc(m.id)}"` : 'disabled'}>
+        <span class="n">${frei ? i + 1 : '🔒'}</span>
         <span class="grow"><span style="font-weight:600">${esc(m.title)}</span>
-          <div class="meta">${plural(m.aufgaben, 'Aufgabe', 'Aufgaben')} · ${plural(m.minutes, 'Minute', 'Minuten')}</div></span>
-        <span class="chev">›</span>
-      </button>`).join('');
+          <div class="meta">${plural(m.aufgaben, 'Aufgabe', 'Aufgaben')} · ${
+            plural(m.minutes, 'Minute', 'Minuten')}</div></span>
+        <span class="chev">${frei ? '›' : ''}</span>
+      </button>`;
+    }).join('');
+
+    const nLocked = list.filter(m => m.open === false).length;
 
     const nMist = review.due;
     const lvl = S.levels.find(l => l.id === S.level);
@@ -279,6 +294,11 @@ function screenHome(){
           <div class="meta">Wortschatz und Hinweise · jederzeit</div></span>
         <span class="chev">›</span>
       </button>
+      ${nLocked ? `<div class="upsell">
+        <b>${plural(nLocked, 'weiterer Modelltest', 'weitere Modelltests')}</b>
+        ${nLocked === 1 ? 'ist' : 'sind'} in dieser Prüfung enthalten.
+        Mit dem vollen Zugang stehen alle offen — mit Korrektur und Lösungen.
+      </div>` : ''}
       ${nMist ? `<button class="tile drill" id="drill">
         <span class="n">↻</span>
         <span class="grow"><span style="font-weight:600">Wiederholen</span>
@@ -314,7 +334,7 @@ async function switchLevel(id){
   save('b1.level', id);
   Object.keys(modellCache).forEach(k => delete modellCache[k]);
   app.innerHTML = '<div class="empty">Einen Moment …</div>';
-  try { S.index = await API.index(id); }
+  try { S.index = await API.index(id); S.catalog = await API.catalog(id); }
   catch { return void toast('Die Stufe konnte nicht geladen werden.'); }
   screenHome();
 }
