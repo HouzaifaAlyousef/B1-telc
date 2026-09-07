@@ -1,5 +1,9 @@
 # Setup — from an empty Supabase project to a working app
 
+> Already deployed? [`17-deployment-record.md`](17-deployment-record.md) is the
+> record of the live setup — project ids, Cloudflare settings, and the local
+> development loop.
+
 Follow this once. Every step says how to check it worked, because a mistake in
 step 3 shows up as a confusing error in step 8.
 

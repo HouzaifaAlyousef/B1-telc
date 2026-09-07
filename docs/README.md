@@ -25,6 +25,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 14 | [Writing correction](14-writing-correction.md) | AI correction of the Schriftlicher Ausdruck |
 | 15 | [Security review](15-security.md) | What was checked, how, and what is accepted |
 | 16 | [Audio](16-audio.md) | Hörverstehen playback, and what is still missing |
+| 17 | [Deployment record](17-deployment-record.md) | What is actually deployed where, and how to redo it |
 
 > Tests, how to run them, and the twelve bugs they found: [../TESTING.md](../TESTING.md)
 
