@@ -128,9 +128,11 @@ await page.addInitScript(fx => {
       ? [{ id:'r1', title:'Wortschatz Reisen', kind:'text',
            body:'## Verben\n\nfahren, fliegen, ankommen\n\n## Nomen\n\nder Zug, das Gleis' }]
       : [],
-    redeem: async code => code === 'B1-TEST-0001'
-      ? (state.redeemed = true, { ok: true, levels: ['b1'] })
-      : { ok: false, error: 'invalid_code' },
+    // متل code_norm بالخادم: الشرطات والمسافات والحالة ما بتفرق
+    redeem: async code =>
+      String(code).toUpperCase().replace(/[^A-Z0-9]/g, '') === 'B14827519366'
+        ? (state.redeemed = true, { ok: true, levels: ['b1'] })
+        : { ok: false, error: 'invalid_code' },
     index: async (lvl) => lvl !== 'b1' ? { modelle: [] } : ({ modelle: [{ id: fx.test.slug, uuid: fx.test.id,
       title: fx.test.title, subtitle: fx.test.subtitle,
       blocks: fx.test.blocks, aufgaben: 61,
@@ -195,13 +197,44 @@ await page.waitForSelector('#code', { timeout: 5000 });
 check('بلا اشتراك ← شاشة الكود', await page.locator('#code').isVisible());
 
 // ---- ٢) كود غلط ----
-await page.fill('#code', 'WRONG');
+await page.fill('#code', 'B10000000000');
 await page.evaluate(() => document.getElementById('godo').click());
 await page.waitForTimeout(300);
 check('الكود الغلط بيعطي رسالة', (await page.textContent('body')).includes('unbekannt'));
 
-// ---- ٣) كود صح ----
-await page.fill('#code', 'B1-TEST-0001');
+// ---- ٢أ) ★ الكتابة بتتجمّع لحالها: B1 4827 5193 66 ----
+// الطالب بيكتب الأرقام ورا بعض، والحقل بيحطّ الفراغات. بلاها بيضيع
+// عدّه بـ١٢ خانة على الموبايل.
+await page.fill('#code', '');
+await page.type('#code', 'b14827519366', { delay: 5 });
+check('★ الكود بينكتب مجموعات وهو عم ينكتب',
+      await page.inputValue('#code') === 'B1 4827 5193 66');
+
+// ---- ٢ب) ★ الصيغة القديمة بشرطات لسا بتتقبل ----
+await page.fill('#code', '');
+await page.type('#code', 'b1-7k2m-9xqp', { delay: 5 });
+check('★ والقديم بشرطات ما بينكسر',
+      await page.inputValue('#code') === 'B1 7K2M 9XQP');
+
+// ---- ٢ج) ★ رسالة الخطأ بتتترجم كمان ----
+// كل نصوص شاشة الكود كانت مكتوبة ألماني بالكود مباشرة — يعني طالب
+// عربي بيغلط بالكود وبيقرا «Dieser Code ist unbekannt».
+await page.evaluate(() => { I18N.setLang('ar'); screenCode(); });
+await page.waitForSelector('#code');
+await page.fill('#code', 'B10000000000');
+await page.evaluate(() => document.getElementById('godo').click());
+await page.waitForTimeout(300);
+const arErr = await page.textContent('#app');
+check('★ الخطأ بالعربي مو بالألماني',
+      arErr.includes('مو معروف') && !arErr.includes('unbekannt'));
+check('★ وعنوان الشاشة والزرّ كمان',
+      arErr.includes('الدخول') && arErr.includes('تفعيل')
+      && !arErr.includes('Freischalten'));
+await page.evaluate(() => { I18N.setLang('de'); screenCode(); });
+await page.waitForSelector('#code');
+
+// ---- ٣) كود صح — مكتوب مجموعات متل ما بيوصل الطالب ----
+await page.fill('#code', 'B1 4827 5193 66');
 await page.evaluate(() => document.getElementById('godo').click());
 await page.waitForSelector('.tile[data-id]', { timeout: 5000 });
 check('الكود الصح بيفتح القائمة', await page.locator('.tile[data-id]').count() > 0);

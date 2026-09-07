@@ -32,6 +32,17 @@ const I18N = (() => {
                 'erhalten. Der Code wird nur einmal gebraucht — danach bleibt ' +
                 'dieses Gerät angemeldet.',
       codeButton: 'Freischalten',
+      codeChecking: 'Wird geprüft …',
+      codeExample: 'Beispiel: B1 4827 5193 66',
+      codeErrTooMany: 'Zu viele Versuche. Bitte in {t} noch einmal probieren.',
+      codeErrUnknown: 'Dieser Code ist unbekannt. Bitte die Ziffern noch einmal prüfen.',
+      codeErrUsed: 'Dieser Code wurde bereits verwendet.',
+      codeErrRevoked: 'Dieser Code wurde gesperrt.',
+      codeErrExhausted: 'Dieser Code wurde bereits auf allen erlaubten Geräten benutzt. '
+                      + 'Bitte wenden Sie sich an Ihren Kurs.',
+      codeErrDevices: 'Die Höchstzahl an Geräten ist erreicht.',
+      codeErrNetwork: 'Keine Verbindung. Bitte später versuchen.',
+      codeErrOther: 'Der Code konnte nicht eingelöst werden.',
 
       welcome: 'Willkommen 👋',
       homeIntro: 'Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile ' +
@@ -162,6 +173,17 @@ const I18N = (() => {
       codeHint: 'أدخل رمز الدخول. أخذته عند الشراء. الرمز بينستعمل مرة ' +
                 'وحدة — وبعدها بيضل هالجهاز مسجّل.',
       codeButton: 'تفعيل',
+      codeChecking: 'عم نفحص …',
+      codeExample: 'مثال: B1 4827 5193 66',
+      codeErrTooMany: 'محاولات كتير. جرّب بعد {t}.',
+      codeErrUnknown: 'هالرمز مو معروف. راجع الأرقام مرة تانية.',
+      codeErrUsed: 'هالرمز مستعمل من قبل.',
+      codeErrRevoked: 'هالرمز متوقّف.',
+      codeErrExhausted: 'هالرمز انستعمل على كل الأجهزة المسموحة. '
+                      + 'احكي مع الدورة تبعك.',
+      codeErrDevices: 'وصلت لأقصى عدد أجهزة.',
+      codeErrNetwork: 'ما في اتصال. جرّب بعد شوي.',
+      codeErrOther: 'ما قدرنا نفعّل الرمز.',
 
       welcome: 'أهلاً 👋',
       homeIntro: 'اختر نموذج امتحان. كل نموذج فيه أقسام الامتحان التحريري ' +
@@ -308,6 +330,17 @@ const I18N = (() => {
                 'Код потрібен лише один раз — далі пристрій залишається ' +
                 'підключеним.',
       codeButton: 'Активувати',
+      codeChecking: 'Перевіряємо …',
+      codeExample: 'Приклад: B1 4827 5193 66',
+      codeErrTooMany: 'Забагато спроб. Спробуйте через {t}.',
+      codeErrUnknown: 'Такий код невідомий. Перевірте цифри ще раз.',
+      codeErrUsed: 'Цей код уже використано.',
+      codeErrRevoked: 'Цей код заблоковано.',
+      codeErrExhausted: 'Цей код уже використано на всіх дозволених пристроях. '
+                      + 'Зверніться до свого курсу.',
+      codeErrDevices: 'Досягнуто максимальну кількість пристроїв.',
+      codeErrNetwork: 'Немає зв’язку. Спробуйте пізніше.',
+      codeErrOther: 'Код не вдалося активувати.',
 
       welcome: 'Вітаємо 👋',
       homeIntro: 'Оберіть пробний тест. Кожен тест містить частини письмового ' +

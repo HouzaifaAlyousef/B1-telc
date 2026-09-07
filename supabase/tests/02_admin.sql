@@ -61,7 +61,7 @@ begin
   select array_agg(c) into codes from admin_create_codes(5, array['b1'], 30, 2, 'دفعة اختبار') c;
   perform t_check(format('توليد ٥ أكواد (طلع %s)', array_length(codes,1)),
                   array_length(codes, 1) = 5);
-  perform t_check('صيغة الكود B1-XXXX-XXXX', codes[1] ~ '^B1-[2-9A-HJ-NP-Z]{4}-[2-9A-HJ-NP-Z]{4}$');
+  perform t_check('صيغة الكود: حرفين ثم ١٠ أرقام', codes[1] ~ '^B1[0-9]{10}$');
   perform t_check('الأكواد كلها مختلفة',
                   (select count(distinct c) from unnest(codes) c) = 5);
   perform t_check('التوليد انسجّل بسجلّ التدقيق',

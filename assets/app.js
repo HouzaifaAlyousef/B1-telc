@@ -232,37 +232,46 @@ function screenCode(msg){
       <p class="sub">${esc(t('codeHint'))}</p>
       ${msg ? `<div class="instr" style="color:var(--bad)">${esc(msg)}</div>` : ''}
       <div class="card">
-        <input id="code" class="codeinput" type="text" inputmode="latin"
-               autocapitalize="characters" autocomplete="off"
-               placeholder="XX-XXXX-XXXX" aria-label="Zugangscode">
+        <input id="code" class="codeinput" type="text" inputmode="text"
+               autocapitalize="characters" autocorrect="off" spellcheck="false"
+               autocomplete="one-time-code" maxlength="15"
+               placeholder="B1 4827 5193 66" aria-label="${esc(t('codeTitle'))}">
+        <p class="sub" style="margin:6px 0 0">${esc(t('codeExample'))}</p>
         <button class="btn" id="godo" style="width:100%;margin-top:10px">${esc(t('codeButton'))}</button>
       </div>`;
 
     const inp = document.getElementById('code');
     const btn = document.getElementById('godo');
+
+    /* بيكتب وهو عم يكتب: حرفين، بعدين مجموعات أربعة. الشرطات والمسافات
+       ما بتوصل للخادم — code_norm بتشيلهن — بس بتخلّي العين تتابع مكانها. */
+    inp.oninput = () => {
+      const raw = inp.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
+      const rest = raw.slice(2).replace(/(.{4})/g, '$1 ').trim();
+      inp.value = (raw.slice(0, 2) + (rest ? ' ' + rest : '')).trim();
+    };
+
     const send = async () => {
       const code = inp.value.trim();
       if (!code) return inp.focus();
-      btn.disabled = true; btn.textContent = 'Wird geprüft …';
+      btn.disabled = true; btn.textContent = t('codeChecking');
       let r;
       try { r = await API.redeem(code); }
       catch { r = { ok: false, error: 'network' }; }
-      btn.disabled = false; btn.textContent = 'Freischalten';
+      btn.disabled = false; btn.textContent = t('codeButton');
       if (r && r.ok) return boot();
       if (r && r.error === 'too_many_attempts'){
         const m = Math.ceil((r.retry_after || 900) / 60);
-        return screenCode(`Zu viele Versuche. Bitte in ${m} Minute${
-          m === 1 ? '' : 'n'} noch einmal probieren.`);
+        return screenCode(t('codeErrTooMany', { t: I18N.plural(m, 'nMinute') }));
       }
-      screenCode({
-        invalid_code: 'Dieser Code ist unbekannt.',
-        already_used: 'Dieser Code wurde bereits verwendet.',
-        revoked:      'Dieser Code wurde gesperrt.',
-        code_exhausted: 'Dieser Code wurde bereits auf allen erlaubten Geräten '
-                      + 'benutzt. Bitte wenden Sie sich an Ihren Kurs.',
-        device_limit: 'Die Höchstzahl an Geräten ist erreicht.',
-        network:      'Keine Verbindung. Bitte später versuchen.'
-      }[r && r.error] || 'Der Code konnte nicht eingelöst werden.');
+      screenCode(t({
+        invalid_code:   'codeErrUnknown',
+        already_used:   'codeErrUsed',
+        revoked:        'codeErrRevoked',
+        code_exhausted: 'codeErrExhausted',
+        device_limit:   'codeErrDevices',
+        network:        'codeErrNetwork'
+      }[r && r.error] || 'codeErrOther'));
     };
     btn.onclick = send;
     inp.onkeydown = e => { if (e.key === 'Enter') send(); };

@@ -32,6 +32,16 @@ const dtf = new Intl.DateTimeFormat('de-DE',
 const fmtDate = s => s ? dtf.format(new Date(s)) : '—';
 const fmtDT   = s => s ? new Date(s).toLocaleString('de-DE') : '—';
 
+/* Der Code wird gespeichert wie er ist (B14827519366), aber gelesen und
+   weitergegeben in Gruppen: B1 4827 5193 66. Nur Anzeige — beim Einlösen
+   räumt code_norm() Leerzeichen und Bindestriche ohnehin weg.
+   Alte Codes (B1-7K2M-9XQP) haben ihre Bindestriche schon und bleiben. */
+const fmtCode = c => {
+  const raw = String(c ?? '');
+  if (!/^[A-Z0-9]+$/.test(raw)) return raw;
+  return (raw.slice(0, 2) + ' ' + raw.slice(2).replace(/(.{4})/g, '$1 ')).trim();
+};
+
 /* ============ الاتصال ============ */
 function storeSession(s){
   session = s;
@@ -216,7 +226,7 @@ async function screenUsers(){
         <b>${esc(u.name || 'ohne Namen')}</b>
         ${u.note ? `<div style="color:var(--muted);font-size:13px">${esc(u.note)}</div>` : ''}
         ${(u.codes || []).map(c =>
-          `<div class="mono" style="color:var(--muted);font-size:12px">${esc(c.code)}</div>`
+          `<div class="mono" style="color:var(--muted);font-size:12px">${esc(fmtCode(c.code))}</div>`
         ).join('')}
       </td>
       <td>${subs.length ? subs.map(s => {
@@ -289,7 +299,7 @@ function userDialog(u){
     <h2>Abo ${esc((s.levels || []).join(', ') || '—')}</h2>
     <p class="sub" style="margin-bottom:8px">
       ${esc(s.status)} · läuft bis ${fmtDate(s.current_period_end)}
-      ${s.code ? ` · Code <span class="mono">${esc(s.code)}</span>` : ''}</p>
+      ${s.code ? ` · Code <span class="mono">${esc(fmtCode(s.code))}</span>` : ''}</p>
     <div class="row">
       <label>Enddatum
         <input id="d_end${i}" type="date"
@@ -328,7 +338,7 @@ function userDialog(u){
       ${(u.codes || []).length ? `<div class="wrap"><table>
         <tr><th>Code</th><th>Stufe</th><th>eingelöst</th></tr>
         ${u.codes.map(c => `<tr>
-          <td class="mono">${esc(c.code)}</td>
+          <td class="mono">${esc(fmtCode(c.code))}</td>
           <td class="mono">${esc((c.levels || []).join(', '))}</td>
           <td>${fmtDate(c.at)}</td></tr>`).join('')}
       </table></div>` : '<p class="sub">Noch keinen Code eingelöst.</p>'}
@@ -442,7 +452,7 @@ async function screenCodes(){
       <tr><th>Code</th><th>Status</th><th>Stufen</th><th>Gültig</th><th>Umfang</th>
           <th>Aktivierungen</th><th>Notiz</th><th>erstellt</th><th></th></tr>
       ${codes.map(c => { const [cls, txt] = state(c); return `<tr>
-        <td class="mono"><b>${esc(c.code)}</b></td>
+        <td class="mono"><b>${esc(fmtCode(c.code))}</b></td>
         <td><span class="pill ${cls}">${txt}</span></td>
         <td>${esc((c.levels || []).join(', '))}</td>
         <td>${c.duration_days ? c.duration_days + ' Tage' : ''}${
@@ -553,10 +563,12 @@ async function screenCodes(){
     if (!made) return;
     document.getElementById('c_out').innerHTML =
       `<h2>Neu erzeugt</h2><div class="codes">
-         ${made.map(c => `<div class="mono">${esc(c)}</div>`).join('')}</div>
+         ${made.map(c => `<div class="mono">${esc(fmtCode(c))}</div>`).join('')}</div>
+       <p class="sub" style="margin:8px 0 0">Genau so weitergeben. Beim Einlösen
+          sind Leerzeichen, Bindestriche und Groß-/Kleinschreibung egal.</p>
        <button class="btn sm grey" id="c_copy" style="margin-top:10px">Kopieren</button>`;
     document.getElementById('c_copy').onclick = () => {
-      navigator.clipboard?.writeText(made.join('\n'))
+      navigator.clipboard?.writeText(made.map(fmtCode).join('\n'))
         .then(() => toast('Kopiert')).catch(() => toast('Kopieren nicht möglich'));
     };
   };
@@ -1003,7 +1015,7 @@ const STALE_MSG = '⚠ Die Datenbank ist noch nicht aktualisiert — bitte '
    بتفشل بصمت بطريقتها، وولا وحدة بتقول السبب. الرقم بيخلّي اللوحة تقوله.
 
    لما يتضاف ترحيل: يزيد الرقم هون وبـ0019_version.sql. */
-const SCHEMA_MIN = 20;
+const SCHEMA_MIN = 21;
 let schemaHave = null;      // null = لسا ما انفحص
 
 async function checkSchema(){
