@@ -91,19 +91,80 @@ function go(view, fn){
   window.scrollTo(0, 0);
   fn();
 }
-/* منتقي اللغة. الواجهة بس: محتوى الامتحان بيضل ألماني — ترجمته بتلغي
-   الامتحان، لأن قراءة التعليمة الألمانية جزء من الاختبار. */
-const elLang = document.getElementById('lang');
-if (elLang){
-  elLang.innerHTML = I18N.LANGS.map(l =>
-    `<option value="${l.id}"${l.id === I18N.lang ? ' selected' : ''}>${
-      esc(l.name)}</option>`).join('');
-  elLang.onchange = () => {
-    I18N.setLang(elLang.value);
-    // إعادة رسم الشاشة الحالية باللغة الجديدة
-    redraw();
-  };
+/* ============ الإعدادات ============ */
+/* لغة، مظهر، حجم خط — شاشة كاملة مو قوائم بالشريط. الشريط ضيّق على
+   الموبايل، وأزرار كبيرة واضحة أسهل بكتير لمين مو متعوّد على التقنية —
+   وهدول بالضبط ناسنا.
+
+   الواجهة بس بتنترجم: محتوى الامتحان بيضل ألماني، لأن قراءة التعليمة
+   الألمانية جزء من الاختبار. */
+const THEMES = ['system', 'light', 'dark'];
+const SIZES  = [0.9, 1, 1.15, 1.35];      // مضروب بحجم الخط الأساسي
+
+function applyLook(){
+  const th = load('b1.theme', 'system');
+  // 'system' = بلا سمة صريحة، فالـCSS بيتبع prefers-color-scheme
+  if (th === 'system') delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = th;
+
+  let sz = load('b1.size', 1);
+  if (!SIZES.includes(sz)) sz = 1;
+  document.documentElement.style.setProperty('--fs', (16 * sz) + 'px');
 }
+
+function screenSettings(){
+  go('settings', () => {
+    const th = load('b1.theme', 'system');
+    let sz = load('b1.size', 1);
+    if (!SIZES.includes(sz)) sz = 1;
+    const i = SIZES.indexOf(sz);
+
+    app.innerHTML = `
+      <h1>${esc(t('settings'))}</h1>
+
+      <h2>${esc(t('language'))}</h2>
+      <div class="pickrow">
+        ${I18N.LANGS.map(l => `<button class="pick${
+          l.id === I18N.lang ? ' on' : ''}" data-lang="${l.id}">${esc(l.name)}</button>`).join('')}
+      </div>
+
+      <h2>${esc(t('theme'))}</h2>
+      <div class="pickrow">
+        ${THEMES.map(x => `<button class="pick${x === th ? ' on' : ''}" data-theme="${x}">${
+          esc(t(x === 'system' ? 'themeSystem' : x === 'light' ? 'themeLight' : 'themeDark'))
+        }</button>`).join('')}
+      </div>
+
+      <h2>${esc(t('textSize'))}</h2>
+      <div class="pickrow">
+        <button class="pick big" data-size="-" ${i === 0 ? 'disabled' : ''}
+          aria-label="${esc(t('smaller'))}">A−</button>
+        <span class="sizedot">${SIZES.map((_, k) =>
+          `<i class="${k === i ? 'on' : ''}"></i>`).join('')}</span>
+        <button class="pick big" data-size="+" ${i === SIZES.length - 1 ? 'disabled' : ''}
+          aria-label="${esc(t('bigger'))}">A+</button>
+      </div>
+      <p class="card sample">${esc(t('sizeNow'))}</p>
+
+      <button class="btn wide" id="setdone">${esc(t('close'))}</button>`;
+
+    app.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
+      I18N.setLang(b.dataset.lang); screenSettings();
+    });
+    app.querySelectorAll('[data-theme]').forEach(b => b.onclick = () => {
+      save('b1.theme', b.dataset.theme); applyLook(); screenSettings();
+    });
+    app.querySelectorAll('[data-size]').forEach(b => b.onclick = () => {
+      const k = Math.min(SIZES.length - 1, Math.max(0, i + (b.dataset.size === '+' ? 1 : -1)));
+      save('b1.size', SIZES[k]); applyLook(); screenSettings();
+    });
+    document.getElementById('setdone').onclick = () => screenHome();
+  });
+}
+
+const elSet = document.getElementById('btnSet');
+if (elSet) elSet.onclick = () => screenSettings();
+applyLook();
 I18N.apply();
 
 /* الكتالوج بيعرض الامتحانات المقفولة للتشويق — تحسين، مو شرط.
@@ -594,8 +655,10 @@ function screenExam(run, resumeLeft){
       </section>`).join('');
 
     app.innerHTML = nav + body +
-      `<div class="bottombar"><div class="inner">
-         <span class="progress" id="prog">0 / ${runItems(run).length}</span>
+      `<div class="bottombar">
+         <div class="progbar"><i id="progfill"></i></div>
+         <div class="inner">
+         <span class="progress" id="prog"></span>
          <button class="btn grey" id="pause">${esc(t('pause'))}</button>
          <button class="btn grow" id="submit">${esc(t('submit'))}</button>
        </div></div>`;
@@ -603,7 +666,15 @@ function screenExam(run, resumeLeft){
     run.parts.forEach(p => bindInputs(p));
     updateProgress();
     markCurrentPart();
-    document.getElementById('submit').onclick = () => finish(run, false);
+    /* الوقت محدود والزرّ كبير — التسليم بالغلط بيصير. لو في أسئلة بلا
+       إجابة، منسأل ومنقول كم، بدل ما نسلّم بصمت. */
+    document.getElementById('submit').onclick = () => {
+      const items = runItems(run);
+      const open  = items.length - items.filter(answered).length;
+      if (!open) return finish(run, false);
+      ask(t('openAsk', { n: plural(open, 'nOpen') }),
+          () => finish(run, false), t('submitAnyway'), t('keepGoing'));
+    };
     const pz = document.getElementById('pause');
     if (run.drill) { pz.remove(); stopTimer(); }     // Übung läuft ohne Uhr
     else {
@@ -775,10 +846,17 @@ function renderItem(sec, it){
   }
   else if (sec.format === 'matching' || sec.format === 'wordbank'){
     const chosen = S.answers[it.id] || '';
-    body = `<select data-sel="${esc(it.id)}">
-      <option value="">${esc(t('choose'))}</option>
-      ${sec.bank.map(o => `<option value="${esc(o.key)}"${o.key === chosen ? ' selected' : ''}>${esc(o.key)}${o.text ? ' — ' + esc(o.text).slice(0, 70) : ''}</option>`).join('')}
-    </select>`;
+    /* أزرار حروف بدل قائمة منسدلة.
+       القائمة بتطلب: ضغطة، قراءة، تمرير، إصابة — وبخمستعشر خيار على
+       موبايل هاد صعب لمين مو متعوّد. الأزرار بتبيّن كل الحروف مرة وحدة
+       وبتنضغط بضغطة. ونصّ البنك أصلاً معروض فوق الأسئلة. */
+    body = `<div class="keys" data-keys="${esc(it.id)}" role="group">${
+      sec.bank.map(o => `<button type="button" class="key${
+        o.key === chosen ? ' sel' : ''}" data-key="${esc(it.id)}|${esc(o.key)}"
+        title="${esc(o.text || o.key)}">${esc(o.key)}</button>`).join('')}
+      ${chosen ? `<button type="button" class="key clr" data-key="${esc(it.id)}|"
+        title="${esc(t('choose'))}">✕</button>` : ''}
+    </div>`;
   }
   return `<div class="q" id="q_${esc(it.id)}">${head}${body}</div>`;
 }
@@ -795,10 +873,11 @@ function syncBank(sec){
     const v = S.answers[it.id];
     if (v && v !== 'X') used.set(v, it.id);
   });
-  scope.querySelectorAll('[data-sel]').forEach(sl => {
-    const id = sl.dataset.sel;
-    [...sl.options].forEach(o => {
-      if (o.value) o.disabled = used.has(o.value) && used.get(o.value) !== id;
+  scope.querySelectorAll('[data-keys]').forEach(box => {
+    const id = box.dataset.keys;
+    box.querySelectorAll('[data-key]').forEach(b => {
+      const k = b.dataset.key.split('|')[1];
+      b.disabled = !!k && used.has(k) && used.get(k) !== id;
     });
   });
 }
@@ -824,14 +903,17 @@ function bindInputs(sec){
       updateProgress();
     };
   });
-  scope.querySelectorAll('[data-sel]').forEach(sl => {
-    sl.onchange = () => {
-      const v = sl.value;
-      if (v) S.answers[sl.dataset.sel] = v; else delete S.answers[sl.dataset.sel];
-      markPart(sec.id);
-      syncBank(sec);
-      updateProgress();
-    };
+  scope.querySelectorAll('[data-key]').forEach(b => b.onclick = () => {
+    const [id, key] = b.dataset.key.split('|');
+    if (key) S.answers[id] = key; else delete S.answers[id];
+    markPart(sec.id);
+    // نعيد رسم المجموعة: التحديد بيتغيّر وزرّ المسح بيظهر أو بيختفي
+    const q  = b.closest('.q');
+    const it = sec.items.find(x => x.id === id);
+    q.outerHTML = renderItem(sec, it);
+    bindInputs(sec);
+    syncBank(sec);
+    updateProgress();
   });
   syncBank(sec);
   scope.querySelectorAll('[data-txt]').forEach(ta => {
@@ -856,8 +938,12 @@ const answered = it => {
 function updateProgress(){
   saveSession(S.run);
   const items = runItems(S.run);
+  const done  = items.filter(answered).length;
   const p = document.getElementById('prog');
-  if (p) p.textContent = `${items.filter(answered).length} / ${items.length}`;
+  // «١٢ من ٤٠» أوضح من «12 / 40» لواحد مو متعوّد على الاختصارات
+  if (p) p.textContent = t('progress', { done, total: items.length });
+  const f = document.getElementById('progfill');
+  if (f) f.style.width = items.length ? (done / items.length * 100) + '%' : '0';
 }
 
 /* Pause: der Timer hält an und die Aufgaben werden verdeckt — wie eine

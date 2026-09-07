@@ -226,6 +226,57 @@ await page.evaluate(() => {
   if (btn) btn.click();
 });
 await page.waitForTimeout(400);
+
+// ---- ٦أ) أزرار الحروف بدل القوائم المنسدلة ----
+// قائمة بخمستعشر خيار على موبايل صعبة لمين مو متعوّد: ضغطة، قراءة،
+// تمرير، إصابة. الأزرار بتبيّن كل الحروف مرة وحدة.
+check('★ ما ضل ولا قائمة منسدلة بالأسئلة',
+      await page.locator('.q select').count() === 0);
+const nKeys = await page.locator('.keys .key').count();
+check(`أزرار الحروف موجودة (${nKeys})`, nKeys > 0);
+check('حجم الزرّ ≥ ٤٤ بكسل (قابل للضغط بالإصبع)',
+      await page.evaluate(() => {
+        const b = document.querySelector('.keys .key');
+        const r = b.getBoundingClientRect();
+        return Math.min(r.width, r.height) >= 44;
+      }));
+
+// الضغط بيختار، والضغط على ✕ بيمسح
+await page.locator('.keys .key').first().click();
+await page.waitForTimeout(250);
+check('★ الضغط بيختار الحرف',
+      await page.locator('.keys .key.sel').count() === 1);
+check('وبيطلع زرّ مسح', await page.locator('.keys .key.clr').count() >= 1);
+
+// نفس الحرف ما بينعاد بسؤال تاني («Jede Überschrift passt nur einmal»)
+check('★ الحرف المستعمل بينقفل بباقي الأسئلة',
+      await page.locator('.keys .key[disabled]').count() > 0);
+
+await page.locator('.keys .key.clr').first().click();
+await page.waitForTimeout(250);
+check('★ زرّ المسح بيشيل الاختيار',
+      await page.locator('.keys .key.sel').count() === 0);
+
+// ---- ٦ب) شريط التقدّم ----
+check('★ شريط التقدّم موجود', await page.locator('#progfill').count() === 1);
+const p0 = await page.textContent('#prog');
+check(`وبيقول كم انحلّ (${p0.trim()})`, /0.*40|40/.test(p0));
+await page.locator('.keys .key').first().click();
+await page.waitForTimeout(250);
+const w = await page.evaluate(() => document.getElementById('progfill').style.width);
+check(`★ وبيتحرّك مع الإجابة (${w})`, w && parseFloat(w) > 0);
+
+// ---- ٦ج) تحذير قبل التسليم ----
+// الوقت محدود والزرّ كبير — التسليم بالغلط بيصير.
+await page.evaluate(() => document.getElementById('submit').click());
+await page.waitForSelector('.modal', { timeout: 4000 });
+const warn = await page.textContent('.modal');
+check(`★ التسليم بأسئلة ناقصة بيسأل أول (${warn.replace(/\s+/g,' ').trim().slice(0,42)})`,
+      /ohne Antwort/.test(warn));
+await page.evaluate(() => document.querySelector('.modal [data-no]').click());
+await page.waitForTimeout(300);
+check('★ و«كمّل الحلّ» ما بيسلّم', await page.locator('.score').count() === 0);
+
 // منعبّي الإجابات الصح مباشرةً بالحالة، وبعدين منسلّم
 const submitted = await page.evaluate(() => {
   S.answers = {};
@@ -292,40 +343,72 @@ const loaded = await page.evaluate(() => window.__loaded || []);
 check(`★ ولا نداء لتحميل امتحان مقفول (${loaded.join(', ') || 'ولا واحد'})`,
       !loaded.includes('modell-02') && !loaded.includes('modell-03'));
 
-// ---- ٨ج) لغة الواجهة ----
-// الواجهة بس بتنترجم. محتوى الامتحان بيضل ألماني: قراءة التعليمة
-// الألمانية جزء من الاختبار، وترجمتها بتلغي التدرّب.
-check('منتقي اللغة موجود بتلات لغات',
-      await page.locator('#lang option').count() === 3);
+// ---- ٨ج) الإعدادات: لغة، مظهر، حجم خط ----
+// شاشة كاملة بأزرار كبيرة مو قوائم بالشريط: جمهورنا كورسات، مو مطوّرين.
+await page.evaluate(() => document.getElementById('btnSet').click());
+await page.waitForSelector('.pickrow');
+// أهداف اللمس: أي زرّ أصغر من ٤٤ بكسل بينضغط غلط على الموبايل
+const small = await page.evaluate(() => [...document.querySelectorAll('.btn,.pick')]
+  .filter(b => b.getBoundingClientRect().height < 44)
+  .map(b => b.textContent.trim().slice(0, 20)));
+check(`★ ولا زرّ أصغر من ٤٤ بكسل${small.length ? ' — ' + small.join(', ') : ''}`,
+      small.length === 0);
 
-await page.selectOption('#lang', 'ar');
-await page.waitForTimeout(500);
+check('★ زرّ ⚙ بيفتح شاشة الإعدادات',
+      /Einstellungen/.test(await page.textContent('#app')));
+check('اللغات التلاتة أزرار مو قائمة',
+      await page.locator('[data-lang]').count() === 3);
+check('والمظهر تلات خيارات',
+      await page.locator('[data-theme]').count() === 3);
+
+// --- المظهر ---
+await page.evaluate(() => document.querySelector('[data-theme="dark"]').click());
+await page.waitForTimeout(300);
+check('★ الوضع الغامق بيشتغل',
+      await page.getAttribute('html', 'data-theme') === 'dark');
+check('وبينحفظ', await page.evaluate(() => localStorage.getItem('b1.theme')) === '"dark"');
+await page.evaluate(() => document.querySelector('[data-theme="system"]').click());
+await page.waitForTimeout(300);
+check('★ و«متل الجهاز» بيشيل السمة الصريحة',
+      await page.getAttribute('html', 'data-theme') === null);
+
+// --- حجم الخط ---
+const fs0 = await page.evaluate(() =>
+  getComputedStyle(document.body).fontSize);
+await page.evaluate(() => document.querySelector('[data-size="+"]').click());
+await page.waitForTimeout(300);
+const fs1 = await page.evaluate(() => getComputedStyle(document.body).fontSize);
+check(`★ A+ بيكبّر الخط (${fs0} → ${fs1})`, parseFloat(fs1) > parseFloat(fs0));
+await page.evaluate(() => document.querySelector('[data-size="-"]').click());
+await page.waitForTimeout(300);
+check('وA− بيرجّعه',
+      (await page.evaluate(() => getComputedStyle(document.body).fontSize)) === fs0);
+
+// --- اللغة ---
+await page.evaluate(() => document.querySelector('[data-lang="ar"]').click());
+await page.waitForTimeout(400);
 check('★ الواجهة صارت عربي',
-      /أهلاً/.test(await page.textContent('#app')));
+      /الإعدادات/.test(await page.textContent('#app')));
 check('★ والاتجاه انقلب لليمين',
       await page.getAttribute('html', 'dir') === 'rtl');
-check('★ والجمع العربي صح (مثنّى)',
-      /نموذجين|نموذج/.test(await page.textContent('.upsell')));
 
-await page.selectOption('#lang', 'uk');
-await page.waitForTimeout(500);
+await page.evaluate(() => document.querySelector('[data-lang="uk"]').click());
+await page.waitForTimeout(400);
 check('★ والأوكرانية شغّالة',
-      /Вітаємо/.test(await page.textContent('#app')));
+      /Налаштування/.test(await page.textContent('#app')));
 check('والاتجاه رجع لليسار',
       await page.getAttribute('html', 'dir') === 'ltr');
-
-// الاختيار لازم ينحفظ بين الجلسات
 check('★ اللغة انحفظت',
       await page.evaluate(() => localStorage.getItem('b1.lang')) === 'uk');
 
-// ★ ولا اسم امتحان انترجم — العناوين محتوى، مو واجهة
+await page.evaluate(() => document.querySelector('[data-lang="de"]').click());
+await page.waitForTimeout(400);
+await page.evaluate(() => document.getElementById('setdone').click());
+await page.waitForSelector('.tile');
+check('«Fertig» بيرجّع للرئيسية',
+      /Willkommen/.test(await page.textContent('#app')));
 check('★ عناوين الامتحانات ضلّت متل ما هي',
       /PETRA/.test(await page.textContent('#app')));
-
-await page.selectOption('#lang', 'de');
-await page.waitForTimeout(500);
-check('والرجوع للألماني شغّال',
-      /Willkommen/.test(await page.textContent('#app')));
 
 // ---- ٩) بطاقة الاشتراك ----
 // كانت المعلومة تطلع بس لما يكون في أكتر من مستوى، فالطالب العادي ما
