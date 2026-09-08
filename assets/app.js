@@ -1462,14 +1462,16 @@ function renderAiBox(box, run, attemptId, text){
     catch { r = { ok: false, error: 'network' }; }
     btn.disabled = false; btn.textContent = 'Korrektur anfordern';
     if (r && r.ok) return showAi(out, btn, r);
-    out.innerHTML = `<p class="sub" style="color:var(--bad)">${esc({
-      quota_exceeded: 'Das Korrektur-Kontingent für diesen Zeitraum ist aufgebraucht.',
-      not_entitled:   'Kein aktives Abo.',
-      empty_text:     'Es ist kein Text zum Korrigieren da.',
-      not_configured: 'Die Korrektur ist noch nicht eingerichtet.',
-      refused:        'Der Text konnte nicht bewertet werden.',
-      network:        'Keine Verbindung.'
-    }[r && r.error] || 'Die Korrektur ist fehlgeschlagen.')}</p>`;
+    out.innerHTML = `<p class="sub" style="color:var(--bad)">${esc(t({
+      quota_exceeded: 'aiErrQuota',
+      not_entitled:   'aiErrNoSub',
+      empty_text:     'aiErrEmpty',
+      not_configured: 'aiErrSetup',
+      bad_model:      'aiErrSetup',   // إعداد غلط عند الأدمن، مو غلط الطالب
+      refused:        'aiErrRefused',
+      ai_quota:       'aiErrDaily',   // حصّة النموذج اليومية، مو حصّة الطالب
+      network:        'aiErrNetwork'
+    }[r && r.error] || 'aiErrOther'))}</p>`;
   };
 }
 

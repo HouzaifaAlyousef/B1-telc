@@ -2,7 +2,7 @@
    الـSupabase مزيّف (بيترجم النداءات لـpsql على القاعدة المحلية) وClaude
    مزيّف كمان — بس **الدالة نفسها** يلي بتنشتغل هي كود الإنتاج بالحرف. */
 const PORT_SUPA = 54321;
-const PORT_ANTH = 54322;
+const PORT_GEM = 54322;
 
 const psql = async (q: string) => {
   const p = new Deno.Command("psql", {
@@ -41,48 +41,56 @@ const supa = Deno.serve({ port: PORT_SUPA, onListen() {} }, async (req) => {
   }
 });
 
-/* ---- Claude مزيّف: بيرجّع شكل الجواب المفروض بالسكيما ---- */
-let anthropicSaw: any = null;
-const anth = Deno.serve({ port: PORT_ANTH, onListen() {} }, async (req) => {
-  anthropicSaw = await req.json();
-  const body = {
-    id: "msg_test", type: "message", role: "assistant", model: "claude-opus-5",
-    stop_reason: "end_turn", stop_sequence: null,
-    usage: { input_tokens: 1200, output_tokens: 900 },
-    content: [{ type: "text", text: JSON.stringify({
-      grades: [
-        { criterion: "Aufgabenbewältigung",    key: "A", why: "Alle vier Leitpunkte bearbeitet." },
-        { criterion: "Kommunikative Gestaltung", key: "B", why: "Anrede vorhanden, Gruß knapp." },
-        { criterion: "Formale Richtigkeit",    key: "A", why: "Wenige Fehler." },
-      ],
-      errors: [{ type: "Grammatik", original: "Ich fliege", correction: "Ich fliege am liebsten",
-                 why: "Adverb fehlt." }],
-      corrected: "Liebe Anna, …",
-      summary: "Guter Brief, achte auf den Gruß.",
-    })}],
-  };
-  return new Response(JSON.stringify(body), { headers: { "content-type": "application/json" } });
+/* ---- Gemini مزيّف: بيرجّع شكل الجواب المفروض بالسكيما ---- */
+let geminiSaw: any = null;
+let geminiPath = "";
+const REPLY = {
+  grades: [
+    { criterion: "Aufgabenbewältigung",      key: "A", why: "Alle vier Leitpunkte bearbeitet." },
+    { criterion: "Kommunikative Gestaltung", key: "B", why: "Anrede vorhanden, Gruß knapp." },
+    { criterion: "Formale Richtigkeit",      key: "A", why: "Wenige Fehler." },
+  ],
+  errors: [{ type: "Grammatik", original: "Ich fliege", correction: "Ich fliege am liebsten",
+             why: "Adverb fehlt." }],
+  corrected: "Liebe Anna, …",
+  summary: "Guter Brief, achte auf den Gruß.",
+};
+const gem = Deno.serve({ port: PORT_GEM, onListen() {} }, async (req) => {
+  geminiPath = new URL(req.url).pathname + new URL(req.url).search;
+  if (geminiPath.includes("/models?")) {            // قائمة النماذج
+    return Response.json({ models: [
+      { name: "models/gemini-flash-latest", supportedGenerationMethods: ["generateContent"] },
+      { name: "models/gemini-embed", supportedGenerationMethods: ["embedContent"] }] });
+  }
+  geminiSaw = await req.json();
+  return Response.json({
+    candidates: [{ finishReason: "STOP",
+      content: { role: "model", parts: [{ text: JSON.stringify(REPLY) }] } }],
+    modelVersion: "gemini-flash-latest",
+    usageMetadata: { promptTokenCount: 1200, candidatesTokenCount: 900 },
+  });
 });
 
 /* ---- تشغيل الدالة ---- */
 Deno.env.set("SUPABASE_URL", `http://127.0.0.1:${PORT_SUPA}`);
 Deno.env.set("SUPABASE_ANON_KEY", "ANON_KEY");
 Deno.env.set("SUPABASE_SERVICE_ROLE_KEY", "SERVICE_KEY");
-Deno.env.set("ANTHROPIC_API_KEY", "sk-test");
-Deno.env.set("ANTHROPIC_BASE_URL", `http://127.0.0.1:${PORT_ANTH}`);
+Deno.env.set("GEMINI_API_KEY", "gk-test");
+Deno.env.set("GEMINI_MODEL", "gemini-flash-latest");
+Deno.env.set("GEMINI_BASE_URL", `http://127.0.0.1:${PORT_GEM}/v1beta`);
 
 const R: [string, boolean][] = [];
 const check = (l: string, c: unknown) => { R.push([l, !!c]); console.log(`  ${c ? "✓" : "✗"} ${l}`); };
 
 /* الدالة بتنادي Deno.serve — منلقطه بدل ما نشغّل سيرفر */
-let handler: (r: Request) => Promise<Response> | Response;
+let handler!: (r: Request) => Promise<Response> | Response;
 const realServe = Deno.serve;
 // @ts-ignore: نستبدل مؤقّتاً
 Deno.serve = ((h: any) => { handler = h; return { finished: Promise.resolve(), shutdown(){}, addr:{} } as any; }) as any;
 await import("../../supabase/functions/correct-writing/index.ts");
 Deno.serve = realServe;
 
-console.log("\n=== Edge Function: تصحيح التعبير الكتابي ===");
+console.log("\n=== Edge Function: تصحيح التعبير الكتابي (Gemini) ===");
 
 /* بيانات: مستخدم ومحاولة */
 const U = "eeeeeeee-0000-0000-0000-000000000005";
@@ -125,11 +133,18 @@ check(`النقاط ٣٩ من ٤٥ (طلع ${body.points}/${body.max_points})`,
 check("رجّع ٣ درجات وخطأ واحد",
       body.grades?.length === 3 && body.errors?.length === 1);
 
-/* ---- ٤) شو انبعت لـClaude ---- */
-check("النموذج المطلوب claude-opus-5", anthropicSaw?.model === "claude-opus-5");
-check("تفكير adaptive", anthropicSaw?.thinking?.type === "adaptive");
-check("سكيما مفروضة (output_config.format)", !!anthropicSaw?.output_config?.format);
-const p = anthropicSaw?.messages?.[0]?.content ?? "";
+/* ---- ٤) شو انبعت للنموذج ---- */
+check(`النموذج المطلوب بالمسار (${geminiPath.split("?")[0]})`,
+      geminiPath.includes("models/gemini-flash-latest:generateContent"));
+check("★ سكيما مفروضة، مو مرجوّة بالتعليمات",
+      geminiSaw?.generationConfig?.responseMimeType === "application/json"
+      && !!geminiSaw?.generationConfig?.responseSchema?.properties?.grades);
+check("★ والدرجة محصورة بـA–D بالسكيما نفسها",
+      JSON.stringify(geminiSaw?.generationConfig?.responseSchema)
+        .includes('"enum":["A","B","C","D"]'));
+check("تعليمات النظام انبعتت", 
+      (geminiSaw?.systemInstruction?.parts?.[0]?.text ?? "").includes("telc Deutsch B1"));
+const p = geminiSaw?.contents?.[0]?.parts?.[0]?.text ?? "";
 check("نص الطالب انبعت", p.includes("Liebe Anna"));
 check("المعايير الثلاثة انبعتوا",
       p.includes("Aufgabenbewältigung") && p.includes("Kommunikative Gestaltung")
@@ -154,27 +169,52 @@ r = await call({ attempt_id: aid });
 const q = await r.json();
 check(`الحصّة الممتلئة بترفض (${q.error})`, q.error === "quota_exceeded");
 
-/* ---- ٨) رفض Claude ---- */
+/* ---- ٨) الحجب لأسباب السلامة ---- */
 await psql(`update subscriptions set writing_quota = 9 where user_id='${U}';`);
 const realFetch = globalThis.fetch;
+const fake = (payload: unknown, status = 200) => {
+  globalThis.fetch = (async (u: any, o: any) =>
+    String(u).includes(`:${PORT_GEM}`)
+      ? new Response(JSON.stringify(payload), { status,
+          headers: { "content-type": "application/json" } })
+      : realFetch(u, o)) as any;
+};
+
+fake({ candidates: [{ finishReason: "SAFETY", content: { parts: [] } }] });
+r = await call({ attempt_id: aid });
+let e = await r.json();
+check(`الحجب بينتعامل معه (${e.error})`, e.error === "refused" && r.status === 502);
+check("الصفّ انعلّم failed مو معلّق للأبد",
+      await psql(`select status from writing_feedback where user_id='${U}'
+                  order by created_at desc limit 1;`) === "failed");
+
+/* ---- ٩) ★ الحصّة اليومية المجانية خلصت ---- */
+// ١٥٠٠ طلب باليوم بتخلص. «٤٢٩» عارية ما بتقول للمستخدم شي.
+fake({ error: { message: "quota" } }, 429);
+r = await call({ attempt_id: aid });
+e = await r.json();
+check(`★ نفاد الحصّة إله رمز خاص (${e.error}/${r.status})`,
+      e.error === "ai_quota" && r.status === 503);
+
+/* ---- ١٠) ★ اسم نموذج غلط بيقول شو المتاح ---- */
+// أسماء نماذج Gemini بتتغيّر، والمفاتيح المجانية ما كلها بتوصل لكلهن.
+// «٤٠٤» صامتة بتضيّع نص ساعة؛ القائمة بتحلّها بسطر.
 globalThis.fetch = (async (u: any, o: any) => {
-  if (String(u).includes(`:${PORT_ANTH}`))
-    return new Response(JSON.stringify({
-      id:"m", type:"message", role:"assistant", model:"claude-opus-5",
-      stop_reason:"refusal", stop_details:{type:"refusal",category:"other"},
-      usage:{input_tokens:10,output_tokens:0}, content:[] }),
-      { headers:{ "content-type":"application/json" } });
-  return realFetch(u, o);
+  const s = String(u);
+  if (s.includes(`:${PORT_GEM}`) && s.includes(":generateContent"))
+    return new Response(JSON.stringify({ error: { message: "model not found" } }),
+                        { status: 404, headers: { "content-type": "application/json" } });
+  return realFetch(u, o);            // نداء قائمة النماذج بيمرق للمزيّف
 }) as any;
 r = await call({ attempt_id: aid });
-const ref = await r.json();
+e = await r.json();
 globalThis.fetch = realFetch;
-check(`رفض النموذج بينتعامل معه (${ref.error})`, ref.error === "refused" && r.status === 502);
-const failed = await psql(`select status from writing_feedback where user_id='${U}'
-  order by created_at desc limit 1;`);
-check("الصفّ انعلّم failed مو معلّق للأبد", failed === "failed");
+check(`★ نموذج غلط بيرجّع القائمة المتاحة (${String(e.detail ?? "").slice(0, 52)})`,
+      e.error === "bad_model" && String(e.detail).includes("gemini-flash-latest"));
+check("★ وما بيعرض نماذج ما بتصلح للتوليد",
+      !String(e.detail).includes("gemini-embed"));
 
-await supa.shutdown(); await anth.shutdown();
+await supa.shutdown(); await gem.shutdown();
 const bad = R.filter(x => !x[1]);
 console.log(bad.length ? `\n✗ ${bad.length} فشل من ${R.length}` : `\n✓ كل الـ${R.length} اختبارات نجحت`);
 Deno.exit(bad.length ? 1 : 0);

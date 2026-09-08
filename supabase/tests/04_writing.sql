@@ -63,7 +63,7 @@ begin
       {"criterion":"Kommunikative Gestaltung","key":"B","why":"Anrede fehlt"},
       {"criterion":"Formale Richtigkeit","key":"A","why":"kaum Fehler"}]'::jsonb,
     '[{"type":"Grammatik","original":"Ich fliege","correction":"Ich fliege am liebsten","why":"x"}]'::jsonb,
-    'Guter Brief.', brief, 'claude-opus-5');
+    'Guter Brief.', brief, 'gemini-flash-latest');
   -- A=5, B=3, A=5 → 13 × معامل ٣ = 39
   perform t_check(format('النقاط: (5+3+5) × 3 = 39، طلعت %s', fin->>'points'),
                   (fin->>'points')::numeric = 39);

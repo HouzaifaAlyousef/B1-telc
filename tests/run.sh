@@ -66,7 +66,7 @@ node tests/xss.mjs
 echo "▸ الاستيراد من الطرف للطرف"
 node tests/import.mjs
 
-echo "▸ Edge Functions (Deno الحقيقي، Claude وتلغرام مزيّفين)"
+echo "▸ Edge Functions (Deno الحقيقي، Gemini وتلغرام مزيّفين)"
 if command -v deno >/dev/null 2>&1; then
   # Deno بينشئ node_modules حقيقي وبيكسر رابط playwright — فمنشغّله بمعزل
   rm -f node_modules

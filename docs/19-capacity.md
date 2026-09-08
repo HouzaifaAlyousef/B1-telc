@@ -20,29 +20,21 @@ punish a paying customer for the timing of their arrival.
 
 Everything below is on the free tiers. Ranked by which runs out first.
 
-### 1. Writing correction — the only thing that costs real money
+### 1. Writing correction — now free, with a daily ceiling
 
-Each correction is one Claude request. With `claude-opus-5` at
-[$5 / $25 per million tokens](https://docs.claude.com/en/docs/about-claude/pricing),
-a B1 letter (~2.2K input, ~3K output including thinking) works out to
-roughly **$0.09 per correction**.
+This used to be the expensive part: `claude-opus-5` at about **$0.09 per
+correction**, or $1.80 per subscriber at a quota of 20. It now runs on
+[Gemini's free tier](https://ai.google.dev/gemini-api/docs/rate-limits):
+**1,500 requests a day, no card, no bill**.
 
-`subscriptions.writing_quota` defaults to **20**, so one subscriber can
-cost at most **≈ $1.80** in Claude spend — and most will use far fewer.
+So the money constraint is gone and a rate constraint replaces it. 1,500
+corrections a day is far above anything this app will see at the user
+counts below — but when it is hit, the student is told to try tomorrow and
+their quota is not consumed.
 
-| Active users | Worst case (all 20 used) | Realistic (~5 used) |
-|---|---|---|
-| 50 | $90 | $23 |
-| 150 | $270 | $68 |
-| 500 | $900 | $225 |
-
-This is the number to watch. It scales with people, and nothing else on
-the stack does at this size.
-
-*If it gets uncomfortable:* lower `output_config.effort` in
-`supabase/functions/correct-writing/index.ts` from `high` before switching
-models — grading against fixed criteria is a bounded task, not a hard
-reasoning problem. Measure the grades before and after; don't assume.
+The trade the owner accepted for that: Google's free tier may use the
+submitted text to improve their models. See
+[14-writing-correction.md](14-writing-correction.md).
 
 ### 2. Supabase egress — 5 GB/month, and audio will eat it
 
@@ -79,17 +71,18 @@ Attempts and mistakes are small rows. 500 MB and 50,000 MAU are far away.
 
 **`Aktive Nutzer max. = 50`, `Neue pro Tag max. = 10`.**
 
-Not because 50 is where anything breaks — it isn't. Because:
+Not because 50 is where anything breaks — it isn't, and now that correction
+is free nothing on the stack costs money at all. Because:
 
-- worst-case Claude spend stays under $90 while you learn what usage
-  actually looks like;
 - the waiting list is *visible* from day one, which is half the point of
   having one;
-- the daily cap turns a sudden rush into a queue you can watch instead of
-  a bill you find later.
+- the daily cap turns a sudden rush into a queue you can watch rather than
+  a surprise;
+- and it keeps you inside Gemini's 1,500/day while you learn what real
+  usage looks like.
 
-Raising a limit takes one field and a click. Explaining to paying
-customers why the app got slow does not.
+Raising a limit takes one field and a click. Explaining to paying customers
+why the app got slow does not.
 
 Raise it once you have a week of real numbers — the Übersicht page shows
 active users, new today, and how many are waiting.

@@ -35,16 +35,27 @@ usual entitlement checks.
 
 ## Cost
 
-Each correction is roughly 1,200 input and 900 output tokens. On
-`claude-opus-5` at $5 / $25 per million tokens that is about **$0.03 per
-correction** — call it $0.04 with the thinking tokens.
+Free, within a daily allowance.
 
-That is per request, so it needs a ceiling. `subscriptions.writing_quota`
-(default 20) caps corrections per subscription period, checked in
-`writing_start()` before anything is sent. Twenty corrections is about $0.80
-per student per month — set it against what you charge.
+The correction runs on **Gemini's free tier**: no card, no bill, and
+[1,500 requests a day](https://ai.google.dev/gemini-api/docs/rate-limits) —
+far more than this app will use. It replaced `claude-opus-5`, which was
+correct but cost about **$0.09 per correction**; at a quota of 20 that was
+$1.80 per subscriber, and the owner decided that was too much of the margin.
 
-Raise or lower it per student in SQL:
+**Two things follow from choosing the free tier, and both are deliberate:**
+
+1. **Google may use the text to improve their models.** That is the
+   published condition of the free tier (the paid tier and Vertex AI do
+   not). The text in question is a student's letter. The owner was told and
+   chose the free tier, and chose not to show students a notice.
+2. **The daily allowance can run out.** When it does the function returns
+   `ai_quota` and the student sees "try again tomorrow", not a stack trace.
+   The correction is marked `failed`, so it does not eat their quota.
+
+`subscriptions.writing_quota` (default 20) still caps corrections per
+subscription period, checked in `writing_start()` before anything is sent —
+it is now about pacing rather than money. Raise or lower it per student:
 
 ```sql
 update subscriptions set writing_quota = 50 where user_id = '…';
@@ -55,11 +66,11 @@ excluded from the count.
 
 ## Setup
 
-1. **Get an API key** — [console.anthropic.com](https://console.anthropic.com)
-   → API Keys. Put credit on the account.
+1. **Get an API key** — [Google AI Studio](https://aistudio.google.com/apikey)
+   → Create API key. Free, no credit card.
 2. **Store it as a secret**, never in `assets/config.js`:
    ```bash
-   supabase secrets set ANTHROPIC_API_KEY=sk-ant-…
+   supabase secrets set GEMINI_API_KEY=…
    ```
 3. **Deploy the function:**
    ```bash
@@ -67,6 +78,26 @@ excluded from the count.
    ```
    `SUPABASE_URL`, `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY` are set
    by the platform.
+
+### Picking the model
+
+Model names change, and not every key reaches every model. The default is
+`gemini-flash-latest`. If that name is wrong for your key, the function does
+not fail silently — it returns `bad_model` **and lists the models your key
+can actually use**. Set whichever one you want:
+
+```bash
+supabase secrets set GEMINI_MODEL=gemini-3.7-flash
+```
+
+You can also list them yourself:
+
+```bash
+curl "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY"
+```
+
+Prefer a Flash model: this is grading against fixed criteria, not open-ended
+reasoning, and Flash models are what the free tier is generous with.
 
 Without step 2 the feature reports `not_configured` and the rest of the app is
 unaffected — the button simply says the correction is not set up yet.

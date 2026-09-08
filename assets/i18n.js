@@ -63,6 +63,16 @@ const I18N = (() => {
       chkClosing: 'Gruß am Ende',
       chkPointsHint: 'Haken Sie ab, was Sie schon geschrieben haben:',
 
+      aiErrQuota:   'Das Korrektur-Kontingent für diesen Zeitraum ist aufgebraucht.',
+      aiErrDaily:   'Heute wurden schon sehr viele Korrekturen angefordert. '
+                  + 'Bitte morgen noch einmal versuchen.',
+      aiErrNoSub:   'Kein aktives Abo.',
+      aiErrEmpty:   'Es ist kein Text zum Korrigieren da.',
+      aiErrSetup:   'Die Korrektur ist noch nicht eingerichtet.',
+      aiErrRefused: 'Der Text konnte nicht bewertet werden.',
+      aiErrNetwork: 'Keine Verbindung.',
+      aiErrOther:   'Die Korrektur ist fehlgeschlagen.',
+
       welcome: 'Willkommen 👋',
       homeIntro: 'Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile ' +
                  'der schriftlichen Prüfung {level} — mit der echten Prüfungszeit.',
@@ -215,6 +225,15 @@ const I18N = (() => {
       chkGreeting: 'في تحية بالبداية',
       chkClosing: 'في سلام بالنهاية',
       chkPointsHint: 'شطّب على يلي كتبته:',
+
+      aiErrQuota:   'حصّة التصحيح لهالفترة خلصت.',
+      aiErrDaily:   'اليوم انطلبت تصحيحات كتير. جرّب بكرا.',
+      aiErrNoSub:   'ما في اشتراك فعّال.',
+      aiErrEmpty:   'ما في نص لنصحّحه.',
+      aiErrSetup:   'التصحيح لسا مو مجهّز.',
+      aiErrRefused: 'ما قدرنا نقيّم هالنص.',
+      aiErrNetwork: 'ما في اتصال.',
+      aiErrOther:   'التصحيح ما نجح.',
 
       welcome: 'أهلاً 👋',
       homeIntro: 'اختر نموذج امتحان. كل نموذج فيه أقسام الامتحان التحريري ' +
@@ -384,6 +403,16 @@ const I18N = (() => {
       chkGreeting: 'Звертання на початку',
       chkClosing: 'Прощання наприкінці',
       chkPointsHint: 'Позначте те, що вже написали:',
+
+      aiErrQuota:   'Ліміт перевірок на цей період вичерпано.',
+      aiErrDaily:   'Сьогодні вже було багато запитів на перевірку. '
+                  + 'Спробуйте завтра.',
+      aiErrNoSub:   'Немає активної підписки.',
+      aiErrEmpty:   'Немає тексту для перевірки.',
+      aiErrSetup:   'Перевірку ще не налаштовано.',
+      aiErrRefused: 'Не вдалося оцінити цей текст.',
+      aiErrNetwork: 'Немає зв’язку.',
+      aiErrOther:   'Перевірка не вдалася.',
 
       welcome: 'Вітаємо 👋',
       homeIntro: 'Оберіть пробний тест. Кожен тест містить частини письмового ' +

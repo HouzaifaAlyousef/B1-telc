@@ -62,7 +62,7 @@ globalThis.fetch = ((u: any, o?: any) => {
 const R: [string, boolean][] = [];
 const check = (l: string, c: unknown) => { R.push([l, !!c]); console.log(`  ${c ? "✓" : "✗"} ${l}`); };
 
-let handler: (r: Request) => Promise<Response> | Response;
+let handler!: (r: Request) => Promise<Response> | Response;
 const realServe = Deno.serve;
 // @ts-ignore: منلقط المعالج بدل ما نشغّل سيرفر
 Deno.serve = ((h: any) => { handler = h; return { finished: Promise.resolve(), shutdown(){}, addr:{} } as any; }) as any;

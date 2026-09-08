@@ -77,6 +77,16 @@ purpose. Watch the device counts in the panel.
 **The anon key is public.** It is designed to be. Everything above holds with
 an attacker who has it — that is what these tests assume.
 
+**Student writing leaves the system, and may be trained on.** The correction
+runs on Gemini's free tier, whose published terms allow Google to use
+submitted text to improve their models. What gets sent is the student's
+letter — the exam task and their own words, no name, no email, no code (the
+app has no email addresses at all). The owner was shown this trade, chose the
+free tier over roughly $1.80 per subscriber, and chose not to show students a
+notice. Moving to Gemini's paid tier or back to a provider that does not train
+on inputs is a one-secret change; see
+[14-writing-correction.md](14-writing-correction.md).
+
 **A subscriber can copy what they paid for.** Content protection stops
 non-subscribers and casual extraction; it cannot stop a paying student from
 screenshotting 16 tests. No design can.
