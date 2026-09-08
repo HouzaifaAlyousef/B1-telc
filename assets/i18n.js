@@ -56,6 +56,13 @@ const I18N = (() => {
       waitStill: 'Noch nicht — bitte später noch einmal.',
       waitOpen: 'Ein Platz ist frei! Geben Sie jetzt Ihren Code ein.',
 
+      writePlaceholder: 'Schreiben Sie hier Ihren Brief …',
+      checksTitle: 'Schnellprüfung',
+      chkWords: '{n} von mindestens {min} Wörtern',
+      chkGreeting: 'Anrede am Anfang',
+      chkClosing: 'Gruß am Ende',
+      chkPointsHint: 'Haken Sie ab, was Sie schon geschrieben haben:',
+
       welcome: 'Willkommen 👋',
       homeIntro: 'Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile ' +
                  'der schriftlichen Prüfung {level} — mit der echten Prüfungszeit.',
@@ -201,6 +208,13 @@ const I18N = (() => {
       waitCheck: 'في مطرح فاضي؟',
       waitStill: 'لسا — جرّب بعد شوي.',
       waitOpen: 'صار في مطرح! أدخل رمزك هلق.',
+
+      writePlaceholder: 'اكتب رسالتك هون …',
+      checksTitle: 'فحص سريع',
+      chkWords: '{n} من {min} كلمة على الأقل',
+      chkGreeting: 'في تحية بالبداية',
+      chkClosing: 'في سلام بالنهاية',
+      chkPointsHint: 'شطّب على يلي كتبته:',
 
       welcome: 'أهلاً 👋',
       homeIntro: 'اختر نموذج امتحان. كل نموذج فيه أقسام الامتحان التحريري ' +
@@ -363,6 +377,13 @@ const I18N = (() => {
       waitCheck: 'Є вільне місце?',
       waitStill: 'Ще ні — спробуйте пізніше.',
       waitOpen: 'Місце звільнилося! Введіть свій код зараз.',
+
+      writePlaceholder: 'Напишіть свій лист тут …',
+      checksTitle: 'Швидка перевірка',
+      chkWords: '{n} із щонайменше {min} слів',
+      chkGreeting: 'Звертання на початку',
+      chkClosing: 'Прощання наприкінці',
+      chkPointsHint: 'Позначте те, що вже написали:',
 
       welcome: 'Вітаємо 👋',
       homeIntro: 'Оберіть пробний тест. Кожен тест містить частини письмового ' +

@@ -180,6 +180,24 @@ select:focus,textarea:focus{outline:0; border-color:var(--brand)}
 textarea{min-height:230px; line-height:1.8; direction:ltr; text-align:left}
 .counter{font-size:.83em; color:var(--muted); margin-top:6px}
 
+/* ---- Schnellprüfung beim Brief ----
+   Zählbares steht oben und aktualisiert sich beim Tippen. Die Leitpunkte
+   stehen darunter als Haken — ob ein Punkt wirklich bearbeitet ist, kann
+   nur der Schreibende beurteilen, also behauptet die App es nicht. */
+.checks{margin-top:10px; border:1px solid var(--line); border-radius:12px;
+  padding:12px 14px; background:var(--card)}
+.checks h3{margin:0 0 8px; font-size:.95em}
+.checks ul{list-style:none; margin:0; padding:0}
+.checks li{display:flex; gap:8px; align-items:flex-start; padding:3px 0;
+  font-size:.92em; color:var(--muted)}
+.checks li.ok{color:var(--ok)}
+.checks .mark{flex:none; width:1.1em; font-weight:700}
+.checks .sub{margin:10px 0 4px; font-size:.86em}
+.checks .pts li{color:var(--ink)}
+.checks .pts label{display:flex; gap:8px; align-items:flex-start; cursor:pointer}
+.checks .pts input{margin:2px 0 0; width:18px; height:18px; flex:none;
+  accent-color:var(--brand)}
+
 /* حقل الكود: كبير، بالنص، وLTR دايماً — حتى بواجهة عربية الكود لاتيني */
 .codeinput{
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;

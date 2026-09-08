@@ -707,6 +707,53 @@ await page.evaluate(() => {
   if (b) b.click();
 });
 await page.waitForTimeout(400);
+
+// ---- ★ الفحوص السريعة: بلا ذكاء اصطناعي، بلا مصاري، وما بتغلط ----
+await page.waitForSelector('.checks');
+check('صندوق الفحص السريع ظهر تحت حقل الكتابة',
+      await page.locator('.checks').isVisible());
+const chk0 = await page.locator('.checks li').allTextContents();
+check(`★ التلاتة كلهن مو محقّقين بالبداية (${chk0.length})`,
+      (await page.locator('.checks li.ok').count()) === 0);
+
+// نص ناقص: في تحية، بس بلا سلام وبلا عدد كلمات
+await page.evaluate(() => {
+  const ta = document.querySelector('[data-txt]');
+  ta.value = 'Liebe Anna, danke fuer deinen Brief.';
+  ta.dispatchEvent(new Event('input', { bubbles: true }));
+});
+await page.waitForTimeout(200);
+const okTxt = await page.locator('.checks li.ok').allTextContents();
+check(`★ التحية انمسكت لحالها (${okTxt.join(' | ')})`,
+      okTxt.length === 1 && /Anrede/.test(okTxt[0]));
+
+// نص كامل: تحية وسلام وطول كافي
+await page.evaluate(() => {
+  const ta = document.querySelector('[data-txt]');
+  ta.value = 'Liebe Anna, ' + 'danke fuer deinen Brief. '.repeat(45)
+           + ' Viele Gruesse, Ahmad';
+  ta.dispatchEvent(new Event('input', { bubbles: true }));
+});
+await page.waitForTimeout(200);
+check(`★ ومع نص كامل التلاتة بيصيروا خضر`,
+      (await page.locator('.checks li.ok').count()) === 3);
+
+// ★ الليتبونكته: قائمة الطالب بيشطب عليها — التطبيق ما بيدّعي إنه فاهم
+const pts = await page.locator('.checks .pts input').count();
+check(`★ الليتبونكته معروضة للشطب مو محكوم عليها (${pts})`, pts >= 3);
+await page.evaluate(() => document.querySelector('.checks .pts input').click());
+await page.waitForTimeout(150);
+check('★ والشطب بينحفظ بالحالة',
+      await page.evaluate(() => {
+        const k = Object.keys(S.checks)[0];
+        return !!(k && S.checks[k] && S.checks[k][0]);
+      }));
+
+// ★ الإملاء متروك للمتصفّح: lang=de بيخلّيه يسطّر الألماني الغلط
+check('★ حقل الكتابة معلّم ألماني للمدقّق الإملائي',
+      await page.getAttribute('[data-txt]', 'lang') === 'de'
+      && await page.getAttribute('[data-txt]', 'spellcheck') === 'true');
+
 await page.evaluate(() => {
   const it = runItems(S.run)[0];
   S.answers[it.id] = 'Liebe Anna, danke fuer deinen Brief. Ich moechte gern kommen.';

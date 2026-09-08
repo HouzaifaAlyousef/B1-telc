@@ -13,6 +13,7 @@ const S = {
   run: null,        // laufender Durchgang: ein Teil oder ein ganzer Prüfungsteil
   answers: {},      // { itemId: Antwort }
   dropped: {},      // { itemId: [früher gewählte Buchstaben] } — werden durchgestrichen
+  checks: {},       // { itemId: [Leitpunkt abgehakt?] } — Selbstkontrolle beim Brief
   tick: null,       // Timer
   left: 0,          // verbleibende Sekunden
   view: 'home',
@@ -778,6 +779,48 @@ addEventListener('scroll', () => {
 const shortTitle = t => t.replace('Leseverstehen', 'LV').replace('Sprachbausteine', 'SB')
                          .replace('Hörverstehen', 'HV').replace(', Teil ', ' ');
 
+/* ★ فحوص سريعة بلا ذكاء اصطناعي.
+   هدول أشياء بينفحصوا بالعدّ والمطابقة، ما بدهن حكم: عدد الكلمات،
+   في تحية بالأول، في سلام بالآخر. مجانية، فورية، وما بتغلط.
+
+   يلي **ما** منحطّه هون: هل النقاط الأربعة انكتبت فعلاً. هاد بده فهم
+   للنص، ومطابقة كلمات بتعطي جواب غلط بثقة — فمنعرضهن كقائمة الطالب
+   بيشطب عليها بإيده. صادقة أكتر من تخمين ملبّس.
+
+   والإملاء متروك للمتصفّح: lang="de" على الحقل بيخلّي المدقّق يسطّر
+   الكلمات الغلط وهو عم يكتب. مجاني ومبني بالمتصفّح. */
+const GREET = /^\s*(liebe[rs]?\b|hallo\b|hi\b|sehr\s+geehrte[rs]?\b|guten\s+(tag|morgen|abend)\b)/i;
+const CLOSE = /(viele|liebe|herzliche|beste|freundliche)\s+gr(ü|ue)(ß|ss)e|mit\s+freundlichen\s+gr(ü|ue)(ß|ss)en|bis\s+bald|tsch(ü|ue)ss|dein[e]?\b|ihr[e]?\b/i;
+
+const wordCount = s => String(s || '').trim().split(/\s+/).filter(Boolean).length;
+
+function checksHTML(it, text){
+  const n    = wordCount(text);
+  const min  = it.minWords || 100;
+  const body = String(text || '');
+  const tail = body.slice(-140);          // السلام بيكون بالآخر، مو بأي مطرح
+  const pts  = it.points || [];
+  const done = (S.checks && S.checks[it.id]) || [];
+
+  const row = (ok, label) => `<li class="${ok ? 'ok' : ''}">
+    <span class="mark">${ok ? '✓' : '○'}</span>${esc(label)}</li>`;
+
+  return `<div class="checks">
+    <h3>${esc(t('checksTitle'))}</h3>
+    <ul>
+      ${row(n >= min, t('chkWords', { n, min }))}
+      ${row(GREET.test(body), t('chkGreeting'))}
+      ${row(CLOSE.test(tail), t('chkClosing'))}
+    </ul>
+    ${pts.length ? `<p class="sub">${esc(t('chkPointsHint'))}</p>
+      <ul class="pts">
+        ${pts.map((p, i) => `<li>
+          <label><input type="checkbox" data-pt="${esc(it.id)}|${i}"
+            ${done[i] ? 'checked' : ''}> ${esc(p)}</label></li>`).join('')}
+      </ul>` : ''}
+  </div>`;
+}
+
 function renderBrief(sec){
   const b = sec.brief, it = sec.items[0];
   return `
@@ -889,10 +932,10 @@ function renderItem(sec, it){
 
   if (sec.format === 'writing'){
     const draft = S.answers[it.id] || '';
-    const n = draft.trim().split(/\s+/).filter(Boolean).length;
     return `<div class="q" id="q_${esc(it.id)}">
-      <textarea data-txt="${esc(it.id)}" placeholder="Schreiben Sie hier Ihren Brief …">${esc(draft)}</textarea>
-      <div class="counter" id="wc_${esc(it.id)}">${n} Wörter (mindestens ${it.minWords || 100})</div>
+      <textarea data-txt="${esc(it.id)}" lang="de" spellcheck="true"
+        placeholder="${esc(t('writePlaceholder'))}">${esc(draft)}</textarea>
+      <div id="chk_${esc(it.id)}">${checksHTML(it, draft)}</div>
     </div>`;
   }
   if (sec.format === 'mc' || sec.format === 'truefalse'){
@@ -984,11 +1027,32 @@ function bindInputs(sec){
       const id = ta.dataset.txt;
       S.answers[id] = ta.value;
       markPart(sec.id);
-      const n = ta.value.trim().split(/\s+/).filter(Boolean).length;
-      const c = document.getElementById('wc_' + id);
-      const min = sec.items.find(x => x.id === id).minWords || 100;
-      if (c){ c.textContent = `${n} Wörter (mindestens ${min})`; c.style.color = n >= min ? 'var(--ok)' : 'var(--muted)'; }
+      redrawChecks(sec, id);
       updateProgress();
+    };
+  });
+
+  /* شطب نقطة من الليتبونكته */
+  scope.querySelectorAll('[data-pt]').forEach(cb => {
+    cb.onchange = () => {
+      const [id, i] = cb.dataset.pt.split('|');
+      S.checks[id] = S.checks[id] || [];
+      S.checks[id][Number(i)] = cb.checked;
+    };
+  });
+}
+
+/* بنعيد رسم صندوق الفحوص بس — مو الحقل، وإلا بيضيع مكان المؤشّر */
+function redrawChecks(sec, id){
+  const box = document.getElementById('chk_' + id);
+  const it  = sec.items.find(x => x.id === id);
+  if (!box || !it) return;
+  box.innerHTML = checksHTML(it, S.answers[id] || '');
+  box.querySelectorAll('[data-pt]').forEach(cb => {
+    cb.onchange = () => {
+      const [iid, i] = cb.dataset.pt.split('|');
+      S.checks[iid] = S.checks[iid] || [];
+      S.checks[iid][Number(i)] = cb.checked;
     };
   });
 }
