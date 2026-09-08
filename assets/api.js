@@ -119,6 +119,10 @@ const API = (() => {
     });
   }
 
+  /* وضع الطالب بقائمة الانتظار. بينسأل عند الإقلاع وبكل تحديث للشاشة:
+     الطالب ما لازم يعيد إدخال كوده تا يعرف إذا إجا دوره. */
+  const waitlist = () => rpc('waitlist_status');
+
   /* الاشتراكات السارية — بيتفحصوا عند كل إقلاع.
      كل كود بيعمل اشتراك لمستواه، فالطالب يلي اشترى A1 وبعدين B1 بيصير
      عنده اتنين. لازم نجمعهن كلهن: جلب واحد بس كان بيخفي المستوى التاني
@@ -314,7 +318,7 @@ const API = (() => {
   }
 
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
-           redeem, subscription, levels, myLevels, index, catalog, test, resources, imageUrl, audioUrl,
+           redeem, waitlist, subscription, levels, myLevels, index, catalog, test, resources, imageUrl, audioUrl,
            submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
            correctWriting, writingFeedback,
            signOut: () => storeSession(null),

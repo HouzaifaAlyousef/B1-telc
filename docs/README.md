@@ -27,6 +27,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 16 | [Audio](16-audio.md) | Hörverstehen playback, and what is still missing |
 | 17 | [Deployment record](17-deployment-record.md) | What is actually deployed where, and how to redo it |
 | 18 | [Telegram bot](18-telegram-bot.md) | Demo codes handed out automatically, and why it can't hand out more |
+| 19 | [Capacity](19-capacity.md) | The waiting list, and what each extra user actually costs |
 
 > Tests, how to run them, and the twelve bugs they found: [../TESTING.md](../TESTING.md)
 

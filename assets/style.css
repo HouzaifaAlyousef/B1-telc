@@ -391,6 +391,17 @@ body.paused main{filter:blur(7px); pointer-events:none; user-select:none}
 
 .btn.wide{width:100%; justify-content:center; min-height:54px}
 
+/* ---- Warteliste ----
+   Die Nummer ist der Punkt: "Platz 47" sagt, dass da noch andere sind.
+   Deshalb steht sie groß und allein, nicht in einem Satz versteckt. */
+.queue{text-align:center; padding:26px 16px}
+.qnum{
+  font-size:3.4em; font-weight:800; line-height:1;
+  color:var(--brand); font-variant-numeric:tabular-nums;
+}
+.qlabel{margin:8px 0 0; font-weight:700; font-size:1.05em}
+.queue .sub{margin:6px 0 0}
+
 /* Arabisch läuft von rechts nach links. Die Pfeile zeigen sonst in die
    falsche Richtung, und Ränder sitzen auf der falschen Seite. */
 [dir="rtl"] .chev{transform:scaleX(-1)}

@@ -58,7 +58,22 @@ page.on('pageerror', e => { console.log('  ✗ JS-Fehler:', e.message); results.
 
 // نحقن API مزيّف قبل ما يشتغل app.js
 await page.addInitScript(fx => {
-  const state = { redeemed: false, mistakes: [], mastered: 0, fb: null };
+  /* ★ الطابور بينحفظ بين الفتحات.
+     الخادم الحقيقي بيتذكّر مين بالطابور، فالمزيّف لازم يتذكّر كمان —
+     وإلا فحص «بعد إعادة الفتح بيرجع لمكانه» بيفحص نسيان المزيّف، مو
+     سلوك التطبيق. */
+  const WK = 'mock.wait';
+  const wsaved = (() => { try { return JSON.parse(localStorage.getItem(WK)) || {}; }
+                          catch { return {}; } })();
+  const state = { redeemed: false, mistakes: [], mastered: 0, fb: null,
+                  // قائمة الانتظار: full = ما في مطرح، pos = دوره
+                  full: !!wsaved.full, waiting: !!wsaved.waiting,
+                  pos: wsaved.pos || 0, total: wsaved.total || 0 };
+  const wsave = () => { try { localStorage.setItem(WK, JSON.stringify(
+    { full: state.full, waiting: state.waiting, pos: state.pos, total: state.total })); }
+    catch {} };
+  window.__state = state;
+  window.__wsave = wsave;
   const items = fx.sections.flatMap(s => s.items.map(i => ({ ...i, sec: s })));
 
   const shape = () => ({
@@ -129,10 +144,20 @@ await page.addInitScript(fx => {
            body:'## Verben\n\nfahren, fliegen, ankommen\n\n## Nomen\n\nder Zug, das Gleis' }]
       : [],
     // متل code_norm بالخادم: الشرطات والمسافات والحالة ما بتفرق
-    redeem: async code =>
-      String(code).toUpperCase().replace(/[^A-Z0-9]/g, '') === 'B14827519366'
-        ? (state.redeemed = true, { ok: true, levels: ['b1'] })
-        : { ok: false, error: 'invalid_code' },
+    redeem: async code => {
+      if (String(code).toUpperCase().replace(/[^A-Z0-9]/g, '') !== 'B14827519366')
+        return { ok: false, error: 'invalid_code' };
+      // ★ الزحمة: الكود صحيح، بس ما في مطرح — بينحطّ بالطابور والكود بيضل ساري
+      if (state.full){
+        state.waiting = true; state.pos = 3; state.total = 5; wsave();
+        return { ok: false, error: 'waitlist', position: 3, total: 5 };
+      }
+      state.waiting = false; state.redeemed = true; wsave();
+      return { ok: true, levels: ['b1'] };
+    },
+    waitlist: async () => state.waiting
+      ? { waiting: true, position: state.pos, total: state.total, open: !state.full }
+      : { waiting: false },
     index: async (lvl) => lvl !== 'b1' ? { modelle: [] } : ({ modelle: [{ id: fx.test.slug, uuid: fx.test.id,
       title: fx.test.title, subtitle: fx.test.subtitle,
       blocks: fx.test.blocks, aufgaben: 61,
@@ -232,6 +257,44 @@ check('★ وعنوان الشاشة والزرّ كمان',
       && !arErr.includes('Freischalten'));
 await page.evaluate(() => { I18N.setLang('de'); screenCode(); });
 await page.waitForSelector('#code');
+
+// ---- ٢د) ★ قائمة الانتظار ----
+// الزحمة ما بتخسّر الطالب كوده: بينحطّ بالطابور، وبيشوف رقمه، والكود
+// بيضل ساري. الرقم هو المقصود — «إنت رقم ٣» بيقول إنّ في ناس غيره.
+await page.evaluate(() => { window.__state.full = true; window.__wsave(); });
+await page.fill('#code', 'B14827519366');
+await page.evaluate(() => document.getElementById('godo').click());
+await page.waitForSelector('.queue', { timeout: 5000 });
+check('★ الزحمة بتوديه لشاشة الانتظار مو لرسالة خطأ',
+      await page.locator('.queue').isVisible());
+check(`★ ورقمه كبير وواضح (${await page.textContent('.qnum')})`,
+      (await page.textContent('.qnum')).trim() === '3');
+check('★ وبيقول إنّ كوده باقي ساري',
+      /gültig/.test(await page.textContent('#app')));
+check('★ وما بيطلب منه الكود من جديد',
+      await page.locator('#code').count() === 0);
+
+// الزرّ بيسأل الخادم، ما بيخلّيه يعيد الإدخال
+await page.evaluate(() => document.getElementById('wchk').click());
+await page.waitForTimeout(400);
+check('★ «في مطرح؟» وهو مليان: بيضل بالانتظار',
+      await page.locator('.queue').count() === 1);
+
+// ★ الإقلاع بيرجّعه لمكانه، ما بيرجّعه لشاشة الكود.
+//   منندي boot() مباشرةً مو page.reload(): عامل الخدمة بيخدم api.js
+//   الحقيقي من ذاكرته بعد إعادة التحميل، فالمزيّف بينتخطّى والفحص
+//   بيصير على الكود الحقيقي بلا خادم.
+await page.evaluate(() => boot());
+await page.waitForSelector('.queue', { timeout: 5000 });
+check('★ وبعد إعادة الفتح بيرجع لشاشة الانتظار، مو لشاشة الكود',
+      await page.locator('.queue').isVisible());
+
+// فتح مطرح ← الزرّ بيوديه لشاشة الكود
+await page.evaluate(() => { window.__state.full = false; window.__wsave(); });
+await page.evaluate(() => document.getElementById('wchk').click());
+await page.waitForSelector('#code', { timeout: 5000 });
+check('★ أول ما يفضى مطرح بيوديه يدخّل كوده',
+      /frei/.test(await page.textContent('#app')));
 
 // ---- ٣) كود صح — ملصوق مع فراغات متل ما بينلصق من واتساب ----
 await page.fill('#code', ' B1 4827 5193 66 ');

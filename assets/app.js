@@ -214,7 +214,13 @@ async function boot(){
     S.sub = API.hasSession() ? await API.subscription() : null;
   } catch { S.sub = null; }
 
-  if (!S.sub) return screenCode();
+  if (!S.sub){
+    // بالطابور؟ منرجّعه لمكانه بدل ما نطلب منه كوده من جديد
+    let w = null;
+    try { w = API.hasSession() ? await API.waitlist() : null; } catch {}
+    if (w && w.waiting && !w.open) return screenWait(w.position, w.total);
+    return screenCode(w && w.waiting && w.open ? t('waitOpen') : undefined);
+  }
 
   try { S.levels = await API.myLevels(S.sub); } catch { S.levels = []; }
   // die zuletzt gewählte Stufe merken, sonst die erste des Abos
@@ -229,6 +235,42 @@ async function boot(){
   }
   S.catalog = await loadCatalog(S.level);
   screenHome();
+}
+
+/* ★ قائمة الانتظار.
+   الكود ما بينستهلك — بيضل ساري لصاحبه — فالطالب ما بيخسر شي، بس
+   بيستنى دوره. ومنقول له رقمه: «إنت رقم ٤٧» بتقول إنّ في ناس غيره،
+   وهاد بيشتغل لصالحنا أكتر من أي إعلان.
+
+   وما منخلّيه يعيد إدخال الكود تا يعرف: زرّ واحد بيسأل الخادم. */
+function screenWait(pos, total){
+  stopTimer();
+  go('wait', () => {
+    elBack.hidden = true;
+    app.innerHTML = `
+      ${setbarHTML()}
+      <h1>${esc(t('waitTitle'))}</h1>
+      <div class="card queue">
+        <div class="qnum">${esc(String(pos ?? '—'))}</div>
+        <p class="qlabel">${esc(t('waitPos', { n: pos }))}</p>
+        ${total > 1 ? `<p class="sub">${esc(plural(total, 'nWaiting'))}</p>` : ''}
+      </div>
+      <p class="sub">${esc(t('waitHint'))}</p>
+      <button class="btn wide" id="wchk">${esc(t('waitCheck'))}</button>`;
+
+    wireSetbar();
+    const b = document.getElementById('wchk');
+    b.onclick = async () => {
+      b.disabled = true; b.textContent = t('codeChecking');
+      let st = null;
+      try { st = await API.waitlist(); } catch {}
+      b.disabled = false; b.textContent = t('waitCheck');
+      if (!st || !st.waiting) return boot();      // دوره إجا أو خرج من الطابور
+      if (st.open) return screenCode(t('waitOpen'));
+      screenWait(st.position, st.total);
+      toast(t('waitStill'));
+    };
+  });
 }
 
 /* Zugang per Code — es gibt keine E-Mail und kein Passwort. */
@@ -273,6 +315,8 @@ function screenCode(msg){
       catch { r = { ok: false, error: 'network' }; }
       btn.disabled = false; btn.textContent = t('codeButton');
       if (r && r.ok) return boot();
+      // مو خطأ: الكود صحيح وباقي ساري، بس ما في مطرح هلق
+      if (r && r.error === 'waitlist') return screenWait(r.position, r.total);
       if (r && r.error === 'too_many_attempts'){
         const m = Math.ceil((r.retry_after || 900) / 60);
         return screenCode(t('codeErrTooMany', { t: I18N.plural(m, 'nMinute') }));

@@ -121,7 +121,7 @@ const STUD_ID  = 'bbbbbbbb-0000-0000-0000-000000000002';
   const have = Number(sql('select schema_version();') || 0);
   const fns  = sql(`select count(*) from pg_proc
                      where proname in ('admin_assets','code_norm');`);
-  if (have < 22 || fns !== '2'){
+  if (have < 23 || fns !== '2'){
     console.log(`\n✗ القاعدة ناقصة (schema_version=${have}, دوال=${fns}/2).`);
     console.log('  شغّل: sudo -E ./supabase/tests/run.sh');
     process.exit(2);
@@ -230,6 +230,33 @@ try {
 
   const logged = sql(`select count(*) from admin_audit_log where action='sub.extend';`);
   check(`الإجراء انسجّل بالتدقيق (${logged})`, Number(logged) >= 1);
+
+  // ---- قائمة الانتظار ----
+  // رقمين بيحدّوا الحمل، وصفر = بلا حدّ. الأهم إنّ الكود ما بينستهلك
+  // لما يوصل الطالب بوقت زحمة — هاد مفحوص بالقاعدة (13_waitlist).
+  await page.evaluate(() => document.querySelector('[data-tab="home"]').click());
+  await page.waitForSelector('#l_act', { timeout: 8000 });
+  check('★ شريط الطاقة ظاهر بالرئيسية',
+        /Warteliste/.test(await page.textContent('#app')));
+  await page.fill('#l_act', '2');
+  await page.fill('#l_day', '7');
+  await page.evaluate(() => document.getElementById('l_save').click());
+  await page.waitForTimeout(900);
+  check('★ الحدّ انحفظ بقاعدة البيانات',
+        sql('select max_active || \'/\' || max_new_per_day from app_limits;') === '2/7');
+  check('★ واللوحة بتعرضه بعد الحفظ',
+        (await page.inputValue('#l_act')) === '2'
+        && (await page.inputValue('#l_day')) === '7');
+  check('★ وبتقول كم مطرح مشغول',
+        /aktive Nutzer/.test(await page.textContent('#app')));
+
+  // منرجّعها بلا حدّ تا ما نكسّر باقي الفحوص
+  await page.fill('#l_act', '0');
+  await page.fill('#l_day', '0');
+  await page.evaluate(() => document.getElementById('l_save').click());
+  await page.waitForTimeout(900);
+  check('وبيرجع بلا حدّ',
+        sql('select max_active || \'/\' || max_new_per_day from app_limits;') === '0/0');
 
   // ---- الأكواد ----
   await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
@@ -602,7 +629,7 @@ try {
     check('★ شريط «القاعدة ورا» ظهر',
           /Datenbank ist \d+ Migration/.test(banner) && /setup\.sql/.test(banner));
     check(`★ وبيقول كم ترحيل ناقص`,
-          /Stand 12/.test(banner) && /gebraucht 22/.test(banner));
+          /Stand 12/.test(banner) && /gebraucht 23/.test(banner));
     await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
     await page.waitForTimeout(900);
     check('★ وبيطلع بالشاشات التانية كمان',

@@ -162,9 +162,11 @@ function screenLogin(err){
 /* ============ الأقسام ============ */
 async function screenHome(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
-  const [o, act] = await Promise.all([
+  const [o, act, cap, queue] = await Promise.all([
     rpc('admin_overview'),
-    rpc('admin_redeem_activity').catch(() => null)
+    rpc('admin_redeem_activity').catch(() => null),
+    rpc('admin_limits').catch(() => null),
+    rpc('admin_waitlist').catch(() => [])
   ]);
   const stat = (n, label, cls = '') =>
     `<div class="stat ${cls}"><b>${n}</b><span>${esc(label)}</span></div>`;
@@ -195,6 +197,8 @@ async function screenHome(){
         <span>gerade gesperrt</span></div>` : ''}
     </div>` : ''}
 
+    ${cap ? capBlock(cap, queue) : ''}
+
     <h2>Prüfungen</h2>
     <div class="card"><div class="wrap"><table>
       <tr><th>Anbieter</th><th>Stufe</th><th>Titel</th><th>Status</th></tr>
@@ -204,6 +208,72 @@ async function screenHome(){
         <td><span class="pill ${l.published ? 'ok' : ''}">${l.published ? 'online' : 'versteckt'}</span></td>
       </tr>`).join('') || '<tr><td colspan="4" class="empty">Keine Prüfungen</td></tr>'}
     </table></div></div>`;
+
+  if (cap) wireCap();
+}
+
+/* ---- Warteliste: zwei Zahlen, und was sie gerade bewirken ----
+   0 heißt "kein Limit". Beide Zahlen bremsen dieselbe Sache von zwei
+   Seiten: `max_active` deckelt, wie viele gleichzeitig drin sind,
+   `max_new_per_day` glättet den Ansturm eines einzelnen Tages. */
+function capBlock(c, queue){
+  const full = (n, max) => max > 0 && n >= max;
+  const bar = (n, max, label) => `
+    <div class="stat ${full(n, max) ? 'warn' : ''}">
+      <b>${n}${max > 0 ? ` / ${max}` : ''}</b><span>${esc(label)}</span></div>`;
+
+  return `
+    <h2>Warteliste</h2>
+    <p class="sub" style="margin-bottom:10px">Ist das Limit erreicht, landen
+      neue Nutzer auf der Warteliste und sehen ihren Platz. <b>Ihr Code wird
+      dabei nicht verbraucht</b> — er bleibt gültig, bis ein Platz frei ist.
+      <br>0 bedeutet: kein Limit.</p>
+
+    <div class="stats">
+      ${bar(c.active, c.max_active, 'aktive Nutzer')}
+      ${bar(c.today, c.max_new_per_day, 'neu heute')}
+      <div class="stat ${c.waiting > 0 ? 'warn' : ''}">
+        <b>${c.waiting}</b><span>warten</span></div>
+    </div>
+
+    <div class="card"><div class="row">
+      <label>Aktive Nutzer max.<input id="l_act" type="number" min="0" max="100000"
+        value="${Number(c.max_active) || 0}"></label>
+      <label>Neue pro Tag max.<input id="l_day" type="number" min="0" max="100000"
+        value="${Number(c.max_new_per_day) || 0}"></label>
+      <button class="btn" id="l_save">Speichern</button>
+    </div></div>
+
+    ${(queue || []).length ? `<div class="card"><div class="wrap"><table>
+      <tr><th>#</th><th>Name</th><th>Code</th><th>Stufe</th><th>wartet seit</th><th></th></tr>
+      ${queue.map(w => `<tr>
+        <td><b>${w.position}</b></td>
+        <td>${esc(w.name || 'ohne Namen')}</td>
+        <td class="mono">${esc(fmtCode(w.code))}</td>
+        <td class="mono">${esc((w.levels || []).join(', '))}</td>
+        <td>${fmtDT(w.created_at)}</td>
+        <td><button class="btn sm grey" data-inv="${esc(w.user_id)}"
+              title="Von der Warteliste nehmen — der Nutzer löst dann seinen Code selbst ein"
+              >durchlassen</button></td>
+      </tr>`).join('')}
+    </table></div></div>` : ''}`;
+}
+
+function wireCap(){
+  const el = id => document.getElementById(id);   // $c ist lokal in screenCodes
+  const save = el('l_save');
+  if (save) save.onclick = async e => {
+    await act(e.target, () => rpc('admin_limits', {
+      p_max_active:      Number(el('l_act').value) || 0,
+      p_max_new_per_day: Number(el('l_day').value) || 0
+    }), 'Limit gespeichert');
+    screenHome();
+  };
+  app.querySelectorAll('[data-inv]').forEach(b => b.onclick = async () => {
+    await act(b, () => rpc('admin_waitlist_invite', { p_user: b.dataset.inv }),
+              'Durchgelassen');
+    screenHome();
+  });
 }
 
 let userSearch = '';
@@ -1016,7 +1086,7 @@ const STALE_MSG = '⚠ Die Datenbank ist noch nicht aktualisiert — bitte '
    بتفشل بصمت بطريقتها، وولا وحدة بتقول السبب. الرقم بيخلّي اللوحة تقوله.
 
    لما يتضاف ترحيل: يزيد الرقم هون وبـ0019_version.sql. */
-const SCHEMA_MIN = 22;
+const SCHEMA_MIN = 23;
 let schemaHave = null;      // null = لسا ما انفحص
 
 async function checkSchema(){

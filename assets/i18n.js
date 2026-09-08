@@ -46,6 +46,16 @@ const I18N = (() => {
       codeErrNetwork: 'Keine Verbindung. Bitte später versuchen.',
       codeErrOther: 'Der Code konnte nicht eingelöst werden.',
 
+      waitTitle: 'Sie stehen auf der Warteliste',
+      waitPos: 'Platz {n}',
+      nWaiting: { one: '{n} Person wartet', other: '{n} Personen warten' },
+      waitHint: 'Ihr Code bleibt gültig — er wurde nicht verbraucht. '
+              + 'Sobald ein Platz frei wird, können Sie ihn einlösen. '
+              + 'Schauen Sie später noch einmal vorbei.',
+      waitCheck: 'Ist ein Platz frei?',
+      waitStill: 'Noch nicht — bitte später noch einmal.',
+      waitOpen: 'Ein Platz ist frei! Geben Sie jetzt Ihren Code ein.',
+
       welcome: 'Willkommen 👋',
       homeIntro: 'Wählen Sie einen Modelltest. Jeder Test hat die Prüfungsteile ' +
                  'der schriftlichen Prüfung {level} — mit der echten Prüfungszeit.',
@@ -180,6 +190,17 @@ const I18N = (() => {
       codeErrDevices: 'وصلت لأقصى عدد أجهزة.',
       codeErrNetwork: 'ما في اتصال. جرّب بعد شوي.',
       codeErrOther: 'ما قدرنا نفعّل الرمز.',
+
+      waitTitle: 'إنت بقائمة الانتظار',
+      waitPos: 'دورك رقم {n}',
+      nWaiting: { zero: 'ما في حدا مستني', one: 'في واحد مستني',
+                  two: 'في اتنين مستنيين', few: '{n} مستنيين',
+                  many: '{n} مستني', other: '{n} مستني' },
+      waitHint: 'رمزك باقي ساري — ما انستهلك. أول ما يفضى مطرح بتقدر '
+              + 'تفعّله. مرّ علينا بعدين.',
+      waitCheck: 'في مطرح فاضي؟',
+      waitStill: 'لسا — جرّب بعد شوي.',
+      waitOpen: 'صار في مطرح! أدخل رمزك هلق.',
 
       welcome: 'أهلاً 👋',
       homeIntro: 'اختر نموذج امتحان. كل نموذج فيه أقسام الامتحان التحريري ' +
@@ -331,6 +352,17 @@ const I18N = (() => {
       codeErrDevices: 'Досягнуто максимальну кількість пристроїв.',
       codeErrNetwork: 'Немає зв’язку. Спробуйте пізніше.',
       codeErrOther: 'Код не вдалося активувати.',
+
+      waitTitle: 'Ви у списку очікування',
+      waitPos: 'Місце {n}',
+      nWaiting: { one: '{n} людина чекає', few: '{n} людини чекають',
+                  many: '{n} людей чекають', other: '{n} людей чекають' },
+      waitHint: 'Ваш код залишається дійсним — його не використано. '
+              + 'Щойно звільниться місце, ви зможете його активувати. '
+              + 'Зазирніть пізніше.',
+      waitCheck: 'Є вільне місце?',
+      waitStill: 'Ще ні — спробуйте пізніше.',
+      waitOpen: 'Місце звільнилося! Введіть свій код зараз.',
 
       welcome: 'Вітаємо 👋',
       homeIntro: 'Оберіть пробний тест. Кожен тест містить частини письмового ' +
