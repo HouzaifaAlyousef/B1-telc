@@ -27,6 +27,14 @@ bot to full access — that stays in the admin panel, with you.
 Coming back gives the **same** code again, not a new one. Someone who lost
 the message finds it; someone farming codes gets nothing.
 
+## Before you point this at real students
+
+The bot hands out practice material at whatever rate people ask for it.
+That makes it the point where distribution stops being a handful of codes
+you sent yourself. The content licence question in
+[10-commercialisation.md](10-commercialisation.md) is parked until the app
+is ready — it should be settled before this bot is public, not after.
+
 ## Setup — once, about ten minutes
 
 ### 1. Create the bot

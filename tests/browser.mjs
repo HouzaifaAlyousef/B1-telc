@@ -250,14 +250,27 @@ const bk = await page.evaluate(() => {
   const b = document.getElementById('btnBack');
   if (!b || b.offsetParent === null) return null;
   const st = getComputedStyle(b);
-  return { h: b.getBoundingClientRect().height,
+  const r  = b.getBoundingClientRect();
+  const bar = document.querySelector('.bottombar');
+  return { h: r.height, w: r.width, top: r.top,
            border: parseFloat(st.borderTopWidth),
-           bg: st.backgroundColor };
+           bg: st.backgroundColor,
+           transform: st.transform,
+           page: document.querySelector('main').getBoundingClientRect().width,
+           inHeader: !!b.closest('.topbar'),
+           barTop: bar ? bar.getBoundingClientRect().top : null };
 });
 check(`★ زرّ الرجوع ظاهر كزرّ (ارتفاع ${bk && Math.round(bk.h)}, إطار ${
         bk && bk.border})`,
       !!bk && bk.h >= 44 && bk.border > 0
       && bk.bg !== 'rgba(0, 0, 0, 0)' && bk.bg !== 'transparent');
+// ★ تحت وبعرض الصفحة، مو بالشريط العلوي: هناك كان صغير وبين الاسم
+//   والساعة، والمستخدم ما كان يلاقيه.
+check('★ وطلع من الشريط العلوي', !!bk && !bk.inHeader);
+check(`★ وبعرض الصفحة (${bk && Math.round(bk.w)} من ${bk && Math.round(bk.page)})`,
+      !!bk && bk.w >= bk.page - 40);
+// (الفحص إنه ما بينختفي تحت شريط «سلّم» بيصير جوّا الامتحان — هون
+//  لسا ما في شريط، فالفحص هون بيمرق بلا ما يفحص شي)
 
 // ---- ٥) ★ الحلول مو موجودة بالمتصفّح قبل التسليم ----
 const leaked = await page.evaluate(() => {
@@ -313,6 +326,24 @@ await page.locator('.keys .key').first().click();
 await page.waitForTimeout(250);
 const w = await page.evaluate(() => document.getElementById('progfill').style.width);
 check(`★ وبيتحرّك مع الإجابة (${w})`, w && parseFloat(w) > 0);
+
+// ★ زرّ الرجوع ما بينختفي تحت شريط «سلّم» الثابت.
+// الشريط position:fixed، فبلا مسافة تحت الصفحة بيغطّي الزرّ بالضبط
+// بالشاشة يلي المستخدم بده يرجع منها.
+const cover = await page.evaluate(() => {
+  const b = document.getElementById('btnBack');
+  const bar = document.querySelector('.bottombar');
+  if (!b || !bar || b.offsetParent === null) return null;
+  // آخر الصفحة: هون بينحطّ الزرّ، ولازم تكون المسافة تحته كافية
+  // تا يوقف فوق الشريط الثابت
+  window.scrollTo(0, document.body.scrollHeight);
+  const r = b.getBoundingClientRect(), br = bar.getBoundingClientRect();
+  return { bottom: r.bottom, barTop: br.top,
+           pad: getComputedStyle(b.parentElement).paddingBottom };
+});
+check(`★ وقت الامتحان: زرّ الرجوع فوق شريط التسليم مو تحته (مسافة ${
+        cover && cover.pad})`,
+      !!cover && cover.bottom <= cover.barTop + 1);
 
 // ---- ٦ج) تحذير قبل التسليم ----
 // الوقت محدود والزرّ كبير — التسليم بالغلط بيصير.
@@ -420,13 +451,17 @@ check(`★ ولا زرّ أصغر من ٤٤ بكسل${small.length ? ' — ' + s
 
 check('اللغات التلاتة أزرار مو قائمة',
       await page.locator('[data-lang]').count() === 3);
-check('والمظهر تلات خيارات',
-      await page.locator('[data-theme]').count() === 3);
+// ★ زرّين بس: ☀ و🌙. «متل الجهاز» ضل السلوك الافتراضي بلا زرّ —
+//   تلات خيارات لمظهر بتخلّي القرار أصعب مما يستاهل.
+check(`والمظهر زرّين (${(await page.locator('[data-theme]').allTextContents()).join(' ')})`,
+      await page.locator('[data-theme]').count() === 2);
+check('★ وما ضل زرّ «متل الجهاز»',
+      await page.locator('[data-theme="system"]').count() === 0);
 // ★ علم مو اسم لغة: الاسم بالألماني ما بيساعد مين ما بيقرا الألماني
 const flags = await page.locator('[data-lang]').allTextContents();
 check(`★ الأزرار أعلام مو أسامي (${flags.join(' ')})`,
-      flags.includes('🇩🇪') && flags.includes('🇺🇦')
-      && !flags.some(f => /Deutsch|Українська/.test(f)));
+      flags.includes('🇩🇪') && flags.includes('🇺🇦') && flags.includes('🇸🇦')
+      && !flags.some(f => /Deutsch|Українська|العربية/.test(f)));
 
 // --- المظهر ---
 await page.evaluate(() => document.querySelector('[data-theme="dark"]').click());
@@ -434,10 +469,15 @@ await page.waitForTimeout(300);
 check('★ الوضع الغامق بيشتغل',
       await page.getAttribute('html', 'data-theme') === 'dark');
 check('وبينحفظ', await page.evaluate(() => localStorage.getItem('b1.theme')) === '"dark"');
-await page.evaluate(() => document.querySelector('[data-theme="system"]').click());
+await page.evaluate(() => document.querySelector('[data-theme="light"]').click());
 await page.waitForTimeout(300);
-check('★ و«متل الجهاز» بيشيل السمة الصريحة',
-      await page.getAttribute('html', 'data-theme') === null);
+check('★ والفاتح بيرجّعه',
+      await page.getAttribute('html', 'data-theme') === 'light');
+// ★ المعلّم هو المظهر يلي شايفه فعلاً — حتى لما الاختيار جاي من الجهاز
+await page.evaluate(() => { localStorage.removeItem('b1.theme'); screenHome(); });
+await page.waitForTimeout(300);
+check('★ بلا اختيار محفوظ: بيعلّم يلي شايفه فعلاً، ما بيترك الاتنين بلا علامة',
+      await page.locator('[data-theme].on').count() === 1);
 
 // --- حجم الخط ---
 const fs0 = await page.evaluate(() =>

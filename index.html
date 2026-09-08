@@ -17,7 +17,6 @@
 <body>
 
 <header class="topbar">
-  <button id="btnBack" class="icon-btn" hidden></button>
   <div class="brand">telc <span>B1</span></div>
   <div id="timer" class="timer" hidden><span id="timerText">00:00</span></div>
   <!-- الإعدادات (لغة، مظهر، حجم خط) بترويسة الصفحة الرئيسية، مو هون:
@@ -26,6 +25,11 @@
 </header>
 
 <main id="app"></main>
+
+<!-- ★ زرّ الرجوع تحت، عريض. بالشريط العلوي كان صغير وبيزاحم الاسم
+     والساعة، والمستخدم ما كان يلاقيه. تحت هو آخر شي بالصفحة، بعرضها
+     كلها — ومكانه نفس مكان «سلّم» و«ابدأ»، فالإصبع أصلاً هناك. -->
+<div class="backbar"><button id="btnBack" class="icon-btn" hidden></button></div>
 
 <div id="toast" class="toast" hidden></div>
 

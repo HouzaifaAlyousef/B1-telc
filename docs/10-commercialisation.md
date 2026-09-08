@@ -16,6 +16,19 @@ have**, and **a backend**. The third is the easiest of the three.
 
 ## The blocking issue: content licensing
 
+> **Deferred by the owner, on purpose — not forgotten.**
+> Decided 2026-09-07: the app still needs work, so licensing is parked until
+> it is ready to launch. That is a reasonable order — the licence costs money
+> and the app is not earning yet.
+>
+> **The trigger is the first euro, not the first user.** Building, testing and
+> showing it to a handful of students is one thing; charging for access, or
+> handing out codes at scale through the Telegram bot, is what turns this into
+> a commercial use of someone else's material. Re-read this page before the
+> app takes a payment or the bot goes public.
+>
+> Anything below marked *blocking* is still blocking.
+
 `Doku/B1 Telc.pdf` is a scan of published telc practice material. The build
 pipeline itself carries the evidence — `tools/telcpdf.py:9` strips a third
 party's watermark out of the page footer:

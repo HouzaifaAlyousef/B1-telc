@@ -11,12 +11,10 @@
 const I18N = (() => {
 
   /* العلم بيتعرف من بعيد وبلا قراءة — وهاد المطلوب من منتقي لغة: مين
-     ما بيقرا الألماني لازم يلاقي لغته بلا ما يقرا شي.
-     العربي ما إله علم: هي لغة عشرين بلد، وأي علم منختاره بيقصي الباقي.
-     فبيوقف حرف «ع» مكانه — بينقرا من أي عربي وما بينسب اللغة لبلد. */
+     ما بيقرا الألماني لازم يلاقي لغته بلا ما يقرا شي. */
   const LANGS = [
     { id: 'de', name: 'Deutsch',    flag: '🇩🇪', dir: 'ltr' },
-    { id: 'ar', name: 'العربية',    flag: 'ع',  dir: 'rtl' },
+    { id: 'ar', name: 'العربية',    flag: '🇸🇦', dir: 'rtl' },
     { id: 'uk', name: 'Українська', flag: '🇺🇦', dir: 'ltr' }
   ];
 
@@ -137,7 +135,6 @@ const I18N = (() => {
       taskHead: 'Aufgabe',
 
       settings: 'Einstellungen',
-      themeSystem: 'Wie das Gerät',
       themeLight: 'Hell',
       themeDark: 'Dunkel',
       smaller: 'Kleiner',
@@ -278,7 +275,6 @@ const I18N = (() => {
       taskHead: 'السؤال',
 
       settings: 'الإعدادات',
-      themeSystem: 'متل الجهاز',
       themeLight: 'فاتح',
       themeDark: 'غامق',
       smaller: 'أصغر',
@@ -428,7 +424,6 @@ const I18N = (() => {
       taskHead: 'Завдання',
 
       settings: 'Налаштування',
-      themeSystem: 'Як на пристрої',
       themeLight: 'Світлий',
       themeDark: 'Темний',
       smaller: 'Менше',

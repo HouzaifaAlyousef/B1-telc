@@ -98,7 +98,12 @@ function go(view, fn){
 
    الواجهة بس بتنترجم: محتوى الامتحان بيضل ألماني، لأن قراءة التعليمة
    الألمانية جزء من الاختبار. */
-const THEMES = ['system', 'light', 'dark'];
+/* ★ زرّين بس بالواجهة: ☀ و🌙.
+   «متل الجهاز» ضل شغّال كسلوك — مين ما لمس شي، التطبيق بيتبع إعداد
+   جهازه — بس ما عاد إله زرّ: تلات خيارات لمظهر بتخلّي القرار أصعب مما
+   يستاهل، والزرّ التالت (🖥) ما بيقول شي لمين مو متعوّد على التقنية.
+   المعلّم هو المظهر يلي شايفه فعلاً، حتى لو جاي من إعداد الجهاز. */
+const THEMES = ['light', 'dark'];
 const SIZES  = [0.9, 1, 1.15, 1.35];      // مضروب بحجم الخط الأساسي
 
 function applyLook(){
@@ -116,12 +121,19 @@ function applyLook(){
    الزرّ كان بيفتح شاشة لحالها: يعني ضغطتين وخروج من الصفحة تا يكبّر
    الخط أو يبدّل لغته. ومين ما بيقرا الألماني ما كان يعرف إنّ ⚙ تعني
    إعدادات أصلاً. هلق الأعلام والأزرار ظاهرة أول ما يفتح التطبيق. */
-function setbarHTML(){
+/* المظهر المعروض حالياً — سواء انختار بالإيد أو إجا من الجهاز */
+function shownTheme(){
   const th = load('b1.theme', 'system');
+  if (th === 'light' || th === 'dark') return th;
+  return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function setbarHTML(){
+  const th = shownTheme();
   let sz = load('b1.size', 1);
   if (!SIZES.includes(sz)) sz = 1;
   const i = SIZES.indexOf(sz);
-  const ic = { system: '🖥', light: '☀', dark: '🌙' };
+  const ic = { light: '☀', dark: '🌙' };
 
   return `<div class="setbar" role="group" aria-label="${esc(t('settings'))}">
     <div class="setgrp">
@@ -131,8 +143,8 @@ function setbarHTML(){
     </div>
     <div class="setgrp">
       ${THEMES.map(x => `<button class="chip${x === th ? ' on' : ''}"
-        data-theme="${esc(x)}" title="${esc(t(x === 'system' ? 'themeSystem'
-          : x === 'light' ? 'themeLight' : 'themeDark'))}">${ic[x]}</button>`).join('')}
+        data-theme="${esc(x)}" title="${esc(t(x === 'light' ? 'themeLight' : 'themeDark'))
+        }">${ic[x]}</button>`).join('')}
     </div>
     <div class="setgrp">
       <button class="chip" data-size="-" ${i === 0 ? 'disabled' : ''}
