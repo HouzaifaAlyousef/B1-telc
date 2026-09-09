@@ -47,7 +47,9 @@ In Telegram, message [@BotFather](https://t.me/BotFather):
 
 Give it a name and a username. BotFather replies with a token that looks
 like `8123456789:AAH...`. **That token is a password** — it never goes in
-git, in a chat, or in a file in this repo.
+git, in a chat, or in a file in this repo. Type it straight into the
+terminal in step 3. A token pasted into a file and committed has to be
+replaced, even if the push was blocked.
 
 Optional but worth it, still in BotFather:
 
