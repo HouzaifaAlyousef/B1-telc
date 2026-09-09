@@ -1,0 +1,434 @@
+# IRIS1
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Zufriedenheit im Job schützt vor Stress
+B = Erfolgreiche Männer können auch gute Väter sein
+C = Keiner lacht so fröhlich wie der Weihnachtsmann
+D = Wie Männer und Frauen lachen
+E = Weniger Arbeit weniger Stress
+F = Schlechte Nachrichten? Sagen Sie es mit einem Lächeln
+G = Der Beruf ist für Männer wichtiger als die Familie
+H = Auch ältere Menschen leiden unter Stress
+I = Frauen reagieren besser auf schlechte Nachrichten als Männer
+J = Mit 70 Jahren macht das Leben am meistens Spaß
+Aufgaben:
+[1] Frauen lachen auf viele Arten Sie kichern glucksen und manchmal singen sie fast Bei Männern dagegen kommt das viel seltener vor. Aber gemeinsam ist Männern und Frauen, dass sie in Vokalen lachen die im Mundzentrum gebildet werden. Und das ist entscheidend: Nur wenn die Vokale im Mundzentrum gebildet werden, ist das Lachen für uns fröhlich und positiv. Damit ist bewiesen, dass das Lachen vom Weihnachtsmann, dass wie eine tiefes Ho, ho, ho klingt. Kaum als fröhlich empfunden wird. Denn dieser Laut wird im hinteren Teil des Mundraums gebildet. (aus einer deutschen Zeitung)
+Lösung: D
+[2] Viel Arbeit, viel Stress. Wer viel arbeitet muss nicht unbedingt gestresst sein. Frauen in medizinischen Berufen zum Beispiel klagen trotz teilweise hoher Belastung deutlich weniger über stressbedingte Krankheiten als Raumpflegerinnen, Kindergärtnerinnen oder Berufsschullehrerinnen. Dies zeigt eine Untersuchung des Hamburger IPO Instituts, das für eine Studie 1000 Frauen und Männer befragt hat. Vor Stress schützen laut Studie ein angenehmes Betriebsklima, ein gutes Verhältnis zur Chefin oder zum Chef und die Möglichkeit, die eigene Arbeit selbstständig zu planen. (aus einer deutschen Zeitung)
+Lösung: A
+[3] Ein neues Buch zeigt, wie Männer Fähigkeiten aus dem Arbeitsleben auf die Erziehung übertragen können und so zu erfolgreichen Vätern werden. Da wird die gemeinsame Kindererziehung zur Partnerarbeit (oder sogar zum Joint Venture) geschicktes Verhandeln heißt, das Kind zu überzeugen, dass sie Zähne geputzt werden müssen, und der Familienurlaub hat alle Qualitäten einer Tagung oder eines Seminars: Man erhält die Gelegenheit, die Kinder intensiv zu studieren. (aus einer deutschen Zeitung)
+Lösung: B
+[4] Eine Studie der Universität Essex hat ergeben dass wir mit siebzig Jahren am glücklichsten sind. Zwar haben die meisten Menschen in diesem Alter gesundheitliche Probleme, aber dafür genießen sie viel Freizeit und haben keinen Stress mehr. Deshalb macht ihnen das Leben so viel Spaß wie nie zuvor. Die Studie besagt auch, dass wir einen ersten Höhepunkt der Lebensfreude mit fünfzehn Jahren erreichen. Danach geht es bergab zwischen dreißig und fünfzig Jahren tragen wir am meisten Verantwortung das Leben ist geprägt von Sachzwängen. (aus einer deutschen Zeitung)
+Lösung: J
+[5] Warum bleiben manche Managerinnen erfolgreich, obwohl sie Nachrichten mitteilen, die ihr Publikum lieber nicht hören möchte? Ganz einfach: Sie verkaufen die schlechte Nachricht mit Humor. Ein Londoner Soziologe hat während einer Studie beobachtet, dass gerade bei Reden unangenehmen Inhalts oft heiter gelacht wird. Das Lachen wird bewusst provoziert, etwa durch bestimmte Wörter oder durch ein eigenes breites Lächeln. Die fröhliche Stimmung soll dafür sorgen, dass die Zuhörenden das Gefühl haben würden mehr wissen als alle anderen. (aus einer deutschen Zeitung)
+Lösung: F
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Informationsverhaltungen sind wichtige Grundlagen für die Berufswahl**
+Die Entscheidung, welchen Beruf man erlernen will, ist nicht leicht. Große) Firmen bieten spezielle Information
+Veranstaltung für Schülerinnen und Schüler an. Wir haben einen Info Nachmittag der Bank Credit Suisse in Bern
+beucht und uns danach bei den Jugendlichen umgehört.
+20 Schülerinnen und Schüler kann Irene Leiser um Punkt 13 Uhr zu diesem Info Nachmittag Begrüßen. Die jugendlichen kommen aus dem ganzen Kanton Bern und haben sich vorher bei der Bank angemeldet. Viermal im
+Frühling und zwei weitere Male im August werden diese Info Veranstaltungen bei der Credit Suisse durchgeführt. Sie
+richten sich vor allem an Schülerinnen und Schüler aus der 8. Klasse. Irene Leiser hat gute Erfahrungen mit diesen
+Veranstaltungen gemacht die Jugendlichen können danach ihre Erwartungen an den Beruf und die Ausbildung an die
+Realität anpassen.
+Im ersten Teil des Nachmittags erklärt Frau Leiser die Hauptaufgaben einer Bank und stellt die Firma vor. Danach treten
+die Lehrlinge in Aktion: Daniel Sommer und Linda Schmidt sind im Zweiten Lehrjahre und erzählen aus ihrem
+Berufsalltag. Dieser Teil gefällt den Schülerinnen und Schülern besonders gut.
+Die Jugendlichen identifizieren sich mit den Lehrringe und sehen, wo sie selber in zwei Jahren beruflich stehen könnten.
+Das fasziniert sehr zum Schluss folge Informationen darüber, welche Voraussetzungen man mitbringen muss und wie
+man sich bewirbt. Um 16:30 Uhr schließt Frau Leiser die Veranstaltung. Sie ist zufrieden mit dem Nachmittag. Die
+Gruppe war sehr aufmerksam. Interessierten Schülerinnen und Schüler gibt sie folgenden Tipp: Gehen Sie auch noch zu
+anderen Firmen. Fragen Sie dort möglichst viele Lehrlinge und Mitarbeiter nach ihren Erfahrungen Wir haben danach
+eine Schülerin und einen Schüler befragt wie sie den Nachmittag erlebt haben:
+Tugba Kaptan aus Biel, 8. Klasse
+Mich fasziniert das Umfeld einer Bank. Ich hätte mehr Leute bei der Arbeit sehen wollen zum Beispiel am Schalter. Aber
+der Tag hat mir weiter geholfen. Ich habe viele Dinge erfahren die ich bis her nicht gewusst habe. Solche Nachmittag ist
+ideal weil da schulfrei ist.
+Alan Blank aus Mühleberg,8. Klasse
+Die Bank ist eigentlich mein Traumbiet und bietet mir nach der Lehre viele Entscheidungsmöglichkeiten. Ich habe mich
+umgeschaut und mich über viele Beruf informiert. Jetzt weiß ich, dass ich eine Lehre in diesem Bereich machen will. Ich
+suche nach der optimalen Lehrestelle. Eine Großbank wäre toll für mich. Dieser Nachmittag hat mir gefallen. Alles war
+sehr gut organisiert. Ich kann solche Veranstaltungen nur empfehlen . Was mir persönlich gefehlt hat, ist eine Führung
+durch den Betrieb. Es ist wichtig zu sehen, wie das alles genau vor sich geht.
+Aufgaben:
+[6] Um Berufe kennenzulernen,
+A) arbeiten Berner Schüler in den Ferien bei großen Firmen.
+B) nehmen Berner Schüler an Informationsveranstaltungen von großen Firmen teil.
+C) sollen Berner Schüler zweimal jährlich ein Praktikum machen.
+Lösung: B
+[7] Frau Leiser
+A) erzählt aus ihrem Berufsalltag in der Bank.
+B) stellt die wichtigsten Aufgaben der Bank vor.
+C) zeigt den Jugendlichen die ganze Firma.
+Lösung: B
+[8] An dem Informationsnachmittag
+A) bekamen die Jugendlichen eine Liste mit Bewerbungstipps.
+B) war die Gruppe interessiert und hat gut zugehört.
+C) wurden viele Fragen gestellt.
+Lösung: B
+[9] Tugba Kaptan
+A) fand es gut, dass sie am Schalter arbeiten durfte.
+B) fand es schade, dass an diesem Nachmittag die Schule ausgefallen ist.
+C) hat viele Informationen bekommen.
+Lösung: C
+[10] Alan Blank
+A) möchte später gern bei einer Bank arbeiten.
+B) möchte viele Dinge besser nicht selbst entscheiden.
+C) weiß noch nicht, was er machen will.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m08-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Ihre Freund wollen einen Sprachkurs in Spanien machen und ihre Kinder mitnehmen.
+Lösung: B
+[12] Ihr Auto ist kaputt und Sie brauchen jemanden, der es repariert.
+Lösung: D
+[13] Sie wollen mit einem Videoprogramm Deutsch lernen.
+Lösung: X
+[14] Sie wollen Ihrer Kursleiterin eine Kursabschlussreise vorschlagen.
+Lösung: C
+[15] Ihr Fernseher ist kaputt. Sie wollen ihn reparieren lassen.
+Lösung: F
+[16] Eine Bekannte hat eine neue Wohnung. Sie möchten ihr etwas für die Küche schenken.
+Lösung: H
+[17] Sie suchen ein Geschenk für ein 6- jähriges Kind.
+Lösung: G
+[18] Ihr Kind ist krank. Sie suchen einen Kinderarzt.
+Lösung: X
+[19] Ihre Tante ist operiert worden. Jetzt ist sie wieder zu Hause und braucht spezielles Essen.
+Lösung: L
+[20] Sie haben sich beim Tennis den Fuß verletzt und brauchen einen Arzt.
+Lösung: I
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Schwarzenbek, den
+…….. Liebe Maria, danke vielmals für die Einladung. Nächste Woche werde ich also (21) dir in Berlin sein. Ich freue mich schon sehr (22) , denn schließlich haben wir uns fast ein (23) Jahr nicht gesehen. Wie du ja weißt, wohne ich jetzt auf dem Land hier in der Nähe von Hamburg und das finde ich ganz toll. (24) ich würde gern auch mal wieder in eine richtige Disko gehen. Mal wieder eine ganze Nascht tanzen, das (25) mein Traum! Und zu zwei macht es viel (26) Spaß!
+Weißt du eigentlich, ob die Disko am Wittenberger Platz (27) existiert? Leider habe ich noch keine Ahnung, (28) ich in Berlin ankommen werde. Jedenfalls (29) ich versuchen, eine Mitfahrgelegenheit zu finden. Es gibt ja im Internet die Mitfahrzentrale, (30) so etwas organisiert. Also mache dir keine Sorgen, wenn ich etwas später komme! Ich freue mich sehr auf dich! Alexandra
+Aufgaben:
+[21] … vielmals für die Einladung. Nächste Woche werde ich also (21) dir in Berlin sein. Ich freue mich schon sehr (22) , denn …
+A) bei
+B) nach
+C) zu
+Lösung: A
+[22] … also (21) dir in Berlin sein. Ich freue mich schon sehr (22) , denn schließlich haben wir uns fast ein (23) Jahr nicht …
+A) darauf
+B) darum
+C) dazu
+Lösung: A
+[23] … schon sehr (22) , denn schließlich haben wir uns fast ein (23) Jahr nicht gesehen. Wie du ja weißt, wohne ich jetzt auf …
+A) halbe
+B) halben
+C) halbes
+Lösung: C
+[24] … hier in der Nähe von Hamburg und das finde ich ganz toll. (24) ich würde gern auch mal wieder in eine richtige Disko …
+A) Aber
+B) Sondern
+C) Trotzdem
+Lösung: A
+[25] … Disko gehen. Mal wieder eine ganze Nascht tanzen, das (25) mein Traum! Und zu zwei macht es viel (26) Spaß! Weißt du …
+A) hätte
+B) wäre
+C) würde
+Lösung: B
+[26] … tanzen, das (25) mein Traum! Und zu zwei macht es viel (26) Spaß! Weißt du eigentlich, ob die Disko am Wittenberger …
+A) am meisten
+B) ganz
+C) mehr
+Lösung: C
+[27] … Weißt du eigentlich, ob die Disko am Wittenberger Platz (27) existiert? Leider habe ich noch keine Ahnung, (28) ich in …
+A) auch
+B) noch
+C) nur
+Lösung: B
+[28] … Platz (27) existiert? Leider habe ich noch keine Ahnung, (28) ich in Berlin ankommen werde. Jedenfalls (29) ich …
+A) als
+B) wann
+C) wenn
+Lösung: B
+[29] … Ahnung, (28) ich in Berlin ankommen werde. Jedenfalls (29) ich versuchen, eine Mitfahrgelegenheit zu finden. Es gibt …
+A) darf
+B) soll
+C) will
+Lösung: C
+[30] … zu finden. Es gibt ja im Internet die Mitfahrzentrale, (30) so etwas organisiert. Also mache dir keine Sorgen, wenn …
+A) das
+B) die
+C) der
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+Frankfurter Allianz Bahnstr. 99 Max Kühne
+Tel.: 069-951670 Frankfurt, den
+…….
+Neuer Berater für Ihre Versicherungen Sehr geehrter Herr Frankel, wir möchten Sie darüber informieren, (31) Ihre Versicherungen künftig von Herrn Max Kühne bearbeitet werden. Ihm wurden (32) Unterlagen übergeben.
+Alle Kundendaten (33) selbstverständlich streng vertraulich behandelt. Wenn Sie also (34) zu Ihren Versicherungen haben, wenden Sie sich in Zukunft bitte an Herrn Kühne. Er berät und (35) Sie gern. Auch im Schadensfall (36) er Ihnen schnell und zuverlässig weiter. Im Übrigen möchten wir uns (37) einen Fehler in unserer letzten Beitragsrechnung entschuldigen. Leider ist (38) die Adresse von Herrn Kühne nicht korrekt. Seine (39) Anschrift und Telefonnummer finden Sie auf diesem Brief oben rechts.
+Wir danken (40) für Ihr Vertrauen.
+Mit freundlichen Grüßen Ihre Frankfurter Allianz
+Auswahl:
+A = ANTWORTEN
+B = AUF
+C = DASS
+D = DORT
+E = FRAGEN
+F = FÜR
+G = HABEN
+H = HILFT
+I = IHNEN
+J = IHRE
+K = INFORMIERT
+L = OB
+M = RICHTIGE
+N = WERDEN
+O = ZU
+Aufgaben:
+[31] … Herr Frankel, wir möchten Sie darüber informieren, (31) Ihre Versicherungen künftig von Herrn Max Kühne …
+Erklärung: Das Wort lautet: DASS
+Lösung: C
+[32] … künftig von Herrn Max Kühne bearbeitet werden. Ihm wurden (32) Unterlagen übergeben. Alle Kundendaten (33) …
+Erklärung: Das Wort lautet: IHRE
+Lösung: J
+[33] … Ihm wurden (32) Unterlagen übergeben. Alle Kundendaten (33) selbstverständlich streng vertraulich behandelt. Wenn Sie …
+Erklärung: Das Wort lautet: WERDEN
+Lösung: N
+[34] … streng vertraulich behandelt. Wenn Sie also (34) zu Ihren Versicherungen haben, wenden Sie sich in Zukunft …
+Erklärung: Das Wort lautet: FRAGEN
+Lösung: E
+[35] … Sie sich in Zukunft bitte an Herrn Kühne. Er berät und (35) Sie gern. Auch im Schadensfall (36) er Ihnen schnell und …
+Erklärung: Das Wort lautet: INFORMIERT
+Lösung: K
+[36] … Kühne. Er berät und (35) Sie gern. Auch im Schadensfall (36) er Ihnen schnell und zuverlässig weiter. Im Übrigen …
+Erklärung: Das Wort lautet: HILFT
+Lösung: H
+[37] … und zuverlässig weiter. Im Übrigen möchten wir uns (37) einen Fehler in unserer letzten Beitragsrechnung …
+Erklärung: Das Wort lautet: FÜR
+Lösung: F
+[38] … letzten Beitragsrechnung entschuldigen. Leider ist (38) die Adresse von Herrn Kühne nicht korrekt. Seine (39) …
+Erklärung: Das Wort lautet: DORT
+Lösung: D
+[39] … ist (38) die Adresse von Herrn Kühne nicht korrekt. Seine (39) Anschrift und Telefonnummer finden Sie auf diesem Brief …
+Erklärung: Das Wort lautet: RICHTIGE
+Lösung: M
+[40] … finden Sie auf diesem Brief oben rechts. Wir danken (40) für Ihr Vertrauen. Mit freundlichen Grüßen Ihre …
+Erklärung: Das Wort lautet: IHNEN
+Lösung: I
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Für die Sprechen ist es unwichtig, ob ihre Kinder in der Schule gut sind.
+Lösung: falsch
+[42] Der Sprecher findet es wichtig, dass Eltern immer für ihre Kinder da sind.
+Lösung: richtig
+[43] Die Sprecherin glaubt, dass sie mehr mit ihrer Tochter sprechen müsste.
+Lösung: falsch
+[44] Es ist dem Sprecher wichtig, dass seine Kinder gesund leben.
+Lösung: richtig
+[45] Der Sprecher möchte, dass sein Kind die eigenen Ideen realisieren kann.
+Lösung: richtig
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Viele Touristen besuchen Torgau wegen seiner historischen Sehenswürdigkeiten.
+Lösung: richtig
+[47] Den Spielpark Hartenfels gibt es schon seit vielen Jahren.
+Lösung: falsch
+[48] Außer dem Spielpark gibt es in der Umgebung viele andere Freizeitmöglichkeiten für die Kinder.
+Lösung: falsch
+[49] Der Spielpark bietet den Kindern Spielmöglichkeiten, die sie zu Hause nicht haben.
+Lösung: richtig
+[50] Die Kinder können im Spielpark auch selbst etwas bauen.
+Lösung: richtig
+[51] Das Spielen am Back kann für die Kinder gefährlich werden.
+Lösung: falsch
+[52] Beide Elternteile müssen auf die Kinder aufpassen.
+Lösung: falsch
+[53] Im Spielpark können Kinder bis zum Alter von sieben von Aufsichtspersonen betreut werden.
+Lösung: falsch
+[54] Der Eintritt in den Spielpark ist zurzeit frei.
+Lösung: richtig
+[55] Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Die Linie 2 fährt zum Hauptbahnhof.
+Lösung: falsch
+[57] Das Hallenbad schließt heute um 21:00 Uhr.
+Lösung: richtig
+[58] Sie können mit der S1 nach Hütteldorf fahren.
+Lösung: falsch
+[59] Badezimmerspiegel finden Sie im Untergeschoss.
+Lösung: richtig
+[60] Sie können gleich in Richtung Eilenburg umsteigen.
+Lösung: richtig
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie Ihrer Bekannten. Schreiben Sie etwas zu allen vier Punkten: Reaktion auf die Prüfung
+Extra:
+{
+ "brief": {
+  "intro": "Eine Bekannte hat Ihnen den folgende E-Mail geschrieben:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "endlich habe ich die Deutscheprüfung hinter mir. Ich glaube, es ist gut gelaufen. Jetzt soll für unseren Kurs eine Party organisieren. Du hast doch kürzlich erzählt, dass Du für Euren Kurs auch ein Abschlussfest organsiert hast. Sicher kannst du mir ein paar Tipps geben. Ich habe mir gedacht, wir könnten vielleicht in einem Restaurant feiern .Da kann jeder essen und trinken, was er will . Was meinst Du? Essen zu kochen ist doch ziemlich viel Arbeit. und natürlich brauchen wir Musik. Welche Musik ist am besten geeignet? Was schlägst Du vor?",
+   "Melde Dich bald.",
+   "Ich freue mich schon auf deine Antwort.",
+   "Liebe Grüße"
+  ],
+  "signature": "Iris"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie Ihrer Bekannten. Schreiben Sie etwas zu allen vier Punkten: Reaktion auf die Prüfung
+Mindestwörter: 100
+Punkt: Wo feiern? Restaurant- Ihre Meinung
+Punkt: Welche Musik
+Punkt: Urlaubpläne

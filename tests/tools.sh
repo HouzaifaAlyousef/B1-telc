@@ -87,7 +87,16 @@ check "★ وبيمسك نصّ امتحان مدسوس بمجلّد تاني" $?
 
 # ---------- مجلّد المحتوى ----------
 node tools/check_content.mjs >/dev/null 2>&1
-check "فحص content/ بيمرق (كل النماذج فاضية لسا)" $?
+check "فحص content/ بيمرق" $?
+
+# ★ نصوص telc B1 مولّدة من data/ — لو حدا عدّل وحدة بلا التانية بينكشف
+node tools/sync_b1_content.mjs --check >/dev/null 2>&1
+check "★ content/telc/b1 مطابق لـdata/ (ما نسيت تعيدي التوليد)" $?
+
+# وكل الـ١٦ لازم يكونوا معبّيين فعلاً، مو فاضيين
+N=$(node tools/check_content.mjs telc/b1 2>/dev/null | grep -c '✓ telc/b1')
+[ "$N" = 16 ]
+check "★ الـ١٦ نموذج موجودين ومقروئين ($N)" $?
 
 # ★ نصّ مكسور لازم يفشل الفحص، وإلا الفحص بلا فايدة
 mkdir -p "$TMP/ctest/telc/zz/modell-01"

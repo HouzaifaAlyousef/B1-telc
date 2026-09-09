@@ -45,6 +45,26 @@ at a character offset. The text format is line-based: a broken line breaks
 one question, and the parser tells you which. You can read it and fix it by
 eye, which matters when the content came out of an AI.
 
+## telc B1 is already in there — and it is generated
+
+The 16 existing B1 Modelltests live in `content/telc/b1/`, with their
+Leseverstehen-3 images alongside them. You did not have to type them: they
+are produced from `data/*.json` by
+
+```bash
+node tools/sync_b1_content.mjs
+```
+
+**`data/` stays the source for B1.** Not for tidiness — because the SQL
+seeder (`tools/export_sql.py`) is Python and the markup parser is
+JavaScript. Making `content/` the source for B1 would mean a second parser
+in Python, and two parsers drift apart silently.
+
+So B1's `text.txt` files are generated files, like `vorlagen.js` and
+`setup.sql`. Edit `data/`, re-run the command, and a test catches you if you
+forget. **Every other level is authored in `content/` directly** — those have
+no other source.
+
 ## Filling a folder
 
 1. Open the level's `_vorlage.txt` and copy the whole thing.

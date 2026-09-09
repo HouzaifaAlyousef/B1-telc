@@ -1,0 +1,413 @@
+# PETRA
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Angebot für Reisende: Für wenig Geld öffentliche Verkehrsmittel benutzen
+B = Bildband: Babys im Garten
+C = Ein Schüler mit vielen Ideen
+D = Früh übt sich: Hotels bieten Skikurse für Zweijährige an
+E = Handbuch für Hobby-Fotografen
+F = Neu: Mit dem Taxi gratis zur Disco
+G = Neu: Taxi Tickest für Discobesucher
+H = Schulkinder schreiben spannende Geschichten
+I = Skikurs für Eltern und Kinder
+J = Straßenbahn und Bus im Flugticket enthalten
+Aufgaben:
+[1] Ich möchte, dass Menschen, die meine Fotos gesehen haben, von nun an die Welt mit anderen Augen betrachten. Das könnte der neuseeländischen Fotografin Anne Geddes gelingen. Denn die Bilder, die sie für das Buch. Drunten im Garten von den kleinen Menschenkindern gemacht hat, sind ungewöhnlich und wunderschön: Babys auf Blumen, Blättern, Beeren, verkleidet als Morcheln, Melonen oder Marienkäfer, Babys in Tulpen und als Schmetterlinge. Ein Bildband, angereichert mit poetischen Texten und Ratschlägen.
+Lösung: B
+[2] Die meisten Skikurse für Kinder beginnen im Alter von vier Jahren. Im Kärntner Baby Dorf Trebesing ist das anders: Hier werden im Windel Wedel Camp bereits Kleinkinder ab zwei Jahren unterrichtet. Täglich zwei Stunden können die Skihaserin unter fachkundiger Anleitung auf einem flachen Hügel erste Geh- bzw. Fahrversuche auf zwei Brettern machen. Nach einigen Tagen Übung geht es dann mit dem Baby Bus ins Skigebiet Innerkrems. Auch Ginas Baby und Kinderhotel am Fiaker See bietet seinen jüngsten Gästen Skikurse. Fast 1000 Knirpse haben in der Windelschule schon Skifahren gelernt. Auskunft: Tourismusverband Leiser Malta Tal und die Kinderhotels
+Lösung: D
+[3] Berlins jüngster Schriftsteller hat deutlich mehr Texte verfasst als er Jahre zählt. Rund 50 Gedichte und Erzählungen tippte Daniel Story. 12, schon in seiner Computer. Ich schreibe fast, seitdem es mich gibt, sagt der Sechstklässler Bereits mit sieben dichtete er die ersten Verse, jetzt mit zwölf ist er stolz auf seine erste Autorenlesung. Wenn Freunde Fußball spielen, tobt Daniels Phantasie im Kinderzimmer. Warum er lieber schreibt? Daniel: Ich schreibe, weil ich nicht alles erleben kann, was ich denke.
+Lösung: C
+[4] Ob Sie privat oder geschäftlich unterwegs sind, mit dem Stadt Ticket können Sie billig die öffentlichen Verkehrsmittel nutzen. Voraussetzung: Sie sind mit dem Flugzeug oder der Deutschen Bahn(über 100 km) angereist. Gegen einen Aufpreis von nur Euro 2,50 ermöglicht Ihnen das Stadt Ticket auch nach der Ankunft am Zielort freie Fahrt. Mit U- S- oder Straßenbahnen sowie Bussen. Bis zu 48 Stunden. Übrigens: Ihr Stadt Ticket gilt an zwei aufeinanderfolgenden Tagen, die Sie beim Kauf Ihres Fahrscheines selbst bestimmen.
+Lösung: A
+[5] In Mecklenburg-Vorpommern können junge Leute jetzt für den halben Fahrpreis mit dem Taxi auf Discotour gehen. Tickets dafür sind bei allen Geschäftsstellen der Allgemeinen Ortskrankenkasse (AOK) sowie an Esso Tankstellen zum halben Preis erhältlich. Junge Leute zwischen 16 und 25 Jahren können sie an Wochenenden und Feiertagen in der Zeit von 20 Uhr bis morgens 6 Uhr benutzen. Die Taxifahrer erhalten bei ihrer Zentrale dann den vollen Fahrpreis erstattet.
+Lösung: G
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Leipzigerin geht in den USA auf Sendung**
+**Drei Monate Praktikum für junge Sachsen im Land der unbegrenzten Möglichkeiten**
+Manchmal fühle ich mich wie ein Missionar, scherzt Ulrike Rudelt. Das Bild vom Deutschen, der Lederhosen trägt, Bier trinkt und Sauerkraut isst, hält sich ihrer Meinung nach in der Öffentlichkeit Amerikas ganz stark und wird vor allem in der Fernsehwerbung ständig wiederholt. Dagegen kämpfe ich, sagt die 25- Jährige selbstbewusst, die derzeit ein dreimonatiges Praktikum am Institute of International Studies in Kalifornien absolviert und so oft es geht über die Heimat erzählt.
+An der Uni in Monterey darf die Leipziger Studentin neben dem Hospitieren auch selbst unterrichten. Das Interesse der Studenten und Dozenten an der deutschen Sprache, an Geschichte und Gegenwart Deutschlands ist große. Richtig in Fahrt kommt Ulrike, wenn es um den Mauerfall geht und darum, wie sich der Osten nach der Wende entwickelt hat. Die Chancen, die ich jetzt habe, hatten meine Eltern nicht, sagt sie. So ging sie nach dem Studium als Au Pair-Mädchen nach England und machte im Rahmen studentischer Austauschprogramme bereits Praktika in den USA und den Niederlanden.
+Einen Vorgeschmack vom. American Way of Life gab es bereits während des einwöchigen Einführungsseminars in New York, schwärmt Cornelia Schiemenz. Die Stadt pulsiert, und wir hatten jede Menge Spaß. Auf dem Programm standen Ausflüge, und dazu hörten sie jede Menge vor träge zum Welthandel, Kampf gegen Arbeitslosigkeit, zur wirtschaftlichen Entwicklung der USA und Kriminalitätsbekämpfung. In Denver, wo die Studentin für Kommunikations-und Medienwissenschaft die Arbeit eines Tv- Senders kennen lernt, steht sie nach einigen Tagen selbst vor der Kamera und darf Beiträge für den Sender produzieren ich bin absolut glücklich, sagt die 23 jährige.
+Antje Kutzer, die dritte Leipzigerin in der Gruppe, hat es nach Los Angeles verschlagen. Nach dem Abitur hat sie Reiseverkehrskauffrau gelernt. In der Reisekette New World Travel erste Erfahrungen. Anfangs erzählt die 23- jährige hatte ich großes Heimweh, es sind doch einige Kilometer weg von Leipzig. Doch dann stelle ich mich der Chefin im besten Englisch vor, worauf sie auf Deutsch antwortete, dass wahnsinnig freut, dass ich ihr über die Schulter sehen will.
+Die drei Frauen zählen zu den 20 jungen Berufsanfängern aus Ostdeutschland, die unter 2100 Bewerben der Pall- Mall - Initiative ausgewählt wurden und ein dreimonatiges Praktikum in den Staaten absolvieren. Bei der Auswahl der Praktikanten legt man auch auf Auslandserfahrung Wert. Schließlich geht es nicht darum, dass die Teilnehmer ein paar
+schöne Wochen im Land der unbegrenzten Möglichkeiten erleben. Die Unternehmen stellen zumeist hohe Anforderungen.
+Aufgaben:
+[6] Die Werbung in den Vereinigten Staaten
+A) beschäftigt sich überhaupt nicht mit Deutschland.
+B) zeigt immer wieder dasselbe Bild von Deutschland.
+C) zeigt viele unterschiedliche Seiten von Deutschland.
+Lösung: B
+[7] Die Eltern von Laura Rudelt.
+A) arbeiten und lebten lange Jahre in den Niederlanden.
+B) hatten nicht die Möglichkeiten wie ihre Tochter.
+C) wollen ihre Tochter nun in den USA Besuchen.
+Lösung: B
+[8] Während die Praktikantinnen in New York waren.
+A) bekamen sie eine Stadtführung.
+B) besuchten sie einen Sprachkurs.
+C) wurden sie über wichtige Themen informiert
+Lösung: C
+[9] Die dritte Leipzigerin, die in die USA gereist ist
+A) kommt eigentlich aus Österreich.
+B) wollte dort ihr Abitur machen und dann studieren.
+C) wurde von ihrer neuen Chefin freundlich aufgenommen.
+Lösung: C
+[10] Wer als Praktikantin ins Ausland geht
+A) braucht schon einige Berufserfahrungen.
+B) soll dabei vor allem das Land kennenlernen.
+C) soll schon einmal im Ausland gewesen sein.
+Lösung: C
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m01-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie möchten für ein Jahr in Wien Psychologie studieren und suchen daher eine günstige Mietwohnung.
+Lösung: G
+[12] Sie möchten am Abend ins Kino gehen und suchen daher eine verlässliche Person, die auf Ihr Kind aufpasst.
+Lösung: F
+[13] Sie möchten in den Sommerferien nebenbei ein wenig Geld dazu verdienen und suchen daher einen passenden Job.
+Lösung: J
+[14] Sie möchten ein Geburtstagfest organisieren und brauchen dafür einen Raum. Um das Essen und die Getränke für die Gäste möchten Sie sich selbst kümmern.
+Lösung: A
+[15] Ihre Bekannten aus Deutschland müssen aus beruflichen Gründen nach Salzburg umziehen und haben Sie gebeten, eine Mietwohnung für Sie suchen.
+Lösung: X
+[16] Ihre 23 jährige Freundin hat soeben einen Computerkurs abgeschlossen und sucht einen Job.
+Lösung: E
+[17] Ihr 12 jährige Sohn wünscht sich zum Geburtstag Buch über Sterne.
+Lösung: X
+[18] Ihre Kinder möchten am Nachmittag ins Kino gehen. Sie suchen einen passenden Film für Kinder.
+Lösung: C
+[19] Sie möchten mit Freunden gern ins Kino gehen. Da es ein sehr warmer Sommerabend ist, suchen Sie nach einer Vorstellung im Ferien.
+Lösung: I
+[20] Ihre Freundin ist Erzieherin und zur Zeit arbeitslos. Sie möchte daher als Kindermädchen bei einer Familie arbeiten.
+Lösung: L
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Sehr geehrter Herr Meyerhofer,
+Wie Sie wissen , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sin , sind immer besetzt, und das Treppenhaus ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. Vielleicht könnte (30)
+Gemeinsam eine Lösung finden.
+Mit freundlichen Grüßen
+Ihre Anneliese Kühne
+Aufgaben:
+[21] … , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus …
+A) Ihr
+B) Ihrem
+C) Ihren
+Lösung: B
+[22] … nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer …
+A) war
+B) wäre
+C) würde
+Lösung: A
+[23] … es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants …
+A) hat
+B) ist
+C) wurde
+Lösung: A
+[24] … Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der …
+A) Bis
+B) Nach
+C) Von
+Lösung: A
+[25] … verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof …
+A) dem
+B) den
+C) der
+Lösung: B
+[26] … im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sin , sind immer …
+A) denen
+B) die
+C) diese
+Lösung: B
+[27] … ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze …
+A) im
+B) in
+C) ins
+Lösung: A
+[28] … mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) …
+A) geöffnet
+B) öffnen
+C) öffnet
+Lösung: A
+[29] … (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. …
+A) Problem
+B) Probleme
+C) Problemen
+Lösung: B
+[30] … den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden. Mit freundlichen Grüßen …
+A) er
+B) man
+C) wir
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+Sehr geehrte Herr Blanco Ruiz
+Ich schreibe Ihnen auf die Anzeige, die (31) in der heutigen Bild Zeitung aufgefallen ist. Da ich (32) einige Monate beruflich nach Südamerika gehe, muss ich sehr schnell Spanisch lernen. Für einen richtigen Sprachkurs habe ich leider (33) Zeit. Aber Ihre Methode interessiert mich, vor allem die Sprachübungen (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, (37) Ihr Programm besonders die alltägliche Kommunikation fördert. Wie lange wird es dauern, (38) ich mich meinen Geschäftsfreunden richtig unterhalten kann? Und wie viele Stunden (39) Woche sollte man mindestens üben? Können Sie mir eine Musterlektion schicken ich? (40) gerne ausprobieren, wie ihre Methode funktioniert
+Mit freundlichen Grüßen
+Ihre KARIN ÜBERSCHÄR
+Auswahl:
+A = AM
+B = BIS
+C = DASS
+D = FÜR
+E = GUTE
+F = KENIE
+G = MICH
+H = MIR
+I = MIT
+J = MÖCHTE
+K = OHNE
+L = PRO
+M = WÄHREND
+N = WÄRE
+O = WÜRDEN
+Aufgaben:
+[31] … Herr Blanco Ruiz Ich schreibe Ihnen auf die Anzeige, die (31) in der heutigen Bild Zeitung aufgefallen ist. Da ich (32) …
+Erklärung: Das Wort lautet: MIR
+Lösung: H
+[32] … (31) in der heutigen Bild Zeitung aufgefallen ist. Da ich (32) einige Monate beruflich nach Südamerika gehe, muss ich …
+Erklärung: Das Wort lautet: FÜR
+Lösung: D
+[33] … lernen. Für einen richtigen Sprachkurs habe ich leider (33) Zeit. Aber Ihre Methode interessiert mich, vor allem die …
+Erklärung: Das Wort lautet: KENIE
+Lösung: F
+[34] … Methode interessiert mich, vor allem die Sprachübungen (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich …
+Erklärung: Das Wort lautet: MIT
+Lösung: I
+[35] … (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, …
+Erklärung: Das Wort lautet: GUTE
+Lösung: E
+[36] … CDs. Ich denke, damit könnte ich ganz (35) Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, (37) Ihr Programm …
+Erklärung: Das Wort lautet: AM
+Lösung: A
+[37] … Ich arbeite (36) liebsten mit meinem PC. Sie schreiben, (37) Ihr Programm besonders die alltägliche Kommunikation …
+Erklärung: Das Wort lautet: DASS
+Lösung: C
+[38] … Kommunikation fördert. Wie lange wird es dauern, (38) ich mich meinen Geschäftsfreunden richtig unterhalten …
+Erklärung: Das Wort lautet: BIS
+Lösung: B
+[39] … richtig unterhalten kann? Und wie viele Stunden (39) Woche sollte man mindestens üben? Können Sie mir eine …
+Erklärung: Das Wort lautet: PRO
+Lösung: L
+[40] … üben? Können Sie mir eine Musterlektion schicken ich? (40) gerne ausprobieren, wie ihre Methode funktioniert Mit …
+Erklärung: Das Wort lautet: MÖCHTE
+Lösung: J
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin wünscht sich einen Arbeitsplatz für ihren Vater.
+Lösung: falsch
+[42] Der Sprecher ist kein besonders guter Schüler.
+Lösung: richtig
+[43] Die Sprecherin möchte nicht immer gestört werden.
+Lösung: richtig
+[44] Der Sprecher versteht sich nicht gut mit seiner Mutter.
+Lösung: richtig
+[45] Die Sprecherin ist am liebsten mit ihren Eltern zusammen.
+Lösung: falsch
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Frau Schäfer hat von dem Verein kurz nach der Gründung zum ersten Mal gehört.
+Lösung: falsch
+[47] Die Mitglieder des Vereins kommen aus ganz Deutschland.
+Lösung: falsch
+[48] Die Mitglieder des Vereins wissen über Hausarbeit gut Bescheid
+Lösung: richtig
+[49] Im Verein werden oft Feste gefeiert.
+Lösung: falsch
+[50] Der Verein bietet auch die Organisation von Festen an
+Lösung: richtig
+[51] Der Verein vermittelt Senioren, die tagsüber Kinder betreuen
+Lösung: richtig
+[52] Laut Frau Schäfer vertrauen viele Familien den Mitarbeiterinnen des Vereins mehr als anderen
+Lösung: richtig
+[53] Vereinsmitglied kann nur werden, wer einen Beruf gelernt hat
+Lösung: richtig
+[54] Die Mitarbeiterinnen bekommen für ihre Arbeiten 10 Euro pro Stunde.
+Lösung: falsch
+[55] Kunden mit wenig Geld zahlen für den Service nichts.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Sie sollen um 19:30 Uhr bei Georg und Claudia sein.
+Lösung: falsch
+[57] Im südlichen Österreich ist es tagsüber sonnig, später windig und regnerisch
+Lösung: richtig
+[58] Der Speisewagen befindet sich im hinteren Teil des Zuges.
+Lösung: falsch
+[59] Die Schweizer geben für Urlaub mehr Geld aus als für ihre Gesundheit.
+Lösung: falsch
+[60] Der Sänger beginnt seine Konzertreise mit einer Vorstellung in Wien
+Lösung: richtig
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:
+Extra:
+{
+ "brief": {
+  "intro": "Eine Bekannte hat Ihnen folgenden Brief geschrieben:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "Ich habe eine tolle Überraschung. stelle dir vor, was mir mein Onkel angeboten hat. Er rief mich am Samstag an. Er hat ein großes Ferienhaus im Schwarzwald. Das Haus kann ich für die Ferien kostenlos haben. Ich kann auch Freunde mitbringen! Wäre das nichts für uns? Wir könnten uns alle dort treffen. Du, deine Eltern und Freunde, und ich mit meiner Familie und meinen Freunden. Ich würde mich wahnsinnig freuen, wenn das klappen würde. Bitte schreibe mir so schnell du kannst, damit wir alles planen können. Urlaub im Schwarzwald - das wird traumhaft schön!",
+   "Herzliche Grüße"
+  ],
+  "signature": "Petra"
+ },
+ "hints": [
+  "Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende",
+  "Schreiben Sie mindestens 100 Wörter."
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:
+Mindestwörter: 100
+Punkt: Warum Sie gern nach Deutschland kommen möchten
+Punkt: Wie Sie anreisen wollen
+Punkt: Was Sie gemeinsam machen könnten
+Punkt: Wen Sie mitbringen möchten

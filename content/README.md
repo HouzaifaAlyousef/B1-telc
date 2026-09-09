@@ -9,6 +9,11 @@ content/<anbieter>/<stufe>/modell-NN/
     audio/       ← recordings named exactly as `Hörtext:` says
 ```
 
+**telc B1 is generated, not hand-written.** Its 16 `text.txt` files come from
+`data/*.json` via `node tools/sync_b1_content.mjs`. Edit `data/`, then re-run
+it — a test fails if the two drift apart. Every other level is authored here
+directly.
+
 Check everything before importing:
 
 ```bash
