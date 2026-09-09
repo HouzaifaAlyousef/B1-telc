@@ -23,14 +23,17 @@ So one of two things is true, and you need to know which:
 Check it: Cloudflare dashboard → Workers → `b1-telc` → Settings → Builds →
 *Branch*.
 
-If it says `main`, pick one:
+**Decided (2026-09-09): `kiko-branch` stays the working branch, `main` is
+not merged into.** So if that setting says `main`, change it to
+`kiko-branch` — do not merge.
 
-```bash
-# أ) merge the work into main (a pull request, or directly)
-git checkout main && git merge kiko-branch && git push origin main
+Whoever changes it should know what it means: `main` was last touched on
+30 August and stays that way. Anyone reading the repository on GitHub sees
+`main` by default and will not find recent work, including `content/`. Use
+the branch switcher, or these links:
 
-# ب) or point Cloudflare at kiko-branch in that same settings page
-```
+- [`content/` on kiko-branch](https://github.com/HouzaifaAlyousef/B1-telc/tree/kiko-branch/content)
+- locally: `git fetch origin kiko-branch && git checkout kiko-branch`
 
 Verify: open `https://b1-telc.b1-telc.workers.dev` and check that the
 settings bar (🇩🇪 🇸🇦 🇺🇦 ☀ 🌙 A− A+) is at the top of the start page. If it
