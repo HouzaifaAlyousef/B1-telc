@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 76.0,
-   "missing": 13
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -29,8 +29,8 @@
     "hv3"
    ],
    "maxPoints": 75.0,
-   "availablePoints": 62.5,
-   "missing": 3
+   "availablePoints": 75.0,
+   "missing": 0
   },
   {
    "id": "block-sa",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "45 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -278,12 +278,31 @@
       }
      ],
      "answer": "C"
+    },
+    {
+     "id": "10",
+     "text": "Frau Eigenmann möchte in Zukunft",
+     "options": [
+      {
+       "key": "A",
+       "text": "als Krankenschwester arbeiten."
+      },
+      {
+       "key": "B",
+       "text": "mit ihre Arbeit das Leben alter und kranker Menschen verbessern."
+      },
+      {
+       "key": "C",
+       "text": "viel Geld verdienen."
+      }
+     ],
+     "answer": "B"
     }
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0,
-   "availablePoints": 20.0,
-   "missing": 1
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -367,12 +386,42 @@
      "id": "14",
      "text": "In Ihrer Wohnung gibt es Probleme mit dem Wasser in Bad und Küche und Sie wollen das verändern.",
      "answer": "C"
+    },
+    {
+     "id": "15",
+     "text": "Ihre Wohnung ist immer zu kalt und Sie wollen das ändern.",
+     "answer": "E"
+    },
+    {
+     "id": "16",
+     "text": "Sie suchen einen Klavierlehrer für Ihre Tochter.",
+     "answer": "X"
+    },
+    {
+     "id": "17",
+     "text": "Sie möchten lernen Kleider selber zu machen.",
+     "answer": "H"
+    },
+    {
+     "id": "18",
+     "text": "In Ihrer Wohnung gibt es Probleme mit feuchten Wänden.",
+     "answer": "G"
+    },
+    {
+     "id": "19",
+     "text": "Sie möchten einen schönen, alten Schrank kaufen.",
+     "answer": "B"
+    },
+    {
+     "id": "20",
+     "text": "Sie wollen lernen, wie man kleine Geschichten auf Deutsch schreibt und suchen einen passenden Kurs.",
+     "answer": "X"
     }
    ],
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
-   "availablePoints": 10.0,
-   "missing": 6,
+   "availablePoints": 25.0,
+   "missing": 0,
    "bankImage": "img/m16-lv3.jpg"
   },
   {
@@ -433,6 +482,44 @@
      "answer": "B"
     },
     {
+     "id": "22",
+     "text": "… etwas ganz Besonderes (21) : Stelle (22) vor, ich habe die Stelle bei der EU in Brüssel bekommen! …",
+     "options": [
+      {
+       "key": "A",
+       "text": "dich"
+      },
+      {
+       "key": "B",
+       "text": "dir"
+      },
+      {
+       "key": "C",
+       "text": "Du"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "23",
+     "text": "… Es gab ungefähr 300 Bewerber, und unter denen (23) die besten ausgesucht. Ich hatte mich auf das …",
+     "options": [
+      {
+       "key": "A",
+       "text": "halten"
+      },
+      {
+       "key": "B",
+       "text": "wären"
+      },
+      {
+       "key": "C",
+       "text": "wurden"
+      }
+     ],
+     "answer": "C"
+    },
+    {
      "id": "24",
      "text": "… Ich hatte mich auf das Vorstellungsgespräch schon (24) Zeit vorher vorbereitet. Trotzdem ohne meine …",
      "options": [
@@ -452,6 +539,44 @@
      "answer": "C"
     },
     {
+     "id": "25",
+     "text": "… Trotzdem – ohne meine Sprachkenntnisse und meine Auslandserfahrung (25) ich die Stelle sicher nicht bekommen. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "habe"
+      },
+      {
+       "key": "B",
+       "text": "hätte"
+      },
+      {
+       "key": "C",
+       "text": "würde"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "26",
+     "text": "… Aber ein bisschen Glück braucht man auch, (26) so etwas gelingt. Nun bitte ich dich (27) ein paar …",
+     "options": [
+      {
+       "key": "A",
+       "text": "als"
+      },
+      {
+       "key": "B",
+       "text": "damit"
+      },
+      {
+       "key": "C",
+       "text": "ob"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "27",
      "text": "… man auch, (26) so etwas gelingt. Nun bitte ich dich (27) ein paar gute Tipps. Vielleicht kennst du auch jemanden, …",
      "options": [
@@ -466,6 +591,44 @@
       {
        "key": "C",
        "text": "um"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "28",
+     "text": "… Vielleicht kennst du auch jemanden, von (28) ich Informationen über das Leben in Belgien bekommen kann? …",
+     "options": [
+      {
+       "key": "A",
+       "text": "dem"
+      },
+      {
+       "key": "B",
+       "text": "den"
+      },
+      {
+       "key": "C",
+       "text": "denen"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "29",
+     "text": "… Ich würde dich am liebsten kurz (29) , um mit dir persönlich zu sprechen. Geht das vielleicht (30) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "getroffen"
+      },
+      {
+       "key": "B",
+       "text": "treffe"
+      },
+      {
+       "key": "C",
+       "text": "treffen"
       }
      ],
      "answer": "C"
@@ -492,8 +655,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 6.0,
-   "missing": 6
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -506,50 +669,6 @@
    "passages": [
     {
      "paragraphs": [
-      {
-       "t": "dir B hätte den",
-       "b": false
-      },
-      {
-       "t": "Du würde denen",
-       "b": false
-      },
-      {
-       "t": "C C",
-       "b": false
-      },
-      {
-       "t": "A A A",
-       "b": false
-      },
-      {
-       "t": "26. 29.",
-       "b": false
-      },
-      {
-       "t": "23. halten als getroffen",
-       "b": false
-      },
-      {
-       "t": "wären damit treffe",
-       "b": false
-      },
-      {
-       "t": "B B B",
-       "b": false
-      },
-      {
-       "t": "wurden ob treffen",
-       "b": false
-      },
-      {
-       "t": "C C C",
-       "b": false
-      },
-      {
-       "t": ") (",
-       "b": false
-      },
       {
        "t": "Sehr geehrte Frau Campe,",
        "b": false
@@ -646,7 +765,7 @@
    "items": [
     {
      "id": "31",
-     "text": "… ) ( Sehr geehrte Frau Campe, mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in …",
+     "text": "… Sehr geehrte Frau Campe, mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in …",
      "answer": "C",
      "explain": "Das Wort lautet: DARÜBER"
     },
@@ -803,12 +922,17 @@
      "id": "54",
      "text": "Frau Imbach möchte, dass die Freie Filmbühne umzieht.",
      "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "Bis die Freie Filmbühne schließt, werden keine Filme mehr gezeigt.",
+     "answer": "f"
     }
    ],
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
-   "availablePoints": 22.5,
-   "missing": 1
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",
@@ -833,12 +957,22 @@
      "id": "58",
      "text": "Der Zug nach Wein fährt heute von einem anderen Bahnsteig ab.",
      "answer": "f"
+    },
+    {
+     "id": "59",
+     "text": "Die Firma ist mit der Straßenbahn in Richtung Königsplatz zu erreichen.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Ab nächsten Montag kann man wieder einen Termin vereinbaren..",
+     "answer": "r"
     }
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0,
-   "availablePoints": 15.0,
-   "missing": 2
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "sa",

@@ -1,12 +1,12 @@
 # VIKTOR
-Untertitel: 45 Aufgaben · 150 Minuten
+Untertitel: 61 Aufgaben · 150 Minuten
 
 ## Block: block-lv-sb
 Titel: Leseverstehen und Sprachbausteine
 Minuten: 90
 Hinweis: Aufgaben 1–40
 Punkte: 105
-Fehlend: 13
+Fehlend: 0
 Teile: lv1, lv2, lv3, sb1, sb2
 
 ## Block: block-hv
@@ -14,7 +14,7 @@ Titel: Hörverstehen
 Minuten: 30
 Hinweis: Aufgaben 41–60
 Punkte: 75
-Fehlend: 3
+Fehlend: 0
 Teile: hv1, hv2, hv3
 
 ## Block: block-sa
@@ -102,6 +102,11 @@ A) bezahlen besonders wenig für die Beratung.
 B) sind meist erfolgreiche Unternehmen.
 C) wollen auch ihre wirtschaftliche Lage verbessern.
 Lösung: C
+[10] Frau Eigenmann möchte in Zukunft
+A) als Krankenschwester arbeiten.
+B) mit ihre Arbeit das Leben alter und kranker Menschen verbessern.
+C) viel Geld verdienen.
+Lösung: B
 
 ### Teil: lv3
 Format: matching
@@ -136,6 +141,18 @@ Lösung: D
 Lösung: K
 [14] In Ihrer Wohnung gibt es Probleme mit dem Wasser in Bad und Küche und Sie wollen das verändern.
 Lösung: C
+[15] Ihre Wohnung ist immer zu kalt und Sie wollen das ändern.
+Lösung: E
+[16] Sie suchen einen Klavierlehrer für Ihre Tochter.
+Lösung: X
+[17] Sie möchten lernen Kleider selber zu machen.
+Lösung: H
+[18] In Ihrer Wohnung gibt es Probleme mit feuchten Wänden.
+Lösung: G
+[19] Sie möchten einen schönen, alten Schrank kaufen.
+Lösung: B
+[20] Sie wollen lernen, wie man kleine Geschichten auf Deutsch schreibt und suchen einen passenden Kurs.
+Lösung: X
 
 ### Teil: sb1
 Format: mc
@@ -158,15 +175,45 @@ A) geschah
 B) geschehen
 C) geschieht
 Lösung: B
+[22] … etwas ganz Besonderes (21) : Stelle (22) vor, ich habe die Stelle bei der EU in Brüssel bekommen! …
+A) dich
+B) dir
+C) Du
+Lösung: B
+[23] … Es gab ungefähr 300 Bewerber, und unter denen (23) die besten ausgesucht. Ich hatte mich auf das …
+A) halten
+B) wären
+C) wurden
+Lösung: C
 [24] … Ich hatte mich auf das Vorstellungsgespräch schon (24) Zeit vorher vorbereitet. Trotzdem ohne meine …
 A) lange
 B) langem
 C) langer
 Lösung: C
+[25] … Trotzdem – ohne meine Sprachkenntnisse und meine Auslandserfahrung (25) ich die Stelle sicher nicht bekommen. …
+A) habe
+B) hätte
+C) würde
+Lösung: B
+[26] … Aber ein bisschen Glück braucht man auch, (26) so etwas gelingt. Nun bitte ich dich (27) ein paar …
+A) als
+B) damit
+C) ob
+Lösung: B
 [27] … man auch, (26) so etwas gelingt. Nun bitte ich dich (27) ein paar gute Tipps. Vielleicht kennst du auch jemanden, …
 A) für
 B) über
 C) um
+Lösung: C
+[28] … Vielleicht kennst du auch jemanden, von (28) ich Informationen über das Leben in Belgien bekommen kann? …
+A) dem
+B) den
+C) denen
+Lösung: C
+[29] … Ich würde dich am liebsten kurz (29) , um mit dir persönlich zu sprechen. Geht das vielleicht (30) …
+A) getroffen
+B) treffe
+C) treffen
 Lösung: C
 [30] … , um mit dir persönlich zu sprechen. Geht das vielleicht (30) zwei Wochen, Z.B. am übernächsten Wochenende? Bitte gib …
 A) bis
@@ -184,17 +231,6 @@ Maximum: 15
 Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
 AuswahlTitel: Wörterliste
 Text:
-dir B hätte den
-Du würde denen
-C C
-A A A
-26. 29.
-23. halten als getroffen
-wären damit treffe
-B B B
-wurden ob treffen
-C C C
-) (
 Sehr geehrte Frau Campe,
 mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in Deutsch anbieten.
 Ich lerne (32) zwei Jahren Deutsch in Yverden, einer kleinen Stadt in der Westschweiz. Es gefällt mir hier, aber ich lebe in einer französischsprachigen Region und auch meine Arbeitskollegen (33) nur Französisch (oder Englisch) mit mir. So habe ich einfach zu (34). Gelegenheit, Deutsch zu sprechen. Deshalb interessiere ich mich (35) für Ihre Intensivkurse. Die Oberpfalz (36) ich schon seit langem einmal kennen lernen. Ich habe schon viel darüber gehört und gelesen, war aber selber noch nie dort.
@@ -219,7 +255,7 @@ M = WIE
 N = WIE VIELE
 O = WISSEN
 Aufgaben:
-[31] … ) ( Sehr geehrte Frau Campe, mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in …
+[31] … Sehr geehrte Frau Campe, mein Deutschlehrer hat mich (31) informiert, dass Sie in St. Andreasburg Intensivkurse in …
 Erklärung: Das Wort lautet: DARÜBER
 Lösung: C
 [32] … Andreasburg Intensivkurse in Deutsch anbieten. Ich lerne (32) zwei Jahren Deutsch in Yverden, einer kleinen Stadt in …
@@ -299,6 +335,8 @@ Lösung: falsch
 Lösung: richtig
 [54] Frau Imbach möchte, dass die Freie Filmbühne umzieht.
 Lösung: falsch
+[55] Bis die Freie Filmbühne schließt, werden keine Filme mehr gezeigt.
+Lösung: falsch
 
 ### Teil: hv3
 Format: truefalse
@@ -316,6 +354,10 @@ Lösung: falsch
 Lösung: richtig
 [58] Der Zug nach Wein fährt heute von einem anderen Bahnsteig ab.
 Lösung: falsch
+[59] Die Firma ist mit der Straßenbahn in Richtung Königsplatz zu erreichen.
+Lösung: richtig
+[60] Ab nächsten Montag kann man wieder einen Termin vereinbaren..
+Lösung: richtig
 
 ### Teil: sa
 Format: writing

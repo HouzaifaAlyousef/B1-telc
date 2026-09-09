@@ -1,4 +1,4 @@
-# telc B1 — 16 Modelltests
+# telc B1 — 17 Modelltests
 
 مولّد من `data/` بـ`node tools/sync_b1_content.mjs` — لا تعدّله بالإيد.
 
@@ -17,9 +17,10 @@
 | [modell-11](modell-11/) | **JENNIFER** | 61 | 150 |
 | [modell-12](modell-12/) | **ANDREAS2** | 40 | 150 |
 | [modell-13](modell-13/) | **THOMAS** | 52 | 150 |
-| [modell-14](modell-14/) | **TAMARA** | 53 | 150 |
-| [modell-15](modell-15/) | **JAN** | 51 | 150 |
-| [modell-16](modell-16/) | **VIKTOR** | 45 | 150 |
+| [modell-14](modell-14/) | **TAMARA** | 61 | 150 |
+| [modell-15](modell-15/) | **JAN** | 61 | 150 |
+| [modell-16](modell-16/) | **VIKTOR** | 61 | 150 |
+| [modell-17](modell-17/) | **TANJA** | 41 | 150 |
 
 كل مجلّد فيه `text.txt` (الامتحان مع حلوله)، `img/` و`audio/`.
 الشرح: [../../../docs/21-content-folders.md](../../../docs/21-content-folders.md)

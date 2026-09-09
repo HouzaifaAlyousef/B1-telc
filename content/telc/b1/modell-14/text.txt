@@ -1,12 +1,12 @@
 # TAMARA
-Untertitel: 53 Aufgaben · 150 Minuten
+Untertitel: 61 Aufgaben · 150 Minuten
 
 ## Block: block-lv-sb
 Titel: Leseverstehen und Sprachbausteine
 Minuten: 90
 Hinweis: Aufgaben 1–40
 Punkte: 105
-Fehlend: 8
+Fehlend: 0
 Teile: lv1, lv2, lv3, sb1, sb2
 
 ## Block: block-hv
@@ -95,6 +95,11 @@ A) sich ihre Noten plötzlich verschlechterten.
 B) sie auf einmal viel mehr Zeit mit Lernen verbringen mussten.
 C) sie noch nicht wussten, welche besonderen Talente sie hatten.
 Lösung: B
+[10] In der Popper-Schule werden nur Schüler aufgenommen,
+A) die in mindestens einem Fach sehr gut sind.
+B) die mindestens 20 bis 30 Prozent der Aufnahmeprüfung erreichen.
+C) die von den insgesamt 28 Lehrern als intelligent beschrieben werden.
+Lösung: A
 
 ### Teil: lv3
 Format: matching
@@ -133,6 +138,14 @@ Lösung: L
 Lösung: J
 [16] Ihre Verwandten haben eine Woche Urlaub und suchen einen Ferienort am Meer.
 Lösung: G
+[17] Sie suchen für drei Vormittage pro Woche eine Stelle als Küchenhilfe.
+Lösung: X
+[18] Sie suchen eine leichte Arbeit für abends, um sich noch etwas Geld dazuzuverdienen.
+Lösung: D
+[19] Ihre Bekannte möchte als Bedienung in einer Gaststätte arbeiten.
+Lösung: K
+[20] Ihre Freunde wollen Familienurlaub machen und suchen ein Angebot, das auch ein Kinderprogramm enthält.
+Lösung: F
 
 ### Teil: sb1
 Format: mc
@@ -148,15 +161,20 @@ Sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Fam
 Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.Mit
 freundlichen Grüßen Harish Khurana
 Aufgaben:
-[21] Sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Familie einen Flug nach Indien …
+[21] … sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Familie einen Flug nach Indien …
 A) ihnen
 B) Ihnen
 C) Sie
 Lösung: B
-[22] … gebucht. Leider entsprach unser Flug überhaupt nicht dem, (22)bei der Buchung am Telefon ausgemacht worden war. (23) ich …
+[22] … gebucht. Leider entsprach unser Flug überhaupt nicht dem, (22) bei der Buchung am Telefon ausgemacht worden war. …
 A) das
 B) was
 C) wie
+Lösung: B
+[23] … am Telefon ausgemacht worden war. (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir …
+A) Danach
+B) Obwohl
+C) Nämlich
 Lösung: B
 [24] … nach Mumbai bestellt hatte, haben Sie mir einen Flug (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …
 A) für
@@ -168,6 +186,11 @@ A) erst
 B) nach
 C) seit
 Lösung: A
+[26] … Doch damit nicht genug. Der Flug war nicht nur anders als vereinbart, (26) auch noch viel teurer. …
+A) besonders
+B) sondern
+C) sonst
+Lösung: B
 [27] … anders als vereinbart, (26) auch noch viel teurer. statt (27) erwarteten 640 Euro kostete der Flug 720 Euro. Ich darf …
 A) der
 B) deren
@@ -178,7 +201,12 @@ A) für
 B) um
 C) zu
 Lösung: B
-[30] … Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.Mit freundlichen Grüßen Harish Khurana
+[29] … Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Deutschen Bank in Mumbai bitten. …
+A) an
+B) bei
+C) vor
+Lösung: B
+[30] … Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Harish Khurana
 A) mich
 B) mir
 C) sich
