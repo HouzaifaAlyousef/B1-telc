@@ -55,7 +55,9 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
       catch (e) { rows.push(['✗', id, `ما انقرا: ${String(e.message).slice(0, 60)}`]); nBad++; continue; }
 
       const c = r.counts;
-      const note = [`${c.sections} قسم`, `${c.items} سؤال`, `${c.answers} حلّ`];
+      // اسم الامتحان من أول سطر بالنص — «modell-03» لحاله ما بيقول شي
+      const note = [r.test.title || '—', `${c.sections} قسم`,
+                    `${c.items} سؤال`, `${c.answers} حلّ`];
 
       // الملفات يلي النص بيطلبها لازم تكون موجودة، وإلا القسم بيطلع فاضي
       const want = [];

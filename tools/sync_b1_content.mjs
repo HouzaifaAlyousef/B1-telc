@@ -55,7 +55,27 @@ for (const m of index.modelle) {
   }
 }
 
+/* ★ فهرس بيتقرا بـGitHub أول ما تفتح المجلّد.
+   «modell-03» ما بيقول مين هو، و«SOPHIE» كاسم مجلّد بيكسر الترتيب
+   وبيربط المسار بالمحتوى. الفهرس بيعطي الاسم بلا الاتنين. */
+const rows = index.modelle.map(m =>
+  `| [${m.id}](${m.id}/) | **${m.title}** | ${m.aufgaben} | ${m.minutes} |`).join('\n');
+const readme = `# telc B1 — ${index.modelle.length} Modelltests
+
+مولّد من \`data/\` بـ\`node tools/sync_b1_content.mjs\` — لا تعدّله بالإيد.
+
+| Ordner | Name | Aufgaben | Minuten |
+|---|---|---|---|
+${rows}
+
+كل مجلّد فيه \`text.txt\` (الامتحان مع حلوله)، \`img/\` و\`audio/\`.
+الشرح: [../../../docs/21-content-folders.md](../../../docs/21-content-folders.md)
+`;
+const readmePath = path.join(OUT, 'README.md');
+
 if (CHECK) {
+  if (!existsSync(readmePath) || readFileSync(readmePath, 'utf8') !== readme)
+    drift.push('README.md');
   if (drift.length) {
     console.error(`✗ content/telc/b1 مو مطابق لـdata/: ${drift.join(', ')}`);
     console.error('  شغّل: node tools/sync_b1_content.mjs');
@@ -63,6 +83,7 @@ if (CHECK) {
   }
   console.log(`✓ content/telc/b1 مطابق لـdata/ (${index.modelle.length} نموذج)`);
 } else {
-  console.log(`✓ ${wrote} نموذج انكتب بـcontent/telc/b1/`);
+  writeFileSync(readmePath, readme);
+  console.log(`✓ ${wrote} نموذج انكتب بـcontent/telc/b1/ (+ الفهرس)`);
   if (noImg.length) console.log(`  · صور ما انلقيت بـDoku/: ${noImg.join(', ')}`);
 }
