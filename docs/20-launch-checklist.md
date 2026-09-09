@@ -121,13 +121,13 @@ Details: [14-writing-correction.md](14-writing-correction.md).
 Without it every demo code stays manual work for you.
 
 ```bash
-# ١) @BotFather → /newbot → copy the token
+# ١) @BotFather → /newbot → copy the token Claude here it is the token "8872809572:AAFRlLp6Rq58XtVVmwNieMpFhM8S5aSlg74"
 # ٢) invent a webhook secret
 openssl rand -hex 32
 
 # ٣) three secrets
 supabase secrets set \
-  TELEGRAM_BOT_TOKEN='…' \
+  TELEGRAM_BOT_TOKEN='8872809572:AAFRlLp6Rq58XtVVmwNieMpFhM8S5aSlg74' \
   TELEGRAM_WEBHOOK_SECRET='…' \
   APP_URL='https://b1-telc.b1-telc.workers.dev'
 
