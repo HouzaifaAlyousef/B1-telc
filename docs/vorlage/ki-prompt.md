@@ -102,6 +102,39 @@ für alle Abonnenten der Stufe sichtbar.
 
 ---
 
+## Ordnerweise arbeiten (mehrere Prüfungen auf einmal)
+
+Wenn Sie einer KI gleich einen Stapel PDFs geben wollen, arbeiten Sie
+in `content/`. Ein Ordner pro Modelltest, mit Text, Bildern und
+Aufnahmen beisammen — siehe
+[../21-content-folders.md](../21-content-folders.md).
+
+Der Prompt dafür ist der obige, plus diese vier Sätze:
+
+> Der ausgefüllte Text gehört in `content/<anbieter>/<stufe>/modell-NN/text.txt`.
+>
+> Die Bilder aus der PDF gehören nach `img/`, die Aufnahmen nach
+> `audio/`, jeweils im selben Ordner.
+>
+> **Die Dateinamen müssen genau so heißen, wie sie im Text stehen** —
+> die Zeilen `Bild:` und `Hörtext:` nennen sie. Benenne weder die eine
+> noch die andere Seite um.
+>
+> Lege pro PDF genau einen `modell-NN`-Ordner an und zähle hoch.
+
+Danach prüft ein Befehl den ganzen Stapel auf einmal:
+
+```bash
+node tools/check_content.mjs
+```
+
+Er sagt pro Modelltest, wie viele Aufgaben und Lösungen gefunden wurden,
+welche Warnungen es gibt, und **welche Dateien fehlen**. Das ist der
+häufigste Fehler: Der Text nennt ein Bild, das niemand hineingelegt hat —
+der Teil erscheint dann leer.
+
+---
+
 ## Andere Stufen (A1, A2, B2 …)
 
 Die Vorlage ist auf telc B1 zugeschnitten: 61 Aufgaben, 225 Punkte,

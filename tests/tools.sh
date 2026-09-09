@@ -69,6 +69,37 @@ chmod +x tools/_leak_file.sh
 [ $? -ne 0 ]
 check "★ الحارس بيمسك ملف حلول متنكّر باسم تاني" $?
 
+# ٣) ★ content/ — نصوص الامتحانات مع سطور «Lösung:»
+sed 's|cp -r assets/icons "$OUT/assets/"|cp -r assets/icons "$OUT/assets/"\ncp -r content "$OUT/"|' \
+  tools/build_dist.sh > tools/_leak_content.sh
+chmod +x tools/_leak_content.sh
+./tools/_leak_content.sh "$TMP/leak3" >/dev/null 2>&1
+[ $? -ne 0 ]
+check "★ الحارس بيرفض لما content/ توصل للناتج" $?
+
+# ٤) ★ نصّ امتحان متنكّر: الاسم text.txt وحده كافي يوقف البناء
+sed 's|cp -r assets/icons "$OUT/assets/"|cp -r assets/icons "$OUT/assets/"\nmkdir -p "$OUT/assets/x" \&\& cp docs/vorlage/b1-beispiel.txt "$OUT/assets/x/text.txt"|' \
+  tools/build_dist.sh > tools/_leak_txt.sh
+chmod +x tools/_leak_txt.sh
+./tools/_leak_txt.sh "$TMP/leak4" >/dev/null 2>&1
+[ $? -ne 0 ]
+check "★ وبيمسك نصّ امتحان مدسوس بمجلّد تاني" $?
+
+# ---------- مجلّد المحتوى ----------
+node tools/check_content.mjs >/dev/null 2>&1
+check "فحص content/ بيمرق (كل النماذج فاضية لسا)" $?
+
+# ★ نصّ مكسور لازم يفشل الفحص، وإلا الفحص بلا فايدة
+mkdir -p "$TMP/ctest/telc/zz/modell-01"
+printf '# KAPUTT\n### Teil: x\nFormat: nonsense\n' > "$TMP/ctest/telc/zz/modell-01/text.txt"
+( cd "$TMP" && ln -sfn "$OLDPWD/admin" admin 2>/dev/null || true )
+check "★ ملف بلا كتل بينمسك (تحذيرات)" \
+  "$(node -e "
+    const M = require('./admin/parse.js');
+    const r = M.parse('# KAPUTT\n### Teil: x\nFormat: nonsense\n');
+    process.exit(r.warnings.length > 0 ? 0 : 1);
+  " >/dev/null 2>&1; echo $?)"
+
 # ---------- أدوات الرفع ----------
 python3 -c "import ast,sys; ast.parse(open('tools/upload_images.py').read())"
 check "upload_images.py صحيح نحوياً" $?

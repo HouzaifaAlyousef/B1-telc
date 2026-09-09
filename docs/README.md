@@ -29,6 +29,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 18 | [Telegram bot](18-telegram-bot.md) | Demo codes handed out automatically, and why it can't hand out more |
 | 19 | [Capacity](19-capacity.md) | The waiting list, and what each extra user actually costs |
 | 20 | [Launch checklist](20-launch-checklist.md) | What is still open, in the order it has to be done |
+| 21 | [Content folders](21-content-folders.md) | `content/` — one folder per Modelltest, and how to fill it |
 
 > Tests, how to run them, and the twelve bugs they found: [../TESTING.md](../TESTING.md)
 

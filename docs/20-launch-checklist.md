@@ -135,6 +135,17 @@ Full walkthrough and troubleshooting: [18-telegram-bot.md](18-telegram-bot.md).
 
 ---
 
+## 4b. New exam material goes through `content/`
+
+Not a step you have to do now — but when you hand PDFs to another AI, put
+the result in `content/<anbieter>/<stufe>/modell-NN/`. The tree exists and
+is checked by `node tools/check_content.mjs`.
+
+Only the telc B1 template is written. Every other level needs one real PDF
+before its template can exist: [21-content-folders.md](21-content-folders.md).
+
+---
+
 ## 5. Upload 17 images — Leseverstehen Teil 3 is blank without them
 
 17 sections reference an advertisement image. Until they are uploaded, that

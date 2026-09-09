@@ -60,7 +60,8 @@ fi
 if [ "$ADMIN_PATH" != admin ] && [ -e "$OUT/admin" ]; then
   echo "✗ اللوحة لسا على /admin/ — المسار السرّي ما انطبّق" >&2; fail=1
 fi
-for bad in Doku tools docs supabase tests; do
+# content/ فيه نصوص الامتحانات مع سطور «Lösung:» — نفس خطورة data/
+for bad in Doku tools docs supabase tests content; do
   [ -e "$OUT/$bad" ] && { echo "✗ $bad/ وصل للناتج" >&2; fail=1; }
 done
 # فحص محتوى: نبحث عن أي بصمة لمفاتيح الحلول بالملفات المنشورة
@@ -69,6 +70,13 @@ if grep -rlE '^[[:space:]]*(//|/\*)' "$OUT" --include='*.js' --include='*.css' \
      2>/dev/null | grep -q .; then
   echo "✗ في تعليقات بالناتج:" >&2
   grep -rlE '^[[:space:]]*(//|/\*)' "$OUT" --include='*.js' --include='*.css' >&2
+  fail=1
+fi
+# نصوص content/ حلولها بصيغة تانية («Lösung:» مو "answer":)، فالفحص
+# فوق ما بيمسكها. الاسم text.txt ما إله شغل بالناتج بأي حال.
+if find "$OUT" -name 'text.txt' 2>/dev/null | grep -q .; then
+  echo "✗ في ملف text.txt بالناتج — نصوص الامتحانات مع حلولها:" >&2
+  find "$OUT" -name 'text.txt' >&2
   fail=1
 fi
 if grep -rlE '"answer"[[:space:]]*:' "$OUT" 2>/dev/null | grep -q .; then
