@@ -84,13 +84,23 @@ numbers behind it: [19-capacity.md](19-capacity.md).
 Without it the student still gets the automatic checks (word count, greeting,
 closing, spelling) and grades themselves. With it they get a full correction.
 
+> ⚠ **The key goes in the terminal, never in a file.** Do not paste it into
+> this document, or any file in the repository — GitHub's secret scanner
+> will block the push, and a key that sat in a commit has to be replaced.
+> Type the command with your key directly into the shell.
+
 ```bash
 # ١) free key, no credit card: https://aistudio.google.com/apikey
-supabase secrets set GEMINI_API_KEY=…
+supabase secrets set GEMINI_API_KEY=DEIN_KEY_HIER_EINSETZEN_NICHT_SPEICHERN
 
 # ٢) deploy
 supabase functions deploy correct-writing
 ```
+
+If a key did end up in a commit: put the placeholder back, `git commit
+--amend --no-edit`, push — and replace the key at
+[aistudio.google.com/apikey](https://aistudio.google.com/apikey) anyway.
+**Never** use GitHub's "allow the secret" link; that publishes it.
 
 **Verify:** do a Schriftlicher Ausdruck in the app and press
 *Korrektur anfordern*.
