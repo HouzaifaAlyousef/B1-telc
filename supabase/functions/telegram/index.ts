@@ -69,6 +69,10 @@ const T: Record<Lang, Record<string, string>> = {
     rj_demo: "استفد من نسختك التجريبية أوّلاً.",
     rj_contact: "احكي معنا مباشرةً منشان نرتّبلك ياه.",
     rj_no: "الطلب مرفوض.",
+    mTrial: "🎁 نسختي التجريبية",
+    mFull: "🔓 وصول كامل",
+    mLang: "🌐 اللغة",
+    mShare: "📣 شارك البوت",
   },
   de: {
     hello: "Willkommen! 👋\nBitte Sprache wählen:",
@@ -99,6 +103,10 @@ const T: Record<Lang, Record<string, string>> = {
     rj_demo: "Nutzen Sie bitte zuerst Ihre Testversion.",
     rj_contact: "Melden Sie sich bitte direkt bei uns.",
     rj_no: "Anfrage abgelehnt.",
+    mTrial: "🎁 Meine Testversion",
+    mFull: "🔓 Vollzugang",
+    mLang: "🌐 Sprache",
+    mShare: "📣 Bot teilen",
   },
   uk: {
     hello: "Вітаємо! 👋\nОберіть мову:",
@@ -129,6 +137,10 @@ const T: Record<Lang, Record<string, string>> = {
     rj_demo: "Спершу скористайтеся пробною версією.",
     rj_contact: "Напишіть нам напряму.",
     rj_no: "Запит відхилено.",
+    mTrial: "🎁 Моя пробна версія",
+    mFull: "🔓 Повний доступ",
+    mLang: "🌐 Мова",
+    mShare: "📣 Поділитися",
   },
   en: {
     hello: "Welcome! 👋\nChoose your language:",
@@ -159,6 +171,10 @@ const T: Record<Lang, Record<string, string>> = {
     rj_demo: "Please use your free trial first.",
     rj_contact: "Please contact us directly.",
     rj_no: "Request declined.",
+    mTrial: "🎁 My free trial",
+    mFull: "🔓 Full access",
+    mLang: "🌐 Language",
+    mShare: "📣 Share bot",
   },
 };
 
@@ -185,12 +201,53 @@ const rows = (btns: Btn[], perRow = 2) => {
   return out;
 };
 
-const send = (chat: number, text: string, keyboard?: Btn[][]) =>
+const send = (chat: number, text: string, keyboard?: Btn[][],
+              extra?: Record<string, unknown>) =>
   tg("sendMessage", {
     chat_id: chat, text, parse_mode: "HTML",
     disable_web_page_preview: true,
     ...(keyboard ? { reply_markup: { inline_keyboard: keyboard } } : {}),
+    ...(extra ?? {}),
   });
+
+/* ---------------- اللوحة الثابتة ----------------
+   أزرار بتضل تحت الشاشة — الطالب ما بده يكتب /start ولا /sprache.
+   بترسل نصّ عادي، والنصّ نفسه بيقول شو الفعل **وشو اللغة** سوا:
+   «🌐 اللغة» عربي و«🌐 Sprache» ألماني. فما منحتاج نحفظ لغة حدا بين
+   الرسايل — نفس مبدأ callback_data يلي حامل حاله. */
+const MKEYS = ["mTrial", "mFull", "mLang", "mShare"] as const;
+const menu = (lang: Lang) => ({
+  reply_markup: {
+    keyboard: [
+      [{ text: t(lang, "mTrial") }, { text: t(lang, "mFull") }],
+      [{ text: t(lang, "mLang") }, { text: t(lang, "mShare") }],
+    ],
+    is_persistent: true, resize_keyboard: true,
+  },
+});
+
+const LABEL: Record<string, { act: string; lang: Lang }> = {};
+for (const l of Object.keys(T) as Lang[])
+  for (const k of MKEYS) LABEL[T[l][k]] = { act: k, lang: l };
+
+/* قائمة الأوامر بزرّ ☰ — مرّة وحدة بكل تشغيل بارد */
+let cmdsDone = false;
+async function ensureCommands() {
+  if (cmdsDone) return;
+  cmdsDone = true;
+  const D: Record<Lang, [string, string][]> = {
+    ar: [["start", "من الأول"], ["sprache", "غيّر اللغة"], ["id", "رقمي بتلغرام"]],
+    de: [["start", "Von vorn"], ["sprache", "Sprache ändern"], ["id", "Meine Telegram-ID"]],
+    uk: [["start", "Спочатку"], ["sprache", "Змінити мову"], ["id", "Мій Telegram ID"]],
+    en: [["start", "Start over"], ["sprache", "Change language"], ["id", "My Telegram ID"]],
+  };
+  for (const [lang, list] of Object.entries(D)) {
+    await tg("setMyCommands", {
+      commands: list.map(([command, description]) => ({ command, description }),),
+      ...(lang === "de" ? {} : { language_code: lang }),
+    }).catch(() => {});
+  }
+}
 
 /* ---------------- القاعدة ---------------- */
 async function rpc(fn: string, args: Record<string, unknown> = {}) {
@@ -262,10 +319,7 @@ async function stepCode(chat: number, lang: Lang, from: any, levelId: string) {
     "",
     spent ? t(lang, "used") : t(lang, "how"),
   ];
-  await send(chat, lines.join("\n"), [
-    [{ text: t(lang, "full"), callback_data: `f|${lang}` }],
-    [{ text: t(lang, "share"), url: await shareLink(lang) }],
-  ]);
+  await send(chat, lines.join("\n"), undefined, menu(lang));
 
   // ★ خبر إلك بس أوّل مرّة. الرجعات ما بتنبّهك — وإلا كل من فتح
   //   الرسالة القديمة بيرنّ عندك.
@@ -322,11 +376,11 @@ async function stepRequest(chat: number, lang: Lang, from: any, months: number) 
   } catch (e) {
     // ما أخد تجريبي بعد: منقلّه بلغته بدل رسالة خطأ عامّة
     if (String(e).includes("no_demo_yet"))
-      return void await send(chat, t(lang, "needDemo"));
+      return void await send(chat, t(lang, "needDemo"), undefined, menu(lang));
     throw e;
   }
 
-  await send(chat, t(lang, res.again ? "pending" : "sent"));
+  await send(chat, t(lang, res.again ? "pending" : "sent"), undefined, menu(lang));
   if (res.again) return;          // ما منزعجك مرّتين بنفس الطلب
 
   await toAdmin(
@@ -426,14 +480,28 @@ Deno.serve(async (req) => {
       return new Response("ok");
     }
 
-    const text = String(update.message?.text ?? "");
+    const text = String(update.message?.text ?? "").trim();
     // رقمك بتلغرام — بدّك ياه مرّة وحدة تحطّه بجدول bot_admins
     if (/^\/id\b/.test(text))
       return void await send(chat, `<code>${from.id}</code>`), new Response("ok");
-    if (/^\/(start|sprache|language|lang)\b/.test(text))
-      await stepLang(chat, fallback);
-    else
-      await stepLang(chat, fallback);      // أي شي تاني: منرجّعه للبداية
+
+    // ★ زرّ من اللوحة الثابتة: نصّه بيقول الفعل واللغة سوا
+    const hit = LABEL[text];
+    if (hit) {
+      const L = hit.lang;
+      if (hit.act === "mTrial")
+        await stepProvider(chat, L, await rpc("bot_levels"));
+      else if (hit.act === "mFull")  await stepMonths(chat, L);
+      else if (hit.act === "mLang")  await stepLang(chat, L);
+      else if (hit.act === "mShare")
+        // اللوحة الثابتة ما بتحمل روابط — فالمشاركة بزرّ مدمج برسالتها
+        await send(chat, t(L, "shareText"),
+                   [[{ text: t(L, "share"), url: await shareLink(L) }]]);
+      return new Response("ok");
+    }
+
+    await ensureCommands();
+    await stepLang(chat, fallback);        // /start أو أي شي تاني
   } catch (e) {
     console.error("telegram:", String(e));
     await send(chat, t(fallback, "err")).catch(() => {});

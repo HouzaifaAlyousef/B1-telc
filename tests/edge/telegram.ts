@@ -100,6 +100,9 @@ const last = (m = "sendMessage") => [...sent].reverse().find(s => s.method === m
 const toChat = (id: number) =>
   [...sent].reverse().find(x => x.method === "sendMessage" && x.body?.chat_id === id)?.body;
 const kb = () => last()?.reply_markup?.inline_keyboard ?? [];
+/* اللوحة الثابتة: reply_markup.keyboard مو inline_keyboard */
+const perm = (id: number) =>
+  (toChat(id)?.reply_markup?.keyboard ?? []).flat().map((b: any) => b.text);
 const flat = () => kb().flat();
 
 const TG_ID = 987654321;
@@ -220,13 +223,26 @@ psql(`delete from access_requests; delete from bot_admins;`);
 const BOSS = 424242;              // قناتك = رقمك هون
 sent.length = 0;
 await post(click("l|ar|b1"));     // كوده التجريبي (تكرار)
-check("★ مع الكود بيطلع زرّ الوصول الكامل",
-      flat().some((b: any) => b.callback_data === "f|ar"));
-check("★ وزرّ مشاركة فيه رابط مو callback",
-      flat().some((b: any) => typeof b.url === "string" && b.url.includes("t.me/share")));
+check(`★ مع الكود بتطلع لوحة ثابتة بأربع أزرار (${perm(TG_ID).length})`,
+      perm(TG_ID).length === 4);
+check("★ وهي بالعربي",
+      perm(TG_ID).includes("🎁 نسختي التجريبية") && perm(TG_ID).includes("🔓 وصول كامل"));
+check("★ وبتضل ظاهرة (is_persistent)",
+      toChat(TG_ID)?.reply_markup?.is_persistent === true);
+
+/* ★ ضغطة زرّ بتوصل كنصّ — والنصّ لحاله بيقول اللغة، بلا جدول جلسات */
+sent.length = 0;
+await post(msg("🌐 اللغة"));
+check("★ زرّ «اللغة» بيعرض اللغات بلا ما يكتب /sprache", flat().length === 4);
 
 sent.length = 0;
-await post(click("f|ar"));
+await post(msg("📣 Bot teilen", "ar"));
+check("★ زرّ ألماني ← رسالة ألمانية حتى لو جهازه عربي",
+      flat().some((b: any) => typeof b.url === "string" && b.url.includes("t.me/share"))
+      && /kostenlos/.test(String(last()?.text)));
+
+sent.length = 0;
+await post(msg("🔓 وصول كامل"));
 check("★ بيسأل لكم شهر",
       ["m|ar|1","m|ar|2","m|ar|3"].every(d => flat().some((b: any) => b.callback_data === d)));
 
