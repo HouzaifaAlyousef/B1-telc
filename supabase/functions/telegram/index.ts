@@ -14,6 +14,7 @@
  *   TELEGRAM_BOT_TOKEN        من BotFather
  *   TELEGRAM_WEBHOOK_SECRET   نص عشوائي، منمرّره لـsetWebhook ومنقارنه هون
  *   APP_URL                   رابط التطبيق يلي بينبعت للطالب
+ *   ADMIN_CHAT_ID             قناة/مجموعة خاصة بتوصلها الطلبات
  *   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY  (بتنحط لحالها)
  *
  * النشر:  supabase functions deploy telegram --no-verify-jwt
@@ -23,6 +24,7 @@
 const TOKEN   = Deno.env.get("TELEGRAM_BOT_TOKEN") ?? "";
 const SECRET  = Deno.env.get("TELEGRAM_WEBHOOK_SECRET") ?? "";
 const APP_URL = Deno.env.get("APP_URL") ?? "";
+const ADMIN   = Deno.env.get("ADMIN_CHAT_ID") ?? "";   // قناتك الخاصة
 const SUPA    = Deno.env.get("SUPABASE_URL") ?? "";
 const SVC     = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 
@@ -52,6 +54,21 @@ const T: Record<Lang, Record<string, string>> = {
     used: "⚠️ هالرمز انستعمل. للوصول الكامل احكي معنا.",
     err: "صار خطأ. جرّب بعد شوي.",
     back: "‹ رجوع",
+    full: "🔓 بدّي الوصول الكامل",
+    share: "📣 خبّر رفقاتك",
+    shareText: "امتحانات telc تجريبية مجاناً 👇",
+    pickMonths: "لكم شهر بدّك الوصول الكامل؟",
+    mon: "{n} شهر",
+    sent: "طلبك وصل ✅\nاستنى شوي — رح يوصلك ردّ قريباً.",
+    pending: "عندك طلب معلّق ⏳\nاستنى الردّ عليه.",
+    needDemo: "خد نسختك التجريبية أوّلاً، بعدها فيك تطلب الوصول الكامل.",
+    okFull: "تمّت الموافقة! 🎉",
+    fullWhat: "بيفتحلك كل امتحانات {lvl} لمدّة {m} شهر، على جهازين.",
+    noFull: "طلبك للأسف ما انقبل.",
+    rj_soon: "مو متاح هلق — جرّب بعد فترة.",
+    rj_demo: "استفد من نسختك التجريبية أوّلاً.",
+    rj_contact: "احكي معنا مباشرةً منشان نرتّبلك ياه.",
+    rj_no: "الطلب مرفوض.",
   },
   de: {
     hello: "Willkommen! 👋\nBitte Sprache wählen:",
@@ -67,6 +84,21 @@ const T: Record<Lang, Record<string, string>> = {
     used: "⚠️ Dieser Code wurde bereits eingelöst. Für den vollen Zugang melden Sie sich bei uns.",
     err: "Es ist ein Fehler aufgetreten. Bitte später noch einmal.",
     back: "‹ Zurück",
+    full: "🔓 Vollzugang anfragen",
+    share: "📣 Bot weiterempfehlen",
+    shareText: "telc-Modelltests kostenlos testen 👇",
+    pickMonths: "Für wie viele Monate?",
+    mon: "{n} Monate",
+    sent: "Anfrage eingegangen ✅\nBitte kurz warten — Sie bekommen bald eine Antwort.",
+    pending: "Sie haben eine offene Anfrage ⏳\nBitte warten Sie auf die Antwort.",
+    needDemo: "Holen Sie sich zuerst Ihre Testversion, danach können Sie Vollzugang anfragen.",
+    okFull: "Freigegeben! 🎉",
+    fullWhat: "Öffnet alle Modelltests von {lvl} für {m} Monate, auf zwei Geräten.",
+    noFull: "Ihre Anfrage wurde leider nicht bewilligt.",
+    rj_soon: "Zurzeit nicht möglich — bitte später noch einmal.",
+    rj_demo: "Nutzen Sie bitte zuerst Ihre Testversion.",
+    rj_contact: "Melden Sie sich bitte direkt bei uns.",
+    rj_no: "Anfrage abgelehnt.",
   },
   uk: {
     hello: "Вітаємо! 👋\nОберіть мову:",
@@ -82,6 +114,21 @@ const T: Record<Lang, Record<string, string>> = {
     used: "⚠️ Цей код уже використано. Щодо повного доступу — напишіть нам.",
     err: "Сталася помилка. Спробуйте пізніше.",
     back: "‹ Назад",
+    full: "🔓 Повний доступ",
+    share: "📣 Поділитися ботом",
+    shareText: "Безкоштовні пробні іспити telc 👇",
+    pickMonths: "На скільки місяців?",
+    mon: "{n} міс.",
+    sent: "Запит надіслано ✅\nЗачекайте — скоро отримаєте відповідь.",
+    pending: "У вас є відкритий запит ⏳\nЗачекайте на відповідь.",
+    needDemo: "Спочатку отримайте пробну версію, потім зможете запросити повний доступ.",
+    okFull: "Схвалено! 🎉",
+    fullWhat: "Відкриє всі іспити {lvl} на {m} міс., на двох пристроях.",
+    noFull: "На жаль, ваш запит не схвалено.",
+    rj_soon: "Зараз недоступно — спробуйте пізніше.",
+    rj_demo: "Спершу скористайтеся пробною версією.",
+    rj_contact: "Напишіть нам напряму.",
+    rj_no: "Запит відхилено.",
   },
   en: {
     hello: "Welcome! 👋\nChoose your language:",
@@ -97,6 +144,21 @@ const T: Record<Lang, Record<string, string>> = {
     used: "⚠️ This code has been used. Contact us for full access.",
     err: "Something went wrong. Please try again later.",
     back: "‹ Back",
+    full: "🔓 Request full access",
+    share: "📣 Share this bot",
+    shareText: "Free telc practice exams 👇",
+    pickMonths: "For how many months?",
+    mon: "{n} months",
+    sent: "Request received ✅\nPlease wait — you’ll get a reply shortly.",
+    pending: "You have an open request ⏳\nPlease wait for the reply.",
+    needDemo: "Get your free trial first, then you can request full access.",
+    okFull: "Approved! 🎉",
+    fullWhat: "Opens every exam in {lvl} for {m} months, on two devices.",
+    noFull: "Your request was not approved.",
+    rj_soon: "Not available right now — please try again later.",
+    rj_demo: "Please use your free trial first.",
+    rj_contact: "Please contact us directly.",
+    rj_no: "Request declined.",
   },
 };
 
@@ -105,7 +167,7 @@ const t = (lang: Lang, key: string, vars?: Record<string, string | number>) =>
     /\{(\w+)\}/g, (_, k) => String(vars?.[k] ?? ""));
 
 /* ---------------- تلغرام ---------------- */
-type Btn = { text: string; callback_data: string };
+type Btn = { text: string; callback_data?: string; url?: string };
 
 async function tg(method: string, body: unknown) {
   const r = await fetch(TG(method), {
@@ -200,7 +262,123 @@ async function stepCode(chat: number, lang: Lang, from: any, levelId: string) {
     "",
     spent ? t(lang, "used") : t(lang, "how"),
   ];
-  await send(chat, lines.join("\n"));
+  await send(chat, lines.join("\n"), [
+    [{ text: t(lang, "full"), callback_data: `f|${lang}` }],
+    [{ text: t(lang, "share"), url: await shareLink(lang) }],
+  ]);
+
+  // ★ خبر إلك بس أوّل مرّة. الرجعات ما بتنبّهك — وإلا كل من فتح
+  //   الرسالة القديمة بيرنّ عندك.
+  if (!res.again) await toAdmin(
+    `🆕 <b>تجريبي جديد</b>\n` +
+    `${who(from)}\n${levelLine(res)} · ${res.test ?? ""}`);
+}
+
+/* رابط مشاركة البوت. اسم البوت بيجي من getMe مرّة وحدة بكل تشغيل
+   بارد — أحسن من سرّ زيادة بتنسى تحدّثه لو بدّلت البوت. */
+let uname = "";
+async function botUsername() {
+  if (uname) return uname;
+  try {
+    const r = await (await fetch(TG("getMe"))).json();
+    uname = r?.result?.username ?? "";
+  } catch { /* بيرجع فاضي، والزرّ بينشال تحت */ }
+  return uname;
+}
+async function shareLink(lang: Lang) {
+  const u = await botUsername();
+  return `https://t.me/share/url?url=${encodeURIComponent(`https://t.me/${u}`)}`
+       + `&text=${encodeURIComponent(t(lang, "shareText"))}`;
+}
+
+const who = (from: any) =>
+  `${from.first_name ?? ""} ${from.username ? "@" + from.username : ""}`.trim()
+  + ` · <code>${from.id}</code>`;
+const levelLine = (r: any) =>
+  r.provider && r.stufe ? `${r.provider} · ${r.stufe}` : (r.level_id ?? "");
+
+/* قناتك الخاصة. بلا ADMIN_CHAT_ID الوظيفة بتضل تشتغل بلا إشعارات
+   بدل ما تطيح — الطالب ما إله ذنب إنّك ما ظبّطت السرّ. */
+async function toAdmin(text: string, keyboard?: Btn[][]) {
+  if (!ADMIN) return;
+  await send(Number(ADMIN), text, keyboard).catch(
+    (e) => console.error("toAdmin:", String(e)));
+}
+
+/* ---------------- الوصول الكامل ---------------- */
+async function stepMonths(chat: number, lang: Lang) {
+  await send(chat, t(lang, "pickMonths"), [
+    [1, 2, 3].map((n) => ({
+      text: t(lang, "mon", { n }), callback_data: `m|${lang}|${n}` })),
+    [{ text: t(lang, "back"), callback_data: `b|${lang}` }],
+  ]);
+}
+
+async function stepRequest(chat: number, lang: Lang, from: any, months: number) {
+  let res: any;
+  try {
+    res = await rpc("bot_request_access",
+      { p_telegram_id: from.id, p_months: months });
+  } catch (e) {
+    // ما أخد تجريبي بعد: منقلّه بلغته بدل رسالة خطأ عامّة
+    if (String(e).includes("no_demo_yet"))
+      return void await send(chat, t(lang, "needDemo"));
+    throw e;
+  }
+
+  await send(chat, t(lang, res.again ? "pending" : "sent"));
+  if (res.again) return;          // ما منزعجك مرّتين بنفس الطلب
+
+  await toAdmin(
+    `🔓 <b>طلب وصول كامل</b>\n` +
+    `${who(from)}\n` +
+    `${levelLine(res)} · <b>${res.months}</b> شهر`,
+    [[{ text: "✅ وافق", callback_data: `A|${res.request_id}` },
+      { text: "✖️ ارفض", callback_data: `R|${res.request_id}` }]]);
+}
+
+/* ---------------- قرارك ---------------- */
+const REASONS = ["soon", "demo", "contact", "no"];
+const REASON_LABEL: Record<string, string> = {
+  soon: "مو هلق", demo: "جرّب التجريبي", contact: "احكي معنا", no: "مرفوض",
+};
+
+async function askReason(chat: number, id: string) {
+  await send(chat, "شو السبب يلي بدّك يوصله؟",
+    rows(REASONS.map((k) => ({ text: REASON_LABEL[k], callback_data: `X|${id}|${k}` }))));
+}
+
+async function decide(chat: number, from: any, id: string,
+                      approve: boolean, reason?: string) {
+  let res: any;
+  try {
+    res = await rpc("bot_decide_request", {
+      p_admin_telegram_id: from.id, p_request_id: id,
+      p_approve: approve, p_reason: reason ?? null });
+  } catch (e) {
+    // ★ مين مو بـbot_admins بيوصل لهون بس القاعدة بترفضه
+    if (String(e).includes("not_bot_admin"))
+      return void await send(chat, "⛔ ما عندك صلاحية.");
+    throw e;
+  }
+  if (!res.ok) return void await send(chat, `سبق وانبتّ فيه: ${res.already}`);
+
+  const lang = (T[res.lang as Lang] ? res.lang : "de") as Lang;
+  const stud = Number(res.chat_id);
+
+  if (approve) {
+    await send(stud, [
+      `<b>${t(lang, "okFull")}</b>`, "",
+      `${t(lang, "codeIs")} <code>${res.code}</code>`,
+      `${t(lang, "linkIs")} ${APP_URL}`, "",
+      t(lang, "fullWhat", { lvl: "", m: res.months }),
+      "", t(lang, "how"),
+    ].join("\n"));
+    await send(chat, `✅ انبعت الكود <code>${res.code}</code> لـ${res.username ?? stud}`);
+  } else {
+    await send(stud, `${t(lang, "noFull")}\n\n${t(lang, "rj_" + reason)}`);
+    await send(chat, `✖️ انرفض (${REASON_LABEL[reason ?? "no"]})`);
+  }
 }
 
 /* ---------------- المدخل ---------------- */
@@ -233,15 +411,25 @@ Deno.serve(async (req) => {
       const b = rest.join("|");
       const lang = (T[a as Lang] ? a : fallback) as Lang;
 
+      // أزرارك إنت: المعرّف مو لغة، والقرار بينتحقّق بالقاعدة
+      if (kind === "A") { await decide(chat, from, a, true); return new Response("ok"); }
+      if (kind === "R") { await askReason(chat, a);          return new Response("ok"); }
+      if (kind === "X") { await decide(chat, from, a, false, b); return new Response("ok"); }
+
       if (kind === "g" || kind === "b")
         await stepProvider(chat, (T[a as Lang] ? a : lang) as Lang,
                            await rpc("bot_levels"));
       else if (kind === "p") await stepStufe(chat, lang, await rpc("bot_levels"), b);
       else if (kind === "l") await stepCode(chat, lang, from, b);
+      else if (kind === "f") await stepMonths(chat, lang);
+      else if (kind === "m") await stepRequest(chat, lang, from, Number(b));
       return new Response("ok");
     }
 
     const text = String(update.message?.text ?? "");
+    // رقمك بتلغرام — بدّك ياه مرّة وحدة تحطّه بجدول bot_admins
+    if (/^\/id\b/.test(text))
+      return void await send(chat, `<code>${from.id}</code>`), new Response("ok");
     if (/^\/(start|sprache|language|lang)\b/.test(text))
       await stepLang(chat, fallback);
     else

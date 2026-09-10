@@ -1086,7 +1086,7 @@ const STALE_MSG = '⚠ Die Datenbank ist noch nicht aktualisiert — bitte '
    بتفشل بصمت بطريقتها، وولا وحدة بتقول السبب. الرقم بيخلّي اللوحة تقوله.
 
    لما يتضاف ترحيل: يزيد الرقم هون وبـ0019_version.sql. */
-const SCHEMA_MIN = 23;
+const SCHEMA_MIN = 24;
 let schemaHave = null;      // null = لسا ما انفحص
 
 async function checkSchema(){
