@@ -11,7 +11,7 @@
 | [modell-05](modell-05/) | **BETRIEBSSPORT** | 53 | 125 |
 | [modell-06](modell-06/) | **EINFÜHRUNGSTAG** | 53 | 125 |
 | [modell-07](modell-07/) | **KANTINE** | 53 | 125 |
-| [modell-08](modell-08/) | **FIRMENORGANIGRAMM** | 54 | 135 |
+| [modell-08](modell-08/) | **FIRMENORGANIGRAMM** | 54 | 125 |
 
 كل مجلّد يحتوي على:
 - `text.txt` (نص الامتحان الكامل مع الحلول الرسمية متوافق مع نظام `admin/parse.js`)

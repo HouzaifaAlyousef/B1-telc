@@ -1,5 +1,5 @@
 # FIRMENORGANIGRAMM
-Untertitel: 45 Aufgaben · 120 Minuten
+Untertitel: 54 Aufgaben · 125 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -24,7 +24,7 @@ Teile: hv1, hv2, hv3, hv4
 
 ## Block: block-hoeren-schreiben
 Titel: Hören und Schreiben
-Minuten: 15
+Minuten: 5
 Hinweis: Aufgabe 41 und Telefonnotiz
 Punkte: 9
 Teile: hvs

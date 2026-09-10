@@ -173,7 +173,7 @@ on conflict (item_id) do update set answer = excluded.answer, explanation = excl
 
 -- ================= modell-17 · TANJA =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('b1', 'modell-17', 'TANJA', '41 Aufgaben · 150 Minuten',
+values ('b1', 'modell-17', 'TANJA', '41 Aufgaben · 120 Minuten',
         '[{"id": "block-lv-sb", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "maxPoints": 105, "missing": 0, "availablePoints": 105}, {"id": "block-sa", "parts": ["sa"], "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "maxPoints": 45, "missing": 0, "availablePoints": 45}]'::jsonb, 41, true, 17)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 

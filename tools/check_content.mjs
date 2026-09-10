@@ -24,7 +24,7 @@ const dirs = (p) => existsSync(p)
   ? readdirSync(p).filter(d => !d.startsWith('.') && statSync(path.join(p, d)).isDirectory())
   : [];
 
-let nFilled = 0, nEmpty = 0, nBad = 0, nMissing = 0, nUnreach = 0;
+let nFilled = 0, nEmpty = 0, nBad = 0, nMissing = 0, nUnreach = 0, nLying = 0;
 const rows = [];
 
 for (const prov of dirs(path.join(ROOT, 'content'))) {
@@ -87,10 +87,26 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
           .map(b => `${b.id} ${b.availablePoints}/${b.maxPoints}`).join('، '));
       }
 
+      // العنوان الفرعي هو أوّل شي بيقرأه الطالب تحت اسم الامتحان
+      // (assets/app.js). لمّا يقول «45 Aufgaben» والامتحان فيه ٥٣،
+      // أو «150 Minuten» والكتل بتجمع ١٢٠، هاد كذب على الطالب
+      // بمكان ما بيراجعه حدا. منقارنه بالملف نفسه.
+      const st  = String(r.test.subtitle || '');
+      const mins = (r.test.blocks || []).reduce((a, b) => a + (b.minutes || 0), 0);
+      const nA = st.match(/(\d+)\s*Aufgaben/), nM = st.match(/(\d+)\s*Minuten/);
+      const lying = [];
+      if (nA && +nA[1] !== c.items) lying.push(`${nA[1]} Aufgaben بس فعلياً ${c.items}`);
+      if (nM && +nM[1] !== mins)    lying.push(`${nM[1]} Minuten بس فعلياً ${mins}`);
+      if (lying.length) {
+        nLying += lying.length;
+        note.push('★ العنوان الفرعي: ' + lying.join('، '));
+      }
+
       if (r.warnings.length) note.push(`${r.warnings.length} تحذير`);
 
       // فحص صارم: تحذير، ملف مفقود، أو بلوك نقاطه ما بتنطال بيوقّف البناء
-      const bad = r.warnings.length || gone.length || unreachable.length;
+      const bad = r.warnings.length || gone.length || unreachable.length
+              || lying.length;
       rows.push([bad ? '!' : '✓', id, note.join(' · ')]);
       if (bad) nBad++; else nFilled++;
     }
@@ -100,5 +116,6 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
 const w = Math.max(...rows.map(r => r[1].length), 10);
 for (const [m, id, note] of rows) console.log(`  ${m} ${id.padEnd(w)}  ${note}`);
 console.log(`\n  ${nFilled} جاهز · ${nEmpty} فاضي · ${nBad} فيه مشكلة · `
-            + `${nMissing} ملف ناقص · ${nUnreach} بلوك نقاطه ما بتطابق`);
+            + `${nMissing} ملف ناقص · ${nUnreach} بلوك نقاطه ما بتطابق · `
+            + `${nLying} عنوان فرعي بيكذب`);
 process.exit(nBad ? 1 : 0);
