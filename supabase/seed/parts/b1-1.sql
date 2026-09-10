@@ -1,4 +1,4 @@
--- جزء 1 من 4 — نماذج modell-01–modell-04
+-- جزء 1 من 4 — نماذج modell-01–modell-05
 -- مولّد من supabase/seed/b1.sql بـtools/split_seed.sh — لا تعدّله بالإيد
 -- آمن للإعادة: شغّله مرتين ما بيغيّر شي.
 
@@ -647,6 +647,166 @@ from (values
     ('hv3', '60', 'f', null)
 ) as v(section_id, item_id, answer, explanation)
 join tests t on t.level_id = 'b1' and t.slug = 'modell-04'
+join sections s on s.test_id = t.id and s.section_id = v.section_id
+join items i on i.section_id = s.id and i.item_id = v.item_id
+on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
+
+-- ================= modell-05 · NICOLE =================
+insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
+values ('b1', 'modell-05', 'NICOLE', '61 Aufgaben · 150 Minuten',
+        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 105.0, "missing": 0}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45, "missing": 0}]'::jsonb, 61, true, 5)
+on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
+
+insert into sections (test_id, section_id, "group", title, minutes, instruction, format, config, sort)
+select t.id, v.section_id, v.grp, v.title, v.minutes, v.instruction, v.format, v.config, v.sort
+from (values
+    ('lv1', 'Leseverstehen', 'Leseverstehen, Teil 1', 15, 'Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.', 'matching', '{"bank": [{"key": "A", "text": "Sportkurse für ältere Menschen"}, {"key": "B", "text": "Für Jugendliche ist der Computer etwas Alltägliches"}, {"key": "C", "text": "Das Interesse am Handel über Internet nimmt stark ab"}, {"key": "D", "text": "Arbeiten am Computer verursacht häufig Rückenschmerzen"}, {"key": "E", "text": "Internetnutzer machen viele Dinge gleichzeitig"}, {"key": "F", "text": "Firmen müssen auch über Internet für Produkte werben"}, {"key": "G", "text": "Auch Freizei tsportarten sollten trainiert werden"}, {"key": "H", "text": "Was man gegen Rückenschmerzen tun kann"}, {"key": "I", "text": "Kinder wollen mit dem Computer nur spielen"}, {"key": "J", "text": "Internetnutzer interessieren sich nicht fürs Fernsehen"}], "bankTitle": "Überschriften", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 0),
+    ('lv2', 'Leseverstehen', 'Leseverstehen, Teil 2', 20, 'Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Computerkurse sind schon für Kinder spannend", "b": true}, {"t": "Schreiben, Rechnen, Programme installieren", "b": true}, {"t": "Schaden oder nützen Computer unseren Kindern? Fragen sich viele Eltern. Ein Computerkurs Veranstalter ist sich ganz sicher: wenn man den Kindern beibringt, den Computer richtig einzusetzen, ist sogar eine Lernhilfe. Seit fünf Jahren bietet Franz Krapfi Krapfen Bauer Computerkurse für Kinder zwischen sieben und vierzehn Jahren an und ist von seinen Schülern begeistert Am liebsten würden die Kinder drei Stunden ohne Pause durcharbeiten Und das obwohl in seinen Kursen nicht gespielt wird, sondern der Computer als Lernhilfe genutzt wird. Im ersten Kurs lernen die Kinder den Umgang mit dem Betriebssystem und erste Grundzüge der Textverarbeitung.", "b": false}, {"t": "Das Geheimnis von Krapfen Bauer Ich erkläre die Programme in der Sprache der Kinder und langweile sie nicht mit technischen Details. Sein Talent entdeckte er, als sich seine eigenen Kinder für den PC) zu interessieren begannen. Seine Tochter brachte immer mehr Mitschüler zum Sonntäglich PC-Training mit, bis eines Tages klar war: Das muss auf professionelle Beine gestellt werden. Das schwierigste war, einen passenden und vor allem kostengünstige Raum zu finden, denn Geld brachten die Kinderkurse am Anfang sehr wenig ein; Ein Bekannte, der Direktor eines Hotels ist, hatte schließlich die passende Lösung Die Schulungsräume im Hotel stehen den Kindern nun an den Wochenenden zur Verfügung Allgemein rät Krapffen Bauer, Kinder so früh wie möglich an den Computer zu lassen, allerdings nur unter Aufsicht und mit den richtigen Programmen. Beim Computer ist es wie beim Fernseher wenn man ihn als Kindermädchen einsetzt, ohne sich darum zu kümmern, was die Kinder damit machen, kann das negativ Folgen haben schon für drei bis vierjährige Kinder gebe es sehr gute Spielprogramme, die mit Vorschulaufgaben vergleichbar wären. Gerade in der Zeit nach Weihnachten haben Krapfis Kindercomputerkurse Hochsaison. Viele Eltern haben einen Computer unter den Christbaum gestellt und wollen jetzt, dass ihre Kinder frühzeitig damit umgehen lernen. Wobei der Seminarleiter für manche Eltern sogar zu viel wissen weitergibt Einige Eltern haben sich schon beschwert, weil ihre Kinder jetzt Hausaufgaben am Computer lösen Die manchmal befürchtet Überordnung der Kinder hat Krapfen Bauer noch nicht erlebt. Ganz im Gegenteil, die kleinen sind oft gar nicht zu stoppen, wenn sie wieder etwas Neues erlernt haben. Viele Teilnehmer kommen dann auch gern zu den nächsten Kursen. Zeichenprogramm oder Spiele kommen in den Computerkursen höchstens als Belohnung am Rande vor.", "b": false}, {"t": "Das größte Hindernis auf dem Weg zum Computerexperten ist für die Kinder in manchen Fällen die negative Einstellung der Eltern.", "b": false}, {"t": "Die Erwachsene kennen oft nur die komplizierten Datenbankwendungen und Programme aus dem Büro und können sich gar nicht vorstellen, was man mit dem Computer noch alles machen kann bedauert Krapfen Bauer natürlich wirkt sich diese negative Grundeinstellung auch auf die Kinder aus, Überraschenderweise sind es dann oft die Großeltern, die für Computerkurse das Geld geben, damit ihre Enkelkinder mit dem PC richtig umgehen lernen. Information und Anmeldung Tel: 0664/ 33 33 14 E Mail: Krapfi@aon.at", "b": false}]}], "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 1),
+    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.', 'matching', '{"bank": [{"key": "A", "text": ""}, {"key": "B", "text": ""}, {"key": "C", "text": ""}, {"key": "D", "text": ""}, {"key": "E", "text": ""}, {"key": "F", "text": ""}, {"key": "G", "text": ""}, {"key": "H", "text": ""}, {"key": "I", "text": ""}, {"key": "J", "text": ""}, {"key": "K", "text": ""}, {"key": "L", "text": ""}, {"key": "X", "text": ""}], "bankTitle": "Anzeigen", "bankImage": "img/m05-lv3.jpg", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 2),
+    ('sb1', 'Sprachbausteine', 'Sprachbausteine, Teil 1', 20, 'Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Genuss mit Kaffee Partner", "b": false}, {"t": "Sehr geehrte Frau Thoma,", "b": false}, {"t": "schade, (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns,", "b": false}, {"t": "weil wir (23) nicht das richtige Angebot gemacht haben, seit wir uns vor einiger Zeit in Köln", "b": false}, {"t": "auf der ANUGA, der großen Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog nachholen, den Sie heute erhalten.", "b": false}, {"t": "Sie (26) darin viele nützliche und attraktive Dinge rund um das Thema Kaffee und Trinkwasser", "b": false}, {"t": "(27) Mitarbeiter und Besucher. Aber auch Tee, kleine Leckereien und nette Kalender für Büro", "b": false}, {"t": "und Zuhause (28) Ihnen unser Geschenkkatalog.", "b": false}, {"t": "Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie!", "b": false}, {"t": "(30) Grüße aus Wallenhorst", "b": false}, {"t": "Ihr Kaffee Partner-Team", "b": false}, {"t": "Manfred Pflüger", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 3),
+    ('sb2', 'Sprachbausteine', 'Sprachbausteine, Teil 2', 15, 'Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.', 'wordbank', '{"bank": [{"key": "A", "text": "ABER"}, {"key": "B", "text": "DARF"}, {"key": "C", "text": "DASS"}, {"key": "D", "text": "DESHALB"}, {"key": "E", "text": "DIESE"}, {"key": "F", "text": "IN"}, {"key": "G", "text": "KANN"}, {"key": "H", "text": "KÖNNTEN"}, {"key": "I", "text": "MICH"}, {"key": "J", "text": "MIR"}, {"key": "K", "text": "OB"}, {"key": "L", "text": "OBWOHL"}, {"key": "M", "text": "UNTER"}, {"key": "N", "text": "VOR"}, {"key": "O", "text": "WANN"}], "bankTitle": "Wörterliste", "passages": [{"paragraphs": [{"t": "Sehr geehrte Damen und Herren,", "b": false}, {"t": "mit großem Interesse und auch mit Hoffnung habe ich Ihre Anzeige gelesen. leider (31) ich Sie im Moment nicht anrufen, da das Telefon immer belegt ist. (32) schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind zurzeit nicht so gut. Ich mache (35) vor allem bei den Fächern Physik und Mathematik große Sorgen. Matthias ist nicht dumm, aber er ist etwas faul und denkt, er brauche (36) Fächer nicht.", "b": false}, {"t": "Fragen wollte ich nun, (37) es bei Ihnen auch individuelle Physik und Mathematiknachhilfe gibt. Und (38) finden die Stunden statt? Am späten Nachmittag oder am frühen Abend? Mir wäre es jedenfalls sehr wichtig, dass Sie meinem Sohn helfen (39).", "b": false}, {"t": "Ab 19.30 Uhr bin ich telefonisch (40) der Nummer 0428-1734 zu erreichen.", "b": false}, {"t": "Mit freundlichen Grüßen JOSEF MARTINELL", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 4),
+    ('hv1', 'Hörverstehen', 'Hörverstehen, Teil 1', 8, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 5),
+    ('hv2', 'Hörverstehen', 'Hörverstehen, Teil 2', 14, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 6),
+    ('hv3', 'Hörverstehen', 'Hörverstehen, Teil 3', 8, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 7),
+    ('sa', 'Schriftlicher Ausdruck', 'Schriftlicher Ausdruck', 30, 'Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:', 'writing', '{"brief": {"intro": "Eine Freundin beschreibt in einem Brief, welche Probleme sie mit ihrem Bruder hat und bittet Sie um Rat:", "greeting": "Liebe(r)........", "paragraphs": ["entschuldige, dass ich dir so lange nicht mehr geschrieben habe. Aber weißt du mein älterer Bruder, der schon lange im Ausland lebt, ist jetzt für zwei Monate bei uns. Wir unternehmen einiges zusammen, Z.B. gehen wir nachmittags ins Schwimmbad oder abends ins Kino.", "Wir verstehen uns eigentlich ganz gut, aber dennoch habe ich ein Problem mit ihm: Wenn es im Fernsehen Sportsendungen gibt, dann bekomme ich ihn nicht mehr weg vom Fernseher! Er sitzt dann stundenlang nur da und sieht fern, ganz egal wie schön das Wetter draußen ist! Was soll ich bloß tun? Überhaupt nichts sagen oder soll ich mit ihm deswegen streiten? Er fährt bald wieder weg und ich möchte doch mit ihm zusammen sein. Was würdest du machen? Hast du vielleicht ein paar Tipps oder Ratschläge für mich?", "Herzliche Grüße"], "signature": "Nicole"}, "hints": ["Bevor Sie den Brief schreiben ,überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"], "criteria": [{"title": "Aufgabenbewältigung", "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"}, {"title": "Kommunikative Gestaltung", "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"}, {"title": "Formale Richtigkeit", "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"}], "grades": [{"key": "A", "points": 5}, {"key": "B", "points": 3}, {"key": "C", "points": 1}, {"key": "D", "points": 0}], "factor": 3, "maxPoints": 45, "availablePoints": 45, "missing": 0}'::jsonb, 8)
+) as v(section_id, grp, title, minutes, instruction, format, config, sort)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-05'
+on conflict (test_id, section_id) do update set "group" = excluded."group", title = excluded.title, minutes = excluded.minutes, instruction = excluded.instruction, format = excluded.format, config = excluded.config, sort = excluded.sort;
+
+insert into items (section_id, item_id, text, options, points, meta, sort)
+select s.id, v.item_id, v.text, v.options, v.points, v.meta, v.sort
+from (values
+    ('lv1', '1', 'Falsche Körperhaltung, mangelnde Bewegung und psychische Faktoren sind meistens die Hauptfaktoren für Rückenschmerzen. Hier finden Sie ein ganzheitliches Trainingsprogramm, das hilft: Alle Übungen lassen sich im Alltag gut umsetzen und sind auch bei Vorschäden der Wirbelsäule durchführbar. Mit speziellen Entspannungstraining. 114 Seiten, durchgehend Farbabbildungen, 18×25 cm, gebunden.', null::jsonb, 5.0, null::jsonb, 0),
+    ('lv1', '2', 'Der Computer gehört heute wie selbstverständlich in das Jugendzimmer. Wie früher die Modelleisendbahn oder die Barbie-Puppe. Was aber genau treiben die Kids mit den hochgerüsteten Rechenmaschinen auf dem Schreibtisch? Das wollte die Jugendzeitschrift Bravo wissen. Selbstverständlich spielen, aber auch andere, nützlichere Dinge wie Texte schreiben oder Hausaufgaben für die Schule erledigen, Tabellen erstellen und natürlich im Internet herumsurfen.', null::jsonb, 5.0, null::jsonb, 1),
+    ('lv1', '3', 'Inline-Skating ist ein Idealer Ausdauersport – nicht nur für die jüngere Generation. Das haben jetzt Untersuchungen am Institut für Sportwissenschaften an der Universität Frankfurt bestätigt. Danach trainiert Inline-Skating das Herz-Kreislauf-System, beansprucht die wichtigsten Muskelgruppen und fördert die Koordination. Die Faszination dieser rasanten Freizeitsportart wirke generationenübergreifend und erfasst die Jungen wie die Alten, sagt Dr. Hans Jürgen Ahrens. Allerdings fragt der Arzt kritisch, warum jeder Skifahrer, Windsurfer oder Tennisspieler zu Beginn Trainingsstunden bei einem Profi belege, oft aber nicht der Inliner: Dabei lässt sich das Verletzungsrisiko durch regelmäßiges Fahrtraining deutlich verringern. In einem Kurs sollten die wichtigsten Sturz- Brems und Fahrtechniken erlernt werden.', null::jsonb, 5.0, null::jsonb, 2),
+    ('lv1', '4', 'Eine Studie der Fernsehgesellschaften ARD und ZDF besagt, dass deutsche Internetnutzer sich auch mit anderen Dingen beschäftigen, wenn sie im Internet sind. Ein Großteil der beobachteten Personen telefoniert beim Surfen, hört nebenbei Musik, oder arbeitet mit anderen Computerprogrammen. Aber auch Konkurrenzmedien wie Fernsehen und Zeitschriften finden große Aufmerksamkeit, während im Internet nach Informationen gesucht wird.', null::jsonb, 5.0, null::jsonb, 3),
+    ('lv1', '5', 'Geschäfte über das Internet werden in Deutschland auch in Zukunft Milliarden Euro einbringen. In spätestens zwei Jahren werden 20 Prozent aller europäischen Geschäfte über das Internet abgewickelt, sagen die Fachleute. Heutzutage ist es kaum vorstellbar, dass ein Unternehmen allein mit klassischen Verkaufsmethoden und ohne zusätzliches Online- Marketing erfolgreich sein wird. Wer heute nicht anfängt, diese Möglichkeiten zu nutzen, kann in Zukunft seine Kunden verlieren. Das Argument, dass die angebotene Ware sich ja auch ohne Internet gut verkaufe, stimmt so nicht mehr. Denn das Internet beeinflusst auch das Käuferverhalten auf der Straße.', null::jsonb, 5.0, null::jsonb, 4),
+    ('lv2', '6', 'In der Computerkursen von Franz Krapfenbauer', '[{"key": "A", "text": "lernen die Kinder vor allem neue Computerspiele kennen.."}, {"key": "B", "text": "lernen Kinder ab 14 Jahren das richtige Arbeiten mit dem Computer."}, {"key": "C", "text": "werden die Computerprogramme so einfach wie möglich erklärt."}]'::jsonb, 5.0, null::jsonb, 0),
+    ('lv2', '7', 'Am Anfang war es für Franz Krapfenbauer schwierig,', '[{"key": "A", "text": "einen geeigneten Raum für die Kurse zu finden."}, {"key": "B", "text": "genug Kinder für den Computerkurs zu finden."}, {"key": "C", "text": "seine Tochter für den Computer zu begeistern."}]'::jsonb, 5.0, null::jsonb, 1),
+    ('lv2', '8', 'Herr Krapfenbauer meint,', '[{"key": "A", "text": "dass auch kleine Kinder mit dem Computer arbeiten sollen."}, {"key": "B", "text": "dass Kinderunter vier Jahren zu jung für den Computer seien."}, {"key": "C", "text": "dass sich Kinder alleine mit dem Computer beschäftigen sollen."}]'::jsonb, 5.0, null::jsonb, 2),
+    ('lv2', '9', 'Viele Kinder', '[{"key": "A", "text": "machen im Kurs ihre Hausaufgaben am Computer."}, {"key": "B", "text": "machen nach dem ersten Kurs noch einen weiteren Kurs."}, {"key": "C", "text": "probieren im Kurs neue Computerspiele aus."}]'::jsonb, 5.0, null::jsonb, 3),
+    ('lv2', '10', 'Franz Krapfenbauer erzählt,', '[{"key": "A", "text": "dass die Computerkurse oft von den Großeltern bezahlt werden."}, {"key": "B", "text": "dass einige Eltern selbst als Computerexperten arbeiten."}, {"key": "C", "text": "dass er auch Computerkurse in Büros plant."}]'::jsonb, 5.0, null::jsonb, 4),
+    ('lv3', '11', 'Sie suchen für Ihnen 5-Jährigen Sohn einen Schikurs.', null::jsonb, 2.5, null::jsonb, 0),
+    ('lv3', '12', 'Sie möchten am Wochenende in den Zoo gehen.', null::jsonb, 2.5, null::jsonb, 1),
+    ('lv3', '13', 'Sie suchen eine Zeitschrift für Ihre Freundin, die sich für Mode interessiert.', null::jsonb, 2.5, null::jsonb, 2),
+    ('lv3', '14', 'Ihre Bekannte sucht einen Job in einem Modegeschäft.', null::jsonb, 2.5, null::jsonb, 3),
+    ('lv3', '15', 'Sie möchten Ihre Freunde am Montagabend in den Zirkus einladen.', null::jsonb, 2.5, null::jsonb, 4),
+    ('lv3', '16', 'Ihre 10-jährige Tochter möchte sich gern einen Tierfilm ansehen.', null::jsonb, 2.5, null::jsonb, 5),
+    ('lv3', '17', 'Sie möchten für Ihre Familie billige Winterkleidung kaufen.', null::jsonb, 2.5, null::jsonb, 6),
+    ('lv3', '18', 'Sie möchten einen Schikurs machen und sich dafür Schier leihen.', null::jsonb, 2.5, null::jsonb, 7),
+    ('lv3', '19', 'Sie machen in Österreich Urlaub und möchten sich einen Film im englischen Original ansehen.', null::jsonb, 2.5, null::jsonb, 8),
+    ('lv3', '20', 'Sie interessieren sich für Tiere und möchten ihnen helfen.', null::jsonb, 2.5, null::jsonb, 9),
+    ('sb1', '21', 'Genuss mit Kaffee Partner Sehr geehrte Frau Thoma, schade, (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). …', '[{"key": "A", "text": "dass"}, {"key": "B", "text": "darum"}, {"key": "C", "text": "weil"}]'::jsonb, 1.5, null::jsonb, 0),
+    ('sb1', '22', '… (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns, weil wir (23) nicht das …', '[{"key": "A", "text": "seid"}, {"key": "B", "text": "sein"}, {"key": "C", "text": "sind"}]'::jsonb, 1.5, null::jsonb, 1),
+    ('sb1', '23', '… Partner (22). Vielleicht liegt das an uns, weil wir (23) nicht das richtige Angebot gemacht haben, seit wir uns …', '[{"key": "A", "text": "euch"}, {"key": "B", "text": "Ihnen"}, {"key": "C", "text": "Sie"}]'::jsonb, 1.5, null::jsonb, 2),
+    ('sb1', '24', '… der ANUGA, der großen Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog …', '[{"key": "A", "text": "kennen gelernt"}, {"key": "B", "text": "kennen lernen"}, {"key": "C", "text": "kennen lernte"}]'::jsonb, 1.5, null::jsonb, 3),
+    ('sb1', '25', '… Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog nachholen, den Sie …', '[{"key": "A", "text": "mochten"}, {"key": "B", "text": "möchten"}, {"key": "C", "text": "mögen"}]'::jsonb, 1.5, null::jsonb, 4),
+    ('sb1', '26', '… aktuellen Katalog nachholen, den Sie heute erhalten. Sie (26) darin viele nützliche und attraktive Dinge rund um das …', '[{"key": "A", "text": "fanden"}, {"key": "B", "text": "finden"}, {"key": "C", "text": "findet"}]'::jsonb, 1.5, null::jsonb, 5),
+    ('sb1', '27', '… attraktive Dinge rund um das Thema Kaffee und Trinkwasser (27) Mitarbeiter und Besucher. Aber auch Tee, kleine …', '[{"key": "A", "text": "für"}, {"key": "B", "text": "von"}, {"key": "C", "text": "wegen"}]'::jsonb, 1.5, null::jsonb, 6),
+    ('sb1', '28', '… kleine Leckereien und nette Kalender für Büro und Zuhause (28) Ihnen unser Geschenkkatalog. Viel Spaß beim Blättern und …', '[{"key": "A", "text": "gezeigt"}, {"key": "B", "text": "zeigen"}, {"key": "C", "text": "zeigt"}]'::jsonb, 1.5, null::jsonb, 7),
+    ('sb1', '29', '… Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie! (30) Grüße aus Wallenhorst Ihr Kaffee …', '[{"key": "A", "text": "mich"}, {"key": "B", "text": "sich"}, {"key": "C", "text": "uns"}]'::jsonb, 1.5, null::jsonb, 8),
+    ('sb1', '30', '… beim Blättern und Aussuchen. Wir freuen (29) auf Sie! (30) Grüße aus Wallenhorst Ihr Kaffee Partner-Team Manfred …', '[{"key": "A", "text": "Freundlich"}, {"key": "B", "text": "Freundliche"}, {"key": "C", "text": "Freundlichen"}]'::jsonb, 1.5, null::jsonb, 9),
+    ('sb2', '31', '… auch mit Hoffnung habe ich Ihre Anzeige gelesen. leider (31) ich Sie im Moment nicht anrufen, da das Telefon immer …', null::jsonb, 1.5, null::jsonb, 0),
+    ('sb2', '32', '… im Moment nicht anrufen, da das Telefon immer belegt ist. (32) schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht …', null::jsonb, 1.5, null::jsonb, 1),
+    ('sb2', '33', '… schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind …', null::jsonb, 1.5, null::jsonb, 2),
+    ('sb2', '34', '… Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind zurzeit nicht so gut. Ich mache …', null::jsonb, 1.5, null::jsonb, 3),
+    ('sb2', '35', '… seine Leistungen sind zurzeit nicht so gut. Ich mache (35) vor allem bei den Fächern Physik und Mathematik große …', null::jsonb, 1.5, null::jsonb, 4),
+    ('sb2', '36', '… nicht dumm, aber er ist etwas faul und denkt, er brauche (36) Fächer nicht. Fragen wollte ich nun, (37) es bei Ihnen …', null::jsonb, 1.5, null::jsonb, 5),
+    ('sb2', '37', '… er brauche (36) Fächer nicht. Fragen wollte ich nun, (37) es bei Ihnen auch individuelle Physik und …', null::jsonb, 1.5, null::jsonb, 6),
+    ('sb2', '38', '… individuelle Physik und Mathematiknachhilfe gibt. Und (38) finden die Stunden statt? Am späten Nachmittag oder am …', null::jsonb, 1.5, null::jsonb, 7),
+    ('sb2', '39', '… es jedenfalls sehr wichtig, dass Sie meinem Sohn helfen (39). Ab 19.30 Uhr bin ich telefonisch (40) der Nummer …', null::jsonb, 1.5, null::jsonb, 8),
+    ('sb2', '40', '… meinem Sohn helfen (39). Ab 19.30 Uhr bin ich telefonisch (40) der Nummer 0428-1734 zu erreichen. Mit freundlichen …', null::jsonb, 1.5, null::jsonb, 9),
+    ('hv1', '41', 'Der Sprecher interessiert sich für Sport als für Kultur.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv1', '42', 'Die Sprecherin geht so oft sie kann ins Theater.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv1', '43', 'Der Sprecher hört besonders gern moderne Musik.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv1', '44', 'Die Sprecherin geht oft in Kunstausstellungen.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv1', '45', 'Die Sprecherin hätte gerne mehr Zeit für die Kultur.', null::jsonb, 5.0, null::jsonb, 4),
+    ('hv2', '46', 'Die Lehrerin fährt mit ihrer Klasse und an die Nordsee.', null::jsonb, 2.5, null::jsonb, 0),
+    ('hv2', '47', 'Herr Kühne hat den Brief der Lehrerin nicht erhalten.', null::jsonb, 2.5, null::jsonb, 1),
+    ('hv2', '48', 'Die Klassenfahrt beginnt an einem Samstag.', null::jsonb, 2.5, null::jsonb, 2),
+    ('hv2', '49', 'Herrn Kühnes Sohn Martin wird bei Busfahrten oft schlecht.', null::jsonb, 2.5, null::jsonb, 3),
+    ('hv2', '50', 'Die Fahrt mit dem Schiff dauert fünf bis sechs Stunden.', null::jsonb, 2.5, null::jsonb, 4),
+    ('hv2', '51', 'Das Haus, in dem die Schüler wohnen, gehört zu einem Hotel.', null::jsonb, 2.5, null::jsonb, 5),
+    ('hv2', '52', 'Die Klassenfahrt wird von einer Lehrerin und einem Lehrer geleitet.', null::jsonb, 2.5, null::jsonb, 6),
+    ('hv2', '53', 'Die Lehrerin empfiehlt, dass die Kinder nicht mehr als 50 Euro Taschengeld mitnehmen.', null::jsonb, 2.5, null::jsonb, 7),
+    ('hv2', '54', 'Katerina kann entweder mitfahren, oder in eine andere Klasse gehen.', null::jsonb, 2.5, null::jsonb, 8),
+    ('hv2', '55', 'Auf der Klassenfahrt darf nur mit Erlaubnis der Eltern geraucht werden.', null::jsonb, 2.5, null::jsonb, 9),
+    ('hv3', '56', 'Sie können mit dem Bus in die Innenstadt fahren.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv3', '57', 'Sie können noch eine Stunde durch alle Geschäfte laufen.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv3', '58', 'Dr. Krausch ist ab dem 18. Oktober wieder in der Praxis.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv3', '59', 'Alle Kunden müssen an der Kasse nebenan bezahlen.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv3', '60', 'Die Polizei informiert, dass alle Parkhäuser bei der Ausstellung besetzt sind.', null::jsonb, 5.0, null::jsonb, 4),
+    ('sa', 'A', 'Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:', null::jsonb, 0, '{"minWords": 100, "points": ["Eigene Erfahrungen mit Geschwistern, Freunden,", "Tipps für Nicole", "Was Sie über den Bruder denken", "Was Sie selbst gern gemeinsam mit anderen machen"]}'::jsonb, 0)
+) as v(section_id, item_id, text, options, points, meta, sort)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-05'
+join sections s on s.test_id = t.id and s.section_id = v.section_id
+on conflict (section_id, item_id) do update set text = excluded.text, options = excluded.options, points = excluded.points, meta = excluded.meta, sort = excluded.sort;
+
+insert into item_answers (item_id, answer, explanation)
+select i.id, v.answer, v.explanation
+from (values
+    ('lv1', '1', 'H', null),
+    ('lv1', '2', 'B', null),
+    ('lv1', '3', 'G', null),
+    ('lv1', '4', 'E', null),
+    ('lv1', '5', 'F', null),
+    ('lv2', '6', 'C', null),
+    ('lv2', '7', 'A', null),
+    ('lv2', '8', 'A', null),
+    ('lv2', '9', 'B', null),
+    ('lv2', '10', 'A', null),
+    ('lv3', '11', 'D', null),
+    ('lv3', '12', 'E', null),
+    ('lv3', '13', 'C', null),
+    ('lv3', '14', 'K', null),
+    ('lv3', '15', 'X', null),
+    ('lv3', '16', 'J', null),
+    ('lv3', '17', 'X', null),
+    ('lv3', '18', 'B', null),
+    ('lv3', '19', 'X', null),
+    ('lv3', '20', 'H', null),
+    ('sb1', '21', 'B', null),
+    ('sb1', '22', 'C', null),
+    ('sb1', '23', 'B', null),
+    ('sb1', '24', 'A', null),
+    ('sb1', '25', 'B', null),
+    ('sb1', '26', 'B', null),
+    ('sb1', '27', 'B', null),
+    ('sb1', '28', 'C', null),
+    ('sb1', '29', 'C', null),
+    ('sb1', '30', 'B', null),
+    ('sb2', '31', 'G', 'Das Wort lautet: KANN'),
+    ('sb2', '32', 'D', 'Das Wort lautet: DESHALB'),
+    ('sb2', '33', 'F', 'Das Wort lautet: IN'),
+    ('sb2', '34', 'A', 'Das Wort lautet: ABER'),
+    ('sb2', '35', 'J', 'Das Wort lautet: MIR'),
+    ('sb2', '36', 'E', 'Das Wort lautet: DIESE'),
+    ('sb2', '37', 'K', 'Das Wort lautet: OB'),
+    ('sb2', '38', 'O', 'Das Wort lautet: WANN'),
+    ('sb2', '39', 'H', 'Das Wort lautet: KÖNNTEN'),
+    ('sb2', '40', 'M', 'Das Wort lautet: UNTER'),
+    ('hv1', '41', 'r', null),
+    ('hv1', '42', 'r', null),
+    ('hv1', '43', 'f', null),
+    ('hv1', '44', 'f', null),
+    ('hv1', '45', 'r', null),
+    ('hv2', '46', 'f', null),
+    ('hv2', '47', 'r', null),
+    ('hv2', '48', 'f', null),
+    ('hv2', '49', 'r', null),
+    ('hv2', '50', 'f', null),
+    ('hv2', '51', 'f', null),
+    ('hv2', '52', 'r', null),
+    ('hv2', '53', 'r', null),
+    ('hv2', '54', 'r', null),
+    ('hv2', '55', 'f', null),
+    ('hv3', '56', 'r', null),
+    ('hv3', '57', 'f', null),
+    ('hv3', '58', 'r', null),
+    ('hv3', '59', 'f', null),
+    ('hv3', '60', 'f', null)
+) as v(section_id, item_id, answer, explanation)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-05'
 join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
