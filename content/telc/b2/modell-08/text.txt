@@ -1,0 +1,484 @@
+# FIRMENORGANIGRAMM
+Untertitel: 45 Aufgaben · 120 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 45
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 30
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 15
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 15
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 20
+Hinweis: Aufgaben 46–57
+Punkte: 24
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Internationale Fachkräfte gesucht: Im Ausland zu arbeiten, kann eine hervorragende Chance für Menschen in aller Welt sein. Erfahren Sie als Arbeitgeber, mit welchen Strategien Sie dringend benötigte Arbeitskräfte aus dem Ausland für sich gewinnen, um Ihr Unternehmen wettbewerbsfähiger zu machen.
+B = Auf zu neuen Ufern! Im Job ist es nie zu spät, mit etwas Neuem zu beginnen, um sich weiterzuentwickeln. Manchmal fehlen nur ein bisschen Mut und Unterstützung. Oder man weiß erst gar nicht, welche Möglichkeiten es gibt. Eine gute Beratung ist darum wichtig. Wo Sie die bekommen, erfahren Sie hier.
+C = Zufriedene Mitarbeiter: Viele Firmen überlegen, wie sie ihren Angestellten das Arbeitsleben abwechslungsreicher gestalten können. Manche schicken ihre Mitarbeitenden auf Dienstreisen ins Ausland, andere finanzieren ihnen Sprachkurse oder verteilen großzügig Prämien. Was noch möglich ist und wie sich das steuerlich auswirkt, erklärt der Steuerberater Michael Hahne.
+D = Dschungel in der Arbeitswelt: Wie viel Urlaub steht einem zu? Wie viel sollte man in seinem Beruf verdienen? Wie viele Stunden arbeitet man üblicherweise? Bekommt man einen Zuschuss für Sprachkurse? Mit vielen gesetzlichen Dingen muss man sich auskennen, wenn man im Arbeitsleben steht. Die wichtigsten Informationen finden Sie hier zusammengefasst.
+E = Chefsache: Ein erfolgreiches Unternehmen gibt es nur mit einem motivierten Team. Aber wie motiviert man seine Mitarbeiter? Hören Sie ihnen aufmerksam zu! Kontrollieren Sie nicht jeden Arbeitsschritt, sondern delegieren Sie! Nehmen Sie Mobbing ernst! Zahlen Sie faire Gehälter! Diese und noch viele andere Ratschläge lesen Sie hier.
+F = Vielseitig qualifiziert! Von Arbeitnehmer*innen wird immer mehr verlangt. Nicht nur die aktuellen fachlichen Kenntnisse und die souveräne Arbeit mit dem PC sind eine Selbstverständlichkeit, sondern auch die sprachlichen Kompetenzen werden immer wichtiger. Hier findet jeder den richtigen Kurs für sich, von Englisch über Japanisch bis Suaheli.
+G = Lassen Sie sich von Kolleg*innen den Arbeitsalltag nicht schwermachen: Sie erfahren von der Sitzung zuletzt? In der Kantine sitzen Sie allein? Es passiert immer häufiger in deutschen Unternehmen, dass manche Kollegen anderen das Leben aus unklaren Gründen schwermachen. Lesen Sie in diesem Ratgeber, wo Sie Hilfe bekommen können.
+H = Den Horizont erweitern: Manche zieht die Liebe in ein anderes Land. Andere sehen dort interessantere berufliche Möglichkeiten. Manchmal ist das die reine Abenteuerlust. Auslandsaufenthalte können den Lebenslauf bereichern und ganz neue Karrierewege eröffnen.
+Aufgaben:
+[1] Barbara braucht beruflich Grundkenntnisse in Spanisch.
+Lösung: F
+[2] Frank denkt, dass sein Gehalt nicht branchenüblich ist.
+Lösung: D
+[3] Petra fühlt sich am Arbeitsplatz gemobbt.
+Lösung: G
+[4] Sandra möchte im Ausland berufliche Erfahrungen sammeln.
+Lösung: H
+[5] Felix möchte sich beruflich verändern.
+Lösung: B
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 15
+Punkte: 2.5
+Maximum: 10
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 9. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Firmenorganigramm**
+Für Sie als neue Mitarbeiterin / neuer Mitarbeiter in unserem Traditionsunternehmen ist es wichtig zu wissen, wie das Unternehmen aufgebaut ist, d. h. welche Abteilungen es gibt, wer wofür verantwortlich ist und an wen Sie sich mit Ihren Fragen wenden können. Dafür wollen wir Ihnen im Folgenden Orientierung geben und hoffen, Ihnen den Einstieg in unser Unternehmen mit diesem Organigramm zu erleichtern.
+Das Dach unseres Unternehmens bildet die Geschäftsleitung. Hier laufen alle Fäden zusammen. Die nächste Ebene umfasst unsere Bereiche Produktion, Vertrieb und Personalwesen. In der Personalabteilung wenden Sie sich an Ihrem ersten Arbeitstag an Frau Müller. Von ihr erhalten Sie Ihren Mitarbeiterausweis, die für Sie notwendigen Schlüssel und die Arbeitskleidung. Für Urlaubsangelegenheiten steht Ihnen Herr Scholz zur Verfügung. Gehaltsfragen können Sie mit Herrn Kleinschmidt besprechen. Sollten Sie eine Dienstreise unternommen haben, rechnen Sie die entstandenen Kosten mit Herrn Friedrich ab.
+Aufgaben:
+[6] Den neuen Mitarbeitenden wird die Organisationsstruktur des Unternehmens vorgestellt.
+A) richtig
+B) falsch
+Lösung: A
+[7] In der Personalabteilung
+A) bekommen die Mitarbeitenden ihre Ausstattung.
+B) bezahlt man die Arbeitskleidung.
+C) bucht man Dienstreisen.
+Lösung: A
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Arbeitsunfälle**
+Arbeitsunfälle sind Unfälle, die Beschäftigte bei der Ausübung ihrer Arbeit oder einer Dienstreise erleiden. Es muss also ein ursächlicher Zusammenhang mit der beruflichen Tätigkeit bestehen.
+Nach einem Arbeitsunfall müssen Beschäftigte ihren Arbeitgeber umgehend über den Unfall in Kenntnis setzen und sich ggf. in Behandlung begeben. Außerdem ist, sobald es der Gesundheitszustand des Geschädigten zulässt, ein detaillierter Unfallbericht zu verfassen und der Personalabteilung vorzulegen.
+Im Falle einer Arbeitsunfähigkeit nach einem Arbeitsunfall erhalten Arbeitnehmende für sechs Wochen eine Lohnfortzahlung vom Arbeitgeber, danach übernimmt die Berufsgenossenschaft (BG), zahlt u. a. Verletztengeld in Höhe von 80 Prozent des Bruttogehalts und kommt ggf. auch für weitere Kosten auf.
+Zu Arbeitsunfällen zählen auch Wegeunfälle, also Unfälle, die sich auf dem direkten Weg zwischen dem Wohngebäude und der Arbeitsstätte ereignen. Dieser Weg beginnt vor der eigenen Haustür und endet, sobald die Arbeitnehmenden das Unternehmen erreicht haben. Dabei sind bestimmte notwendige Umwege mitversichert, wie etwa der Weg zur Kita, Umleitungen oder im Falle von Fahrgemeinschaften, unabhängig davon, mit welchen Verkehrsmitteln man sich fortbewegt. Der Versicherungsschutz umfasst ausschließlich Personenschäden; Sachschäden, wie z. B. Schäden am Fahrzeug, sind hierbei nicht mitversichert. Die BG übernimmt in diesem Fall z. B. die Behandlungskosten sowie ggf. Krankenpflege oder medizinische Rehabilitation.
+Aufgaben:
+[8] Im Falle eines Arbeitsunfalls muss man sofort einen Bericht beim Arbeitgeber einreichen.
+A) richtig
+B) falsch
+Lösung: B
+[9] Nach einem Arbeitsunfall
+A) bezahlt die Berufsgenossenschaft sofort Verletztengeld.
+B) erhalten Arbeitnehmer sechs Wochen volles Gehalt.
+C) trägt der Arbeitgeber die Kosten für die medizinische Versorgung.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2.5
+Maximum: 10
+Anweisung: Lesen Sie die Situationen 10–13 und die Beiträge a–f aus einem Online-Forum. Welcher Beitrag passt zu welcher Situation?
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Mario: Warte erst einmal ab, wie sich alles mit dem Kind entwickelt. Ich würde die Zeit nach der Geburt nicht mit Arbeit verplanen. Es ist nämlich eine große Umstellung. Wenn du dann später „Langeweile“ haben solltest, kannst du immer noch überlegen, arbeiten zu gehen.
+B = Johann: Beides ist nicht ganz falsch – nach der Geburt des Kindes hat man bis zu drei Jahre Anspruch auf Freistellung von der Arbeit. 14 Monate erhält das Paar Elterngeld. Sowohl die bezahlte als auch die nicht bezahlte Zeit der Betreuung können die Eltern frei untereinander aufteilen.
+C = Hanna: Elterngeld erhält man von der Elterngeldstelle. Die Höhe hängt davon ab, wie viel man vorher verdient hat. Vater und Mutter können die bezahlte Elternzeit von 14 Monaten untereinander aufteilen, wie es ihnen am besten passt. Allerdings ist die Frau die ersten acht Wochen im Mutterschutz.
+D = Angela: Wenn du schon länger als sechs Monate bei einer Firma beschäftigt bist, kannst du beantragen, auch während der Elternzeit ein bisschen zu arbeiten. Du darfst dann allerdings nicht mehr als 30 Stunden pro Woche tätig sein. Der Betrieb kann den Antrag aber auch ablehnen.
+E = Lars: Wenn eine Frau schwanger ist, kann sie, soweit es der Gesundheitszustand zulässt, bis sechs Wochen vor der Geburt arbeiten. Dann beginnt der Mutterschutz. Dieser gilt auch noch für acht Wochen nach der Geburt. Im Anschluss folgt die Elternzeit. Aber dafür gibt es wieder andere Regelungen.
+F = Petra: Während der Schwangerschaft darf ein Arbeitgeber die Mitarbeiterin nicht nach 20 Uhr beschäftigen. Zwischen 20 und 22 Uhr kann man als Schwangere nur auf eigenen Wunsch arbeiten, der Arbeitgeber darf das nicht anordnen. Insgesamt darf eine Schwangere aber eine tägliche Arbeitszeit von 8,5 Stunden nicht überschreiten.
+X = Keine Antwort passt
+Aufgaben:
+[10] Natalja: „Wir werden Eltern und wollen beide die bezahlte Elternzeit nehmen. Eine Freundin meinte, dass wir insgesamt ein Jahr zu Hause bleiben können. Ein anderer Bekannter sagte, man könne sein Kind bis zu drei Jahre zu Hause betreuen. Was stimmt?“
+Lösung: B
+[11] Katrin: „Ich bin im vierten Monat schwanger. Mein Chef will, dass ich notfalls auch mal eine Spätschicht übernehme. Die geht bis 21:00 Uhr. Soviel ich weiß, ist das gar nicht erlaubt, oder? Außerdem bin ich abends immer sehr müde.“
+Lösung: F
+[12] Giovanni: „Wir sind Auszubildende und bekommen bald ein Kind. Erst nach der Ausbildung wollen wir in Elternzeit gehen. Bis dahin könnte die Oma auf unser Kind aufpassen. Unser Betrieb wäre einverstanden. Weiß jemand, ob man die Elternzeit später beginnen darf?“
+Lösung: X
+[13] Sandra: „Nach der Geburt bekomme ich Elterngeld. Finanziell mache ich mir keine Sorgen. Aber ich will beruflich den Anschluss nicht verlieren. Nur mit dem Kind zu Hause zu bleiben, ist nicht mein Ding. Kann man Elterngeld bekommen und gleichzeitig arbeiten?“
+Lösung: D
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14 bis 18. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Protokoll Sitzungsraum 112, Ort: Ludwigstr. 23, 79342 Herbolzen**
+Anwesende: Jan Schneider (JS, Geschäftsleitung), Sabine Faust (SF, Leiterin Marketing), Paul Mayer (PM, Leiter Produktion), Tim Janzen (TJ, Leiter Vertrieb), Chiara Reich (CR, Leiterin IT), Simon Zitzmann (SZ, Leiter Personal), Mona Seil (MS, Leiterin Controlling)
+Sitzungsleitung: Jan Schneider
+Protokollant: Simon Zitzmann
+
+**Tagesordnungspunkte:**
+1. Begrüßung und Genehmigung der Tagesordnungspunkte
+2. Marketingmaßnahmen
+3. Berichte
+4. Erweiterte Überstundenregelung
+5. Einführung Jobticket
+6. Sonstiges
+
+**TOP 1 Begrüßung und Genehmigung der Tagesordnungspunkte**
+JS begrüßt die Abteilungsleitungen zur heutigen Sitzung, die daraufhin pünktlich eröffnet wird. Anschließend bittet er um die Genehmigung der Tagesordnungspunkte. Nach Handzeichen wird die Tagesordnung ohne Ergänzungen und Änderungen einstimmig genehmigt. Als nächster Besprechungstermin wird der 25.06. vor der großen Sommerpause einstimmig festgelegt.
+
+**TOP 2 Marketingmaßnahmen**
+Nach dem im letzten Quartal von MS und TJ festgestellten Absatzrückgang wurden bereits auf der letzten Sitzung neue Verkaufsstrategien beschlossen. Hierzu wurde von der Geschäftsleitung ein Budget von 350.000 Euro freigegeben. SF berichtet, dass schon im Vorfeld neue Zielgruppen beleuchtet wurden, insbesondere die Gruppe der Berufseinsteiger und Hochschulabsolventen, also die Altersgruppe 17 bis 25 Jahre. Im Vergleich dazu lag der Fokus bisher auf Verbrauchern im Alter von 30 bis 50 Jahren. Zunächst wurde eine Social-Media-Agentur beauftragt, um gezielt neue Endverbraucher anzusprechen. Hierzu liegen auch schon erste Ergebnisse vor, die zeigen, dass das Interesse und die Aufmerksamkeit um 38% gestiegen sind. Infolgedessen stieg der Umsatz um 18% im Vergleich zum Vorjahr. JS zeigt sich mit dieser ersten Entwicklung zufrieden und erwartet einen weiteren positiven Trend. Für das nächste Quartal ist geplant, positive Kundenreaktionen im Internet hochzuladen. SF betont, dass gerade in diesem Bereich die Zukunft liegt und regelmäßige Neuerungen erwartet werden können. Deshalb wird sie in den kommenden Sitzungen regelmäßig neue Konzepte präsentieren.
+
+**TOP 3 Berichte**
+SZ berichtet darüber, dass die Mitarbeitenden in der Produktion seit dem Einbau der neuen Maschinen gehäuft über eine enorme Lärmbelastung klagen würden. Hier bestehe dringender Handlungsbedarf, da im anderen Fall eine Überprüfung durch die Behörden erfolgen könnte. PM wird mit der Herstellerfirma dieser Anlagen Kontakt aufnehmen, um dieses Problem zu klären. Bis zur Lösung sollten Gehörschützer benutzt werden.
+
+**TOP 4 Erweiterte Überstundenregelung**
+JS teilt einen Vorschlag der Geschäftsleitung hinsichtlich einer erweiterten Überstundenregelung mit. Aufgrund einer sich ständig ändernden Auftragslage kommt es vor, dass den Mitarbeitenden immer mehr Überstunden zugemutet werden. Die bisherige Regelung, dass bis zehn Stunden Mehrarbeit im Monat bezahlt werden, bleibt bestehen. Die Stunden darüber hinaus werden weiterhin als Freizeitausgleich gewährt. Neu kommt hinzu, dass ab dem kommenden Jahr für jeweils 100 geleistete Überstunden jährlich ein Urlaubstag zusätzlich gegeben wird. SZ wird diese Maßnahme in der nächsten Betriebsratssitzung zur Prüfung und Genehmigung vorlegen.
+
+**TOP 5 Einführung Jobticket**
+Da in der Vergangenheit die Situation auf unseren Firmenparkplätzen sehr angespannt war, nahm die Firma Kontakt zum örtlichen öffentlichen Personennahverkehr auf, um die Einführung von Jobtickets für die Mitarbeitenden möglich zu machen. Viele Mitarbeitende hatten zuvor diesen Wunsch geäußert. SZ teilt mit, dass die Verhandlungen kurz vor dem Abschluss stehen. Wer Interesse an diesem günstigen Ticket hat, sollte sich per Mail oder persönlich in der Personalabteilung dafür anmelden. Die Abteilungsleiter übernehmen es, ihre Abteilungen zu informieren.
+
+**TOP 6 Sonstiges**
+Unser Unternehmen und das Fitnesscenter fit und fun, das sich in der unmittelbaren Nähe unserer Firma befindet, haben gemeinsam ein Angebot für unsere Mitarbeiter erarbeitet. Wenn man seine Betriebszugehörigkeit nachweist, kann man einen Vertrag zu besonders günstigen Konditionen abschließen. SZ schlägt vor, man könnte dort zu einem späteren Zeitpunkt sogar ein Sportfest für die Abteilungen durchführen. Diesen Vorschlag begrüßt JS.
+Aufgaben:
+[14] Die Besprechung
+A) beginnt zur festgelegten Uhrzeit.
+B) soll auf den 25.06. verlegt werden.
+C) wird durch Änderungen ergänzt.
+Lösung: A
+[15] Die Umsatzsteigerung
+A) beträgt 350.000 Euro.
+B) liegt bei 38 %.
+C) wird sich fortsetzen.
+Lösung: C
+[16] Die Überstundenregelung
+A) bleibt genauso bestehen.
+B) erhält eine Ergänzung.
+C) gilt ab 100 Überstunden.
+Lösung: B
+[17] Das Jobticket
+A) ist eine preislich unattraktive Variante.
+B) können die Mitarbeiter beim ÖPNV kaufen.
+C) soll den Arbeitsweg stressfreier machen.
+Lösung: C
+[18] Sportliche Aktivitäten
+A) finden in dem Unternehmen statt.
+B) sollen in den Abteilungen stattfinden.
+C) werden von der Firma gefördert.
+Lösung: C
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 2.5
+Maximum: 5
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19 und 20. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Mangelhafte Lieferung**
+Sehr geehrter Herr Mayer,
+leider müssen wir Ihnen mitteilen, dass Ihre Lieferung nicht zu unserer Zufriedenheit ausgefallen ist. Wir müssen zwei Punkte beanstanden: Erstens wurden die Verpackungen der Hosen (Größe M und L) beim Transport beschädigt, sodass der Inhalt verschmutzt ist. In diesem Zustand können wir die Waren auf keinen Fall in den regulären Verkauf geben, sondern sie nur mit einem Rabatt anbieten. Wir halten daher einen Preisnachlass von 60% für angemessen. Des Weiteren teilen wir Ihnen mit, dass von den T-Shirts mit Aufdruck statt der bezahlten 100 Stück nur die Hälfte geliefert wurde. Wegen der beginnenden Sommersaison bitten wir um schnellstmögliche Nachlieferung der fehlenden Stückzahl auf Ihre Kosten spätestens bis zum 10.05. Wir hoffen, dass sich derartige Vorkommnisse in Zukunft vermeiden lassen, und bitten um prompte Erledigung.
+Mit freundlichen Grüßen
+Matthias Schramm
+Aufgaben:
+[19] Herr Schramm
+A) bemängelt Qualität und Menge der Lieferung.
+B) fand die gesamte Lieferung beschädigt vor.
+C) verlangt wegen der Lieferungsverzögerung einen Rabatt.
+Lösung: A
+[20] Die Nachlieferung
+A) bezahlt der Kunde.
+B) kommt im Sommer.
+C) umfasst 50 T-Shirts.
+Lösung: C
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 25
+Maximum: 25
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrem Teamleiter:**
+Hallo, mich erreichte die untenstehende E-Mail von Herrn Schramm. Bitte kümmern Sie sich darum und antworten Sie dem Kunden höflich. Entschuldigen Sie sich für die verschmutzte Ware. Der geforderte Rabatt von 60% ist unverschämt. Bieten Sie ihm eine andere Lösung an. Die Nachlieferung der T-Shirts ist leider wegen unserer Personalsituation erst bis zum 12.05. möglich. Erklären Sie den Grund. Vielen Dank, Siegfried Mayer (Teamleiter).
+Aufgaben:
+[B] Antworten Sie Herrn Schramm im Namen von Siegfried Mayer.
+Punkt: Bedauern und Entschuldigung für die beschädigte Verpackung und verschmutzten Hosen
+Punkt: Ablehnung des 60%-Rabatts und Angebot einer fairen Alternativlösung (z. B. Reinigungskostenübernahme)
+Punkt: Zusage der Nachlieferung der fehlenden 50 T-Shirts bis zum 12.05.
+Punkt: Begründung des Nachlieferungstermins mit der aktuellen personellen Engpasssituation
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Der Abteilungsleiter erklärt Jana wichtige Arbeitsschritte.
+A) richtig
+B) falsch
+Lösung: B
+[23] Jana
+A) arbeitet nicht immer an derselben Maschine.
+B) bekommt jedes Jahr drei Schutzanzüge von der Firma.
+C) braucht nicht überall in der Produktion eine Schutzausrüstung.
+Lösung: C
+[24] Im Café werden die heutigen Aufgaben verteilt.
+A) richtig
+B) falsch
+Lösung: A
+[25] Im Café
+A) erwartet man eine Lieferung am Nachmittag.
+B) meldete sich heute eine Kollegin krank.
+C) wird heute viel zu tun sein.
+Lösung: C
+[26] Frau Koch und der Lieferant sprechen einen Termin ab.
+A) richtig
+B) falsch
+Lösung: A
+[27] Die Möbelfirma
+A) arbeitet jeden Tag in der Woche.
+B) benötigt zwei Tage für den Aufbau der Möbel.
+C) hat die Bestellung am Mittwoch erhalten.
+Lösung: B
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Personen über Fortbildungen sprechen. Welcher der Aussagen a–f passt zu welcher Person?
+Auswahltitel: Aussagen
+Auswahl:
+A = Das Lernen hört im Arbeitsleben nie auf.
+B = Die Firma sollte regelmäßig arbeitsplatzbezogene Schulungen organisieren.
+C = Es ist sinnvoll, Fortbildungen an unterschiedlichen Tagen anzubieten.
+D = Weiterbildungen sind nur mit hohem finanziellem Aufwand möglich.
+E = Fortbildungen kosten vor allem wertvolle Arbeitszeit.
+F = Nicht alle Schulungen müssen im Betrieb stattfinden.
+Aufgaben:
+[28] Sprecherin 1 meint, dass Schulungen nicht zwingend im eigenen Betrieb abgehalten werden müssen.
+Lösung: F
+[29] Sprecherin 2 betont, dass lebenslanges Lernen und ständige Weiterbildung im Beruf unverzichtbar sind.
+Lösung: A
+[30] Sprecher 3 plädiert dafür, dass das Unternehmen gezielte Schulungen für den Arbeitsalltag anbietet.
+Lösung: B
+[31] Sprecher 4 findet flexible Termine und unterschiedliche Tage für Schulungsangebote wichtig.
+Lösung: C
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören eine Information für Mitarbeiterinnen und Mitarbeiter. Wählen Sie bei den Aufgaben 32 bis 35 die richtige Lösung.
+Aufgaben:
+[32] Ein Computer sollte
+A) nicht mehrmals ein- und ausgeschaltet werden.
+B) nur selten ganz heruntergefahren werden.
+C) von allein in den Ruhemodus schalten.
+Lösung: C
+[33] Frau Seibert empfiehlt,
+A) den Entwurfmodus zu verwenden.
+B) immer Recyclingpapier zu benutzen.
+C) Unterlagen für Kunden beidseitig zu bedrucken.
+Lösung: A
+[34] Frau Seibert findet es wichtig, dass
+A) die Firma den Müll sorgfältiger trennt.
+B) mehr recycelt wird.
+C) weniger Abfall produziert wird.
+Lösung: C
+[35] Geschäftsreisen
+A) lassen sich problemlos durch Videokonferenzen ersetzen.
+B) mit der Bahn haben verschiedene Vorteile.
+C) sind teurer, wenn sie umweltfreundlich sind.
+Lösung: B
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf kurze Telefongespräche oder Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung.
+Aufgaben:
+[36] Andrea
+A) wird mit dem Vertreter frühstücken.
+B) sagt den Termin ab.
+C) möchte sich Montag wieder melden.
+Lösung: B
+[37] Frau Plassberg
+A) möchte eine Steuerprüfung auswerten.
+B) möchte die neue Werbekampagne diskutieren.
+C) möchte über die Dienstreise sprechen.
+Lösung: B
+[38] Daniela Schöller
+A) bittet um heutige Abholung der Ware.
+B) braucht die Lieferung dringend.
+C) hat den Eilzuschlag bezahlt.
+Lösung: A
+[39] Herr Lattermann
+A) bekommt eine Maschine aus Hamburg.
+B) bestätigt den Empfang der Maschine.
+C) liefert eine Maschine nach Dresden.
+Lösung: C
+[40] Frau Bernhardt
+A) hat Änderungswünsche für die Homepage.
+B) meldet sich bei ihrer Sekretärin.
+C) möchte die Garantie verlängern.
+Lösung: A
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 15
+Maximum: 15
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Reklamation Weinlieferung**
+Nachricht auf dem Anrufbeantworter von Herrn Guenther:
+„Guten Tag, hier ist Herr Guenther. Leider mussten wir feststellen, dass statt der 30 Kartons Rotwein nur 25 Kartons bei uns angekommen sind. Außerdem haben wir statt 15 Kartons Weißwein 30 Kartons bekommen. Aber vom Rotwein müssen Sie bitte schnell nachliefern. Darüber hinaus sind vom Saft zwei Flaschen kaputtgegangen. Bitte rufen Sie mich zurück. Mein Name ist Guenther, buchstabiert G-U-E-N-T-H-E-R. Meine Telefonnummer lautet 0135 821 76 49. Vielen Dank und auf Wiederhören.“
+Aufgaben:
+[41] Dokumentieren Sie die Kundenreklamation:
+Punkt: Name des Anrufers (Herr Guenther, G-U-E-N-T-H-E-R)
+Punkt: Telefonnummer (0135 821 76 49)
+Punkt: Grund der Reklamation (Falschlieferung bei Rot- und Weißwein, Glasbruch)
+Punkt: Details (25 statt 30 Kartons Rotwein geliefert, 30 statt 15 Kartons Weißwein geliefert, 2 Saftflaschen zerbrochen)
+Punkt: Zu erledigen (Dringender Rückruf und sofortige Nachlieferung der 5 fehlenden Kartons Rotwein)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 2
+Maximum: 12
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = ABER
+B = AUF
+C = DA
+D = DEN
+E = DENNOCH
+F = DER
+G = DIESEM
+H = WENN
+I = WIE
+J = ZU
+Text:
+**Kündigung**
+Sehr geehrte Damen und Herren,
+mit (46) Schreiben kündige ich form- und fristgerecht meinen Arbeitsvertrag zum 31.12.20xx. Ich habe mir diese Entscheidung nicht leichtgemacht, (47) ich sehr gerne bei der MillerFood GmbH gearbeitet habe. (48) leider sehe ich hier im Unternehmen keine Möglichkeiten, mich weiterzuentwickeln, und habe mich deshalb dazu entschlossen, eine Stelle in einem größeren Unternehmen anzunehmen.
+Mir stehen noch vier Tage Resturlaub (49). Da in unserer Abteilung kurz vor dem Jahresende sehr viel zu tun ist, würde ich vorschlagen, dass Sie mir diese Tage auszahlen und ich noch bis zum Jahresende arbeite.
+Sollte das nicht möglich sein, ist mein letzter Arbeitstag der 23.12.20xx, da (50) 31.12.20xx auf einen Samstag fällt. Ich bitte um eine schriftliche Bestätigung über den Erhalt meiner Kündigung und den Bescheid, (51) wir mit den restlichen Urlaubstagen verfahren sollen.
+Ich bedanke mich für die Zusammenarbeit!
+Mit freundlichen Grüßen
+Markus Stein
+Aufgaben:
+[46] … mit (46) Schreiben kündige ich form- und fristgerecht …
+Lösung: G
+[47] … nicht leichtgemacht, (47) ich sehr gerne bei der MillerFood GmbH gearbeitet habe. …
+Lösung: C
+[48] … (48) leider sehe ich hier im Unternehmen keine Möglichkeiten …
+Lösung: A
+[49] … Mir stehen noch vier Tage Resturlaub (49). …
+Lösung: J
+[50] … da (50) 31.12.20xx auf einen Samstag fällt. …
+Lösung: F
+[51] … und den Bescheid, (51) wir mit den restlichen Urlaubstagen verfahren sollen. …
+Lösung: I
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 2
+Maximum: 12
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung passt am besten?
+Text:
+**Beschwerde über Lieferverzögerung**
+Sehr geehrte Damen und Herren,
+wir haben eine Bestellung aufgegeben und von Ihnen eine Bestätigung sowie einen Liefertermin erhalten. Sie hatten die Lieferung innerhalb von zwei Wochen zugesagt, jedoch ist die Ware (52) bei uns eingetroffen. Unser Kunde wartet bereits dringend auf diese Lieferung und wir möchten ihm keinesfalls (53).
+Bitte teilen Sie uns dringend mit, wann geliefert wird, (54) wir diese Auskunft an unseren Kunden weitergeben können.
+Außerdem müssen wir unserem Kunden wegen der Verzögerung einen Rabatt in Höhe von 2% einräumen. Dieser Betrag (55) Ihnen zur Last gelegt. Da der Kunde verständlicherweise verärgert ist, wird er bei Erhalt der Ware (56) Rechnungsbetrag nicht vollständig begleichen.
+Wir fordern Sie daher auf, uns (57) über den Lieferstatus zu informieren.
+Mit freundlichen Grüßen
+Aufgaben:
+[52] Lücke 52
+A) bisher noch nicht
+B) gestern pünktlich
+C) ohne Verzögerung
+Lösung: A
+[53] Lücke 53
+A) eine Freude machen
+B) einen Auftrag erteilen
+C) absagen müssen
+Lösung: C
+[54] Lücke 54
+A) damit
+B) obwohl
+C) trotzdem
+Lösung: A
+[55] Lücke 55
+A) hat
+B) war
+C) wird
+Lösung: C
+[56] Lücke 56
+A) den
+B) dem
+C) des
+Lösung: A
+[57] Lücke 57
+A) im Nachhinein
+B) irgendwann
+C) umgehend
+Lösung: C

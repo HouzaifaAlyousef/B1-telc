@@ -1,0 +1,485 @@
+# GLEITZEIT
+Untertitel: 45 Aufgaben · 120 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 45
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 30
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 15
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 15
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 20
+Hinweis: Aufgaben 46–57
+Punkte: 24
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Achtung Kündigung: Das Arbeitsrecht unterscheidet zwischen personenbedingter, betriebsbedingter und verhaltensbedingter Beendigung des Arbeitsverhältnisses. Lesen Sie hier alle Informationen darüber, aus welchen Gründen der Arbeitgeber berechtigt ist zu kündigen.
+B = Automobilbranche boomt nach wie vor: Vor allem im Südwesten Deutschlands können sich die Menschen weiterhin auf sichere und gut bezahlte Anstellungen in der Automobilindustrie verlassen. Warum lohnt es sich, bei einem Autobauer oder Zulieferer zu arbeiten? Welche Berufe sind am meisten gefragt?
+C = Firmen setzen auf flexible Arbeitsbedingungen: In vielen Branchen sind Fachkräfte gefragt wie nie zuvor. Dabei haben immer mehr Firmen Schwierigkeiten, ihre Angestellten langfristig zu halten. Wer kann, wechselt schnell zu einem Arbeitgeber mit besseren Bedingungen. Viele große Unternehmen setzen nun verstärkt auf Flexibilität und familienfreundliche Leistungen wie Firmen-Kita oder Homeoffice.
+D = Förderung von Selbstständigen: In den letzten Jahren ist die Zahl der Selbstständigen stetig gestiegen. Das liegt unter anderem auch an neuen staatlichen Förderungsmöglichkeiten für Jungunternehmer, die ihren eigenen Betrieb aufmachen möchten.
+E = Sein eigener Chef sein! Du willst keine starren Arbeitszeiten, weiten Anfahrtswege und keinen nervigen Umgang mit Kollegen und Chefs? Dann ist der Weg in die Existenzgründung eine echte Alternative. Ob als Übersetzer, Programmierer oder Steuerberater – Theo Geertz berät dich, wie du dein Fachwissen nutzen kannst, um zu Hause und auf eigene Rechnung zu arbeiten.
+F = Ungelernte Arbeitskräfte weiterhin benachteiligt: Je höher die Qualifikation, desto besser die Chancen auf dem Arbeitsmarkt. Wer keine Berufsausbildung hat, läuft Gefahr, in die Langzeitarbeitslosigkeit abzustürzen. Wer Arbeit hat, muss als Ungelernter mit geringerem Gehalt und schlechteren Aufstiegschancen rechnen.
+G = Möglichkeiten, mit einer Kündigung umzugehen: Du fühlst dich nach einer Kündigung gedemütigt und alleine gelassen und weißt nicht, wie es weitergehen soll? Das kann auch eine Chance sein, sich neu zu orientieren und vielleicht sogar die eigene Berufung zu finden.
+H = Wege und Chancen: Das Bundesministerium für Bildung und Forschung unterstützt bei der beruflichen Qualifizierung. Es hat ein Portal eingerichtet, um vor allem Ungelernte und Geringqualifizierte sowie Arbeitnehmer in Elternzeit über passende Aus- und Weiterbildungsmöglichkeiten zu informieren.
+Aufgaben:
+[1] Junis ist gelernter Kfz-Mechatroniker und möchte eine eigene Werkstatt gründen.
+Lösung: D
+[2] Maria arbeitet als Hilfsarbeiterin und möchte nun eine Berufsausbildung machen.
+Lösung: H
+[3] Nikolett möchte sich nicht zwischen Familie und Arbeit entscheiden müssen.
+Lösung: C
+[4] Amin studiert Fremdsprachen und möchte nach seinem Abschluss freiberuflich arbeiten.
+Lösung: E
+[5] Samita soll aus betriebsbedingten Gründen gekündigt werden und sie möchte dagegen vorgehen.
+Lösung: A
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 12
+Punkte: 2.5
+Maximum: 10
+Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Text 1: Arbeitszeit**
+In unserem Unternehmen arbeiten wir nach dem Gleitzeitsystem. Die Kernarbeitszeit ist Montag bis Freitag zwischen 9.00 Uhr und 15.30 Uhr. In dieser Zeit müssen alle Mitarbeitenden anwesend sein. Jede Abwesenheit während dieser Zeit muss genehmigt sein.
+Die tägliche Rahmenarbeitszeit ist von 6.00 Uhr bis 19.30 Uhr. Bitte beachten Sie, dass innerhalb dieses Zeitrahmens maximal acht, in Ausnahmefällen zehn, Stunden täglich gearbeitet werden darf.
+Alle Mitarbeitenden müssen beim Betreten und Verlassen des Gebäudes mit der Zeiterfassungskarte am Lesegerät ein- und ausstechen. So wird die tägliche Arbeitszeit auf dem Zeitkonto festgehalten. Dieses kann jederzeit am Lesegerät eingesehen werden.
+Bei entsprechendem Guthaben kann einmal pro Monat ein ganzer Arbeitstag (acht Stunden) als Gleitzeittag genommen werden. Zu berücksichtigen ist, dass ein Minuskontostand im Folgemonat auszugleichen ist. Zusätzlich können im Monat Dezember bis zu vier Arbeitstage als Gleitzeittage genommen werden, um sie zwischen Weihnachten und Neujahr zu nutzen, wenn das Arbeitszeitkonto ein ausreichendes Guthaben aufweist.
+
+**Text 2: Wichtige Hinweise zum Datenschutz**
+Unser Unternehmen ist dem Datenschutz gemäß der EU-Datenschutz-Grundverordnung (DSGVO) verpflichtet. Grundsätzlich dürfen die Daten unserer Mitarbeiterinnen und Mitarbeiter nur dann erhoben werden, wenn diese vorher ausdrücklich zugestimmt haben. Mit Ihrem Arbeitsvertrag haben Sie bereits ein Formular erhalten, mit dessen Unterschrift Sie bestätigt haben, dass Sie mit der Speicherung Ihrer personenbezogenen Daten einverstanden sind. Sollten Sie zukünftig Fragen zum Datenschutz haben, können Sie sich an unseren internen Datenschutzbeauftragten Herrn Koljak (Durchwahl -814) oder seine Stellvertreterin Frau Dombrovski (Durchwahl -485) wenden.
+Wir erwarten von unseren Mitarbeiterinnen und Mitarbeitern, sich beim Thema Datenschutzverordnung immer auf dem neuesten Stand zu halten und bieten daher jedes Jahr Schulungen zu diesem Zweck an. Diese werden von unserem externen Schulungspartner WissMax durchgeführt und finden zu unterschiedlichen Terminen, jeweils am Wochenende, bei uns im Haus statt. Der Besuch des Seminars wird als Arbeitszeit angerechnet und ist für unsere Mitarbeiter kostenfrei. Eine Teilnahme an einem solchen Training muss spätestens alle drei Jahre erfolgen und durch ein Zertifikat nachgewiesen werden. Reichen Sie dieses bitte unaufgefordert bei der Personalabteilung ein.
+Aufgaben:
+[6] Bei Gleitzeit können Mitarbeitende täglich beliebig viele Stunden arbeiten.
+A) richtig
+B) falsch
+Lösung: B
+[7] Durch Gleitzeit ist es den Mitarbeitenden möglich,
+A) ein Stundenguthaben aufzubauen.
+B) jeden Monat einige Tage freizunehmen.
+C) täglich mehr als acht Stunden zu arbeiten.
+Lösung: A
+[8] Die Mitarbeiter müssen einmal pro Jahr ein Seminar zum Datenschutz belegen.
+A) richtig
+B) falsch
+Lösung: B
+[9] Die Teilnahme am Seminar
+A) gilt als Arbeitszeit.
+B) ist kostenpflichtig.
+C) muss bei WissMax im externen Schulungszentrum erfolgen.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2.5
+Maximum: 10
+Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Susi: Solange du nicht weniger arbeitest als im Vertrag vereinbart, müsstest du rechtlich auf der sicheren Seite sein. Wenn du es genau wissen willst, solltest du in diesem Fall einen Anwalt für Arbeitsrecht kontaktieren. Mit einer Rechtsschutzversicherung wird das auch nicht so teuer.
+B = Julia: Rein rechtlich kannst du das nicht ohne Zustimmung deiner Eltern machen. Sie müssen die Kündigung sogar unterschreiben. An deiner Stelle würde ich mir das aber noch mal überlegen. Ich kann deinen Vater jedenfalls gut verstehen. Er macht sich halt Sorgen um deine Zukunft.
+C = Jürgen: Hi, ich würde die Ausbildung auf keinen Fall abbrechen. Mit Berufen im Finanzbereich hast du gute Aussichten auf dem Arbeitsmarkt und verdienst später auch gutes Geld. Mach dir das nicht kaputt. Meine Tochter ist Steuerberaterin und sucht händeringend nach fähigen Mitarbeitern. Sie kann sich vor Aufträgen gar nicht retten.
+D = Jochen: Also ich würde noch warten, bis dein Kind etwas größer ist, und mich jetzt noch nicht um einen Ausbildungsplatz bewerben. Wenn es etwas selbstständiger ist, wird vieles leichter. Eine Ausbildung kannst du auch in drei oder vier Jahren noch machen. Dein Kind braucht dich jetzt.
+E = Achim: Schutz von Leben und Gesundheit ist das oberste Gebot. Um dich und dein Kind zu schützen, darfst du während der Schwangerschaft keine körperlich anstrengenden Arbeiten verrichten und auch Tätigkeiten, bei denen du Lärm, Schmutz, Kälte usw. ausgesetzt bist, sind tabu.
+F = Peter: Warum das denn? Es gibt doch heutzutage Möglichkeiten, das Kind unterzubringen, während man arbeitet. Können dich deine Eltern vielleicht unterstützen? Sprich mal mit deinem Chef! Wenn der sieht, dass dir die Ausbildung wichtig ist, wird sich eine Lösung finden. Aber versuch auf jeden Fall, die Ausbildung durchzuziehen.
+X = Kein Beitrag passt.
+Aufgaben:
+[10] Inka: Ich bin Auszubildende in einem Büro und muss immer pünktlich Feierabend machen, weil ich meinen einjährigen Sohn von der Krippe abholen muss. Mein Chef sieht das gar nicht gern und droht mir jetzt sogar mit Kündigung. Was soll ich machen?
+Lösung: A
+[11] Jacqueline: Hallo Leute! Vor ein paar Monaten habe ich mit einer Ausbildung begonnen. Und jetzt bin ich schwanger... Was soll ich bloß machen? Es wird bestimmt schwierig, Kind und Arbeit zu vereinbaren. Soll ich die Ausbildung abbrechen?
+Lösung: F
+[12] Hans-Peter: Guten Abend, ich bin Ende 40 und mein Sohn ist inzwischen erwachsen. Jetzt möchte ich beruflich was ganz Neues machen und eine Ausbildung zum Steuerfachangestellten anfangen. Meint ihr, ich habe in meinem Alter noch Chancen, in diesem Beruf zu arbeiten?
+Lösung: X
+[13] Max: Hallo, ich mache momentan eine Ausbildung zum Einzelhandelskaufmann. Ich habe noch ein Jahr bis zum Abschluss und habe wirklich keine Lust mehr. Mein Vater möchte, dass ich die Ausbildung fertig mache. Ich bin noch nicht 18. Kann ich trotzdem einfach kündigen?
+Lösung: B
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 13
+Punkte: 2
+Maximum: 10
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Protokoll 14.02.20XX, 08:00–11:45 Uhr**
+Abteilung 4, Besprechungszimmer 2
+Teilnehmende: Holger Marschke (HM, Teamleiter), Cornelia Markert (CM, Marketingabteilung), Susanne Willke (SW, Marketingabteilung), Monique Rüdiger (MR, Betriebsratsmitglied)
+Entschuldigt: Martin Hamann (MH, Qualitätssicherung)
+Protokollantin: Marianne Schiller (MS)
+Sitzungsleitung: Andreas Mertens (AM)
+
+Tagesordnungspunkte:
+1. Begrüßung und Genehmigung des letzten Protokolls
+2. Neue Marketingmaßnahmen
+3. Qualitätsmanagement
+4. Anpassung der Pausenzeiten
+5. Standorte der neuen Fahrradständer
+6. Sonstiges
+
+TOP 1 Begrüßung und Genehmigung des letzten Protokolls: AM begrüßt alle Teilnehmenden und eröffnet die heutige Sitzung. Das Protokoll des letzten Meetings am 10.01.20XX wird ohne weitere Änderungen und Ergänzungen einstimmig per Handzeichen genehmigt. Auf Antrag von MR, die wegen anderweitiger terminlicher Verpflichtungen nicht bis zum Ende am Meeting teilnehmen kann, wird die Reihenfolge der Tagesordnung geändert und die TOPs 4 und 5 werden am heutigen Vormittag vorgezogen.
+TOP 2 Neue Marketingmaßnahmen: CM und SW berichten, dass traditionelle Marketingmaßnahmen wie z. B. Fernsehwerbung zu den Hauptsendezeiten zu teuer sind. Deshalb sollen soziale Medien wie Facebook, Instagram u. a. verstärkt genutzt werden. Weitere Möglichkeiten, Werbung zu machen, müssen von der Marketingabteilung noch erörtert werden. Es ist geplant, neue Wege zu gehen und zusätzlich zu den lokalen Geschäften einen Online-Shop zu starten. Für alle diese Maßnahmen steht insgesamt ein Budget von 150.000 € zur Verfügung. CM wird beauftragt, dafür eine spezialisierte Werbeagentur zu finden sowie einen Kostenvoranschlag der betreffenden Agentur einzuholen. SW soll Kontakte zu professionellen Fotografen und Textern herstellen und Angebote anfordern. Ergebnisse der beiden Recherchen werden bei der nächsten Besprechung am 10.03.20XX vorgestellt. Das weitere Vorgehen wird definiert, wenn alle nötigen Informationen vorliegen.
+TOP 3 Qualitätsmanagement: Zu den in der Besprechung vom 11.01.20XX vorgeschlagenen Maßnahmen hat MH im Vorfeld allen Sitzungsteilnehmenden erste Ergebnisse des Arbeitskreises „Optimierung innerer Kommunikationsstrukturen" in Form eines Konzeptpapiers zukommen lassen. Da MH an der heutigen Sitzung aus gesundheitlichen Gründen nicht teilnehmen kann, ist gemeinsam beschlossen worden, die Diskussion zu diesem Punkt bis zur nächsten Besprechung am 10.03.20XX zu vertagen. Damit ist die Umsetzung der geplanten Veränderungen auf das nächste Quartal verschoben.
+TOP 4 Anpassung der Pausenzeiten: Aufgrund mehrfacher Anfragen von Seiten der Abteilungsleiter regt MR an, dass die Zeiten, in denen Pausen gemacht werden können, flexibler gestaltet werden. Sie schlägt ein erweitertes Zeitfenster zwischen 11:30 Uhr und 13:00 Uhr vor, in dem eine Mittagspause von 30 Minuten gemacht werden kann. So können die betrieblichen Notwendigkeiten und Arbeitsabläufe verschiedener Abteilungen besser berücksichtigt werden. Dieser Vorschlag wird einstimmig angenommen. MR wird beauftragt, eine entsprechende Mitteilung an die Belegschaft über die Änderung der Pausenzeiten zu verfassen.
+TOP 5 Standorte der neuen Fahrradständer: MR teilt mit, dass auf Wunsch der Belegschaft zwei weitere Fahrradständer auf dem Gelände aufgestellt werden. Dabei wurden zwei Standorte favorisiert und der erste Fahrradständer wird neben Tor 2, der zweite neben Tor 3 installiert. So steht den Mitarbeitenden nun an jedem Zugang zum Gelände eine Möglichkeit zur Verfügung, ihr Fahrrad abzustellen. Dementsprechend werden der Lageplan überarbeitet und die neuen Standorte der Fahrradständer eingezeichnet. MR formuliert dazu eine Mitteilung und wird diese intern kommunizieren und am Schwarzen Brett des Betriebsrats aushängen.
+TOP 6 Sonstiges: Die Assistentin der Geschäftsleitung, Frau Schlosser, verabschiedet sich in den Mutterschutz und die anschließende Elternzeit. Ansprechpartnerin bis zu ihrer Rückkehr wird für alle ab sofort Frau Meier im Büro von Frau Schmidt sein. Frau Meier wird eine Abschiedsfeier für den 16.03.20XX organisieren und sich auch um kleine Geschenke für Mutter und Kind im Namen der Kolleginnen und Kollegen kümmern.
+Aufgaben:
+[14] Für neue Werbemaßnahmen
+A) werden kreative Mitarbeiter gesucht.
+B) wird ein Gesamtbetrag von 150.000 € bereitgestellt.
+C) wurden bereits Kostenvoranschläge eingeholt.
+Lösung: B
+[15] Herr Hamann
+A) hat bereits ein Konzept vorbereitet.
+B) ist dienstlich verhindert.
+C) stellt die Resultate seiner Arbeit vor.
+Lösung: A
+[16] Die Mittagspause
+A) ist 30 Minuten lang.
+B) wird um 30 Minuten verlängert.
+C) wird um 30 Minuten verschoben.
+Lösung: A
+[17] Der Standort der neuen Fahrradständer
+A) wird an der Informationstafel bekanntgegeben.
+B) wird dem Betriebsrat mitgeteilt.
+C) wird zwischen Tor 2 und 3 geplant.
+Lösung: A
+[18] Frau Schlosser
+A) macht Frau Schmidt ein Geschenk.
+B) verlässt das Unternehmen für immer.
+C) wird von Frau Meier vertreten.
+Lösung: C
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 2.5
+Maximum: 5
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Text:
+**Beschwerde über ausstehende Lieferung (Tischlampen)**
+Sehr geehrter Herr Richter,
+vergangene Woche habe ich bei Ihnen 25 Tischlampen Modell TS 13 150 07 für unsere neuen Büroräume bestellt. Mir wurde telefonisch zugesagt, dass die Lampen noch diese Woche geliefert werden, aber jetzt ist schon Freitagnachmittag und sie sind leider noch immer nicht eingetroffen.
+Das ist ärgerlich, da wir am Wochenende unsere Renovierungsarbeiten beenden und die Büros dann vollständig neu einrichten werden. Dazu würden natürlich auch die Lampen gehören, da wir am Montag unseren Bürobetrieb in funktionstüchtigen Räumen wieder aufnehmen wollen.
+Ich habe bereits mehrfach versucht, Sie telefonisch zu erreichen, und habe Nachrichten auf Ihrem Anrufbeantworter hinterlassen, aber ich wurde leider nicht zurückgerufen. Inzwischen habe ich einen Lieferanten gefunden, der uns kurzfristig andere Tischlampen liefern könnte. Wenn Ihre Lampen also bis Montagmittag, 13:00 Uhr, nicht bei uns eingetroffen sind, werde ich die Bestellung bei Ihnen stornieren. Ich bitte um eine schnelle Antwort!
+Mit freundlichen Grüßen
+Evelyn Berger
+Aufgaben:
+[19] Frau Berger
+A) beschwert sich über die Qualität des Produktes.
+B) hat eine fehlerhafte Lieferung erhalten.
+C) wartet dringend auf die Lieferung.
+Lösung: C
+[20] Die Renovierungsarbeiten
+A) stehen kurz bevor.
+B) verzögern sich unbestimmt.
+C) sollen zeitnah abgeschlossen werden.
+Lösung: C
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 25
+Maximum: 25
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrem Vorgesetzten:**
+Lieber Herr Klein,
+ich habe schon wieder eine Beschwerde einer Kundin vorliegen. Sie hat ihre bestellten Tischlampen nicht bekommen. Bitte antworten Sie Frau Berger und erklären Sie ihr, warum wir im Moment Lieferschwierigkeiten haben. Versuchen Sie auch, sie davon zu überzeugen, noch bis nächste Woche zu warten und den Auftrag nicht zu stornieren. Bieten Sie ihr außerdem ein ähnliches Modell an, das wir auf Lager haben. Danke!
+Herzliche Grüße
+Knut Richter
+Aufgaben:
+[B] Antworten Sie Frau Berger auf ihre Beschwerde im Namen von Lukas Klein.
+Punkt: Bedauern über die Verzögerung und Entschuldigung für die Unannehmlichkeiten
+Punkt: Erklärung der unvorhergesehenen Lieferschwierigkeiten beim Hersteller
+Punkt: Bitte um Geduld bis zur kommenden Woche
+Punkt: Angebot eines alternativen, sofort lieferbaren Modells vom Lager
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Die Kundin braucht eine Beratung für neue Bürogeräte.
+A) richtig
+B) falsch
+Lösung: A
+[23] Die Kundin möchte
+A) mindestens fünf Drucker kaufen.
+B) mit ihrem Vorgesetzten reden.
+C) sofort ein Großraumgerät bestellen.
+Lösung: B
+[24] Die Organisation des Betriebsfestes ist bereits abgeschlossen.
+A) richtig
+B) falsch
+Lösung: B
+[25] Für die Betriebsfeier
+A) wird eine neue Cateringfirma gesucht.
+B) soll eine neue Band gesucht werden.
+C) wurde der genaue Termin noch nicht endgültig festgelegt.
+Lösung: C
+[26] Frau Schmidt und Herr Klein arbeiten beide im Lager.
+A) richtig
+B) falsch
+Lösung: B
+[27] Frau Schmidt
+A) gibt Herrn Klein direkt die Schutzkleidung.
+B) stellt Herrn Klein seinem Vorgesetzten vor.
+C) verlangt noch weitere Unterlagen von Herrn Klein.
+Lösung: C
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Aussagen. Welche Aussage a–f passt zu welcher Person 28–31?
+Auswahltitel: Aussagen
+Auswahl:
+A = Die Firma möchte, dass alle Mitarbeiter ihre Englischkenntnisse verbessern.
+B = Ein Mitarbeiter nutzt eine besondere Urlaubsregelung, um seine Sprachkenntnisse zu verbessern.
+C = Ein Mitarbeiter hilft einem Kollegen bei einem Kundengespräch auf einer fremden Sprache.
+D = Die Firma überlegt, ob sie weiterhin Übersetzungsdienste benötigt.
+E = Ein Mitarbeiter plant, an einem Intensivsprachkurs im Ausland teilzunehmen.
+F = Ein Kollege übernimmt einen Teil der Arbeit, um einem Team zu helfen.
+Aufgaben:
+[28] Person 1
+Lösung: B
+[29] Person 2
+Lösung: D
+[30] Person 3
+Lösung: C
+[31] Person 4
+Lösung: A
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören einen Vortrag. Wählen Sie für die Aufgaben 32–35 die richtige Lösung A, B oder C.
+Aufgaben:
+[32] Das Unternehmen
+A) hat für den Arbeitsschutz ein externes Fachunternehmen beauftragt.
+B) wird alle Mitarbeiter einzeln persönlich befragen.
+C) wird intern einen neuen Fragebogen entwickeln.
+Lösung: A
+[33] Die ausgefüllten Fragebögen werden
+A) intern im Betrieb ausgewertet.
+B) nach der Analyse dauerhaft archiviert.
+C) von externen Fachleuten analysiert und danach vernichtet.
+Lösung: C
+[34] Die Mitarbeiter müssen
+A) alle Fluchtwege wöchentlich kontrollieren.
+B) bei Feueralarm sämtliche Arbeitsunterlagen mitnehmen.
+C) im Brandfall ihren vorgesehenen Sammelpunkt kennen.
+Lösung: C
+[35] Die Geschäftsführung
+A) bietet einen Erste-Hilfe-Kurs für ausnahmslos alle Angestellten an.
+B) sucht zwei weitere Mitarbeitende, die sich als Ersthelfer ausbilden lassen.
+C) verabschiedet heute Herrn Fischer in den Ruhestand.
+Lösung: B
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf Ansagen auf der Mailbox. Wählen Sie für die Aufgaben 36–40 die richtige Lösung A, B oder C.
+Aufgaben:
+[36] Robert Krüger
+A) hat im letzten Jahr die Weihnachtsfeier organisiert.
+B) möchte unbedingt wieder beim Griechen feiern.
+C) denkt bei der Restaurantwahl an die Interessen von Vegetariern.
+Lösung: C
+[37] Katrin
+A) will Bettina mit einem persönlichen Geschenk überraschen.
+B) sucht eine Anregung für ein Gemeinschaftsgeschenk.
+C) möchte ein Geschenk für maximal fünf Euro kaufen.
+Lösung: B
+[38] Stefan Körner bittet seinen Kollegen,
+A) die Wartung der Brandmelder sofort selbst durchzuführen.
+B) einen Termin mit der Brandschutzfirma zu vereinbaren.
+C) neue Brandmelder im Internet zu bestellen.
+Lösung: B
+[39] Barbara
+A) organisiert ganz allein das Begegnungsfest.
+B) wird den französischen Gästen die Firma zeigen.
+C) kümmert sich um die Verpflegung der Gäste.
+Lösung: C
+[40] Michaell Brüger möchte, dass
+A) die ausgefallene Heizung schnellstmöglich repariert wird.
+B) er erst in den nächsten Tagen zurückgerufen wird.
+C) alle Heizkörper im Gebäude ausgetauscht werden.
+Lösung: A
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben, Telefonnotiz
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 15
+Maximum: 15
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Dringende Malerarbeiten**
+Nachricht auf dem Anrufbeantworter von Dr. Mayer:
+„Guten Tag, hier spricht Dr. Mayer. Wir müssen dringend etwas klären. Wir hatten doch vor ein paar Tagen verabredet, dass Ihre Firma heute unsere Praxis streicht. Wir haben extra unsere Praxis geschlossen und alles für Sie vorbereitet. Und jetzt höre ich von meinen Mitarbeitern, dass die Maler gar nicht gekommen sind. Wie stellen Sie sich das jetzt vor? Wir haben zuletzt vor fünf Jahren streichen lassen. Da gab es solche Probleme gar nicht. Ach ja, Sie denken auch daran, dass Sie weiße und grüne Farbe mitbringen. Ich erwarte, dass bis morgen Mittag die Wände gestrichen sind. Ich bitte dringend um Rückruf. Mein Name ist Mayer, buchstabiert M-A-Y-E-R. Sie erreichen mich unter der Nummer 05123 72 85 618. Danke und auf Wiederhören.“
+Aufgaben:
+[41] Dokumentieren Sie die telefonische Beschwerde:
+Punkt: Anrufer (Dr. Mayer, M-A-Y-E-R)
+Punkt: Telefonnummer für Rückruf (05123 72 85 618)
+Punkt: Grund des Anrufs (Maler nicht erschienen trotz geschlossener Praxis)
+Punkt: Wichtige Details (Wände müssen bis morgen Mittag mit weißer und grüner Farbe gestrichen sein)
+Punkt: Zu erledigen (Dringender Rückruf)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 2
+Maximum: 12
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = AUFGRUND
+B = DA
+C = DABEI
+D = DAMIT
+E = DASS
+F = DENNOCH
+G = INDEM
+H = OB
+I = OBWOHL
+J = SOBALD
+Text:
+**Rückfragen zum Arbeitsvertrag**
+Sehr geehrter Herr Salzmann,
+meinen Arbeitsvertrag habe ich heute mit der Post erhalten und möchte mich hiermit herzlich bedanken. Ich habe ihn ausführlich geprüft und (46) haben sich noch einige Fragen ergeben.
+Bei meinem Vorstellungsgespräch hatte Frau Ott mir mündlich ein Jobticket zugesagt, das im Vertrag nicht erwähnt wird. Kann ich (47) fest mit dieser Zusatzleistung rechnen?
+Meine zweite Frage bezieht sich auf den Arbeitsort. Im Vertrag steht, (48) Mitarbeiter bei Bedarf auch an einem anderen Ort in Deutschland eingesetzt werden können. Gilt das auch für meine Stelle? Das war mir nicht bewusst und wäre (49) meiner familiären Situation momentan schwierig. (50) ich, wie Sie wissen, zwei schulpflichtige Kinder habe, wäre ein Umzug für meine Familie nicht möglich.
+Ich freue mich auf Ihre Rückmeldung und schicke Ihnen den Vertrag unverzüglich unterschrieben zurück, (51) diese Punkte geklärt sind.
+Ich freue mich auf meinen Arbeitsbeginn am 1. Juli.
+Mit freundlichen Grüßen
+Irina Lopez
+Aufgaben:
+[46] … ausführlich geprüft und (46) haben sich noch einige Fragen ergeben. …
+Lösung: C
+[47] … im Vertrag nicht erwähnt wird. Kann ich (47) fest mit dieser Zusatzleistung rechnen? …
+Lösung: F
+[48] … Im Vertrag steht, (48) Mitarbeiter bei Bedarf auch an einem anderen Ort …
+Lösung: E
+[49] … Das war mir nicht bewusst und wäre (49) meiner familiären Situation momentan schwierig. …
+Lösung: A
+[50] … momentan schwierig. (50) ich, wie Sie wissen, zwei schulpflichtige Kinder habe, …
+Lösung: B
+[51] … schicke Ihnen den Vertrag unverzüglich unterschrieben zurück, (51) diese Punkte geklärt sind. …
+Lösung: J
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 2
+Maximum: 12
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Ihre Beschwerde bezüglich des beschädigten Produktes**
+Sehr geehrte Frau Janiashvilli,
+wir danken Ihnen für Ihr Schreiben, mit dem Sie uns auf die Schäden an der Bettcouch aufmerksam machen, die Sie bei uns gekauft haben.
+Wir haben (52) und teilen Ihre Ansicht.
+Offensichtlich ist bei unserer Qualitätskontrolle (53) worden.
+(54) hätte die Couch nicht ausgeliefert werden dürfen.
+Heute erhalten Sie das Ersatzprodukt, das beschädigte Möbelstück wird dann kostenlos mitgenommen.
+Wir bitten Sie, die entstandenen (55), und wünschen Ihnen viel Vergnügen mit Ihrem neuen Sitzmöbel. Ihre Reklamation haben wir an die Abteilung für Qualitätssicherung weitergegeben, um sicherzustellen, dass solche Fehler zukünftig vermieden werden.
+Als kleines Dankeschön für Ihr Verständnis finden Sie anbei einen Gutschein (56) 50 Euro für Ihren nächsten Besuch in unserem Haus.
+Wir würden uns freuen, Sie bald wieder in einer unserer Filialen (57).
+Mit freundlichen Grüßen
+Ludmilla Dombrowski
+Leiterin Kundenservice
+Aufgaben:
+[52] … Bettcouch aufmerksam machen, die Sie bei uns gekauft haben. Wir haben (52) und teilen Ihre Ansicht. …
+A) Ihren Auftrag angenommen
+B) Ihre Bestellung erhalten
+C) Ihre Reklamation geprüft
+Lösung: C
+[53] … Offensichtlich ist bei unserer Qualitätskontrolle (53) worden. …
+A) das Problem unbemerkt
+B) der Mangel übersehen
+C) der Schaden behoben
+Lösung: B
+[54] … der Mangel übersehen worden. (54) hätte die Couch nicht ausgeliefert werden dürfen. …
+A) Auf dieser Stelle
+B) In diesem Zustand
+C) Mit dieser Position
+Lösung: B
+[55] … Wir bitten Sie, die entstandenen (55), und wünschen Ihnen viel Vergnügen mit Ihrem neuen Sitzmöbel. …
+A) Fehler zu beanstanden
+B) Probleme zu berücksichtigen
+C) Unannehmlichkeiten zu entschuldigen
+Lösung: C
+[56] … Als kleines Dankeschön für Ihr Verständnis finden Sie anbei einen Gutschein (56) 50 Euro für Ihren nächsten Besuch …
+A) für den Betrag von
+B) in Höhe von
+C) zum Preis von
+Lösung: B
+[57] … Wir würden uns freuen, Sie bald wieder in einer unserer Filialen (57). Mit freundlichen Grüßen …
+A) begrüßen zu dürfen
+B) beobachten zu dürfen
+C) besuchen zu dürfen
+Lösung: A

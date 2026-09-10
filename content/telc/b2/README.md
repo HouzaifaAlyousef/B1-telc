@@ -5,6 +5,13 @@
 | Ordner | Name | Aufgaben | Minuten |
 |---|---|---|---|
 | [modell-01](modell-01/) | **ZUGANGSKONTROLLE** | 53 | 125 |
+| [modell-02](modell-02/) | **GLEITZEIT** | 53 | 125 |
+| [modell-03](modell-03/) | **URLAUBSANSPRUCH** | 53 | 125 |
+| [modell-04](modell-04/) | **ARBEITSPLATZREGELN** | 53 | 125 |
+| [modell-05](modell-05/) | **BETRIEBSSPORT** | 53 | 125 |
+| [modell-06](modell-06/) | **EINFÜHRUNGSTAG** | 53 | 125 |
+| [modell-07](modell-07/) | **KANTINE** | 53 | 125 |
+| [modell-08](modell-08/) | **FIRMENORGANIGRAMM** | 53 | 125 |
 
 كل مجلّد يحتوي على:
 - `text.txt` (نص الامتحان الكامل مع الحلول الرسمية متوافق مع نظام `admin/parse.js`)
@@ -12,4 +19,4 @@
 - `audio/` (الملفات الصوتية الخاصة بأقسام السماع)
 
 القالب الأساسي المعتمد: [`_vorlage.txt`](_vorlage.txt)
-المصدر: ملفات `Doku/feed pdf/` (تتضمن 8 نماذج كاملة Varianten 1-8).
+المصدر: ملفات `Doku/feed pdf/` (المستند الشامل B2 ويتضمن 8 نماذج كاملة Varianten 1–8).
