@@ -75,11 +75,15 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
       // يلي جوّاته بتعطي ٣٥. الطالب بيشوف ٤٥ بالواجهة وما بيوصلها أبداً،
       // والتصحيح بيقسّم على القسم لا على البلوك فما في تعويض. لما يكون
       // النقص مصرّح فيه (Fehlend:) منسكت — هداك مقصود ومكتوب بالواجهة.
+      // والاتجاه التاني كمان خلل: قطع بتعطي أكتر من يلي البلوك معلنه،
+      // يعني الطالب فيه يجيب أعلى من العلامة الكاملة. هون ما في عذر
+      // «Fehlend» — الأسئلة الناقصة بتنقّص المتاح، عمرها ما بتزيده.
       const unreachable = (r.test.blocks || []).filter(
-        b => !b.missing && (b.availablePoints ?? 0) < (b.maxPoints ?? 0));
+        b => (b.availablePoints ?? 0) > (b.maxPoints ?? 0)
+          || (!b.missing && (b.availablePoints ?? 0) < (b.maxPoints ?? 0)));
       if (unreachable.length) {
         nUnreach += unreachable.length;
-        note.push('★ نقاط ما بتنطال: ' + unreachable
+        note.push('★ نقاط ما بتطابق: ' + unreachable
           .map(b => `${b.id} ${b.availablePoints}/${b.maxPoints}`).join('، '));
       }
 
@@ -96,5 +100,5 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
 const w = Math.max(...rows.map(r => r[1].length), 10);
 for (const [m, id, note] of rows) console.log(`  ${m} ${id.padEnd(w)}  ${note}`);
 console.log(`\n  ${nFilled} جاهز · ${nEmpty} فاضي · ${nBad} فيه مشكلة · `
-            + `${nMissing} ملف ناقص · ${nUnreach} بلوك نقاطه ما بتنطال`);
+            + `${nMissing} ملف ناقص · ${nUnreach} بلوك نقاطه ما بتطابق`);
 process.exit(nBad ? 1 : 0);
