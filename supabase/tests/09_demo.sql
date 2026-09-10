@@ -48,8 +48,10 @@ declare
   codes text[];
   res   jsonb;
   n     int;
+  n_b1  int;                  -- كم امتحان بالمستوى فعلاً — قبل أي دور
   ends  timestamptz;
 begin
+  select count(*) into n_b1 from tests where level_id = 'b1';
   select slug, id into t1, id1 from tests where level_id='b1' order by sort limit 1;
   select slug, id into t2, id2 from tests where level_id='b1' and slug <> t1 order by sort limit 1;
 
@@ -110,9 +112,9 @@ begin
   --------------------------------------------------- الكتالوج (للتسويق)
   -- صاحب التجريبي لازم يشوف إنه في امتحانات تانية — بعنوانها بس.
   res := level_catalog('b1');
-  perform t_check(format('الكتالوج بيرجّع كل امتحانات المستوى (%s)',
-                         jsonb_array_length(res)),
-                  jsonb_array_length(res) = 16);
+  perform t_check(format('الكتالوج بيرجّع كل امتحانات المستوى (%s من %s)',
+                         jsonb_array_length(res), n_b1),
+                  jsonb_array_length(res) = n_b1 and n_b1 > 0);
   perform t_check('★ واحد مفتوح والباقي مقفول',
     (select count(*) from jsonb_array_elements(res) e
       where (e->>'open')::boolean) = 1);
@@ -139,8 +141,9 @@ begin
     1, array['b1'], 30, 2, 'Voll', 2) c;
   perform set_config('request.jwt.claim.sub', full_::text, true);
   perform redeem_code(codes[1], 'full-dev-1');
-  perform t_check('المشترك الكامل بيشوف كل الامتحانات',
-                  (select count(*) from tests where level_id = 'b1') = 16);
+  perform t_check(format('المشترك الكامل بيشوف كل الامتحانات (%s)',
+                         (select count(*) from tests where level_id = 'b1')),
+                  (select count(*) from tests where level_id = 'b1') = n_b1);
 
   ------------------------------------------- تجريبي + كامل ما بينمزجوا
   perform set_config('request.jwt.claim.sub', adm::text, true);

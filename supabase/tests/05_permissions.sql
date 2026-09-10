@@ -41,8 +41,10 @@ declare
   other uuid := '88888888-0000-0000-0000-000000000008';
   tid   uuid;
   n     int;
+  n_tests0 int;   -- العدد قبل المحاولة، بينجاب قبل الدور
 begin
   select id into tid from tests where slug = 'modell-01';
+  select count(*) into n_tests0 from tests;
   set local role authenticated;
   perform set_config('request.jwt.claim.sub', me::text, true);
 
@@ -96,8 +98,9 @@ begin
                   (select count(*) from items where text = 'hacked') = 0);
 
   perform attempt('delete from tests');
+  -- المقصود إنّ ولا صفّ انمحى، مو إنّ العدد رقم بعينه
   perform t_check('ما بيقدر يحذف امتحانات',
-                  (select count(*) from tests) = 16);
+                  (select count(*) from tests) = n_tests0);
 
   perform attempt('delete from admin_audit_log');
   perform attempt('insert into admin_audit_log (action) values (''fake'')');

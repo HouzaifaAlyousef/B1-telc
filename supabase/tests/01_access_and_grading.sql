@@ -31,12 +31,18 @@ declare
   free uuid := '22222222-2222-2222-2222-222222222222';
   tid  uuid;
   n    int;
+  n_tests int;   -- العدد الحقيقي، بينجاب قبل الدور
+  n_items int;
   res  jsonb;
   got  jsonb := '{}';
   r    record;
 begin
   -- معرّف الامتحان بينجاب قبل تقمّص أي مستخدم، لأنه RLS بتحجبه عن غير المشترك
   select id into tid from tests where slug = 'modell-01';
+  -- ★ ونفس الشي للأعداد: المقصود «بيشوف كلهن»، مو رقم بعينه. رقم مثبّت
+  --   بيفشل على إضافة نموذج صحيحة بدل ما يمسك خلل بالـRLS.
+  select count(*) into n_tests from tests;
+  select count(*) into n_items from items;
 
   set local role authenticated;
 
@@ -48,9 +54,11 @@ begin
 
   ---------------------------------------------------------------- ٢
   select count(*) into n from tests;
-  perform t_check(format('المشترك بيشوف ١٦ امتحان (شاف %s)', n), n = 16);
+  perform t_check(format('المشترك بيشوف كل الامتحانات (%s من %s)', n, n_tests),
+                  n = n_tests and n_tests > 0);
   select count(*) into n from items;
-  perform t_check(format('المشترك بيشوف ٩١٢ سؤال (شاف %s)', n), n = 912);
+  perform t_check(format('المشترك بيشوف كل الأسئلة (%s من %s)', n, n_items),
+                  n = n_items and n_items > 0);
 
   ---------------------------------------------------------------- ٣ ★
   begin

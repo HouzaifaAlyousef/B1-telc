@@ -31,7 +31,9 @@ declare
   r     jsonb;
   codes text[];
   n     int;
+  n_b1  int;                  -- العدد الحقيقي، قبل تقمّص الطالب
 begin
+  select count(*) into n_b1 from tests where level_id = 'b1' ;
   set local role authenticated;
   perform set_config('request.jwt.claim.sub', adm::text, true);
 
@@ -90,7 +92,8 @@ begin
   perform redeem_code(codes[1], 'dev-1');
 
   select count(*) into n from tests where level_id = 'b1';
-  perform t_check(format('مشترك telc·B1 بيشوف امتحاناته (%s)', n), n = 16);
+  perform t_check(format('مشترك telc·B1 بيشوف امتحاناته (%s من %s)', n, n_b1),
+                  n = n_b1 and n_b1 > 0);
   select count(*) into n from tests where level_id = 'goethe-b1';
   perform t_check('★ وما بيشوف ولا امتحان Goethe·B1', n = 0);
 
