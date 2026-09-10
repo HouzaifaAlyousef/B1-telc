@@ -100,6 +100,7 @@ const last = (m = "sendMessage") => [...sent].reverse().find(s => s.method === m
 const toChat = (id: number) =>
   [...sent].reverse().find(x => x.method === "sendMessage" && x.body?.chat_id === id)?.body;
 const kb = () => last()?.reply_markup?.inline_keyboard ?? [];
+const lastOf = (m: string) => [...sent].reverse().find(x => x.method === m)?.body;
 /* اللوحة الثابتة: reply_markup.keyboard مو inline_keyboard */
 const perm = (id: number) =>
   (toChat(id)?.reply_markup?.keyboard ?? []).flat().map((b: any) => b.text);
@@ -260,9 +261,10 @@ check(`★ ومعه زرّي وافق/ارفض (${reqId.slice(0, 8)}…)`, /^[0-
 sent.length = 0;
 await post({ callback_query: { id: "cbX", data: `A|${reqId}`,
   from: { id: 777001, username: "liar", language_code: "ar" },
-  message: { chat: { id: 777001 } } } });
-check("★★ غريب ضغط «وافق» ← ما عندك صلاحية",
-      /ما عندك صلاحية/.test(String(last()?.text)));
+  message: { chat: { id: 777001 }, message_id: 11 } } });
+check("★★ غريب ضغط «وافق» ← تنبيه إله لحاله مو رسالة بالمجموعة",
+      /ما عندك صلاحية/.test(String(lastOf("answerCallbackQuery")?.text))
+      && !sent.some(x => x.method === "sendMessage"));
 check("★★ وما انعمل ولا كود كامل",
       psql(`select count(*) from access_codes where note like 'telegram-full:%';`) === "0");
 check("★★ والطلب لسا معلّق",
@@ -273,22 +275,26 @@ psql(`insert into bot_admins (telegram_id) values (${BOSS});`);
 sent.length = 0;
 await post({ callback_query: { id: "cbA", data: `A|${reqId}`,
   from: { id: BOSS, username: "boss", language_code: "de" },
-  message: { chat: { id: BOSS } } } });
+  message: { chat: { id: BOSS }, message_id: 22, text: "طلب" } } });
 const full = psql(`select code || '/' || duration_days || '/' ||
                      coalesce(array_length(test_slugs,1)::text,'كل')
                    from access_codes where note like 'telegram-full:%';`);
 check(`★ انعمل كود كامل: ٩٠ يوم وكل الامتحانات (${full})`, /\/90\/كل$/.test(full));
 check("★ والطالب وصله الكود",
       /تمّت الموافقة/.test(String(toChat(TG_ID)?.text)));
-check("★ وإنت وصلك تأكيد", /انبعت الكود/.test(String(toChat(BOSS)?.text)));
+check("★★ ورسالة الطلب انختمت: مين وافق مكتوب",
+      /وافق @boss/.test(String(lastOf("editMessageText")?.text)));
+check("★★ وأزرارها راحت — ما حدا بيقدر يغيّر القرار",
+      lastOf("editMessageText") !== undefined
+      && lastOf("editMessageText").reply_markup === undefined);
 
 /* ---- ١٣) ★ ضغطة تانية على نفس الطلب ---- */
 sent.length = 0;
 await post({ callback_query: { id: "cbA2", data: `A|${reqId}`,
   from: { id: BOSS, username: "boss", language_code: "de" },
-  message: { chat: { id: BOSS } } } });
+  message: { chat: { id: BOSS }, message_id: 22, text: "طلب" } } });
 check("★ الموافقة التانية بتقول «سبق وانبتّ فيه»",
-      /سبق وانبتّ/.test(String(last()?.text)));
+      /سبق وانبتّ/.test(String(lastOf("answerCallbackQuery")?.text)));
 check("★ وضلّ كود كامل واحد",
       psql(`select count(*) from access_codes where note like 'telegram-full:%';`) === "1");
 
@@ -303,15 +309,19 @@ await post({ callback_query: { id: "c2", data: "m|de|1",
 const req2 = psql(`select id from access_requests where telegram_id=55502 and status='pending';`);
 sent.length = 0;
 await post({ callback_query: { id: "c3", data: `R|${req2}`,
-  from: { id: BOSS }, message: { chat: { id: BOSS } } } });
-check(`★ «ارفض» بيعرض أسباب (${flat().length})`,
-      flat().length === 4 && flat().every((b: any) => String(b.callback_data).startsWith("X|")));
+  from: { id: BOSS }, message: { chat: { id: BOSS }, message_id: 33, text: "طلب" } } });
+const rk = lastOf("editMessageReplyMarkup")?.reply_markup?.inline_keyboard?.flat() ?? [];
+check(`★ «ارفض» بيبدّل الأزرار بأسباب بنفس الرسالة (${rk.length})`,
+      rk.length === 4 && rk.every((b: any) => String(b.callback_data).startsWith("X|")));
 sent.length = 0;
 await post({ callback_query: { id: "c4", data: `X|${req2}|soon`,
-  from: { id: BOSS }, message: { chat: { id: BOSS } } } });
+  from: { id: BOSS }, message: { chat: { id: BOSS }, message_id: 33, text: "طلب" } } });
 check("★ الطالب وصله سبب الرفض بلغته هو (ألماني)",
       /nicht bewilligt/.test(String(toChat(55502)?.text))
       && /später/.test(String(toChat(55502)?.text)));
+check("★★ ورسالة الطلب انختمت بالرفض وبلا أزرار",
+      /رفض/.test(String(lastOf("editMessageText")?.text))
+      && lastOf("editMessageText").reply_markup === undefined);
 check("★ والسبب انحفظ",
       psql(`select reason from access_requests where id='${req2}';`) === "soon");
 check("★ ورفض ما بيعمل كود",

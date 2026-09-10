@@ -397,25 +397,56 @@ const REASON_LABEL: Record<string, string> = {
   soon: "مو هلق", demo: "جرّب التجريبي", contact: "احكي معنا", no: "مرفوض",
 };
 
-async function askReason(chat: number, id: string) {
-  await send(chat, "شو السبب يلي بدّك يوصله؟",
-    rows(REASONS.map((k) => ({ text: REASON_LABEL[k], callback_data: `X|${id}|${k}` }))));
+/* ★ رسالة الطلب وحدة، وأزرارها بتتبدّل جوّاها.
+   بمجموعة فيها أكتر من شخص، لو تركنا الأزرار بعد القرار، التاني
+   بيضغط ويلاقي «سبق وانبتّ فيه» — أو أسوأ، بيفتكر إنّه هو يلي قرّر.
+   منشيل الأزرار ومنكتب مين قرّر بنفس الرسالة، فالمجموعة بتشوف الحالة
+   النهائية وبس. */
+async function seal(cb: any, verdict: string) {
+  await tg("editMessageText", {
+    chat_id: cb.message?.chat?.id,
+    message_id: cb.message?.message_id,
+    text: `${cb.message?.text ?? ""}\n\n${verdict}`,
+    // بلا reply_markup = الأزرار بتنشال
+  });
 }
 
-async function decide(chat: number, from: any, id: string,
-                      approve: boolean, reason?: string) {
+const nameOf = (from: any) =>
+  from?.username ? "@" + from.username : (from?.first_name ?? String(from?.id ?? ""));
+
+async function adminAction(cb: any, kind: string, id: string, reason: string) {
+  const from = cb.from;
+  const pop = (text: string, alert = true) =>
+    tg("answerCallbackQuery", { callback_query_id: cb.id, text, show_alert: alert });
+
+  // «ارفض» بيبدّل الأزرار بأسباب — بنفس الرسالة مو برسالة جديدة
+  if (kind === "R") {
+    await tg("answerCallbackQuery", { callback_query_id: cb.id });
+    return void await tg("editMessageReplyMarkup", {
+      chat_id: cb.message?.chat?.id, message_id: cb.message?.message_id,
+      reply_markup: { inline_keyboard: rows(
+        REASONS.map((k) => ({ text: REASON_LABEL[k], callback_data: `X|${id}|${k}` }))) },
+    });
+  }
+
+  const approve = kind === "A";
   let res: any;
   try {
     res = await rpc("bot_decide_request", {
       p_admin_telegram_id: from.id, p_request_id: id,
-      p_approve: approve, p_reason: reason ?? null });
+      p_approve: approve, p_reason: approve ? null : reason });
   } catch (e) {
-    // ★ مين مو بـbot_admins بيوصل لهون بس القاعدة بترفضه
+    // ★ مين مو بـbot_admins بيوصل لهون بس القاعدة بترفضه.
+    //   تنبيه إله لحاله — ما منوسّخ المجموعة برسالة بيشوفها الكل.
     if (String(e).includes("not_bot_admin"))
-      return void await send(chat, "⛔ ما عندك صلاحية.");
+      return void await pop("⛔ ما عندك صلاحية.");
     throw e;
   }
-  if (!res.ok) return void await send(chat, `سبق وانبتّ فيه: ${res.already}`);
+
+  if (!res.ok) {
+    await pop(`سبق وانبتّ فيه: ${res.already}`);
+    return void await seal(cb, `— انبتّ فيه سابقاً (${res.already})`);
+  }
 
   const lang = (T[res.lang as Lang] ? res.lang : "de") as Lang;
   const stud = Number(res.chat_id);
@@ -428,10 +459,12 @@ async function decide(chat: number, from: any, id: string,
       t(lang, "fullWhat", { lvl: "", m: res.months }),
       "", t(lang, "how"),
     ].join("\n"));
-    await send(chat, `✅ انبعت الكود <code>${res.code}</code> لـ${res.username ?? stud}`);
+    await pop("✅ انبعت الكود", false);
+    await seal(cb, `✅ وافق ${nameOf(from)} · الكود ${res.code}`);
   } else {
     await send(stud, `${t(lang, "noFull")}\n\n${t(lang, "rj_" + reason)}`);
-    await send(chat, `✖️ انرفض (${REASON_LABEL[reason ?? "no"]})`);
+    await pop("✖️ انرفض", false);
+    await seal(cb, `✖️ رفض ${nameOf(from)} · ${REASON_LABEL[reason] ?? reason}`);
   }
 }
 
@@ -459,16 +492,19 @@ Deno.serve(async (req) => {
 
   try {
     if (cb) {
-      await tg("answerCallbackQuery", { callback_query_id: cb.id });
       // اسم المؤسسة نصّ حرّ، وممكن يجي فيه «|» — فآخر جزء بينلمّ سوا
       const [kind, a, ...rest] = String(cb.data ?? "").split("|");
       const b = rest.join("|");
-      const lang = (T[a as Lang] ? a : fallback) as Lang;
 
-      // أزرارك إنت: المعرّف مو لغة، والقرار بينتحقّق بالقاعدة
-      if (kind === "A") { await decide(chat, from, a, true); return new Response("ok"); }
-      if (kind === "R") { await askReason(chat, a);          return new Response("ok"); }
-      if (kind === "X") { await decide(chat, from, a, false, b); return new Response("ok"); }
+      // أزرارك إنت: بتردّ على الضغطة لحالها (التنبيه لازم يطلع للضاغط
+      // وحده)، فما منمرقها عالردّ العام تحت
+      if (kind === "A" || kind === "R" || kind === "X") {
+        await adminAction(cb, kind, a, b);
+        return new Response("ok");
+      }
+
+      await tg("answerCallbackQuery", { callback_query_id: cb.id });
+      const lang = (T[a as Lang] ? a : fallback) as Lang;
 
       if (kind === "g" || kind === "b")
         await stepProvider(chat, (T[a as Lang] ? a : lang) as Lang,
