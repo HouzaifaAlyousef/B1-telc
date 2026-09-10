@@ -24,7 +24,7 @@ const dirs = (p) => existsSync(p)
   ? readdirSync(p).filter(d => !d.startsWith('.') && statSync(path.join(p, d)).isDirectory())
   : [];
 
-let nFilled = 0, nEmpty = 0, nBad = 0, nMissing = 0;
+let nFilled = 0, nEmpty = 0, nBad = 0, nMissing = 0, nUnreach = 0;
 const rows = [];
 
 for (const prov of dirs(path.join(ROOT, 'content'))) {
@@ -71,8 +71,23 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
         nMissing += gone.length;
         note.push(`★ ناقص ${gone.length}: ${gone.map(g => path.basename(g[1])).join(', ')}`);
       }
+      // نقاط معلَنة ما إلها أسئلة: البلوك بيقول «45 نقطة» بس القطع
+      // يلي جوّاته بتعطي ٣٥. الطالب بيشوف ٤٥ بالواجهة وما بيوصلها أبداً،
+      // والتصحيح بيقسّم على القسم لا على البلوك فما في تعويض. لما يكون
+      // النقص مصرّح فيه (Fehlend:) منسكت — هداك مقصود ومكتوب بالواجهة.
+      const unreachable = (r.test.blocks || []).filter(
+        b => !b.missing && (b.availablePoints ?? 0) < (b.maxPoints ?? 0));
+      if (unreachable.length) {
+        nUnreach += unreachable.length;
+        note.push('★ نقاط ما بتنطال: ' + unreachable
+          .map(b => `${b.id} ${b.availablePoints}/${b.maxPoints}`).join('، '));
+      }
+
       if (r.warnings.length) note.push(`${r.warnings.length} تحذير`);
 
+      // ملاحظة مو فشل — لسا: B2 كله عليه هالخلل، وتحميير البايبلاين
+      // قبل ما ينتصلّح ما بيفيد. أوّل ما يتصلّح، زيدي
+      // «|| unreachable.length» هون وبيصير الفحص يوقف البناء.
       const bad = r.warnings.length || gone.length;
       rows.push([bad ? '!' : '✓', id, note.join(' · ')]);
       if (bad) nBad++; else nFilled++;
@@ -82,5 +97,6 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
 
 const w = Math.max(...rows.map(r => r[1].length), 10);
 for (const [m, id, note] of rows) console.log(`  ${m} ${id.padEnd(w)}  ${note}`);
-console.log(`\n  ${nFilled} جاهز · ${nEmpty} فاضي · ${nBad} فيه مشكلة · ${nMissing} ملف ناقص`);
+console.log(`\n  ${nFilled} جاهز · ${nEmpty} فاضي · ${nBad} فيه مشكلة · `
+            + `${nMissing} ملف ناقص · ${nUnreach} بلوك نقاطه ما بتنطال`);
 process.exit(nBad ? 1 : 0);
