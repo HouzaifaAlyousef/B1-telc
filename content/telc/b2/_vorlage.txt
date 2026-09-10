@@ -16,14 +16,14 @@ Untertitel: 45 Aufgaben · 120 Minuten
 Titel: Lesen
 Minuten: 45
 Hinweis: Aufgaben 1–18
-Punkte: 45
+Punkte: 54
 Teile: lv1, lv2, lv3, lv4
 
 ## Block: block-lesen-schreiben
 Titel: Lesen und Schreiben
 Minuten: 20
 Hinweis: Aufgaben 19–20 und Beschwerdeantwort
-Punkte: 30
+Punkte: 13
 Teile: lvs1, lvs2
 
 ## Block: block-hoeren
@@ -37,14 +37,14 @@ Teile: hv1, hv2, hv3, hv4
 Titel: Hören und Schreiben
 Minuten: 15
 Hinweis: Aufgabe 41 und Telefonnotiz
-Punkte: 15
+Punkte: 9
 Teile: hvs
 
 ## Block: block-sb
 Titel: Sprachbausteine
 Minuten: 20
 Hinweis: Aufgaben 46–57
-Punkte: 24
+Punkte: 6
 Teile: sb1, sb2
 
 ### Teil: lv1
@@ -52,8 +52,8 @@ Format: matching
 Titel: Lesen, Teil 1
 Gruppe: Lesen
 Minuten: 10
-Punkte: 1
-Maximum: 5
+Punkte: 3
+Maximum: 15
 Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
 Auswahltitel: Informationen
 Auswahl:
@@ -82,8 +82,8 @@ Format: mc
 Titel: Lesen, Teil 2
 Gruppe: Lesen
 Minuten: 12
-Punkte: 2.5
-Maximum: 10
+Punkte: 3
+Maximum: 12
 Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
 Text:
 **<Titel der Mitteilung>**
@@ -114,8 +114,8 @@ Format: matching
 Titel: Lesen, Teil 3
 Gruppe: Lesen
 Minuten: 10
-Punkte: 2.5
-Maximum: 10
+Punkte: 3
+Maximum: 12
 Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
 Auswahltitel: Forumsbeiträge
 Auswahl:
@@ -141,8 +141,8 @@ Format: mc
 Titel: Lesen, Teil 4
 Gruppe: Lesen
 Minuten: 13
-Punkte: 2
-Maximum: 10
+Punkte: 3
+Maximum: 15
 Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
 Text:
 **<Titel des Protokolls>**
@@ -179,8 +179,8 @@ Format: mc
 Titel: Lesen und Schreiben, Teil 1
 Gruppe: Lesen und Schreiben
 Minuten: 5
-Punkte: 2.5
-Maximum: 5
+Punkte: 3
+Maximum: 6
 Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
 Text:
 **<Betreff der E-Mail>**
@@ -202,8 +202,8 @@ Format: writing
 Titel: Lesen und Schreiben, Teil 2
 Gruppe: Lesen und Schreiben
 Minuten: 15
-Punkte: 25
-Maximum: 25
+Punkte: 7
+Maximum: 7
 Anweisung: Antworten Sie auf die Beschwerde.
 Text:
 <Beschwerdetext und Anweisungen>
@@ -343,8 +343,8 @@ Format: writing
 Titel: Hören und Schreiben, Telefonnotiz
 Gruppe: Hören und Schreiben
 Minuten: 15
-Punkte: 15
-Maximum: 15
+Punkte: 9
+Maximum: 9
 Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
 Text:
 <Telefonnotiz Angaben>
@@ -356,8 +356,8 @@ Format: matching
 Titel: Sprachbausteine, Teil 1
 Gruppe: Sprachbausteine
 Minuten: 10
-Punkte: 2
-Maximum: 12
+Punkte: 0.5
+Maximum: 3
 Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–h passt in welche Lücke?
 Auswahltitel: Wörterliste
 Auswahl:
@@ -390,8 +390,8 @@ Format: mc
 Titel: Sprachbausteine, Teil 2
 Gruppe: Sprachbausteine
 Minuten: 10
-Punkte: 2
-Maximum: 12
+Punkte: 0.5
+Maximum: 3
 Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
 Text:
 <Lückentext>

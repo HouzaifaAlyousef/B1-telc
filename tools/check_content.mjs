@@ -85,10 +85,8 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
 
       if (r.warnings.length) note.push(`${r.warnings.length} تحذير`);
 
-      // ملاحظة مو فشل — لسا: B2 كله عليه هالخلل، وتحميير البايبلاين
-      // قبل ما ينتصلّح ما بيفيد. أوّل ما يتصلّح، زيدي
-      // «|| unreachable.length» هون وبيصير الفحص يوقف البناء.
-      const bad = r.warnings.length || gone.length;
+      // فحص صارم: تحذير، ملف مفقود، أو بلوك نقاطه ما بتنطال بيوقّف البناء
+      const bad = r.warnings.length || gone.length || unreachable.length;
       rows.push([bad ? '!' : '✓', id, note.join(' · ')]);
       if (bad) nBad++; else nFilled++;
     }
