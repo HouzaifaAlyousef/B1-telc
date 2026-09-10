@@ -93,10 +93,13 @@ check "فحص content/ بيمرق" $?
 node tools/sync_b1_content.mjs --check >/dev/null 2>&1
 check "★ content/telc/b1 مطابق لـdata/ (ما نسيت تعيدي التوليد)" $?
 
-# وكل الـ١٦ لازم يكونوا معبّيين فعلاً، مو فاضيين
+# وكلهن لازم يكونوا معبّيين فعلاً، مو فاضيين.
+# ★ العدد من data/index.json مو رقم مثبّت: النماذج بتزيد، والفحص
+#   المثبّت بيفشل على إضافة صحيحة بدل ما يمسك خلل.
+WANT=$(python3 -c "import json;print(len(json.load(open('data/index.json'))['modelle']))")
 N=$(node tools/check_content.mjs telc/b1 2>/dev/null | grep -c '✓ telc/b1')
-[ "$N" = 16 ]
-check "★ الـ١٦ نموذج موجودين ومقروئين ($N)" $?
+[ "$N" = "$WANT" ]
+check "★ كل نماذج B1 موجودين ومقروئين ($N من $WANT)" $?
 
 # ★ نصّ مكسور لازم يفشل الفحص، وإلا الفحص بلا فايدة
 mkdir -p "$TMP/ctest/telc/zz/modell-01"

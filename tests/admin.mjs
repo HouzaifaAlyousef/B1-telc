@@ -456,8 +456,11 @@ try {
   await page.selectOption('#c_lvl', 'b1');
   await page.waitForTimeout(400);
   const hint0 = await page.textContent('#c_hint');
-  check('★ سطر «شو بيفتح» بيتبع الاختيار',
-        /Öffnet/.test(hint0) && /16/.test(hint0));
+  // ★ العدد من القاعدة مو رقم مثبّت: النماذج بتزيد، والرقم المثبّت
+  //   بيفشل على إضافة صحيحة بدل ما يمسك خلل.
+  const nB1 = sql("select count(*) from tests where level_id='b1' and published;");
+  check(`★ سطر «شو بيفتح» بيتبع الاختيار (${nB1} امتحان)`,
+        /Öffnet/.test(hint0) && new RegExp(`\\b${nB1}\\b`).test(hint0));
 
   // ---- الملفات: رفع من اللوحة ----
   // الرفع الحقيقي بده Storage شغّال، وما عندنا هون. يلي منفحصه إنو
