@@ -30,11 +30,11 @@ Punkte: 9
 Teile: hvs
 
 ## Block: block-sb
-Titel: Sprachbausteine
-Minuten: 20
-Hinweis: Aufgaben 46–57
-Punkte: 6
-Teile: sb1, sb2
+Titel: Sprachbausteine und Schreiben
+Minuten: 35
+Hinweis: Aufgaben 46–58
+Punkte: 20
+Teile: sb1, sb2, fb
 
 ### Teil: lv1
 Format: matching
@@ -482,3 +482,25 @@ A) im Nachhinein
 B) irgendwann
 C) umgehend
 Lösung: C
+
+### Teil: fb
+Format: writing
+Titel: Schreiben, Forumsbeitrag
+Gruppe: Sprachbausteine und Schreiben
+Minuten: 35
+Punkte: 14
+Maximum: 14
+Anweisung: Wählen Sie eines der beiden Themen und schreiben Sie einen Forumsbeitrag von mindestens 100 Wörtern.
+Text:
+**Thema A**
+Homeoffice 2 Tage pro Woche mit privatem Laptop.
+
+**Thema B**
+Betriebsausflug am Samstag. Man darf aber einen Tag frei nehmen.
+Aufgaben:
+[58] Schreiben Sie Ihre Meinung zu Thema A oder Thema B in das Firmenforum.
+Punkt: Einleitung — worum geht es?
+Punkt: Ihre eigene Meinung mit Begründung
+Punkt: Zwei Argumente aus Ihrer Sicht
+Punkt: Ein Vorschlag und ein Schlusssatz
+
