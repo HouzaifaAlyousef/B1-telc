@@ -1,0 +1,453 @@
+# ZUGANGSKONTROLLE
+Untertitel: 53 Aufgaben · 125 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 5
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 35
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Auf ins Abenteuer! Du hast Lust auf Sonne, Strand und eine fremde Sprache? Eine Sprachreise ermöglicht es dir, deine Sprachkenntnisse zu verbessern und gleichzeitig ein neues Land kennenzulernen.
+B = Global Career Network: Internationale Stellenangebote für Akademiker und Führungskräfte weltweit. Finden Sie anspruchsvolle Positionen in Forschung, Lehre und Industrie.
+C = Sprachenschule Lingua: Staatlich anerkannte Ausbildung zum Fremdsprachenkorrespondenten oder Übersetzer. Jetzt informieren und durchstarten!
+D = Existenzgründung leicht gemacht: Ihr Weg in die Selbstständigkeit. Beratung, Seminare und Fördermittel für angehende Unternehmerinnen und Unternehmer.
+E = Knigge im Berufsalltag: Der richtige Umgangston unter Kollegen und Vorgesetzten. Praxistipps für ein souveränes Auftreten im Betrieb.
+F = Erfolgreich bewerben: Professionelle Bewerbungsunterlagen und Coaching für Vorstellungsgespräche.
+G = Auslandspraktika weltweit: Erste Berufserfahrungen sammeln, internationale Kontakte knüpfen und Fremdsprachenkenntnisse vertiefen. Für Studierende und Berufseinsteiger.
+H = Arbeitsrecht aktuell: Kündigung erhalten? Wir prüfen Ihre Kündigung und unterstützen Sie bei der Kündigungsschutzklage. Kostenlose Ersteinschätzung.
+Aufgaben:
+[1] Moutasem fragt sich, wie er neue Kollegen korrekt ansprechen sollte.
+Lösung: E
+[2] Selma wurde entlassen und will sich dagegen wehren.
+Lösung: H
+[3] Anka überlegt, eine Ausbildung im Fremdsprachenbereich zu machen.
+Lösung: C
+[4] Sean ist Professor für Biologie und sucht einen Job im internationalen Umfeld.
+Lösung: B
+[5] Yassin möchte erste Berufserfahrungen im Ausland sammeln.
+Lösung: G
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 12
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Zugangskontrolle und Zeiterfassung**
+Als Mitarbeiterinnen und Mitarbeiter erhalten Sie zu Beginn Ihres Arbeitsverhältnisses einen Firmenausweis mit Chip-Karte. Dieser berechtigt zum Zugang in das Unternehmensgebäude und dient gleichzeitig zur Erfassung der Arbeitszeit. Außerdem können Sie mit Ihrem Firmenausweis in der Kantine und am Getränkeautomaten bezahlen und das hauseigene Fitnessstudio benutzen.
+Neben den Aufzügen im Erdgeschoss finden Sie ein digitales Zeiterfassungsgerät. Bitte halten Sie beim Betreten und Verlassen des Gebäudes Ihren Firmenausweis an die blau markierte Fläche. Das Gerät registriert Ihre Anwesenheit automatisch. Sollten Sie Ihren Ausweis einmal vergessen haben, wenden Sie sich bitte unverzüglich an den Empfang.
+Aufgaben:
+[6] Der Firmenausweis dient ausschließlich zur Erfassung der Arbeitszeit.
+A) richtig
+B) falsch
+Lösung: B
+[7] Das Zeiterfassungsgerät befindet sich im Erdgeschoss neben den Aufzügen.
+A) richtig
+B) falsch
+Lösung: A
+[8] Mit dem Firmenausweis kann man
+A) das Fitnessstudio kostenlos nutzen.
+B) in der Kantine bargeldlos bezahlen.
+C) Rabatte im Supermarkt erhalten.
+Lösung: B
+[9] Bei Verlust oder Vergessen des Ausweises
+A) muss man sofort nach Hause fahren.
+B) wendet man sich an den Empfang.
+C) wird das Gehalt gekürzt.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Günther: Das kann man pauschal gar nicht so sagen. Wie das in deinem Unternehmen geregelt ist, steht in deinem Arbeitsvertrag. Ab wann du eine Arbeitsunfähigkeitsbescheinigung brauchst, findest du meistens unter den Paragraphen „Arbeitsverhinderung" oder „Krankheit".
+B = Marion: Nein, vorher musst du erst mal eine Abmahnung bekommen. Wenn du dann allerdings noch mal fehlst, ohne Bescheid zu sagen, musst du mit der Kündigung rechnen. Such doch noch mal das Gespräch mit deinem Chef. Ihr findet bestimmt eine Lösung.
+C = Karin: Du kannst nicht einfach kommen und gehen, wann du willst, auch wenn du die Absicht hattest, die versäumte Zeit nachzuholen. Die Arbeitszeiten sind ja vertraglich geregelt. Wenn sich Mitarbeiter nicht daran halten, ist eine Abmahnung vor der Kündigung nicht notwendig.
+D = Elli: Wie du selbst schreibst, können im Krankheitsfall die Urlaubstage auf dein Urlaubskonto zurückgebucht werden. Du brauchst natürlich ein ärztliches Attest. Das gilt allerdings nicht, wenn du dich um ein krankes Kind kümmern musst. In diesem Fall gelten die Urlaubstage als genommen.
+E = Sabine: Diese Situation kennen doch alle Eltern. Wenn ich für meinen Sohn mal keine Betreuung finde, kann ich ihn auch ausnahmsweise mit ins Büro nehmen. Meine Chefin ist da zum Glück sehr verständnisvoll.
+F = Jorge: Also ich gehe immer gleich am ersten Krankheitstag zum Arzt. Sicher ist sicher. Außerdem kann es nicht schaden, wenn dich ein Doktor anschaut, wenn du dich nicht wohlfühlst. Gerade wenn du Kinder hast, ist es wichtig, dass du weißt, was dir fehlt. Du willst ja niemanden anstecken.
+X = Kein Beitrag passt.
+Aufgaben:
+[10] Gabi: Ich hatte gerade Urlaub und gleich am ersten Urlaubstag wurde meine Kleine krank und ich musste sie vier Tage lang pflegen. Wenn ich im Urlaub krank werde, kann ich die Tage zurückbekommen. Aber wie ist das, wenn das Kind krank wird?
+Lösung: D
+[11] Charlotte: Ich konnte leider mal wieder nicht zur Arbeit gehen, weil mein Kind krank war. Als ich heute angerufen habe, hat mein Chef total überzogen reagiert und mir mit Kündigung gedroht, wenn ich mehr als einen Tag fehle. Das geht doch nicht, oder?
+Lösung: X
+[12] Lars: Ich bin letzten Montag mit furchtbaren Kopfschmerzen aufgewacht und konnte nicht aufstehen. Leider habe ich vergessen, meinen Arbeitgeber anzurufen, und bin im Bett geblieben. Jetzt will mein Chef mir kündigen, weil ich unentschuldigt gefehlt habe. Geht das so einfach?
+Lösung: B
+[13] Kamil: Gestern war ich krank. Als ich heute wieder im Büro war, wollte mein Chef direkt die Krankschreibung haben. Ich war immer der Meinung, die braucht man erst nach drei Tagen?
+Lösung: A
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 13
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Protokoll der Abteilungsleiterbesprechung vom 20.06.20XX**
+Konrad-Adenauer-Straße 43, 30159 Hannover, Besprechungsraum: 032
+Teilnehmende: Veronika Emmerich (VE, Stellvertreterin Geschäftsleitung), Marita Hinze (MH, Leitung Einkauf), Peter Renner (PR, Leitung Produktion), Thomas Hagen (TH, Leitung Finanzen), Sibylle Marquardt (SM, Leitung Personal), Christian Werner (CW, Leitung Vertrieb), Jessica Froh (JF, Leitung Marketing), Jutta Raulin (JR, Leitung Qualitätssicherung), Joachim Meyer (JM, Leitung IT)
+Sitzungsleitung: Veronika Emmerich. Protokollantin: Sibylle Marquardt. Nicht Anwesende: Martin Stahl (MS, Geschäftsleitung).
+TOP 1 Begrüßung und Genehmigung der Tagesordnungspunkte: Einstimmig angenommen. Nächster Besprechungstermin: 24.09.20XX nach der Urlaubszeit.
+TOP 2 Probleme mit einem Zulieferer: MH berichtet, dass unser südamerikanischer Zulieferer Dos Caminos Exports Ltd. die Preise für seine Vorprodukte ohne Absprache erhöht hat. Nach intensivem Schriftwechsel kam es zu einer Einigung: Bis zum 31. des kommenden Monats wird ein günstigerer Zulieferer gesucht (zuständig: MH und TH, evtl. asiatischer Raum). Ziel ist der beidseitige Rücktritt vom Vertrag ohne weitere Ansprüche.
+TOP 3 Zwischenstand Qualitätssicherung: JR berichtet, dass das neue Konzept für Qualitätsprüfung bereits bei 30% Abweichung eine Fehlermeldung ausgibt. Die Reklamationen sind signifikant zurückgegangen.
+TOP 4 Neue Überstundenregelung: VE dankt für die Bereitschaft zu Überstunden. Bis zu 20 Überstunden pro Quartal werden ab sofort ausschließlich vergütet und können aus personellen Gründen vorerst nicht als Freizeit genommen werden. Genehmigt vom Betriebsrat am 15.06.20XX.
+TOP 5 Private Nutzung der Dienstwagen: SM teilt mit, dass Dienstwagen ab nächstem Monat auch privat genutzt werden dürfen. Voraussetzung ist ein monatlich einzureichendes Fahrtenbuch mit Angabe der privat gefahrenen Kilometer.
+TOP 6 Sonstiges: Bowlingabend in zwei Wochen in der Anlage „Sport und Spaß“, Anmeldung im Intranet bis Freitag nächster Woche.
+Aufgaben:
+[14] Der Termin der nächsten Sitzung
+A) findet nach Abstimmung im Herbst statt.
+B) muss verlegt werden.
+C) wird noch bekannt gegeben.
+Lösung: A
+[15] Die Firma
+A) hat ohne Weiteres die Preiserhöhung des Zulieferers akzeptiert.
+B) will sich an den höheren Transportkosten gern beteiligen.
+C) wird einen neuen Vertragspartner suchen.
+Lösung: C
+[16] Die Abteilung Qualitätssicherung
+A) berichtet von 30 Prozent fehlerhafter Produkte.
+B) hat keine Qualitätsprobleme.
+C) verzeichnet erste Erfolge.
+Lösung: C
+[17] Die Mitarbeitenden
+A) haben mit dem Betriebsrat gesprochen.
+B) können alle Überstunden als Freizeit nehmen.
+C) müssen zurzeit Mehrarbeit leisten.
+Lösung: C
+[18] Das Fahrtenbuch
+A) dokumentiert alle gefahrenen Kilometer.
+B) enthält nichtdienstliche Autofahrten.
+C) wird von allen Mitarbeitern geführt.
+Lösung: B
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Text:
+**Beschwerde über Putzdienst / Reinigung**
+Sehr geehrte Frau Woller, leider muss ich mich heute mit einer Beschwerde an Sie wenden. Wir haben einen Vertrag mit Ihrer Firma für die Reinigung unserer Büroräume. In diesem Vertrag sind täglich 3 Stunden Arbeit bei uns festgelegt, und zwar von 6.00 Uhr bis 9.00 Uhr morgens. In den letzten zwei Wochen war unsere Sekretärin einige Male bereits vor 9 Uhr im Büro, von Ihrem Putzdienst war aber niemand zu sehen. Wie kann das sein? Wenn wir 3 Stunden bezahlen, erwarten wir auch, dass Ihr Personal drei Stunden bei uns arbeitet. Wenn Sie für die Reinigung unserer Räume weniger als die vereinbarte Zeit benötigen, sollten Sie uns darüber informieren, damit wir den Vertrag ändern. Ich bitte um umgehende Stellungnahme und natürlich die Angleichung der Rechnung an die tatsächlich geleisteten Arbeitsstunden. Mit freundlichen Grüßen, Theo Lassner.
+Aufgaben:
+[19] Herr Lassner
+A) möchte seine Rechnung nicht begleichen.
+B) ist mit der Sauberkeit im Büro nicht zufrieden.
+C) will nur die geleisteten Stunden bezahlen.
+Lösung: C
+[20] Der Putzdienst
+A) hält die Arbeitszeit nicht ein.
+B) hat zu wenig Zeit.
+C) möchte einen neuen Vertrag.
+Lösung: A
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrer Vorgesetzten:**
+Hallo Friederike, gerade habe ich die Mail von der Firma Huber GmbH gelesen. Ich verstehe den Ärger von Herrn Lassner. Bitte sprich mal mit unseren Leuten und kläre, was da los ist, und antworte dann Herrn Lassner. Es ist ganz wichtig, dass du ihm zusagst, dass so etwas nie wieder vorkommen wird. Gib ihm auch einen Rabatt auf die nächste Rechnung in Höhe von 20 %. Wir dürfen die Firma mit diesem großen Auftrag keinesfalls als Kunden verlieren. Gruß, Heike.
+Aufgaben:
+[B] Antworten Sie Herrn Lassner auf seine Beschwerde im Namen von Friederike Baumann.
+Punkt: Entschuldigung und Bedauern über die Unannehmlichkeiten
+Punkt: Erklärung des Problems nach Rücksprache mit dem Personal
+Punkt: Zusicherung, dass dies nicht wieder vorkommen wird
+Punkt: Angebot eines Rabatts von 20 % auf die nächste Rechnung
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] In der Spätschicht ist ein Fahrer von Mittwoch bis Samstag ausgefallen.
+A) richtig
+B) falsch
+Lösung: A
+[23] Zarif
+A) arbeitet regelmäßig in der Spätschicht.
+B) kann am Mittwoch einspringen.
+C) möchte Doppelschichten machen.
+Lösung: B
+[24] Frau Li von Cargo KG möchte Holztüren umtauschen.
+A) richtig
+B) falsch
+Lösung: B
+[25] Frau Li möchte
+A) Türen, die viel Licht durchlassen, bei denen die Privatsphäre der Mitarbeitenden trotzdem nicht verletzt wird.
+B) helle Türen für den Eingangsbereich.
+C) verschiedene Modelle als Muster bekommen.
+Lösung: A
+[26] Das Restaurant „Vier Jahreszeiten“ hat sich über fehlerhafte Lieferungen beschwert.
+A) richtig
+B) falsch
+Lösung: A
+[27] Geliefert wurde
+A) ein Gasherd statt eines Elektroherds.
+B) ein Elektroherd statt eines Gasherds und ein zu schmaler Geschirrspüler.
+C) ein zu breiter Geschirrspüler.
+Lösung: B
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Aussagen. Welche Aussage a–f passt zu welcher Person 28–31?
+Auswahltitel: Aussagen
+Auswahl:
+A = Mitarbeiter sollten ihr Diensthandy nach der Arbeit ausschalten.
+B = Im Urlaub sollte man sich mit Arbeitsangelegenheiten nicht beschäftigen.
+C = Arbeit und Freizeit sollten klar getrennt sein, um das Privatleben zu schützen.
+D = Für manche Kunden ist es wichtig, dass der Kundenservice auch am Wochenende verfügbar ist.
+E = Man sollte das Privatleben respektieren und Arbeitsanfragen außerhalb der Arbeitszeit vermeiden.
+F = Manche Mitarbeiter sind bereit, für den Kundenservice am Wochenende erreichbar zu sein.
+Aufgaben:
+[28] Person 1
+Lösung: A
+[29] Person 2
+Lösung: B
+[30] Person 3
+Lösung: E
+[31] Person 4
+Lösung: D
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören einen Vortrag. Wählen Sie für die Aufgaben 32–35 die richtige Lösung A, B oder C.
+Aufgaben:
+[32] Die Firma hat zurzeit
+A) mehr Ersthelfer als gesetzlich vorgeschrieben.
+B) so viele Ersthelfer wie gesetzlich vorgeschrieben.
+C) weniger Ersthelfer als gesetzlich vorgeschrieben.
+Lösung: C
+[33] Die Ausbildung zum Ersthelfer
+A) ist kostenfrei.
+B) ist nur beim Malteser Hilfsdienst erlaubt.
+C) zählt voll zur Arbeitszeit.
+Lösung: A
+[34] Wer sich anmelden möchte,
+A) kann sich an das Personalbüro wenden.
+B) muss dem Arbeitgeber eine Bescheinigung vorlegen.
+C) sollte dies spätestens zwei Wochen vor Kursbeginn tun.
+Lösung: A
+[35] Murat
+A) kann ohne Lehrgang Ersthelfer werden, wenn er sein Ausbildungszeugnis vorlegt.
+B) muss den kompletten Erste-Hilfe-Kurs wiederholen.
+C) darf auf keinen Fall als Ersthelfer arbeiten.
+Lösung: A
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf Ansagen auf der Mailbox. Wählen Sie für die Aufgaben 36–40 die richtige Lösung A, B oder C.
+Aufgaben:
+[36] Andrea
+A) kann den geplanten Termin nicht einhalten.
+B) möchte sich Montag wieder melden.
+C) trifft einen Vertreter zum Arbeitsfrühstück.
+Lösung: A
+[37] Frau Plassberg
+A) möchte eine Steuerprüfung auswerten.
+B) möchte die neue Werbekampagne diskutieren.
+C) möchte über die Dienstreise sprechen.
+Lösung: B
+[38] Daniela Schöller
+A) bittet um heutige Abholung der Ware.
+B) braucht die Lieferung dringend.
+C) hat den Eilzuschlag bezahlt.
+Lösung: A
+[39] Herr Lattermann
+A) bekommt eine Maschine aus Hamburg.
+B) bestätigt den Empfang der Maschine.
+C) liefert eine Maschine nach Dresden.
+Lösung: C
+[40] Frau Bernhardt
+A) hat Änderungswünsche für die Homepage.
+B) meldet sich bei ihrer Sekretärin.
+C) möchte die Garantie verlängern.
+Lösung: A
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben, Telefonnotiz
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Autovermietung Klein**
+Nachricht auf dem Anrufbeantworter von Adriane Schmid (Autovermietung Klein):
+„Guten Tag, hier spricht Adriane Schmid von der Autovermietung Klein. Sie haben angerufen und um ein Angebot gebeten. Ich kann Ihnen dieses Mal einen Mittelklassewagen für Sie zum Sonderpreis von 99 Euro pro Tag anbieten. Sie können das Auto vollgetankt wieder abgeben oder wir machen das kostenpflichtig für Sie. Außerdem müssen Sie mit uns die Versicherung regeln. Bitte rufen Sie mich zurück und sagen Sie mir, ob Sie das Angebot so annehmen. Telefon 0173 721 572 6.“
+Aufgaben:
+[41] Dokumentieren Sie die Kundenanfrage:
+Punkt: Anruferin und Firma (Adriane Schmid, Autovermietung Klein)
+Punkt: Rückrufnummer (0173 721 572 6)
+Punkt: Einzelheiten des Angebots (Mittelklassewagen für 99 Euro pro Tag)
+Punkt: Bedingungen (Vollgetankt abgeben oder kostenpflichtig, Versicherung regeln)
+Punkt: Zu erledigen (Rückruf, ob das Angebot angenommen wird)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–h passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = BESTIMMT
+B = DA
+C = DAMIT
+D = FÜR
+E = SICHER
+F = SONDERN
+G = UM
+H = ÜBER
+Text:
+**Bewerbung um ein Praktikum**
+Sehr geehrte Damen und Herren,
+zunächst bedanke ich mich für das freundliche, informative Telefonat. Wie besprochen übersende ich Ihnen meine Bewerbungsunterlagen. Auf Ihrer Homepage habe ich mich bereits über das Ausbildungskonzept Ihrer Hotelkette informiert und bin (46), in Ihrem Haus vielfältige Einblicke in die Arbeit eines Hotelkaufmannes erhalten zu können.
+Ich arbeite sehr gerne mit Menschen zusammen. Teamfähigkeit und Flexibilität bringe ich als Voraussetzung mit und interessiere mich (47) die Abläufe in der Hotelverwaltung. Ein Praktikum in der Hotelbranche möchte ich deshalb absolvieren, (48) ich nicht nur im Umgang mit Menschen, (49) auch im Planen und Organisieren meine großen Stärken sehe.
+Ich erwarte von diesem Praktikum, mein theoretisches Wissen durch praktische Erfahrung weiter vertiefen zu können, (50) mir dann mit meiner Berufswahl endgültig sicher zu sein. (51) überzeuge ich Sie in einem persönlichen Gespräch. Über eine Einladung würde ich mich sehr freuen.
+Mit freundlichen Grüßen
+Alexander Thiel
+Aufgaben:
+[46] … Ausbildungskonzept Ihrer Hotelkette informiert und bin (46), in Ihrem Haus vielfältige Einblicke in die …
+Lösung: E
+[47] … Voraussetzung mit und interessiere mich (47) die Abläufe in der Hotelverwaltung. Ein Praktikum in der …
+Lösung: D
+[48] … Hotelbranche möchte ich deshalb absolvieren, (48) ich nicht nur im Umgang mit Menschen, …
+Lösung: B
+[49] … ich nicht nur im Umgang mit Menschen, (49) auch im Planen und Organisieren meine großen …
+Lösung: F
+[50] … praktische Erfahrung weiter vertiefen zu können, (50) mir dann mit meiner Berufswahl endgültig sicher zu …
+Lösung: G
+[51] … Berufswahl endgültig sicher zu sein. (51) überzeuge ich Sie in einem persönlichen Gespräch. Über eine …
+Lösung: A
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Stornierung des Auftrages mit Nr. RB 2876/20**
+Sehr geehrte Damen und Herren,
+nach dem Besuch Ihres Vertriebsmitarbeiters entschieden wir uns für (52) von zwei Kaffeevollautomaten für unsere Krankenhauskantine.
+Unsere Auftragserteilung erfolgte in KW 12. Wir (53) eine Auftragsbestätigung mit Liefertermin in KW 16.
+(54) der Lieferfrist haben wir Sie telefonisch mehrmals eindringlich darauf hingewiesen, dass wir die Maschinen dringend benötigen.
+(55) wir uns in KW 18 und haben die Lieferung immer noch nicht erhalten.
+Wir räumen Ihnen letztmalig eine Lieferfrist bis Ablauf der KW 20 ein. Sollte die Ware bis dahin (56) sein, machen wir von unserem Widerrufsrecht Gebrauch und stornieren unsere Bestellung. Wir bitten um Ihr Verständnis.
+Bitte schicken Sie uns umgehend eine (57).
+Mit freundlichen Grüßen
+Eva Al Hossan
+Aufgaben:
+[52] … Vertriebsmitarbeiters entschieden wir uns für (52) von zwei Kaffeevollautomaten für unsere Krankenhauskantine. …
+A) einen Auftrag
+B) eine Bestellung
+C) eine Anforderung
+Lösung: B
+[53] … Auftragserteilung erfolgte in KW 12. Wir (53) eine Auftragsbestätigung mit Liefertermin in KW 16. …
+A) bekommen danach
+B) bestellten dann
+C) erhielten daraufhin
+Lösung: C
+[54] … Liefertermin in KW 16. (54) der Lieferfrist haben wir Sie telefonisch mehrmals …
+A) Vor Beginn
+B) Nach Ablauf
+C) Während
+Lösung: B
+[55] … dringend benötigen. (55) wir uns in KW 18 und haben die Lieferung immer noch nicht erhalten. …
+A) Mittlerweile befinden
+B) Früher waren
+C) Bald sind
+Lösung: A
+[56] … Sollte die Ware bis dahin (56) sein, machen wir von unserem Widerrufsrecht Gebrauch …
+A) nicht eingetroffen
+B) beschädigt geliefert
+C) zurückgeschickt
+Lösung: A
+[57] … Bitte schicken Sie uns umgehend eine (57). Mit freundlichen Grüßen Eva Al Hossan
+A) telefonische Zusage
+B) neue Rechnung
+C) schriftliche Stellungnahme
+Lösung: C

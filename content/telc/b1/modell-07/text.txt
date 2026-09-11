@@ -1,0 +1,425 @@
+# ANNIKA3
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Finanzielle Unterstützung für Kunstprojekte mit Schülern
+B = Winterveranstaltung auf dem Eis mit Musik
+C = Aktionsprogramm der Eu:Finanzielle Unterstützung für italienische Künstler
+D = Kunstausstellung von italienischen Schülern
+E = Deutschlernen mit euer Methode im Radio
+F = Geld für gemeinsame europäische Projekte
+G = Elternverein organsiert Kunstausstellung
+H = Mit der Eisenbahn ins winterliche Wien
+I = Mehr Geld für österreichische Musikschulen
+J = Wie Sprachaufenthalte auswählen?
+Aufgaben:
+[1] Rund 150,000 Sprachreisen werden von Deutschen jährlich unternommen. Der Wunsch, eine andere Sprache zu lernen, kann verschieden Gründe haben: private, schulische oder berufliche. Das Angebot an Sprachreisen wächst ständig, über die Qualität ist jedoch wenig oder nichts bekannt. Im Marktplatz geht es diesmal um Kriterien für das Lernen mit Erfolg. Welche Methoden sind zu empfehlen, welche Anbieter kosten? Ihre Fragen werden am Hörertelefon unter 0800-839601 von Fachleuten beantwortet.
+Lösung: J
+[2] Die Metropole Wien lädt zum winterlichen Eisvergnügen vor dem Wiener Rathaus ein: vom 22. Januar bis 7.März kann man auf 1800 Quadratmetern übers Eis fahren. Die Musik dazu bestimmt den Fahrstil und reicht vom klassischen Walzer bis zur Diskomusik. Nachts werden auf der Eisbahn Partys veranstaltet, vom Samba - Fest bis zum Hip-Hop –Event. Speisen und Getränke gibt es an verschiedenen Ständen, Schlittschuhe und Stiefel kann man leihen. Informationen: Wiener Tourismusverband.
+Lösung: B
+[3] Für das Aktionsprogramm der Europäischen Union (EU) zur beruflichen Weiterbildung, Leonardo da Vinci, können noch bis zum 31. März Anträge gestellt werden. Ziel des Programms ist es, europäische Projekte zur beruflichen Weiterbildung zu unterstützen Anträge auf finanzielle unterstützen können die Institutionen stellen, die mit mindestens zwei weiteren europäischen Partnern an einem Projekt arbeiten wollen. Information: Nationale Koordinerungsstelle Leonardo da Vinci, Fehrbellineer Platz 3, D-10707 Berlin, Tel, 030//8643-0, Fax- 2637.
+Lösung: F
+[4] Wien(SN.APA). Wie das Unterrichtsministerlum mitteilte, sollen im kommenden. Jahr monatlich 70,000 Euro für Kulturprojekte an Schulen zur Verfügung gestellt werden. Unterstützt würden damit Veranstaltungen und Projekte, die das Verständnis der Kinder und Jugendlichen für die Künste wecken, das Interesse am Musisch – Kreativen verstärken und zu Kontakten und einer Auseinandersetzung mit Künstlern führen. Dadurch soll in altersgemäßer Form die ganzheitliche Entwicklung der Persönlichkeit von Kindern und Jugendlichen gefördert werden.
+Lösung: A
+[5] Zum sechsten Mal veranstaltet das Comitato Geniton Binnigen/ Bottmingen seine breit angelegte multikulturelle Kunstausstellung Arte. An der Veranstaltung nehmen 70 Künstlerinnen und Künstler aus der Region sowie Gäste aus Italien, Frankreich, Deutschland und weiteren Ländern teil. Bei dem vor 18 Jahren gegründeten Comitato handelt es sich um einen Elternverein, der damals italienischsprachigen Kindern bei ihren Schulprobiemen hilfreich zur Seite stand. Da die jetzige dritte Kindergeneration nicht mehr diese Probleme hat, suchte das Comitato nach neuen Aufgeben und fand in der Organisation der alljährlichen Kunstausstellung ein neues, interessantes Betätigungsfeld.
+Lösung: G
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Philipp Reis der wahre Erfinder des Telefons?**
+**Erfinder, Lehrer, Familienvater Auf den Spuren von Philipp Reis besuchte Susanne Müller seinen Geburtsort.**
+Weil sein Vater nie aufgeschrieben habe, was er machte, ist mancher gute Gedanke verloren gegangen, klagt später einmal Karl Reis. Auch gibt es wenige offizielle Berichte und Dokumente über Philipp Reis in
+Friedrichsdorf und in seiner Geburtsstadt Gelnhausen. Das gilt besonders für das private Leben der Familie Reis, die ab 1852 in unmittelbarer Nähe des berühmten Garnier – Instituts in Friedrichsdorf ein Haus gefunden hatte. Berichte des Sohnes Karl Reis erzählen ein wenig mehr über das Leben des Erfinders. Karl Reis, der beim Tod des Vaters erst elf Jahre alt war, berichtet von einem lieben und gerechten Vater, der sich sehr um seine Frau und seine Kinder gesorgt hat. Wenn der Vater aber seine Experimente machte, vergaß er alles um sich herum.
+Philipp Reis lernte bereits als Junge viele technische Maschinen kennen und machte eine Reihe von Experimenten, die er als Lehrer am Garnier – Institut fortsetzte. Er entwickelte eine große Anzahl von technischen Geräten, die im Institut gut verwendet werden konnten. Auf die Schüler machte Philipp Reis einen oft sehr merkwürdigen Eindruck. Verunsichert waren die Schüler besonders dann, wenn Reis Aufsicht hatte, aber selbst im Klassenraum gar nicht anwesend war.
+Trotzdem konnte Reis alles hören und wusste, was passiert war. Philipp Reis hatte eine besondere Kamera gebaut, mit der er von seinem Arbeitszimmer aus, in dem er gleichzeitig Experimente durchführte, in die Klassenräume schauen konnte. Ein Draht, der über den Schulhof in sein Arbeitszimmer führte, diente als Vorläufer des späteren Telefons. Bei den Schülern und Lehrern entstand so der Ruf, dass der Reis auf geheimnisvolle. Weise alles sehen kann.
+1883 schrieb der englische Professor Silvanus Thompson einen Bericht über Reis und nannte ihn den wahren Erfinder des Telefons. Philipp Reis habe das Telefon entwickelt, und nicht Graham Bell oder Thomas Edison. Diese beiden amerikanischen Forscher hätten auch bei ihren Arbeite zur Entwicklung des Telefons auf Philipp Reis Experimente in Deutschland hingewiesen. Seine offizielle Anerkennung als Erfinder des Telefons hat Philipp Reis allerdings nicht mehr erlebt. Im Jahre 1874 ist er in Friedrichsdorf an einer Lungenkrankheit gestorben.
+Aufgaben:
+[6] Heute weiß man, dass Philipp Reis
+A) bei seinen Versuchen die Familie vergaß.
+B) seinen Kindern viel über seine Experimente erzählte.
+C) sogar mit seiner Familie Experimente machte.
+Lösung: A
+[7] Professor Thompson
+A) hat bei der Entwicklung des Telefons mitgearbeitet.
+B) meinte, dass Reis das Telefon erfunden hat
+C) war ein Studienkollege von Philipp Reis.
+Lösung: B
+[8] Die Schüler von Philipp Reis
+A) konnten ihren Lehrer in seinem Arbeitszimmer sehen.
+B) machen in seinem Arbeitszimmer Experimente.
+C) wurden von ihrem Lehrer mit einer Kamera beobachtet
+Lösung: C
+[9] Über das private Leben von Philipp Reis
+A) gibt es nur wenige Berichte aus seiner Familie.
+B) kann man im Garnier-Institut viele Berichte finden.
+C) kann man in Gelnhausen viel erfahren.
+Lösung: A
+[10] Philipp Reis
+A) hat viele technische Geräte gebaut .
+B) leitete als junger Wissenschaftler das Garnier-Institut.
+C) studierte am Garnier-Institut
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m07-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie lieben Krimis und möchten daher einer Krimiautorin beim Vorlesen zuhören.
+Lösung: K
+[12] Ihr Bekannter würde gerne am Wochenende ein Boot mieten.
+Lösung: X
+[13] Sie möchten sich in einem Hotel in den Bergen erholen und mit dem Zug anreisen.
+Lösung: F
+[14] Sie möchten sich eine Märchenvorstellung im Theater ansehen.
+Lösung: E
+[15] Ihre Freundin sucht ein angenehmes Hotel, in dem man auch Sport treiben kann.
+Lösung: D
+[16] Am Sonntag wollen Sie einen kleinen Ausflug mit Kindern machen. Die Kinder mögen Tiere.
+Lösung: G
+[17] Ihre Bekannten möchten gerne im Mai eine Schiffsfahrt machen.
+Lösung: L
+[18] Sie möchten gerne am Wochenende tanzen gehen und suchen eine tolle Disco.
+Lösung: X
+[19] Der kleine Sohn von Freunden ist begeistert von der Eisenbahn. Sie möchten am Wochenende mit ihm etwas Interessantes machen.
+Lösung: H
+[20] Sie möchten im August eine Woche in den Bergen wandern und brauchen eine erfahren Person, die mit Ihnen geht.
+Lösung: A
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**An alle Kunden Gewinnen**
+**Sehr geehrter Herr Schröder,**
+zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz Besonders ausgedacht: einen
+attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere erfolgreiche Buchidee.
+Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit ihrer
+Kundennummer können Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte
+Antwortschreiben zurück und bestellen Sie damit – ohne Risiko – das Buch des Monats. Sie erhalten dieses
+Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, sollte Ihnen das Buch nicht gefallen.
+Ohne irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonst
+üblichen Preises in einer Buchhandlung. Gleichzeitig nehmen Sie an einem Preisausschreiben (27).
+Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto
+eine Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance auf den Hauptgewinn - einen Mercedes der S-Klasse. Wenn Sie innerhalb der
+kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil –
+vorausgesetzt, Sie haben die richtige Kundennummer.
+Mit freundlichen Grüßen
+Petra Obermoser
+Leiterin der Abteilung Marketing
+Aufgaben:
+[21] … Kunden Gewinnen Sehr geehrter Herr Schröder, zum Start (21) das neue Geschäftsjahre haben wir uns für Sie etwas ganz …
+A) auf
+B) in
+C) über
+Lösung: B
+[22] … ganz Besonders ausgedacht: einen attraktiven Gewinn! (22) dem Beginn des neuen Geschäftsjahres feiern wir unsere …
+A) Mit
+B) Von
+C) Zwischen
+Lösung: A
+[23] … Buchidee. Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit ihrer …
+A) schöne
+B) schönen
+C) schönes
+Lösung: A
+[24] … Sie an einem Preisausschreiben teilnehmen. Senden Sie uns (24) das beigefügte Antwortschreiben zurück und bestellen Sie …
+A) einfach
+B) immer
+C) noch
+Lösung: A
+[25] … – das Buch des Monats. Sie erhalten dieses Buch mit (25) versprechen, es nach 10 Tage zurückgeben zu können, …
+A) unsere
+B) unserem
+C) unseren
+Lösung: B
+[26] … irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonst üblichen …
+A) natürlich
+B) schön
+C) viele
+Lösung: A
+[27] … Gleichzeitig nehmen Sie an einem Preisausschreiben (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den …
+A) mit
+B) teil
+C) zu
+Lösung: B
+[28] … (27). Bitte bedanken Sie: sollte Ihre Kundennummer(28) den richtigen Zahlen sein, haben Sie die Chance, ein Auto …
+A) unter
+B) neben
+C) vor
+Lösung: B
+[29] … Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in jedem Fall die Chance …
+A) bald
+B) bereits
+C) unbedingt
+Lösung: C
+[30] … der kommenden vier Wochen antworten, nehmen Sie immer(30) an unserer Gewinnverteilung teil – vorausgesetzt, Sie …
+A) noch
+B) schon
+C) schnell
+Lösung: A
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+Sehr geehrte Damen und Herren,
+seit längerem plane ich eine Wanderreise in die Sahara-Länder. Nun ist mir beim Lesen der Zeitschrift Berge die Anzeige von Geo-Tours aufgefallen, denn (31) steht, dass Sie auf Erlebnisreisen in Wüstenregionen spezialisiert sind. Vielleicht haben Sie das richtige Angebot für uns - (32) für mich und meine 17-Jährige Tochter. Unsere Vorstellungen sind im Einzelnen diese:
+Zuerst eine Wanderreise, etwa 10 Tage, möglichst leichte Tageswanderungen(ca. 4 – 5 Stunden), und (33) ein Erholungsurlaub am Meer. Bieten Sie solche Kombinationen an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch folgende Fragen: Wird das Gepäck von einem Übernachtungsort zum nächsten transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen zusammengesetzt sind, (38) Sprache die Reiseleiterin/ der Reiseleiter spricht und ob ein Arzt (39) ist.
+Ich freue mich auf Ihr (40).
+Mit freundlichen Grüßen ANNETTE LUCHSINGER
+Auswahl:
+A = ANFRAGE
+B = ANGEBOT
+C = DABEI
+D = DAFÜR
+E = DANACH
+F = DARIN
+G = DESHALB
+H = HÄTTE
+I = MIT
+J = MÖCHTE
+K = NÄMLICH
+L = UNTER
+M = WÄRE
+N = WELCHE
+O = WENN
+Aufgaben:
+[31] … Berge die Anzeige von Geo-Tours aufgefallen, denn (31) steht, dass Sie auf Erlebnisreisen in Wüstenregionen …
+Erklärung: Das Wort lautet: DARIN
+Lösung: F
+[32] … sind. Vielleicht haben Sie das richtige Angebot für uns - (32) für mich und meine 17-Jährige Tochter. Unsere …
+Erklärung: Das Wort lautet: NÄMLICH
+Lösung: K
+[33] … leichte Tageswanderungen(ca. 4 – 5 Stunden), und (33) ein Erholungsurlaub am Meer. Bieten Sie solche …
+Erklärung: Das Wort lautet: DANACH
+Lösung: E
+[34] … am Meer. Bieten Sie solche Kombinationen an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch …
+Erklärung: Das Wort lautet: WENN
+Lösung: O
+[35] … an? Und (34) ja, zu welchem Preis? Zur Wanderreise (35) ich noch folgende Fragen: Wird das Gepäck von einem …
+Erklärung: Das Wort lautet: HÄTTE
+Lösung: H
+[36] … zum nächsten transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen …
+Erklärung: Das Wort lautet: UNTER
+Lösung: L
+[37] … transportiert? Schläft man immer (36) freiem Himmel? Ich (37) auch wissen, wie die Reisegruppen zusammengesetzt sind, …
+Erklärung: Das Wort lautet: MÖCHTE
+Lösung: J
+[38] … auch wissen, wie die Reisegruppen zusammengesetzt sind, (38) Sprache die Reiseleiterin/ der Reiseleiter spricht und ob …
+Erklärung: Das Wort lautet: WELCHE
+Lösung: N
+[39] … Reiseleiterin/ der Reiseleiter spricht und ob ein Arzt (39) ist. Ich freue mich auf Ihr (40). Mit freundlichen Grüßen …
+Erklärung: Das Wort lautet: DABEI
+Lösung: C
+[40] … spricht und ob ein Arzt (39) ist. Ich freue mich auf Ihr (40). Mit freundlichen Grüßen ANNETTE LUCHSINGER
+Erklärung: Das Wort lautet: ANGEBOT
+Lösung: B
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Der Sprecher könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.
+Lösung: falsch
+[42] Die Sprecherin geht gern zu Fuß.
+Lösung: falsch
+[43] Der Sprecher findet es in Ordnung, dass seine Frau immer das Auto hat
+Lösung: richtig
+[44] Die Sprecherin fährt jeden Tag mit ihrem Motorrad zur Arbeit.
+Lösung: richtig
+[45] Die Sprecherin fährt immer mit dem Fahrrad zur Arbeit.
+Lösung: falsch
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Das Ziel des Vereins UKI ist, ausländische Bürger in Österreich zu unterstützen.
+Lösung: falsch
+[47] Der Verein wendet sich besonders an internationale Manager, weil diese den Verein finanziell unterstützen.
+Lösung: falsch
+[48] Die Abendkurse für Berufstätige dauern neun Monate.
+Lösung: richtig
+[49] Es gibt einen speziellen Deutschkurs für Jugendliche, die eine österreichische Hauptschule besuchen wollen.
+Lösung: richtig
+[50] Es gibt auch Kurse, die nichts mit Deutschlernen zu tun haben.
+Lösung: richtig
+[51] Die Deutschlehrer sind gleichzeitig auch Sozialarbeiter.
+Lösung: richtig
+[52] Sozialarbeiter helfen Ausländern bei Problemen mit Ämtern.
+Lösung: richtig
+[53] Im Kurs werden Papiere für eine Bewerbung vorbereitet.
+Lösung: richtig
+[54] Frauen und Kinder lernen im Unterricht gemeinsam Deutsch.
+Lösung: falsch
+[55] Die Gesetze machen die Arbeit von Frau Böck schwerer.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Ihr Flug nach Prag ist nicht pünktlich.
+Lösung: falsch
+[57] Im Speisewagen kann man ins Internet gehen.
+Lösung: falsch
+[58] Montags bis freitags ab 8:00 Uhr kann man sich persönlich beraten lassen.
+Lösung: richtig
+[59] Das Hörspiel Katzen in der Nacht wird morgen um 20:30 Uhr gesendet.
+Lösung: falsch
+[60] Das Flugzeug landet mit 20 Minuten Verspätung in Leipzig.
+Lösung: richtig
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie Annika. Schreiben Sie etwas zu allen vier Punkten:
+Extra:
+{
+ "brief": {
+  "intro": "Sie haben von einer Freundin folgenden Brief erhalten:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "Wie geht’s dir? Hattest du ein schönes Wochenende? Hier hat es die ganze Zeit geregnet, deshalb bin ich zuhause geblieben.",
+   "Du hattest vorgeschlagen, dass wir im Sommer zusammen verreisen könnten. Die Idee finde ich super! An welches Reiseziel denkst du? Ich bin gerne am Meer, mag aber auch Städterreisen. Wichtig ist für mich nur, dass ich auch ein bisschen Sport machen kann. Die Reise sollte aber nicht zu viel kosten, denn ich habe vor Kurzem schon viel für eine Autoreparatur bezahlen müssen. Was meinst du: wie können wir günstig Urlaub machen? Es muss ja kein Luxushotel sein. Schreib mir bald, dann können wir anfangen zu planen.",
+   "Viele Grüße"
+  ],
+  "signature": "Annika"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie Annika. Schreiben Sie etwas zu allen vier Punkten:
+Mindestwörter: 100
+Punkt: Was Sie am Wochenende unternommen haben
+Punkt: Wohin Sie gerne reisen würden
+Punkt: Was Sie im Urlaub gerne machen
+Punkt: Wie man beim Reisen Geld sparren kann

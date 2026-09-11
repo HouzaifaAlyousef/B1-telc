@@ -1,0 +1,418 @@
+# ANDREAS
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Märchen-Festspiele in Bremen
+B = Griechische Botschaft bietet Sprachkurse für Schüler
+C = Universitätsstadt wird 300 Jahre
+D = Wissenschaft: Von der Körpergröße hängt das Gehalt ab
+E = Durch Handel reich geworden
+F = Interessante Universitätsstadt mit hoher Lebensqualität
+G = Latein in deutschen Schulen wieder beliebter
+H = Wer wenig lacht, verdient auch weniger
+I = Fremdsprachen: Schüler lernen nur Englisch und Französisch
+J = Griechisch wird in deutschen Schulen kaum unterrichtet
+Aufgaben:
+[1] In Deutschland lernen nur ganz wenige Schüler Griechisch. Es sind insgesamt nur 0.14 aller Schüler. Vor 30 Jahren waren es noch 0,48 So berichtet die griechische Botschaft in Berlin in ihrem Europabericht. Griechisch wird meistens von Zwölftklässlern als dritte Fremdsprache neben Französisch und Englisch gewählt. Die wenigen Schüler, die Griechisch wählen, haben Verwandte in Griechenland.
+Lösung: J
+[2] Dem Meer verdankt die Hansestadt Bremen ihre Bedeutung. Bremer Kaufleute und Seefahrer nutzten die günstige geografische Lage, um in aller Welt heimisch zu werden. Seit Generationenhaben sie Handel getrieben, so dass Geld in die Stadt. Dies steht man der Stadt heute noch an: das Alte Rathaus, das Kaufmannhaus, die historische Innenstadt. Außerdem war Bremen auch immer eine Heimat für natürlich das Märchen der Bremer Stadtmusikanten.
+Lösung: E
+[3] Freiburg, die Hauptstadt des Schwarzwaldes, liegt in einer der sonnigsten Gegenden Deutschlands. Wo es so viel Sonne gibt, da ist auch viel Lebensfreude, und nicht zuletzt gehören auch badische Küche und badischer Wein zum Besten was in Deutschland geboten wird. Zum einmaligen Flair gemütlichen Universitätsstadt trägt auch ihre Lage bei. Frankreich und die Schweiz sind nicht weit entfernt. Die Stadt selbst lockt mit vielen alten Straßen mit zahlreichen Museen und Baudenkmälern. Über alles hinaus ragt die große Kirche, die nach 300 jähriger Bauzeit 1513 vollendet wurde.
+Lösung: F
+[4] In einer wissenschaftlichen Untersuchung hat man erforscht, warum bestimme Menschen mehr Geld verdienen als andere. Britische Wissenschaftler behaupten, größeren Menschen zahlt der Chef mehr. Im Laufe des vergangenen Jahres haben zwei weitere Untersuchungen festgestellt: Wer wenig lacht oder häufig mit Kollegen trinken geht, verdient mehr nur: Nicht lachen und mit Kollegen trinken, gehen das kann man lernen. Aber wachsen?
+Lösung: D
+[5] Das Statistische Bundesamt berichtet, dass in deutschen Schulen allgemein wieder mehr Latein gelernt wird. Allein in Thüringen hat sich die Anzahl in den letzten beiden Jahren verdoppelt Während der Tiefpunkt bei Latein im vorletzten Jahr erreicht war, wählen zurzeit wieder mehr Schüler Latein als erste Fremdsprache. Als vorteilhaft hat sich offenbar vor allem das wittenbergische Modell erwiesen, das Latein in der fünften Klasse mit einer modernen Fremdsprache (Französisch, Englisch usw.) kombiniert Allerdinges sind hier meist nur drei Stunden für beide Sprachen pro Woche vorgesehen. Das sei bei Weitem zu wenig, Kritisieren Lateinlehrer Weitem zu wenig kritisieren Lateinlehrer.
+Lösung: G
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Leben**
+**Das machen wir mit links**
+**Über eine Million Österreicher sind Linkshänder und langsam setzen sie sich durch in der Rechtshänder Welt**
+Schau der macht das mit der linken Hand. Solche und ähnliche Kommentare hörte der gelernte Porzellanformer Gerhard Spur (51) von Besuchern, die die Porzellanmanufaktur im Wiener Augarten besichtigten und dem Künstler beim Herstellen eines Kunstwerkes zusahen allerdings nur früher, als nur die rechte Hand die so genannte schöne Hand war,
+die man zum Arbeiten. Schreiben usw. verwenden durfte. Heute ist es offensichtlich normal, dass jemand mit der linken Hand Vasen aus Porzellan bearbeitet. Gerhard Spur wird jedenfalls nicht mehr bestaunt.
+Links arbeiten
+Gut 15 Prozent der Menschheit sind Linkshänder. Über die Gründe für Linkshändigkeit ist sich die Wissenschaft nicht einig. Fest steht nur. Wenn Kinder gezwungen werden, statt mit der linken Hand mit der rechten Hand zu schreiben, hat dies schwerwiegende Folgen. Dies führt zu Knoten im Kopf so die Linkshänder-Expertin Johanna Barbara Sattier. Spätestens wenn umgeschulte Kinder mit dem Lesen und Schreiben beginnen, macht sich das Chaos im Kopf bemerkbar. In der Schule ist es mittlerweile verboten, Linkshänder auf rechts umzuschulen. Probleme machen allerdings noch Arbeitsplätze, die nicht für Linkshänder geeignet sind, erklärt Erich Pospischill, Leiter des arbeitsmedizinischen Zentrums Mödling: Schon die Computermaus auf der falschen Seite führt zu rascherer Ermüdung, weil das Gehirn durch das ständige Umdenken zusätzlich belastet wird.
+Lösungen im Betrieb
+Die Maschine, an der Slata Tanasic tagtäglich arbeitet, funktioniert von links unten nach rechts oben. Genau verkehrt für die 41- Jährige, die seit 21 Jahren im Seibert-Elektronikwerk arbeitet. Ich habe gesagt, dass ich mit der Maschine so nicht arbeiten kann. Und das wurde akzeptiert. Slata wurde in einen anderen Arbeitsbereich versetzt und macht jetzt Arbeiten, die auch mit der linken Hand möglich sind: Montieren und Vorbereiten der Bauteile.
+Eltern können helfen
+Bei Kleinkindern lässt sich nicht sofort erkennen, ob sie links- oder rechtshändig sind, sagt die Expertin Sattler: Viele Kinder ahmen zuerst die Tätigkeiten in unserer rechtshändigen Welt nach. Deshalb rät Sattler den Eltern, ihren Kinder beim Herausfinden ihrer Händigkeit zu helfen: Blumen gießen mit einer kleinen Kanne, einen Ball werfen bei diesen Handlungen greifen Kinder automatisch mit der starken Hand zu. Und dann sollten Eltern bereits erste Konsequenzen ziehen.
+Aufgaben:
+[6] Gerhard Spur
+A) arbeitet heute nur noch mit der rechten Hand.
+B) arbeitet früher mit Linkshändern zusammen.
+C) stellt seine Kunstwerke mit der linken Hand her
+Lösung: C
+[7] Heute ist wissenschaftlich bewiesen, dass
+A) es eine klare Ursache für Linkshändigkeit gibt.
+B) Linkshänder besser im Lesen und Schreiben sind.
+C) Linkshänder das Schreiben mit der rechten Hand schadet.
+Lösung: C
+[8] Erich Pospischill meint, dass
+A) es für Linkshänder sehr oft keine geeigneten Arbeitsplätze gibt.
+B) Linkshänder vor allem im Computerbereich eingesetzt werden.
+C) Linkshänder wesentlich öfter krank sind.
+Lösung: A
+[9] Frau Slata Tanasic
+A) arbeitet seit 41 Jahren in der gleichen Firma.
+B) erledigt alle Arbeiten mit der linken Hand.
+C) ist seit 21 Jahren an der gleichen Maschine beschäftigt.
+Lösung: C
+[10] Laut der Linkshänder-Expertin Johanna Sattier
+A) haben Linkshänder meistens auch linkshändige Eltern.
+B) kann man Linkshändigkeit bei kleinen Kindern nicht gleich entdecken.
+C) sind linkshändige Kinder besonders gut im Ballspielen.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m06-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie lieben Krimis und möchten daher einer Krimiautorin beim Vorlesen zuhören.
+Lösung: K
+[12] Ihr Bekannter würde gerne am Wochenende ein Boot mieten.
+Lösung: X
+[13] Sie möchten sich in einem Hotel in den Bergen erholen und mit dem Zug anreisen.
+Lösung: F
+[14] Sie möchten sich eine Märchenvorstellung im Theater ansehen.
+Lösung: E
+[15] Ihre Freundin sucht ein angenehmes Hotel, in dem man auch Sport treiben kann.
+Lösung: D
+[16] Am Sonntag wollen Sie einen kleinen Ausflug mit Kindern machen. Die Kinder mögen Tiere.
+Lösung: G
+[17] Ihre Bekannten möchten gerne im Mai eine Schiffsfahrt machen.
+Lösung: L
+[18] Sie möchten gerne am Wochenende tanzen gehen und suchen eine tolle Disco.
+Lösung: X
+[19] Der kleine Sohn von Freunden ist begeistert von der Eisenbahn. Sie möchten am Wochenende mit ihm etwas Interessantes machen.
+Lösung: H
+[20] Sie möchten im August eine Woche in den Bergen wandern und brauchen eine erfahren Person, die mit Ihnen geht.
+Lösung: A
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Liebe Jelena,
+ich hab dir doch schon vom Deutsschkurs erzählt, (21) ich hier besuche. Der ist wirklich ganz gut. Wir haben jetzt eine neue Aufgabe bekommen. Wir müssen Informationen (22) Thema Gesundheit und Ernährung suchen und schauen, was es dazu Interessantes (23) Internet gibt. Die interessanteste Internetseite, die ich finden (24) , ist www.gesund.ch. Diese Seite ist für (25) Leute gemacht, die gern mehr über gesunde Ernährung erfahren möchten. Fachleute beschreiben hier genau, (26) Lebensmittel für unseren Körper wichtig und gesund sind und wie oft und wie viel man pro Tag essen sollte. Außerdem kann man (27) seinen persönlichen Speiseplan selbst erstellen und dafür passende Rezepte (28) . Für Menschen, (29) ein paar Kilos zu viel haben, gibt es auch Tipps zum Abnehmen und Links zu verschiedenen Fitnesszentren in der Schweiz.
+Und was gibt es bei dir Neues? (30) mir doch möglichst bald zurück!
+Bis dann und viele Grüße
+Paola
+Aufgaben:
+[21] … Jelena, ich hab dir doch schon vom Deutsschkurs erzählt, (21) ich hier besuche. Der ist wirklich ganz gut. Wir haben …
+A) das
+B) den
+C) der
+Lösung: B
+[22] … eine neue Aufgabe bekommen. Wir müssen Informationen (22) Thema Gesundheit und Ernährung suchen und schauen, was es …
+A) zu
+B) zum
+C) zur
+Lösung: B
+[23] … Ernährung suchen und schauen, was es dazu Interessantes (23) Internet gibt. Die interessanteste Internetseite, die ich …
+A) am
+B) im
+C) mit
+Lösung: B
+[24] … gibt. Die interessanteste Internetseite, die ich finden (24) , ist www.gesund.ch. Diese Seite ist für (25) Leute …
+A) können
+B) könnten
+C) konnte
+Lösung: C
+[25] … ich finden (24) , ist www.gesund.ch. Diese Seite ist für (25) Leute gemacht, die gern mehr über gesunde Ernährung …
+A) junge
+B) jungen
+C) junges
+Lösung: A
+[26] … erfahren möchten. Fachleute beschreiben hier genau, (26) Lebensmittel für unseren Körper wichtig und gesund sind …
+A) welche
+B) welchen
+C) welcher
+Lösung: A
+[27] … und wie viel man pro Tag essen sollte. Außerdem kann man (27) seinen persönlichen Speiseplan selbst erstellen und dafür …
+A) mir
+B) dir
+C) sich
+Lösung: C
+[28] … Speiseplan selbst erstellen und dafür passende Rezepte (28) . Für Menschen, (29) ein paar Kilos zu viel haben, gibt …
+A) fand
+B) finden
+C) gefunden
+Lösung: B
+[29] … erstellen und dafür passende Rezepte (28) . Für Menschen, (29) ein paar Kilos zu viel haben, gibt es auch Tipps zum …
+A) denen
+B) deren
+C) die
+Lösung: C
+[30] … in der Schweiz. Und was gibt es bei dir Neues? (30) mir doch möglichst bald zurück! Bis dann und viele Grüße …
+A) Schreibe
+B) Schreiben
+C) Schreibt
+Lösung: A
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+Sehr geehrter Herr Gauberger,
+ihre Anzeige habe ich mit Interesse gelesen. Ich bin (31) lange Rentner und bekomme
+monatlich nur wenig Geld. Wenn ich die Möglichkeit (32) , noch ein wenig zu verdienen, würde mir das sehr helfen. Ich bin (33) schon 72 Jahre alt, aber noch bei sehr guter Gesundheit. Daher denke ich, dass ich die Arbeit (34) Probleme machen kann. Seit über dreißig Jahren treibe ich (35) Tag Sport. Auch das frühe Aufstehen macht mir gar (36) aus.
+Einige Fragen hätte ich trotzdem noch: Müssen die Zeitungen ( 37) ausgetragen werden und wie lange ist man unterwegs? Außerdem möchte ich natürlich wissen, ( 38) man verdient. Ich bin gerne bereit, mich bei (39) vorzustellen, damit Sie sehen können, dass ich für die Tätigkeit
+(40) bin.
+Mit freundlichen Grüßen EBERHARD SPITZWEG
+Auswahl:
+A = BEOUEM
+B = GEEIGNET
+C = HÄTTE
+D = IHNEN
+E = JEDEN
+F = KÖNNTE
+G = MEHR
+H = NICHTS
+I = OHNE
+J = SCHON
+K = SIE
+L = TÄGLICH
+M = WIE HOCH
+N = WIE VIEL
+O = ZWAR
+Aufgaben:
+[31] … ihre Anzeige habe ich mit Interesse gelesen. Ich bin (31) lange Rentner und bekomme monatlich nur wenig Geld. Wenn …
+Erklärung: Das Wort lautet: SCHON
+Lösung: J
+[32] … monatlich nur wenig Geld. Wenn ich die Möglichkeit (32) , noch ein wenig zu verdienen, würde mir das sehr helfen. …
+Erklärung: Das Wort lautet: HÄTTE
+Lösung: C
+[33] … wenig zu verdienen, würde mir das sehr helfen. Ich bin (33) schon 72 Jahre alt, aber noch bei sehr guter Gesundheit. …
+Erklärung: Das Wort lautet: ZWAR
+Lösung: O
+[34] … guter Gesundheit. Daher denke ich, dass ich die Arbeit (34) Probleme machen kann. Seit über dreißig Jahren treibe ich …
+Erklärung: Das Wort lautet: OHNE
+Lösung: I
+[35] … Probleme machen kann. Seit über dreißig Jahren treibe ich (35) Tag Sport. Auch das frühe Aufstehen macht mir gar (36) …
+Erklärung: Das Wort lautet: JEDEN
+Lösung: E
+[36] … (35) Tag Sport. Auch das frühe Aufstehen macht mir gar (36) aus. Einige Fragen hätte ich trotzdem noch: Müssen die …
+Erklärung: Das Wort lautet: NICHTS
+Lösung: H
+[37] … Fragen hätte ich trotzdem noch: Müssen die Zeitungen ( 37) ausgetragen werden und wie lange ist man unterwegs? …
+Erklärung: Das Wort lautet: TÄGLICH
+Lösung: L
+[38] … ist man unterwegs? Außerdem möchte ich natürlich wissen, ( 38) man verdient. Ich bin gerne bereit, mich bei (39) …
+Erklärung: Das Wort lautet: WIE VIEL
+Lösung: N
+[39] … ( 38) man verdient. Ich bin gerne bereit, mich bei (39) vorzustellen, damit Sie sehen können, dass ich für die …
+Erklärung: Das Wort lautet: IHNEN
+Lösung: D
+[40] … damit Sie sehen können, dass ich für die Tätigkeit (40) bin. Mit freundlichen Grüßen EBERHARD SPITZWEG
+Erklärung: Das Wort lautet: GEEIGNET
+Lösung: B
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.
+Lösung: falsch
+[42] Die Sprecherin findet es gut, dass sie zur Arbeit ein Stück zu Fuß gehen kann.
+Lösung: richtig
+[43] Der Sprecher fährt nie mit dem Auto zur Arbeit.
+Lösung: richtig
+[44] Der Sprecher benutzt für den Weg zur Arbeit zurzeit verschiedene Verkehrsmittel.
+Lösung: falsch
+[45] Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.
+Lösung: falsch
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Frau Reiter ist die einzige Lokführerin in Deutschland.
+Lösung: falsch
+[47] Sie wollte schon mit 10 Jahren Lokführerin werden.
+Lösung: falsch
+[48] Frau Reiter hat nach der Schule eine Lehrstell als Elektronikerin gefunden
+Lösung: richtig
+[49] Nach der Lehre hat Frau Reiter als Automechanikerin gearbeitet.
+Lösung: falsch
+[50] Frau Reiters Eltern waren mit der Berufswahl ihre Tochter einverstanden.
+Lösung: richtig
+[51] Frau Reiter muss manchmal Reparaturen machen
+Lösung: richtig
+[52] Frau Reiter macht gerne Nachtdienst.
+Lösung: falsch
+[53] Von der Arbeit ist Frau Reiter oft müde
+Lösung: richtig
+[54] Der Mann von Frau Reiter hat regelmäßige Arbeitszeiten.
+Lösung: falsch
+[55] Frau Reiter möchte später Lokführer und Lokführerinnen ausbilden
+Lösung: richtig
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.
+Lösung: richtig
+[57] Die Firma liefert das bestellte Sofa am Dienstag ab drei Uhr nachmittags.
+Lösung: falsch
+[58] Der Gasthof Lindner ist neben einer Tankstelle.
+Lösung: richtig
+[59] Der Film Komiker läuft täglich um 20 Uhr.
+Lösung: richtig
+[60] Das Wetter ist am Abend noch gut.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie Andreas. Schreiben Sie etwas zu allen vier Punkten: Vorschlag wie Andreas seinem Arbeitskollegen helfen kann.
+Extra:
+{
+ "brief": {
+  "intro": "Sie haben im Urlaub Andreas kennengelernt. Er hat Ihnen folgende E-Mail geschrieben:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "Heute habe ich Zeit, dir ein paar Zeilen zu schreiben. Der Urlaub war so schön, aber seit ich zurück bin, habe ich im Büro sehr viel Arbeit. Bestimmt brauche ich schon bald wieder Urlaub!",
+   "Während ich weg war, hat sich hier übrigens einiges geändert: Es gibt einen neuen Kollegen, er heißt Roberto. Was aber die größte Veränderung ist:",
+   "Er arbeitet mit mir in meinem Büro, das heißt, ich habe endlich jemanden, mit dem ich mich Zwischendurch auch ein bisschen unterhalten kann! Roberrto ist aus Spanien hierher gezogen. Er kennt noch niemanden hier, außer mir natürlich, und ist meistens allein. Denkst du, dass ich ihn und ein paar andere Arbeitskollegen einmal einladen sollte? Was würdest du tun? Na gut, für heute muss ich Schluss machen. Melde dich doch bald einmal bei mir!",
+   "Viele Grüße"
+  ],
+  "signature": "Andreas"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie Andreas. Schreiben Sie etwas zu allen vier Punkten: Vorschlag wie Andreas seinem Arbeitskollegen helfen kann.
+Mindestwörter: 100
+Punkt: Wie Sie am liebsten arbeiten (alleine oder mit Kollegen)
+Punkt: Was Sie nach dem Urlaub gemacht haben
+Punkt: Was es bei Ihnen Neues gibt

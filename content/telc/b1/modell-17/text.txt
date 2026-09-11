@@ -1,0 +1,327 @@
+# TANJA
+Untertitel: 41 Aufgaben · 120 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Schweizer sollen gesünder leben
+B = Neu im Trend: Jung und gesund – mit Schokolade!
+C = Studie zeigt: Heiraten macht dick
+D = Japanische Studie: Vielschläfer leben länger
+E = Die Mehrheit der Schweizer treibt aktiv Sport
+F = Statistik: Unverheiratete haben oft ein paar Kilos zu viel
+G = Teures Essen für mehr Jugend und Schönheit
+H = USA: Nachfrage nach teuren Lebensmitteln geht zurück
+I = Schokolade essen – jung bleiben
+J = Weniger schlafen – länger leben
+Aufgaben:
+[1] Der Schokolade-Boom zeigt sich hierzulande nicht nur im hohen Verbrauch (jeder Schweizer isst fast 12 Kilo Schokolade im Jahr!), nein, er hat nun auch die Schönheitsindustrie erreicht. Vom 16. Januar bis zum 24. Februar bietet das Grand Hotel Bad Ragaz unter dem Namen Choco Therapy zahlreiche kosmetische Behandlungsmethoden mit Schokolade an. Die Bäder, Massagen und Hautcremes mit Kakao sind durchaus ernst gemeint, denn Kakao soll eine belebende Eigenschaft haben, die den Menschen jung und gesund aussehen lässt.
+Lösung: B
+[2] Frisch verheiratete Paare nehmen oft schon in den Flitterwochen einige Kilos zu, weil sie ihre Essgewohnheiten ändern. Das belegt eine neue Studie. In Deutschland sind fast die Hälfte der verheirateten Frauen und circa zwei Drittel der Ehemänner übergewichtig. Alleinstehende sind vermutlich schlanker, weil sie besonderen Wert auf ihr Äußeres legen, mehr Sport treiben und sich selten Zeit für gemütliche Mahlzeiten nehmen.
+Lösung: C
+[3] Wer acht Stunden und länger schläft, hat eine deutlich kürzere Lebenserwartung. Das berichtete das Apothekenmagazin Gesundheit am Mittwoch und bezog sich dabei auf eine neue japanische Studie. Schlecht für die Männer, denn laut dieser Studie schlafen Männer im Durchschnitt eine halbe Stunde länger pro Nacht als Frauen. Aber es gibt auch eine gute Nachricht für die Viel- und Langschläfer: Wer lange schläft, hat weniger Gewichtsprobleme und fühlt sich gesünder.
+Lösung: J
+[4] Nach dem Motto beschwingt und bewegt starten die Schweizer Gesundheitsbehörden eine landesweite Bewegungskampagne. Dabei soll die Schweizer Bevölkerung aufgerufen werden, ausgewogen zu essen und sich täglich zu bewegen. Fast zwei Drittel der Bevölkerung in der Schweiz sind wenig aktiv und essen zu viel. Die Kampagne soll den Leuten zeigen, wie Sport und gesunde Ernährung ohne großen Aufwand in den Alltag integriert werden können, z.B. mit einem Spaziergang am Mittag oder mit einem Apfel zum Znüni statt Schokolade.
+Lösung: A
+[5] Du bist, was du isst hat als Slogan ausgedient. Heute muss es heißen: Gut aussehen mit dem richtigen Essen. Der Trend kommt aus den USA: Dort kaufen bereits viele Leute neue teure Lebensmittel mit wissenschaftlichen Inhaltsstoffen, die dem Kunden jüngeres und schöneres Aussehen versprechen. So bietet z.B. ein New Yorker Nobelhotel das Menü gegen-graue-Haare an, das gegen das Älterwerden wirken soll. Aber wer wird schon eine solche Mahlzeit bestellen? Millionen von Leuten, so die Trendforscher. Und zwar aus dem einfachen Grund, weil jeder jung und gut aussehen will, und das mit möglichst wenig Aufwand.
+Lösung: G
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Abenteuer Weltumrundung**
+**Von Antje Blinda**
+Co2-Ausstoß: null. Geplante Strecke: einmal um die Welt. Endlich wird der Traum von Louis Palmer wahr: Der Schweizer startet mit seinem Auto, das mit Sonnenenergie fährt, zur Weltumrundung. Er will damit zeigen, dass Autofahren auch geht, ohne der Umwelt zu schaden.
+Entwickelt für mich ein Fahrzeug für eine Weltreise, das mit Sonnenenergie fährt, forderte Louis Palmer Studenten an Schweizer Universitäten auf. Das war vor drei Jahren. Heute ist das Auto fertig: ein dreirädriges Fahrzeug mit zwei Sitzplätzen. Und die Weltreise? Am 3. Juli starten er und sein 7-köpfiges Team in Luzern: Das Auto soll als erstes Solarfahrzeug die Welt umrunden.
+Die ganze Welt wartet auf revolutionäre Erfindungen für ein umweltbewusstes Auto, sagt der Schweizer, ich will darauf aufmerksam machen, dass die technischen Lösungen schon jetzt vorhanden sind. Mit 14 Jahren hatte Louis den Entschluss gefasst: Gegen die Veränderung des Klimas muss etwas getan werden. Die Lösung hatte er auch schon: Mit kräftigen Strichen zeichnete er ein Rennauto, verziert mit lachenden Sonnen. Der Rest war nur eine Frage der Organisation und der konsequenten Lebensplanung. Ich unterteile mein Leben in drei Phasen, sagt Palmer und lacht über sich selbst: zwischen 20 und 30 die Welt kennen lernen, zwischen 30 und 40 die Welt aufmerksam machen und zwischen 40 und 50 die Welt verändern.
+Phase eins begann mit 23 Jahren: Er zog aus, um 50 Länder auf allen Kontinenten zu bereisen: Anstatt an die Uni zu gehen, habe ich die Welt studiert. Mit dem Fahrrad fuhr er von Kenia nach Kapstadt, mit einem Segelflugzeug überflog er Südamerika und als Fotograf reiste er mehrmals nach Afghanistan.
+Phase zwei startete vor drei Jahren: Palmer konnte Studenten von vier Universitäten gewinnen, die für ihn das Auto bauten. Schwierig war es aber, Firmen und private Sponsoren für die finanzielle Unterstützung zu finden, meint Palmer. Doch auch das hat dann schließlich geklappt.
+Nun ist Palmer bereit für die Tour. Ich habe keine Ahnung, was auf uns zukommt, sagt der erfahrene Globetrotter, der sechs Sprachen spricht. Ich habe schon etwas Angst, z.B. vor dem Straßenverkehr in Millionenstädten oder unvorhersehbaren Zwischenfällen. Das Schlimmste ist aber, wenn jeder Tag wie der andere ist. In den nächsten 16 Monaten wird es dazu nicht kommen.
+Aufgaben:
+[6] Mit 23 Jahren wollte Louis Palmer
+A) für Studenten Reisen nach Südamerika organisieren.
+B) mit dem Fahrrad durch 50 verschiedene Länder fahren.
+C) viele verschiedene Länder kennen lernen.
+Lösung: C
+[7] Sein Projekt konnte Palmer realisieren,
+A) weil er einen Preis von einer Universität gewonnen hat.
+B) weil er finanzielle Unterstützung von vier Universitäten erhalten hat.
+C) weil ihn Firmen und Universitäten unterstützt haben.
+Lösung: C
+[8] Schon als Jugendlicher
+A) baute Louis an einem umweltfreundlichen Auto.
+B) wollte Louis etwas für die Umwelt tun.
+C) wusste Louis genau, wie er sein Leben einteilen will.
+Lösung: B
+[9] Palmers Auto
+A) fährt mit alternativer Energie.
+B) geht auf eine dreijährige Weltreise.
+C) hat genug Platz für sieben Personen.
+Lösung: A
+[10] Louis Palmer
+A) hat für die Weltreise sechs Sprachen gelernt.
+B) möchte mit seinem Auto nicht durch Großstädte fahren.
+C) wird sich in nächster Zeit nicht langweilen.
+Lösung: C
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m17-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Ihre Bekannte ist Mitte dreißig und sucht einen Partner, mit dem sie regelmäßig ins Kino gehen kann.
+Lösung: H
+[12] Sie wollen Ihren Garten verändern und suchen Beratung/Tipps.
+Lösung: I
+[13] Der Sohn Ihrer Freunde hat gerade das Abitur gemacht und sucht im Sommer für zwei Monate einen Job.
+Lösung: J
+[14] Ihr Freund möchte im Nebenjob Gartenarbeiten übernehmen.
+Lösung: X
+[15] Ihr 45-jähriger Onkel sucht eine Partnerin, mit der er zusammen verreisen kann.
+Lösung: K
+[16] Sie möchten gern bei einem Film mitspielen und etwas Geld verdienen.
+Lösung: B
+[17] Der Sohn Ihrer Freunde interessiert sich für die Geschichte des Autos. Am Sonntag wollen Sie mit ihm etwas Interessantes machen.
+Lösung: D
+[18] Sie suchen eine Stelle und brauchen Tipps für Ihre Bewerbungen.
+Lösung: X
+[19] Im Urlaub wollen Sie mit dem Auto eine Reise durch Deutschland machen und suchen ein passendes Angebot.
+Lösung: E
+[20] Ihre Bekannte möchte lernen, wie sie kleinere Reparaturen an ihrem Wagen selbst machen kann.
+Lösung: L
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Liebe Catherine,
+ich hab's geschafft! Endlich habe ich einen Job bekommen. Wie versprochen möchte ich dir gleich (21) erzählen. Am Anfang (22) ich ziemlich enttäuscht, weil ich auf meine vielen Bewerbungsschreiben insgesamt (23) zwei Antworten bekommen habe. Aber zum Glück hat eine davon (24): Ich werde nun zwei Nachmittage in der Woche als Babysitterin (25) einer Familie arbeiten, die zwei Kinder hat. Sie sind 3 und 5 Jahre alt und (26) sind sehr nett. Wir haben in der (27) Woche bereits Vieles gemeinsam gemacht, sind in den Zoo und (28) Kindermuseum gegangen. (29) kann man eine Stadt gar nicht kennen lernen, und es macht mir viel Spaß!
+Für heute wünsche ich dir alles Gute – schreibe mir bald, wie es dir (30).
+Liebe Grüße
+Deine Tanja
+Aufgaben:
+[21] … Wie versprochen möchte ich dir gleich (21) erzählen. Am Anfang …
+A) dafür
+B) damit
+C) davon
+Lösung: C
+[22] … Am Anfang (22) ich ziemlich enttäuscht, weil ich auf meine …
+A) bin
+B) habe
+C) war
+Lösung: C
+[23] … Bewerbungsschreiben insgesamt (23) zwei Antworten bekommen habe. Aber zum Glück …
+A) doch
+B) nur
+C) schon
+Lösung: B
+[24] … Aber zum Glück hat eine davon (24): Ich werde nun zwei Nachmittage …
+A) gepasst
+B) passen
+C) passt
+Lösung: A
+[25] … Nachmittage in der Woche als Babysitterin (25) einer Familie arbeiten, die …
+A) an
+B) bei
+C) zu
+Lösung: B
+[26] … Sie sind 3 und 5 Jahre alt und (26) sind sehr nett. Wir haben …
+A) beide
+B) beiden
+C) beides
+Lösung: A
+[27] … Wir haben in der (27) Woche bereits Vieles gemeinsam gemacht, sind …
+A) ersten
+B) erster
+C) erstes
+Lösung: A
+[28] … sind in den Zoo und (28) Kindermuseum gegangen. (29) kann man …
+A) im
+B) in
+C) ins
+Lösung: C
+[29] … (29) kann man eine Stadt gar nicht kennen lernen, und es macht …
+A) Am besten
+B) Besser
+C) Gut
+Lösung: B
+[30] … schreibe mir bald, wie es dir (30). Liebe Grüße …
+A) geht
+B) geht's
+C) ging
+Lösung: A
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörter
+Text:
+**Ihre Anzeige in der Frankfurter Rundschau**
+Sehr geehrte Frau Hermann,
+ich habe Ihre Anzeige in der Frankfurter Rundschau vom 5. Oktober gelesen und interessiere mich sehr für die 3-Zimmer-Wohnung.
+Zurzeit wohne ich noch in Krakau (Polen). Demnächst (31) ich aber aus beruflichen Gründen mit meinem Sohn (3 Jahre) (32) Frankfurt umziehen. Deshalb suche ich zum 1. November eine Wohnung, (33) möglichst zentral gelegen sein sollte. Ihre Wohnung (34) deshalb genau richtig für uns.
+Ich hätte jedoch noch einige Fragen zu Ihrer Anzeige: Ist die Wohnung auch für Kleinkinder (35)? Und gibt es in der näheren Umgebung einen Spielplatz, (36) mein Sohn spielen könnte?
+Außerdem würde ich (37) wissen, ob die Haltung von Haustieren in (38) Wohnung erlaubt ist. (39) es möglich ist, würden wir nämlich gerne unseren Hund mitbringen.
+Ich danke Ihnen (40) jetzt für Ihre Antwort und grüße Sie freundlich.
+Kasia Kloc
+Auswahl:
+A = DER
+B = DIE
+C = ERST
+D = GEEIGNET
+E = GERNE
+F = HÄTTE
+G = IN
+H = MUSS
+I = NACH
+J = NOCH
+K = SCHON
+L = WANN
+M = WÄRE
+N = WENN
+O = WO
+Aufgaben:
+[31] … Demnächst (31) ich aber aus beruflichen Gründen …
+Lösung: H
+[32] … mit meinem Sohn (3 Jahre) (32) Frankfurt umziehen. …
+Lösung: I
+[33] … Deshalb suche ich zum 1. November eine Wohnung, (33) möglichst zentral gelegen sein sollte. …
+Lösung: B
+[34] … Ihre Wohnung (34) deshalb genau richtig für uns. …
+Lösung: M
+[35] … Ist die Wohnung auch für Kleinkinder (35)? …
+Lösung: D
+[36] … Und gibt es in der näheren Umgebung einen Spielplatz, (36) mein Sohn spielen könnte? …
+Lösung: O
+[37] … Außerdem würde ich (37) wissen, ob die Haltung von Haustieren …
+Lösung: E
+[38] … in (38) Wohnung erlaubt ist. …
+Lösung: A
+[39] … (39) es möglich ist, würden wir nämlich gerne …
+Lösung: N
+[40] … Ich danke Ihnen (40) jetzt für Ihre Antwort …
+Lösung: K
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Punkte: 45
+Maximum: 45
+Anweisung: Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:
+Extra:
+{
+ "brief": {
+  "intro": "Eine Bekannte hat Ihnen folgenden Brief geschrieben:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "endlich habe ich Zeit, dir wieder mal zu schreiben. Schade, dass du bei unserer Hochzeit nicht dabei sein konntest! Wir waren mit Freunden und Verwandten über 50 Personen. Ich habe ein langes, weißes Kleid getragen, und Karl hat sich für diesen Tag einen teuren, schwarzen Anzug gekauft, ob wohl er sonst immer nur Jeans trägt. Natürlich gab es ein wunderbares Festessen und danach wurde getanzt. Karl und ich haben viele Geschenke bekommen, vor allem auch Geld für unsere Hochzeitsreise. Wir wissen, aber noch gar nicht wohin wir fahren wollen. Wie läuft’s eigentlich bei dir, du hast doch eine neue Stelle? Wie gefällt dir die Arbeit? Karl und ich würden uns sehr freuen, wenn du uns wieder mal besuchen würdest!",
+   "Liebe Grüße"
+  ],
+  "signature": "Rita"
+ },
+ "hints": [
+  "Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "Schreiben Sie mindestens 100 Wörter."
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie auf diesen Brief. Schreiben Sie in Ihrem Brief etwas zu den folgenden vier Punkten:
+Mindestwörter: 100
+Punkt: Ihre neue Arbeitsstelle
+Punkt: Wie man in Ihrem Land heiratet
+Punkt: Vorschlag für Ritas Hochzeitsreise
+Punkt: Rita und Karl besuchen?

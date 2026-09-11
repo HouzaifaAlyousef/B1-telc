@@ -1,0 +1,486 @@
+# KANTINE
+Untertitel: 53 Aufgaben · 125 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 5
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 35
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Den Arbeitsplatz produktiv gestalten: Die richtige Atmosphäre am Arbeitsplatz ist für die effektive Erledigung der Aufgaben unerlässlich. Gerlinde Strauß beschreibt, wie man mit den richtigen Möbeln, Dekoartikeln, Licht, Ordnung am Arbeitsplatz und vielem mehr die eigene Umgebung so gestaltet, dass man die Zeit am Arbeitsplatz gerne und erfolgreich verbringt.
+B = Ohne Selbstdisziplin geht es nicht: Die Arbeit von zu Hause aus erfordert ein hohes Maß an Selbstdisziplin und die Fähigkeit des Selbstmanagements. Privates und Arbeit sollten strikt getrennt werden. Doch wie funktioniert das am besten? Helga Brinkmann hat einen Ratgeber für Arbeitskräfte herausgegeben, deren Unternehmen diese Form der Arbeit anbieten.
+C = Hobbys im Lebenslauf richtig einsetzen: Ausbildung und Qualifikation sind in erster Linie wichtig, wenn man den Lebenslauf eines Bewerbers liest. Doch auch, welche Hobbys eine Person hat, kann Auskunft darüber geben, ob sie zum Unternehmen passt oder nicht. Lesen Sie hier wichtige Tipps und Tricks für eine überzeugende Bewerbung.
+D = Was unsere Körpersprache über uns verrät: Ob beim Vorstellungsgespräch, bei wichtigen Verhandlungen mit Kunden oder am ersten Arbeitstag – unsere Körpersprache gibt immer Auskunft darüber, wie wir uns gerade fühlen, z. B. angespannt oder selbstsicher. Lernen Sie in unserem Seminar, wie Sie Körpersprache wirksam einsetzen und wie Sie Ihr Gegenüber einschätzen können.
+E = Der erste Arbeitstag in der neuen Firma: So klappt es mit den Kolleginnen. Anspannung ist ganz normal: Beim Start im neuen Job ist es wichtig, gut vorbereitet zu sein. Im folgenden Artikel von Irene Miller finden Sie eine Checkliste mit den wichtigsten Punkten, die Sie beachten sollten, damit der Einstieg gelingt.
+F = Angemessene Bezahlung? Jeder möchte für seine Leistung fair bezahlt werden. Doch in vielen Berufsfeldern haben die Arbeitnehmer das Gefühl, unterbezahlt zu sein. Die Folge davon sind Motivationsverlust und Zweifel daran, ob man wirklich den richtigen Beruf gewählt hat. Lesen Sie hier, wie Sie erfolgreich Gehaltsverhandlungen führen.
+G = Körperliche Folgen von Stress: Nicht jeder Stress macht krank. Es gibt auch positiven Stress, der die Leistungsfähigkeit eines Menschen erhöht. Wer aber unter Daueranspannung steht und körperliche Symptome wie Bluthochdruck, Magenbeschwerden oder eine anhaltende innere Anspannung spürt, muss etwas ändern. Wie, das erfahren Sie im neusten Buch von Harald Erhard.
+H = Frauen verdienen immer noch zu wenig: Europaweit ist das Ziel der Gleichstellung noch längst nicht erreicht. Man denke hier nur an die nach wie vor ungleiche Bezahlung von Männern und Frauen und an die Besetzung von Stellen in der Führungsetage. Deutschland liegt bei diesem Vergleich noch immer auf einem der letzten Plätze.
+Aufgaben:
+[1] Kurt sucht einen Job und braucht Anregungen für seine Unterlagen.
+Lösung: C
+[2] Juliette arbeitet gerne, fühlt sich aber oft erschöpft.
+Lösung: G
+[3] Peter ist vor seinem Start im neuen Unternehmen nervös.
+Lösung: E
+[4] Katharina ist wegen des niedrigen Verdienstes in ihrer Branche frustriert.
+Lösung: F
+[5] Carlos braucht Tipps für seine Tätigkeit im Homeoffice.
+Lösung: B
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 15
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 9. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Essen in der Kantine**
+Unser Unternehmen arbeitet an sieben Tagen rund um die Uhr im Drei-Schicht-System. Deshalb steht auch unsere Kantine, die für die Mitarbeiterverpflegung sorgt, täglich 24 Stunden zur Verfügung. Um unnötige Wartezeiten in der Mittagszeit zu vermeiden, wurden in Abstimmung mit dem Betriebsrat aber folgende Essenszeiten für die einzelnen Abteilungen festgelegt: Während das Personal aus der Produktion und dem Lager in der ersten Gruppe von 12.00 bis 13.00 Uhr eine warme Mahlzeit zu sich nehmen kann, folgen die Mitarbeiterinnen und Mitarbeiter der Verwaltung in der zweiten Gruppe von 13.00 bis 14.00 Uhr.
+Außerdem können die Mitarbeitenden jederzeit frisch zubereitete Snacks oder kleine Mahlzeiten wie Suppen oder Nudelgerichte aus den in der Kantine aufgestellten Automaten entnehmen. Darüber hinaus befindet sich dort eine Mikrowelle, in der Sie mitgebrachte Speisen erwärmen können. Zusätzliche Automaten für kalte und warme Getränke befinden sich auf jeder Etage in unserem Firmengebäude.
+Aufgaben:
+[6] Die Kantine ist immer geöffnet.
+A) richtig
+B) falsch
+Lösung: A
+[7] Die Mitarbeiterinnen und Mitarbeiter
+A) bekommen in der Kantine keine Getränke.
+B) können nachts in der Kantine essen.
+C) müssen mittags oft sehr lange anstehen.
+Lösung: B
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Arbeitsunfall und Berufsgenossenschaft (BG)**
+Mit dem Arbeitsantritt in unserem Unternehmen sind Sie als Arbeitnehmer*in automatisch gesetzlich unfallversichert.
+Der Träger dieser Unfallversicherung ist die Berufsgenossenschaft, deren Aufgaben in erster Linie darin bestehen, Arbeits- und Wegeunfälle, Berufskrankheiten sowie arbeitsbedingte Gesundheitsgefahren zu vermeiden. Das wird gewährleistet, indem regelmäßig Kontrollen der Arbeitssicherheit durch die Berufsgenossenschaft stattfinden. Bei diesen Kontrollen sind unsere Mitarbeiter*innen des Qualitätsmanagements mit vor Ort.
+Sollte dennoch ein Unglücksfall eintreten, übernimmt die Berufsgenossenschaft sämtliche Kosten für Heilbehandlungen und Schadensersatzzahlungen. Dafür muss von Ihnen folgendes Prozedere eingehalten werden: Nach einem Arbeitsunfall wird zunächst der Ersthelfer oder die Ersthelferin informiert. Je nach Schwere des Unfalls wird ein Rettungswagen dazu gerufen. Ob mit oder ohne Krankenhausaufenthalt, müssen Sie aber in jedem Fall von einem Durchgangsarzt untersucht werden. Gleichzeitig sind wir als Arbeitgeber verpflichtet, den Unfall der Berufsgenossenschaft zu melden. Damit setzt der Prozess ein, dass die Berufsgenossenschaft Ihre Behandlung und deren Kosten übernimmt. Damit für Sie als Arbeitnehmer*in keine finanziellen Probleme entstehen, zahlt die Berufsgenossenschaft Ihnen den Lohn ab der siebten Woche der Arbeitsunfähigkeit weiter.
+Damit es aber gar nicht erst so weit kommt, führen wir regelmäßig Schulungen zur Arbeitssicherheit durch. Diese beinhalten auf der einen Seite Einweisungen zum korrekten Tragen der Schutzkleidung und auf der anderen Seite konkrete Anweisungen zur richtigen Bedienung der Maschinen.
+Aufgaben:
+[8] Alle Mitarbeitenden müssen für eine Arbeitsunfallversicherung sorgen.
+A) richtig
+B) falsch
+Lösung: B
+[9] Nach einem Arbeitsunfall
+A) muss man sich einem Durchgangsarzt vorstellen.
+B) schickt die BG einen Arzt oder Rettungswagen.
+C) übernimmt die BG sofort die Gehaltsfortzahlungen.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Beiträge a–f aus einem Online-Forum. Welcher Beitrag passt zu welcher Situation?
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Stefan: Kaum jemandem gelingt es, 45 Jahre durchgehend so ein hohes Gehalt zu verdienen, dass er später die Höchstrente bekommt. Das liegt schon allein daran, dass man während der Ausbildung und in den ersten Berufsjahren weniger verdient.
+B = Jana: Auch Firmen helfen, für die Zukunft vorzusorgen, denn man kann gar nicht früh genug damit anfangen. Erkundige dich bei deinem Arbeitgeber, ob eine betriebliche Altersvorsorge angeboten wird. Wenn man dann später Rentner ist, bekommt man eine zusätzliche Rente.
+C = Antje: Wenn man mindestens fünf Jahre versicherungspflichtig beschäftigt war, hat man Anspruch auf die gesetzliche Rente. Dabei spielt es keine Rolle, ob man Teilzeit oder Vollzeit gearbeitet hat. Es gibt aber noch Unterschiede zwischen Ost und West.
+D = Jonas: Man hat das Recht, früher als mit 67 Jahren in Rente zu gehen, aber man muss Abschläge in Kauf nehmen. Im Moment sind das für jeden Monat, den man weniger arbeitet, 0,3 Prozent weniger. Man muss sich das genau ausrechnen, ob man sich das leisten kann.
+E = Jörg: Für alle, die nach 1964 geboren sind, gilt, dass sie bis 67 Jahre arbeiten müssen. Außer, wenn man mit 65 schon 45 Beitragsjahre nachweisen kann, also Jahre, in denen man in die Rentenversicherung eingezahlt hat.
+F = Lia: Wenn man jung ist, sollte man sein Leben doch erst einmal genießen. Über Alter und Krankheit kann man sich immer noch Gedanken machen. Wer weiß, ob es später, wenn wir so weit sind, überhaupt noch eine Rente geben wird.
+X = Keine Antwort passt
+Aufgaben:
+[10] Torsten: „Wir hatten neulich im Büro eine Diskussion darüber, ab wann man in Rente gehen kann. Ich dachte immer, man muss bis 67 arbeiten. Aber meine Kollegin meinte, dass sie zwei Jahre früher in Rente gehen kann. Geht das ohne Weiteres?“
+Lösung: E
+[11] Marion: „Meine Rente wird ja nicht so berauschend sein, vor allem, weil ich wegen meiner zwei Kinder einige Jahre nicht oder nur Teilzeit gearbeitet habe. Es ist ja wohl schon so, dass ich dafür jetzt irgendwie bestraft werde, oder?“
+Lösung: X
+[12] Petra: „Mein Mann geht in zwei Jahren in Rente. Ich müsste noch vier Jahre arbeiten. Wir haben uns überlegt, dass wir zusammen in Rente gehen und noch viele gemeinsame Jahre mit verschiedenen Aktivitäten erleben wollen. Welche Folgen hätte das?“
+Lösung: D
+[13] Leni: „Ich bin ja noch jung und denke überhaupt noch nicht an die Rente. Aber es wird ja immer wieder gesagt, dass die normale Rente irgendwann nicht mehr ausreichen wird. Was kann ich denn jetzt schon für später tun?“
+Lösung: B
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14 bis 18. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Protokoll 15.01.20XX, 10.00 bis 11.30 Uhr**
+Sitzungsraum 205, Ort: Hauptstraße 27, 99099 Erfurt
+Anwesende: Jakob Müller (JM, Geschäftsleitung), Friedrich Döring (FD, Vertrieb), Karl Altmann (KA, Buchhaltung und Finanzen), Peter Bischoff (PB, Produktion), Karsten Hinz (KH, Logistik), Jana Bartsch (JB, Personal), Beate Fritsch (BF, Marketing), Jonas Stoll (JS, IT-Abteilung)
+Sitzungsleitung: Jakob Müller
+Protokollant: Jonas Stoll
+
+**Tagesordnungspunkte:**
+1. Begrüßung und Tagesordnung
+2. Kosteneinsparungen
+3. Lagebericht Produktion
+4. Kündigung des Betriebsarztes
+5. Betriebliche Altersvorsorge
+6. Sonstiges
+
+**TOP 1 Begrüßung und Tagesordnung**
+JM heißt die Kolleg*innen zur heutigen Besprechung herzlich willkommen und bestätigt die Anwesenheit aller eingeladenen Teilnehmer*innen. Danach erkundigt JM sich, ob noch zusätzliche Themen protokollarisch aufgenommen werden sollen. Hierzu gibt es keine Kommentare und damit gilt die Tagesordnung als genehmigt.
+
+**TOP 2 Kosteneinsparungen**
+Wie JM darstellt, hat sich der Markt im Vergleich zum Vorjahr stark verändert. In diesem Zusammenhang müssen deshalb Kostenstrukturen neu überdacht werden. Es wird vorgeschlagen, die administrativen Kosten zu senken, da es hier Einsparungspotenzial gibt. Im Vorfeld zu dieser Besprechung wurde JB bereits von der Geschäftsleitung beauftragt, eine exakte Kostenübersicht zu erstellen und Vorschläge zur Kostenreduzierung vorzulegen. JB legt dar, dass die in der Firmenzentrale eingehenden Anrufe auf ein externes Call-Center umgeleitet werden könnten. Verschiedene Kostenvoranschläge wurden hierfür auch schon eingeholt. Die Firma tele-info scheint unseren Ansprüchen am besten gerecht zu werden. Deshalb sollten Vertragsverhandlungen aufgenommen und zeitgleich Schulungspläne für die Call-Center-Mitarbeiter*innen ausgearbeitet werden, um ihnen die Organisationsstruktur des Unternehmens so schnell wie möglich näherzubringen, damit die Arbeit ohne Verzögerung aufgenommen werden kann. Durch die so gewonnene Zeitersparnis am Empfang können Mitarbeiter*innen von dort flexibler eingesetzt werden und zum Beispiel zusätzlich den für das Unternehmen wichtigen Konferenzbereich und die Gästebetreuung übernehmen. JM stimmt den Vorschlägen zu und bittet um Umsetzung der weiteren Schritte.
+
+**TOP 3 Lagebericht Produktion**
+PB merkt an, dass auch in seiner Abteilung eine Kostenreduzierung möglich wäre, indem unausgewogene Lagerungen von Material und Rohstoffen vermieden werden. Das Lagerungsmanagement ist optimierbar, d.h., dass sowohl zu hohe als auch zu niedrige Lagermengen vermieden werden müssen, da sie zu unnötigen Kosten führen. Im Fall von Überbeständen muss neue Lagerfläche geschaffen werden und im Fall von Unterbeständen kann es zu kurzfristigen Produktionsausfällen kommen. JM beauftragt PB, sich umgehend zusammen mit KH mit dieser Thematik auseinanderzusetzen und zur nächsten Sitzung konkrete Zahlen und Vorschläge vorzulegen.
+
+**TOP 4 Kündigung des Betriebsarztes**
+Mit Bedauern teilt die Geschäftsleitung mit, dass unser Betriebsarzt die Firma zum Jahresende verlässt, da er eine eigene Praxis eröffnen will. Aus diesem Grund hat sich die Firma entschlossen, die Ersthelferausbildung zu forcieren, damit bei kleineren Verletzungen, die im Produktionsablauf immer wieder auftreten können, sofort eingegriffen werden kann. Ärztliche Unterstützung bekommen wir ab nächstem Jahr von der Allgemeinärztlichen Praxis Dr. Mertens. Die Kontaktdaten werden bekannt gegeben.
+
+**TOP 5 Betriebliche Altersvorsorge**
+Seit einem Jahr bietet die Firma den Mitarbeiter*innen an, in eine betriebliche Zusatzrente zu investieren. Bisher wird dieses Angebot aber nur von wenigen Kolleg*innen genutzt. Deshalb werden erneut alle Abteilungsleiter*innen darauf hingewiesen, in ihren Abteilungen über diese Möglichkeit der Altersvorsorge aufzuklären. Interessierte Mitarbeiter*innen können in der Personalabteilung genauere Informationen erhalten. Zusätzlich bietet die Versicherungsgesellschaft immer donnerstags eine gesonderte Sprechstunde an, zu der man sich aber anmelden muss.
+
+**TOP 6 Sonstiges**
+Die Mitarbeiter*innen werden gebeten, im Intranet abzustimmen, ob die Firma in diesem Jahr für alle Kolleg*innen entweder einen eintägigen Betriebsausflug oder ein Sommerfest organisieren soll. Für den Betriebsausflug könnten dann auch gleich Vorschläge unterbreitet werden. Die Abstimmung muss bis zum 31.03. erfolgen, damit für das Organisationskomitee noch ausreichend Zeit für die Planung bleibt.
+Aufgaben:
+[14] Bei der Besprechung
+A) müssen weitere Themen besprochen werden.
+B) sind alle Mitarbeiter*innen des Unternehmens anwesend.
+C) wird die Tagesordnung angenommen.
+Lösung: C
+[15] Um Kosten zu sparen,
+A) sollen einige Empfangsmitarbeiter*innen in ein Call-Center wechseln.
+B) werden die Aufgaben der Mitarbeitenden am Empfang neu festgelegt.
+C) wird der Empfang demnächst geschlossen.
+Lösung: B
+[16] Der Lagerbestand muss
+A) an die Produktion angepasst werden.
+B) dauerhaft ausgebaut werden.
+C) kurzfristig reduziert werden.
+Lösung: A
+[17] Der Betriebsarzt wird
+A) mit Dr. Mertens zusammenarbeiten.
+B) zukünftig selbstständig arbeiten.
+C) zum Jahresende entlassen.
+Lösung: B
+[18] Die betriebliche Altersvorsorge
+A) kann bei einem vereinbarten Termin besprochen werden.
+B) nehmen viele Mitarbeiter*innen an.
+C) wird neu in der Firma eingeführt.
+Lösung: A
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19 und 20. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Beschwerde über fehlerhafte Rechnung**
+Sehr geehrte Frau Hoffner,
+wir haben Ihre Lieferung erhalten und sind mit allen Artikeln absolut zufrieden. Leider muss ich Sie darauf hinweisen, dass die Rechnung einige Unstimmigkeiten beinhaltet: Zunächst wurden statt 100 Stück Pinsel Größe M 200 Stück berechnet. Außerdem wurden 20 Töpfe roter Farbe berechnet. Wir hatten aber grüne Farbe bestellt und geliefert bekommen, die preislich niedriger liegt. Wir bitten Sie, dies zu korrigieren. Des Weiteren waren wir überrascht, dass unser üblicher Rabatt von 10 % in dieser Rechnung nicht gewährt wurde. Das ist wahrscheinlich ein Versehen. Wir bitten um Berichtigung der Rechnung und erneute Zusendung.
+Mit freundlichen Grüßen
+Karl Schmidt (Firma Meier)
+Aufgaben:
+[19] Herr Schmidt
+A) hat falsche Waren vom Lieferanten erhalten.
+B) meldet eine unvollständige Sendung.
+C) weist auf falsche Posten in der Zahlungsaufforderung hin.
+Lösung: C
+[20] Die Rechnung
+A) hat 100 Pinsel nicht aufgeführt.
+B) ist ohne Preisnachlass ausgestellt worden.
+C) wurde an einen falschen Adressaten geschickt.
+Lösung: B
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrer Vorgesetzten:**
+Hallo, ich habe heute die E-Mail von Herrn Schmidt erhalten. Bitte kümmern Sie sich darum und antworten Sie dem Kunden höflich. Die Firma Meier ist ein langjähriger Kunde von uns. Wir können es uns nicht leisten, ihn zu verlieren. Schreiben Sie ihm bitte von unserem Computerproblem und wie wir es gelöst haben. Natürlich bekommt er den Rabatt wie gewohnt. Vielen Dank, Anna Hoffner.
+Aufgaben:
+[B] Antworten Sie Herrn Schmidt im Namen von Anna Hoffner.
+Punkt: Bedauern und Entschuldigung für die fehlerhafte Rechnungsstellung ausdrücken
+Punkt: Erklärung der Ursache (Computerfehler, der inzwischen behoben wurde)
+Punkt: Korrektur der Rechnungsposten (Pinselmenge und grüne Farbe) sowie Bestätigung des 10%-Rabatts
+Punkt: Ankündigung der berichtigten Rechnung und Wertschätzung der langjährigen Partnerschaft
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Der Teamleiter zeigt einer neuen Mitarbeiterin ihren Arbeitsplatz.
+A) richtig
+B) falsch
+Lösung: A
+[23] Frau Blume
+A) darf ihre Schichten selbst bestimmen.
+B) wird ab sofort im Kundenservice eingesetzt.
+C) wird die Kunden nur per E-Mail betreuen.
+Lösung: B
+[24] Die Auszubildenden handeln einen Kompromiss mit der Abteilungsleiterin aus.
+A) richtig
+B) falsch
+Lösung: A
+[25] Die beiden Auszubildenden
+A) dürfen gleichzeitig den Stand verlassen.
+B) dürfen keine Kundengespräche führen.
+C) wollen die Konkurrenz beobachten.
+Lösung: C
+[26] Frau Leutner bestellt telefonisch neue Möbel.
+A) richtig
+B) falsch
+Lösung: B
+[27] Die Möbelfirma
+A) bietet nur kostenpflichtige Montage der Ware.
+B) hat Lieferzeiten von mindestens zwei Wochen.
+C) kann Möbelstücke in verschiedenen Ausführungen herstellen.
+Lösung: C
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Personen über Fortbildungen sprechen. Welcher der Aussagen a–f passt zu welcher Person?
+Auswahltitel: Aussagen
+Auswahl:
+A = Das Lernen hört im Arbeitsleben nie auf.
+B = Die Firma sollte regelmäßig arbeitsplatzbezogene Schulungen organisieren.
+C = Es ist sinnvoll, Fortbildungen an unterschiedlichen Tagen anzubieten.
+D = Weiterbildungen sind nur mit hohem finanziellem Aufwand möglich.
+E = Fortbildungen kosten vor allem wertvolle Arbeitszeit.
+F = Nicht alle Schulungen müssen im Betrieb stattfinden.
+Aufgaben:
+[28] Sprecherin 1 meint, dass Schulungen nicht zwingend im eigenen Betrieb abgehalten werden müssen.
+Lösung: F
+[29] Sprecherin 2 betont, dass lebenslanges Lernen und ständige Weiterbildung im Beruf unverzichtbar sind.
+Lösung: A
+[30] Sprecher 3 plädiert dafür, dass das Unternehmen gezielte Schulungen für den Arbeitsalltag anbietet.
+Lösung: B
+[31] Sprecher 4 findet flexible Termine und unterschiedliche Tage für Schulungsangebote wichtig.
+Lösung: C
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören eine Information für Mitarbeiterinnen und Mitarbeiter. Wählen Sie bei den Aufgaben 32 bis 35 die richtige Lösung.
+Aufgaben:
+[32] Die Kita plant,
+A) ausschließlich Auszubildende einzusetzen.
+B) die Mitarbeitenden zu motivieren.
+C) neues Personal zu rekrutieren.
+Lösung: C
+[33] In jedem Team
+A) arbeiten Erzieher*innen gleichen Alters.
+B) können Springer*innen eingesetzt werden.
+C) sind vier Betreuer*innen tätig.
+Lösung: B
+[34] Die Kitaleitung
+A) führt bereits Vorstellungsgespräche.
+B) hat die Teams zusammengestellt.
+C) organisiert Workshops für die Mitarbeitenden.
+Lösung: C
+[35] Die Mitarbeitenden sollen
+A) an einem Kochkurs teilnehmen.
+B) besser zusammenarbeiten.
+C) ihre Persönlichkeit stärken.
+Lösung: B
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf kurze Telefongespräche oder Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung.
+Aufgaben:
+[36] Jan
+A) kennt bereits die Kosten für die Farben.
+B) kontaktiert den Techniker.
+C) kümmert sich um die Farbauswahl.
+Lösung: C
+[37] Die Firma Software Solution
+A) liefert in fünf bis sechs Stunden ihre Kassen.
+B) möchte mit dem Supermarkt einen Termin vereinbaren.
+C) überwacht die Sicherheit im Kassenbereich.
+Lösung: B
+[38] Gabi soll
+A) den Operationsplan ändern.
+B) Herrn Sommer anrufen.
+C) mit dem Hausarzt über die Blutwerte sprechen.
+Lösung: B
+[39] Anna
+A) bestellt italienisches Essen für alle.
+B) organisiert eine Aktivität für das Team.
+C) will nur mit Claudia ins Kino gehen.
+Lösung: B
+[40] Stefan berichtet, dass
+A) der Lieferant erkrankt ist.
+B) die Kolleg*innen streiken wollen.
+C) nicht pünktlich geliefert werden kann.
+Lösung: C
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Reparatur bzw. Austausch des Kopierers**
+Nachricht auf dem Anrufbeantworter von Anna Schulze (Firma Shell):
+„Mein Name ist Anna Schulze, Firma Shell am Apparat. Ich habe mir Ihren defekten Kopierer angesehen. Es liegt ein größeres Problem mit der Elektronik vor, das man nur in unserer Werkstatt beheben kann. Vor Ort konnte ich ihn nicht wieder zum Laufen bringen. Ein Austausch würde ca. vier Wochen dauern, da wir derzeit Probleme mit dem Lieferanten haben. Wenn Sie sich für eine Reparatur entscheiden, müssten wir noch ein Ersatzteil bestellen. Das würde insgesamt ca. zwei Werktage dauern. Leider haben wir zurzeit kein Leihgerät, das wir Ihnen zur Verfügung stellen können. Die Reparatur würde mein Kollege machen, da ich nächste Woche im Urlaub bin. Die Frage ist nun, ob wir den Kopierer austauschen oder reparieren sollen. Rufen Sie mich bitte bis morgen zurück. Schulze, S-C-H-U-L-Z-E. Meine Telefonnummer ist 0160 335 101 8.“
+Aufgaben:
+[41] Dokumentieren Sie das Serviceangebot:
+Punkt: Name der Anruferin (Anna Schulze, S-C-H-U-L-Z-E, Firma Shell)
+Punkt: Telefonnummer (0160 335 101 8)
+Punkt: Schadensbefund (Größeres Elektronikproblem, Behebung nur in Werkstatt möglich)
+Punkt: Optionen (Austausch dauert ca. 4 Wochen; Reparatur dauert ca. 2 Werktage, Ersatzteil nötig; kein Leihgerät verfügbar)
+Punkt: Zu erledigen (Bis morgen zurückrufen und Entscheidung mitteilen: Reparatur oder Austausch)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = AM
+B = AUßERDEM
+C = BIS
+D = DESHALB
+E = IHNEN
+F = IM
+G = MICH
+H = MIT
+I = NÄMLICH
+J = ZU
+Text:
+**Kündigung**
+Sehr geehrte Frau Schneider,
+ich teile Ihnen mit, dass ich mein Arbeitsverhältnis zum 31.03. fristgerecht kündige, weil mein Mann am 01.05. (46) einer neuen Tätigkeit in Süddeutschland beginnt und die ganze Familie im April dorthin umziehen wird. Dieser Schritt ist für mich nicht leicht, ich war (47) immer sehr gerne hier tätig.
+Ich habe noch einige Fragen (48) den Formalitäten: Bitte teilen Sie mir mit, bis wann und wo ich den Firmenwagen abgeben und ob ich die Daten von meinem Firmenlaptop löschen soll. (49) bitte ich Sie um ein Zwischenzeugnis, da ich mich jetzt schon um eine neue Stelle bewerben möchte. Würden Sie mir bitte auch mitteilen, ob mir mein Arbeitszeugnis am letzten Arbeitstag ausgehändigt oder (50) Nachhinein zugeschickt wird?
+Ich bedanke (51) für die interessante Zeit in Ihrem Unternehmen und die fruchtbare Zusammenarbeit.
+Mit freundlichen Grüßen
+Melanie Sommer
+Aufgaben:
+[46] … weil mein Mann am 01.05. (46) einer neuen Tätigkeit in Süddeutschland beginnt …
+Lösung: H
+[47] … ich war (47) immer sehr gerne hier tätig. …
+Lösung: I
+[48] … Ich habe noch einige Fragen (48) den Formalitäten …
+Lösung: J
+[49] … (49) bitte ich Sie um ein Zwischenzeugnis …
+Lösung: B
+[50] … am letzten Arbeitstag ausgehändigt oder (50) Nachhinein zugeschickt wird? …
+Lösung: F
+[51] … Ich bedanke (51) für die interessante Zeit …
+Lösung: G
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung passt am besten?
+Text:
+**Fehlerhafte Lieferung**
+Sehr geehrter Herr Sonneberg,
+vielen Dank für die schnelle Bearbeitung unserer Bestellung vom 29.10.
+Für die Einrichtung unserer Pausenräume hatten wir zehn Sitzeckbänke in der Farbe Weiß bestellt. (52) Sie zehn Tische und für jede Sitzeinheit drei Stühle in der gleichen Farbe liefern.
+Leider entspricht die Lieferung nicht (53). Zwei von den zehn Sitzeckbänken wurden in Braun geliefert. Von den 30 Stühlen haben ebenfalls fünf die falsche Farbe. Wir bitten Sie, die reklamierten Möbelstücke (54).
+Außerdem weisen zwei Tische Kratzer an der Oberfläche auf. Wir würden die Tische trotzdem behalten, wenn Sie dafür einen entsprechenden (55). Könnten Sie uns hierfür (56)?
+Wir bitten um (57). Für Rückfragen stehen wir Ihnen jederzeit zur Verfügung.
+Mit freundlichen Grüßen
+Sonja Schmidt
+Aufgaben:
+[52] Lücke 52
+A) Dafür mussten
+B) Daher konnten
+C) Dazu sollten
+Lösung: C
+[53] Lücke 53
+A) unserem Angebot
+B) unseren Vorschriften
+C) unserer Bestellung
+Lösung: C
+[54] Lücke 54
+A) gleich zurückzuschicken
+B) schnellstmöglich auszutauschen
+C) sofort zu reparieren
+Lösung: B
+[55] Lücke 55
+A) Aufpreis anbieten
+B) Preisnachlass gewähren
+C) Rabatt fordern
+Lösung: B
+[56] Lücke 56
+A) ein Angebot unterbreiten
+B) ein Gutachten erstellen
+C) eine Empfehlung geben
+Lösung: B
+[57] Lücke 57
+A) baldige Bezahlung
+B) gleichzeitige Stornierung
+C) umgehende Antwort
+Lösung: C

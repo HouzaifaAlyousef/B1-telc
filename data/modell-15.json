@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 80.5,
-   "missing": 9
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -29,8 +29,8 @@
     "hv3"
    ],
    "maxPoints": 75.0,
-   "availablePoints": 72.5,
-   "missing": 1
+   "availablePoints": 75.0,
+   "missing": 0
   },
   {
    "id": "block-sa",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "51 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -117,12 +117,17 @@
      "id": "4",
      "text": "– Das erste deutsche Bücherdorf hat in Mühlbeck/ Fredersdorf (Sachsen Anhalt ) seit Ende September seine Tore geöffnet. In acht Antiquarten warten über 70 000 Bücher aus alleen Bereichen der Literatur auf Interessenten. Das in reizvoller landschaftlicher Umgebung liegende Bücherdorf nahe Bitterfeld - unweit der A19 und des Flughafens Leipzig - ist aus allen Teilen Deutschlands leicht zu erreich. Geöffnet sind die Antiquariate auch am Samstag und Sonntag. In Europa gibt es bereits acht solcher Bücherdörfer in Belgien, Frankreich, Großbritannien, den Niederlanden, Norwegen und der Schweiz. Initiatorin des deutschen Bücherdorfes ist Heidi Dehne (Tel. 03493/4 30 43).",
      "answer": "H"
+    },
+    {
+     "id": "5",
+     "text": "Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeben. Wir empfehlen unseren Gästen , bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.",
+     "answer": "A"
     }
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0,
-   "availablePoints": 20.0,
-   "missing": 1
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv2",
@@ -134,34 +139,6 @@
    "passages": [
     {
      "paragraphs": [
-      {
-       "t": "5.",
-       "b": false
-      },
-      {
-       "t": "Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen",
-       "b": false
-      },
-      {
-       "t": "auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen",
-       "b": false
-      },
-      {
-       "t": "kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im",
-       "b": false
-      },
-      {
-       "t": "Festspielhaus gegeben. Wir empfehlen unseren Gästen , bei unsicherer Wetterlage regenfester Kleidung den",
-       "b": false
-      },
-      {
-       "t": "Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird",
-       "b": false
-      },
-      {
-       "t": "ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.",
-       "b": false
-      },
       {
        "t": "Beruf am Flughafen: Kinderbetreuerin",
        "b": true
@@ -277,12 +254,31 @@
       }
      ],
      "answer": "C"
+    },
+    {
+     "id": "10",
+     "text": "Frau Alice Martin findet",
+     "options": [
+      {
+       "key": "A",
+       "text": "die Arbeit auf dem Flughafen interessant und abwechslungsreich."
+      },
+      {
+       "key": "B",
+       "text": "die Arbeit auf dem Flughafen nicht so vielseitig wie die Arbeit im Spital."
+      },
+      {
+       "key": "C",
+       "text": "die Kontakte zu den Kindern auf dem Flughafen sehr intensiv."
+      }
+     ],
+     "answer": "A"
     }
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0,
-   "availablePoints": 20.0,
-   "missing": 1
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -376,12 +372,32 @@
      "id": "16",
      "text": "Ihre Familie möchte den nächsten Urlaub am Meer verbringen.",
      "answer": "X"
+    },
+    {
+     "id": "17",
+     "text": "Sie leben in Zürich und möchten dort möglichst schnell Englisch lernen.",
+     "answer": "L"
+    },
+    {
+     "id": "18",
+     "text": "Sie bekommen Besuch von Ihrer Freundin. Sie möchte gerne tanzen gehen.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Sie möchten Freunde im Ausland besuchen und suchen ein Reisebüro.",
+     "answer": "F"
+    },
+    {
+     "id": "20",
+     "text": "Sie sind sportlich und möchten im Sommer in den Bergen wandern gehen.",
+     "answer": "G"
     }
    ],
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
-   "availablePoints": 15.0,
-   "missing": 4,
+   "availablePoints": 25.0,
+   "missing": 0,
    "bankImage": "img/m15-lv3.jpg"
   },
   {
@@ -496,6 +512,29 @@
       {
        "key": "B",
        "text": "Von"
+      },
+      {
+       "key": "C",
+       "text": "Zwischen"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "23",
+     "text": "… Buchidee. Machen Sie mit! Es warten auf Sie sehr (23) Gewinne im Wert von vielen Tausend Euro. Mit ihrer …",
+     "options": [
+      {
+       "key": "A",
+       "text": "schöne"
+      },
+      {
+       "key": "B",
+       "text": "schönen"
+      },
+      {
+       "key": "C",
+       "text": "schönes"
       }
      ],
      "answer": "A"
@@ -530,9 +569,32 @@
       {
        "key": "B",
        "text": "unserem"
+      },
+      {
+       "key": "C",
+       "text": "unseren"
       }
      ],
      "answer": "B"
+    },
+    {
+     "id": "26",
+     "text": "… Ohne irgendetwas zu zahlen! Behalten Sie das Buch, was wir (26) hoffen, zahlen Sie nur 50 Prozent des sonst …",
+     "options": [
+      {
+       "key": "A",
+       "text": "natürlich"
+      },
+      {
+       "key": "B",
+       "text": "schön"
+      },
+      {
+       "key": "C",
+       "text": "viele"
+      }
+     ],
+     "answer": "A"
     },
     {
      "id": "27",
@@ -564,9 +626,32 @@
       {
        "key": "B",
        "text": "neben"
+      },
+      {
+       "key": "C",
+       "text": "vor"
       }
      ],
      "answer": "B"
+    },
+    {
+     "id": "29",
+     "text": "… ein Auto eine Reise und viele weitere Preise zu erhalten. Antworten Sie (29) noch diese Woche! Dann haben Sie in …",
+     "options": [
+      {
+       "key": "A",
+       "text": "bald"
+      },
+      {
+       "key": "B",
+       "text": "bereits"
+      },
+      {
+       "key": "C",
+       "text": "unbedingt"
+      }
+     ],
+     "answer": "C"
     },
     {
      "id": "30",
@@ -590,8 +675,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 10.5,
-   "missing": 3
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -929,12 +1014,17 @@
      "id": "54",
      "text": "Die Spitex ist in der ganzen Schweiz eine private Organisation.",
      "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "In Zukunft betreut die Spitex auch die alten Menschen in Deutschland.",
+     "answer": "f"
     }
    ],
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
-   "availablePoints": 22.5,
-   "missing": 1
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "hv3",

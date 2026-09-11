@@ -1,0 +1,474 @@
+# BETRIEBSSPORT
+Untertitel: 53 Aufgaben · 125 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 5
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 35
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Hilfe für Betroffene: Beleidigungen, Ausgrenzung, versteckte Drohungen – am Arbeitsplatz ist Mobbing leider weit verbreitet. Für viele Angestellte ist der Arbeitsalltag oft mit Angst verbunden. Inzwischen gibt es zahlreiche Coaching-Programme für Mitarbeiter, die Strategien aufzeigen, wie man mit solchen Situationen besser umgehen kann.
+B = Ein starkes Team: Pünktlich zum Start der Weltmeisterschaft präsentiert der Handballbund seine neue Vertragspartnerin, die deutsche Handwerkskammer. „Was für den Handballer die Weltmeisterschaft ist, ist für den Handwerker die Meisterprüfung."
+C = Deutsche sind risikoscheu: In Deutschland ist die Zahl der Unternehmensgründungen stark rückläufig, obwohl viele jüngere Menschen angeben, dass sie sich gerne selbstständig machen würden. Warum der Sprung in die Selbstständigkeit oft doch nicht klappt, hat vielerlei Gründe.
+D = Handwerk und Karriere – passt das? Fleischer, Klempner, Tischler – laut Bundesagentur für Arbeit werden ca. 150.000 Handwerker gesucht. Handwerksberufe bieten gerade jungen Leuten nach dem Schulabschluss beste Chancen für eine krisensichere Zukunft.
+E = Stressfrei zum Ziel: Auch Fortbildungen können für eine Meisterprüfung im Handwerk anerkannt werden. Wenn Sie z. B. als Kfz-Servicetechniker einen Kurs in Elektronik erfolgreich absolviert haben, wird dieser Teil nicht noch einmal gesondert geprüft.
+F = Nie wieder Opfer: Sie wurde in ihrer Firma gemobbt und konnte es ihrem Chef nicht nachweisen. Die Autorin Stephanie Hauser verarbeitet in ihrem Roman „Nie wieder Opfer" auf eindrucksvolle Weise ihre eigenen Erfahrungen zum Thema Mobbing.
+G = Verpflichtend oder freiwillig: Die Anforderungen der Berufswelt ändern sich rasant. Prinzipiell gilt, dass Mitarbeiter zur Teilnahme an Seminaren verpflichtet sind, wenn diese zur Ausübung ihrer Tätigkeit notwendig sind und in der normalen Arbeitszeit stattfinden.
+H = Karriereplan für eine vielversprechende Laufbahn: Vor allem in Großstädten bieten immer mehr junge Unternehmen interessante Jobmöglichkeiten. Auch bei jungen Start-up-Unternehmen finden Absolventen gute Entwicklungschancen.
+Aufgaben:
+[1] Yasmina sucht nach dem Realschulabschluss einen Beruf mit guten Perspektiven.
+Lösung: D
+[2] Jason überlegt, ob er bei einem neu gegründeten Unternehmen arbeiten soll.
+Lösung: H
+[3] Hannah wird von ihren Kollegen schlecht behandelt und sucht Hilfe.
+Lösung: A
+[4] Gacer fragt sich, ob sie Fortbildungen besuchen muss.
+Lösung: G
+[5] Assem braucht Informationen zur Meisterprüfung.
+Lösung: E
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 12
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Text 1: Betriebssport**
+Sportliche Aktivitäten werden bei uns großgeschrieben. So bieten wir unseren Mitarbeitern im Untergeschoss einen Fitnessraum mit Bodenmatten und mehreren Fitnessgeräten, wie z. B. zwei Indoor-Fahrradtrainern. Dieser ist für alle ganztägig frei und ohne Gebühr zugänglich und kann selbstverständlich auch in den Pausen genutzt werden.
+Außerdem nehmen wir als Unternehmen jedes Jahr am städtischen Firmenlauf teil. Es hat sich die Tradition entwickelt, dass sich die teilnehmenden Kolleginnen und Kollegen gemeinsam in einem wöchentlichen Lauftreff auf dieses Event vorbereiten. Dieser findet jeden Mittwoch um 17:30 Uhr statt.
+Abwechslungsreich gestaltete Arbeitsplätze in den Büros tragen zur Steigerung der Aktivität auch während der Arbeit bei und wirken den negativen Auswirkungen langen Sitzens entgegen. Alle Schreibtische sind höhenverstellbar, sodass Arbeiten auch im Stehen möglich ist. Zusätzlich bieten wir das sogenannte „Deskbike" an – eine Art Büro-Fahrrad, das sich einfach unter einen höhenverstellbaren Schreibtisch rollen lässt.
+
+**Text 2: Berichtsheft**
+Das Berichtsheft ist der Nachweis, dass die Ausbildung ordnungsgemäß verläuft. In diesem wird alles dokumentiert, was man während der Ausbildung macht und lernt. Sie sollten nicht nur Ihre Tätigkeiten im Betrieb beschreiben, sondern auch alle Einweisungen, Schulungen und den innerbetrieblichen Unterricht vermerken.
+Es ist Pflicht, das Berichtsheft jeweils vor der Zwischen- und der Abschlussprüfung vorzulegen. Nur wenn es vollständig ist, wird der Prüfungsausschuss Sie zu den Prüfungen zulassen. Wenn Sie zwischen zwei Noten stehen, können Ihre Berichte sogar Ihre Endnote beeinflussen.
+Neben den Wochenberichten, die Sie jeden Freitag an Ihren Teamleiter schicken, müssen Sie nach dem Durchlaufen einer Abteilung einen zusätzlichen Bericht verfassen. Sie dürfen Ihre Berichte während der Arbeitszeit schreiben und können sie sowohl in klassischer Heftform als auch digital einreichen. In festen Abständen haben Sie das Heft Ihrem Ausbildungsleiter zur Kenntnisnahme vorzulegen.
+Aufgaben:
+[6] Der Fitnessraum ist während der Arbeitszeit geöffnet.
+A) richtig
+B) falsch
+Lösung: A
+[7] Die Mitarbeiter
+A) erhalten einen Zuschuss für ein Deskbike.
+B) haben teilweise spezielle Schreibtische in Stehhöhe.
+C) können das hausinterne Fitnessstudio gratis nutzen.
+Lösung: C
+[8] Auszubildende ohne ordentlich geführtes Berichtsheft dürfen nicht an der Abschlussprüfung teilnehmen.
+A) richtig
+B) falsch
+Lösung: A
+[9] Das Berichtsheft muss
+A) in der Freizeit geführt werden.
+B) dem Ausbildungsleiter regelmäßig gezeigt werden.
+C) jeden Tag ausgefüllt werden.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Hans: Der Arbeitgeber hat eine Fürsorgepflicht und dazu gehört auch, dass er für Fahrzeuge der Mitarbeiter eine Unterbringungsmöglichkeit zu schaffen hat. Aber nur, wenn das ohne zu großen Aufwand geht. Wenn ein Unternehmen in der Innenstadt ist, gibt es einfach nicht genug Platz für Parkmöglichkeiten.
+B = Thilo: Wenn die Bahn wegen eines Sturms nicht weiterfahren kann und im Bahnhof stehen bleibt, haben die Fahrgäste meistens Anspruch auf einen Taxigutschein. Du kannst auf der Webseite der Bahn nachlesen, unter welchen Umständen die Kosten übernommen werden.
+C = Johannes: Wenn du auf dem Weg zur Arbeit einen Autounfall hast, bezahlt die Unfallversicherung nur Personenschäden. Sachschäden sind dabei nicht inbegriffen.
+D = Jacqueline: Du bist dafür verantwortlich, rechtzeitig an deinem Arbeitsplatz zu erscheinen. Wie du das machst, ist deine Sache. Aber du kannst keinesfalls die Verantwortung auf die öffentlichen Verkehrsmittel schieben.
+E = Andreij: Natürlich hast du an deinem Arbeitsplatz Versicherungsschutz, aber dieser gilt nicht in allen Teilen des Gebäudes. Auf der Toilette bist du zum Beispiel nicht versichert.
+F = Alex: Als Arbeitnehmer musst du dafür sorgen, zum Job zu kommen. Wenn das nicht geht, darfst du aber keine Abmahnung bekommen. Ob du ein Taxi nehmen musst, kommt darauf an, ob die Kosten über deinem Tagesarbeitslohn liegen. Wenn ja, sind sie nicht zumutbar.
+X = Kein Beitrag passt.
+Aufgaben:
+[10] Mikke: Heute hatte ich auf dem Weg zur Arbeit einen Unfall. Ich habe noch einen Umweg über die Kita gemacht, bin gestolpert und habe mir den Knöchel gebrochen. Bin ich denn jetzt versichert?
+Lösung: X
+[11] Ludmilla: Ich habe eine Abmahnung bekommen, weil ich regelmäßig zu spät zur Arbeit komme. Ich finde bei der Firma keine Parkmöglichkeit. Muss der Arbeitgeber nicht Parkplätze stellen?
+Lösung: A
+[12] Peter: Ich wollte heute Morgen mit der S-Bahn zur Arbeit fahren, aber diese ist wegen Unwetters ausgefallen. Ich habe kein Auto. Hätte ich ein Taxi nehmen müssen?
+Lösung: F
+[13] Ingo: Der Bus kommt zu spät oder fällt aus. Jetzt habe ich Ärger mit dem Chef. Bin ich verpflichtet, immer einen früheren Bus zu nehmen, damit ich pünktlich bin?
+Lösung: D
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 13
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Protokoll 05.02.20XX, 14:00–16:00 Uhr**
+Sitzungsraum: 239, Ort: Hauptstraße 23, 25421 Pinneberg
+Anwesende: Michael Müller (MM, Stellvertreter Geschäftsleitung), Katrin Wagner (KW, Leitung Personal), Henry Schulz (HS, Leitung Produktion), Klaus Seifert (KS, Leitung Verwaltung), Karl Lehmann (KL, Leitung Logistik)
+Protokollantin: Katrin Wagner. Sitzungsleitung: Michael Müller.
+
+Tagesordnungspunkte:
+1. Begrüßung und Genehmigung des Protokolls der letzten Sitzung
+2. Verpackungsmaterial und Spedition
+3. Personalsituation in der Produktion
+4. Sanierung der Kantine
+5. Neue Krankmeldungsregelung (vorgezogener TOP)
+6. Sonstiges
+
+TOP 1 Begrüßung: MM eröffnet die Sitzung. Das Protokoll der letzten Besprechung wird ohne Änderungen genehmigt. Wegen eines Anschlusstermins von KW wird TOP 5 vorgezogen.
+TOP 2 Verpackungsmaterial und Spedition: KL berichtet von Beschwerden über beschädigte Waren bei der Auslieferung. Er wird beauftragt, mit der beauftragten Spedition Kontakt aufzunehmen und gleichzeitig Angebote für stabileres Verpackungsmaterial einzuholen.
+TOP 3 Personalsituation in der Produktion: HS berichtet, dass dank Zeitarbeitskräften der personelle Engpass behoben werden konnte. Er regt an, zwei besonders zuverlässige Zeitarbeitskräfte fest anzustellen.
+TOP 4 Sanierung der Kantine: KS macht darauf aufmerksam, dass die Küche ab Montag saniert wird und die Kantine für sechs bis acht Wochen geschlossen bleibt. Mitarbeiter können eigene Verpflegung mitbringen oder das Bistro „Suppenkasper" nutzen, wo die firmeneigenen Essensmarken von 12:00 bis 14:00 Uhr akzeptiert werden.
+TOP 5 Neue Krankmeldungsregelung: Die Geschäftsleitung verlangt zukünftig bereits ab dem ersten Krankheitstag ein ärztliches Attest. Da dies für Unmut sorgt, sollen die Abteilungsleiter den Mitarbeitern die Gründe nochmals vermitteln.
+TOP 6 Sonstiges: Ab kommenden Monat entstehen neben Eingang C zusätzliche Mitarbeiterparkplätze, die kostenlos in der Personalabteilung beantragt werden können.
+Aufgaben:
+[14] Frau Wagner
+A) bittet um Änderungen des Protokolls vom letzten Treffen.
+B) hat heute noch einen anderen wichtigen Termin.
+C) schlägt einen zusätzlichen Tagesordnungspunkt vor.
+Lösung: B
+[15] Die Geschäftsleitung möchte, dass
+A) das Thema Krankmeldung nicht mehr besprochen wird.
+B) man bei Krankheit spätestens am dritten Tag zum Arzt geht.
+C) sich Mitarbeiter bei Krankheit sofort ab dem ersten Tag krankschreiben lassen.
+Lösung: C
+[16] Karl Lehmann soll
+A) eigenständig teures Verpackungsmaterial einkaufen.
+B) einen detaillierten Finanzierungsplan erstellen.
+C) Kontakt mit der Spedition aufnehmen.
+Lösung: C
+[17] In der Produktionsabteilung
+A) gibt es derzeit dank Zeitarbeitskräften genügend Personal.
+B) will man alle Zeitarbeiter fest anstellen.
+C) wurden zwei neue Mitarbeiter bereits fest eingestellt.
+Lösung: A
+[18] In der Kantine
+A) bekommt man in den kommenden Wochen kein Essen.
+B) kann man ab Montag von 12 bis 14 Uhr warm zu Mittag essen.
+C) sollen die Essensmarken abgeschafft werden.
+Lösung: A
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Text:
+**Beschwerde über Büroumzug**
+Sehr geehrte Frau Börne,
+am Wochenende ist unser Büro mit Hilfe Ihres Unternehmens von Hanau nach Frankfurt umgezogen. Leider waren wir mit Ihrem Service überhaupt nicht zufrieden.
+Ihre Mitarbeiter kamen eine halbe Stunde zu spät und nur zu dritt statt wie vereinbart zu viert. Deshalb dauerte der ganze Umzug natürlich länger als geplant und einige Arbeiten sind auch noch nicht abgeschlossen: Es sind noch nicht alle Möbel aufgebaut, weshalb wir unsere Sachen noch nicht einräumen konnten.
+Bitte schicken Sie uns am Mittwochmorgen noch zwei Personen, die den Möbelaufbau erledigen. Des Weiteren sind Glasplatten zu Bruch gegangen und Schränke verkratzt. Ich gehe davon aus, dass Ihre Firma die Kosten dafür übernimmt.
+Mit freundlichen Grüßen
+Thomas Zaun
+Aufgaben:
+[19] Beim Umzug
+A) haben vier Möbelpacker gearbeitet.
+B) kam es zu Verzögerungen.
+C) wurden nicht alle Möbel transportiert.
+Lösung: B
+[20] Herr Zaun
+A) musste seinen Umzug verschieben.
+B) ist nach Hanau gezogen.
+C) verlangt Schadensersatz für entstandene Beschädigungen.
+Lösung: C
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrer Vorgesetzten:**
+Hallo Frau Kühne, bitte schauen Sie sich die E-Mail von Herrn Zaun an. Schreiben Sie ihm und erklären Sie, warum es zu den Fehlern kam (Autopanne und kurzfristige Krankmeldungen). Sagen Sie ihm zu, dass am Mittwochmorgen pünktlich zwei Mitarbeiter für den Aufbau da sein werden und wir die Verantwortung sowie die Kosten für die Schäden übernehmen. Danke, Frieda Börne.
+Aufgaben:
+[B] Antworten Sie Herrn Zaun im Namen von Monika Kühne.
+Punkt: Bedauern und Entschuldigung für die Unannehmlichkeiten
+Punkt: Erklärung der Ursachen (Autopanne und kurzfristiger Personalmangel)
+Punkt: Zusage des Pünktlichen Eintreffens von zwei Monteuren am Mittwochmorgen
+Punkt: Bestätigung der Kostenübernahme für die beschädigten Möbelstücke
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Der Chef erklärt Melanie, mit welchen Produkten der Salon arbeitet.
+A) richtig
+B) falsch
+Lösung: B
+[23] Im Friseursalon
+A) dürfen keine Markenprodukte empfohlen werden.
+B) bestellt der Chef jede Woche die Ware selbst.
+C) wird das Trinkgeld regelmäßig unter allen Mitarbeitern aufgeteilt.
+Lösung: C
+[24] Die Kollegen einigen sich darauf, wer wann Urlaub nehmen kann.
+A) richtig
+B) falsch
+Lösung: A
+[25] In den Sommerferien
+A) können nur Mitarbeiter mit Kindern Urlaub machen.
+B) möchte Sandra für eine größere Reise verreisen.
+C) will Mustafa die ersten beiden Wochen freinehmen.
+Lösung: B
+[26] Frau Schulz braucht mehrere neue Kaffeemaschinen.
+A) richtig
+B) falsch
+Lösung: B
+[27] Frau Schulz findet das Gerät ESAM 320 passend, obwohl es
+A) recht groß ist.
+B) sich nicht selbst reinigen kann.
+C) ziemlich laut im Betrieb ist.
+Lösung: A
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Aussagen. Welche Aussage a–f passt zu welcher Person 28–31?
+Auswahltitel: Aussagen
+Auswahl:
+A = Regelungen zur Arbeitsunfähigkeit unterscheiden sich von Unternehmen zu Unternehmen.
+B = Die Arbeitsplatzgestaltung hat einen Einfluss auf die Gesundheit der Mitarbeiter.
+C = Arbeitgeber sollten mehr für die Hygiene im Betrieb tun.
+D = Manche Arbeitgeber bieten Maßnahmen für die Gesundheitsvorsorge an.
+E = Das Wohlbefinden der Mitarbeiter sollte ein wichtiges Anliegen sein.
+F = Bei Krankheit braucht man ab dem ersten Tag ein Attest vom Arzt.
+Aufgaben:
+[28] Person 1 (Melanie und neue Kollegin)
+Lösung: A
+[29] Person 2 (Grippeschutzimpfung im Betrieb)
+Lösung: D
+[30] Person 3 (Infoblatt Händewaschen)
+Lösung: C
+[31] Person 4 (Schreibtisch und Rückenprobleme)
+Lösung: B
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören eine Information der Geschäftsleitung über eine neue Filiale. Wählen Sie für die Aufgaben 32–35 die richtige Lösung A, B oder C.
+Aufgaben:
+[32] Die neue Werbekampagne
+A) ist bereits vollständig abgeschlossen.
+B) wird ausschließlich intern konzipiert.
+C) gestaltet eine externe Agentur.
+Lösung: C
+[33] Die sozialen Medien werden dazu genutzt, um
+A) aktiv neue Bewerber zu suchen.
+B) offizielle Vorstellungsgespräche zu führen.
+C) die Bewerber vorab besser kennenzulernen.
+Lösung: C
+[34] Das Beleuchtungskonzept der bisherigen Filialen
+A) führte zu Unzufriedenheit bei der Kundschaft.
+B) soll unverändert übernommen werden.
+C) war besonders vorteilhaft in Umkleidekabinen.
+Lösung: A
+[35] Im neuen Frankfurter Modehaus wird
+A) ausschließlich billige Kleidung angeboten.
+B) nur exklusive Designermode geführt.
+C) auch Kleidung mit hoher Qualität verkauft.
+Lösung: C
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf Ansagen auf der Mailbox. Wählen Sie für die Aufgaben 36–40 die richtige Lösung A, B oder C.
+Aufgaben:
+[36] Jana
+A) benötigt einen Internetzugang im Besprechungsraum.
+B) besorgt selbst einen Beamer für die Veranstaltung.
+C) stellt einen Flipchart in den Raum.
+Lösung: A
+[37] Felix
+A) bittet um einen Terminvorschlag zur Besprechung der Schulung.
+B) hat bereits alle verbindlichen Software-Angebote erhalten.
+C) soll selbst an einer Kundenschulung teilnehmen.
+Lösung: A
+[38] Kathrin Schönberner
+A) befürchtet wegen Lieferverzögerungen Kunden an die Konkurrenz zu verlieren.
+B) hat bereits eine neue Spedition gefunden.
+C) hat Lieferfristen nicht beachtet.
+Lösung: A
+[39] Daniel Meyer möchte wissen,
+A) ob alle Telefonapparate ausgetauscht werden müssen.
+B) wer den Kollegen die neue Anlage erklärt.
+C) wie lange die Telefonanlage beim Austausch nicht funktionieren wird.
+Lösung: C
+[40] Anja
+A) kann nicht zur Besprechung kommen.
+B) hat keinen Überblick über die Verkaufszahlen und bittet um Vertretung.
+C) steht nicht auf der Teilnehmerliste.
+Lösung: B
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben, Telefonnotiz
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Tischreservierung Geschäftsessen**
+Nachricht auf dem Anrufbeantworter von Herrn Messner:
+„Guten Tag, hier spricht Nikol Meßner von der Firma Karcher & Söhne, buchstabiert M-E-S-S-N-E-R. Ich möchte für kommenden Freitagabend um 19:30 Uhr eine Tischreservierung für fünf Personen vornehmen. Es handelt sich um ein Geschäftsessen für unseren Chef und vier Kunden. Bitte bereiten Sie für alle Gäste das Menü Nr. 1 vor. Außerdem würde ich gerne wissen, ob Parkmöglichkeiten für unsere Gäste zur Verfügung stehen. Bitte rufen Sie mich zurück, um die Reservierung zu bestätigen. Meine Telefonnummer lautet 04133 784 30 09. Vielen Dank und auf Wiedersehen.“
+Aufgaben:
+[41] Dokumentieren Sie die Kundenanfrage:
+Punkt: Name des Anrufers (Herr Meßner, M-E-S-S-N-E-R, Firma Karcher & Söhne)
+Punkt: Telefonnummer (04133 784 30 09)
+Punkt: Anlass (Tischreservierung für 5 Personen am Freitag um 19:30 Uhr)
+Punkt: Wünsche (Menü 1 für alle Gäste vorbereiten, Auskunft über Gästeparkplätze)
+Punkt: Zu erledigen (Rückruf zur Bestätigung der Reservierung)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = WORÜBER
+B = BEREITS
+C = EVENTUELL
+D = IN
+E = MANCHMAL
+F = DARAUF
+G = UNTER
+H = WAS
+I = NOCH
+J = ZUM
+Text:
+**Einladung zum Probearbeiten**
+Sehr geehrte Frau Sabani,
+es freut mich sehr, dass ich in meinem Vorstellungsgespräch einen ersten positiven Eindruck hinterlassen habe und Sie mich (46) Probearbeiten einladen. Natürlich nutze ich sehr gern diese Gelegenheit, meine Fähigkeiten (47) Beweis zu stellen.
+Von den beiden Terminvorschlägen, die Sie mir geschickt haben, passt mir der nächste Dienstag am besten. Ich freue mich (48), bei dieser Gelegenheit (49) einen ersten Einblick in die Arbeitsabläufe und Abteilungen in Ihrem Haus zu bekommen.
+Stellen Sie mir die Arbeitskleidung für diesen Tag zur Verfügung oder soll ich selbst spezielle Kleidung mitbringen? Gibt es noch irgendwas, (50) ich vorher besorgen muss? Brauche ich (51) noch eine ärztliche Bescheinigung vom Gesundheitsamt?
+Danke im Voraus für eine kurze Beantwortung meiner Fragen.
+Mit freundlichen Grüßen
+Aufgaben:
+[46] … und Sie mich (46) Probearbeiten einladen. …
+Lösung: J
+[47] … Gelegenheit, meine Fähigkeiten (47) Beweis zu stellen. …
+Lösung: G
+[48] … Ich freue mich (48), bei dieser Gelegenheit …
+Lösung: F
+[49] … bei dieser Gelegenheit (49) einen ersten Einblick in die Arbeitsabläufe …
+Lösung: B
+[50] … Gibt es noch irgendwas, (50) ich vorher besorgen muss? …
+Lösung: H
+[51] … Brauche ich (51) noch eine ärztliche Bescheinigung vom Gesundheitsamt? …
+Lösung: C
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Auftragsbestätigung**
+Sehr geehrte Frau Mackbock,
+ich danke Ihnen für Ihre Bestellung und bestätige hiermit die Zustellung des PKW Bulldog zum Preis von 1078 Euro zzgl. MwSt. an die von (52) Lieferadresse. Sollte Ihre Rechnungsadresse nicht mit der Lieferadresse übereinstimmen, teilen Sie uns dies bitte bis spätestens 07.07. schriftlich mit.
+Die Rechnungszustellung erfolgt per Post. Bitte beachten Sie, dass wir bei Zahlung des Kaufpreises innerhalb von sieben Tagen nach Lieferung (53). Ansonsten muss der Rechnungsbetrag bis 30 Tage nach Wareneingang (54).
+Die detaillierten Konditionen (55) unseren allgemeinen Geschäftsbedingungen auf der Rückseite dieser Auftragsbestätigung.
+Bei Rückfragen steht Ihnen unser 24-Stunden-Service unter der Rufnummer 0175 545621 zur Verfügung. Bitte halten Sie hierzu Ihre (56).
+Wir versprechen Ihnen eine zuverlässige (57) und sind sicher, dass Sie mit unserem Produkt zufrieden sein werden.
+Mit freundlichen Grüßen
+Christoph Sellert
+Aufgaben:
+[52] … an die von (52) Lieferadresse. …
+A) Ihnen angegebene
+B) ihr angeordnete
+C) mir angeführte
+Lösung: A
+[53] … innerhalb von sieben Tagen nach Lieferung (53). …
+A) drei Prozent Ermäßigung bezahlen
+B) drei Prozent Rabatt wünschen
+C) drei Prozent Skonto gewähren
+Lösung: C
+[54] … bis 30 Tage nach Wareneingang (54). …
+A) beglichen werden
+B) dokumentiert werden
+C) verhandelt werden
+Lösung: A
+[55] … Die detaillierten Konditionen (55) unseren allgemeinen Geschäftsbedingungen …
+A) entnehmen Sie bitte
+B) erfahren Sie direkt
+C) finden Sie gerne
+Lösung: A
+[56] … Bitte halten Sie hierzu Ihre (56). …
+A) Auftragsnummer bereit
+B) Kundennummer fest
+C) Rechnungsnummer an
+Lösung: A
+[57] … Wir versprechen Ihnen eine zuverlässige (57) und sind sicher, …
+A) Ausführung Ihres Auftrags
+B) Bearbeitung Ihrer Anfrage
+C) Durchführung Ihrer Arbeit
+Lösung: A

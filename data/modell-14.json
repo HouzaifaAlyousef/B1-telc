@@ -15,8 +15,8 @@
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 85.5,
-   "missing": 8
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -45,7 +45,7 @@
    "missing": 0
   }
  ],
- "subtitle": "53 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -250,12 +250,31 @@
       }
      ],
      "answer": "B"
+    },
+    {
+     "id": "10",
+     "text": "In der Popper-Schule werden nur Schüler aufgenommen,",
+     "options": [
+      {
+       "key": "A",
+       "text": "die in mindestens einem Fach sehr gut sind."
+      },
+      {
+       "key": "B",
+       "text": "die mindestens 20 bis 30 Prozent der Aufnahmeprüfung erreichen."
+      },
+      {
+       "key": "C",
+       "text": "die von den insgesamt 28 Lehrern als intelligent beschrieben werden."
+      }
+     ],
+     "answer": "A"
     }
    ],
    "pointsPerItem": 5.0,
    "maxPoints": 25.0,
-   "availablePoints": 20.0,
-   "missing": 1
+   "availablePoints": 25.0,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -349,12 +368,32 @@
      "id": "16",
      "text": "Ihre Verwandten haben eine Woche Urlaub und suchen einen Ferienort am Meer.",
      "answer": "G"
+    },
+    {
+     "id": "17",
+     "text": "Sie suchen für drei Vormittage pro Woche eine Stelle als Küchenhilfe.",
+     "answer": "X"
+    },
+    {
+     "id": "18",
+     "text": "Sie suchen eine leichte Arbeit für abends, um sich noch etwas Geld dazuzuverdienen.",
+     "answer": "D"
+    },
+    {
+     "id": "19",
+     "text": "Ihre Bekannte möchte als Bedienung in einer Gaststätte arbeiten.",
+     "answer": "K"
+    },
+    {
+     "id": "20",
+     "text": "Ihre Freunde wollen Familienurlaub machen und suchen ein Angebot, das auch ein Kinderprogramm enthält.",
+     "answer": "F"
     }
    ],
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
-   "availablePoints": 15.0,
-   "missing": 4,
+   "availablePoints": 25.0,
+   "missing": 0,
    "bankImage": "img/m14-lv3.jpg"
   },
   {
@@ -389,7 +428,7 @@
    "items": [
     {
      "id": "21",
-     "text": "Sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Familie einen Flug nach Indien …",
+     "text": "… sehr geehrter Herr Schmidt, im Januar hatte ich bei (21) für mich und meine Familie einen Flug nach Indien …",
      "options": [
       {
        "key": "A",
@@ -408,7 +447,7 @@
     },
     {
      "id": "22",
-     "text": "… gebucht. Leider entsprach unser Flug überhaupt nicht dem, (22)bei der Buchung am Telefon ausgemacht worden war. (23) ich …",
+     "text": "… gebucht. Leider entsprach unser Flug überhaupt nicht dem, (22) bei der Buchung am Telefon ausgemacht worden war. …",
      "options": [
       {
        "key": "A",
@@ -421,6 +460,25 @@
       {
        "key": "C",
        "text": "wie"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "23",
+     "text": "… am Telefon ausgemacht worden war. (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Danach"
+      },
+      {
+       "key": "B",
+       "text": "Obwohl"
+      },
+      {
+       "key": "C",
+       "text": "Nämlich"
       }
      ],
      "answer": "B"
@@ -464,6 +522,25 @@
      "answer": "A"
     },
     {
+     "id": "26",
+     "text": "… Doch damit nicht genug. Der Flug war nicht nur anders als vereinbart, (26) auch noch viel teurer. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "besonders"
+      },
+      {
+       "key": "B",
+       "text": "sondern"
+      },
+      {
+       "key": "C",
+       "text": "sonst"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "27",
      "text": "… anders als vereinbart, (26) auch noch viel teurer. statt (27) erwarteten 640 Euro kostete der Flug 720 Euro. Ich darf …",
      "options": [
@@ -502,8 +579,27 @@
      "answer": "B"
     },
     {
+     "id": "29",
+     "text": "… Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Deutschen Bank in Mumbai bitten. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "an"
+      },
+      {
+       "key": "B",
+       "text": "bei"
+      },
+      {
+       "key": "C",
+       "text": "vor"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "30",
-     "text": "… Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.Mit freundlichen Grüßen Harish Khurana",
+     "text": "… Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Harish Khurana",
      "options": [
       {
        "key": "A",
@@ -523,8 +619,8 @@
    ],
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
-   "availablePoints": 10.5,
-   "missing": 3
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",

@@ -1,0 +1,391 @@
+# THOMAS
+Untertitel: 52 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 9
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Eine Karte – viele Vorteile
+B = Endlich Ferien ohne Kinder
+C = Günstiger Urlaub für Vereinsmitglieder
+D = Meer statt Berge
+E = Neues Wohnprojekt für Alleinerziehende
+F = Reisebüros weltweit vernetzt
+G = Schweizer Seen weiterhin sehr beliebt
+H = Söhne schenken mehr als Töchter
+I = Schöne werden großzügiger beschenkt
+J = Ti W h Ki d ih S ß h b
+Aufgaben:
+[1] – Das fängt ja gut an: Schon im Kinderzimmer werden Jungs bevorzugt sie bekommen mehr geschenkt als Mädchen. Das ist das Ergebnis einer Untersuchung vom Bundesverband des Spielwaren- Einzelhandels-Bundesweit wurden 6500 Familien nach ihren Schenkgewohnheiten – – befragt. Fast immer wurden für die Söhne auch schon im Babyalter mehr gekauft. Zuständig für die Geschenke sind übrigens meist die Mütter.
+Lösung: I
+[2] In diesem Sommer werden weitere 200 Großstadt-Jugendherbergen auf der ganzen Welt miteinander vernetzt ICYN heißt das Zauberwort International Communication Youth Network. Das System wurde speziell für Jugendherbergen entwickelt. Für nur 15 Euro Jahresgebühr kann man mit der ICYN-Karte weltweit nicht nur Übernachtungen in anderen Herbergen reservieren, sondern auch unbegrenzt im Internet surfen, sogar gratis übers Internet telefonieren, Bahn- und Flugtickets bargeldlos buchen sowie günstige Konzerttickets bekommen.
+Lösung: A
+[3] Ob zu Hause, irgendwo in der Schweiz oder im Ausland: Ferien mit Kindern wollen gut geplant sein. Wo gibt es denn Orte, wo Kinder noch Abenteuer erleben, Hotels oder Wohnungen, in denen sie sich wohl fühlen, wo aber gleichzeitig auch die Eltern auf ihre Rechnung kommen? Ruth Michaela Richter gibt Tipps, verrät Adressen und zeigt Beispiele. Damit werden sogar Städtereisen oder Schlossferien in England interessant.
+Lösung: J
+[4] Die Sehnsucht nach dem Meer ist in der Schweiz groß, vor allem bei der jüngeren Generation. Ein Drittel der Schweizerinnen und Schweizer würde nach einer Umfrage im Tausch für eine Meeresküste die Hälfte der Berge hergeben. Die Zeitschrift mare ließ über 1000 Personen in der Schweiz nach ihrem Verhältnis zum Meer befragen. Rund 42 Prozent der 15-bis 34-Jährigen würden treu dem Motto der Jugendbewegung der 80er Jahre: Nieder mit den Alpen, freie Sicht aufs Mittelmeer den Tausch eingehen. In der Deutschschweiz könnten sich nur 29 Prozent von den Bergen trennen, in der Roman die sind es 37 und im Tessin 43 Prozent.
+Lösung: D
+[5] Ob für die traditionelle Familie oder für Alleinerziehende: Der Verein für Familienherbergen in Gelsenkirchenbietet schonseit Jahrenpreisgünstige Ferien Über 1100 Zimmer und
+Lösung: C
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Gelsenkirchen bietet schon seit Jahren preisgünstige Ferien. Über 1100 Zimmer und
+– –
+Wohnungen auch für das kleine Portemonnaie stehen zwischen Nordsee und Sizilien den
+Mitgliedern im neuen Katalog zur Auswahl. Nichtmitglieder erhalten diesen Katalog gegen eine
+Gebühr von 5 Euro. Infos: Telefon 061/981 25 25 oder
+www.ferienwohnung.ch
+**Du oder Sie das ist hier die Frage**
+**Sprachliche Regeln am Arbeitsplatz**
+Häufig erscheint Invar Kamprad, lekea-Gründer und-Besitzer, am Morgen unangemeldet angemeldet am Hintereingang einer seiner Filialen Guten Morgen ich bin der Invar Das schwedische Möbelbaus ist das beste Beispiel für die Du Kultur am Arbeitsplatz, denn alle Beschäftigten sprechen sich mit Du an. Die Gesellschaft für deutsche Sprache in Wiesbaden hat nun in einer Untersuchung festgestellt, dass mehr als 53 Prozent der befragten Personen alle Arbeitskollegen duzen. Wie zu erwarten sind es vor allem die 16 bis 29 jährigen (59 Prozent) die sich lieber schnell duzen Bei den über 60 Jährigen sank die Zahl auf 14 Prozent warum eigentlich sagt man am Arbeitsplatz immer öfter Du Zum Beispiel pflegen Ikea Greenpeace und McDonalds alle das obligatorische Du Damit wollen sie Vertrauen aufbauen und ein familiäres Umfeld schaffen. Gegenüber den Kunden ist an jedoch vorsichtiger geworden. So hat Ikea im Verkaufskatalog statt dem Du wieder das sie eingeführt Man hofft mit Sie mehr Leute nicht nur jüngere anzusprechen. Bis heute üblich ist das Du zum Beispiel in Schweizer Gewerkschaften Viele Mitglieder sind sogar beleidigt, wenn sie mit sie angesprochen werden Es gibt aber auch umgekehrten Fall, zwar bei der Polizei Wer in Deutschland einen Polizisten duzt riskiert eine Strafe in der Schweizer hingegen findet man eine Anzeige wegen Duzens eines Beamten übertrieben Polizisten werden sowieso kaum mit Du angesprochen meint Hanspeter Fäh von der Zürcher Stadtpolizei Der Trend zum Du kann jedoch auch als sozialer Druck oder Zwang empfunden werden. Ein Du abzulehnen gilt nämlich als unfreundlich. Das hat Dieter S Angestellter bei einem Textilgeschäft in Deutschland erfahren Ein Gericht entschied, dass er seine Kollegen weiterhin mit Du ansprechen musste.
+So sehr das Du in der Gesellschaft auch an Bedeutung gewinnt das Sie hat immer noch eine feste soziale Basis und kann diese sogar ausbauen Benimmkurse, wo man Höflichkeit und die richtigen Umgangsformen lernt, sind heute im Trend immer mehr Firmen schulen ihre Mitarbeiter in stilvollem Verhalten. Dazu gehören folgende Grundregeln: Die ältere Person bietet der jüngeren das Du an Oft ist jedoch auch die Stellung entscheidend Der ältere Mitarbeiter bietet seinem jüngeren Chef nie das Du an.
+Aufgaben:
+[6] Die Firma Ikea benutzt heute das. Du,
+A) weil das ein Zeichen für eine Familie Atmosphäre ist.
+B) weil sie mehr jüngere Kunden gewinnen will.
+C) weil so mehr Leute den Verkaufskatalog lesen.
+Lösung: A
+[7] In der Schweiz
+A) gilt das Du in Gewerkschaften als Beleidigung.
+B) werden Polizisten nur selten mit Du angesprochen.
+C) wird man bestraft, wenn man zu Beamten Du sagt.
+Lösung: B
+[8] Eine Untersuchung hat gezeigt,
+A) dass 14 Prozent der jüngeren Mitarbeiter das Sie vorziehen.
+B) dass besonders jüngere Arbeitskollegen schneller das Du wählen.
+C) dass sich alle Arbeitskollegen gern mit Du anderen würden.
+Lösung: B
+[9] Durch Kurse können Angestellte
+A) höfliches Verhalten am Arbeitsplatz lernen.
+B) ihre Stellung im Arbeitsleben verbessern.
+C) neue Trends beim Einrichten des Arbeitsplatzes kennen lernen.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m13-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie haben von einer Schweizer Schauspielerin gehört und möchten gern einen Film sehen.
+Lösung: D
+[12] Sie haben gerade Ihre Ausbildung beendet und suchen eine Stelle an der Rezeption.
+Lösung: G
+[13] Sie interessieren sich für Umweltschutz und suchen eine passende Sendung.
+Lösung: F
+[14] Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz.
+Lösung: A
+[15] In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren.
+Lösung: I
+[16] Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk.
+Lösung: K
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien bestellt und diese zwei Tage vor Abflug am 27. Juni auch erhalten. Leider entsprachen die Tickets überhaupt nicht dem, was zuvor bei der Buchung am Telefon ausgemacht worden (22).
+(23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro.
+Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Bank of India in Mumbai bitten. Meine Bankdaten finden Sie unten. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.
+Mit freundlichen Grüßen Luisa Martin
+Aufgaben:
+[21] Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien …
+A) ihnen
+B) Ihnen
+C) Sie
+Lösung: B
+[22] … was zuvor bei der Buchung am Telefon ausgemacht worden (22). (23) ich ausdrücklich einen Direktflug nach Mumbai …
+A) hat
+B) war
+C) wäre
+Lösung: B
+[24] … nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …
+A) für
+B) mit
+C) zu
+Lösung: B
+[25] … Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit …
+A) erst
+B) jetzt
+C) schon
+Lösung: A
+[27] … noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der …
+A) den
+B) der
+C) die
+Lösung: C
+[30] … Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Luisa Martin
+A) mich
+B) mir
+C) sich
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+3. anach an
+Obwohl sondern bei
+B B
+Nämlich sonst vor
+C C
+) (
+Sehr geehrte Damen und Herren,
+unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen
+Entwicklungsprogrammen vorzubereiten.
+Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt.
+Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen
+ADRIAN SCHÖLLER EVD Trans GmbH
+Auswahl:
+A = AUCH
+B = AUFTRAG
+C = BESCHREIBEN
+D = FRAGEN
+E = GEEIGENET
+F = GEGEÜBER
+G = INFORMATIONEN
+H = KÖNNTEN
+I = STATTFINDEN
+J = SUCHEN
+K = TERMIN
+L = TOUR
+M = VOR
+N = WÄREN
+O = WEIL
+Aufgaben:
+[31] … geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen …
+Erklärung: Das Wort lautet: AUFTRAG
+Lösung: B
+[32] … vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer …
+Erklärung: Das Wort lautet: STATTFINDEN
+Lösung: I
+[33] … in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von …
+Erklärung: Das Wort lautet: INFORMATIONEN
+Lösung: G
+[34] … daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die …
+Erklärung: Das Wort lautet: BESCHREIBEN
+Lösung: C
+[35] … Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir …
+Erklärung: Das Wort lautet: GEEIGNET
+Lösung: E
+[36] … Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir folgende …
+Erklärung: Das Wort lautet: WEIL
+Lösung: O
+[37] … Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit …
+Erklärung: Das Wort lautet: SUCHEN
+Lösung: J
+[38] … technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge …
+Erklärung: Das Wort lautet: AUCH
+Lösung: A
+[39] … sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald …
+Erklärung: Das Wort lautet: TERMIN
+Lösung: K
+[40] … und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen ADRIAN …
+Erklärung: Das Wort lautet: WÄREN
+Lösung: N
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Für die Sprechen ist es unwichtig, ob ihre Kinder in der Schule gut sind.
+Lösung: falsch
+[42] Der Sprecher findet es wichtig, dass Eltern immer für ihre Kinder da sind.
+Lösung: richtig
+[43] Die Sprecherin glaubt, dass sie mehr mit ihrer Tochter sprechen müsste.
+Lösung: falsch
+[44] Es ist dem Sprecher wichtig, dass seine Kinder gesund leben.
+Lösung: richtig
+[45] Der Sprecher möchte, dass sein Kind die eigenen Ideen realisieren kann.
+Lösung: richtig
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Viele Touristen besuchen Torgau wegen seiner historischen Sehenswürdigkeiten.
+Lösung: richtig
+[47] Den Spielpark Hartenfels gibt es schon seit vielen Jahren.
+Lösung: falsch
+[48] Außer dem Spielpark gibt es in der Umgebung viele andere Freizeitmöglichkeiten für die Kinder.
+Lösung: falsch
+[49] Der Spielpark bietet den Kindern Spielmöglichkeiten, die sie zu Hause nicht haben.
+Lösung: richtig
+[50] Die Kinder können im Spielpark auch selbst etwas bauen.
+Lösung: richtig
+[51] Das Spielen am Back kann für die Kinder gefährlich werden.
+Lösung: falsch
+[52] Beide Elternteile müssen auf die Kinder aufpassen.
+Lösung: falsch
+[53] Im Spielpark können Kinder bis zum Alter von sieben von Aufsichtspersonen betreut werden.
+Lösung: falsch
+[54] Der Eintritt in den Spielpark ist zurzeit frei.
+Lösung: richtig
+[55] Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Der nächste Zug nach Füssen fährt um 11:56 Uhr.
+Lösung: richtig
+[57] Die Firma befindet sich in der Bellmondstraße.
+Lösung: falsch
+[58] Im City-Kino werden im Untergeschoss alte Filme gezeigt.
+Lösung: falsch
+[59] Das Zugteam bringt Ihnen Südtiroler Käsespezialitäten an Ihren Platz.
+Lösung: falsch
+[60] Die Großmutter kann heute nicht kommen.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie Thomas. Schreiben Sie etwas zu allen vier Punkten:
+Extra:
+{
+ "brief": {
+  "intro": "Sie haben von Ihnen Freund folgende E-Mail erhalten:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "nach unserm schönen, gemeinsamen Erlebnis letztes Jahr möchte ich auch dieses Jahr wieder einen Ausflug für uns alle organisieren. Ich hoffe sehr, dass ihr Zeit habt und mitkommen könnt - ich freue mich schon jetzt, euch alle bald wieder zu sehen! Das Dumme ist nur, dass ich mir vor drei Wochen beim Basketball das Bein gebrochen habe und noch nicht so gut zu Fuß bin. Deshalb habe ich einen gemütlichen Ausflug mit Bus und Schiff geplant - hoffentlich ist dann auch das Wetter gut für die Schiffsfahrt! Wohin es geht, möchte ich euch aber noch nicht verraten - das soll eine Überraschung werden.",
+   "Termin: übernächster Samstag.",
+   "Zeit und Treffpunkt: 9:30 Uhr bei mir.",
+   "Bitte schreibt mir doch, ob ihr beim Ausflug dabei sein könnt!",
+   "Hoffentlich bis bald."
+  ],
+  "signature": "Thomas"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie Thomas. Schreiben Sie etwas zu allen vier Punkten:
+Mindestwörter: 100
+Punkt: Alternativvorschlag für Schlechtes Wetter
+Punkt: Einladung annehmen
+Punkt: Was Sie noch über den Ausflug wissen wollen
+Punkt: Auf Sportunfall reagieren

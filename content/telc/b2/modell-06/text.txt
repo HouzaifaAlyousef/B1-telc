@@ -1,0 +1,492 @@
+# EINFÜHRUNGSTAG
+Untertitel: 53 Aufgaben · 125 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 5
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 35
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Die Lebensmittelbranche boomt: Der Einzelhandel ist einer der größten und umsatzstärksten Wirtschaftszweige national und international. Es werden dort ständig qualifizierte Mitarbeiter gesucht. Allein in Hessen werden jährlich 160.000 junge Menschen ausgebildet. Der Einzelhandel ist außerdem krisenfest, denn gegessen wird immer.
+B = Aus Fehlern anderer lernen: Viele Unternehmer machen zu Beginn ihrer Selbstständigkeit ähnliche Fehler. Heute weiß man, dass ein durchdachter Businessplan und eine genaue Konkurrenzanalyse unverzichtbar sind. Worauf es noch ankommt, erfährst du in den Tipps des Erfolgscoachs Gregor Daub.
+C = Chancen im Einzelhandel: Die FOOD Unternehmensgruppe betreibt Supermärkte in zehn Ländern Europas. Der Branchenriese möchte weiter expandieren und hat gerade die Filialen der Jennings GmbH übernommen. Erfahrene Mitarbeiter finden dort interessante Möglichkeiten zur beruflichen Weiterentwicklung.
+D = Gute Nachrichten für gekündigte Mitarbeiter: Die Tankstellenkette Fairtank hat Bankrott angekündigt und schließt zum 31. März ihre 25 Filialen in Brandenburg. Rund 100 Mitarbeiter sind betroffen und suchen nun einen neuen Job. Für einige von ihnen gibt es eine Lösung: Tankstellen in der Umgebung haben ihre Unterstützung zugesagt und versprochen, Mitarbeiter von Fairtank zu übernehmen.
+E = Was nun? Egal, ob die ganze Firma pleitegeht, eine Abteilung dichtmacht oder nur der eigene Job weg ist, eine Entlassung ist immer ein Schock. Arbeitsmarktexpertin Caroline Cuyper erklärt, was man als Angestellter tun muss, um möglichst schnell eine neue Stelle zu bekommen.
+F = Neue Kursreihe bei Arcadio: Ab sofort bietet das Institut Arcadio neben seinen Computerkursen für Senioren auch Weiterbildungen für Teilnehmer mit geringen Deutschkenntnissen an. Das Besondere daran: Die Dozenten verwenden eine einfache Sprache. Was hinter diesem innovativen Konzept steht, erzählt der Institutsgründer Benjamin von Adler im Interview.
+G = Wenn die Mitarbeiter kündigen: Immer mehr Mitarbeiter kündigen und verlassen ihre Firma. Und zwar selbst dann, wenn sie mehr Gehalt bekommen als bei der Konkurrenz. Die Unternehmensberatung Schindler hat die häufigsten Gründe analysiert, warum sich Angestellte entscheiden, ihren Job zu wechseln.
+H = Bildung im neuen Zeitalter: Schneller technologischer Fortschritt, Globalisierung und Veränderungen auf dem Arbeitsmarkt haben dazu geführt, dass Fortbildungen im Beruf eine immer wichtigere Rolle spielen. Zunehmend werden Online-Kurse und Webinare am Computer angeboten, die den Teilnehmern maximale Flexibilität versprechen. Wo findet man passende Fortbildungen?
+Aufgaben:
+[1] Silvie ist gelernte Verkäuferin und möchte in ihrem Job aufsteigen.
+Lösung: C
+[2] Brian sucht Computerkurse, die er von zu Hause aus machen kann.
+Lösung: H
+[3] Carl ist Umwelttechniker und möchte seine eigene Beratungsagentur gründen.
+Lösung: B
+[4] Mira ist unsicher, wie es nach ihrem Arbeitsplatzverlust weitergehen soll.
+Lösung: E
+[5] Karim sucht einen Ausbildungsplatz in einer sicheren Branche.
+Lösung: A
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 15
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 9. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Einführungstag**
+Unsere Personalreferentin führt mehrmals jährlich einen Einführungstag für unsere neuen Mitarbeiterinnen und Mitarbeiter durch, an dem diese mit unterschiedlichen Arbeitsbereichen sowie den rechtlichen und organisatorischen Prozessen vertraut gemacht werden. Wir möchten darauf hinweisen, dass die Teilnahme an einer solchen Informationsveranstaltung verpflichtend ist. Am Einführungstag besteht außerdem die Möglichkeit, Kolleginnen und Kollegen aus anderen Abteilungen kennenzulernen. Die Abteilungsleiter werden bei dieser Gelegenheit in kurzen Worten einen Einblick in den Tätigkeitsbereich ihrer Teams geben.
+Da unser Unternehmen in einem hochsensiblen Bereich arbeitet, haben wir für unser gesamtes Gebäude ein komplexes Sicherheitssystem. Auch dieses stellen wir Ihnen im Rahmen des Orientierungstages im Detail vor. Weitere Einzelheiten zu diesem Tag, wie den Treffpunkt und den Ablauf, finden Sie in dieser Mappe. Eine gesonderte Anmeldung ist nicht erforderlich.
+Für Rückfragen zum Einführungstag steht die Personalabteilung gerne zur Verfügung.
+Aufgaben:
+[6] Alle Mitarbeiter müssen ein paar Mal pro Jahr am Einführungstag teilnehmen.
+A) richtig
+B) falsch
+Lösung: B
+[7] Am Einführungstag
+A) müssen sich die Teilnehmenden in der Personalabteilung melden.
+B) stellt ein Abteilungsleiter alle Kolleginnen und Kollegen vor.
+C) werden neue Mitarbeitende in die Sicherheitsregeln im Unternehmen eingeführt.
+Lösung: C
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Datenschutz**
+Ihre im Unternehmen verwendeten Passwörter dürfen unter keinen Umständen weitergegeben und müssen regelmäßig alle sechs Monate geändert werden. Bitte verwenden Sie keine Passwörter, die Sie auch für private Konten nutzen, und generieren Sie sichere Passwörter mit einem Passwortgenerator. USB-Sticks und Ihnen unbekannte Geräte sind vor Inbetriebnahme in isolierter Umgebung zu prüfen. Es darf keine Software aus dem Internet heruntergeladen oder selbstständig auf dem Arbeitslaptop oder dem PC installiert werden. Außerdem ist es untersagt, Daten lokal abzuspeichern.
+Bitte achten Sie bei Dienstreisen darauf, Ihren Laptop vor Fremden zu sichern! Bedenken Sie bitte auch, dass bei der Arbeit möglicherweise vertrauliche Informationen auf Ihrem Bildschirm zu sehen sind. Schützen Sie diese vor fremden Blicken.
+Vertrauliche Telefonate dürfen nicht in der Öffentlichkeit geführt werden. Die private Nutzung von Diensthandys oder Laptops ist untersagt.
+Vertrauliche und personenbezogene Daten müssen nach Dienstschluss verschlossen werden. Sie dürfen zudem nicht länger als unbedingt erforderlich aufgehoben oder gespeichert werden. Über interne Unternehmensangelegenheiten oder Dienstgeheimnisse ist Verschwiegenheit zu wahren. Unterlagen, Datenträger, Abschriften oder Kopien dürfen nicht weitergegeben werden oder versehentlich in die Hände unbefugter Personen gelangen. Vertrauliche Daten in Papierform sind in dafür bereitgestellten Schreddern zu vernichten.
+Bitte melden Sie ungewöhnliche Vorkommnisse oder Feststellungen umgehend der Geschäftsführung oder unserem Datenschutzbeauftragten, Herrn Dr. Sevici. Er ist unter der Durchwahl -33 zu erreichen und steht Ihnen auch bei Fragen bezüglich des Datenschutzes in unserem Unternehmen zur Verfügung.
+Aufgaben:
+[8] Die Mitarbeitenden dürfen ihre Passwörter frühestens alle sechs Monate ändern.
+A) richtig
+B) falsch
+Lösung: B
+[9] Vertrauliche Daten
+A) dürfen nicht auf dem PC gespeichert werden.
+B) müssen nach einer bestimmten Zeit gelöscht werden.
+C) sollen ausgedruckt und abgeheftet werden.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Beiträge a–f aus einem Online-Forum. Welcher Beitrag passt zu welcher Situation?
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Andres: Wenn du in Sportkleidung in die Firma kommst und dich dort noch umziehst, ist das Privatsache. Du musst dafür sorgen, dass du pünktlich mit deiner Arbeit beginnen kannst. In diesem Fall ist die Umkleidezeit keine Arbeitszeit.
+B = Paula: Der Weg zur Arbeit ist private Zeit. Du trägst die Verantwortung dafür, pünktlich vor Ort zu sein, egal wie weit dein Weg ist. Wenn du z.B. im Stau stehst oder die S-Bahn streikt und du deshalb zu spät kommst, musst du die Zeit nacharbeiten.
+C = Raimund: Arbeitnehmer/innen haben in der Regel alle zwei Jahre Anspruch auf fünf Tage Bildungsurlaub. Die Gesetze sind aber nicht in jedem Bundesland gleich. So variiert zum Beispiel die Anzahl der Tage für Bildungsurlaub je nachdem, ob du Voll- oder Teilzeit tätig bist.
+D = Hubert: Ich finde das Tragen von Dienstkleidung absolut veraltet. Warum müssen alle im Unternehmen gleich gekleidet sein? Jeder Mensch hat doch seinen eigenen Stil, mit dem er sich wohlfühlt. Ich kann verstehen, dass du die Uniform nicht auch noch im Zug tragen möchtest.
+E = Yvonne: Wenn du selbst entscheidest, eine Fortbildung zu besuchen, und das vorher nicht mit deinem Arbeitgeber absprichst, ist das reines Privatvergnügen. Schickt dein Chef dich allerdings seinerseits auf ein Seminar, handelt es sich um Arbeitszeit.
+F = Winfried: Das ist ein schwieriges Thema. Wenn du während der Reise zum Beispiel deinen Termin vorbereitest oder mit dem Laptop ein Protokoll schreibst, ist das Arbeitszeit. Wenn du dich aber mit privaten Dingen wie einem Roman oder einem privaten Telefonat beschäftigst, gilt das als Freizeit.
+X = Keine Antwort passt
+Aufgaben:
+[10] Claudia: „Ich muss während der Arbeit eine Uniform tragen. Mir ist es unangenehm, die schon morgens in der Bahn anzuhaben, und ich möchte mich lieber im Hotel umziehen. Muss ich dafür früher kommen oder gilt die Umkleidezeit als Arbeitszeit?“
+Lösung: X
+[11] Maisel: „Gestern war ich für einen Tag bei einem Kunden in Norddeutschland. Ich bin mit dem Zug gefahren und habe während der Fahrt gelesen. Insgesamt war ich elf Stunden unterwegs und habe Überstunden geltend gemacht. Die will mein Arbeitgeber nicht anerkennen.“
+Lösung: F
+[12] Cristof: „Ich war am Wochenende auf einer Fortbildung, die für meine Arbeit relevant war. Ich wollte mir jetzt einen Urlaubstag gutschreiben lassen, aber meine Chefin sagt, das sei meine private Angelegenheit, da sie die Fortbildung nicht angeordnet hat. Stimmt das?“
+Lösung: E
+[13] Samira: „Ich fahre morgens mit dem Fahrrad in die Firma, bin immer pünktlich um 9.00 Uhr da und mache mich dann fertig. Ab sofort soll ich früher kommen und darf mich nicht mehr während der Arbeitszeit umziehen. Ist das korrekt?“
+Lösung: A
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14 bis 18. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Protokoll 27.08.20XX, 10.00 bis 11.30 Uhr**
+Konferenzraum Rhein-Main, Am Wegesrand 12, 63345 Frankfurt
+Anwesende: Thomas Köhler (TK, Werkstatt), Brigitte Turner (BT, Personal), Gerd Schneider (GS, Buchhaltung), Hilde Bruhns (HB, Buchhaltung)
+Entschuldigt: Kari Muster (KM, Lager)
+Sitzungsleitung: Gerd Schneider
+Protokollführung: Thomas Köhler
+
+**Tagesordnungspunkte:**
+1. Begrüßung und Eröffnung der Sitzung
+2. Erste-Hilfe-Kurs
+3. Homeoffice
+4. Personelle Engpässe Buchhaltung
+5. Betriebsausflug
+6. Sonstiges
+
+**TOP 1 Begrüßung und Eröffnung der Sitzung**
+GS eröffnet die Sitzung, begrüßt alle Anwesenden und stellt den Kolleg*innen Hilde Bruhns vor, die seit dem 1. August in der Abteilung Buchhaltung für die Auszahlung der Gehälter etc. zuständig ist.
+
+**TOP 2 Erste-Hilfe-Kurs**
+TK berichtet, dass es vor Kurzem zu einem Unfall in der Werkstatt gekommen ist, bei dem ein Kollege am Arm verletzt wurde und stark geblutet hat. Obwohl regelmäßig Sicherheitsunterweisungen für die Mitarbeitenden im Lager und in der Werkstatt stattfinden, reagierte nur ein Kollege ruhig und besonnen und war in der Lage, den Verletzten zu versorgen und dann Hilfe zu holen. Die anderen wussten nicht, was sie tun sollten. Auch in der Marketingabteilung gab es eine Situation, in der einer Kollegin wohl wegen der Hitze schwindlig wurde und ein Krankenwagen gerufen werden musste, da niemand von den Mitarbeiter*innen helfen konnte.
+TK schlägt deshalb vor, einen Erste-Hilfe-Kurs im Unternehmen zu organisieren, an dem alle interessierten Angestellten teilnehmen können. TK hat bereits mit dem Roten Kreuz gesprochen. Es wäre möglich, dort kurzfristig einen solchen Kurs an zwei Freitagsterminen zu buchen.
+
+**TOP 3 Homeoffice**
+BT stellt dar, dass immer wieder Mitarbeiter*innen den Wunsch an sie herantragen, den einen oder anderen Tag in der Woche von zu Hause aus zu arbeiten, wenn sie Aufgaben zu erledigen haben, die eine Anwesenheit im Büro nicht unbedingt erforderlich machen.
+BT steht diesem Wunsch offen gegenüber. Durch diese Möglichkeit könnten die Mitarbeiter*innen die Zeit für den Arbeitsweg sparen und sich ihre Arbeitszeit flexibler einteilen. Das würde sicher erheblich zur Mitarbeiterzufriedenheit beitragen. Den Mitarbeiter*innen, die im Homeoffice arbeiten, müssten firmeneigene Laptops und Diensthandys zur Verfügung gestellt werden. Da aber bereits einige mobile Geräte im Unternehmen vorhanden sind, würde das keine signifikanten Mehrkosten bedeuten. Sollte sich das Arbeitsmodell „Homeoffice” bewähren, könnte für die Kolleg*innen, die regelmäßig von zu Hause aus arbeiten, ein VPN-Tunnel eingerichtet werden, durch den sie sicheren Zugang zu den Daten auf dem Firmenserver erhalten würden.
+BT bittet bis Mitte der nächsten Woche um Rückmeldungen, was die einzelnen Abteilungsleiter*innen davon halten, bevor sie den Vorschlag der Geschäftsführung vorlegt.
+
+**TOP 4 Personelle Engpässe in der Buchhaltung**
+GS teilt mit, dass die Buchhaltung zurzeit trotz der Neueinstellung von Frau Bruhns personell unterbesetzt ist. Das Arbeitsaufkommen ist von den derzeit drei Mitarbeiter*innen in der Abteilung nicht mehr zu bewältigen. Im Moment ist auch noch eine Kollegin krank, sodass die verbleibenden Kolleg*innen viele Überstunden machen müssen, um die Arbeit zu schaffen. Er plant, eine weitere Mitarbeiterin oder einen weiteren Mitarbeiter einzustellen.
+
+**TOP 5 Betriebsausflug**
+HB arbeitet im diesjährigen Team für die Organisation des Betriebsausflugs mit, um so gleich einige Kolleg*innen kennenzulernen. Sie berichtet, dass der Ausflug am 1. Oktober stattfindet. Alle Mitarbeiter*innen treffen sich morgens um 9.00 Uhr vor dem Haupteingang der Firma. Dort werden sie von einem Bus abgeholt und zum Kastell Saalburg gefahren. Vom Parkplatz am Fuße der Burg aus ist eine kleine Wanderung geplant. Am Ziel wartet eine Überraschung. Für das leibliche Wohl ist gesorgt. Die Rückkehr zur Firma ist für 19.00 Uhr am gleichen Tag vorgesehen.
+
+**TOP 6 Sonstiges**
+Entfällt. Keiner der Anwesenden hat noch Punkte zu besprechen.
+Aufgaben:
+[14] Frau Bruhns
+A) arbeitet seit einigen Wochen in der Buchhaltung.
+B) bezahlt die Gehälter der Mitarbeiter*innen.
+C) nimmt bald ihre Tätigkeit auf.
+Lösung: A
+[15] Der Erste-Hilfe-Kurs
+A) findet jeden Freitag statt.
+B) ist für alle Mitarbeiter*innen verpflichtend.
+C) wird vom Roten Kreuz durchgeführt.
+Lösung: C
+[16] Homeoffice
+A) erfordert die Anschaffung neuer Arbeitsgeräte.
+B) verringert die Arbeitszeit der Mitarbeitenden.
+C) wird von vielen Mitarbeitenden gewünscht.
+Lösung: C
+[17] In der Abteilung Buchhaltung
+A) gibt es zu viele Beschäftigte.
+B) sind viele Kolleg*innen erkrankt.
+C) soll eine Stelle ausgeschrieben werden.
+Lösung: C
+[18] Der Betriebsausflug wird
+A) für den ganzen Tag geplant.
+B) jedes Jahr von den gleichen Personen organisiert.
+C) zum besseren Kennenlernen der Kolleg*innen genutzt.
+Lösung: A
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19 und 20. Entscheiden Sie, welche Lösung am besten passt.
+Text:
+**Beschwerde über Druck- und Kopiergerät Lexios**
+Sehr geehrte Frau Aichele,
+vorgestern wurde von einem Ihrer Mitarbeiter unser fast neues Druck- und Kopiergerät der Marke Lexios zum dritten Mal innerhalb von zwei Wochen geprüft, da bei diesem immer wieder Papierstaus aufgetreten sind. Gestern kam es schon wieder zu einer Fehlermeldung, was zur Folge hatte, dass wir Unterlagen nicht fristgerecht einreichen konnten. Aus diesem Grund haben wir eine für uns sehr wichtige Ausschreibung verpasst. Von einer Schadensersatzforderung sehen wir vorerst ab, wir fordern Sie aber auf, uns umgehend auf Ihre Kosten ein anderes Gerät zu liefern. Es handelt sich hier nämlich eindeutig um einen technischen Fehler, den wir nicht zu verantworten haben. Die Rechnungen für die drei vorangegangenen Technikereinsätze werden wir natürlich nicht bezahlen. Ich erwarte Ihre umgehende Rückmeldung.
+Mit freundlichen Grüßen
+Benno Schmidt (Mova GmbH)
+Aufgaben:
+[19] Das Gerät
+A) ist erst seit Kurzem im Einsatz.
+B) muss noch mal überprüft werden.
+C) wurde immer richtig bedient.
+Lösung: A
+[20] Die Firma
+A) besteht auf der Bezahlung der Rechnungen.
+B) repariert den Kopierer noch einmal kostenfrei.
+C) tauscht das Gerät schnellstmöglich aus.
+Lösung: A
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrer Vorgesetzten:**
+Hallo, schau dir mal die Mail von der Firma Mova an. Laut unserem Techniker lag der Fehler erneut an der falschen Bedienung des Geräts. Antworte Herrn Schmidt bitte und weise ihn höflich darauf hin, dass die Lösung des Problems nicht in unserer Verantwortung liegt. Gerne kommt noch einmal ein Techniker in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein. Die Kosten für die Überprüfung des Geräts bleiben die Angelegenheit der Mova GmbH.
+Viele Grüße
+Sibyl Aichele
+Aufgaben:
+[B] Antworten Sie Herrn Schmidt im Namen von Sibyl Aichele.
+Punkt: Bedauern über die aufgetretenen Schwierigkeiten und Störungen ausdrücken
+Punkt: Zur Ursache des Problems Stellung nehmen (Bedienfehler laut Techniker, keine Firmenverantwortung)
+Punkt: Kostenfreie Einweisung der Mitarbeiter durch einen Techniker vor Ort anbieten
+Punkt: Zahlung der bisherigen Technikereinsätze durch den Kunden bekräftigen
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Am ersten Schultag unterhalten sich die Personen über organisatorische Fragen.
+A) richtig
+B) falsch
+Lösung: A
+[23] Frau Alimi
+A) ist Frau Barthums Mitarbeiterin.
+B) ist eine neue Lehrerin.
+C) vertritt eine Kollegin.
+Lösung: A
+[24] In dem Gespräch unterhalten sich zwei IT-Spezialisten.
+A) richtig
+B) falsch
+Lösung: B
+[25] Die Mitarbeiter*innen der Personalabteilung
+A) kennen das neue Betriebssystem bereits.
+B) müssen das ganze Wochenende in der Firma sein.
+C) werden in das neue Betriebssystem eingewiesen.
+Lösung: C
+[26] Herr Neumeier nimmt eine Reklamation entgegen.
+A) richtig
+B) falsch
+Lösung: A
+[27] Frau Kerner
+A) benötigt eine Auftragsbestätigung.
+B) braucht noch zwei Geräte für einen Kunden.
+C) hat einen Auftrag für zwölf Geräte geschickt.
+Lösung: B
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Personen über ihren Arbeitsplatz sprechen. Welcher der Aussagen a–f passt zu welcher Person?
+Auswahltitel: Aussagen
+Auswahl:
+A = Es ist nicht immer einfach, Platz für neue Kolleg*innen zu schaffen.
+B = Im Großraumbüro kann man mit den Kolleg*innen besser zusammenarbeiten.
+C = Manche Mitarbeiter*innen arbeiten gerne regelmäßig von zu Hause aus.
+D = Manchmal tut der räumliche Abstand zu Kolleg*innen gut.
+E = Neue Arbeitsplatzmodelle können für Unternehmen attraktiv sein.
+F = Über die Neugestaltung des Arbeitsplatzes muss nachgedacht werden.
+Aufgaben:
+[28] Sprecher 1 spricht über die Vorteile des Großraumbüros für die Zusammenarbeit.
+Lösung: B
+[29] Sprecherin 2 berichtet über ihre positiven Erfahrungen mit der regelmäßigen Arbeit im Homeoffice.
+Lösung: C
+[30] Sprecher 3 diskutiert die räumlichen Engpässe und die Suche nach Platz für neue Kollegen.
+Lösung: A
+[31] Sprecherin 4 schildert moderne Arbeitskonzepte wie Co-Working-Spaces für Unternehmen.
+Lösung: E
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören eine Information für Mitarbeiterinnen und Mitarbeiter. Wählen Sie bei den Aufgaben 32 bis 35 die richtige Lösung.
+Aufgaben:
+[32] Das Bonussystem
+A) dient der Einsatzbereitschaft der Mitarbeitenden.
+B) verstärkt die Konkurrenz unter den Kollegen.
+C) wird von den Mitarbeitenden gefordert.
+Lösung: A
+[33] Mit den Fragebögen wird
+A) die Stimmung im Unternehmen ermittelt.
+B) die Entwicklung der Firma dokumentiert.
+C) ein Mitarbeiterprofil erstellt.
+Lösung: C
+[34] Das erste Gespräch
+A) findet nach einem Jahr statt.
+B) ist freiwillig.
+C) muss nicht vorbereitet werden.
+Lösung: A
+[35] Als Bonus für gute Leistungen
+A) bekommen alle Mitarbeitenden Geld.
+B) erhalten die Angestellten eine Sachleistung.
+C) gehen die Mitarbeitenden mit den Familien essen.
+Lösung: B
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf kurze Telefongespräche oder Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung.
+Aufgaben:
+[36] Juri
+A) bereitet den Raum für die Veranstaltung vor.
+B) braucht von Tim eine Power-Point-Präsentation.
+C) hält am nächsten Tag einen Vortrag.
+Lösung: C
+[37] Anita
+A) bittet Steffi, die Rechnung zu bezahlen.
+B) hat vor sechs Wochen eine Rechnung bezahlt.
+C) möchte eine Zahlungsaufforderung verschicken.
+Lösung: C
+[38] Mario Groß
+A) bittet um ein schriftliches Angebot.
+B) kennt auch andere Weingüter mit guter Qualität.
+C) möchte den Wein günstiger liefern.
+Lösung: B
+[39] Irina Müller
+A) bereitet eine Präsentation vor.
+B) bittet um einen Besuchstermin für ihren Chef.
+C) hat Interesse an einem Angebot.
+Lösung: B
+[40] Taro Klein
+A) bittet Frau Pfeiffer um Unterstützung.
+B) hatte gerade einen Termin mit dem Autohaus.
+C) möchte die Werbekampagne verändern.
+Lösung: A
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Beschwerde Getränkelieferung**
+Nachricht auf dem Anrufbeantworter von Stefan Wolff (Restaurant Ätna):
+„Stefan Wolff, Restaurant Ätna, guten Tag. Wir haben für heute Getränke für eine Veranstaltung mit über 200 Personen bestellt, aber leider ist die Lieferung noch nicht da und es ist bereits 11 Uhr. Wir warten auf 50 Kästen Wasser und 15 gemischte Saftkisten. Die Sachen müssen bis spätestens 14:30 Uhr bei uns sein, da wir noch alles vorbereiten müssen. Bitte schicken Sie so schnell wie möglich die bestellten Getränke oder geben Sie Bescheid, wann wir mit der Lieferung rechnen können. Sollte ich bis 12 Uhr nichts von Ihnen gehört haben, muss ich versuchen, die Sachen bei einem anderen Getränkemarkt zu bekommen. Das war dann aber auch unser letzter Auftrag für Sie. Sie erreichen mich unter der Nummer 0162 744 642 8. Mein Name ist Wolff. W-O-L-F-F.“
+Aufgaben:
+[41] Dokumentieren Sie die Reklamation:
+Punkt: Name des Anrufers (Stefan Wolff, W-O-L-F-F, Restaurant Ätna)
+Punkt: Telefonnummer (0162 744 642 8)
+Punkt: Grund des Anrufs (Fehlende Getränkelieferung für Veranstaltung mit über 200 Personen)
+Punkt: Bestelldetails und Frist (50 Kästen Wasser, 15 Saftkisten; Ankunft bis spätestens 14:30 Uhr nötig)
+Punkt: Zu erledigen (Schnellstmögliche Lieferung zusichern und Rückruf bis 12:00 Uhr)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = DASS
+B = DESHALB
+C = INNERHALB
+D = OB
+E = WÄHREND
+F = WEIL
+G = WIE
+H = ZU
+I = ZUM
+J = ZUR
+Text:
+**Fragen zur Ausbildung**
+Sehr geehrte Damen und Herren,
+ich habe mich sehr darüber gefreut, dass ich meine Ausbildung (46) Kauffrau für Büromanagement im August in Ihrem Unternehmen beginnen kann.
+Ich würde gern wissen, (47) die Ausbildung zeitlich organisiert ist. Im Vorstellungsgespräch teilten Sie mir mit, dass sich die Ausbildung in theoretische und praktische Blöcke teilt. Im Gegensatz (48) praktischen Block müsste ich mir für die Zeit der Theorie ein Zimmer mieten. (49) wäre es wichtig, so schnell wie möglich die Termine zu wissen. In diesem Zusammenhang möchte ich nachfragen, (50) es möglich wäre, dass die Firma für die Theoriephasen einen Zuschuss für die Miete bezahlt.
+Außerdem würde ich gern erfahren, wer mein Ansprechpartner (51) des praktischen Teils der Ausbildung sein wird.
+Mit freundlichen Grüßen
+Anna Ivanova
+Aufgaben:
+[46] … dass ich meine Ausbildung (46) Kauffrau für Büromanagement …
+Lösung: J
+[47] … Ich würde gern wissen, (47) die Ausbildung zeitlich organisiert ist. …
+Lösung: G
+[48] … Im Gegensatz (48) praktischen Block müsste ich mir …
+Lösung: I
+[49] … (49) wäre es wichtig, so schnell wie möglich die Termine zu wissen. …
+Lösung: B
+[50] … möchte ich nachfragen, (50) es möglich wäre, …
+Lösung: D
+[51] … wer mein Ansprechpartner (51) des praktischen Teils der Ausbildung sein wird. …
+Lösung: E
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung passt am besten?
+Text:
+**Angebot**
+Sehr geehrte Damen und Herren,
+wir danken Ihnen für Ihre Anfrage vom 08.12.20xx und unterbreiten Ihnen (52) acht Schreibtischcontainer MV 17 WW weiß zum Preis von je 156,99 Euro netto. Ab einem Auftragswert von 900,00 Euro liefern wir frei Haus, ansonsten fällt eine Lieferpauschale (53) von 39,00 Euro an.
+Gerne montieren wir die Möbel auch vor Ort. Die Kosten für den Aufbau (54) nach dem Warenwert und betragen 20% des Nettopreises. Natürlich besteht auch (55) die Ware in unserem Lager abzuholen und selbst aufzubauen.
+(56) ist 14 Tage bindend. Wir würden uns sehr freuen, (57) zu erhalten. Sollten Sie noch Fragen haben, stehen wir Ihnen gerne jederzeit zur Verfügung.
+Mit freundlichen Grüßen
+Lars Walter
+Aufgaben:
+[52] Lücke 52
+A) folgendes Angebot
+B) folgendes Ergebnis
+C) folgende Informationen
+Lösung: A
+[53] Lücke 53
+A) in Absprache
+B) in Bezug
+C) in Höhe
+Lösung: C
+[54] Lücke 54
+A) belaufen sich
+B) ergeben sich
+C) richten sich
+Lösung: C
+[55] Lücke 55
+A) die Absicht
+B) die Option
+C) die Verpflichtung
+Lösung: B
+[56] Lücke 56
+A) Diese Anfrage
+B) Dieses Angebot
+C) Diese Bestellung
+Lösung: B
+[57] Lücke 57
+A) Ihren Auftrag
+B) Ihre Wünsche
+C) Ihr Verständnis
+Lösung: A

@@ -1,0 +1,414 @@
+# NADIA2
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Bilder mit dem Computer bearbeiten
+B = Kirche bietet Backkurs für Kinder an
+C = Kirche eröffnet neuen Treffpunkt
+D = Neu: Kochbuch über Weiner Fleischgerichte
+E = Neue Computerprogramme werden getestet
+F = Preis für bestes Lernprogramm
+G = Rezepte für Kuchen und Torten
+H = Studie zeigt: Kaffeetrinker sind glücklicher
+I = Warum die Wiener ins Café gehen
+J = Zürcher Fotografen stellen aus
+Aufgaben:
+[1] – Die Kunst und Medienschule F+ F Zürich bietet bereits zum dritten Mal den Computerkurs Digitale Bildbearbeitung an im neuen Semester steht für zehn Samstage Fotografie nach der Fotografie also die digitale Bearbeitung von Bildern im Mittelpunkt Dabei kommen verschiedene Softwareprodukte zum Einsatz Der Kurs befasst sich aber nicht nur mit dem – – Vermitteln auch Themen und Problembereiche rund um die digitale Foto und Bildbearbeitung kurskosten 800Franken Nähere Informationen und Anmeldung zu diesem Kurs www.f- f.ch.
+Lösung: A
+[2] – Neuperlach-Süd Nach dem Einkaufen eine Kaffee genießen, mit anderen ins Gespräch Immen, sich mit Bekannten treffen oder einfach spannen all das geht ab 11 Juli immer – – dienstags zwischen 14 und 18 Uhr im neuen Eiscafé der Dietrich Bonhoeffer Kirche Wir hotten damit einen Ort der Begegnung für Jung und Alt anbieten und zur Belebung des Stadtteils beitragen erklärt Pfarrer Sebastian Kühnen. Neben kalten und heißen Getränken sowie Kuchen steht während der Öffnungszeiten auch eine Mitarbeiten für Gespräch zur Verfügung.
+Lösung: C
+[3] Geheimnisse der modernen Konditorkunst der Meister des Süßen, Herwig Gasser, in Jahre hinweg sammelte der Bäcker des berühmten Wiener Café Landmann Mehlspeisenrezepte. Von der Birnentorte über den Apfelstrudel bis hin zum Heidelbeerstolle Verlag Kettel, 110 Fotos, 300 Seiten. – – ISBAN 3 85134 014 -0
+Lösung: G
+[4] Am Montag wird in Stuttgart die Bildungs-Didacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.
+Lösung: E
+[5] – Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus.
+Lösung: I
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Verheiratet mit Handy und Computer**
+Die Woche mit sechzig bis achtzig Arbeitsstunden war für Volkmar Bergmann ganz normal. Der Gründer und Chefingenieur einer Software – Firma hatte von montags bis freitags einen Zwölfstundentag und arbeite auch an Samstagen und Sonntagen. Das Geschäft ging sehr gut. Die Firma wurde immer größer: 1.100 Mitarbeiterinnen und Mitarbeiter – darauf konnte Volkmar Bergmann wirklich stolz sein. Die Arbeit machte ihm Spaß, jedenfalls so lange bis sein Sohn geboren wurde. Auf einmal fing ich an, die Dinge in einem anderen Licht zu sehen Stress mit Nacht – und Wochenendarbeit heraus zukommen. Jahrelang gelang ihm das nicht. Erst als er sich entschlossen hatte, sein Leben vollkommen zu ändern, wurde es besser: Heute arbeitet Bergmann nur 20 Stunden die Woche, als Berater für die Firma, die ihm früher einmal gehörte. Er hat Zeit für die Kinder und sagt: Ich bin zufriedener als jemals zuvor in meinem Leben. Glück gehabt Anderen Vielarbeiten ist eine solche Änderung nicht möglich sie bleiben mit ihrem Schreibtisch verheiratet Ein 24 Stunden Arbeitstag ist der Trend sagt Bryan EE. Robinson Professor in den USA Millionen von Arbeitnehmern geben ihre ganze Kraft für ihnen Job. Wir leben in einer Welt die vor allem den Menschen alle Chancen bietet, für die die Arbeit das Wichtigste im Leben ist, den so genannten Workaholics Diese Menschen können Gutes nur doch in ihrer Arbeit tun. Sie haben längst die Fähigkeit verloren ein Privatleben zu führen und sich um ihre Familie und die Freunde zu kümmern.
+Die Schwierigkeiten der Menschen, die an der Krankheiten Workaholismus leiden nehmen ständigen zu immer Mehr Menschen laufen Gefahr von ihrer Arbeit regelrecht aufgefressen zu werden Das Ende dieser Entwicklung lässt sich leicht absehen: absehen Die Mitarbeiter werden häufiger krank Arbeitsfreude und Motivation nehmen ab, es kommt zu Fehlen und Pannen. Das Familienleben leidet.
+Moderne Technik und Medien machen es möglich: Durch das Handy ist man überall und jeder Zeit erreichbar. Mit Laptops und Mini – Computern ist man unabhängig vom Arbeitsplatz und kann von jedem Ort der Welt aus im Internet surfen oder seine elektronische Post erledigen. Die räumliche Grenze zwischen dem Zuhause und dem Büro besteht für viele nicht mehr. Der Arbeitsplatz wird als Zuhause angesehen und das Zuhause wird zum Arbeitsplatz Eigentlich waren die neuen Medien dazu gedacht, die Arbeit einfacher zu machen. In Wirklichkeit führen sie dazu, dass die Arbeit immer tiefer in den Bereich der Freizeit eindringt. Ein Privatleben, in dem man von der Arbeit einmal ganz abschalten kann, gibt es schon heute für viele nicht mehr.
+Inzwischen gibt es Seminare für Arbeitskranke in denen die Teilnehmenden lernen sollen wieder zu leben und nicht nur zu funktionieren: Der Psychologe Ulrich Beer gibt seinen Patienten in einer solchen Situation einen einfach Ral: im Kalender müssen genau so viele private wie berufliche Termine stehen Familie und Beruf sind
+gleich wichtig
+Aufgaben:
+[6] Volkmar Bergmann
+A) wollte bei einer anderen Firma arbeiten.
+B) wollte mehr Zeit für sein Privatleben haben.
+C) wollte nur noch nachts und an Wochenenden arbeiten.
+Lösung: B
+[7] Es gibt viele Menschen,
+A) die gerne einen anderen Schreibtisch hätten.
+B) die heute bereits arbeitskrank sind.
+C) die pro Woche nur noch 24 Stunden arbeiten.
+Lösung: B
+[8] Durch die moderne Technik
+A) haben die Menschen mehr Zeit für das Privatleben.
+B) kann die Arbeit fast überall erledigt werden.
+C) wird es in Zukunft immer weniger Arbeit geben.
+Lösung: B
+[9] Laut Professor Robinson
+A) wollen viele Menschen weniger arbeiten.
+B) kann viel Arbeit den Menschen gut tun.
+C) leben viele Menschen nur noch für ihren Beruf.
+Lösung: B
+[10] In Seminaren sollen die Teilnehmer lernen,
+A) kranken Mitarbeitern zu helfen.
+B) wie man die Arbeit im Büro besser organisieren kann.
+C) ein gesundes Verhältnis zur Arbeit zu finden.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m04-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie wollen am Wochenende gerne in ein Klavierkonzert gehen.
+Lösung: E
+[12] Sie sind in Füssen und wollen am Montag ins Museum gehen.
+Lösung: F
+[13] Sie sind in Süddeutschland im Urlaub und möchten gerne eine bayerische Spezialität essen.
+Lösung: B
+[14] Sie haben sich mit Bekannten zu einem Fischessen verabredet.
+Lösung: K
+[15] Sie sind in Bayern und wollen Käsespezialitäten einkaufen.
+Lösung: C
+[16] Sie möchten einen Deutschkurs in Wien besuchen.
+Lösung: J
+[17] Ihr 16 jähriger Sohn soll in den Ferien im Ausland Englisch lernen.
+Lösung: H
+[18] Sie interessieren sich für einen Sprachkurs auf CD.
+Lösung: X
+[19] Sie wollen, dass Ihre 10- jährige Tochter in den Ferien eine Fremdsprache lernt.
+Lösung: X
+[20] Eine Bekannte will ihren Geburtstag in einem Restaurant feiern und dort auch übernachten.
+Lösung: L
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Sehr geehrter Herr Meyerhofer,
+Wie Sie wissen , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sind , sind immer besetzt, und das Treppenhaus ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat.
+Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden.
+Mit freundlichen Grüßen
+Ihre Anneliese Kühne
+Aufgaben:
+[21] … , miete ich nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus …
+A) Ihr
+B) Ihrem
+C) Ihren
+Lösung: B
+[22] … nun schon seit drei Jahren eine Wohnung in (21)Haus. Ich (22) die ganze Zeit sehr zufrieden, denn im Haus war es immer …
+A) war
+B) wäre
+C) würde
+Lösung: A
+[23] … es immer ruhig, sauber und sicher. In der Zwischenzeit (23) sich die Wohnqualität durch die Eröffnung des Restaurants …
+A) hat
+B) ist
+C) wurde
+Lösung: A
+[24] … Restaurants im Erdgeschoss aber deutlich verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der …
+A) Bis
+B) Nach
+C) Von
+Lösung: A
+[25] … verschlechtert.(24) spät abends höre ich nun täglich (25) Lärm der Restaurantsgäste im Garten, die Mülleimer im Hof …
+A) dem
+B) den
+C) der
+Lösung: B
+[26] … im Hof sind immer überfüllt, die Parkplätze vor dem Haus, (26) eigentlich für die Mieter reserviert sind , sind immer …
+A) denen
+B) die
+C) diese
+Lösung: B
+[27] … ist ständig verschmutzt. Außerdem fühle ich mich (27) Haus nicht mehr sicher, weil das Restaurant oft die ganze …
+A) im
+B) in
+C) ins
+Lösung: A
+[28] … mehr sicher, weil das Restaurant oft die ganze Nacht (28) hat. Ich möchte Sie dringend bitten, such um diese (29) …
+A) geöffnet
+B) öffnen
+C) öffnet
+Lösung: A
+[29] … (28) hat. Ich möchte Sie dringend bitten, such um diese (29) zu kümmern und mit den Restaurantbesitzern zu sprechen. …
+A) Problem
+B) Probleme
+C) Problemen
+Lösung: B
+[30] … den Restaurantbesitzern zu sprechen. Vielleicht könnte (30) Gemeinsam eine Lösung finden. Mit freundlichen Grüßen …
+A) er
+B) man
+C) wir
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+Sehr geehrte Damen und Herren,
+ich habe Ihre Anzeige gelesen und interessiere mich sehr für Ihr Angebot. Ich komme aus Kroatien und möchte (31) den nächsten Sommerferien mein Deutsch verbessern. Klagenfurt ist für mich der ideale Ort, (32) das nicht so weit weg von meiner Heimatstadt Zagreb ist. Da kann ich an den Wochenenden vielleicht auch (33) nach Hause fahren. Nun aber zu meiner Person: Ich bin 24 Jahre alt und habe in der Schule vier Jahre lang Deutsch gelernt. Ich kann zwar (34) ganz gut schreiben, (35) ich habe immer wieder Probleme beim freien Sprechen. Im Herbst möchte ich in Hamburg ein Studium beginnen, für das ich ebenfalls gute Deutschkenntnisse brauche.
+Am liebsten wäre mir ein vierwöchiger Deutschkurs, (36) nur vormittags stattfindet, (37) ich nachmittags etwas anderes machen kann. Ich hätte den ganzen August bis Mitte September Zeit.
+(38) Sie einen passenden Kurs für mich haben, schicken Sie mir bitte sobald (39) möglich nähere Informationen zu. Mich interessieren auch Ihre Freizeitprogramme, Spezialkurse, die Unterkunftsmöglichkeiten und natürlich die Preise.
+Bitte empfehlen Sie mir auch ein (40) gute Webseiten über Klagenfurt und den Wörthersee.
+Vielen Dank im Voraus und freundliche Grüße
+Ivica Palic
+Auswahl:
+A = ABER
+B = DAMIT
+C = DER
+D = IN
+E = MANCHMAL
+F = MIT
+G = PAAR
+H = SCHON
+I = SEHR
+J = TROTZ
+K = WANN
+L = WEIL
+M = WENN
+N = WIE
+O = ZU
+Aufgaben:
+[31] … sehr für Ihr Angebot. Ich komme aus Kroatien und möchte (31) den nächsten Sommerferien mein Deutsch verbessern. …
+Erklärung: Das Wort lautet: IN
+Lösung: D
+[32] … verbessern. Klagenfurt ist für mich der ideale Ort, (32) das nicht so weit weg von meiner Heimatstadt Zagreb ist. …
+Erklärung: Das Wort lautet: WEIL
+Lösung: L
+[33] … ist. Da kann ich an den Wochenenden vielleicht auch (33) nach Hause fahren. Nun aber zu meiner Person: Ich bin 24 …
+Erklärung: Das Wort lautet: MANCHMAL
+Lösung: E
+[34] … der Schule vier Jahre lang Deutsch gelernt. Ich kann zwar (34) ganz gut schreiben, (35) ich habe immer wieder Probleme …
+Erklärung: Das Wort lautet: SCHON
+Lösung: H
+[35] … Deutsch gelernt. Ich kann zwar (34) ganz gut schreiben, (35) ich habe immer wieder Probleme beim freien Sprechen. Im …
+Erklärung: Das Wort lautet: ABER
+Lösung: A
+[36] … Am liebsten wäre mir ein vierwöchiger Deutschkurs, (36) nur vormittags stattfindet, (37) ich nachmittags etwas …
+Erklärung: Das Wort lautet: DER
+Lösung: C
+[37] … Deutschkurs, (36) nur vormittags stattfindet, (37) ich nachmittags etwas anderes machen kann. Ich hätte den …
+Erklärung: Das Wort lautet: DAMIT
+Lösung: B
+[38] … Ich hätte den ganzen August bis Mitte September Zeit. (38) Sie einen passenden Kurs für mich haben, schicken Sie mir …
+Erklärung: Das Wort lautet: WENN
+Lösung: M
+[39] … Kurs für mich haben, schicken Sie mir bitte sobald (39) möglich nähere Informationen zu. Mich interessieren auch …
+Erklärung: Das Wort lautet: WIE
+Lösung: N
+[40] … natürlich die Preise. Bitte empfehlen Sie mir auch ein (40) gute Webseiten über Klagenfurt und den Wörthersee. Vielen …
+Erklärung: Das Wort lautet: PAAR
+Lösung: G
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin wäre lieber ein Einzelkind.
+Lösung: falsch
+[42] Der Sprecher hat heute ein gutes Verhältnis zu seinem Bruder.
+Lösung: richtig
+[43] Die Sprecherin würde heute gern noch eine Schwester haben.
+Lösung: falsch
+[44] Die Sprecherin hat schon früh lernen müssen, dass man im Zusammenleben viel Rücksicht nehmen muss.
+Lösung: richtig
+[45] Die Sprecherin versteht sich sehr gut mit ihrem Bruder.
+Lösung: richtig
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Die Lehrerin fährt mit ihrer Klasse und an die Nordsee.
+Lösung: falsch
+[47] Herr Kühne hat den Brief der Lehrerin nicht erhalten.
+Lösung: richtig
+[48] Die Klassenfahrt beginnt an einem Samstag.
+Lösung: falsch
+[49] Herrn Kühnes Sohn Martin wird bei Busfahrten oft schlecht.
+Lösung: richtig
+[50] Die Fahrt mit dem Schiff dauert fünf bis sechs Stunden.
+Lösung: falsch
+[51] Das Haus, in dem die Schüler wohnen, gehört zu einem Hotel.
+Lösung: falsch
+[52] Die Klassenfahrt wird von einer Lehrerin und einem Lehrer geleitet.
+Lösung: richtig
+[53] Die Lehrerin empfiehlt, dass die Kinder nicht mehr als 50 Euro Taschengeld mitnehmen.
+Lösung: richtig
+[54] Katerina kann entweder mitfahren, oder in eine andere Klasse gehen.
+Lösung: richtig
+[55] Auf der Klassenfahrt darf nur mit Erlaubnis der Eltern geraucht werden.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Sie müssen in Ingolstadt die Regionalbahn nach Regensburg nehmen.
+Lösung: falsch
+[57] Clara kann wegen einer Prüfung die Theaterkarten nicht abholen.
+Lösung: falsch
+[58] Im Schwarzwald können die Straßen morgen glatt werden.
+Lösung: richtig
+[59] Der Liederabend findet zu einem späteren Termin statt.
+Lösung: richtig
+[60] Im Untergeschoss gibt es Winterkleidung zum halben Preis.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:
+Extra:
+{
+ "brief": {
+  "intro": "Sie haben von einer Freundin folgenden Brief erhalten:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "ich hoffe, dir geht’s gut. stell dir vor, bei mir gibt es Neuigkeiten Du weißt doch, dass wir schon lange von einem Garten geträumt haben. Jetzt haben wir endlich einen am Stadtrand gefunden. Da er sehr groß ist. Wollte ich dich fragen, ob du nicht Lust hast den Garten mit uns zu teilen. Die Miete ist gar nicht so hoch . Du könntest dort Salat und Gemüse anpflanzen, natürlich auch Blumen ganz wie du willst. Es gibt auch Obstbäume und eine große Wiese, auf der man sich einfach hinlegen, und wir könnten im Garten auch grillen. Was denkst du? Wäre das nicht toll.",
+   "Antworte mir bald.",
+   "Alles Liebe"
+  ],
+  "signature": "Deine Nadja"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:
+Mindestwörter: 100
+Punkt: Reaktion auf den Vorschlag
+Punkt: Fragen zum Garten
+Punkt: Weg zum Garten
+Punkt: Was es bei Ihnen Neues gibt

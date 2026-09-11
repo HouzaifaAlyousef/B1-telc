@@ -1,0 +1,484 @@
+# ARBEITSPLATZREGELN
+Untertitel: 53 Aufgaben · 125 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 5
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 35
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Erfolgreich neue Wege gehen: Das Buch „Mit Erfolg durchstarten" von Dr. Vera Baumgart richtet sich vor allem an Akademikerinnen, die erfolgreich ein eigenes Unternehmen aufbauen wollen. Egal ob Sie sich in der Immobilienbranche, im Bauwesen oder im Gesundheitsbereich selbstständig machen, die Autorin hat Antworten auf alle wichtigen Fragen.
+B = Ein grüner Arbeitsplatz: Die Firma Heller aus Rostock will mit gutem Beispiel vorangehen und behauptet: „Klimafreundliche Energie und Müllvermeidung werden bei uns ganz großgeschrieben". Aber geht das bei einer Transport- und Logistikfirma überhaupt? Die Antwort ist ein klares „Ja". Alle Details heute um 19:30 Uhr bei Neo TV.
+C = Verändertes Kaufverhalten: Neuesten Statistiken zufolge greifen Verbraucher in vielen Ländern der Europäischen Union immer mehr zu regionalen und ökologisch angebauten Lebensmitteln. Auch in deutschen Haushalten wird viel Wert auf gesunde Ernährung gelegt. Die Nachfrage nach Bioprodukten ist in den letzten Jahren stetig angestiegen.
+D = Jetzt im Buchhandel: In seinem neuen Bestseller beschreibt Georg Könitz auf eindrucksvolle Weise, wie er von seinem ständig schlecht gelaunten Chef und zwei Mitarbeitern in seinem Team schikaniert, ausgegrenzt und lächerlich gemacht wurde – und wie es ihm schließlich gelang, diesen Teufelskreis zu durchbrechen. Von seinen Erfahrungen können alle, die Ähnliches erleben, profitieren.
+E = Der richtige Praktikumsplatz: Ein Praktikum bietet tolle Möglichkeiten, den Berufsalltag kennenzulernen. Viele Praktikanten sind aber enttäuscht, dass sie nur Hilfsarbeiten verrichten dürfen und dafür schlecht oder gar nicht bezahlt werden. Auf dem Portal dein-praktikum.de findest du jetzt aktuelle Infos und interessante Praktikumsstellen in ganz Deutschland.
+F = Eine Erfolgsgeschichte: Die Bilanz von Rita Jäger (34): Zwei abgebrochene Lehren und zahllose Hilfsjobs. Dann kam Tochter Samantha und Rita musste Verantwortung übernehmen. Im Interview erzählt sie, wie sie in einem Friseursalon die Chance bekam, ein Praktikum und anschließend eine Ausbildung zu machen. Nun hat sie ihren eigenen Salon eröffnet.
+G = Immobilienunternehmen expandiert: Die Frankfurter Immobilienfirma ImmoInvest expandiert nach Süd- und Osteuropa. In den letzten Jahren hat das Unternehmen hohe Gewinne erwirtschaftet und plant nun, außerhalb Deutschlands mehrere Niederlassungen zu gründen. Über die Erfolgsgeschichte des Unternehmens berichtet der Geschäftsführer Herbert Grünberg in unserem Interview.
+H = Neue Broschüre: Sie überlegen, Ihren Lebensmittelpunkt in ein anderes Land zu verlegen? Ein Neuanfang ist eine große Chance, aber immer auch eine Herausforderung – besonders für den Partner oder die Partnerin und die Kinder. Unsere neue Broschüre bietet ausführliche Informationen und Hilfestellungen zum Leben und Arbeiten in der EU.
+Aufgaben:
+[1] Laura möchte während des Studiums Berufserfahrung sammeln.
+Lösung: E
+[2] Igor hat Familie und möchte im europäischen Ausland arbeiten.
+Lösung: H
+[3] Jens interessiert sich für das Thema Umweltschutz in Unternehmen.
+Lösung: B
+[4] Jasmin hat Probleme mit ihren Kollegen und braucht Hilfe.
+Lösung: D
+[5] Somayeh ist Architektin und möchte ihr eigenes Architekturbüro eröffnen.
+Lösung: A
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 12
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Text 1: Regelungen am Arbeitsplatz**
+Es ist wichtig, dass auf dem Betriebsgelände der AKO.KG alle Maßnahmen eingehalten werden, damit Sie sich selbst und andere nicht gefährden. Bei der Bedienung der Maschinen sind die jeweiligen Sicherheitsbestimmungen zu befolgen, angepasst an die neuen Richtlinien laut Arbeitsschutzgesetz vom Januar dieses Jahres. Die Sicherheitsbestimmungen finden Sie in der Anlage zu dieser Willkommensmappe und zusammengefasst auch auf Informationsblättern an den Maschinen.
+Sollten Sie hierzu Fragen haben, setzen Sie sich bitte mit unserer Sicherheitsbeauftragten Frau Scholz, Zimmer 122, Durchwahl -308, in Verbindung. Dies ist auch die Kontaktstelle für alle Störungen, Unfälle, Brand oder bei für Sie unklaren Situationen. In diesen Fällen kontaktieren Sie bitte auch immer den Empfang, Durchwahl -100.
+Nach Verlassen der Werkstätten sind diese immer ordnungsgemäß abzuschließen, damit sich kein Unbefugter den Anlagen und Maschinen nähern kann. Der Arbeitsplatz muss sauber gehalten werden, damit umherliegender Unrat nicht zu einer Gefahrenquelle werden kann. Achten Sie dabei bitte auch auf die vorgeschriebene Trennung der Abfälle in die hierfür vorgesehenen Container im Hof.
+Auf dem gesamten Betriebsgelände ist Filmen und Fotografieren sowie der Konsum von Alkohol und Zigarettenkonsum nicht gestattet.
+
+**Text 2: Lebensarbeitszeitkonto**
+In unserem Unternehmen wird die Möglichkeit angeboten, ein Lebensarbeitszeitkonto zu führen. Als Arbeitnehmer können Sie Arbeitszeit, zum Beispiel geleistete Überstunden, als Guthaben auf diesem Konto stehen lassen. Ähnlich wie bei einem Bankkonto, mit dem Unterschied, dass auch die Währung 'Zeit' akzeptiert wird. Bei Bedarf können Sie Ihre angesparten Stunden wieder einlösen.
+Das Lebensarbeitszeitkonto bietet die Chance, adäquat auf verschiedene Bedürfnisse zu verschiedenen Zeiten im Laufe des Arbeitslebens einzugehen. Beispielsweise könnte die angesparte Zeit etwa für die Betreuung von pflegebedürftigen Angehörigen genutzt werden.
+Außerdem bietet unser Teilzeitangebot „Classic Vario" eine Kombination von Teil- und Vollzeit bei flexibler Einteilung der Arbeitszeit. Nach rechtzeitiger Rücksprache mit dem Arbeitgeber (mindestens drei Monate vorher) kann die zu leistende Arbeitszeit auch zwischen Teil- und Vollzeit angepasst werden.
+Wenn Sie eine gewisse zeitliche Flexibilität brauchen, können Sie auch kurzfristig nach Absprache im Homeoffice arbeiten. Für die Arbeit von zu Hause stehen den Mitarbeitern und Mitarbeiterinnen ein firmeneigener Laptop und ein Diensthandy zur Verfügung. Sollten Sie eine komplette Auszeit nehmen wollen, können Sie das für einen Zeitraum von bis zu maximal zwölf Monaten vorübergehend tun. Wir sichern Ihnen einen gleichwertigen Arbeitsplatz nach Ihrer Rückkehr zu.
+Aufgaben:
+[6] Die Regelungen am Arbeitsplatz wurden aktualisiert.
+A) richtig
+B) falsch
+Lösung: A
+[7] Auf dem Firmengelände
+A) darf kein Abfall entsorgt werden.
+B) ist bei Gefahr Frau Scholz zu informieren.
+C) ist es nicht erlaubt, Nahrungsmittel zu sich zu nehmen.
+Lösung: B
+[8] Das Unternehmen unterstützt die Mitarbeiter finanziell bei privaten Problemen.
+A) richtig
+B) falsch
+Lösung: B
+[9] Die Mitarbeiter können
+A) bei Bedarf von zu Hause aus arbeiten.
+B) sich maximal ein halbes Jahr beurlauben lassen.
+C) Geldleistungen für die Pflege von Angehörigen erhalten.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Cécile: Leider muss ich dich enttäuschen. Die Regelung ist gesetzeskonform. Das gesetzliche Minimum liegt sogar nur bei 20 Tagen. Sei froh, dass du mehr hast. Bei manchen Arbeitgebern erhöht sich der Urlaubsanspruch mit längerer Firmenzugehörigkeit.
+B = Limit: Meines Wissens gibt es keine feste gesetzliche Regelung dafür, aber sprich doch einfach mal mit eurem Chef. Dem ist vielleicht gar nicht klar, dass du das nicht so toll findest, wenn du immer erst so kurz vorher weißt, an welchen Tagen du arbeiten musst und wann du frei hast.
+C = Susanne: Urlaub muss immer rechtzeitig beantragt werden, aber der Arbeitgeber ist nicht unbedingt verpflichtet, ihn zu gewähren. Wann Urlaub genommen werden darf, entscheidet der Chef. Aufgrund dringender betrieblicher Gründe kann ein Urlaubsantrag auch abgelehnt werden.
+D = Nico: Schau doch mal in deinen Arbeitsvertrag, da ist das sicher geregelt. Soviel ich weiß, gibt es keine gesetzlichen Einschränkungen für angestellte Arbeitnehmer. Allerdings darfst du keine sieben Tage am Stück arbeiten. Der Samstag gilt in Deutschland als normaler Werktag.
+E = Greta: Ich arbeite auch im Einzelhandel und bei uns ist es so geregelt, dass man einen festen Wochentag freibekommt, wenn man samstags arbeitet. Das kommt mir entgegen. So kann ich entspannt unter der Woche einkaufen oder ins Schwimmbad gehen.
+F = Michele: Das kann dein Chef nicht einfach so machen. Personelle Engpässe reichen für den Widerruf eines bereits genehmigten Urlaubsantrags nicht aus. Wenn du deinen Urlaub tatsächlich verschiebst, muss der Arbeitgeber alle Kosten tragen, die dir durch die Stornierung entstehen.
+X = Kein Beitrag passt.
+Aufgaben:
+[10] Thia: Voll gemein, ich habe nur 25 Urlaubstage! Mein Freund hat hingegen 30 Tage im Jahr. Ich frage mich, ob mir nicht auch mehr Tage zustehen. Kennt sich von euch da jemand aus?
+Lösung: A
+[11] Marilena: Ich arbeite im Einzelhandel und bei uns gilt jede Woche ein anderer Dienstplan. Wir bekommen den Plan immer erst am Ende der Vorwoche und deshalb können wir unsere Freizeit natürlich auch nicht richtig planen. Ist das erlaubt?
+Lösung: B
+[12] Hans: Ich habe nach der Genehmigung meines Urlaubs diesen gebucht und jetzt hat mein Chef gemerkt, dass ein anderer Kollege schon vorher zur selben Zeit Urlaub eingereicht hat. Jetzt will er mir meinen wieder streichen. Darf er das?
+Lösung: F
+[13] Lisa: Ich mache zurzeit ein Pflichtpraktikum in einem Unternehmen und arbeite von Montag bis Freitag acht Stunden täglich. Jetzt soll ich nächsten Samstag auch noch kommen. Bin ich dazu verpflichtet? Ich fühle mich ein bisschen ausgenutzt!
+Lösung: X
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 13
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Protokoll 15.04.20XX, 14:00–16:00 Uhr**
+Tagungsraum: 256, Ort: Geschwister-Scholl-Platz 12, 10738 Berlin
+Anwesende: Petra Kramer (PK, Geschäftsleitung), Yvonne Schmidt (YS, Assistenz der Geschäftsleitung), Thorsten Klein (TK, Leitung Einkauf), Sonja Kühl (SK, Leitung Finanzen), Jenny Mitschke (JM, Leitung Marketing), Ilkay Ergün (IE, Leitung Produktion), Johannes Schön (JS, Leitung Personal)
+Gast: Jonas Braun (Deutsches Rotes Kreuz)
+Sitzungsleitung: Johannes Schön. Protokollantin: Yvonne Schmidt.
+
+Tagesordnungspunkte:
+1. Begrüßung und Genehmigung des Protokolls der letzten Sitzung
+2. Neue Werbemaßnahmen
+3. Beschwerden über schlecht geputzte Büros
+4. Fortbildung der Ersthelfer
+5. Einführung eines Jobtickets
+6. Sonstiges
+
+TOP 1 Begrüßung und Genehmigung des Protokolls der letzten Sitzung: JS begrüßt alle Anwesenden und stellt den Gast Jonas Braun vom Deutschen Roten Kreuz vor. SK merkt an, dass das Datum des diesjährigen Sommerfests falsch im letzten Protokoll festgehalten wurde. Dieses findet am 19.07. statt. Die Änderung wird aufgenommen, ansonsten wird das Protokoll einstimmig genehmigt.
+TOP 2 Neue Werbemaßnahmen: JM berichtet, dass die Marketingabteilung eine neue Werbestrategie entwickelt hat, um die Verkaufszahlen wieder zu verbessern. SK hatte in der letzten Sitzung berichtet, dass sie seit Januar dieses Jahres stetig zurückgegangen sind. Um langfristige Lösungen zu finden, wurde eine Marktanalyse in Auftrag gegeben. Bevor die Ergebnisse vorliegen, sollen bereits erste Maßnahmen ergriffen werden: Ein IT-Mitarbeiter erarbeitet ein Konzept für eine modernere, suchmaschinenoptimierte Homepage. Zudem schlägt JM kurze, unterhaltsame Werbevideos für soziale Medien vor. PK beauftragt JM, bis zur nächsten Sitzung günstigere Filmteams für die Produktion zu prüfen.
+TOP 3 Beschwerden über schlecht geputzte Büros: Seit der Zusammenarbeit mit der neuen Reinigungsfirma beschweren sich viele Kollegen über unzureichende Reinigung: schmutzige Tische, volle Mülleimer und ungesaugte Böden. Zudem sind die Reinigungskräfte bei Eintreffen der Mitarbeiter gegen 9 Uhr noch anwesend, obwohl die Arbeiten bis 8:30 Uhr abgeschlossen sein sollten. JS soll Kontakt zur Firma aufnehmen; bei Nichteinhaltung droht die fristlose Kündigung.
+TOP 4 Fortbildung der Ersthelfer: Für die regelmäßige Fortbildung der Ersthelfer wurde Jonas Braun vom DRK gewonnen. Termin: Samstag, 10.06., Dauer neun Stunden, im Haus, voll als Arbeitszeit angerechnet. Die Teilnehmerzahl ist auf acht Personen beschränkt. Anmeldung bis zum 15.05. in der Personalabteilung.
+TOP 5 Einführung eines Jobtickets: Zur Verbesserung der Parksituation beteiligt sich die Firma ab dem 01.07. mit 50 Prozent (maximal 60 Euro) an der Monatskarte für öffentliche Verkehrsmittel. Antragsformulare sind bei JS in der Personalabteilung erhältlich.
+TOP 6 Sonstiges: TK berichtet, dass sich die Lieferzeiten unseres Zulieferers nach Beilegung eines Mitarbeiterstreiks in Litauen wieder normalisiert haben. JS teilt mit, dass ein neu eingestellter Mitarbeiter die Probezeit nicht bestanden hat und die Firma verlassen hat.
+Aufgaben:
+[14] Die neue Werbestrategie
+A) beinhaltet ein Video über die Produktionsabläufe.
+B) ist wegen der schlechten Verkaufszahlen notwendig.
+C) lässt sich sehr schnell und kostengünstig umsetzen.
+Lösung: B
+[15] Die Reinigungsfirma
+A) hält sich nicht an die vereinbarten Putzzeiten.
+B) putzt die Büros der Firma nicht regelmäßig.
+C) wird den Vertrag demnächst kündigen.
+Lösung: A
+[16] Die Fortbildung für Ersthelfer
+A) ist nur mit begrenzter Teilnehmerzahl möglich.
+B) müssen die Teilnehmer nur einmal absolvieren.
+C) wird beim Deutschen Roten Kreuz veranstaltet.
+Lösung: A
+[17] Das Jobticket
+A) soll zu 60 Prozent finanziert werden.
+B) kann in der Personalabteilung beantragt werden.
+C) wird ab nächsten Monat eingeführt.
+Lösung: B
+[18] Der Streik in Litauen
+A) dauert immer noch an.
+B) fand landesweit statt.
+C) führte zu Lieferproblemen.
+Lösung: C
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Text:
+**Reklamation: Defekte Spülmaschine und Wasserschaden**
+Sehr geehrte Frau Sturm,
+vor einer Woche haben wir bei Ihnen eine Spülmaschine für unsere Teeküche gekauft. Sie wurde sehr schnell geliefert und auch gleich eingebaut. Leider muss ich Ihnen heute aber mitteilen, dass sie bereits defekt ist. Beim Spülen ist Wasser ausgelaufen und nun ist unser Parkett beschädigt.
+Ich bitte Sie, uns umgehend einen Techniker zu schicken, der das Gerät repariert. Wir brauchen die Spülmaschine spätestens übermorgen, da wir ein großes Meeting unserer Außendienstmitarbeiter haben und viele Personen bewirten müssen.
+Außerdem müssen wir einen Teil des Parketts austauschen. Die Kosten dafür werden wir Ihnen in Rechnung stellen. Bitte schicken Sie mir so schnell wie möglich einen Terminvorschlag für die Reparatur und eine Bestätigung der Kostenübernahme.
+Mit freundlichen Grüßen
+Claudio Krüger
+Aufgaben:
+[19] Der Kunde
+A) fordert eine neue Spülmaschine.
+B) hat einen Wasserschaden in der Küche.
+C) beschwert sich über die Reparaturarbeiten.
+Lösung: B
+[20] Die Firma Küchenbedarf soll
+A) die Reparatur der Spülmaschine in Rechnung stellen.
+B) innerhalb von zwei Tagen die Spülmaschine reparieren.
+C) das Parkett in der Teeküche umgehend ersetzen.
+Lösung: B
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+**Arbeitsanweisung von Ihrer Vorgesetzten:**
+Hallo Frau Retterstein,
+ich habe gerade die E-Mail von einem großen Kunden bekommen, der sich beschwert hat. Organisieren Sie doch bitte so schnell wie möglich einen Techniker, der sich die Spülmaschine ansieht, und schreiben Sie Herrn Krüger.
+Entschuldigen Sie sich bitte für die Unannehmlichkeiten und sagen Sie ihm zu, dass wir seine Forderungen in seiner E-Mail prüfen werden.
+Teilen Sie Herrn Krüger aber bitte vorsorglich mit, dass die Reparatur eventuell nicht sofort durchgeführt werden kann, falls wir Ersatzteile bestellen müssen.
+Danke und viele Grüße
+Dorothee Sturm
+Aufgaben:
+[B] Antworten Sie Herrn Krüger im Namen von Anika Retterstein.
+Punkt: Entschuldigung und Bedauern über die Unannehmlichkeiten
+Punkt: Ankündigung des Technikerbesuchs zur Überprüfung von Maschine und Boden
+Punkt: Hinweis auf eventuell erforderliche Ersatzteilbestellungen
+Punkt: Zusage der genauen Prüfung der Schadenersatzforderungen
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Karl und Michaela verschieben einen wichtigen Termin.
+A) richtig
+B) falsch
+Lösung: B
+[23] Michaela soll
+A) ihre geplante Dienstreise ganz absagen.
+B) mit der Firma La Grande verhandeln.
+C) mit einem Kollegen nach München fahren.
+Lösung: C
+[24] Frau Leipold beschwert sich über eine verspätete Lieferung.
+A) richtig
+B) falsch
+Lösung: B
+[25] Die Firma „Spedition Fix“
+A) beliefert Frau Leipold zum ersten Mal.
+B) hat die Tourenplanung geändert.
+C) verschiebt den Termin um sieben Tage.
+Lösung: B
+[26] Der Chef weist auf die wichtigen Sicherheitsvorschriften hin.
+A) richtig
+B) falsch
+Lösung: A
+[27] Es gab keinen Unfall,
+A) da die Mitarbeiter alle Schutzkleidung getragen haben.
+B) obwohl die Mitarbeiter die Vorschriften missachtet haben.
+C) weil sich die Mitarbeiter an die Regeln gehalten haben.
+Lösung: B
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Aussagen. Welche Aussage a–f passt zu welcher Person 28–31?
+Auswahltitel: Aussagen
+Auswahl:
+A = Arbeitnehmer bekommen zu besonderen Anlässen frei.
+B = Einige Kollegen können nur zu bestimmten Zeiten Urlaub nehmen.
+C = Manchmal müssen Kollegen auch die Aufgaben von anderen übernehmen.
+D = Unter gewissen Umständen gehen Urlaubstage nicht verloren.
+E = Viele Menschen träumen während der Arbeitszeit vom Sommerurlaub.
+F = Wer im Urlaub krank wird, kann Sonderurlaub beantragen.
+Aufgaben:
+[28] Person 1 (Lisa-Vera und Kollege)
+Lösung: C
+[29] Person 2 (Urlaubssuche August)
+Lösung: B
+[30] Person 3 (Jens und Erkältung)
+Lösung: D
+[31] Person 4 (Umzug und Sonderurlaub)
+Lösung: A
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören einen Vortrag über Umweltschutz im Büro. Wählen Sie für die Aufgaben 32–35 die richtige Lösung A, B oder C.
+Aufgaben:
+[32] Ein Computer sollte
+A) nicht mehrmals ein- und ausgeschaltet werden.
+B) nur selten ganz heruntergefahren werden.
+C) von allein in den Ruhemodus schalten.
+Lösung: C
+[33] Frau Seibert empfiehlt,
+A) den Entwurfmodus beim Drucken zu verwenden.
+B) immer Recyclingpapier zu benutzen.
+C) Unterlagen für Kunden beidseitig zu bedrucken.
+Lösung: A
+[34] Frau Seibert findet es wichtig, dass
+A) die Firma den Müll sorgfältiger trennt.
+B) mehr recycelt wird.
+C) von vornherein weniger Abfall produziert wird.
+Lösung: C
+[35] Geschäftsreisen
+A) lassen sich problemlos durch Videokonferenzen ersetzen.
+B) mit der Bahn haben verschiedene Vorteile.
+C) sind teurer, wenn sie umweltfreundlich sind.
+Lösung: B
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf Ansagen auf der Mailbox. Wählen Sie für die Aufgaben 36–40 die richtige Lösung A, B oder C.
+Aufgaben:
+[36] Rita
+A) informiert über den günstigen Verkauf alter Firmencomputer.
+B) möchte ihren privaten Computer verkaufen.
+C) sorgt sich um die Finanzierung des Sommerfests.
+Lösung: A
+[37] Konstantinos Pagonas ruft an, um
+A) einen Firmenbesuch anzukündigen.
+B) nach dem Weg zur Firma zu fragen.
+C) organisatorische Informationen zur Anreise mitzuteilen.
+Lösung: C
+[38] Lara Hartmann
+A) benötigt dringend Belege für das Steuerbüro.
+B) bringt der Kollegin die Reisebelege vorbei.
+C) hat gestern das Steuerbüro angerufen.
+Lösung: A
+[39] Thomas Barthel
+A) hat Schwierigkeiten mit seinem eigenen Computer.
+B) kann das aufgetretene Problem per Fernwartung lösen.
+C) soll eine Systemumstellung im Haus vornehmen.
+Lösung: B
+[40] Klara Günther
+A) erinnert an den Abgabetermin für die Urlaubsplanung.
+B) legt die Urlaubsplanung zentral fest.
+C) möchte am 29. November Urlaub nehmen.
+Lösung: A
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben, Telefonnotiz
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Visitenkarten-Angebot**
+Nachricht auf dem Anrufbeantworter von Herrn Kienzle:
+„Guten Tag, hier spricht Herr Kienzle, buchstabiert K-I-E-N-Z-L-E. Ich wollte Ihnen bezüglich Ihrer Visitenkartenbestellung ein Angebot unterbreiten. Aktuell haben wir Premiumpapier im Angebot: 100 Stück für 60,99 Euro. Die Lieferung erfolgt innerhalb von zwei Tagen per Expressversand. Bitte rufen Sie mich zurück, um die gewünschte Papiersorte zu bestätigen. Sie erreichen mich unter der Telefonnummer 0179 335 36 37. Vielen Dank und auf Wiederhören.“
+Aufgaben:
+[41] Dokumentieren Sie die Kundenanfrage:
+Punkt: Name des Anrufers (Herr Kienzle, K-I-E-N-Z-L-E)
+Punkt: Telefonnummer (0179 335 36 37)
+Punkt: Anlass des Anrufs (Angebot für Visitenkartenbestellung mit Premiumpapier)
+Punkt: Konditionen (100 Stück für 60,99 Euro, Expresslieferung innerhalb von zwei Tagen)
+Punkt: Zu erledigen (Rückruf zur Bestätigung der Papiersorte)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = ANHALTENDE
+B = AUSDRÜCKLICH
+C = MÖGLICH
+D = NÖTIG
+E = NUR
+F = SOWIE
+G = SPÄTERE
+H = VORZEITIGE
+I = WEGEN
+J = ZUM
+Text:
+**Kündigung des Arbeitsverhältnisses**
+Sehr geehrter Herr Dr. Reinicke,
+hiermit kündige ich den mit Ihnen geschlossenen Arbeitsvertrag form- und fristgerecht (46) nächstmöglichen Datum.
+Wie ich Ihnen in unserem persönlichen Gespräch erklärt habe, habe ich mir die Entscheidung nicht leicht gemacht. Da aber mein Mann von seiner Firma nach Berlin versetzt wurde, wird unsere gesamte Familie so bald wie (47) umziehen.
+Mir ist bewusst, dass ich eine dreimonatige Kündigungsfrist habe, aber dennoch bitte ich Sie um eine (48) Freistellung ab dem 15. des nächsten Monats.
+Für die lange Zeit, die ich in dieser Firma hatte, möchte ich mich (49) bei Ihnen bedanken. Ich habe viel in Ihrem Unternehmen gelernt und danke Ihnen für die (50) Unterstützung, die ich stets in der Firma erfahren habe.
+Bitte bestätigen Sie mir den Erhalt meiner Kündigung (51) das Datum, zu dem der Arbeitsvertrag endet.
+Mit freundlichen Grüßen
+Irina Kaspercik
+Aufgaben:
+[46] … geschlossenen Arbeitsvertrag form- und fristgerecht (46) nächstmöglichen Datum. …
+Lösung: J
+[47] … wird unsere gesamte Familie so bald wie (47) umziehen. …
+Lösung: C
+[48] … aber dennoch bitte ich Sie um eine (48) Freistellung ab dem 15. des nächsten Monats. …
+Lösung: H
+[49] … möchte ich mich (49) bei Ihnen bedanken. …
+Lösung: B
+[50] … und danke Ihnen für die (50) Unterstützung, die ich stets in der Firma erfahren habe. …
+Lösung: A
+[51] … Bitte bestätigen Sie mir den Erhalt meiner Kündigung (51) das Datum, zu dem der Arbeitsvertrag endet. …
+Lösung: F
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Angebot für Reinigungsservice**
+Sehr geehrte Damen und Herren,
+vielen Dank für Ihr Interesse an unseren Leistungen. Für den regelmäßigen Reinigungsservice Ihres Restaurants hatten wir Ihnen am 24.11. ein Angebot (52) unterbreitet. Wie aus der Übersicht auf der zweiten Seite hervorgeht, ist eine Reinigung Ihrer Räumlichkeiten auch am frühen Sonntagmorgen für uns selbstverständlich ohne Probleme machbar. Für diesen Service berechnen wir im Rahmen unserer Rabattaktion keinen Wochenendzuschlag.
+Hatten Sie schon die Möglichkeit, (53)? Bitte denken Sie daran, dass die erwähnte Rabattaktion nur noch bis Ende des Jahres (54).
+Sollten Sie dazu noch Fragen haben, zögern Sie bitte nicht, sich mit uns (55). Unsere Mitarbeiter im Kundenservice (56) Ihnen gerne jederzeit zur Verfügung.
+Wir freuen uns, Sie zukünftig (57) zu können.
+Mit freundlichen Grüßen
+Helmuth Heidinger
+„Tiptop-Service"
+Aufgaben:
+[52] … hatten wir Ihnen am 24.11. ein Angebot (52) unterbreitet. …
+A) aufgrund Ihrer Erfahrung
+B) gemäß Ihren Wünschen
+C) laut Ihrer Zusage
+Lösung: B
+[53] … Hatten Sie schon die Möglichkeit, (53)? …
+A) das Angebot zu prüfen
+B) die Chancen zu nutzen
+C) die Gelegenheit zu bieten
+Lösung: A
+[54] … dass die erwähnte Rabattaktion nur noch bis Ende des Jahres (54). …
+A) gültig ist
+B) anerkannt wird
+C) einlösbar bleibt
+Lösung: A
+[55] … zögern Sie bitte nicht, sich mit uns (55). …
+A) in Kontakt zu treten
+B) in Verbindung zu setzen
+C) zur Verfügung zu stellen
+Lösung: B
+[56] … Unsere Mitarbeiter im Kundenservice (56) Ihnen gerne jederzeit zur Verfügung. …
+A) sind
+B) stehen
+C) stellen
+Lösung: B
+[57] … Wir freuen uns, Sie zukünftig (57) zu können. Mit freundlichen Grüßen …
+A) bei unseren Kunden besuchen
+B) mit unseren Kunden begrüßen
+C) zu unseren Kunden zählen
+Lösung: C

@@ -1,0 +1,419 @@
+# NICOLE
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Sportkurse für ältere Menschen
+B = Für Jugendliche ist der Computer etwas Alltägliches
+C = Das Interesse am Handel über Internet nimmt stark ab
+D = Arbeiten am Computer verursacht häufig Rückenschmerzen
+E = Internetnutzer machen viele Dinge gleichzeitig
+F = Firmen müssen auch über Internet für Produkte werben
+G = Auch Freizei tsportarten sollten trainiert werden
+H = Was man gegen Rückenschmerzen tun kann
+I = Kinder wollen mit dem Computer nur spielen
+J = Internetnutzer interessieren sich nicht fürs Fernsehen
+Aufgaben:
+[1] Falsche Körperhaltung, mangelnde Bewegung und psychische Faktoren sind meistens die Hauptfaktoren für Rückenschmerzen. Hier finden Sie ein ganzheitliches Trainingsprogramm, das hilft: Alle Übungen lassen sich im Alltag gut umsetzen und sind auch bei Vorschäden der Wirbelsäule durchführbar. Mit speziellen Entspannungstraining. 114 Seiten, durchgehend Farbabbildungen, 18×25 cm, gebunden.
+Lösung: H
+[2] Der Computer gehört heute wie selbstverständlich in das Jugendzimmer. Wie früher die Modelleisendbahn oder die Barbie-Puppe. Was aber genau treiben die Kids mit den hochgerüsteten Rechenmaschinen auf dem Schreibtisch? Das wollte die Jugendzeitschrift Bravo wissen. Selbstverständlich spielen, aber auch andere, nützlichere Dinge wie Texte schreiben oder Hausaufgaben für die Schule erledigen, Tabellen erstellen und natürlich im Internet herumsurfen.
+Lösung: B
+[3] Inline-Skating ist ein Idealer Ausdauersport – nicht nur für die jüngere Generation. Das haben jetzt Untersuchungen am Institut für Sportwissenschaften an der Universität Frankfurt bestätigt. Danach trainiert Inline-Skating das Herz-Kreislauf-System, beansprucht die wichtigsten Muskelgruppen und fördert die Koordination. Die Faszination dieser rasanten Freizeitsportart wirke generationenübergreifend und erfasst die Jungen wie die Alten, sagt Dr. Hans Jürgen Ahrens. Allerdings fragt der Arzt kritisch, warum jeder Skifahrer, Windsurfer oder Tennisspieler zu Beginn Trainingsstunden bei einem Profi belege, oft aber nicht der Inliner: Dabei lässt sich das Verletzungsrisiko durch regelmäßiges Fahrtraining deutlich verringern. In einem Kurs sollten die wichtigsten Sturz- Brems und Fahrtechniken erlernt werden.
+Lösung: G
+[4] Eine Studie der Fernsehgesellschaften ARD und ZDF besagt, dass deutsche Internetnutzer sich auch mit anderen Dingen beschäftigen, wenn sie im Internet sind. Ein Großteil der beobachteten Personen telefoniert beim Surfen, hört nebenbei Musik, oder arbeitet mit anderen Computerprogrammen. Aber auch Konkurrenzmedien wie Fernsehen und Zeitschriften finden große Aufmerksamkeit, während im Internet nach Informationen gesucht wird.
+Lösung: E
+[5] Geschäfte über das Internet werden in Deutschland auch in Zukunft Milliarden Euro einbringen. In spätestens zwei Jahren werden 20 Prozent aller europäischen Geschäfte über das Internet abgewickelt, sagen die Fachleute. Heutzutage ist es kaum vorstellbar, dass ein Unternehmen allein mit klassischen Verkaufsmethoden und ohne zusätzliches Online- Marketing erfolgreich sein wird. Wer heute nicht anfängt, diese Möglichkeiten zu nutzen, kann in Zukunft seine Kunden verlieren. Das Argument, dass die angebotene Ware sich ja auch ohne Internet gut verkaufe, stimmt so nicht mehr. Denn das Internet beeinflusst auch das Käuferverhalten auf der Straße.
+Lösung: F
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Computerkurse sind schon für Kinder spannend**
+**Schreiben, Rechnen, Programme installieren**
+Schaden oder nützen Computer unseren Kindern? Fragen sich viele Eltern. Ein Computerkurs Veranstalter ist sich ganz sicher: wenn man den Kindern beibringt, den Computer richtig einzusetzen, ist sogar eine Lernhilfe. Seit fünf Jahren bietet Franz Krapfi Krapfen Bauer Computerkurse für Kinder zwischen sieben und vierzehn Jahren an und ist von seinen Schülern begeistert Am liebsten würden die Kinder drei Stunden ohne Pause durcharbeiten Und das obwohl in seinen Kursen nicht gespielt wird, sondern der Computer als Lernhilfe genutzt wird. Im ersten Kurs lernen die Kinder den Umgang mit dem Betriebssystem und erste Grundzüge der Textverarbeitung.
+Das Geheimnis von Krapfen Bauer Ich erkläre die Programme in der Sprache der Kinder und langweile sie nicht mit technischen Details. Sein Talent entdeckte er, als sich seine eigenen Kinder für den PC) zu interessieren begannen. Seine Tochter brachte immer mehr Mitschüler zum Sonntäglich PC-Training mit, bis eines Tages klar war: Das muss auf professionelle Beine gestellt werden. Das schwierigste war, einen passenden und vor allem kostengünstige Raum zu finden, denn Geld brachten die Kinderkurse am Anfang sehr wenig ein; Ein Bekannte, der Direktor eines Hotels ist, hatte schließlich die passende Lösung Die Schulungsräume im Hotel stehen den Kindern nun an den Wochenenden zur Verfügung Allgemein rät Krapffen Bauer, Kinder so früh wie möglich an den Computer zu lassen, allerdings nur unter Aufsicht und mit den richtigen Programmen. Beim Computer ist es wie beim Fernseher wenn man ihn als Kindermädchen einsetzt, ohne sich darum zu kümmern, was die Kinder damit machen, kann das negativ Folgen haben schon für drei bis vierjährige Kinder gebe es sehr gute Spielprogramme, die mit Vorschulaufgaben vergleichbar wären. Gerade in der Zeit nach Weihnachten haben Krapfis Kindercomputerkurse Hochsaison. Viele Eltern haben einen Computer unter den Christbaum gestellt und wollen jetzt, dass ihre Kinder frühzeitig damit umgehen lernen. Wobei der Seminarleiter für manche Eltern sogar zu viel wissen weitergibt Einige Eltern haben sich schon beschwert, weil ihre Kinder jetzt Hausaufgaben am Computer lösen Die manchmal befürchtet Überordnung der Kinder hat Krapfen Bauer noch nicht erlebt. Ganz im Gegenteil, die kleinen sind oft gar nicht zu stoppen, wenn sie wieder etwas Neues erlernt haben. Viele Teilnehmer kommen dann auch gern zu den nächsten Kursen. Zeichenprogramm oder Spiele kommen in den Computerkursen höchstens als Belohnung am Rande vor.
+Das größte Hindernis auf dem Weg zum Computerexperten ist für die Kinder in manchen Fällen die negative Einstellung der Eltern.
+Die Erwachsene kennen oft nur die komplizierten Datenbankwendungen und Programme aus dem Büro und können sich gar nicht vorstellen, was man mit dem Computer noch alles machen kann bedauert Krapfen Bauer natürlich wirkt sich diese negative Grundeinstellung auch auf die Kinder aus, Überraschenderweise sind es dann oft die Großeltern, die für Computerkurse das Geld geben, damit ihre Enkelkinder mit dem PC richtig umgehen lernen. Information und Anmeldung Tel: 0664/ 33 33 14 E Mail: Krapfi@aon.at
+Aufgaben:
+[6] In der Computerkursen von Franz Krapfenbauer
+A) lernen die Kinder vor allem neue Computerspiele kennen..
+B) lernen Kinder ab 14 Jahren das richtige Arbeiten mit dem Computer.
+C) werden die Computerprogramme so einfach wie möglich erklärt.
+Lösung: C
+[7] Am Anfang war es für Franz Krapfenbauer schwierig,
+A) einen geeigneten Raum für die Kurse zu finden.
+B) genug Kinder für den Computerkurs zu finden.
+C) seine Tochter für den Computer zu begeistern.
+Lösung: A
+[8] Herr Krapfenbauer meint,
+A) dass auch kleine Kinder mit dem Computer arbeiten sollen.
+B) dass Kinderunter vier Jahren zu jung für den Computer seien.
+C) dass sich Kinder alleine mit dem Computer beschäftigen sollen.
+Lösung: A
+[9] Viele Kinder
+A) machen im Kurs ihre Hausaufgaben am Computer.
+B) machen nach dem ersten Kurs noch einen weiteren Kurs.
+C) probieren im Kurs neue Computerspiele aus.
+Lösung: B
+[10] Franz Krapfenbauer erzählt,
+A) dass die Computerkurse oft von den Großeltern bezahlt werden.
+B) dass einige Eltern selbst als Computerexperten arbeiten.
+C) dass er auch Computerkurse in Büros plant.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m05-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie suchen für Ihnen 5-Jährigen Sohn einen Schikurs.
+Lösung: D
+[12] Sie möchten am Wochenende in den Zoo gehen.
+Lösung: E
+[13] Sie suchen eine Zeitschrift für Ihre Freundin, die sich für Mode interessiert.
+Lösung: C
+[14] Ihre Bekannte sucht einen Job in einem Modegeschäft.
+Lösung: K
+[15] Sie möchten Ihre Freunde am Montagabend in den Zirkus einladen.
+Lösung: X
+[16] Ihre 10-jährige Tochter möchte sich gern einen Tierfilm ansehen.
+Lösung: J
+[17] Sie möchten für Ihre Familie billige Winterkleidung kaufen.
+Lösung: X
+[18] Sie möchten einen Schikurs machen und sich dafür Schier leihen.
+Lösung: B
+[19] Sie machen in Österreich Urlaub und möchten sich einen Film im englischen Original ansehen.
+Lösung: X
+[20] Sie interessieren sich für Tiere und möchten ihnen helfen.
+Lösung: H
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Genuss mit Kaffee Partner
+Sehr geehrte Frau Thoma,
+schade, (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns,
+weil wir (23) nicht das richtige Angebot gemacht haben, seit wir uns vor einiger Zeit in Köln
+auf der ANUGA, der großen Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog nachholen, den Sie heute erhalten.
+Sie (26) darin viele nützliche und attraktive Dinge rund um das Thema Kaffee und Trinkwasser
+(27) Mitarbeiter und Besucher. Aber auch Tee, kleine Leckereien und nette Kalender für Büro
+und Zuhause (28) Ihnen unser Geschenkkatalog.
+Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie!
+(30) Grüße aus Wallenhorst
+Ihr Kaffee Partner-Team
+Manfred Pflüger
+Aufgaben:
+[21] Genuss mit Kaffee Partner Sehr geehrte Frau Thoma, schade, (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). …
+A) dass
+B) darum
+C) weil
+Lösung: B
+[22] … (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns, weil wir (23) nicht das …
+A) seid
+B) sein
+C) sind
+Lösung: C
+[23] … Partner (22). Vielleicht liegt das an uns, weil wir (23) nicht das richtige Angebot gemacht haben, seit wir uns …
+A) euch
+B) Ihnen
+C) Sie
+Lösung: B
+[24] … der ANUGA, der großen Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog …
+A) kennen gelernt
+B) kennen lernen
+C) kennen lernte
+Lösung: A
+[25] … Messe für Nahrung und Genussmittel, (24) haben. Wir (25) das jetzt mit dem aktuellen Katalog nachholen, den Sie …
+A) mochten
+B) möchten
+C) mögen
+Lösung: B
+[26] … aktuellen Katalog nachholen, den Sie heute erhalten. Sie (26) darin viele nützliche und attraktive Dinge rund um das …
+A) fanden
+B) finden
+C) findet
+Lösung: B
+[27] … attraktive Dinge rund um das Thema Kaffee und Trinkwasser (27) Mitarbeiter und Besucher. Aber auch Tee, kleine …
+A) für
+B) von
+C) wegen
+Lösung: B
+[28] … kleine Leckereien und nette Kalender für Büro und Zuhause (28) Ihnen unser Geschenkkatalog. Viel Spaß beim Blättern und …
+A) gezeigt
+B) zeigen
+C) zeigt
+Lösung: C
+[29] … Viel Spaß beim Blättern und Aussuchen. Wir freuen (29) auf Sie! (30) Grüße aus Wallenhorst Ihr Kaffee …
+A) mich
+B) sich
+C) uns
+Lösung: C
+[30] … beim Blättern und Aussuchen. Wir freuen (29) auf Sie! (30) Grüße aus Wallenhorst Ihr Kaffee Partner-Team Manfred …
+A) Freundlich
+B) Freundliche
+C) Freundlichen
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+Sehr geehrte Damen und Herren,
+mit großem Interesse und auch mit Hoffnung habe ich Ihre Anzeige gelesen. leider (31) ich Sie im Moment nicht anrufen, da das Telefon immer belegt ist. (32) schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind zurzeit nicht so gut. Ich mache (35) vor allem bei den Fächern Physik und Mathematik große Sorgen. Matthias ist nicht dumm, aber er ist etwas faul und denkt, er brauche (36) Fächer nicht.
+Fragen wollte ich nun, (37) es bei Ihnen auch individuelle Physik und Mathematiknachhilfe gibt. Und (38) finden die Stunden statt? Am späten Nachmittag oder am frühen Abend? Mir wäre es jedenfalls sehr wichtig, dass Sie meinem Sohn helfen (39).
+Ab 19.30 Uhr bin ich telefonisch (40) der Nummer 0428-1734 zu erreichen.
+Mit freundlichen Grüßen JOSEF MARTINELL
+Auswahl:
+A = ABER
+B = DARF
+C = DASS
+D = DESHALB
+E = DIESE
+F = IN
+G = KANN
+H = KÖNNTEN
+I = MICH
+J = MIR
+K = OB
+L = OBWOHL
+M = UNTER
+N = VOR
+O = WANN
+Aufgaben:
+[31] … auch mit Hoffnung habe ich Ihre Anzeige gelesen. leider (31) ich Sie im Moment nicht anrufen, da das Telefon immer …
+Erklärung: Das Wort lautet: KANN
+Lösung: G
+[32] … im Moment nicht anrufen, da das Telefon immer belegt ist. (32) schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht …
+Erklärung: Das Wort lautet: DESHALB
+Lösung: D
+[33] … schreibe ich Ihnen diese Mail. Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind …
+Erklärung: Das Wort lautet: IN
+Lösung: F
+[34] … Mein Sohn Matthias macht (33) zwei Jahren sein Abitur, (34) seine Leistungen sind zurzeit nicht so gut. Ich mache …
+Erklärung: Das Wort lautet: ABER
+Lösung: A
+[35] … seine Leistungen sind zurzeit nicht so gut. Ich mache (35) vor allem bei den Fächern Physik und Mathematik große …
+Erklärung: Das Wort lautet: MIR
+Lösung: J
+[36] … nicht dumm, aber er ist etwas faul und denkt, er brauche (36) Fächer nicht. Fragen wollte ich nun, (37) es bei Ihnen …
+Erklärung: Das Wort lautet: DIESE
+Lösung: E
+[37] … er brauche (36) Fächer nicht. Fragen wollte ich nun, (37) es bei Ihnen auch individuelle Physik und …
+Erklärung: Das Wort lautet: OB
+Lösung: K
+[38] … individuelle Physik und Mathematiknachhilfe gibt. Und (38) finden die Stunden statt? Am späten Nachmittag oder am …
+Erklärung: Das Wort lautet: WANN
+Lösung: O
+[39] … es jedenfalls sehr wichtig, dass Sie meinem Sohn helfen (39). Ab 19.30 Uhr bin ich telefonisch (40) der Nummer …
+Erklärung: Das Wort lautet: KÖNNTEN
+Lösung: H
+[40] … meinem Sohn helfen (39). Ab 19.30 Uhr bin ich telefonisch (40) der Nummer 0428-1734 zu erreichen. Mit freundlichen …
+Erklärung: Das Wort lautet: UNTER
+Lösung: M
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Der Sprecher interessiert sich für Sport als für Kultur.
+Lösung: richtig
+[42] Die Sprecherin geht so oft sie kann ins Theater.
+Lösung: richtig
+[43] Der Sprecher hört besonders gern moderne Musik.
+Lösung: falsch
+[44] Die Sprecherin geht oft in Kunstausstellungen.
+Lösung: falsch
+[45] Die Sprecherin hätte gerne mehr Zeit für die Kultur.
+Lösung: richtig
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Die Lehrerin fährt mit ihrer Klasse und an die Nordsee.
+Lösung: falsch
+[47] Herr Kühne hat den Brief der Lehrerin nicht erhalten.
+Lösung: richtig
+[48] Die Klassenfahrt beginnt an einem Samstag.
+Lösung: falsch
+[49] Herrn Kühnes Sohn Martin wird bei Busfahrten oft schlecht.
+Lösung: richtig
+[50] Die Fahrt mit dem Schiff dauert fünf bis sechs Stunden.
+Lösung: falsch
+[51] Das Haus, in dem die Schüler wohnen, gehört zu einem Hotel.
+Lösung: falsch
+[52] Die Klassenfahrt wird von einer Lehrerin und einem Lehrer geleitet.
+Lösung: richtig
+[53] Die Lehrerin empfiehlt, dass die Kinder nicht mehr als 50 Euro Taschengeld mitnehmen.
+Lösung: richtig
+[54] Katerina kann entweder mitfahren, oder in eine andere Klasse gehen.
+Lösung: richtig
+[55] Auf der Klassenfahrt darf nur mit Erlaubnis der Eltern geraucht werden.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Sie können mit dem Bus in die Innenstadt fahren.
+Lösung: richtig
+[57] Sie können noch eine Stunde durch alle Geschäfte laufen.
+Lösung: falsch
+[58] Dr. Krausch ist ab dem 18. Oktober wieder in der Praxis.
+Lösung: richtig
+[59] Alle Kunden müssen an der Kasse nebenan bezahlen.
+Lösung: falsch
+[60] Die Polizei informiert, dass alle Parkhäuser bei der Ausstellung besetzt sind.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:
+Extra:
+{
+ "brief": {
+  "intro": "Eine Freundin beschreibt in einem Brief, welche Probleme sie mit ihrem Bruder hat und bittet Sie um Rat:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "entschuldige, dass ich dir so lange nicht mehr geschrieben habe. Aber weißt du mein älterer Bruder, der schon lange im Ausland lebt, ist jetzt für zwei Monate bei uns. Wir unternehmen einiges zusammen, Z.B. gehen wir nachmittags ins Schwimmbad oder abends ins Kino.",
+   "Wir verstehen uns eigentlich ganz gut, aber dennoch habe ich ein Problem mit ihm: Wenn es im Fernsehen Sportsendungen gibt, dann bekomme ich ihn nicht mehr weg vom Fernseher! Er sitzt dann stundenlang nur da und sieht fern, ganz egal wie schön das Wetter draußen ist! Was soll ich bloß tun? Überhaupt nichts sagen oder soll ich mit ihm deswegen streiten? Er fährt bald wieder weg und ich möchte doch mit ihm zusammen sein. Was würdest du machen? Hast du vielleicht ein paar Tipps oder Ratschläge für mich?",
+   "Herzliche Grüße"
+  ],
+  "signature": "Nicole"
+ },
+ "hints": [
+  "Bevor Sie den Brief schreiben ,überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Schreiben Sie Ihrer Bekannten einen Antwortbrief, der die folgenden Punkte enthält:
+Mindestwörter: 100
+Punkt: Eigene Erfahrungen mit Geschwistern, Freunden,
+Punkt: Tipps für Nicole
+Punkt: Was Sie über den Bruder denken
+Punkt: Was Sie selbst gern gemeinsam mit anderen machen

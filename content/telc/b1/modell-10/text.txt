@@ -1,0 +1,432 @@
+# VERA
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Abendwanderungen ab89Euro
+B = Ausflugsziele für Literaturinteressierte
+C = Hinweis für Besucher der Bregenzer Festspiele
+D = Ihre Zeitung folgt Ihnen in den Urlaub
+E = Laute Musik stört den Nachbarn
+F = MusikveranstaltungenamNachmittag
+G = Neue Zeitung für Ihre Urlaubsplanung
+H = Rekord: 70.000 Besucher im Bücherdorf
+I = Schlechtes Wetter: Festspiele abgesagt
+J = Wandern ohne Gepäck
+Aufgaben:
+[1] Wenn Sie verreisen, wünschen wir ihnen erholsame und angenehme Ferienlage Bitte denken Sie daran, sich ihre Zeitung in den Urlaubtort nachsenden zu lassen. Denn mit den Neuigkeiten von zu Hause und aus aller Weil lässt sich die schönste Zeit des Jahres erst richtig genießen ganz Europa kostenlos, Die Höhe des Bezeugendes bleibt unverändert. Ausführliche Informationen und entsprechende Coupons ihrem Europabericht. Griechisch wird meistens von Zwölftklässlern als dritte Fremdsprache neben Französisch und Englisch gewählt. finden Sie in unserem großen Reise Service – Anzeigen oder rufen Sie uns einfach an: Telefon 01 30-18 58 50 zum Nulltarif. Hannoversche Allgemeine Neue Presse
+Lösung: D
+[2] Im Luftkurort Stadtkylf in der MMittelgebirgslandschaft des Oberen Kullas werden dreitägige Wanderrungenn ohne Gepäck veranstaltet Die Rundwanderung im deutsch – bei gischen Naturpark führt abends zu reservierten Zimmern. Die Betriebe übernehmen den Gepäcktransport zum nächsten Tagesziel. Die Wanderungen werden ganzjährig angeboten. In den Wanderprogramm sind drei Übernachtungen mit Frühstück dreimal Gepäcktransport, eine Wanderkarte, eine Wegbeschreibung und ein Wanderpass enthalten. Der Pauschalbetrag beträgt pro Person 89 Euro. Auskünfte: Verkehrsverein Erholungsgebiet Oberes Kylltal. Kurallee, 54589 Stadtkylf, Telefon ( 06597) 28 78.
+Lösung: J
+[3] Für den einen ist es musikalischer Hochgenuss für den anderen schlicht Lärm. Gemeint ist Musik, die aus Lautsprechen, Radios oder durch Musikinstrumente durch geöffnet Türen und Fenster bei sommerlichen Temperaturen ins Freie dringt. Die Gemeinde weist darauf hin, dass der Mittagsruhe von 13 bis 15 Uhr und nachts von 22 bis 7 Uhr keine musikalische Ruhestörung erfolgen darf. Gartengeräte mit Motoren dürfen montags bis freitags nur von 8 bis 13 und von 15 bis 19 Uhr benutzt werden, an Sonnabenden von 9 bis 13 Uhr. An Sonn - und Feiertagen dürfen die Geräte nicht zum Einsatz kommen.
+Lösung: E
+[4] – In dem Bücherdorf in Mühlbeck/ Fredersdorf(Sachsen Anhalt ) warten in acht Antiquarten über 7000 Bücher aus allen Bereichen der Literatur auf Interessenten. In acht Antiquariten warten über 70000 Bücher aus allen Bereichen der Literatur auf Interessenten. Das in reizvoller landschaftlicher Umgebung liegende Bücherdorf nahe Bitterfeld unweit der A19 und des Flughafens Leipzig ist aus allen Teilen Deutschlands leicht zu erreich. Geöffnet sind die Antiquariate auch am Samstag und Sonntag. In Europa gibt es bereits zahlreiche solcher Bücherdörfer.u.a. in Belgien Frankreich Großbritannien den Initiatorin des deutschen Bücherdorfes ist Heidi Dehne (Tel. 03493/4 30 43).
+Lösung: B
+[5] Die Bregenzer Festspiele sind bemüht, die Vorstellungen auch bei zweifelhafter Witterung bzw. leichtem Regen auf der Seebühne abzuhalten, weshalb es zu Verzögerungen des Beginns oder zu Unterbrechungen kommen kann. Sollte die Seeaufführung nicht stattfinden können, wird eine halbszenische Version von Porgy and Bess im Festspielhaus gegeben. Wir empfehlen unseren Gästen, bei unsicherer Wetterlage regenfester Kleidung den Vorzug zu geben und auf Schirme zu verzichten, da diese die Sicht beeinträchtigen. Das Spiel auf dem See wird ohne Pause gespielt. Die Spieldauer beträgt ca.2 Std. 45 Min.
+Lösung: C
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Computerprobleme ein Kinderspiel**
+**Anne und Melanie (beide 6) stehen Erzieherinnen mit Vorschlägen hilfreich zur Seite**
+**Von Christiane Altenberger**
+Sie sind die Problemlöser im Kindergarten an der Munckerstraße. Wenn das Malprogram spinnt, plötzlich ein
+Spiel auftaucht, das keiner kennt, dann rufen die Erzieherinnen nach Anne und Melanie. Die sind zwar erst
+sechs Jahre alt, aber mit den Computerspielen kennen sie sich aus. Die Kinder wissen manchmal mehr als wir
+sagt Eva Schilling. Leiterin des Kindergartens. Gelernt haben die beiden ihr Know-how bei Multimedia-
+Landschaften für Kinder, einem Projekt, das das Schulamt zusammen mit dem Studio im Netz gestartet hat.
+Im Rahmen dieses Projekts werden in städtischen Kindergärten zwei Wanderstationen mit je drei Multimedia-
+Computern und einem Farbdrucker installiert. Die Stationen wandern durch 14 Kindergärten, wo sie jeweils
+für vier Wochen installiert werden. Mit dabei in den Kindergärten: ein ganzer Satz von Spiel – Software.
+Vierjährige am Computer? In Pädagogen kreisen sind viele Berührungsängste da, weiß Edith llg, Fachberaterin
+für Kindergärten beim Schulamt, aber wir können uns aus dieser Entwicklung nicht ausklinken. Die Kinder
+wollen sich mit ihrer Umwelt auseinandersetzen. Angefangen hat diese Auseinandersetzung im Studio im Netz – 193 Kinder waren eingeladen, um erste Erfahrungen am Computer zu sammeln. Die Kinder waren absolut
+begeistert, haben immer wieder gefragt, wann gehen wir da wieder hin, so Frau llg.
+Bevor jedoch die Computer in die Kindergärten kamen, waren die Eltern aufzuklären. Bei manchen Eltern löste
+das Stichwort Computer akute Ängste aus nach dem Motto: Mein fröhliches, gesundes Kind setzt sich vor den
+Computer und steht sechs Stunden später krank, sprachlos und einsam wieder auf.
+Diese Ängste haben sich inzwischen gelegt und die Erfahrung vor Ort zeigt, dass sie weitgehend über flüssig
+sind. Die Erzieherinnen achten auch darauf, dass die Kinder nie länger als 15 bis 20 Minuten vor den
+Computern sitzen, und holen vor allem kreative Software auf den Bildschirm.
+Das einsame Dämmern vor dem Computer ist wohl ohnehin eher Sache der Erwachsenen – die Kinder spielen
+immer zu zweit oder zu dritt an der Maschine. Eva Schilling hat beobachtet, dass die Kinder am Computer sehr
+friedlich miteinander umgehen, sie helfen sich gegenseitig, es gibt wenig Konflikte. Dabei entwickeln gerade
+Kinder, die sich sonst nur schwer auf etwas konzentrieren können, plötzlich ungeahnte Konzentrationszeiten.
+Eva Schilling kann sich deshalb die Computer als Dauereinrichtung im Kindergarten vorstellen.
+Aufgaben:
+[6] Das Schulamt hat ein Projekt gestartet, bei dem
+A) Computer in Kindergärten aufgestellt werden.
+B) Computerspiele für Vierjährige entwickelt werden sollen.
+C) Kinder neue Farbdrucker ausprobieren sollen.
+Lösung: A
+[7] Die Kinder
+A) hatten großen Spaß bei dem Projekt.
+B) wollten lieber draußen im Freien spielen.
+C) wussten nicht, wann sie ins Studio im Netz gehen sollten.
+Lösung: A
+[8] Eltern fürchten, dass
+A) der Computer ihren Kindern schadet .
+B) ihre Kinder nicht so früh aufstehen können.
+C) ihre Kinder vor dem Computer Angst haben.
+Lösung: A
+[9] Die Erzieherinnen
+A) arbeiten jeden Tag 15 bis 20 Minuten am Computer.
+B) spielen immer mit zwei oder drei Kindern am Computer.
+C) wählen für die Kinder die Software aus.
+Lösung: C
+[10] Wenn die Kinder am Computer sitzen, dann
+A) gibt es häufig Streit.
+B) hilft ein Kind dem anderen.
+C) können sich die meisten nicht lange konzentrieren.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m10-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie haben von einer noch unbekannten Schauspielerin gehört und möchten gern einen Film sehen.
+Lösung: D
+[12] Sie haben bereits in einem Hotel gearbeitet und suchen wieder eine neue interessante Stelle.
+Lösung: G
+[13] Sie interessieren sich für Umweltschutz und suchen eine passende Sendung.
+Lösung: F
+[14] Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz.
+Lösung: A
+[15] In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren.
+Lösung: I
+[16] Sie interessieren sich für moderne Stadtentwicklung und suchen dazu eine Sendung im Rundfunk.
+Lösung: K
+[17] Sie wollen bei der Deutschen Bahn eine Ausbildung machen.
+Lösung: X
+[18] Sie interessieren sich für politisches Theater und möchten am Wochenende dazu etwas hören oder sehen.
+Lösung: J
+[19] Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma.
+Lösung: L
+[20] Sie studieren Fremdsprachen und suchen einen Job, bei dem Sie mit Kindern arbeiten können.
+Lösung: H
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Liebe Beatrice, wie du ja weißt, sind meine Eltern seit Anfang Mai in einem Haus (21)Mittelnehmer in Spanien. Zuerst wollen meine Eltern warten, bis ich mit dem Gymnasium fertig bin. Aber dann sind sie doch (22) früher gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich wohne jetzt mit drei (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine Probleme. Ich staune selbst über meine Noten, wenn ich (27) denke, wie (28) Zeit ich mir für Hausaufgaben nehme.
+Manchmal schicken mir meine Eltern eine E-Mail. (29) sie rufen an.
+(30) jetzt habe ich jede Woche von ihnen gehört. Das war’s für heute, bis bald und liebe Grüße Saskia
+Aufgaben:
+[21] … ja weißt, sind meine Eltern seit Anfang Mai in einem Haus (21)Mittelnehmer in Spanien. Zuerst wollen meine Eltern …
+A) am
+B) in
+C) zum
+Lösung: A
+[22] … ich mit dem Gymnasium fertig bin. Aber dann sind sie doch (22) früher gefahren. Als ich im Sommer 18 wurde, wollte ich …
+A) bloß
+B) erst
+C) schon
+Lösung: C
+[23] … gefahren. Als ich im Sommer 18 wurde, wollte ich mit (23) älteren Bruder zusammen eine kleine Wohnung mieten. Das …
+A) mein
+B) meinem
+Lösung: B
+[24] … mieten. Das hat aber nicht geklappt. Eine Freundin hat (24) dann ein Zimmer inihrer Wohngemeinschaft angeboten. Ich …
+A) ihr
+B) mich
+C) mir
+Lösung: C
+[25] … Wohngemeinschaft angeboten. Ich wohne jetzt mit drei (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) …
+A) Freund
+B) Freundin
+C) Freundinnen
+Lösung: C
+[26] … (25) zusammen in der Innenstadt. Ich bin sehr zufrieden, (26) mein Zimmer recht klein ist. In der Schule habe ich keine …
+A) aber
+B) obwohl
+Lösung: B
+[27] … Probleme. Ich staune selbst über meine Noten, wenn ich (27) denke, wie (28) Zeit ich mir für Hausaufgaben nehme. …
+A) daran
+B) darauf
+C) darüber
+Lösung: A
+[28] … staune selbst über meine Noten, wenn ich (27) denke, wie (28) Zeit ich mir für Hausaufgaben nehme. Manchmal schicken …
+A) wenig
+B) wenigen
+C) weniger
+Lösung: A
+[29] … nehme. Manchmal schicken mir meine Eltern eine E-Mail. (29) sie rufen an. (30) jetzt habe ich jede Woche von ihnen …
+A) Damit
+B) Oder
+C) S d
+Lösung: B
+[30] … schicken mir meine Eltern eine E-Mail. (29) sie rufen an. (30) jetzt habe ich jede Woche von ihnen gehört. Das war’s für …
+A) Ab
+B) Bis
+C) Seit
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+meinen trotz Sondern
+C C
+Chiffre 2063/9369 Sehr geehrter Unbekannter,
+mein Mann und ich haben Ihre Anzeige in den Mitteilungen des Deutschen. Alpenvereins (31). Wir wohnen etwa 40 km außerhalb von Nürnberg und schreiben Ihnen, (32) wir Lust hätten, etwas in einer Gruppe zu machen.
+Unseren Sommerurlaub verbringen wir eigentlich regelmäßig in den Bergen. Und (33) es unser Terminkalender erlaubt, gehen wir auch noch am Wochenende wandern, (34) fahren wir in die Gegend vom Wilden Kaiser, wo wir inzwischen alle Wanderwege (35).
+Wir fahren zwar beide auch Ski, (36) der Winter den Bergen ist nicht so unbedingt unsere Sache. Dagegen macht es (37) viel Spaß. Fahrrad zu fahren,; hier in Leupoldstein haben wir tolle Radwege, die durch die Felder führen. Daher (38) wir uns auch auf gemeinsame Radtouren hier bei uns freuen.
+Zum Schluss noch ein (39) Worte zu uns selbst. Wir sind 64 und 62. Jahre alt, lieben Musik und gehen ab und zu gern ins Theater. Rufen Sie uns doch einfach (40) an: Tel.: 09243/7448.
+Viele Grüße Ilka und Heiner Grossmann
+Auswahl:
+A = ABER
+B = AUSSEN
+C = EINMAL
+D = ENTDECKT
+E = ETWAS
+F = HATTEN
+G = KENNEN
+H = LERNEN
+I = OFT
+J = PAAR
+K = UNS
+L = WANN
+M = WEIL
+N = WENN
+O = WÜRDEN
+Aufgaben:
+[31] … Anzeige in den Mitteilungen des Deutschen. Alpenvereins (31). Wir wohnen etwa 40 km außerhalb von Nürnberg und …
+Erklärung: Das Wort lautet: ENTDECKT
+Lösung: D
+[32] … etwa 40 km außerhalb von Nürnberg und schreiben Ihnen, (32) wir Lust hätten, etwas in einer Gruppe zu machen. Unseren …
+Erklärung: Das Wort lautet: WEIL
+Lösung: M
+[33] … verbringen wir eigentlich regelmäßig in den Bergen. Und (33) es unser Terminkalender erlaubt, gehen wir auch noch am …
+Erklärung: Das Wort lautet: WENN
+Lösung: N
+[34] … erlaubt, gehen wir auch noch am Wochenende wandern, (34) fahren wir in die Gegend vom Wilden Kaiser, wo wir …
+Erklärung: Das Wort lautet: OFT
+Lösung: I
+[35] … vom Wilden Kaiser, wo wir inzwischen alle Wanderwege (35). Wir fahren zwar beide auch Ski, (36) der Winter den …
+Erklärung: Das Wort lautet: KENNEN
+Lösung: G
+[36] … alle Wanderwege (35). Wir fahren zwar beide auch Ski, (36) der Winter den Bergen ist nicht so unbedingt unsere …
+Erklärung: Das Wort lautet: ABER
+Lösung: A
+[37] … ist nicht so unbedingt unsere Sache. Dagegen macht es (37) viel Spaß. Fahrrad zu fahren,; hier in Leupoldstein haben …
+Erklärung: Das Wort lautet: UNS
+Lösung: K
+[38] … wir tolle Radwege, die durch die Felder führen. Daher (38) wir uns auch auf gemeinsame Radtouren hier bei uns …
+Erklärung: Das Wort lautet: WÜRDEN
+Lösung: O
+[39] … Radtouren hier bei uns freuen. Zum Schluss noch ein (39) Worte zu uns selbst. Wir sind 64 und 62. Jahre alt, …
+Erklärung: Das Wort lautet: PAAR
+Lösung: J
+[40] … ab und zu gern ins Theater. Rufen Sie uns doch einfach (40) an: Tel.: 09243/7448. Viele Grüße Ilka und Heiner Grossmann
+Erklärung: Das Wort lautet: EINMAL
+Lösung: C
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.
+Lösung: falsch
+[42] Die Sprecherin geht den ganzen Weg zur Arbeit zu Fuß.
+Lösung: falsch
+[43] Der Sprecher fährt nie mit dem Auto zur Arbeit.
+Lösung: richtig
+[44] Der Sprecher benutzt für den Weg zur Arbeit zurzeit verschiedene Verkehrsmittel.
+Lösung: falsch
+[45] Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.
+Lösung: falsch
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Viele Touristen besuchen Torgau wegen seiner historischen Sehenswürdigkeiten.
+Lösung: richtig
+[47] Den Spielpark Hartenfels gibt es schon seit vielen Jahren.
+Lösung: falsch
+[48] Außer dem Spielpark gibt es in der Umgebung viele andere Freizeitmöglichkeiten für die Kinder.
+Lösung: falsch
+[49] Der Spielpark bietet den Kindern Spielmöglichkeiten, die sie zu Hause nicht haben.
+Lösung: richtig
+[50] Die Kinder können im Spielpark auch selbst etwas bauen.
+Lösung: richtig
+[51] Das Spielen am Back kann für die Kinder gefährlich werden.
+Lösung: falsch
+[52] Beide Elternteile müssen auf die Kinder aufpassen.
+Lösung: falsch
+[53] Im Spielpark können Kinder bis zum Alter von sieben von Aufsichtspersonen betreut werden.
+Lösung: falsch
+[54] Der Eintritt in den Spielpark ist zurzeit frei.
+Lösung: richtig
+[55] Die Schlossführung bereitet Kindern und Erwachsenen viel Spaß.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Sie können zwei Flüge nach Griechenland gewinnen.
+Lösung: falsch
+[57] Für Ihre Gruppe ist ein Wagen im Zug nach Aschaffenburg reserviert.
+Lösung: richtig
+[58] Auf der Internetseite kann man auch günstige Angebote für Haushaltsgerät.
+Lösung: richtig
+[59] Erst morgen Abend bildet sich Nebel..
+Lösung: falsch
+[60] Am besten fahren Sie ab Northeim mit dem Bus.
+Lösung: richtig
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie Vera. Schreiben Sie etwas zu allen vier Punkte:
+Extra:
+{
+ "brief": {
+  "intro": "Eine Freundin hat Ihnen den folgenden Brief geschrieben:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "Wie geht es dir und deiner Familie? Bei mir läuft alles prima. Endlich habe ich eine neue Arbeitsstelle. Ich habe nur ein kleines Problem: Es ist ein bisschen zu weit, um zu Fuß zu gehen. Und der Bus fährt nur alle 30 Minuten. Früher bin ich meist mit dem Fahrrad gefahren, aber hier gibt es keine Fahrradwege. Und da ist ja auch noch mein Daniel, den ich morgens in den Kindergarten bringen muss.",
+   "Der liegt zum Glück gleich neben meiner neuen Firma. – Wie kommst du denn zur Arbeit oder zum Deutschkurs?",
+   "Wollen wir uns nicht mal wieder treffen und alle zusammen was unternehmen? Ich würde mich freuen.",
+   "Liebe Grüße"
+  ],
+  "signature": "Vera"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der punkte, eine passende Betreff, eine"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie Vera. Schreiben Sie etwas zu allen vier Punkte:
+Mindestwörter: 100
+Punkt: Was es bei Ihnen Neues gibt
+Punkt: Was Sie zur Arbeit kommen
+Punkt: Was Sie über Veras neue Stelle wissen wollen
+Punkt: Vorschlag für gemeinsame Unternehmung?

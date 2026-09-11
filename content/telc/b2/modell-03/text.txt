@@ -1,0 +1,484 @@
+# URLAUBSANSPRUCH
+Untertitel: 53 Aufgaben · 125 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerde
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 5
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 35
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = Pflegefreistellung für Mütter und Väter: Arbeitnehmerinnen und Arbeitnehmer haben das Recht auf Freistellung am Arbeitsplatz, wenn ein im Haushalt lebendes Kind erkrankt und keine Betreuungsmöglichkeit vorhanden ist. Die Freistellung ist pro Arbeitsjahr begrenzt. In der Probezeit sollte man damit vorsichtig sein, da hier andere Kündigungsfristen gelten.
+B = Tipps für Frauen im Beruf: Frauen verkaufen sich oft unter Wert. Es ist besonders wichtig, dass Sie ausreichend über Ihre Rechte im Berufsleben informiert sind. Unsere Expertin für Arbeitsrecht gibt Tipps für Gehaltsverhandlungen und ein selbstbewusstes Auftreten. Außerdem informiert sie darüber, was Sie in einem Bewerbungsgespräch nicht erzählen müssen.
+C = Damit sich der Aufwand lohnt: Stellenangebote online zu schalten, kann für Unternehmen schnell sehr kostspielig werden. Nicht nur die Bekanntheit der Webseite ist dafür entscheidend, sondern auch die regionale Reichweite und der Grad der Spezialisierung.
+D = Der Bundesverband der Tourismusbranche informiert: Trotz anhaltend großer Nachfrage von Seiten der Arbeitgeber ist die Zahl der Bewerbungen rückläufig. Auch auf dem Ausbildungsmarkt fehlt es an jungen Menschen, die sich für dieses Arbeitsfeld interessieren. Offene Stellen werden demzufolge zügig besetzt.
+E = Informationen rund um den Mutterschutz: Frauen dürfen nach dem Mutterschutzgesetz während einer Schwangerschaft und bis zu vier Monate nach der Geburt nicht gekündigt werden. Voraussetzung hierfür ist jedoch, dass der Arbeitgeber zum Zeitpunkt der Kündigung von der Schwangerschaft wusste.
+F = Rechte berufstätiger Eltern: Eltern haben keinen Rechtsanspruch darauf, ihre Kinder am Arbeitsplatz zu betreuen. Die Entscheidung unterliegt der Zustimmung des Arbeitgebers und viele sind damit einverstanden, wenn sich so vermeiden lässt, dass sich die Eltern krankschreiben lassen. Arbeitsplätze, bei denen die Sicherheit des Kindes gefährdet ist, sind von dieser Regelung ausgeschlossen.
+G = Vom Traum zur Realität: Als angehender Gründer brauchen Sie nicht nur Branchenkenntnisse, sondern auch Wissen über betriebswirtschaftliche Vorgänge. Vom Businessplan und der richtigen Finanzierung über vernünftige Personalplanung bis hin zur Einholung der notwendigen Lizenzen kommen nun viele Dinge auf Sie zu.
+H = Die richtige Wahl spart Zeit und Frust: Die Suche nach einer neuen Stelle ist extrem zeitaufwendig. Im Internet erscheint das Angebot an offenen Stellen riesig, dennoch bleibt der Erfolg oft aus. Eine der wichtigsten Voraussetzungen ist es also, Jobangebote richtig zu filtern, um ohne großen Zeitaufwand die richtige Anzeige zu finden.
+Aufgaben:
+[1] Lamia überlegt, ob sie im Vorstellungsgespräch ihre Schwangerschaft erwähnen muss.
+Lösung: B
+[2] Raymond möchte im Internet einen Job finden.
+Lösung: H
+[3] Karl will sich in der Gastronomie selbstständig machen.
+Lösung: G
+[4] Sean ist unsicher, ob er seinen kranken Sohn mit ins Büro nehmen darf.
+Lösung: F
+[5] Ramona interessiert sich für Jobchancen als Reiseverkehrskauffrau.
+Lösung: D
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 12
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
+Text:
+**Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
+**Text 1: Urlaub**
+Jedem Mitarbeiter und jeder Mitarbeiterin in unserem Unternehmen stehen je nach Betriebszugehörigkeit bis zu 26 Tage Urlaub zu. Der Urlaub sollte nach Möglichkeit innerhalb des laufenden Kalenderjahres genommen werden. In Ausnahmefällen kann diese Frist bis zum 31.3. des Folgejahres verlängert werden.
+Grundsätzlich besteht der volle Urlaubsanspruch erst nach Ablauf der sechsmonatigen Probezeit. Ein anteiliger Urlaub ist jedoch nach Rücksprache auch bereits während dieser Zeit möglich.
+Urlaubsanträge für das folgende Kalenderjahr sind spätestens bis zum 15.11. mittels des dafür vorgesehenen Formulars beim Abteilungsleiter bzw. seiner Vertretung einzureichen. Den Urlaubswünschen der einzelnen Mitarbeiter wird entsprochen, sofern diese mit den Betriebsabläufen vereinbar sind. Sollten sich die beantragten Urlaubszeiten einzelner Kollegen und Kolleginnen überschneiden, wird nach sozialen Aspekten entschieden.
+Der Abteilungsleiter prüft alle Urlaubsanträge unverzüglich. Sollten die Wünsche der Mitarbeiter unvereinbar sein, wird der Betriebsrat mit dem Ziel der Einigung hinzugezogen.
+
+**Text 2: Rauchen**
+Im gesamten Betrieb gilt striktes Rauchverbot. Auf dem Betriebsgelände befinden sich vier durch Hinweisschilder gekennzeichnete Raucherzonen. Bitte benutzen Sie für Ihre Zigarettenreste die Standaschenbecher. Allerdings ist im Umkreis von mindestens 50 Metern rund um die Produktionshallen das Rauchen auch im Freien untersagt. Eine Missachtung dieser Regel zieht eine Abmahnung nach sich. Im Wiederholungsfall droht eine fristlose Kündigung.
+Das Rauchverbot schließt Zigaretten, Zigarren, Pfeifen und den Konsum ähnlich verwendbarer Substanzen sowie jeglichen Gebrauch von E-Zigaretten mit ein. Bei Veranstaltungen ist das Rauchen auch auf der Dachterrasse des Gebäudes A zulässig. Beschäftigte, die dort rauchen, sind dazu angehalten, die Terrassentür geschlossen zu halten.
+Zigarettenpausen während der Arbeitszeit sind grundsätzlich zulässig, dabei sind folgende Regelungen zu beachten: Raucherpausen sind nicht Bestandteil der Arbeitszeit, deshalb müssen sich Mitarbeiter ordnungsgemäß vom Zeiterfassungssystem ab- bzw. nach Beendigung der Pause wieder anmelden. Da die Raucherpause nicht zur Arbeitszeit gehört, greift währenddessen nach dem Arbeitsrecht die gesetzliche Unfallversicherung nicht.
+Aufgaben:
+[6] Im ersten halben Jahr nach Neueinstellung ist kein Urlaub möglich.
+A) richtig
+B) falsch
+Lösung: B
+[7] Urlaubsanträge müssen
+A) durch den Betriebsrat genehmigt werden.
+B) in jedem Fall bewilligt werden.
+C) rechtzeitig im Vorjahr gestellt werden.
+Lösung: C
+[8] Das Rauchverbot auf dem Firmengelände schließt E-Zigaretten ein.
+A) richtig
+B) falsch
+Lösung: A
+[9] Raucher
+A) erhalten weitere Informationen zu den Raucherbestimmungen in der Personalabteilung.
+B) müssen ihre Pausenzeiten dokumentieren.
+C) sind auch in der Raucherpause bei Unfällen versichert.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = Thilo: In meinen Augen ist Familie das Wichtigste auf der Welt. Es ist doch auch ein Gewinn, wenn man mehr Zeit mit seinen Kindern verbringen kann und weniger gestresst ist. Ich würde mich auf jeden Fall für Teilzeit entscheiden.
+B = Henny: Also ich finde es nicht gut, wenn Geschäfte und Supermärkte an Samstagen so lange geöffnet sind. Ihr müsst doch bedenken, dass dort auch Menschen arbeiten müssen. Sie wollen doch ebenfalls Wochenende haben und zu ihren Familien. Ich bin ganz klar gegen längere Ladenöffnungszeiten.
+C = Angela: Jeder Arbeitnehmer hat einen Rechtsanspruch auf Teilzeitarbeit. Allerdings musst du länger als sechs Monate bei dem Unternehmen beschäftigt sein. Man muss sich das aber genau überlegen, da man nicht nur kurz- oder mittelfristig weniger verdient, sondern auch weniger Rentenansprüche hat. Schau doch mal im Internet, wie viel das ausmacht.
+D = Ratna: Seit Kurzem haben Arbeitnehmer das Recht, eine befristete Zeit weniger zu arbeiten, aber das gilt bestimmt nicht rückwirkend. Soviel ich weiß, hast du also keinen Anspruch, in die Vollzeit zurückzukehren. Sprich doch einfach mal mit deinem Chef.
+E = Alex: Der Samstag ist ein normaler Werktag und deshalb kann der Arbeitgeber anordnen, dass an diesem Tag auch gearbeitet wird. Dabei spielt es keine Rolle, ob du Kinder hast oder nicht. Oft ist es aber auch so, dass du dann an einem anderen Tag in der Woche frei bekommst.
+F = Gerhard: Also ich würde mir das gut überlegen. Wenn du bisher gut über die Runden gekommen bist, könntest du dir doch etwas mehr Freizeit gönnen. Meines Erachtens geht es hier auch um mehr Lebensqualität. Das Leben ist zu kurz, um nur zu arbeiten.
+X = Kein Beitrag passt.
+Aufgaben:
+[10] Som: Meine Kinder sind unter der Woche ganztags in der Kita, damit ich Vollzeit arbeiten kann. Jetzt soll ich in den nächsten Wochen samstags ins Büro kommen. Ich habe aber niemanden, der da auf meine Kinder aufpassen kann. Kann der Arbeitgeber das verlangen?
+Lösung: E
+[11] Reinhold: Ich arbeite seit zwölf Jahren 20 Stunden die Woche und würde jetzt gerne, weil die Kinder aus dem Haus sind, meine Arbeitszeit aufstocken und wieder Vollzeit arbeiten. Habe ich ein Recht darauf?
+Lösung: D
+[12] Mandy: Seit zwei Jahren arbeite ich Vollzeit in einem Unternehmen und dieser Job macht mir auch viel Spaß. Aus familiären Gründen würde ich gerne eine dreijährige Auszeit nehmen. Ich überlege, ob ich mir das finanziell leisten kann.
+Lösung: X
+[13] Nici: Ich bekomme jetzt das zweite Kind und werde danach wahrscheinlich erst mal Teilzeit arbeiten. Jetzt habe ich ziemlich große Angst, dass ich in meiner Karriere den Anschluss verpasse. Soll ich vielleicht doch so schnell wie möglich wieder Vollzeit arbeiten?
+Lösung: A
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 13
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Protokoll 19.11.20XX, 08:00–11:45 Uhr**
+Zentrale, Raum 405
+Sitzungsleitung: Lukas Wallner (LW)
+Teilnehmende: Jessica Müller (JM, Personalabteilung), Maximilian Berger (MB, Marketingabteilung), Rebecca Lehmann (RL, Öffentlichkeitsarbeit), Kurt Meichsner (KM, Verkauf)
+Extern: Ansgar Wolf (AW, Hausverwaltung)
+Protokollantin: Beate Richter (BR)
+
+Tagesordnungspunkte:
+1. Begrüßung und Genehmigung des letzten Protokolls
+2. Personal
+3. Kundenbindung, Rabattaktion
+4. Vorbereitungen der Messe
+5. Neujahrsfeier
+6. Sonstiges
+
+TOP 1 Begrüßung und Genehmigung des letzten Protokolls: LW begrüßt alle Teilnehmer und eröffnet die heutige Besprechung. Herr Dr. Baumann aus der Qualitätssicherung lässt sich entschuldigen, da er in dieser Woche auf einer Dienstreise ist. Das Protokoll des Meetings vom 14. November wird ohne weitere Änderungen und Ergänzungen einstimmig per Handzeichen genehmigt.
+TOP 2 Personal: Die Kundenbetreuung ist aktuell unterbesetzt, weil viele Kollegen krank sind. Auch in der Personalabteilung herrscht ein hoher Krankenstand. Krankmeldungen aus allen Abteilungen sollen deshalb vorübergehend direkt an JM gesendet werden. Urlaubsanträge können im Moment nur im Falle dringender persönlicher Angelegenheiten genehmigt werden. Aufgrund des hohen Krankenstands mussten einige Kollegen in den letzten Monaten besonders viele Überstunden machen, die möglichst bis zum Ende des Kalenderjahres abgebaut werden sollten. Sollte dies aufgrund des hohen Arbeitspensums nicht möglich sein, können die Überstunden auch in das nächste Jahr übertragen werden. Herr Wortmann aus dem Verkauf geht am 1. Februar des nächsten Jahres in den Ruhestand. Sein Nachfolger wird KM, den Herr Wortmann ab sofort einarbeitet. Im Rahmen der Neujahrsfeier wird unser langjähriger Mitarbeiter verabschiedet. Wir möchten ihm zum Abschied eine Freude machen. Ideen hierzu bitte an JM, die anschließend das Geld einsammeln und das Geschenk besorgen wird. Zum 1. Dezember beginnen drei neue Mitarbeiter in der Produktion, da die Verkaufszahlen stark gestiegen sind.
+TOP 3 Kundenbindung, Rabattaktion: KM hat erfahren, dass der Wettbewerber Lutz GmbH für das Frühjahr eine Rabattaktion plant. RL schlägt vor, ebenfalls eine Kampagne zur Kundenbindung zu entwickeln. KM hat hierfür bereits einen ersten Entwurf für ein Konzept ausgearbeitet und legt diesen vor. Er schlägt vor, das Konzept in einer kleineren Runde zu diskutieren. Wer Interesse hat, an diesem Brainstorming teilzunehmen, soll sich bis zum Ende der Woche bei KM melden.
+TOP 4 Vorbereitungen der Messe: Im nächsten Jahr wird unsere Firma erstmals an der Frühjahrsmesse in Dresden teilnehmen, die vom 20.–24. April stattfindet. MB aus der Marketingabteilung berichtet, dass bereits der Standplatz gebucht und der Messebauer beauftragt ist. Interessierte können sich die Standgestaltung im Büro von MB ansehen. Auch die Broschüren zu unserem Messeauftritt sind bereits im Druck und können in der 2. KW an unsere Kunden verschickt werden. Abschließend bittet MB JM, externes Standpersonal und Hotelzimmer für die Mitarbeiter zu buchen, die auf die Messe gehen.
+TOP 5 Neujahrsfeier: JM berichtet, dass am 7. Januar die Neujahrsfeier im Restaurant „Zum Schwan" stattfindet. Die Einladungen und Menüvorschläge werden verschickt. Alle Mitarbeiter sollen bis zum 15. Dezember Bescheid sagen, mit wie vielen Personen sie teilnehmen und was sie essen möchten. Die Geschäftsführung hat auch eine kleine Überraschung für die Mitarbeiter an diesem Abend geplant.
+TOP 6 Sonstiges: AW informiert über Renovierungsarbeiten im ersten Stock, die für die nächste Woche geplant sind. Die Firma Buntschuh wird die Wände in der Teeküche Montag und Dienstag nächster Woche streichen. Da die Küche dafür komplett ausgeräumt werden muss, werden die Mitarbeiter gebeten, bei dieser Gelegenheit persönliche Gegenstände wie zum Beispiel nicht firmeneigene Kaffeetassen, Brotdosen und Ähnliches bis Donnerstag an sich zu nehmen. Ansonsten werden diese durch AW entsorgt.
+Aufgaben:
+[14] Bei der Sitzung wird
+A) das Protokoll der letzten Besprechung geändert.
+B) die Tagesordnung genehmigt.
+C) über Personalthemen gesprochen.
+Lösung: C
+[15] Einige Mitarbeiter machen Überstunden,
+A) da andere Kollegen Urlaub machen.
+B) obwohl sie selbst krank sind.
+C) weil viele Kollegen krank sind.
+Lösung: C
+[16] Herr Meichsner (KM)
+A) ist Wettbewerber der Firma.
+B) möchte sein Konzept besprechen.
+C) plant eine Rabattaktion im Frühling.
+Lösung: B
+[17] Die Firma
+A) besucht die Frühjahrsmesse regelmäßig.
+B) braucht Hilfe bei der Standgestaltung.
+C) lässt gerade Broschüren drucken.
+Lösung: C
+[18] Persönliche Gegenstände
+A) können während der Renovierung nicht in der Küche bleiben.
+B) sollen erst am Donnerstag mitgenommen werden.
+C) sollen durch die Hausverwaltung weggeworfen werden.
+Lösung: A
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Text:
+**Entwurf für die neue Firmenwebseite**
+Sehr geehrte Frau Spindler,
+vielen Dank für Ihren Entwurf für unsere neue Firmenwebseite. Ich habe ihn gemeinsam mit dem Team gesichtet und dabei ist uns aufgefallen, dass Ihre Agentur die Vorgaben an zwei Stellen leider nicht umgesetzt hat:
+Zum einen hatten wir besprochen, dass das Farbschema grau-orange sein sollte. Da statt Grau Blau gewählt wurde, glaube ich, dass es zu einem Missverständnis gekommen ist. Zum anderen sind auf der Seite mit den Ansprechpartnern die Namen einiger Mitarbeiter vertauscht worden. Im Anhang schicke ich Ihnen noch einmal eine Auflistung der Namen mit den dazugehörigen Bildern.
+Könnten Sie diese beiden Punkte bitte bis Anfang nächster Woche nachbessern? Eine kurze Rückmeldung wäre nett.
+Mit freundlichen Grüßen
+Franz Stiller
+Aufgaben:
+[19] Herr Stiller
+A) ist mit dem Entwurf der Agentur nicht einverstanden.
+B) möchte, dass Frau Spindler sich einen Entwurf ansieht.
+C) möchte wissen, wer den Entwurf überarbeiten kann.
+Lösung: A
+[20] Die Agenturchefin erklärt intern, dass sie
+A) weitere Änderungen nur gegen Aufpreis macht.
+B) überhaupt keine Fehler gemacht hat.
+C) vorab keine Vorgaben von Herrn Stiller hatte.
+Lösung: A
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf das Schreiben des Kunden.
+Text:
+**Arbeitsanweisung von Ihrer Agenturchefin:**
+Hallo Frau Holsten,
+ich habe heute Mittag die untenstehende Mail bekommen. Die vertauschten Namen sind unser Fehler und die verbessern wir auch. Bitte bestätigen Sie dem Kunden das. Aber mehr ist nun wirklich nicht drin. Das ist schon das fünfte Mal, dass er Korrekturwünsche hat, obwohl wir uns immer an die Vorgaben gehalten haben. So viele Korrekturen waren nicht vereinbart!
+Wenn wir das Farbschema noch ändern sollten, geht das nur gegen zusätzliche Bezahlung. Ich rechne mit 200 bis 300 € extra. Bitte teilen Sie ihm dies mit und lassen Sie sich von ihm sein Okay geben.
+Danke und viele Grüße
+Jutta Spindler
+Aufgaben:
+[B] Antworten Sie Herrn Stiller im Namen von Monika Holsten.
+Punkt: Bedauern über die Unannehmlichkeiten und Bestätigung der Korrektur der vertauschten Namen
+Punkt: Erklärung bezüglich des vereinbarten Farbschemas
+Punkt: Hinweis auf die Anzahl der bisherigen Korrekturen und Zusatzkosten für weitere Änderungen
+Punkt: Bitte um Zustimmung (sein Okay) für die kostenpflichtigen Anpassungen
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] Der Geschäftsführer und die Marketingleiterin sprechen über Maßnahmen zur Umsatzsteigerung.
+A) richtig
+B) falsch
+Lösung: A
+[23] Die Firma möchte
+A) ihre Preise drastisch senken.
+B) in Zukunft im Ausland produzieren.
+C) das Verkaufspersonal besser schulen.
+Lösung: C
+[24] Herr Thoma verkauft Bodenbeläge.
+A) richtig
+B) falsch
+Lösung: A
+[25] Frau Lüdeke
+A) reklamiert einen Schaden am Teppich.
+B) trifft ihre Entscheidung allein aufgrund des Musters.
+C) wundert sich über den Preisunterschied zwischen den beiden Teppichen.
+Lösung: C
+[26] Ignacio ist Amiras Kollege.
+A) richtig
+B) falsch
+Lösung: A
+[27] Die Erzieherin (Amira Herbst)
+A) arbeitet diese Woche vorübergehend in einer anderen Gruppe.
+B) kann diese Woche keinesfalls den Spätdienst übernehmen.
+C) muss diese Woche dauerhaft zwei Gruppen gleichzeitig betreuen.
+Lösung: A
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Aussagen. Welche Aussage a–f passt zu welcher Person 28–31?
+Auswahltitel: Aussagen
+Auswahl:
+A = Kleidung für die Feiertage sollte schick aussehen.
+B = Auf der Firmenfeier gibt es keine feste Kleiderordnung.
+C = Beim Firmenlauf sollen möglichst viele Mitarbeiter teilnehmen.
+D = Die Firma plant aus besonderem Anlass eine Kunden-Kampagne.
+E = Es gibt verschiedene Programmpunkte beim Betriebsausflug.
+F = Für den Firmenlauf werden sportliche Mitarbeiter gesucht.
+Aufgaben:
+[28] Person 1 (Herr Schmidt und Mia)
+Lösung: F
+[29] Person 2 (Herr 1, Emilia und Herr 2)
+Lösung: D
+[30] Person 3 (Michael und Sabine)
+Lösung: E
+[31] Person 4 (Lena, Ella und Tom)
+Lösung: B
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören eine Information der Geschäftsleitung. Wählen Sie für die Aufgaben 32–35 die richtige Lösung A, B oder C.
+Aufgaben:
+[32] Das alte Firmenlogo
+A) ist nicht überall einsetzbar.
+B) passt nicht mehr zum erweiterten Angebot.
+C) wirkt altmodisch und unmodern.
+Lösung: B
+[33] Das neue Firmenlogo enthält
+A) den vollständigen Namen des Unternehmens.
+B) weiterhin ein Symbol für Fußbälle.
+C) zwei farbige Elemente.
+Lösung: C
+[34] Herr Aydin
+A) wird sich bei der Umstellung Unterstützung von den Mitarbeitern holen.
+B) soll den Mitarbeitern das Logo erst Ende des Jahres vorstellen.
+C) wird die ersten Logo-Entwürfe erst im Sommer sehen.
+Lösung: A
+[35] Die Einführung des neuen Logos soll
+A) an einem einzigen Stichtag abgeschlossen sein.
+B) nach erfolgreichem Abschluss gemeinsam gefeiert werden.
+C) nicht länger als zwei Wochen dauern.
+Lösung: B
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf Ansagen auf der Mailbox. Wählen Sie für die Aufgaben 36–40 die richtige Lösung A, B oder C.
+Aufgaben:
+[36] Waldemar
+A) trifft die Geschäftspartner an der Produktionshalle.
+B) geht es gesundheitlich nicht gut.
+C) muss seine kranke Tochter von der Schule abholen.
+Lösung: C
+[37] Jana
+A) hat den Großauftrag bereits offiziell gemailt.
+B) möchte einen höheren Sonderrabatt aushandeln.
+C) benötigt die Drucker dringend für ihr neues Großraumbüro.
+Lösung: C
+[38] Erisia
+A) ist während der Mittagspause ganz alleine am Empfang.
+B) bittet Frau Schmidt, in den Konferenzraum zu kommen.
+C) braucht dringend jemanden zum Dolmetschen.
+Lösung: C
+[39] Trixi
+A) fährt selbst mit zur Messe nach Köln.
+B) hat die Hotelzimmer für alle Helfer bereits gebucht.
+C) findet keine preisgünstige Spedition für die Ausstellung.
+Lösung: A
+[40] Julius
+A) darf künftig keine externen Fortbildungen mehr buchen.
+B) erinnert an die strikten Sicherheits- und Rauchregeln bei der Fortbildung.
+C) hat negative Reaktionen der Mitarbeiter zu früheren Seminaren erhalten.
+Lösung: B
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben, Telefonnotiz
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+**Telefonnotiz: Fehlende Prospekte**
+Nachricht auf dem Anrufbeantworter von Herrn Städtler:
+„Guten Tag, hier spricht Herr Städtler, buchstabiert S-T-Ä-D-T-L-E-R. Ich habe kürzlich 180 Prospekte bei Ihnen bestellt. Allerdings sind nur 100 bei uns angekommen. Ich würde darum bitten, die fehlenden 80 Prospekte bis morgen zu liefern. Bitte rufen Sie mich zurück, um die Lieferung zu bestätigen. Sie erreichen mich unter der Telefonnummer 0173 536 47 15. Vielen Dank und auf Wiederhören.“
+Aufgaben:
+[41] Dokumentieren Sie die Kundenanfrage:
+Punkt: Name des Anrufers (Herr Städtler, S-T-Ä-D-T-L-E-R)
+Punkt: Telefonnummer (0173 536 47 15)
+Punkt: Gegenstand der Reklamation (180 Prospekte bestellt, aber nur 100 geliefert)
+Punkt: Kundenwunsch (Nachlieferung der fehlenden 80 Prospekte bis morgen)
+Punkt: Zu erledigen (Rückruf zur Bestätigung der Lieferung)
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–j passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = ANSONSTEN
+B = DAFÜR
+C = DAHIN
+D = DAVON
+E = DEREN
+F = DESSEN
+G = ZURÜCK
+H = WAS
+I = WIE
+J = ANBEI
+Text:
+**Rücksendung des Arbeitsvertrags und Vorbereitung auf den Arbeitsantritt**
+Sehr geehrte Frau Klingenberg,
+vielen Dank für die positive Nachricht, bereits zum ersten März bei Ihnen anfangen zu dürfen. Hierüber freue ich mich wirklich sehr. In der Anlage sende ich Ihnen den unterschriebenen Arbeitsvertrag (46). Nun bin ich gespannt auf die zukünftige Arbeit und den ersten Tag an meinem neuen Arbeitsplatz.
+Aber bis (47) ist ja noch etwas Zeit und deshalb wollte ich Sie fragen, wie ich mich auf meine neue Tätigkeit vorbereiten kann. Vielleicht können Sie mir fachspezifische Internetseiten empfehlen, mit (48) Hilfe ich mich intensiver mit den Produkten vertraut machen kann.
+Bei dem Vorstellungsgespräch sprachen Sie (49), dass Sie mir die Arbeitskleidung stellen. Benötigen Sie (50) meine Kleider- und Schuhgrößen?
+Das erforderliche ärztliche Attest vom Gesundheitsamt bringe ich, (51) besprochen, zum Arbeitsantritt mit.
+Sollten Sie sonst irgendetwas von mir benötigen, können Sie mich natürlich gern kontaktieren.
+Mit freundlichen Grüßen
+Philipp Kunz
+Aufgaben:
+[46] … In der Anlage sende ich Ihnen den unterschriebenen Arbeitsvertrag (46). …
+Lösung: G
+[47] … Aber bis (47) ist ja noch etwas Zeit und deshalb wollte ich Sie fragen, …
+Lösung: C
+[48] … fachspezifische Internetseiten empfehlen, mit (48) Hilfe ich mich intensiver …
+Lösung: E
+[49] … Bei dem Vorstellungsgespräch sprachen Sie (49), dass Sie mir die Arbeitskleidung stellen. …
+Lösung: D
+[50] … Benötigen Sie (50) meine Kleider- und Schuhgrößen? …
+Lösung: B
+[51] … ärztliche Attest vom Gesundheitsamt bringe ich, (51) besprochen, zum Arbeitsantritt mit. …
+Lösung: I
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Zahlungserinnerung**
+Sehr geehrter Herr Batic,
+im Oktober haben wir in Ihrem Firmengebäude an der Heizungsanlage Reparaturarbeiten ausgeführt. Da wir (52) gehört haben, gehen wir davon aus, dass alles zu Ihrer Zufriedenheit war.
+Allerdings ist bislang für unsere Rechnung Nr. 2008/123 in Höhe von 2.746,- Euro leider keine (53).
+Für den Fall, dass die Rechnung bei Ihnen verloren gegangen ist, senden wir Ihnen anbei eine Kopie mit der Bitte um (54).
+Da der Betrag bereits am 31. Oktober (55) war, können wir Ihnen den eingeräumten Skonto von 2% leider nicht mehr (56). Wir bitten um Verständnis.
+Sollten Sie die Rechnung (57) bezahlt haben, betrachten Sie dieses Schreiben bitte als gegenstandslos.
+Mit freundlichen Grüßen
+Ilka Desgrane
+Heizung und Sanitär Resch
+Aufgaben:
+[52] … Reparaturarbeiten ausgeführt. Da wir (52) gehört haben, gehen wir davon aus, …
+A) nichts Gegenteiliges
+B) nur Anderes
+C) viel Negatives
+Lösung: A
+[53] … Rechnung Nr. 2008/123 in Höhe von 2.746,- Euro leider keine (53). …
+A) Auszahlung veranlasst
+B) Einzahlung gemacht
+C) Zahlung eingegangen
+Lösung: C
+[54] … senden wir Ihnen anbei eine Kopie mit der Bitte um (54). …
+A) nachfolgenden Betrag
+B) schnellstmögliche Überweisung
+C) zeitnahe Korrektur
+Lösung: B
+[55] … Da der Betrag bereits am 31. Oktober (55) war, …
+A) abgelaufen
+B) fällig
+C) verspätet
+Lösung: B
+[56] … den eingeräumten Skonto von 2% leider nicht mehr (56). Wir bitten um Verständnis. …
+A) gewähren
+B) leisten
+C) überreichen
+Lösung: A
+[57] … Sollten Sie die Rechnung (57) bezahlt haben, betrachten Sie dieses Schreiben bitte als gegenstandslos. …
+A) infolgedessen
+B) währenddessen
+C) zwischenzeitlich
+Lösung: C
