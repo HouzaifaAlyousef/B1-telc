@@ -517,9 +517,15 @@ Deno.serve(async (req) => {
     }
 
     const text = String(update.message?.text ?? "").trim();
-    // رقمك بتلغرام — بدّك ياه مرّة وحدة تحطّه بجدول bot_admins
-    if (/^\/id\b/.test(text))
-      return void await send(chat, `<code>${from.id}</code>`), new Response("ok");
+    // الأرقام يلي بدّك ياها: رقمك لجدول bot_admins، ورقم المجموعة
+    // لـADMIN_CHAT_ID. بمجموعة الاتنين بيطلعوا سوا — أوفر من رحلة
+    // getUpdates وقراءة JSON بالإيد.
+    if (/^\/id\b/.test(text)) {
+      const mine = `🙋 رقمك: <code>${from.id}</code>`;
+      const here = chat !== from.id
+        ? `\n👥 رقم هالمجموعة: <code>${chat}</code>` : "";
+      return void await send(chat, mine + here), new Response("ok");
+    }
 
     // ★ زرّ من اللوحة الثابتة: نصّه بيقول الفعل واللغة سوا
     const hit = LABEL[text];

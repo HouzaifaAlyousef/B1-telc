@@ -330,7 +330,13 @@ check("★ ورفض ما بيعمل كود",
 /* ---- ١٥) /id بيرجّع رقمك ---- */
 sent.length = 0;
 await post(msg("/id"));
-check("/id بيرجّع رقم تلغرام", String(last()?.text).includes(String(TG_ID)));
+check("/id بالخاص بيرجّع رقمك", String(last()?.text).includes(String(TG_ID))
+      && !/المجموعة/.test(String(last()?.text)));
+sent.length = 0;
+await post({ message: { chat: { id: -1001234567890 },
+  from: { id: TG_ID, username: "kiko" }, text: "/id" } });
+check("★ و/id بالمجموعة بيرجّع رقم المجموعة كمان",
+      /-1001234567890/.test(String(last()?.text)) && /المجموعة/.test(String(last()?.text)));
 
 await supa.shutdown(); await tgSrv.shutdown();
 const bad = R.filter(x => !x[1]);
