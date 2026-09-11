@@ -434,7 +434,9 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
   try {
     res = await rpc("bot_decide_request", {
       p_admin_telegram_id: from.id, p_request_id: id,
-      p_approve: approve, p_reason: approve ? null : reason });
+      p_approve: approve, p_reason: approve ? null : reason,
+      // ★ وين انضغط الزرّ: عضويّة المجموعة لحالها بتكفي صلاحية
+      p_chat_id: cb.message?.chat?.id ?? null });
   } catch (e) {
     // ★ مين مو بـbot_admins بيوصل لهون بس القاعدة بترفضه.
     //   تنبيه إله لحاله — ما منوسّخ المجموعة برسالة بيشوفها الكل.

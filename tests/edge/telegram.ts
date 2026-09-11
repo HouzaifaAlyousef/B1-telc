@@ -49,7 +49,7 @@ Deno.env.set("SUPABASE_SERVICE_ROLE_KEY", "SERVICE_KEY");
 Deno.env.set("TELEGRAM_BOT_TOKEN", "T0KEN");
 Deno.env.set("TELEGRAM_WEBHOOK_SECRET", "s3cret");
 Deno.env.set("APP_URL", "https://b1-telc.example.dev");
-Deno.env.set("ADMIN_CHAT_ID", "424242");
+Deno.env.set("ADMIN_CHAT_ID", "-1004242");   // مجموعة، مو شخص
 
 /* نداءات api.telegram.org بتتحوّل للسيرفر المزيّف */
 const realFetch = globalThis.fetch;
@@ -221,7 +221,9 @@ check("جسم مو JSON بيرد ٢٠٠", r.status === 200);
 
 /* ---- ١٠) الوصول الكامل: الطلب ---- */
 psql(`delete from access_requests; delete from bot_admins;`);
-const BOSS = 424242;              // قناتك = رقمك هون
+const GROUP = -1004242;           // مجموعة الموافقات
+const BOSS  = 700001;             // إنت — عضو فيها
+const MATE  = 700002;             // شريكك — عضو كمان، وما هو مسجّل لحاله
 sent.length = 0;
 await post(click("l|ar|b1"));     // كوده التجريبي (تكرار)
 check(`★ مع الكود بتطلع لوحة ثابتة بأربع أزرار (${perm(TG_ID).length})`,
@@ -250,8 +252,8 @@ check("★ بيسأل لكم شهر",
 sent.length = 0;
 await post(click("m|ar|3"));
 check("★ الطالب بيوصله «استنى»", /طلبك وصل/.test(String(toChat(TG_ID)?.text)));
-const adminMsg = toChat(BOSS);
-check("★★ وإنت بيوصلك الطلب بقناتك",
+const adminMsg = toChat(GROUP);
+check("★★ والطلب بيوصل المجموعة",
       !!adminMsg && /طلب وصول كامل/.test(String(adminMsg.text)) && /3/.test(String(adminMsg.text)));
 const reqId = (String(adminMsg?.reply_markup?.inline_keyboard?.[0]?.[0]?.callback_data)
                .split("|")[1]) ?? "";
@@ -271,11 +273,12 @@ check("★★ والطلب لسا معلّق",
       psql(`select status from access_requests where id='${reqId}';`) === "pending");
 
 /* ---- ١٢) إنت بتوافق ---- */
-psql(`insert into bot_admins (telegram_id) values (${BOSS});`);
+// ★ منسجّل **المجموعة** مو الأشخاص — العضوية هي الصلاحية
+psql(`insert into bot_admins (telegram_id, label) values (${GROUP}, 'المجموعة');`);
 sent.length = 0;
 await post({ callback_query: { id: "cbA", data: `A|${reqId}`,
   from: { id: BOSS, username: "boss", language_code: "de" },
-  message: { chat: { id: BOSS }, message_id: 22, text: "طلب" } } });
+  message: { chat: { id: GROUP }, message_id: 22, text: "طلب" } } });
 const full = psql(`select code || '/' || duration_days || '/' ||
                      coalesce(array_length(test_slugs,1)::text,'كل')
                    from access_codes where note like 'telegram-full:%';`);
@@ -284,6 +287,8 @@ check("★ والطالب وصله الكود",
       /تمّت الموافقة/.test(String(toChat(TG_ID)?.text)));
 check("★★ ورسالة الطلب انختمت: مين وافق مكتوب",
       /وافق @boss/.test(String(lastOf("editMessageText")?.text)));
+check("★★ وBOSS نفسه مو مسجّل — مرق بالعضوية بس",
+      psql(`select count(*) from bot_admins where telegram_id = ${BOSS};`) === "0");
 check("★★ وأزرارها راحت — ما حدا بيقدر يغيّر القرار",
       lastOf("editMessageText") !== undefined
       && lastOf("editMessageText").reply_markup === undefined);
@@ -292,7 +297,7 @@ check("★★ وأزرارها راحت — ما حدا بيقدر يغيّر ا
 sent.length = 0;
 await post({ callback_query: { id: "cbA2", data: `A|${reqId}`,
   from: { id: BOSS, username: "boss", language_code: "de" },
-  message: { chat: { id: BOSS }, message_id: 22, text: "طلب" } } });
+  message: { chat: { id: GROUP }, message_id: 22, text: "طلب" } } });
 check("★ الموافقة التانية بتقول «سبق وانبتّ فيه»",
       /سبق وانبتّ/.test(String(lastOf("answerCallbackQuery")?.text)));
 check("★ وضلّ كود كامل واحد",
@@ -309,16 +314,18 @@ await post({ callback_query: { id: "c2", data: "m|de|1",
 const req2 = psql(`select id from access_requests where telegram_id=55502 and status='pending';`);
 sent.length = 0;
 await post({ callback_query: { id: "c3", data: `R|${req2}`,
-  from: { id: BOSS }, message: { chat: { id: BOSS }, message_id: 33, text: "طلب" } } });
+  from: { id: MATE }, message: { chat: { id: GROUP }, message_id: 33, text: "طلب" } } });
 const rk = lastOf("editMessageReplyMarkup")?.reply_markup?.inline_keyboard?.flat() ?? [];
 check(`★ «ارفض» بيبدّل الأزرار بأسباب بنفس الرسالة (${rk.length})`,
       rk.length === 4 && rk.every((b: any) => String(b.callback_data).startsWith("X|")));
 sent.length = 0;
 await post({ callback_query: { id: "c4", data: `X|${req2}|soon`,
-  from: { id: BOSS }, message: { chat: { id: BOSS }, message_id: 33, text: "طلب" } } });
+  from: { id: MATE }, message: { chat: { id: GROUP }, message_id: 33, text: "طلب" } } });
 check("★ الطالب وصله سبب الرفض بلغته هو (ألماني)",
       /nicht bewilligt/.test(String(toChat(55502)?.text))
       && /später/.test(String(toChat(55502)?.text)));
+check("★★ وشريكك (عضو تاني، مو مسجّل) قدر يرفض كمان",
+      psql(`select decided_by from access_requests where id='${req2}';`) === String(MATE));
 check("★★ ورسالة الطلب انختمت بالرفض وبلا أزرار",
       /رفض/.test(String(lastOf("editMessageText")?.text))
       && lastOf("editMessageText").reply_markup === undefined);

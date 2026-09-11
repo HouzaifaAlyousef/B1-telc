@@ -121,6 +121,38 @@ begin
     perform t_check('مدّة برّا المدى مرفوضة', SQLERRM like '%months_out_of_range%');
   end;
 
+  -- ── المجموعة بدل الأشخاص ──
+  delete from bot_admins;
+  insert into bot_admins (telegram_id, label) values (-1009999, 'المجموعة');
+
+  perform bot_demo_code(900077, 900077, 'dritter', 'ar', 'req-b1');
+  r := bot_request_access(900077, 2);
+  req := (r->>'request_id')::uuid;
+
+  -- ★ نفس الشخص، بس الضغطة جوّا المجموعة المسجّلة
+  begin
+    perform bot_decide_request(tg_liar, req, true, null, null);
+    perform t_check('★★ برّا المجموعة مرفوض', false);
+  exception when others then
+    perform t_check('★★ نفس الشخص برّا المجموعة مرفوض', SQLERRM like '%not_bot_admin%');
+  end;
+
+  r := bot_decide_request(tg_liar, req, true, null, -1009999);
+  perform t_check('★★ وجوّا المجموعة بيمرق — العضوية هي الصلاحية',
+                  (r->>'ok')::boolean and r->>'status' = 'approved');
+  perform t_check('★ ومين قرّر انسجّل شخص مو مجموعة',
+    (select decided_by from access_requests where id = req) = tg_liar);
+
+  -- ★ مجموعة تانية مو مسجّلة ما بتشتغل
+  perform bot_demo_code(900078, 900078, 'vierter', 'ar', 'req-b1');
+  req := (bot_request_access(900078, 1)->>'request_id')::uuid;
+  begin
+    perform bot_decide_request(tg_liar, req, true, null, -1000001);
+    perform t_check('★★ مجموعة مو مسجّلة مرفوضة', false);
+  exception when others then
+    perform t_check('★★ مجموعة تانية مو مسجّلة مرفوضة', SQLERRM like '%not_bot_admin%');
+  end;
+
   raise notice '';
   raise notice '  كل اختبارات طلبات الوصول نجحت ✓';
 end $$;
