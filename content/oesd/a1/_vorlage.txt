@@ -1,20 +1,268 @@
 // =====================================================================
-// قالب فاضي — oesd A1
+// LEERE VORLAGE — ÖSD Zertifikat A1 (ZA1)
 //
-// ★ هالملف لسا فاضي بالقصد، ومو نسيان.
-//
-// القالب بيوصف **شكل الامتحان**: كم قسم، شو أنواع الأسئلة، كم نقطة لكل
-// قسم، وكم دقيقة. وهاد بيفرق من امتحان لامتحان: telc B1 إله ٦١ سؤال
-// و٢٢٥ نقطة بتلات كتل، وoesd A1 إله شكل تاني.
-//
-// ما بينعمل بالتخمين. لازم PDF واحد حقيقي لهالامتحان تا ينكتب القالب
-// صح — وبعدها بينستعمل لكل نماذج هالمستوى.
-//
-// شو تعمل لما يصير عندك PDF:
-//   ١) احكيلي «اعملي قالب لـoesd A1» وأعطيني الـPDF
-//   ٢) بكتب القالب هون، مع كل الأقسام والنقاط
-//   ٣) بعدها بتعطي القالب + الـPDF لأي ذكاء اصطناعي حسب
-//      docs/vorlage/ki-prompt.md، وبيرجّعلك النص معبّى
-//
-// المرجع الشغّال: content/telc/b1/_vorlage.txt
+// Struktur der schriftlichen Prüfung (55 Minuten · 80 Punkte):
+// - Lesen (25 Minuten · 30 Punkte):
+//   - lv1 (matching): 5 Aufgaben [1–5] · Punkte: 2 · Maximum: 10
+//   - lv2 (mc): 6 Aufgaben [6–11] · Punkte: 1.67 · Maximum: 10
+//   - lv3 (matching): 5 Aufgaben [12–16] · Punkte: 2 · Maximum: 10
+// - Hören (ca. 10 Minuten · 30 Punkte):
+//   - hv1 (matching): 5 Aufgaben [17–21] · Punkte: 2 · Maximum: 10
+//   - hv2 (writing): 1 Aufgabe [22] · Punkte: 10 · Maximum: 10
+//   - hv3 (mc): 5 Aufgaben [23–27] · Punkte: 2 · Maximum: 10
+// - Schreiben (20 Minuten · 20 Punkte):
+//   - s1 (writing): 1 Aufgabe [28] · Punkte: 10 · Maximum: 10
+//   - s2 (writing): 1 Aufgabe [29] · Punkte: 10 · Maximum: 10
 // =====================================================================
+
+# <PRUEFUNGSNAME>
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Auswahl:
+1 = <Anzeige 1>
+2 = <Anzeige 2>
+3 = <Anzeige 3>
+4 = <Anzeige 4>
+5 = <Anzeige 5>
+6 = <Anzeige 6>
+Aufgaben:
+[1] <Situation A>
+Lösung: <1 bis 6>
+[2] <Situation B>
+Lösung: <1 bis 6>
+[3] <Situation C>
+Lösung: <1 bis 6>
+[4] <Situation D>
+Lösung: <1 bis 6>
+[5] <Situation E>
+Lösung: <1 bis 6>
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**<Anzeige 1: Titel>**
+<Anzeige 1: Text>
+Aufgaben:
+[6] <Frage 1>
+A) JA
+B) NEIN
+Lösung: <A oder B>
+[7] <Frage 2>
+A) JA
+B) NEIN
+Lösung: <A oder B>
+Text:
+**<Anzeige 2: Titel>**
+<Anzeige 2: Text>
+Aufgaben:
+[8] <Frage 3>
+A) JA
+B) NEIN
+Lösung: <A oder B>
+[9] <Frage 4>
+A) JA
+B) NEIN
+Lösung: <A oder B>
+Text:
+**<Anzeige 3: Titel>**
+<Anzeige 3: Text>
+Aufgaben:
+[10] <Frage 5>
+A) JA
+B) NEIN
+Lösung: <A oder B>
+[11] <Frage 6>
+A) JA
+B) NEIN
+Lösung: <A oder B>
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/<name>-lv3.png
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] <Text A>
+Lösung: <1 bis 6>
+[13] <Text B>
+Lösung: <1 bis 6>
+[14] <Text C>
+Lösung: <1 bis 6>
+[15] <Text D>
+Lösung: <1 bis 6>
+[16] <Text E>
+Lösung: <1 bis 6>
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/<name>-hv1.png
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: <A bis F>
+[18] Text 2
+Lösung: <A bis F>
+[19] Text 3
+Lösung: <A bis F>
+[20] Text 4
+Lösung: <A bis F>
+[21] Text 5
+Lösung: <A bis F>
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt.
+Text:
+**Telefonnotiz: <Thema>**
+<Notiz-Kontext / Hörtext>
+Aufgaben:
+[22] Füllen Sie die Telefonnotiz aus:
+Punkt: <Angabe 1>
+Punkt: <Angabe 2>
+Punkt: <Angabe 3>
+Punkt: <Angabe 4>
+Punkt: <Angabe 5>
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören 5 Personen, die befragt werden. Hören Sie gut zu und kreuzen Sie die richtigen Antworten an.
+Aufgaben:
+[23] Person 1: <Frage>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+D) <Option D>
+Lösung: <A bis D>
+[24] Person 2: <Frage>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+D) <Option D>
+Lösung: <A bis D>
+[25] Person 3: <Frage>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+D) <Option D>
+Lösung: <A bis D>
+[26] Person 4: <Frage>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+D) <Option D>
+Lösung: <A bis D>
+[27] Person 5: <Frage>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+D) <Option D>
+Lösung: <A bis D>
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Schreiben Sie die fünf fehlenden Informationen in das Formular.
+Text:
+<Situationsbeschreibung>
+Aufgaben:
+[28] Füllen Sie das Formular aus:
+Punkt: (1) <Angabe 1>
+Punkt: (2) <Angabe 2>
+Punkt: (3) <Angabe 3>
+Punkt: (4) <Angabe 4>
+Punkt: (5) <Angabe 5>
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Antworten Sie auf die Nachricht. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**<Betreff>**
+<E-Mail-Text>
+Aufgaben:
+[29] Antworten Sie auf die E-Mail (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: <Leitpunkt 1>
+Punkt: <Leitpunkt 2>
+Punkt: <Leitpunkt 3>
+Punkt: Gruß am Ende

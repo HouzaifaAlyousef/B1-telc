@@ -1,0 +1,277 @@
+# MODELLSATZ
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/m01-lv1.png
+Auswahl:
+1 = Sekretärin/Sekretär gesucht: Internationale Firma sucht Sekretärin/Sekretär mit Berufserfahrung (Vollzeit). Aufgaben: telefonische Kundenbetreuung, organisatorische Tätigkeiten. Bewerbungen an: info@personalvermittlung-holzer.de
+2 = Fitnesscenter Olymp: Unser Angebot: 120 Geräte für Kraft- und Fitnesstraining, Rückengymnastik, Beratung durch geprüfte Trainer. Burggasse 10, 1070 Wien, täglich 10–22 Uhr
+3 = Buchhandlung Steiner: Bücher zum halben Preis: Richtig telefonieren – Gesprächstraining für SekretärInnen; Gesund essen im Büro: 50 Kochideen; 100 Jahre Sportfotografie; Diverse Kinderbücher. Angebot gültig bis Ende Mai
+4 = Die ganze Welt um wenig Geld! Günstige Auslandsanrufe ab 1,9 Cent/Minute. weltweitanrufen.de bietet Ihnen die besten Tarife für Anrufe in Mobilnetze und ins ausländische Festnetz. www.weltweitanrufen.de
+5 = SIE SUCHEN JEMANDEN, der Ihre Wäsche wäscht und bügelt? SIE BRAUCHEN JEMANDEN, der beim Saubermachen oder bei der Gartenarbeit hilft? Kein Problem! RUFEN SIE MICH AN: Petra Maier, Tel. 0676 55 68 987
+6 = Feinkost Klement: In unserem Delikatessengeschäft bieten wir Ihnen: hausgemachte Salate, Brötchen mit Ei- und Curryaufstrich, Schinken und Käse aus der Region. Petersgasse 8, 4051 Basel, Mo–Sa: 9–18 Uhr
+Aufgaben:
+[1] Situation A: Sie haben viele Freunde in anderen Ländern und möchten billig mit ihnen telefonieren.
+Lösung: 4
+[2] Situation B: Sie sollen für ein Fest etwas zum Essen mitbringen. Sie haben keine Zeit zum Kochen.
+Lösung: 6
+[3] Situation C: Sie suchen einen Job. Sie wollen in einem Büro arbeiten.
+Lösung: 1
+[4] Situation D: Sie haben eine große Wohnung. Sie brauchen Hilfe bei der Hausarbeit.
+Lösung: 5
+[5] Situation E: Sie arbeiten viel am Computer. In Ihrer Freizeit möchten Sie Sport machen.
+Lösung: 2
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**Schönes-Wochenende-Ticket**
+• gültig ab Samstag 0 Uhr bis Montag 3 Uhr für Reisen in Deutschland
+• für Gruppen bis zu fünf Personen und für Einzelreisende
+Preis: 39 Euro im Internet, 41 Euro im Reisezentrum an Ihrem Bahnhof
+www.bahn.de/angebote
+Aufgaben:
+[6] Kann man am Freitagabend mit dem Ticket fahren?
+A) JA
+B) NEIN
+Lösung: B
+[7] Kostet das Ticket beim Kauf am Bahnhof mehr?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Lesen im Park**
+Im Sommer gibt es in Grazer Parks wieder Bücherkisten mit vielen Kinderbüchern – zum Lesen vor Ort oder zum Mit-nach-Hause-Nehmen.
+Weitere Aktivitäten: Bastel- und Malgruppen; Papier und Stifte haben wir für dich.
+www.lesen-im-park.at
+Aufgaben:
+[8] Darf man die Bücher nur im Park lesen?
+A) JA
+B) NEIN
+Lösung: B
+[9] Müssen die Kinder Papier und Stifte mitbringen?
+A) JA
+B) NEIN
+Lösung: B
+Text:
+**3-Zimmer-Wohnung**
+Neu renovierte Wohnung (63 m²) ab 1. August zu vermieten
+Gesamtmiete: CHF 1.200,–
+Sie haben noch Fragen? Schreiben Sie eine E-Mail an: info@immobilien-heiss.ch
+Termine zur Wohnungsbesichtigung: 15. Juli, 11.00 Uhr | 18. Juli, 15.00 Uhr
+Aufgaben:
+[10] Kann man telefonisch Informationen bekommen?
+A) JA
+B) NEIN
+Lösung: B
+[11] Kann man die Wohnung am Vormittag sehen?
+A) JA
+B) NEIN
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/m01-lv3.png
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: Liebe Besucherinnen und Besucher! Im Krankenhaus ist das Telefonieren mit Handy verboten. Bitte schalten Sie Ihr Handy während Ihres Besuchs bei uns aus.
+Lösung: 5
+[13] Text B: Gasthaus Neuwirth: leichte regionale Küche, frische Salate vom Buffet, günstige Mittagsmenüs. Mo–Sa: 9–22 Uhr | Sonntag Ruhetag
+Lösung: 4
+[14] Text C: Liebe Kolleginnen und Kollegen! In den Büroräumen ist das Rauchen verboten. Bitte nützen Sie die Raucherzonen im Erdgeschoss.
+Lösung: 1
+[15] Text D: Liebe Hundebesitzer! Wir bitten Sie, im Interesse aller Parkbenützer Ihren Hund an die Leine zu nehmen.
+Lösung: 6
+[16] Text E: Der Flughafen-Bus bringt Sie schnell und bequem ins Stadtzentrum. Nützen Sie das Angebot! Fahrplanauskünfte am Flughafen Graz: +43 (316) 2902 172
+Lösung: 3
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/m01-hv1.png
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: E
+[18] Text 2
+Lösung: C
+[19] Text 3
+Lösung: F
+[20] Text 4
+Lösung: D
+[21] Text 5
+Lösung: A
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Auto ansehen**
+Was: Auto ansehen (Beispiel)
+Wann: am ............................, am Nachmittag, ............................ Mai, um ............................ Uhr
+Wo: in der ............................gasse 12
+Telefonnummer: 0664 / ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Wann (Wochentag): Dienstag / Di.
+Punkt: Wann (Datum): 12. Mai
+Punkt: Wann (Uhrzeit): 14 Uhr / 2 Uhr nachmittags
+Punkt: Wo (Straßenname): Bernergasse 12
+Punkt: Telefonnummer: 0664 / 2582641
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Wo gefällt es Ihnen am besten?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Person 1: Wo gefällt es Ihnen am besten?
+A) Afrika
+B) Amerika
+C) Asien
+D) Europa
+Lösung: C
+[24] Person 2: Wo gefällt es Ihnen am besten?
+A) Afrika
+B) Amerika
+C) Asien
+D) Europa
+Lösung: A
+[25] Person 3: Wo gefällt es Ihnen am besten?
+A) Afrika
+B) Amerika
+C) Asien
+D) Europa
+Lösung: D
+[26] Person 4: Wo gefällt es Ihnen am besten?
+A) Afrika
+B) Amerika
+C) Asien
+D) Europa
+Lösung: B
+[27] Person 5: Wo gefällt es Ihnen am besten?
+A) Afrika
+B) Amerika
+C) Asien
+D) Europa
+Lösung: A
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Schreiben Sie die fünf fehlenden Informationen in das Formular.
+Text:
+Die Tochter von Ihrem Nachbarn, Emina Kostić, 7 Jahre alt, möchte im Sportverein Fußball spielen. Sie hat nur am Mittwochnachmittag Zeit. Sie möchte sofort anfangen. Ihre Eltern wollen den Mitgliedsbeitrag jeden Monat überweisen.
+**Anmeldung: Sportverein**
+Name, Vorname: Kostić, Emina
+Straße/Hausnummer: Waldstraße 7
+Wohnort: 87656 Germaringen
+Telefon: 0 83 41/55 74 32
+Sportart: (1) ............................
+Alter: (2) ............................
+Wochentag: (3) ............................
+Beginn: (4) ............................
+Zahlung: (5) bar / Überweisung
+Unterschrift: Dragomir Kostić
+Aufgaben:
+[28] Schreiben Sie die fünf fehlenden Informationen in das Formular:
+Punkt: (1) Sportart: Fußball
+Punkt: (2) Alter: 7 (Jahre)
+Punkt: (3) Wochentag: Mittwoch / Mittwochnachmittag
+Punkt: (4) Beginn: sofort
+Punkt: (5) Zahlung: Überweisung
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Ihre Freundin Rafaela wohnt in Berlin und hat Sie eingeladen. Sie möchten bald zu ihr fahren und bekommen folgendes Mail von ihr. Antworten Sie Rafaela. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Hallo!**
+Du schreibst, du möchtest bald zu mir nach Berlin kommen. Ich freue mich schon sehr! Du kannst auch gerne jemanden von deiner Familie oder Freunde mitbringen.
+Schreib mir bitte: An welchem Tag und um wie viel Uhr kommst du? Wie lange möchtest du bleiben? Wen bringst du mit?
+Liebe Grüße
+Rafaela
+Aufgaben:
+[29] Antworten Sie Rafaela (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: An welchem Tag und um wie viel Uhr kommst du?
+Punkt: Wie lange möchtest du bleiben?
+Punkt: Wen bringst du mit?
+Punkt: Gruß am Ende
