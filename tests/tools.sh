@@ -190,6 +190,65 @@ done
 git diff --quiet -- supabase/seed/parts/ 2>/dev/null
 check "★ والأجزاء مطابقة للملفات الكاملة" $?
 
+# ---------- فحص الجاهزية ----------
+# ★ health.sql أداة تشخيص: لازم تشتغل **على قاعدة فاضية** كمان، لأنّ
+#   هيك بالضبط حالة مين بيشغّلها. فحص بيموت على المشكلة يلي المفروض
+#   يشخّصها بلا فايدة — وهاد صار بأوّل نسخة منه.
+if psql -h /tmp -p "${PGPORT:-5433}" -U postgres -c '' 2>/dev/null; then
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -q \
+    -c "drop database if exists healthtest;" -c "create database healthtest;" >/dev/null 2>&1
+
+  OUT=$(psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest \
+        -f supabase/health.sql 2>&1)
+  [ $? = 0 ] && ! echo "$OUT" | grep -q "^ERROR"
+  check "★ health.sql بيشتغل على قاعدة فاضية بلا ما يموت" $?
+
+  echo "$OUT" | grep -q "شغّل supabase/setup.sql"
+  check "★ وبيقول شو لازم يعمل مو بس «فيه خطأ»" $?
+
+  # وعلى قاعدة كاملة: لازم يمرق وما يشتكي من السكيما
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest -q \
+    -f supabase/tests/bootstrap.sql >/dev/null 2>&1
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest -q \
+    -f supabase/setup.sql >/dev/null 2>&1
+  OUT=$(psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest \
+        -f supabase/health.sql 2>&1)
+  ! echo "$OUT" | grep -q "^ERROR"
+  check "★ وعلى سكيما كاملة كمان" $?
+
+  echo "$OUT" | grep -qE "نسخة السكيما.*✅|✅.*نسخة السكيما"
+  check "★ وبيعرف إنّ السكيما صارت محدّثة" $?
+
+  # ★ والفحص لازم يمسك صور ناقصة — وإلا ما إله فايدة
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest -q >/dev/null 2>&1 <<'SQL'
+insert into levels (id, title, published, provider, stufe)
+  values ('ht-b1','HT B1',true,'ht','B1') on conflict do nothing;
+insert into tests (level_id, slug, title, blocks, aufgaben, published, sort)
+  values ('ht-b1','ht-01','HT',  '[]'::jsonb, 1, true, 1) on conflict do nothing;
+insert into sections (test_id, section_id, title, format, config, sort)
+  select t.id,'lv3','LV3','matching','{"bankImage":"img/ht-01.jpg"}'::jsonb,0
+    from tests t where t.slug='ht-01' on conflict do nothing;
+SQL
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest \
+    -f supabase/health.sql 2>&1 | grep -q "ناقصة"
+  check "★★ وبيمسك صورة مطلوبة ومو مرفوعة" $?
+
+  # وبعد ما تنرفع بيرضى
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest -q >/dev/null 2>&1 <<'SQL'
+insert into storage.buckets (id, name) values ('exam-images','exam-images')
+  on conflict do nothing;
+insert into storage.objects (bucket_id, name) values ('exam-images','img/ht-01.jpg');
+SQL
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d healthtest \
+    -f supabase/health.sql 2>&1 | grep -q "1 من 1 مرفوعة"
+  check "★★ وبيرضى لما تنرفع" $?
+
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -q \
+    -c "drop database healthtest;" >/dev/null 2>&1
+else
+  echo "  · Postgres مو شغّال — تخطّي فحص health.sql"
+fi
+
 # ---------- setup.sql مطابق للترحيلات ----------
 ./tools/build_setup.sh >/dev/null 2>&1
 git diff --quiet -- supabase/setup.sql 2>/dev/null

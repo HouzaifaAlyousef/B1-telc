@@ -1,205 +1,88 @@
-# What is still open, in the order it has to be done
+# وين صرنا، وشو ضايل
 
-Everything in the repository is written, tested and green. What follows is
-work that only you can do — keys, uploads, and one branch decision.
+**افتح بفحص واحد:**
 
-Each step says what breaks if you skip it, and how to check it worked.
-
----
-
-## 0. Which branch does Cloudflare deploy? — do this first
-
-`main` is **52 commits behind** `kiko-branch` and was last touched on
-30 August. Every change since then — the new code format, the settings bar,
-the waiting list, the Telegram bot, the free correction — lives only on
-`kiko-branch`.
-
-So one of two things is true, and you need to know which:
-
-- **Cloudflare builds `kiko-branch`** → nothing to do, skip to step 1.
-- **Cloudflare builds `main`** (the repository default) → **none of the
-  recent work is live**, no matter what else you do below.
-
-Check it: Cloudflare dashboard → Workers → `b1-telc` → Settings → Builds →
-*Branch*.
-
-**Decided (2026-09-09): `kiko-branch` stays the working branch, `main` is
-not merged into.** So if that setting says `main`, change it to
-`kiko-branch` — do not merge.
-
-Whoever changes it should know what it means: `main` was last touched on
-30 August and stays that way. Anyone reading the repository on GitHub sees
-`main` by default and will not find recent work, including `content/`. Use
-the branch switcher, or these links:
-
-- [`content/` on kiko-branch](https://github.com/HouzaifaAlyousef/B1-telc/tree/kiko-branch/content)
-- locally: `git fetch origin kiko-branch && git checkout kiko-branch`
-
-Verify: open `https://b1-telc.b1-telc.workers.dev` and check that the
-settings bar (🇩🇪 🇸🇦 🇺🇦 ☀ 🌙 A− A+) is at the top of the start page. If it
-isn't, the deploy is old.
-
----
-
-## 1. Update the database — blocks everything below
-
-Your database is at version 21. The code needs **23**. Until you do this,
-the waiting list and the Telegram bot do not exist as far as Postgres is
-concerned, and the panel shows a red banner on every screen.
-
-1. Open [`supabase/setup.sql`](../supabase/setup.sql), click **Raw**,
-   select all, copy.
-2. Supabase → SQL Editor → New query → paste → **Run**.
-
-Yellow `already exists, skipping` messages are normal. The file is safe to
-re-run — a test runs it three times in a row.
-
-**Verify:**
-
-```sql
-select schema_version();     -- must return 23
+```
+Supabase → SQL Editor → الصق supabase/health.sql → Run
 ```
 
-Then paste [`supabase/verify.sql`](../supabase/verify.sql) for a fuller
-check of tables, policies and functions.
+للقراءة فقط، بيشتغل حتى على قاعدة فاضية، وبيقول **شو ناقص وشو الأمر
+يلي بيصلّحه** — مو بس «فيه مشكلة».
 
 ---
 
-## 2. Set the capacity limits — 2 minutes
+## اللي انعمل
 
-Both limits ship as `0`, which means *no limit*. The waiting list exists but
-never triggers until you set a number.
-
-Panel → **Übersicht** → Warteliste → two fields → Speichern.
-
-Suggested start: **50** active users, **10** new per day. Reasoning and the
-numbers behind it: [19-capacity.md](19-capacity.md).
-
-**Verify:** the counters above the fields show `0 / 50` and `0 / 10`.
-
----
-
-## 3. Deploy the writing correction — 45 of 225 points
-
-Without it the student still gets the automatic checks (word count, greeting,
-closing, spelling) and grades themselves. With it they get a full correction.
-
-> ⚠ **The key goes in the terminal, never in a file.** Do not paste it into
-> this document, or any file in the repository — GitHub's secret scanner
-> will block the push, and a key that sat in a commit has to be replaced.
-> Type the command with your key directly into the shell.
-
-```bash
-# ١) free key, no credit card: https://aistudio.google.com/apikey
-supabase secrets set GEMINI_API_KEY=DEIN_KEY_HIER_EINSETZEN_NICHT_SPEICHERN
-
-# ٢) deploy
-supabase functions deploy correct-writing
-```
-
-If a key did end up in a commit: put the placeholder back, `git commit
---amend --no-edit`, push — and replace the key at
-[aistudio.google.com/apikey](https://aistudio.google.com/apikey) anyway.
-**Never** use GitHub's "allow the secret" link; that publishes it.
-
-**Verify:** do a Schriftlicher Ausdruck in the app and press
-*Korrektur anfordern*.
-
-If you see "noch nicht eingerichtet", the model name is wrong for your key —
-the error carries the list of models you *can* use:
-
-```bash
-supabase secrets set GEMINI_MODEL=…      # one from that list
-```
-
-Details: [14-writing-correction.md](14-writing-correction.md).
-
----
-
-## 4. Deploy the Telegram bot — hands out demo codes on its own
-
-Without it every demo code stays manual work for you.
-
-```bash
-# ١) @BotFather → /newbot → copy the token Claude here it is the token "8872809572:AAFRlLp6Rq58XtVVmwNieMpFhM8S5aSlg74"
-# ٢) invent a webhook secret
-openssl rand -hex 32
-
-# ٣) three secrets
-supabase secrets set \
-  TELEGRAM_BOT_TOKEN='8872809572:AAFRlLp6Rq58XtVVmwNieMpFhM8S5aSlg74' \
-  TELEGRAM_WEBHOOK_SECRET='…' \
-  APP_URL='https://b1-telc.b1-telc.workers.dev'
-
-# ٤) deploy — the flag is required, Telegram sends no Supabase JWT
-supabase functions deploy telegram --no-verify-jwt
-
-# ٥) point Telegram at it
-curl -sS "https://api.telegram.org/bot<TOKEN>/setWebhook" \
-  -H 'content-type: application/json' \
-  -d '{"url":"https://<project-ref>.supabase.co/functions/v1/telegram",
-       "secret_token":"<the secret from step 2>",
-       "allowed_updates":["message","callback_query"]}'
-```
-
-**Verify:** message your bot `/start` — four language buttons should appear.
-
-Full walkthrough and troubleshooting: [18-telegram-bot.md](18-telegram-bot.md).
-
----
-
-## 4b. New exam material goes through `content/`
-
-Not a step you have to do now — but when you hand PDFs to another AI, put
-the result in `content/<anbieter>/<stufe>/modell-NN/`. The tree exists and
-is checked by `node tools/check_content.mjs`.
-
-Only the telc B1 template is written. Every other level needs one real PDF
-before its template can exist: [21-content-folders.md](21-content-folders.md).
-
----
-
-## 5. Upload 17 images — Leseverstehen Teil 3 is blank without them
-
-17 sections reference an advertisement image. Until they are uploaded, that
-part of the exam shows nothing.
-
-Panel → **Dateien** → filter by level → upload each. The filename is taken
-from the test, so it does not matter what the file is called on your
-computer.
-
-**Verify:** the Dateien page counter says `0 fehlen` for images.
-
----
-
-## 6. Record 50 Hörverstehen recordings — the largest gap
-
-50 listening sections have no audio. Right now students can only *read* the
-listening transcripts, which is not the exam.
-
-This is recording work, not development. Options and the naming scheme:
-[16-audio.md](16-audio.md). The panel suggests the correct filename for each
-section.
-
-**When the recordings exist, come back to storage.** 5 GB of Supabase egress
-is about 400 listening sittings a month. The decision at that point is
-Cloudflare R2 (free egress) — the design is written up in
-[19-capacity.md](19-capacity.md). Do not do it before the files exist.
-
----
-
-## 7. Content licensing — before the first euro
-
-Deferred on purpose, not forgotten. The trigger is **taking payment or
-making the bot public**, not the first user. Read
-[10-commercialisation.md](10-commercialisation.md) before either happens.
-
----
-
-## Deliberately not built
-
-| | Why |
+| | |
 |---|---|
-| Human correction queue | You chose Gemini only. Half a day of work if the grades turn out unreliable. |
-| Cloudflare R2 | Nothing to move until the recordings exist. |
-| Privacy notice about Gemini | You chose not to show one. Recorded in [15-security.md](15-security.md). |
+| المحتوى | telc B1 (١٧) · telc B2 (٨) · ÖSD A1 (٨) |
+| الأكواد | صيغة حرفين + ١٠ أرقام، بلا فراغات |
+| البوت | تجريبي ذاتي · وصول كامل بموافقتك · حجز · «كودي» · تنبيه الانتهاء · مشاركة |
+| قائمة الانتظار | جاهزة، والحدّ من اللوحة |
+| التصحيح الآلي | Gemini — الدالة والواجهة جاهزين |
+| الاختبارات | ٨٨ دالة · ٧٣ متصفّح · ٤٢ أدوات · SQL كاملة |
+
+## اللي ضايل
+
+### ١. تسجيلات Hörverstehen — الوحيدة الكبيرة
+
+**ولا تسجيل بأي مستوى.** يعني **ربع الامتحان معطّل** بالمستويات
+التلاتة.
+
+`bot_sweep_expiring` وكل شي تاني شغّال بلاها، بس الطالب يلي بيفتح
+Hörverstehen بيلاقي أسئلة بلا صوت.
+
+الرفع: `python3 tools/upload_audio.py <مجلّد>` — نفس فكرة الصور.
+
+الفحص بيقول لك: صفّ **الصوت**.
+
+### ٢. Aufgabe 58 لـB2 (modell-01 … 07)
+
+الترقيم بيوقف عند ٥٧. المادة مو بالـPDF — لازم مواضيع من التيليغرام.
+`docs/23-b2-forumsbeitrag.md` فيه الصيغة الجاهزة.
+
+modell-08 عنده Aufgabe 58 أصلاً.
+
+### ٣. الـ٢٧ نقطة Grammatik بـB2
+
+قرار مفتوح — `docs/22-b2-punkte-fix.md` الجزء ٤.
+
+### ٤. ترخيص المحتوى
+
+**قبل أوّل يورو، مو بعده.** `docs/10-commercialisation.md`.
+
+---
+
+## شغلات ما بيقدر الفحص يشوفها
+
+القاعدة ما بتعرف شو منشور بـEdge Functions ولا شو بالأسرار. تفقّدهن
+بالإيد — الفحص بيذكّرك فيهن بآخر الجدول:
+
+| | وين | انتبه |
+|---|---|---|
+| دالة `telegram` | Edge Functions | **Verify JWT مطفيّة** |
+| دالة `correct-writing` | Edge Functions | **Verify JWT مفعّلة** — عكس البوت |
+| الأسرار الخمسة | Edge Functions → Secrets | `TELEGRAM_BOT_TOKEN` · `TELEGRAM_WEBHOOK_SECRET` · `APP_URL` · `ADMIN_CHAT_ID` · `GEMINI_API_KEY` |
+| الدخول المجهول | Authentication → Providers | بلاه الكود بيفشل عند الطالب |
+| فرع Cloudflare | Workers → b1-telc → Builds | لازم `kiko-branch` |
+
+> **قرار مسجّل (٢٠٢٦-٠٩-٠٩):** `kiko-branch` هو فرع العمل، و`main` ما
+> بينندمج فيه. مين بيفتح المستودع على GitHub بيشوف `main` الافتراضي
+> وما بيلاقي الشغل الجديد — يستعمل مبدّل الفروع.
+
+---
+
+## لمّا تضيف محتوى جديد
+
+```bash
+node tools/check_content.mjs                       # فحص
+node tools/content_to_seed.mjs <مؤسسة>/<درجة> supabase/seed/<درجة>.sql
+./tools/split_seed.sh <درجة>                       # لو أكبر من ٢٠٠ ك.ب
+python3 tools/upload_images.py content             # الصور كلها بأمر واحد
+```
+
+الأوّل والتاني عليهن فحص انحراف بـ`tests/tools.sh` — بيفشل لو نسيت
+تعيد التوليد، وبيدور على كل مستوى لحاله فما بينسى مستوى جديد.
+
+🔴 **`service_role` بجهازك بس.** ولا مرّة بغيت، ولا بالمتصفّح، ولا
+بشات. لو انكشف: Project Settings → API → **Reset service_role key**.
