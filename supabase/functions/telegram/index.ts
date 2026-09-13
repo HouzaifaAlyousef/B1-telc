@@ -354,9 +354,10 @@ const levelLine = (r: any) =>
 /* قناتك الخاصة. بلا ADMIN_CHAT_ID الوظيفة بتضل تشتغل بلا إشعارات
    بدل ما تطيح — الطالب ما إله ذنب إنّك ما ظبّطت السرّ. */
 async function toAdmin(text: string, keyboard?: Btn[][]) {
-  if (!ADMIN) return;
-  await send(Number(ADMIN), text, keyboard).catch(
-    (e) => console.error("toAdmin:", String(e)));
+  if (!ADMIN) return null;
+  try {
+    return await (await send(Number(ADMIN), text, keyboard)).json();
+  } catch (e) { console.error("toAdmin:", String(e)); return null; }
 }
 
 /* ---------------- الوصول الكامل ---------------- */
@@ -384,15 +385,51 @@ async function stepRequest(chat: number, lang: Lang, from: any, months: number) 
   await send(chat, t(lang, res.again ? "pending" : "sent"), undefined, menu(lang));
   if (res.again) return;          // ما منزعجك مرّتين بنفس الطلب
 
-  await toAdmin(
+  // ★ الحجز أوّلاً: بمجموعة فيها أكتر من شخص، تنين بيفتحوا نفس الطلب
+  //   وتنين بيردّوا. مين بياخده بيصير إله وحده ربع ساعة.
+  const card = await toAdmin(
     `🔓 <b>طلب وصول كامل</b>\n` +
     `${who(from)}\n` +
     `${levelLine(res)} · <b>${res.months}</b> شهر`,
-    [[{ text: "✅ وافق", callback_data: `A|${res.request_id}` },
-      { text: "✖️ ارفض", callback_data: `R|${res.request_id}` }]]);
+    [[{ text: "🖐 احجزه", callback_data: `V|${res.request_id}` }]]);
+
+  // وين البطاقة: منحتاجها للتنبيه بعد ما ينتهي الحجز
+  const mid = card?.result?.message_id;
+  if (mid) await rpc("bot_set_card",
+    { p_request_id: res.request_id, p_chat: Number(ADMIN), p_msg: mid })
+    .catch((e: unknown) => console.error("set_card:", String(e)));
 }
 
 /* ---------------- قرارك ---------------- */
+const RESERVE_MIN = 15;
+const hhmm = (iso: string) =>
+  new Date(iso).toISOString().slice(11, 16) + " UTC";
+
+/* الحجز المنتهي: منبّه مرّة وحدة ومنرجّع الطلب حرّ.
+   ★ بينندى من مطرحين — أي تحديث بيوصل للبوت، وpg_cron لو ظبّطتها.
+     القاعدة هي يلي بتضمن إنّه ما ينبعت مرّتين (nudged_at بنفس
+     الاستعلام)، فنداء زيادة ما بيضرّ. */
+async function sweep() {
+  let due: any[] = [];
+  try { due = await rpc("bot_sweep_reservations"); }
+  catch (e) { return void console.error("sweep:", String(e)); }
+
+  for (const r of due) {
+    const txt = `⏰ انتهى وقت الحجز و${r.reserved_name} ما قرّر.\n`
+              + `الطلب صار حرّ — أي حدا فيه ياخده.`;
+    await tg("sendMessage", {
+      chat_id: r.card_chat ?? Number(ADMIN), text: txt,
+      ...(r.card_msg ? { reply_to_message_id: r.card_msg } : {}),
+    }).catch((e) => console.error("nudge:", String(e)));
+    // البطاقة بترجع لزرّ الحجز: الحجز راح فالأزرار لازم ترجع للبداية
+    if (r.card_chat && r.card_msg) await tg("editMessageReplyMarkup", {
+      chat_id: r.card_chat, message_id: r.card_msg,
+      reply_markup: { inline_keyboard: [[
+        { text: "🖐 احجزه", callback_data: `V|${r.id}` }]] },
+    }).catch(() => {});
+  }
+}
+
 const REASONS = ["soon", "demo", "contact", "no"];
 /* وسم بيربط ردّك بالطلب. بتنكتب بنصّ رسالة الطلب منك، وردّك بيرجّعها
    جوّا reply_to_message — فما منحتاج نخزّن «مين عم يكتب لأي طلب». */
@@ -462,6 +499,27 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
     });
   }
 
+  // الحجز: بيقفل الطلب على الضاغط ربع ساعة، وبيطلّع أزرار القرار
+  if (kind === "V") {
+    const res = await rpc("bot_reserve_request", {
+      p_admin_telegram_id: from.id, p_request_id: id,
+      p_name: nameOf(from), p_minutes: RESERVE_MIN,
+      p_chat_id: cb.message?.chat?.id ?? null });
+    if (!res.ok) {
+      if (res.taken)
+        return void await pop(`🖐 محجوز لـ${res.by} — استنى لحتى ينتهي وقته.`);
+      return void await pop(`سبق وانبتّ فيه: ${res.already}`);
+    }
+    await tg("answerCallbackQuery", { callback_query_id: cb.id });
+    return void await tg("editMessageText", {
+      chat_id: cb.message?.chat?.id, message_id: cb.message?.message_id,
+      text: `${cb.message?.text ?? ""}\n\n🖐 حجزه ${res.by} · لحدّ ${hhmm(res.until)}`,
+      reply_markup: { inline_keyboard: [[
+        { text: "✅ وافق", callback_data: `A|${id}` },
+        { text: "✖️ ارفض", callback_data: `R|${id}` }]] },
+    });
+  }
+
   // «سبب بخطّ إيدك»: منبعت طلب ردّ، وردّك بيحمل وسم الطلب معه
   if (kind === "W") {
     await tg("answerCallbackQuery", { callback_query_id: cb.id });
@@ -490,6 +548,8 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
   }
 
   if (!res.ok) {
+    if (res.taken)
+      return void await pop(`🖐 محجوز لـ${res.by} — استنى لحتى ينتهي وقته.`);
     await pop(`سبق وانبتّ فيه: ${res.already}`);
     return void await seal(cb, `— انبتّ فيه سابقاً (${res.already})`);
   }
@@ -527,6 +587,13 @@ Deno.serve(async (req) => {
   let update: any;
   try { update = await req.json(); } catch { return new Response("ok"); }
 
+  // pg_cron بتنده هون كل دقيقة لتكنس الحجوزات المنتهية
+  if (update?.cron === "sweep") { await sweep(); return new Response("ok"); }
+
+  // وبلا cron كمان: أي تحديث بيوصل بيكنس. استعلام واحد على فهرس
+  // جزئي — أرخص من إنّ طلب يضل محجوز لأنّ ما حدا حرّك البوت.
+  sweep().catch(() => {});
+
   const cb  = update.callback_query;
   const msg = cb?.message ?? update.message;
   const from = cb?.from ?? update.message?.from;
@@ -545,7 +612,7 @@ Deno.serve(async (req) => {
 
       // أزرارك إنت: بتردّ على الضغطة لحالها (التنبيه لازم يطلع للضاغط
       // وحده)، فما منمرقها عالردّ العام تحت
-      if (kind === "A" || kind === "R" || kind === "X" || kind === "W") {
+      if (["A", "R", "X", "W", "V"].includes(kind)) {
         await adminAction(cb, kind, a, b);
         return new Response("ok");
       }

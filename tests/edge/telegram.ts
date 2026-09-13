@@ -37,10 +37,16 @@ const supa = Deno.serve({ port: PORT_SUPA, onListen() {} }, async (req) => {
 /* ---- تلغرام مزيّف ---- */
 type Sent = { method: string; body: any };
 const sent: Sent[] = [];
+// ★ بيرجّع message_id متل تلغرام الحقيقي: الدالة بتحفظه لتعرف وين
+//   البطاقة، وبلاه التنبيه ما بيلاقي شو يعدّل
+let mid = 1000;
 const tgSrv = Deno.serve({ port: PORT_TG, onListen() {} }, async (req) => {
   const method = new URL(req.url).pathname.split("/").pop()!;
-  sent.push({ method, body: await req.json().catch(() => ({})) });
-  return new Response(JSON.stringify({ ok: true, result: {} }),
+  const body = await req.json().catch(() => ({}));
+  sent.push({ method, body });
+  const result = method === "sendMessage"
+    ? { message_id: ++mid, chat: { id: body?.chat_id } } : {};
+  return new Response(JSON.stringify({ ok: true, result }),
                       { headers: { "content-type": "application/json" } });
 });
 
@@ -255,9 +261,56 @@ check("★ الطالب بيوصله «استنى»", /طلبك وصل/.test(Str
 const adminMsg = toChat(GROUP);
 check("★★ والطلب بيوصل المجموعة",
       !!adminMsg && /طلب وصول كامل/.test(String(adminMsg.text)) && /3/.test(String(adminMsg.text)));
-const reqId = (String(adminMsg?.reply_markup?.inline_keyboard?.[0]?.[0]?.callback_data)
-               .split("|")[1]) ?? "";
-check(`★ ومعه زرّي وافق/ارفض (${reqId.slice(0, 8)}…)`, /^[0-9a-f-]{36}$/.test(reqId));
+const cardKb = adminMsg?.reply_markup?.inline_keyboard?.flat() ?? [];
+const reqId = String(cardKb[0]?.callback_data ?? "").split("|")[1] ?? "";
+check(`★ وأوّل شي زرّ حجز لحاله (${cardKb.map((b:any)=>b.text).join()})`,
+      cardKb.length === 1 && String(cardKb[0].callback_data).startsWith("V|"));
+check(`★ ومعه رقم الطلب (${reqId.slice(0, 8)}…)`, /^[0-9a-f-]{36}$/.test(reqId));
+
+/* ---- ١٠ب) ★ الحجز ---- */
+const clickAs = (id: number, data: string, msgId = 22) => post({ callback_query: {
+  id: "r" + msgId, data, from: { id, username: id === BOSS ? "boss" : "mate" },
+  message: { chat: { id: GROUP }, message_id: msgId, text: "طلب" } } });
+
+psql(`insert into bot_admins (telegram_id, label) values (${GROUP}, 'المجموعة')
+      on conflict do nothing;`);
+sent.length = 0;
+await clickAs(BOSS, `V|${reqId}`);
+check("★ الحجز بيكتب مين حجزه ولحدّ إيمتى",
+      /حجزه @boss/.test(String(lastOf("editMessageText")?.text))
+      && /لحدّ \d\d:\d\d/.test(String(lastOf("editMessageText")?.text)));
+const afterRes = lastOf("editMessageText")?.reply_markup?.inline_keyboard?.flat() ?? [];
+check("★ وبعدها بس بتطلع أزرار القرار",
+      afterRes.length === 2 && String(afterRes[0].callback_data).startsWith("A|"));
+
+sent.length = 0;
+await clickAs(MATE, `V|${reqId}`);
+check("★★ التاني ما بيقدر يحجزه — تنبيه إله لحاله",
+      /محجوز لـ@boss/.test(String(lastOf("answerCallbackQuery")?.text)));
+sent.length = 0;
+await clickAs(MATE, `A|${reqId}`);
+check("★★ ولا بيقدر يوافق بدله",
+      /محجوز لـ@boss/.test(String(lastOf("answerCallbackQuery")?.text)));
+check("★★ وما انعمل كود",
+      psql(`select count(*) from access_codes where note like 'telegram-full:%';`) === "0");
+
+/* ---- ١٠ج) ★ انتهى الوقت ---- */
+psql(`update access_requests set reserve_until = now() - interval '1 min'
+       where id = '${reqId}';`);
+sent.length = 0;
+await post(msg("شي عادي"));          // أي تحديث بيكنس
+await new Promise((r) => setTimeout(r, 250));
+check("★★ بعد الانتهاء البوت بينبّه بالمجموعة",
+      sent.some(x => x.method === "sendMessage" && x.body?.chat_id === GROUP
+                && /انتهى وقت الحجز/.test(String(x.body?.text))));
+check("★★ والبطاقة بترجع لزرّ الحجز",
+      String(lastOf("editMessageReplyMarkup")?.reply_markup
+             ?.inline_keyboard?.[0]?.[0]?.callback_data).startsWith("V|"));
+sent.length = 0;
+await post(msg("مرّة تانية"));
+await new Promise((r) => setTimeout(r, 250));
+check("★★ والتنبيه ما بينبعت مرّتين",
+      !sent.some(x => /انتهى وقت الحجز/.test(String(x.body?.text))));
 
 /* ---- ١١) ★★ الحدّ: حدا مو أدمن بيضغط «وافق» ---- */
 sent.length = 0;
@@ -274,7 +327,8 @@ check("★★ والطلب لسا معلّق",
 
 /* ---- ١٢) إنت بتوافق ---- */
 // ★ منسجّل **المجموعة** مو الأشخاص — العضوية هي الصلاحية
-psql(`insert into bot_admins (telegram_id, label) values (${GROUP}, 'المجموعة');`);
+psql(`insert into bot_admins (telegram_id, label) values (${GROUP}, 'المجموعة')
+      on conflict (telegram_id) do nothing;`);
 sent.length = 0;
 await post({ callback_query: { id: "cbA", data: `A|${reqId}`,
   from: { id: BOSS, username: "boss", language_code: "de" },

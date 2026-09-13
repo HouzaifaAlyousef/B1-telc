@@ -156,3 +156,83 @@ begin
   raise notice '';
   raise notice '  كل اختبارات طلبات الوصول نجحت ✓';
 end $$;
+
+-- ── الحجز ──
+do $$
+declare
+  boss bigint := 910001; mate bigint := 910002; grp bigint := -1009999;
+  r jsonb; req uuid; n int;
+begin
+  raise notice '';
+  raise notice '── حجز الطلب ──';
+  -- ★ منبلّش من صفر: أكواد النماذج يلي قبل بتزيّف العدّ تحت
+  delete from access_requests; delete from bot_admins; delete from access_codes;
+  insert into bot_admins (telegram_id, label) values (grp, 'المجموعة');
+
+  perform bot_demo_code(910100, 910100, 'kunde', 'de', 'req-b1');
+  r := bot_request_access(910100, 3, 'de');
+  req := (r->>'request_id')::uuid;
+
+  -- الحجز
+  r := bot_reserve_request(boss, req, 'Boss', 15, grp);
+  perform t_check('الحجز اشتغل', (r->>'ok')::boolean and r->>'by' = 'Boss');
+  perform t_check('★ ووقته ١٥ دقيقة',
+    (select reserve_until from access_requests where id = req) > now() + interval '14 min');
+
+  -- ★ ما حدا بيسرقه
+  r := bot_reserve_request(mate, req, 'Mate', 15, grp);
+  perform t_check('★★ التاني ما بيقدر يحجزه ومكتوبله مين ماسكه',
+                  not (r->>'ok')::boolean and (r->>'taken')::boolean and r->>'by' = 'Boss');
+  perform t_check('★ والحجز ما تغيّر',
+    (select reserved_by from access_requests where id = req) = boss);
+
+  -- ★ ولا بيقرّر بدله
+  r := bot_decide_request(mate, req, true, null, grp);
+  perform t_check('★★ ولا بيقدر يوافق بدله', not (r->>'ok')::boolean and (r->>'taken')::boolean);
+  perform t_check('★★ وما انعمل كود',
+    (select count(*) from access_codes where note like 'telegram-full:%') = 0);
+
+  -- صاحب الحجز بيقرّر عادي
+  r := bot_decide_request(boss, req, true, null, grp);
+  perform t_check('★ صاحب الحجز بيوافق', (r->>'ok')::boolean);
+  perform t_check('★★ والكود ٣ تفعيلات',
+    (select max_uses from access_codes where code = r->>'code') = 3);
+  perform t_check('★ ومدّته ٣ شهور',
+    (select duration_days from access_codes where code = r->>'code') = 90);
+
+  -- ── الانتهاء بيحرّره ──
+  delete from access_requests; delete from access_codes;
+  perform bot_demo_code(910200, 910200, 'zwei', 'de', 'req-b1');
+  req := (bot_request_access(910200, 1, 'de')->>'request_id')::uuid;
+  perform bot_reserve_request(boss, req, 'Boss', 15, grp);
+
+  perform t_check('قبل الانتهاء ما في شي للكنس',
+                  jsonb_array_length(bot_sweep_reservations()) = 0);
+
+  -- منرجّع الوقت للورا بدل ما ننطر ربع ساعة
+  update access_requests set reserve_until = now() - interval '1 min' where id = req;
+
+  r := bot_sweep_reservations();
+  perform t_check('★★ بعد الانتهاء الكنس بيرجّعه للتنبيه',
+                  jsonb_array_length(r) = 1 and (r->0->>'reserved_name') = 'Boss');
+  perform t_check('★★ والكنس التاني ما بيرجّعه مرّتين',
+                  jsonb_array_length(bot_sweep_reservations()) = 0);
+
+  -- ★ وبعد الانتهاء صار حرّ لأي حدا
+  r := bot_decide_request(mate, req, false, 'soon', grp);
+  perform t_check('★★ وبعد الانتهاء غيره بيقدر يقرّر', (r->>'ok')::boolean);
+
+  -- ★ الحجز ما بيمرق من برّا المجموعة
+  delete from access_requests;
+  perform bot_demo_code(910300, 910300, 'drei', 'de', 'req-b1');
+  req := (bot_request_access(910300, 1, 'de')->>'request_id')::uuid;
+  begin
+    perform bot_reserve_request(mate, req, 'Mate', 15, null);
+    perform t_check('★★ حجز من برّا المجموعة مرفوض', false);
+  exception when others then
+    perform t_check('★★ حجز من برّا المجموعة مرفوض', SQLERRM like '%not_bot_admin%');
+  end;
+
+  raise notice '';
+  raise notice '  كل اختبارات الحجز نجحت ✓';
+end $$;
