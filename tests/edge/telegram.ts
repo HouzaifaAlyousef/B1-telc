@@ -234,8 +234,8 @@ const BOSS  = 700001;             // إنت — عضو فيها
 const MATE  = 700002;             // شريكك — عضو كمان، وما هو مسجّل لحاله
 sent.length = 0;
 await post(click("l|ar|b1"));     // كوده التجريبي (تكرار)
-check(`★ مع الكود بتطلع لوحة ثابتة بأربع أزرار (${perm(TG_ID).length})`,
-      perm(TG_ID).length === 4);
+check(`★ مع الكود بتطلع لوحة ثابتة (${perm(TG_ID).length} أزرار)`,
+      perm(TG_ID).length === 5);
 check("★ وهي بالعربي",
       perm(TG_ID).includes("🎁 نسختي التجريبية") && perm(TG_ID).includes("🔓 وصول كامل"));
 check("★ وبتضل ظاهرة (is_persistent)",
@@ -283,6 +283,41 @@ const reqId = String(cardKb[0]?.callback_data ?? "").split("|")[1] ?? "";
 check(`★ وأوّل شي زرّ حجز لحاله (${cardKb.map((b:any)=>b.text).join()})`,
       cardKb.length === 1 && String(cardKb[0].callback_data).startsWith("V|"));
 check(`★ ومعه رقم الطلب (${reqId.slice(0, 8)}…)`, /^[0-9a-f-]{36}$/.test(reqId));
+
+/* ---- ٩ب) ★ «كودي» و«جرّب مستوى تاني» ---- */
+sent.length = 0;
+await post(msg("🎟 كودي"));
+const mine = String(toChat(TG_ID)?.text ?? "");
+check("★★ «كودي» بيرجّع كوده والمستوى وكم باقي",
+      new RegExp(`<code>${code}</code>`).test(mine)
+      && /telc · B1/.test(mine) && /(ما انفعّل|باقي)/.test(mine));
+check("★ ومعه الرابط", mine.includes("https://b1-telc.example.dev"));
+
+// حساب جديد ما أخد ولا كود
+sent.length = 0;
+await post({ message: { chat: { id: 66601 }, from: { id: 66601 }, text: "🎟 كودي" } });
+check("★ ومين ما أخد كود بياخد جواب مفهوم مو رسالة فاضية",
+      /ما أخدت ولا كود/.test(String(toChat(66601)?.text)));
+
+// ★ «جرّب مستوى تاني»: b1 انشال، bot-x-b1 معروض
+psql(`insert into levels (id,title,provider,stufe,published)
+        values ('oth-a2','Other A2','otherprov','A2',true) on conflict do nothing;
+      insert into tests (level_id,slug,title,blocks,aufgaben,published,sort)
+        values ('oth-a2','oth-01','A2 M1','[]'::jsonb,0,true,1) on conflict do nothing;`);
+sent.length = 0;
+await post(msg("🎁 نسختي التجريبية"));   // بيعرض المؤسسات — مو المقصود
+sent.length = 0;
+await post(click("l|ar|b1"));            // نفس كوده + زرّ مستوى تاني
+// ★ عناصر sent شكلها {method, body} — الجسم هو يلي فيه النصّ
+const oth = [...sent].filter(x => x.method === "sendMessage"
+             && x.body?.chat_id === TG_ID).pop()?.body;
+check("★★ مع الكود بيطلع «جرّب مستوى تاني»",
+      /جرّب مستوى تاني/.test(String(oth?.text)));
+const othKb = (oth?.reply_markup?.inline_keyboard ?? []).flat();
+check("★★ وفيه المستوى يلي ما جرّبه، وما فيه يلي جرّبه",
+      othKb.some((b: any) => b.callback_data === "l|ar|oth-a2")
+      && !othKb.some((b: any) => b.callback_data === "l|ar|b1"));
+psql(`delete from tests where level_id='oth-a2'; delete from levels where id='oth-a2';`);
 
 /* ---- ١٠ب) ★ الحجز ---- */
 const clickAs = (id: number, data: string, msgId = 22) => post({ callback_query: {
@@ -456,6 +491,41 @@ await post({ callback_query: { id: "e2", data: "m|de|1",
   message: { chat: { id: 55504 } } } });
 check("★★ وطلب الوصول بالألماني ← لغته المحفوظة صارت de",
       psql(`select lang from telegram_users where telegram_id=55504;`) === "de");
+
+/* ---- ١٤د) ★ تنبيه «باقي أقلّ من ساعة» ---- */
+// الطالب فعّل كوده، فصار إله اشتراك ينتهي بعد ٢٤ ساعة
+psql(`delete from subscriptions;
+      insert into auth.users (id) values ('cccccccc-0000-0000-0000-000000000009')
+        on conflict do nothing;
+      insert into profiles (id, is_admin)
+        values ('cccccccc-0000-0000-0000-000000000009', false)
+        on conflict (id) do nothing;
+      insert into subscriptions (user_id, levels, current_period_end,
+                                 access_code_id, status)
+      select 'cccccccc-0000-0000-0000-000000000009', array['b1'],
+             now() + interval '24 hours', d.code_id, 'active'
+        from telegram_demos d where d.telegram_id = ${TG_ID} and d.level_id = 'b1';`);
+sent.length = 0;
+await post(msg("شي عادي"));
+await new Promise((r) => setTimeout(r, 300));
+check("★ باقيله ٢٤ ساعة: ما في تنبيه",
+      !sent.some(x => /أقلّ من ساعة/.test(String(x.body?.text))));
+
+// منقرّب الانتهاء بدل ما ننطر ٢٣ ساعة
+psql(`update subscriptions set current_period_end = now() + interval '40 minutes';`);
+sent.length = 0;
+await post(msg("شي عادي"));
+await new Promise((r) => setTimeout(r, 300));
+check("★★ باقي ٤٠ دقيقة ← التنبيه وصل الطالب",
+      /أقلّ من ساعة/.test(String(toChat(TG_ID)?.text)));
+check("★★ ومعه زرّ الوصول الكامل — أقوى لحظة بيع",
+      (toChat(TG_ID)?.reply_markup?.inline_keyboard ?? []).flat()
+        .some((b: any) => String(b.callback_data).startsWith("f|")));
+sent.length = 0;
+await post(msg("شي عادي"));
+await new Promise((r) => setTimeout(r, 300));
+check("★★ والتنبيه ما بينبعت مرّتين",
+      !sent.some(x => /أقلّ من ساعة/.test(String(x.body?.text))));
 
 /* ---- ١٥) ★ /id انشال ---- */
 sent.length = 0;

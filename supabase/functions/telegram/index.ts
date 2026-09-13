@@ -73,6 +73,19 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 وصول كامل",
     mLang: "🌐 اللغة",
     mShare: "📣 شارك البوت",
+    mMine: "🎟 كودي",
+    noCodes: "لسا ما أخدت ولا كود. اضغط «🎁 نسختي التجريبية».",
+    myTitle: "أكوادك:",
+    kDemo: "تجريبي",
+    kFull: "وصول كامل",
+    leftH: "باقي {h} ساعة",
+    leftM: "باقي {m} دقيقة",
+    endedX: "انتهى",
+    notUsed: "ما انفعّل بعد",
+    tryOther: "🎓 جرّب مستوى تاني",
+    allTried: "جرّبت كل المستويات المتاحة 👏",
+    warnTitle: "⏰ باقي أقلّ من ساعة على تجريبي {lvl}",
+    warnBody: "خلّص يلي بدّك ياه، أو اضغط «🔓 وصول كامل» لتكمّل بلا وقت.",
     waShare: "💬 واتساب",
     tgShare: "📲 تلغرام",
     copyHint: "أو انسخ الرابط وابعته لوين ما بدّك:",
@@ -110,6 +123,19 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Vollzugang",
     mLang: "🌐 Sprache",
     mShare: "📣 Bot teilen",
+    mMine: "🎟 Mein Code",
+    noCodes: "Noch kein Code. Tippen Sie auf „🎁 Meine Testversion“.",
+    myTitle: "Ihre Codes:",
+    kDemo: "Test",
+    kFull: "Vollzugang",
+    leftH: "noch {h} Std.",
+    leftM: "noch {m} Min.",
+    endedX: "abgelaufen",
+    notUsed: "noch nicht eingelöst",
+    tryOther: "🎓 Andere Stufe testen",
+    allTried: "Sie haben alle Stufen getestet 👏",
+    warnTitle: "⏰ Weniger als eine Stunde für {lvl}",
+    warnBody: "Machen Sie fertig, was Sie wollen — oder „🔓 Vollzugang“ für unbegrenzt.",
     waShare: "💬 WhatsApp",
     tgShare: "📲 Telegram",
     copyHint: "Oder Link kopieren und überall teilen:",
@@ -147,6 +173,19 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Повний доступ",
     mLang: "🌐 Мова",
     mShare: "📣 Поділитися",
+    mMine: "🎟 Мій код",
+    noCodes: "Ще немає коду. Натисніть «🎁 Моя пробна версія».",
+    myTitle: "Ваші коди:",
+    kDemo: "Пробний",
+    kFull: "Повний доступ",
+    leftH: "лишилось {h} год.",
+    leftM: "лишилось {m} хв.",
+    endedX: "завершився",
+    notUsed: "ще не активований",
+    tryOther: "🎓 Спробувати інший рівень",
+    allTried: "Ви спробували всі рівні 👏",
+    warnTitle: "⏰ Менше години для {lvl}",
+    warnBody: "Завершіть потрібне — або «🔓 Повний доступ» без обмежень.",
     waShare: "💬 WhatsApp",
     tgShare: "📲 Telegram",
     copyHint: "Або скопіюйте посилання й надішліть будь-де:",
@@ -184,6 +223,19 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Full access",
     mLang: "🌐 Language",
     mShare: "📣 Share bot",
+    mMine: "🎟 My code",
+    noCodes: "No code yet. Tap “🎁 My free trial”.",
+    myTitle: "Your codes:",
+    kDemo: "Trial",
+    kFull: "Full access",
+    leftH: "{h}h left",
+    leftM: "{m} min left",
+    endedX: "expired",
+    notUsed: "not used yet",
+    tryOther: "🎓 Try another level",
+    allTried: "You have tried every level 👏",
+    warnTitle: "⏰ Less than an hour left for {lvl}",
+    warnBody: "Finish what you need — or tap “🔓 Full access” for unlimited.",
     waShare: "💬 WhatsApp",
     tgShare: "📲 Telegram",
     copyHint: "Or copy the link and share it anywhere:",
@@ -227,11 +279,12 @@ const send = (chat: number, text: string, keyboard?: Btn[][],
    بترسل نصّ عادي، والنصّ نفسه بيقول شو الفعل **وشو اللغة** سوا:
    «🌐 اللغة» عربي و«🌐 Sprache» ألماني. فما منحتاج نحفظ لغة حدا بين
    الرسايل — نفس مبدأ callback_data يلي حامل حاله. */
-const MKEYS = ["mTrial", "mFull", "mLang", "mShare"] as const;
+const MKEYS = ["mTrial", "mFull", "mMine", "mLang", "mShare"] as const;
 const menu = (lang: Lang) => ({
   reply_markup: {
     keyboard: [
       [{ text: t(lang, "mTrial") }, { text: t(lang, "mFull") }],
+      [{ text: t(lang, "mMine") }],
       [{ text: t(lang, "mLang") }, { text: t(lang, "mShare") }],
     ],
     is_persistent: true, resize_keyboard: true,
@@ -333,6 +386,14 @@ async function stepCode(chat: number, lang: Lang, from: any, levelId: string) {
   ];
   await send(chat, lines.join("\n"), undefined, menu(lang));
 
+  // ★ صار عنده تجريبي لهالمستوى — والباب مفتوح لغيره. بلا هالزرّ
+  //   الطالب ما بيعرف إنّه بيقدر يجرّب مستوى تاني أصلاً.
+  const other: Level[] = await rpc("bot_untried_levels", { p_telegram_id: from.id })
+    .catch(() => []);
+  if (other.length) await send(chat, t(lang, "tryOther"),
+    rows(other.map((l) => ({
+      text: levelName(l), callback_data: `l|${lang}|${l.id}` })), 2));
+
   // ★ خبر إلك بس أوّل مرّة. الرجعات ما بتنبّهك — وإلا كل من فتح
   //   الرسالة القديمة بيرنّ عندك.
   if (!res.again) await toAdmin(
@@ -385,6 +446,43 @@ async function toAdmin(text: string, keyboard?: Btn[][]) {
   try {
     return await (await send(Number(ADMIN), text, keyboard)).json();
   } catch (e) { console.error("toAdmin:", String(e)); return null; }
+}
+
+/* ---------------- كودي ----------------
+   الطالب بيضيّع الرسالة وبيسأل. زرّ بيرجّعله كل أكواده وكم باقي لكل
+   واحد — أرخص من رسالة إلك. */
+const leftText = (lang: Lang, ends: string | null) => {
+  if (!ends) return t(lang, "notUsed");
+  const ms = new Date(ends).getTime() - Date.now();
+  if (ms <= 0) return t(lang, "endedX");
+  const h = Math.floor(ms / 3600000);
+  return h >= 1 ? t(lang, "leftH", { h }) : t(lang, "leftM", { m: Math.ceil(ms / 60000) });
+};
+
+const lvlOf = (c: any) =>
+  c.provider && c.stufe ? `${c.provider} · ${c.stufe}` : (c.level_id ?? "");
+
+async function stepMine(chat: number, lang: Lang, from: any) {
+  const list: any[] = await rpc("bot_my_codes", { p_telegram_id: from.id });
+  if (!list.length) return void await send(chat, t(lang, "noCodes"), undefined, menu(lang));
+
+  const lines = [`<b>${t(lang, "myTitle")}</b>`, ""];
+  for (const c of list) {
+    lines.push(`<code>${c.code}</code> — ${lvlOf(c)}`);
+    lines.push(`   ${t(lang, c.kind === "full" ? "kFull" : "kDemo")}`
+             + `${c.test ? " · " + c.test : ""} · ${leftText(lang, c.ends)}`);
+  }
+  lines.push("", `${t(lang, "linkIs")} ${APP_URL}`);
+  await send(chat, lines.join("\n"), undefined, menu(lang));
+}
+
+/* «جرّب مستوى تاني» — صار ممكن بعد 0028، والطالب ما بيعرف */
+async function stepOther(chat: number, lang: Lang, from: any) {
+  const levels: Level[] = await rpc("bot_untried_levels", { p_telegram_id: from.id });
+  if (!levels.length) return void await send(chat, t(lang, "allTried"), undefined, menu(lang));
+  await send(chat, t(lang, "pickStufe"),
+    rows(levels.map((l) => ({
+      text: levelName(l), callback_data: `l|${lang}|${l.id}` })), 2));
 }
 
 /* ---------------- الوصول الكامل ---------------- */
@@ -452,6 +550,27 @@ async function sweep() {
       reply_markup: { inline_keyboard: [[
         { text: "🖐 احجزه", callback_data: `V|${r.id}` }]] },
     }).catch(() => {});
+  }
+
+  await sweepExpiring();
+}
+
+/* ★ «باقي أقلّ من ساعة». أقوى لحظة بيع بالرحلة كلها: الطالب لسا
+   بالنصّ، وعارف شو عم ياخد، وبيحسّ بالوقت عم يخلص.
+   بينبعت مرّة وحدة لكل كود (warned_at بالقاعدة)، ولمين فعّل كوده بس —
+   تنبيه «باقي ساعة» لواحد ما فتح التطبيق بيربكه مو بيساعده. */
+async function sweepExpiring() {
+  let due: any[] = [];
+  try { due = await rpc("bot_sweep_expiring"); }
+  catch (e) { return void console.error("expiring:", String(e)); }
+
+  for (const d of due) {
+    const lang = (T[d.lang as Lang] ? d.lang : "de") as Lang;
+    const lvl = d.provider && d.stufe ? `${d.provider} · ${d.stufe}` : "";
+    await send(Number(d.chat_id),
+      `<b>${t(lang, "warnTitle", { lvl })}</b>\n\n${t(lang, "warnBody")}`,
+      [[{ text: t(lang, "full"), callback_data: `f|${lang}` }]],
+    ).catch((e) => console.error("warn:", String(e)));
   }
 }
 
@@ -684,6 +803,7 @@ Deno.serve(async (req) => {
       if (hit.act === "mTrial")
         await stepProvider(chat, L, await rpc("bot_levels"));
       else if (hit.act === "mFull")  await stepMonths(chat, L);
+      else if (hit.act === "mMine")  await stepMine(chat, L, from);
       else if (hit.act === "mLang")  await stepLang(chat, L);
       // اللوحة الثابتة ما بتحمل روابط — فالمشاركة برسالتها هي
       else if (hit.act === "mShare") await shareMsg(chat, L);

@@ -282,3 +282,66 @@ begin
   raise notice '';
   raise notice '  كل اختبارات التجريبي لكل مستوى نجحت ✓';
 end $$;
+
+-- ── «كودي» والتنبيه و«مستوى تاني» ──
+do $$
+declare tg bigint := 930001; boss bigint := 930002; grp bigint := -1009999;
+        r jsonb; v_code text; u uuid;
+begin
+  raise notice '';
+  raise notice '── كودي · التنبيه · مستوى تاني ──';
+  delete from access_requests; delete from telegram_demos; delete from telegram_users;
+  delete from subscriptions; delete from access_codes; delete from bot_admins;
+  insert into bot_admins (telegram_id) values (grp);
+
+  -- بلا تجريبي: لا أكواد، وكل المستويات لسا ما انجرّبت
+  perform t_check('★ بلا تجريبي: ما في أكواد',
+                  jsonb_array_length(bot_my_codes(tg)) = 0);
+  perform t_check('★ وكل المستويات لسا ما انجرّبت',
+                  jsonb_array_length(bot_untried_levels(tg)) >= 2);
+
+  r := bot_demo_code(tg, tg, 'kunde', 'de', 'req-b1');
+  v_code := r->>'code';
+  perform t_check('★★ «كودي» بيرجّع كوده', jsonb_array_length(bot_my_codes(tg)) = 1);
+  perform t_check('★ ومعه المستوى والامتحان',
+                  (bot_my_codes(tg)->0->>'kind') = 'demo'
+                  and (bot_my_codes(tg)->0->>'stufe') = 'B1'
+                  and (bot_my_codes(tg)->0->>'test') is not null);
+
+  -- ★ «جرّب مستوى تاني»: B1 انشال من القايمة، B2 لسا فيها
+  perform t_check('★★ B1 انشال من «جرّب مستوى تاني»',
+    not exists (select 1 from jsonb_array_elements(bot_untried_levels(tg)) e
+                 where e->>'id' = 'req-b1'));
+  perform t_check('★★ وB2 لسا معروض',
+    exists (select 1 from jsonb_array_elements(bot_untried_levels(tg)) e
+             where e->>'id' = 'req-b2'));
+
+  -- ── التنبيه قبل الانتهاء ──
+  -- كود ما انفعّل: ما إله اشتراك، فما إله وقت ينتهي
+  perform t_check('★★ كود ما انفعّل ما بينتنبّه — ما إله وقت أصلاً',
+                  jsonb_array_length(bot_sweep_expiring()) = 0);
+
+  -- الطالب فعّله: صار إله اشتراك ينتهي بعد ٢٤ ساعة
+  insert into auth.users (id) values (gen_random_uuid()) returning id into u;
+  insert into profiles (id, is_admin) values (u, false);
+  insert into subscriptions (user_id, levels, current_period_end, access_code_id, status)
+  values (u, array['req-b1'], now() + interval '24 hours',
+          (select id from access_codes where code = v_code), 'active');
+
+  perform t_check('★ وباقيله ٢٤ ساعة: لسا بدري على التنبيه',
+                  jsonb_array_length(bot_sweep_expiring()) = 0);
+
+  -- منقرّب الانتهاء بدل ما ننطر ٢٣ ساعة
+  update subscriptions set current_period_end = now() + interval '40 minutes'
+   where access_code_id = (select id from access_codes where code = v_code);
+
+  r := bot_sweep_expiring();
+  perform t_check('★★ باقي ٤٠ دقيقة ← التنبيه بينطلق',
+                  jsonb_array_length(r) = 1 and (r->0->>'chat_id')::bigint = tg
+                  and (r->0->>'stufe') = 'B1');
+  perform t_check('★★ والكنس التاني ما بينبّه مرّتين',
+                  jsonb_array_length(bot_sweep_expiring()) = 0);
+
+  raise notice '';
+  raise notice '  كل اختبارات كودي والتنبيه نجحت ✓';
+end $$;
