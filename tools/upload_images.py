@@ -55,11 +55,34 @@ def main():
     # فالبادئة بتنشتق من اسم المجلد إلا إذا انحدّدت.
     prefix = a.prefix if a.prefix is not None else src.name
     prefix = prefix.strip('/')
-    files = sorted(p for p in src.iterdir() if p.is_file()
-                   and p.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')) \
+    EXT = ('.jpg', '.jpeg', '.png', '.webp')
+    files = sorted(p for p in src.iterdir()
+                   if p.is_file() and p.suffix.lower() in EXT) \
             if src.is_dir() else []
+
+    # ★ الصور صارت موزّعة: content/<مؤسسة>/<درجة>/modell-NN/img/*.
+    #   بلا هالمسار لازم تشغّلي الأمر مرّة لكل نموذج — ٢٥ مرّة، وكل
+    #   مرّة فرصة تنسي وحدة. لو المجلد المعطى ما فيه صور مباشرةً،
+    #   منلمّ كل يلي تحته بمجلدات img/.
+    if not files and src.is_dir():
+        files = sorted(f for f in src.rglob('img/*') if f.is_file()
+                       and f.suffix.lower() in EXT)
+        # الاسم لازم يطابق bankImage («img/m01-lv3.jpg») — والبادئة img
+        if files and a.prefix is None:
+            prefix = 'img'
+
     if not files:
         sys.exit(f'ما في صور بـ{src}')
+
+    # ★ اسمين متل بعض من مجلدين مختلفين بيدعسوا بعض بالدلو
+    dupes = {}
+    for f in files:
+        dupes.setdefault(f.name, []).append(str(f))
+    clash = {k: v for k, v in dupes.items() if len(v) > 1}
+    if clash:
+        for k, v in list(clash.items())[:5]:
+            print(f'✗ تصادم: {k} ← {", ".join(v)}')
+        sys.exit(f'{len(clash)} اسم مكرّر — الدلو مسطّح، فالأسماء لازم تكون فريدة')
 
     total = sum(f.stat().st_size for f in files)
     key_of = lambda f: f'{prefix}/{f.name}' if prefix else f.name
