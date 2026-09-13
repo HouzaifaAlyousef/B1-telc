@@ -384,16 +384,15 @@ await post({ callback_query: { id: "e2", data: "m|de|1",
 check("★★ وطلب الوصول بالألماني ← لغته المحفوظة صارت de",
       psql(`select lang from telegram_users where telegram_id=55504;`) === "de");
 
-/* ---- ١٥) /id بيرجّع رقمك ---- */
+/* ---- ١٥) ★ /id انشال ---- */
 sent.length = 0;
 await post(msg("/id"));
-check("/id بالخاص بيرجّع رقمك", String(last()?.text).includes(String(TG_ID))
-      && !/المجموعة/.test(String(last()?.text)));
+check("★ /id ما عاد يكشف أرقام — بيرجّع لاختيار اللغة", flat().length === 4);
 sent.length = 0;
 await post({ message: { chat: { id: -1001234567890 },
   from: { id: TG_ID, username: "kiko" }, text: "/id" } });
-check("★ و/id بالمجموعة بيرجّع رقم المجموعة كمان",
-      /-1001234567890/.test(String(last()?.text)) && /المجموعة/.test(String(last()?.text)));
+check("★ ولا بالمجموعة كمان",
+      !/-1001234567890<\/code>/.test(String(last()?.text ?? "")));
 
 await supa.shutdown(); await tgSrv.shutdown();
 const bad = R.filter(x => !x[1]);

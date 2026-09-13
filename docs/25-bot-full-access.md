@@ -99,8 +99,11 @@ https://api.telegram.org/bot<التوكن>/getUpdates
 
 ### ٢. سجّل مين بيوافق
 
-**الأفضل — سجّل المجموعة، مو الأشخاص.** ابعت `/id` جوّا المجموعة،
-بيرجّعلك رقمها (سالب). وبالـSQL Editor:
+**الأفضل — سجّل المجموعة، مو الأشخاص.**
+
+لجلب رقم المجموعة: ابعت أي رسالة فيها، وافتح
+`https://api.telegram.org/bot<التوكن>/getUpdates`، ودوّر على
+`"chat":{"id":-100…` — **الرقم سالب، خد الإشارة معه**. وبالـSQL Editor:
 
 ```sql
 insert into bot_admins (telegram_id, label)

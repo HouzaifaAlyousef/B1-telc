@@ -236,10 +236,10 @@ async function ensureCommands() {
   if (cmdsDone) return;
   cmdsDone = true;
   const D: Record<Lang, [string, string][]> = {
-    ar: [["start", "من الأول"], ["sprache", "غيّر اللغة"], ["id", "رقمي بتلغرام"]],
-    de: [["start", "Von vorn"], ["sprache", "Sprache ändern"], ["id", "Meine Telegram-ID"]],
-    uk: [["start", "Спочатку"], ["sprache", "Змінити мову"], ["id", "Мій Telegram ID"]],
-    en: [["start", "Start over"], ["sprache", "Change language"], ["id", "My Telegram ID"]],
+    ar: [["start", "من الأول"], ["sprache", "غيّر اللغة"]],
+    de: [["start", "Von vorn"], ["sprache", "Sprache ändern"]],
+    uk: [["start", "Спочатку"], ["sprache", "Змінити мову"]],
+    en: [["start", "Start over"], ["sprache", "Change language"]],
   };
   for (const [lang, list] of Object.entries(D)) {
     await tg("setMyCommands", {
@@ -564,15 +564,12 @@ Deno.serve(async (req) => {
     }
 
     const text = String(update.message?.text ?? "").trim();
-    // الأرقام يلي بدّك ياها: رقمك لجدول bot_admins، ورقم المجموعة
-    // لـADMIN_CHAT_ID. بمجموعة الاتنين بيطلعوا سوا — أوفر من رحلة
-    // getUpdates وقراءة JSON بالإيد.
-    if (/^\/id\b/.test(text)) {
-      const mine = `🙋 رقمك: <code>${from.id}</code>`;
-      const here = chat !== from.id
-        ? `\n👥 رقم هالمجموعة: <code>${chat}</code>` : "";
-      return void await send(chat, mine + here), new Response("ok");
-    }
+    // /id كان هون لجلب رقمك ورقم المجموعة وقت التركيب. انشال بعد ما
+    // خلص شغله: أمر بيكشف أرقام ما إله داعي يضل مفتوح للطلاب.
+    //
+    // لو احتجته مرّة تانية (مجموعة جديدة مثلاً): ابعت رسالة بالمجموعة
+    // وافتح https://api.telegram.org/bot<التوكن>/getUpdates
+    //   ودوّر على "chat":{"id":  — رقم المجموعة سالب.
 
     // ردّ على «اكتب سبب الرفض»: الوسم بالرسالة الأصلية بيقول لأي طلب
     const tag = TAG_RE.exec(String(update.message?.reply_to_message?.text ?? ""));
