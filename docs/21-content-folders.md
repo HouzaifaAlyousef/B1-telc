@@ -114,3 +114,41 @@ The `text.txt` files contain the answer keys, on `Lösung:` lines.
 `tools/build_dist.sh` refuses to build if `content/` — or any file named
 `text.txt` — reaches the output, the same way it already guards `data/`.
 Two tests plant that leak on purpose and check the build fails.
+
+## من المحتوى للقاعدة — لصقة وحدة
+
+```bash
+node tools/content_to_seed.mjs oesd/a1 supabase/seed/a1.sql
+```
+
+بيقرا `content/oesd/a1/modell-*/text.txt` وبيطلّع ملف بذور واحد بيعمل
+المستوى **وبينشره** وبيدخّل كل الامتحانات. الصقه بـSQL Editor وخلص.
+
+الملف الكبير بينقسم لأجزاء تنلصق وحدة وحدة (المحرّر بيتعتّر فوق
+~٢٠٠ ك.ب):
+
+```bash
+./tools/split_seed.sh b2        # → supabase/seed/parts/b2-1.sql …
+```
+
+★ **ما في مولّد SQL تاني:** السكربت بس بيترجم شكل `text.txt` لشكل
+`data/*.json` وبينده `tools/export_sql.py` — نفس المولّد يلي بيعمل
+بذور B1. والتحليل بـ`admin/parse.js`، نفس المحلّل يلي باللوحة.
+
+★ **وفحص انحراف تلقائي:** `tests/tools.sh` بيدور على كل مستوى إله
+بذور وبيتأكّد إنّها مطابقة للمحتوى. **بلا قايمة مكتوبة بالإيد** —
+مستوى جديد بيندخل بالفحص لحاله، فما بيصير مستوى يمرق بلا فحص.
+
+### أسماء المؤسسات
+
+المجلّد بيعطي المعرّف، والجدول بـ`content_to_seed.mjs` بيعطي اسم
+العرض:
+
+| المجلّد | الطالب بيشوف | عنوان المستوى |
+|---|---|---|
+| `telc` | telc | telc Deutsch B2 |
+| `oesd` | **ÖSD** | ÖSD Zertifikat A1 |
+| `goethe` | Goethe | Goethe-Zertifikat B1 |
+
+مؤسسة مو بالجدول بتاخد اسم مجلّدها. والعنوان فيك تعدّله من اللوحة
+بأي وقت.

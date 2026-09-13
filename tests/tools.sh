@@ -155,23 +155,40 @@ check "اللوحة بتحمّل vorlagen.js" $?
 python3 tools/check_sql.py >/dev/null 2>&1
 check "★ كل الترحيلات بتنقرا (نفس فحص البايبلاين)" $?
 
-# ---------- بذور B2 مولّدة من content/ ----------
+# ---------- بذور مولّدة من content/ ----------
 # ★ انلدغنا قبل: أجزاء b1 ضلّت مولّدة من ١٦ نموذج بعد ما صاروا ١٧،
 #   ومين لصقهن فاته نموذج كامل بلا ما ينتبه. الفحص هون بدل الانتباه.
-node tools/content_to_seed.mjs telc/b2 supabase/seed/b2.sql >/dev/null 2>&1
-git diff --quiet -- supabase/seed/b2.sql 2>/dev/null
-check "★ supabase/seed/b2.sql مطابق لـcontent/telc/b2" $?
+#
+# ★ وبالدوران على كل مستوى معبّى، مو بقايمة مكتوبة بالإيد: أي مستوى
+#   جديد بينضاف بيندخل بالفحص لحاله. قايمة مثبّتة معناها إنّ مستوى
+#   جديد بيمرق بلا فحص وما حدا بينتبه.
+SEEDED=0
+for D in content/*/*/; do
+  P=$(basename "$(dirname "$D")"); L=$(basename "$D")
+  [ -f "supabase/seed/$L.sql" ] || continue
+  grep -q "content/$P/$L" "supabase/seed/$L.sql" 2>/dev/null || continue
+  SEEDED=$((SEEDED + 1))
 
-./tools/split_seed.sh b2 >/dev/null 2>&1
-./tools/split_seed.sh b1 >/dev/null 2>&1
+  node tools/content_to_seed.mjs "$P/$L" "supabase/seed/$L.sql" >/dev/null 2>&1
+  git diff --quiet -- "supabase/seed/$L.sql" 2>/dev/null
+  check "★ supabase/seed/$L.sql مطابق لـcontent/$P/$L" $?
+
+  # كل نموذج معبّى لازم يوصل للبذور — مو بس يمرق الفحص
+  WANT=$(node tools/check_content.mjs "$P/$L" 2>/dev/null | grep -c "✓ $P/$L")
+  GOT=$(grep -c "^insert into tests" "supabase/seed/$L.sql")
+  [ "$WANT" = "$GOT" ]
+  check "★ وكل نماذجه وصلت ($GOT من $WANT)" $?
+done
+[ "$SEEDED" -gt 0 ]
+check "★ في بذور مولّدة من content/ ($SEEDED مستوى)" $?
+
+# الأجزاء المقسّمة لازم تتبع ملفاتها الكاملة
+for F in supabase/seed/parts/*-1.sql; do
+  L=$(basename "$F" -1.sql)
+  ./tools/split_seed.sh "$L" >/dev/null 2>&1
+done
 git diff --quiet -- supabase/seed/parts/ 2>/dev/null
-check "★ والأجزاء مطابقة للملفين الكاملين" $?
-
-# كل نموذج معبّى لازم يوصل للبذور — مو بس يمرق الفحص
-WANT_B2=$(node tools/check_content.mjs telc/b2 2>/dev/null | grep -c '✓ telc/b2')
-GOT_B2=$(grep -c "^insert into tests" supabase/seed/b2.sql)
-[ "$WANT_B2" = "$GOT_B2" ]
-check "★ كل نماذج B2 وصلت للبذور ($GOT_B2 من $WANT_B2)" $?
+check "★ والأجزاء مطابقة للملفات الكاملة" $?
 
 # ---------- setup.sql مطابق للترحيلات ----------
 ./tools/build_setup.sh >/dev/null 2>&1

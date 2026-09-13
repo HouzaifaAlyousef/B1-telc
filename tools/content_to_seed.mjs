@@ -64,12 +64,23 @@ for (const m of modelle) {
 if (!index.modelle.length) { console.error('✗ ما في ولا نموذج معبّى'); process.exit(1); }
 writeFileSync(path.join(tmp, 'index.json'), JSON.stringify(index, null, 1));
 
+/* اسم المؤسسة للعرض وعنوان المستوى.
+   المجلّد بيعطي المعرّف («oesd»)، بس الطالب لازم يشوف «ÖSD». جدول
+   صغير للعرض بس — مين مو فيه بياخد اسم مجلّده، والعنوان فيك تعدّله
+   من اللوحة بأي وقت. */
+const PROV = {
+  telc:   { name: 'telc',   title: (s) => `telc Deutsch ${s}` },
+  oesd:   { name: 'ÖSD',    title: (s) => `ÖSD Zertifikat ${s}` },
+  goethe: { name: 'Goethe', title: (s) => `Goethe-Zertifikat ${s}` },
+};
+
 const stufe = lvl.toUpperCase();
+const meta = PROV[prov] ?? { name: prov, title: (s) => `${prov} ${s}` };
 execFileSync('python3', [
   path.join(ROOT, 'tools/export_sql.py'), tmp, path.resolve(ROOT, out),
   '--level', `${prov}-${lvl}`,
-  '--level-title', `${prov} Deutsch ${stufe}`,
-  '--provider', prov, '--stufe', stufe,
+  '--level-title', meta.title(stufe),
+  '--provider', meta.name, '--stufe', stufe,
   // ★ اسم ثابت مو المجلّد المؤقّت: بلاه الناتج بيتغيّر كل تشغيل
   //   وفحص الانحراف ما بيقدر يشتغل أصلاً
   '--label', `content/${prov}/${lvl}`,
