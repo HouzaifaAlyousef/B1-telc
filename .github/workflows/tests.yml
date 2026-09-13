@@ -34,25 +34,10 @@ jobs:
 
       # الترحيلات وأجسام plpgsql بتنفحص قبل ما تنشغل —
       # خطأ نحوي بيبيّن هون بدل ما يوقف نص الجولة
+      # نفس السكربت يلي بتشغّله tests/tools.sh — مصدر واحد، فما
+      # بيصير خطأ يمرق محلياً ويوقف البايبلاين بعد الدفع
       - name: تحليل SQL
-        run: |
-          python3 - <<'PY'
-          import pglast, re, glob, sys
-          bad = 0
-          for f in sorted(glob.glob('supabase/migrations/*.sql')):
-              s = open(f).read()
-              try:
-                  pglast.parse_sql(s)
-                  for m in re.finditer(r'(create or replace function (\w+).*?\$\$;)', s, re.S):
-                      if 'language sql' in m.group(1)[:300]:
-                          continue
-                      pglast.parse_plpgsql(m.group(1)[:-1])
-                  print(f'  ✓ {f}')
-              except Exception as e:
-                  bad += 1
-                  print(f'  ✗ {f}: {e}')
-          sys.exit(1 if bad else 0)
-          PY
+        run: python3 tools/check_sql.py
 
       - name: فحص JavaScript
         run: |

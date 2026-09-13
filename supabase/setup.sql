@@ -4669,6 +4669,7 @@ create or replace function bot_request_access(
 ) returns jsonb
 language plpgsql security definer set search_path = public as $$
 declare v_u telegram_users%rowtype; v_r access_requests%rowtype; v_lvl levels%rowtype;
+        v_lang text;
 begin
   if p_months is null or p_months < 1 or p_months > 12 then
     raise exception 'months_out_of_range';
@@ -4678,10 +4679,16 @@ begin
   if not found then raise exception 'no_demo_yet'; end if;
 
   -- ★ آخر لغة اختارها هي لغته. الردّ بيوصله فيها حتى لو أخد التجريبي بغيرها.
-  if nullif(trim(coalesce(p_lang, '')), '') is not null and p_lang <> v_u.lang then
-    update telegram_users set lang = left(p_lang, 8)
-     where telegram_id = p_telegram_id;
-    v_u.lang := left(p_lang, 8);
+  --
+  -- متغيّر لحاله مو v_u.lang := …: Postgres بيقبل الإسناد لحقل جوّا
+  -- %rowtype، بس المحلّل السكوني (pglast بالـCI) ما بيقدر يحلّ نوع
+  -- الصفّ بلا قاعدة فبيرفضه. ومنّا شغلة تستاهل نضعّف الفحص لأجلها.
+  v_lang := nullif(trim(coalesce(p_lang, '')), '');
+  if v_lang is null then
+    v_lang := v_u.lang;
+  elsif v_lang is distinct from v_u.lang then
+    v_lang := left(v_lang, 8);
+    update telegram_users set lang = v_lang where telegram_id = p_telegram_id;
   end if;
 
   select * into v_r from access_requests
@@ -4689,7 +4696,7 @@ begin
   if found then
     select * into v_lvl from levels where id = v_r.level_id;
     return jsonb_build_object('ok', true, 'again', true, 'request_id', v_r.id,
-      'months', v_r.months, 'username', v_u.username, 'lang', v_u.lang,
+      'months', v_r.months, 'username', v_u.username, 'lang', v_lang,
       'level_id', v_r.level_id, 'stufe', v_lvl.stufe, 'provider', v_lvl.provider);
   end if;
 
@@ -4699,7 +4706,7 @@ begin
 
   select * into v_lvl from levels where id = v_r.level_id;
   return jsonb_build_object('ok', true, 'again', false, 'request_id', v_r.id,
-    'months', v_r.months, 'username', v_u.username, 'lang', v_u.lang,
+    'months', v_r.months, 'username', v_u.username, 'lang', v_lang,
     'level_id', v_r.level_id, 'stufe', v_lvl.stufe, 'provider', v_lvl.provider);
 end $$;
 revoke all on function bot_request_access(bigint, int, text)
