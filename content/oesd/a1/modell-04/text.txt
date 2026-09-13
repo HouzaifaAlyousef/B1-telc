@@ -1,0 +1,281 @@
+# ÜBUNGSSATZ 3
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/m04-lv1.png
+Auswahl:
+1 = Reisebüro Smekal: Bahnreisen in alle deutschen Städte: schnell, billig und ohne Stress. auf Wunsch mit Übernachtung im Hotel. Aktuelle Angebote finden Sie unter: www.reise-smekal.de
+2 = Wir organisieren Ihren Geburtstag! Feiern Sie Ihren Geburtstag im Nostalgiezug und schenken Sie sich und Ihren Freunden eine romantische Fahrt durch Wien. Start: 20.00 Uhr, Hauptbahnhof. Dauer: 2 Stunden, auf Wunsch mit Abendessen. www.agenturspezial.com
+3 = Programm für die Woche vom 7. bis 13. November: Rot wie die Liebe; Die Nachtfahrt; Mein Freund Ferdi Fuchs; Kommt ein Raumschiff geflogen; Alpengold – Im Land der Berge. Filminfos, Kartenpreise und Reservierung: www.cineman.ch
+4 = Kleidung, Schuhe, Taschen: Modegeschäft Graf. Kleine Preise für alle Größen! Große Auswahl an Mänteln, Pullovern und Kleidung für Kinder! Rosenaustr. 50, 86150 Augsburg
+5 = IHR SPEZIALIST FÜR PFLANZEN: als Geschenk oder für den Garten. Rosalia. Öffnungszeiten Mo.–Fr.: 09:00–18:00 Uhr. Mayergasse 5. Internet: www.rosalia.at
+6 = Zahnarzt Dr. Hubert Steiner: Ihr Spezialist für schmerzfreie Zahnbehandlung. Ordinationszeiten: Mo–Do 08:00–13:00. telefonische Anmeldung 01 536 783 45. alle Kassen
+Aufgaben:
+[1] Situation A: Ihre Mutter hat Geburtstag. Sie wollen Blumen kaufen.
+Lösung: 5
+[2] Situation B: Bald ist Winter. Sie suchen eine Jacke für Ihre kleine Tochter.
+Lösung: 4
+[3] Situation C: Sie haben Zahnschmerzen und brauchen schnell Hilfe.
+Lösung: 6
+[4] Situation D: Am Wochenende haben Sie Freizeit. Sie möchten mit Freunden ins Kino gehen.
+Lösung: 3
+[5] Situation E: Sie haben ein paar Tage frei. Sie möchten mit dem Zug wegfahren.
+Lösung: 1
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**Treffen Sie Menschen aus der ganzen Welt!**
+Sie lernen neue Freunde kennen, kochen gemeinsam und hören etwas über andere Länder!
+Wann: jeden Freitag ab 18.00 Uhr
+Clubcafé im Amtshaus
+Goethestraße 3
+Tel: 0664 / 5763 45 32
+Aufgaben:
+[6] Kann man im Clubcafé mit Menschen aus vielen Ländern sprechen?
+A) JA
+B) NEIN
+Lösung: A
+[7] Kann man nächsten Donnerstag ins Clubcafé kommen?
+A) JA
+B) NEIN
+Lösung: B
+Text:
+**D-A-CH Bands laden zur MUSIK-NACHT**
+am Freitag, 7. Juli, Beginn 19 Uhr
+Musik aus Deutschland, Österreich und der Schweiz!
+Buffet mit regionalen Speisen aus allen drei Ländern
+DACH-Zentrum | Saal 3, 1. Stock
+Eintritt: 6 Euro
+Aufgaben:
+[8] Gibt es etwas zu essen?
+A) JA
+B) NEIN
+Lösung: A
+[9] Muss man für das Fest bezahlen?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**FLOTT Transport**
+Neue Wohnung, aber kein großes Auto?
+Wir bringen Ihre Möbel und vieles mehr an jeden Ort – in Österreich und Europa.
+2 Männer + Auto: 40 Euro pro Stunde
+24-Stunden-Hotline: +43 (0) 660 21 24 459
+Aufgaben:
+[10] Kann man bei Flott Transport Autos kaufen?
+A) JA
+B) NEIN
+Lösung: B
+[11] Kann man auch in der Nacht anrufen?
+A) JA
+B) NEIN
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/m04-lv3.png
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: SEHR GEEHRTE DAMEN UND HERREN, Sie können von Montag bis Freitag 9–18 Uhr Ihre Briefe und Pakete abholen. Bitte füllen Sie das Abholformular aus und halten Sie Ihren Lichtbildausweis bereit.
+Lösung: 3
+[13] Text B: Bitte beachten Sie, dass in diesem Teil des Parks Hunde verboten sind. Für Hunde steht der hintere Teil des Parks zur Verfügung. Danke für Ihr Verständnis!
+Lösung: 1
+[14] Text C: Liebe Bibliotheksbesucherinnen und -besucher! Sie finden unsere Computer mit Internetzugang im Raum 4. Bei Fragen hilft Ihnen gerne unser Bibliothekspersonal.
+Lösung: 5
+[15] Text D: Konditorei BERGER: Original österreichische Kaffeehaus-Spezialitäten! Unsere Öffnungszeiten: Di.–So.: 9 –22 Uhr, warme Küche von 11 bis 21 Uhr, Montag Ruhetag
+Lösung: 4
+[16] Text E: Liebe Kollegen, bitte haltet den Aufenthaltsraum sauber. Alle Abfälle bitte in den Mülleimer! Vielen Dank für euer Verständnis!
+Lösung: 6
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/m04-hv1.png
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: F
+[18] Text 2
+Lösung: D
+[19] Text 3
+Lösung: B
+[20] Text 4
+Lösung: A
+[21] Text 5
+Lösung: E
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Geburtstagsparty**
+Was: Geburtstagsparty
+Wann: am ............................, ............................ Februar
+um ............................ Uhr
+Wo: in der ............................gasse 8
+Telefonnummer: 0664/ ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Wann (Wochentag): Samstag / Sa(.)
+Punkt: Datum: 14(.) Februar
+Punkt: Uhrzeit: 19 / 7 Uhr
+Punkt: Wo: Römergasse 8
+Punkt: Telefonnummer: 4682146
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Was essen Sie am liebsten?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Text 1: Was essen Sie am liebsten?
+A) Schokolade
+B) Käse
+C) Brot
+D) Nudeln & Teigwaren
+Lösung: B
+[24] Text 2: Was essen Sie am liebsten?
+A) Schokolade
+B) Käse
+C) Brot
+D) Nudeln & Teigwaren
+Lösung: A
+[25] Text 3: Was essen Sie am liebsten?
+A) Schokolade
+B) Käse
+C) Brot
+D) Nudeln & Teigwaren
+Lösung: C
+[26] Text 4: Was essen Sie am liebsten?
+A) Schokolade
+B) Käse
+C) Brot
+D) Nudeln & Teigwaren
+Lösung: B
+[27] Text 5: Was essen Sie am liebsten?
+A) Schokolade
+B) Käse
+C) Brot
+D) Nudeln & Teigwaren
+Lösung: D
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Helfen Sie Ihrer Freundin und füllen Sie das Formular aus.
+Text:
+Ihre Freundin, Eva Kadavy, macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte.
+**BODENSEE-RUNDFAHRT – Anmeldung**
+(0) Familienname, Vorname: Kadavy, Eva
+(1) Anzahl der Personen: ............................
+(2) Davon Kinder: ............................
+Urlaubsadresse: Hotel Schönblick
+Straße, Hausnummer: Burgstraße 34
+PLZ, Urlaubsort: 78014 (3) ............................
+Der Reisepreis ist mit der Anmeldung zu bezahlen.
+(4) Zahlungsweise: [ ] Bar | [ ] Kreditkarte
+(5) Reisetermin: ............................
+Aufgaben:
+[28] Schreiben Sie die fünf fehlenden Informationen in das Formular:
+Punkt: (1) Anzahl der Personen: 4 / vier
+Punkt: (2) Davon Kinder: 2 / zwei
+Punkt: (3) Urlaubsort: Seeheim
+Punkt: (4) Zahlungsweise: Bar
+Punkt: (5) Reisetermin: nächsten Sonntag / Sonntag
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Ihr Freund Matthias möchte mit Ihnen Sport machen. Sie bekommen folgendes E-Mail von ihm. Antworten Sie Matthias. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Freizeitsport**
+Hallo!
+Ich möchte in meiner Freizeit gern Sport machen, vielleicht Schwimmen oder Radfahren. Möchtest du mit mir gemeinsam etwas machen?
+Schreib mir bitte: Welche Sportart möchtest du gerne machen? Was brauchen wir? An welchem Tag hast du Zeit?
+Liebe Grüße
+Matthias
+Aufgaben:
+[29] Antworten Sie Matthias (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: Welche Sportart möchtest du gerne machen?
+Punkt: Was brauchen wir?
+Punkt: An welchem Tag hast du Zeit?
+Punkt: Gruß am Ende

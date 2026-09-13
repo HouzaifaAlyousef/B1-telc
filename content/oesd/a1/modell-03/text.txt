@@ -1,0 +1,286 @@
+# ÜBUNGSSATZ 2
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/m03-lv1.png
+Auswahl:
+1 = Kunst zum kleinen Preis: Fotos und Naturbilder von berühmten KünstlerInnen und FotografInnen – schon ab 30 Euro! Kunst-Supermarkt, Neubaugasse 14, 1070 Wien
+2 = Wir suchen eine/n Kellnerin/Kellner: Hotelrestaurant „Zur Goldenen Buche“. Erfahrung im Service notwendig, Essen und Unterkunft gratis. Kontakt: Frau Garcia, Tel.-Nr.: 012 785 1254
+3 = WIEDERERÖFFNUNG DES STRANDHOTELS MEERBLICK: große Zimmer in allen Preisklassen mit Balkon oder Terrasse, Frühstücksbuffet. 5 Minuten vom Strand entfernt. www.hotelammeer.com
+4 = „Bücher-Markt“: Egal ob Krimi, Sachbuch, Comic oder Poesie: Hier finden Sie Bücher zu verschiedenen Themen und günstigen Preisen! Jeden Freitag von 10 bis 17 Uhr, Stadtbibliothek Tulln
+5 = Keine Zeit zum Einkaufen? Keine Lust zu kochen? Italienische Küche auf Bestellung bei Bellini. Rufen Sie uns an: 01 344 677. Wir bieten: Pasta, Pizza, Fleisch- und Fischgerichte
+6 = Obst und Gemüse: Biologisch und frisch, direkt vom Bauernhof! Jeden Samstag Gemüse- und Obstmarkt von 8 bis 14 Uhr am Hauptplatz. Bio-Fleisch auf Vorbestellung
+Aufgaben:
+[1] Situation A: Sie haben Hunger und möchten telefonisch etwas zu essen bestellen.
+Lösung: 5
+[2] Situation B: Sie wollen am Wochenende einkaufen gehen. Sie brauchen frischen Salat, Äpfel und Karotten.
+Lösung: 6
+[3] Situation C: Ihre Freundin hat Geburtstag. Sie möchten ihr ein Bild kaufen.
+Lösung: 1
+[4] Situation D: Am Wochenende haben Sie viel Zeit. Sie wollen sich etwas zum Lesen kaufen.
+Lösung: 4
+[5] Situation E: Bald ist Sommer. Sie suchen für die Ferien ein Hotel für Ihre Familie.
+Lösung: 3
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**Sprachkurse an der SPRACHSCHULE OLYMP**
+Wir bieten Kurse für folgende Sprachen:
+Deutsch, Englisch, Französisch, Russisch, Slowenisch, Türkisch, Polnisch, Tschechisch und Slowakisch
+Kurse: Dienstag und Donnerstag, 13 bis 16 Uhr
+Sprachschule Olymp
+Oberbergerstraße 17 | Tel: 01 313 56 72
+Aufgaben:
+[6] Kann man in der Sprachschule Griechisch lernen?
+A) JA
+B) NEIN
+Lösung: B
+[7] Gibt es am Mittwochnachmittag Kurse?
+A) JA
+B) NEIN
+Lösung: B
+Text:
+**Tiere suchen ein Zuhause**
+über 500 Tiere im neuen Tierschutzzentrum in Wien-Donaustadt
+Besuchen Sie uns:
+Di und Do: 15 bis 17 Uhr
+Fr und Sa: 13 bis 17 Uhr
+Informationen und Kontakt: 01 277 55
+www.tierquartier.at
+Aufgaben:
+[8] Kann man jeden Tag ins Tierschutzzentrum gehen?
+A) JA
+B) NEIN
+Lösung: B
+[9] Kann man im Tierschutzzentrum anrufen?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Spezialkurs: Schreiben IM ALLTAG**
+Hier lernen Sie, wie man z. B.:
+✓ ein Formular ausfüllt,
+✓ einen kurzen Brief oder
+✓ eine Entschuldigung für das kranke Kind in der Schule schreibt.
+Volkshochschule Süd, Raum 3
+10 Abende je 2 Stunden ab Montag, 17–19 Uhr
+Tel. Anmeldung unter 01 45 67 988
+Aufgaben:
+[10] Ist der Schreibkurs für Kinder?
+A) JA
+B) NEIN
+Lösung: B
+[11] Ist der Kurs am Vormittag?
+A) JA
+B) NEIN
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/m03-lv3.png
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: Machen Sie Pause und spielen Sie Tischtennis! Ab sofort finden Sie in unserem Fitnessraum mehrere Tischtennistische. Denn: Sport in der Arbeitspause hält gesund und macht Spaß.
+Lösung: 4
+[13] Text B: Sehr geehrte Hausbewohner! Bitte respektieren Sie die Ruhezeiten! Zu Mittag und nach 10 Uhr abends: KEINE LAUTE MUSIK IM HAUS!
+Lösung: 1
+[14] Text C: Gesundes Essen am Arbeitsplatz! Sie möchten in der Mittagspause etwas kochen? Kein Problem! Im 1. Stock finden Sie eine Küche mit Mikrowelle, Herd und Kühlschrank.
+Lösung: 2
+[15] Text D: Schützen Sie sich vor Grippe! In Grippezeiten ist es sehr wichtig, regelmäßig die Hände zu waschen – besonders vor dem Essen.
+Lösung: 3
+[16] Text E: Die Waschmaschine ist für alle Hausbewohner da! Bevor Sie Ihre Wäsche waschen: Schreiben Sie Ihren Namen in den Wochenplan!
+Lösung: 6
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/m03-hv1.png
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: C
+[18] Text 2
+Lösung: E
+[19] Text 3
+Lösung: A
+[20] Text 4
+Lösung: D
+[21] Text 5
+Lösung: F
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Arbeitsamt**
+Arbeitsamt: neuer Termin
+Wann: am ............................, 17. August, um ............................ Uhr
+Wo: im Büro von Frau ............................
+im Zimmer Nummer ............................
+Telefonnummer: 04323/ ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Wann (Wochentag): Freitag / Fr(.)
+Punkt: Uhrzeit: 15 / 3 Uhr
+Punkt: Wo (Büro von Frau): Huber
+Punkt: Zimmer Nummer: 12
+Punkt: Telefonnummer: 1578942
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Wo kaufen Sie am liebsten Brot und Backwaren ein?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Text 1: Wo kaufen Sie am liebsten Brot und Backwaren ein?
+A) in der Bäckerei
+B) auf dem Bauernmarkt
+C) im Supermarkt
+D) im Bio-Geschäft
+Lösung: B
+[24] Text 2: Wo kaufen Sie am liebsten Brot und Backwaren ein?
+A) in der Bäckerei
+B) auf dem Bauernmarkt
+C) im Supermarkt
+D) im Bio-Geschäft
+Lösung: A
+[25] Text 3: Wo kaufen Sie am liebsten Brot und Backwaren ein?
+A) in der Bäckerei
+B) auf dem Bauernmarkt
+C) im Supermarkt
+D) im Bio-Geschäft
+Lösung: D
+[26] Text 4: Wo kaufen Sie am liebsten Brot und Backwaren ein?
+A) in der Bäckerei
+B) auf dem Bauernmarkt
+C) im Supermarkt
+D) im Bio-Geschäft
+Lösung: A
+[27] Text 5: Wo kaufen Sie am liebsten Brot und Backwaren ein?
+A) in der Bäckerei
+B) auf dem Bauernmarkt
+C) im Supermarkt
+D) im Bio-Geschäft
+Lösung: C
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Helfen Sie Ihrer Freundin und füllen Sie das Formular aus.
+Text:
+Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt.
+**Sprachenschule LIGA – Anmeldung**
+(0) Familienname: Legrand
+Vorname: Yvonne
+Geburtsdatum: 17.4.1993
+(1) Geburtsort: ............................
+Muttersprache: Französisch
+(2) Andere Sprachen: ............................
+Schon Deutsch gelernt? ja [x] nein [ ]
+(3) Wie lange?: ............................
+(4) Kurstermin: ............................
+(5) Kurszeit: [ ] von 9 – 12 Uhr | [ ] von 13 – 16 Uhr | [ ] von 17 – 20 Uhr
+Aufgaben:
+[28] Schreiben Sie die fünf fehlenden Informationen in das Formular:
+Punkt: (1) Geburtsort: Lyon
+Punkt: (2) Andere Sprachen: Englisch
+Punkt: (3) Wie lange: sechs Monate / 6 Monate
+Punkt: (4) Kurstermin: vom 1. bis zum 28. August / 1. - 28. August
+Punkt: (5) Kurszeit: von 9 – 12 Uhr
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Ihre Freundin Magda möchte mit Ihnen einkaufen gehen. Sie bekommen folgendes E-Mail von ihr. Antworten Sie Magda. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Zusammen einkaufen**
+Hallo!
+Ich möchte mir neue Schuhe kaufen. Ich gehe aber nicht so gern alleine einkaufen, möchtest du vielleicht mitkommen?
+An welchem Tag und um wie viel Uhr hast du Zeit? Wo gibt es gute Geschäfte? Leider habe ich kein Auto. Wie können wir einkaufen fahren?
+Liebe Grüße
+Magda
+Aufgaben:
+[29] Antworten Sie Magda (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: An welchem Tag und um wie viel Uhr hast du Zeit?
+Punkt: Wo gibt es gute Geschäfte?
+Punkt: Wie können wir einkaufen fahren?
+Punkt: Gruß am Ende

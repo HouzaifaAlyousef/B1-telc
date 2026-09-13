@@ -1,0 +1,280 @@
+# ÜBUNGSSATZ 1
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/m02-lv1.png
+Auswahl:
+1 = Miet-Hit: Wohnen am Stadtrand: drei Zimmer, Nebenräume, Balkon, familienfreundlicher Wohnpark mit Garagenplatz für Ihr Auto. Infos: www.gewog.at
+2 = Computer-Börse: Probleme mit dem Computer? Wir bieten: neue und gebrauchte Computer, verschiedenes Zubehör und Reparaturen. Internet: www.computer.de
+3 = Verkäufer/Verkäuferin gesucht! Wir suchen eine kompetente Verkaufskraft für unseren Handy- und Computerladen in Basel. Ihre Qualifikation: Erfahrung im Verkauf, Kenntnisse über neueste EDV und Internet-Software. Kontakt: office@computerladen.ch
+4 = Der ONLINE-PREISHAMMER: Surfen Sie im Internet so lange Sie wollen! für nur 10 Euro im Monat. Nähere Informationen und Anmeldungen bei: ONLINE, Tel: 0800-33 21 300
+5 = Telefonieren Sie zum billigsten Tarif in ganz Österreich und holen Sie sich die besten Handys und Smartphones ab 0 €. Gleich anmelden bei: Techno-Star Telefonsysteme, 54-mal in Österreich. www.techno-star.at
+6 = KAUFEN oder VERKAUFEN? Sie wollen gebrauchte Dinge kaufen oder Ihren alten Fernseher, Möbel oder etwas anderes verkaufen? Mit einer Anzeige in Ihrer Bezirkszeitung ist das einfach! Telefonische Anfragen unter: 01 54 100/ DW 32 Anzeigenbüro
+Aufgaben:
+[1] Situation A: Sie haben ein altes Auto und möchten es verkaufen.
+Lösung: 6
+[2] Situation B: Sie suchen eine Wohnung für sich und Ihre Kinder.
+Lösung: 1
+[3] Situation C: Ihr PC ist kaputt. Sie möchten ihn reparieren lassen.
+Lösung: 2
+[4] Situation D: Ihre Tochter braucht oft das Internet. Sie suchen ein Angebot.
+Lösung: 4
+[5] Situation E: Sie rufen gerne Ihre Freunde an und brauchen ein neues Mobiltelefon.
+Lösung: 5
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**Damen-Friseursalon Helga**
+Neue Öffnungszeiten:
+Di.–Do. 11–18 Uhr
+Fr. 15–20 Uhr
+Sa. 10–14 Uhr
+Haare waschen – schneiden – färben – Dauerwelle
+Aktion für Studentinnen: minus 50 Prozent!
+Aufgaben:
+[6] Können Sie am Freitagvormittag Ihre Haare schneiden lassen?
+A) JA
+B) NEIN
+Lösung: B
+[7] Zahlen Studentinnen den halben Preis?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Weltcafé**
+Vegetarische Küche
+Mittagsmenü (Suppe und Hauptspeise) für 5,80 Euro
+Überdachter Gastgarten!
+NEU jeden Freitag:
+Essen mit Musik von 18:00 bis 23:00 Uhr, nur mit Reservierung
+Aufgaben:
+[8] Gibt es im Weltcafé Hauptspeisen ohne Fleisch?
+A) JA
+B) NEIN
+Lösung: A
+[9] Muss man am Freitagabend reservieren?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**HAUPTBAHNHOF NEU**
+Wir bauen für Sie!
+Der Haupteingang am Rudolfsplatz ist bis Dezember geschlossen. Bitte nehmen Sie den Eingang in der Bahnhofstraße.
+Die Schalter für Fahrkarten und die Information haben ganz normal für Sie geöffnet.
+Wir danken für Ihr Verständnis!
+Aufgaben:
+[10] Ist der Eingang in der Bahnhofstraße geschlossen?
+A) JA
+B) NEIN
+Lösung: B
+[11] Können Sie im Bahnhof Tickets kaufen?
+A) JA
+B) NEIN
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/m02-lv3.png
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: Herzlich willkommen in unserem Einkaufszentrum! Unsere neuen Parkplätze in der Parkgarage warten auf Sie – die erste Stunde kostet nichts!
+Lösung: 5
+[13] Text B: Liebe Kundinnen und Kunden! Unsere Servicemitarbeiter sind rund um die Uhr für Sie da! Kontaktieren Sie uns unter 034-99099 oder unter der Adresse service@clientsfirst.co.de
+Lösung: 6
+[14] Text C: Liebe Naturfreunde, wir bitten Sie, diesen Park sauber zu halten. Bitte werfen Sie Ihren Abfall nicht im Park weg. An allen Ausgängen gibt es Mülleimer.
+Lösung: 2
+[15] Text D: Liebe MuseumsbesucherInnen, der Eingang für RollstuhlfahrerInnen und Personen mit Kinderwägen ist in der Brunnerstraße Nr. 5. Bitte läuten Sie an der Tür, wir helfen Ihnen gerne.
+Lösung: 3
+[16] Text E: Schneiderei Müller: Ihr Kleid ist zu weit, Ihre Hose zu lang, Ihr Mantel zu kurz? Kein Problem: Wir ändern Ihre Kleidung für Sie!
+Lösung: 1
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/m02-hv1.png
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: D
+[18] Text 2
+Lösung: E
+[19] Text 3
+Lösung: F
+[20] Text 4
+Lösung: B
+[21] Text 5
+Lösung: A
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Wohnung**
+Was: Wohnung (Beispiel)
+Frei ab: ............................, Größe ............................ m²
+Preis: ............................ Euro
+Wo: in der ............................-Straße 23
+Telefonnummer: 0650/ ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Frei ab: Juni
+Punkt: Größe: 68 m²
+Punkt: Preis: 500 Euro
+Punkt: Wo: Hirschenstraße 23
+Punkt: Telefonnummer: 0650 / 2648235
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Was lesen Sie am liebsten?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Person 1: Was lesen Sie am liebsten?
+A) Zeitungen
+B) Wissens-/Sachbücher
+C) Reisebücher
+D) Bücher über Liebe
+Lösung: A
+[24] Person 2: Was lesen Sie am liebsten?
+A) Zeitungen
+B) Wissens-/Sachbücher
+C) Reisebücher
+D) Bücher über Liebe
+Lösung: B
+[25] Person 3: Was lesen Sie am liebsten?
+A) Zeitungen
+B) Wissens-/Sachbücher
+C) Reisebücher
+D) Bücher über Liebe
+Lösung: D
+[26] Person 4: Was lesen Sie am liebsten?
+A) Zeitungen
+B) Wissens-/Sachbücher
+C) Reisebücher
+D) Bücher über Liebe
+Lösung: C
+[27] Person 5: Was lesen Sie am liebsten?
+A) Zeitungen
+B) Wissens-/Sachbücher
+C) Reisebücher
+D) Bücher über Liebe
+Lösung: D
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Helfen Sie Ihrem Freund und füllen Sie das Formular aus.
+Text:
+Ihr Freund, Juan Rodriguez, geboren am 12.10.1985, möchte einen Deutschkurs an der Volkshochschule machen. Er ist kein Anfänger, er hat schon die A1-Prüfung gemacht. Er ist Taxifahrer von Beruf und arbeitet abends. Er möchte vormittags einen Kurs besuchen. Juan wohnt in München, in der Danklstraße 15. Die Postleitzahl ist 81371.
+**ANMELDUNG – SPRACHZENTRUM**
+Familienname: Rodriguez
+Vorname: Juan
+Postleitzahl, Wohnort: (1) ............................
+Straße, Hausnummer: (2) ............................
+Telefon: 089/2935546
+Beruf: (3) ............................
+Kurs/Kursnummer: (4) Deutsch Anfänger – A1 / Deutsch Fortgeschrittene – A2
+Termin: (5) montags–freitags, 9–12 Uhr / montags–freitags, 18–21 Uhr
+Aufgaben:
+[28] Schreiben Sie die fünf fehlenden Informationen in das Formular:
+Punkt: (1) Postleitzahl, Wohnort: 81371 München
+Punkt: (2) Straße, Hausnummer: Danklstraße 15
+Punkt: (3) Beruf: Taxifahrer
+Punkt: (4) Kurs: Deutsch Fortgeschrittene – A2
+Punkt: (5) Termin: montags–freitags, 9–12 Uhr
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Ihr Freund Martin möchte ans Meer fahren. Sie bekommen folgendes E-Mail von ihm. Antworten Sie Martin. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Reise ans Meer**
+Hallo!
+In meinem nächsten Urlaub möchte ich gern ans Meer reisen! Kommst du mit? Du kannst auch gerne deine Familie oder Freunde mitnehmen. Schreib mir bitte: Wann hast du Zeit? Wie möchtest du reisen? Wer kommt noch mit?
+Liebe Grüße
+Martin
+Aufgaben:
+[29] Antworten Sie Martin (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: Wann hast du Zeit?
+Punkt: Wie möchtest du reisen?
+Punkt: Wer kommt noch mit?
+Punkt: Gruß am Ende
