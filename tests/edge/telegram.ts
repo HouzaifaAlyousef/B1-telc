@@ -110,6 +110,11 @@ const toChat = (id: number) =>
 const kb = () => last()?.reply_markup?.inline_keyboard ?? [];
 const lastOf = (m: string) => [...sent].reverse().find(x => x.method === m)?.body;
 /* اللوحة الثابتة: reply_markup.keyboard مو inline_keyboard */
+/* ★ رسالة الكود هي يلي عليها زرّ النسخ — مو «آخر رسالة»، لأنّ بعدها
+   بتجي خطوة «كيف تستعمله» وهي يلي بتحمل اللوحة الثابتة. */
+const codeMsg = () => [...sent].reverse().find(x => x.method === "sendMessage"
+  && (x.body?.reply_markup?.inline_keyboard ?? []).flat()
+       .some((b: any) => b.copy_text))?.body;
 const perm = (id: number) =>
   (toChat(id)?.reply_markup?.keyboard ?? []).flat().map((b: any) => b.text);
 const flat = () => kb().flat();
@@ -179,7 +184,7 @@ psql(`delete from tests where level_id='bot-x-b1';
 /* ---- ٤) اختيار الدرجة ← الكود ---- */
 sent.length = 0;
 await post(click("l|ar|b1"));
-const out = String(toChat(TG_ID)?.text ?? "");
+const out = String(codeMsg()?.text ?? "");
 const code = (out.match(/<code>([A-Z0-9]+)<\/code>/) ?? [])[1];
 check(`★ رجّع كود (${code})`, !!code && /^B1[0-9]{10}$/.test(code));
 check("★ ومعه الرابط", out.includes("https://b1-telc.example.dev"));
@@ -197,7 +202,7 @@ check(`★ تجريبي فعلاً: ٠ يوم/٢٤ ساعة/تفعيل واحد/
 /* ---- ٥) ★ نفس الحساب بيرجع ← نفس الكود ---- */
 sent.length = 0;
 await post(click("l|ar|b1"));
-const again = String(toChat(TG_ID)?.text ?? "");
+const again = String(codeMsg()?.text ?? "");
 check("★ الطلب التاني بيقول إنه تكرار",
       /أخدت نسختك/.test(again) && again.includes(code!));
 check(`★ وما انولّد كود تاني`,
@@ -207,10 +212,10 @@ check(`★ وما انولّد كود تاني`,
 sent.length = 0;
 await post(click("l|de|b1", "ar"));
 check("★ زرّ ألماني ← رسالة ألمانية حتى لو جهازه عربي",
-      /Testversion|derselbe Code/.test(String(toChat(TG_ID)?.text)));
+      /Testversion|derselbe Code/.test(String(codeMsg()?.text)));
 sent.length = 0;
 await post(click("l|uk|b1", "ar"));
-check("★ وأوكراني كمان", /пробн/i.test(String(toChat(TG_ID)?.text)));
+check("★ وأوكراني كمان", /пробн/i.test(String(codeMsg()?.text)));
 
 /* ---- ٧) مستوى مو موجود ← رسالة خطأ مو انهيار ----
    بحساب جديد: مين عنده كود بياخد كوده بلا ما يتفحص المستوى أصلاً. */
@@ -244,6 +249,11 @@ sent.length = 0;
 await post(click("l|ar|b1"));     // كوده التجريبي (تكرار)
 check(`★ مع الكود بتطلع لوحة ثابتة (${perm(TG_ID).length} أزرار)`,
       perm(TG_ID).length === 5);
+check("★★ والرمز عليه زرّ نسخ بضغطة وحدة",
+      (codeMsg()?.reply_markup?.inline_keyboard ?? []).flat()
+        .some((b: any) => b.copy_text?.text === code));
+check("★★ وبكتلة مميّزة عن باقي النصّ",
+      /<blockquote><code>/.test(String(codeMsg()?.text)));
 check("★ وهي بالعربي",
       perm(TG_ID).includes("🎁 نسختي التجريبية") && perm(TG_ID).includes("🔓 وصول كامل"));
 check("★ وبتضل ظاهرة (is_persistent)",

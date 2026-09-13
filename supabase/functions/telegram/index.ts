@@ -73,6 +73,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 وصول كامل",
     mLang: "🌐 اللغة",
     mShare: "📣 شارك البوت",
+    copyCode: "📋 انسخ الرمز",
     intro: "أهلاً فيك! 👋\n\nهون بتاخد <b>رمز مجّاني</b> بيفتحلك امتحان نموذجي كامل — قراءة، سماع، وكتابة — لمدّة <b>٢٤ ساعة</b>.\n\n• بلا تسجيل وبلا دفع\n• كل مستوى فيك تجرّبه مرّة\n• بتقدر تطلب وصول كامل بضغطة",
     mMine: "🎟 كودي",
     noCodes: "لسا ما أخدت ولا كود. اضغط «🎁 نسختي التجريبية».",
@@ -124,6 +125,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Vollzugang",
     mLang: "🌐 Sprache",
     mShare: "📣 Bot teilen",
+    copyCode: "📋 Code kopieren",
     intro: "Willkommen! 👋\n\nHier bekommen Sie einen <b>kostenlosen Code</b> für einen kompletten Modelltest — Lesen, Hören und Schreiben — <b>24 Stunden</b> lang.\n\n• Ohne Anmeldung, ohne Bezahlung\n• Jede Stufe einmal testen\n• Vollzugang auf Anfrage, ein Tippen",
     mMine: "🎟 Mein Code",
     noCodes: "Noch kein Code. Tippen Sie auf „🎁 Meine Testversion“.",
@@ -175,6 +177,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Повний доступ",
     mLang: "🌐 Мова",
     mShare: "📣 Поділитися",
+    copyCode: "📋 Копіювати код",
     intro: "Вітаємо! 👋\n\nТут ви отримаєте <b>безкоштовний код</b> до повного пробного іспиту — читання, аудіювання та письмо — на <b>24 години</b>.\n\n• Без реєстрації та оплати\n• Кожен рівень можна спробувати раз\n• Повний доступ — одним дотиком",
     mMine: "🎟 Мій код",
     noCodes: "Ще немає коду. Натисніть «🎁 Моя пробна версія».",
@@ -226,6 +229,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Full access",
     mLang: "🌐 Language",
     mShare: "📣 Share bot",
+    copyCode: "📋 Copy code",
     intro: "Welcome! 👋\n\nHere you get a <b>free code</b> for a complete practice exam — reading, listening and writing — for <b>24 hours</b>.\n\n• No sign-up, no payment\n• One trial per level\n• Full access on request, one tap",
     mMine: "🎟 My code",
     noCodes: "No code yet. Tap “🎁 My free trial”.",
@@ -251,7 +255,18 @@ const t = (lang: Lang, key: string, vars?: Record<string, string | number>) =>
     /\{(\w+)\}/g, (_, k) => String(vars?.[k] ?? ""));
 
 /* ---------------- تلغرام ---------------- */
-type Btn = { text: string; callback_data?: string; url?: string };
+type Btn = { text: string; callback_data?: string; url?: string;
+              copy_text?: { text: string } };
+
+/* ★ الرمز: كتلة مميّزة + زرّ نسخ بضغطة.
+   تلغرام ما بيسمح بألوان مخصّصة برسائل البوتات، بس <blockquote> بيرسم
+   شريط جانبي ملوّن من ثيمة المستخدم، و<code> بيطلع بخطّ وخلفية
+   مختلفين — فالرمز بينفرز عن باقي النصّ بلا ما نخترع لون.
+   وcopy_text (Bot API 8.0) بينسخ بضغطة وحدة بلا «مطوّل واختار». */
+const codeBlock = (code: string) =>
+  `<blockquote><code>${code}</code></blockquote>`;
+const copyBtn = (lang: Lang, code: string): Btn =>
+  ({ text: t(lang, "copyCode"), copy_text: { text: code } });
 
 async function tg(method: string, body: unknown) {
   const r = await fetch(TG(method), {
@@ -381,14 +396,18 @@ async function stepCode(chat: number, lang: Lang, from: any, levelId: string) {
   const lines = [
     `<b>${head}</b>`,
     "",
-    `${t(lang, "codeIs")} <code>${res.code}</code>`,
+    t(lang, "codeIs"),
+    codeBlock(res.code),
     `${t(lang, "linkIs")} ${APP_URL}`,
     "",
     t(lang, "what", { test: res.test ?? "", h: res.hours }),
-    "",
-    spent ? t(lang, "used") : t(lang, "how"),
   ];
-  await send(chat, lines.join("\n"), undefined, menu(lang));
+  if (spent) lines.push("", t(lang, "used"));
+  // زرّ النسخ مدمج، فالرسالة ما بتحمل اللوحة الثابتة معه
+  await send(chat, lines.join("\n"), [[copyBtn(lang, res.code)]]);
+  // والخطوة التالية هي يلي بتحمل اللوحة — رسالة قصيرة إلها معنى،
+  // مو «👇» فاضية
+  if (!spent) await send(chat, t(lang, "how"), undefined, menu(lang));
 
   // ★ صار عنده تجريبي لهالمستوى — والباب مفتوح لغيره. بلا هالزرّ
   //   الطالب ما بيعرف إنّه بيقدر يجرّب مستوى تاني أصلاً.
@@ -715,11 +734,11 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
   if (approve) {
     await send(stud, [
       `<b>${t(lang, "okFull")}</b>`, "",
-      `${t(lang, "codeIs")} <code>${res.code}</code>`,
+      t(lang, "codeIs"), codeBlock(res.code),
       `${t(lang, "linkIs")} ${APP_URL}`, "",
       t(lang, "fullWhat", { lvl: "", m: res.months }),
       "", t(lang, "how"),
-    ].join("\n"));
+    ].join("\n"), [[copyBtn(lang, res.code)]]);
     await pop("✅ انبعت الكود", false);
     await seal(cb, `✅ وافق ${nameOf(from)} · الكود ${res.code}`);
   } else {
