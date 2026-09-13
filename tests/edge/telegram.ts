@@ -143,6 +143,12 @@ check("★ وفيهن العربي والأوكراني والإنكليزي",
    مؤسسة وحدة معناها ما في شي تختار — السؤال وقتها ضغطة بلا معنى. */
 sent.length = 0;
 await post(click("g|ar"));
+/* ★ الشرح بيجي قبل الأزرار: الطالب لازم يعرف شو رح ياخد */
+const introMsg = sent.filter(x => x.method === "sendMessage")[0]?.body;
+check("★★ بعد اختيار اللغة بيشرح شو رح ياخد",
+      /رمز مجّاني/.test(String(introMsg?.text))
+      && /٢٤ ساعة/.test(String(introMsg?.text)));
+check("★ وبلغته يلي اختارها", !/kostenlos|Welcome/.test(String(introMsg?.text)));
 const stufen = flat().filter((b: any) => String(b.callback_data).startsWith("l|"));
 check(`★ مؤسسة وحدة ← بيقفز للدرجات مباشرة (${stufen.length})`, stufen.length >= 1);
 check("★ والنص بالعربي", /اختار المستوى/.test(String(last()?.text)));
@@ -161,6 +167,8 @@ check(`★ مؤسستين ← بيسأل عن المؤسسة أول (${provs.map
       provs.length === 2);
 sent.length = 0;
 await post(click("p|ar|BotPruefung"));
+check("★★ و«رجوع» ما بيعيد الشرح — بيلخبط مو بيساعد",
+      !sent.some(x => /رمز مجّاني/.test(String(x.body?.text))));
 check("★ واختيار المؤسسة بيعرض درجاتها هي بس",
       flat().some((b: any) => b.callback_data === "l|ar|bot-x-b1")
       && !flat().some((b: any) => b.callback_data === "l|ar|b1"));

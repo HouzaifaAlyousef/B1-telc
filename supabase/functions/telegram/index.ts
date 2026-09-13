@@ -73,6 +73,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 وصول كامل",
     mLang: "🌐 اللغة",
     mShare: "📣 شارك البوت",
+    intro: "أهلاً فيك! 👋\n\nهون بتاخد <b>رمز مجّاني</b> بيفتحلك امتحان نموذجي كامل — قراءة، سماع، وكتابة — لمدّة <b>٢٤ ساعة</b>.\n\n• بلا تسجيل وبلا دفع\n• كل مستوى فيك تجرّبه مرّة\n• بتقدر تطلب وصول كامل بضغطة",
     mMine: "🎟 كودي",
     noCodes: "لسا ما أخدت ولا كود. اضغط «🎁 نسختي التجريبية».",
     myTitle: "أكوادك:",
@@ -123,6 +124,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Vollzugang",
     mLang: "🌐 Sprache",
     mShare: "📣 Bot teilen",
+    intro: "Willkommen! 👋\n\nHier bekommen Sie einen <b>kostenlosen Code</b> für einen kompletten Modelltest — Lesen, Hören und Schreiben — <b>24 Stunden</b> lang.\n\n• Ohne Anmeldung, ohne Bezahlung\n• Jede Stufe einmal testen\n• Vollzugang auf Anfrage, ein Tippen",
     mMine: "🎟 Mein Code",
     noCodes: "Noch kein Code. Tippen Sie auf „🎁 Meine Testversion“.",
     myTitle: "Ihre Codes:",
@@ -173,6 +175,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Повний доступ",
     mLang: "🌐 Мова",
     mShare: "📣 Поділитися",
+    intro: "Вітаємо! 👋\n\nТут ви отримаєте <b>безкоштовний код</b> до повного пробного іспиту — читання, аудіювання та письмо — на <b>24 години</b>.\n\n• Без реєстрації та оплати\n• Кожен рівень можна спробувати раз\n• Повний доступ — одним дотиком",
     mMine: "🎟 Мій код",
     noCodes: "Ще немає коду. Натисніть «🎁 Моя пробна версія».",
     myTitle: "Ваші коди:",
@@ -223,6 +226,7 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Full access",
     mLang: "🌐 Language",
     mShare: "📣 Share bot",
+    intro: "Welcome! 👋\n\nHere you get a <b>free code</b> for a complete practice exam — reading, listening and writing — for <b>24 hours</b>.\n\n• No sign-up, no payment\n• One trial per level\n• Full access on request, one tap",
     mMine: "🎟 My code",
     noCodes: "No code yet. Tap “🎁 My free trial”.",
     myTitle: "Your codes:",
@@ -771,9 +775,13 @@ Deno.serve(async (req) => {
       await tg("answerCallbackQuery", { callback_query_id: cb.id });
       const lang = (T[a as Lang] ? a : fallback) as Lang;
 
-      if (kind === "g" || kind === "b")
-        await stepProvider(chat, (T[a as Lang] ? a : lang) as Lang,
-                           await rpc("bot_levels"));
+      if (kind === "g" || kind === "b") {
+        const L = (T[a as Lang] ? a : lang) as Lang;
+        // ★ الشرح بعد اختيار اللغة بس — مو مع «رجوع».
+        //   الطالب لازم يعرف شو رح ياخد قبل ما يختار، وبلغته.
+        if (kind === "g") await send(chat, t(L, "intro"));
+        await stepProvider(chat, L, await rpc("bot_levels"));
+      }
       else if (kind === "p") await stepStufe(chat, lang, await rpc("bot_levels"), b);
       else if (kind === "l") await stepCode(chat, lang, from, b);
       else if (kind === "f") await stepMonths(chat, lang);
