@@ -276,12 +276,14 @@ psql(`insert into bot_admins (telegram_id, label) values (${GROUP}, 'المجم�
       on conflict do nothing;`);
 sent.length = 0;
 await clickAs(BOSS, `V|${reqId}`);
-check("★ الحجز بيكتب مين حجزه ولحدّ إيمتى",
-      /حجزه @boss/.test(String(lastOf("editMessageText")?.text))
-      && /لحدّ \d\d:\d\d/.test(String(lastOf("editMessageText")?.text)));
+check("★ الحجز بيكتب مين حجزه وكم دقيقة",
+      /محجوز لـ@boss/.test(String(lastOf("editMessageText")?.text))
+      && /15 دقيقة/.test(String(lastOf("editMessageText")?.text)));
 const afterRes = lastOf("editMessageText")?.reply_markup?.inline_keyboard?.flat() ?? [];
 check("★ وبعدها بس بتطلع أزرار القرار",
       afterRes.length === 2 && String(afterRes[0].callback_data).startsWith("A|"));
+check("★★ واسم الحاجز مكتوب جوّا الأزرار — ما حدا يضغط غلط",
+      afterRes.every((b: any) => String(b.text).includes("@boss")));
 
 sent.length = 0;
 await clickAs(MATE, `V|${reqId}`);

@@ -402,8 +402,6 @@ async function stepRequest(chat: number, lang: Lang, from: any, months: number) 
 
 /* ---------------- قرارك ---------------- */
 const RESERVE_MIN = 15;
-const hhmm = (iso: string) =>
-  new Date(iso).toISOString().slice(11, 16) + " UTC";
 
 /* الحجز المنتهي: منبّه مرّة وحدة ومنرجّع الطلب حرّ.
    ★ بينندى من مطرحين — أي تحديث بيوصل للبوت، وpg_cron لو ظبّطتها.
@@ -511,12 +509,19 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
       return void await pop(`سبق وانبتّ فيه: ${res.already}`);
     }
     await tg("answerCallbackQuery", { callback_query_id: cb.id });
+    // ★ اسم الحاجز جوّا الأزرار نفسها. تلغرام ما بيلوّن الأزرار، وكلهم
+    //   بيشوفوا نفس البطاقة — فالاسم على الزرّ هو الشي الوحيد يلي
+    //   بيوقّف الضغطة الغلط قبل ما تصير.
+    //   والمدّة بالدقايق مو بالساعة: البطاقة عليها وقتها من تلغرام،
+    //   وساعة UTC بتربك مين ساعته غيرها.
     return void await tg("editMessageText", {
       chat_id: cb.message?.chat?.id, message_id: cb.message?.message_id,
-      text: `${cb.message?.text ?? ""}\n\n🖐 حجزه ${res.by} · لحدّ ${hhmm(res.until)}`,
+      text: `${cb.message?.text ?? ""}\n\n`
+          + `🔒 محجوز لـ${res.by} · ${res.minutes} دقيقة\n`
+          + `غيره لا يضغط.`,
       reply_markup: { inline_keyboard: [[
-        { text: "✅ وافق", callback_data: `A|${id}` },
-        { text: "✖️ ارفض", callback_data: `R|${id}` }]] },
+        { text: `✅ وافق · ${res.by}`, callback_data: `A|${id}` },
+        { text: `✖️ ارفض · ${res.by}`, callback_data: `R|${id}` }]] },
     });
   }
 
