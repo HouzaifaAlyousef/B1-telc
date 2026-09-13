@@ -47,6 +47,9 @@ def main():
     # كله telc B1، فالبذور بتقولها صراحةً بدل ما نستنتجها من العنوان.
     ap.add_argument('--provider', default='telc')
     ap.add_argument('--stufe',    default='B1')
+    # المصدر بيتكتب بأوّل سطر. مين بينده السكربت من مجلّد مؤقّت لازم
+    # يمرّر اسم ثابت، وإلا الناتج بيتغيّر كل تشغيل وفحص الانحراف بينهار.
+    ap.add_argument('--label', default=None, help='اسم المصدر بالتعليق')
     a = ap.parse_args()
 
     src = Path(a.src)
@@ -55,7 +58,7 @@ def main():
 
     o = []
     w = o.append
-    w(f"-- مولّد من {a.src} بـtools/export_sql.py — لا تعدّله بالإيد")
+    w(f"-- مولّد من {a.label or a.src} بـtools/export_sql.py — لا تعدّله بالإيد")
     w("begin;")
     w("")
     w("insert into levels (id, title, sort, published, provider, stufe) values "

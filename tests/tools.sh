@@ -148,6 +148,24 @@ check "★ vorlagen.js محدّث من docs/vorlage/*.txt" $?
 grep -q 'src="vorlagen.js"' admin/index.html
 check "اللوحة بتحمّل vorlagen.js" $?
 
+# ---------- بذور B2 مولّدة من content/ ----------
+# ★ انلدغنا قبل: أجزاء b1 ضلّت مولّدة من ١٦ نموذج بعد ما صاروا ١٧،
+#   ومين لصقهن فاته نموذج كامل بلا ما ينتبه. الفحص هون بدل الانتباه.
+node tools/content_to_seed.mjs telc/b2 supabase/seed/b2.sql >/dev/null 2>&1
+git diff --quiet -- supabase/seed/b2.sql 2>/dev/null
+check "★ supabase/seed/b2.sql مطابق لـcontent/telc/b2" $?
+
+./tools/split_seed.sh b2 >/dev/null 2>&1
+./tools/split_seed.sh b1 >/dev/null 2>&1
+git diff --quiet -- supabase/seed/parts/ 2>/dev/null
+check "★ والأجزاء مطابقة للملفين الكاملين" $?
+
+# كل نموذج معبّى لازم يوصل للبذور — مو بس يمرق الفحص
+WANT_B2=$(node tools/check_content.mjs telc/b2 2>/dev/null | grep -c '✓ telc/b2')
+GOT_B2=$(grep -c "^insert into tests" supabase/seed/b2.sql)
+[ "$WANT_B2" = "$GOT_B2" ]
+check "★ كل نماذج B2 وصلت للبذور ($GOT_B2 من $WANT_B2)" $?
+
 # ---------- setup.sql مطابق للترحيلات ----------
 ./tools/build_setup.sh >/dev/null 2>&1
 git diff --quiet -- supabase/setup.sql 2>/dev/null
