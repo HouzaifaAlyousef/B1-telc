@@ -236,3 +236,49 @@ begin
   raise notice '';
   raise notice '  كل اختبارات الحجز نجحت ✓';
 end $$;
+
+-- ── تجريبي لكل مستوى ──
+insert into levels (id, title, sort, published, provider, stufe)
+values ('req-b2', 'ReqTest B2', 1, true, 'reqtest', 'B2')
+on conflict (id) do nothing;
+insert into tests (level_id, slug, title, blocks, aufgaben, published, sort)
+values ('req-b2', 'n1', 'B2 ERSTER', '[]'::jsonb, 5, true, 1)
+on conflict (level_id, slug) do nothing;
+
+do $$
+declare tg bigint := 920001; r1 jsonb; r2 jsonb; r3 jsonb; n int;
+begin
+  raise notice '';
+  raise notice '── تجريبي لكل مستوى ──';
+  delete from telegram_demos; delete from telegram_users;
+  delete from access_codes where note like 'telegram:%';
+
+  r1 := bot_demo_code(tg, tg, 'kunde', 'ar', 'req-b1');
+  perform t_check('أخد تجريبي B1', (r1->>'ok')::boolean and not (r1->>'again')::boolean);
+
+  -- ★★ الباگ: قبل، هون كان بيرجّع كود B1 ويقول «أخدت من قبل»
+  r2 := bot_demo_code(tg, tg, 'kunde', 'ar', 'req-b2');
+  perform t_check('★★ وبياخد تجريبي B2 كمان — مو «أخدت من قبل»',
+                  (r2->>'ok')::boolean and not (r2->>'again')::boolean);
+  perform t_check('★★ وكود B2 غير كود B1', r2->>'code' <> r1->>'code');
+  perform t_check('★ وكل كود لمستواه',
+    (select levels[1] from access_codes where code = r2->>'code') = 'req-b2'
+    and (select levels[1] from access_codes where code = r1->>'code') = 'req-b1');
+
+  -- ★ والرجعة لنفس المستوى لسا بتعطي نفس الكود
+  r3 := bot_demo_code(tg, tg, 'kunde', 'ar', 'req-b1');
+  perform t_check('★★ والرجعة لـB1 بتعطي **نفس** كود B1 مو جديد',
+                  (r3->>'again')::boolean and r3->>'code' = r1->>'code');
+
+  select count(*) into n from access_codes where note = 'telegram:' || tg;
+  perform t_check('★★ فالمجموع كودين بس مو تلاتة (' || n || ')', n = 2);
+
+  -- ★ والحدّ لسا هو هو: تجريبي وبس
+  perform t_check('★ التجريبي لسا ٢٤ ساعة وامتحان واحد وتفعيل واحد',
+    (select bool_and(duration_hours = 24 and duration_days = 0
+                     and array_length(test_slugs,1) = 1 and max_uses = 1)
+       from access_codes where note = 'telegram:' || tg));
+
+  raise notice '';
+  raise notice '  كل اختبارات التجريبي لكل مستوى نجحت ✓';
+end $$;

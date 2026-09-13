@@ -40,12 +40,14 @@ const sent: Sent[] = [];
 // ★ بيرجّع message_id متل تلغرام الحقيقي: الدالة بتحفظه لتعرف وين
 //   البطاقة، وبلاه التنبيه ما بيلاقي شو يعدّل
 let mid = 1000;
+let botName = "TestPruefungBot";
 const tgSrv = Deno.serve({ port: PORT_TG, onListen() {} }, async (req) => {
   const method = new URL(req.url).pathname.split("/").pop()!;
   const body = await req.json().catch(() => ({}));
   sent.push({ method, body });
   const result = method === "sendMessage"
-    ? { message_id: ++mid, chat: { id: body?.chat_id } } : {};
+    ? { message_id: ++mid, chat: { id: body?.chat_id } }
+    : method === "getMe" ? { username: botName } : {};
   return new Response(JSON.stringify({ ok: true, result }),
                       { headers: { "content-type": "application/json" } });
 });
@@ -244,11 +246,26 @@ sent.length = 0;
 await post(msg("🌐 اللغة"));
 check("★ زرّ «اللغة» بيعرض اللغات بلا ما يكتب /sprache", flat().length === 4);
 
+/* ★ getMe فشل: أحسن نصّ بلا رابط من رابط مكسور.
+   لازم يجي **قبل** أوّل مشاركة ناجحة — botUsername بتخزّن الاسم
+   وما بترجع تسأل، فبعدها ما بينوصل لهالمسار أبداً. */
+botName = "";
+sent.length = 0;
+await post(msg("📣 شارك البوت"));
+check("★★ بلا اسم بوت: نصّ بلا رابط مكسور",
+      !/t\.me\//.test(String(last()?.text)) && !last()?.reply_markup);
+botName = "TestPruefungBot";
+
 sent.length = 0;
 await post(msg("📣 Bot teilen", "ar"));
 check("★ زرّ ألماني ← رسالة ألمانية حتى لو جهازه عربي",
-      flat().some((b: any) => typeof b.url === "string" && b.url.includes("t.me/share"))
-      && /kostenlos/.test(String(last()?.text)));
+      /kostenlos/.test(String(last()?.text)));
+check("★★ والمشاركة مو تلغرام بس: واتساب كمان",
+      flat().some((b: any) => String(b.url).includes("t.me/share"))
+      && flat().some((b: any) => String(b.url).includes("wa.me/?text=")));
+check("★★ والرابط بـ<code> — ضغطة بتنسخه لأي مطرح",
+      /<code>https:\/\/t\.me\/TestPruefungBot<\/code>/.test(String(last()?.text)));
+
 
 sent.length = 0;
 await post(msg("🔓 وصول كامل"));

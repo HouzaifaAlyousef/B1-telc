@@ -278,7 +278,9 @@ function screenWait(pos, total){
 function screenCode(msg){
   stopTimer();
   go('code', () => {
-    elBack.hidden = true;
+    // مين عنده اشتراك إجا لهون بإرادته — لازم يقدر يرجع.
+    // ومين ما عنده، الرجوع لوين؟ فبيضل مخفي.
+    elBack.hidden = !S.sub;
     app.innerHTML = `
       <h1>${esc(t('codeTitle'))}</h1>
       <p class="sub">${esc(t('codeHint'))}</p>
@@ -431,8 +433,16 @@ function screenHome(){
         </span>
       </button>`;
     };
+    /* ★ كود تاني بلا خروج.
+       الطالب بياخد تجريبي، وبعدين بياخد كود كامل — وما كان في ولا طريق
+       يحطّه: شاشة الكود بتطلع بس لمين ما عنده اشتراك. كان بدّه يمسح
+       بيانات الموقع ليرجعلها، ويخسر نتايجه وباقي تجريبيّه.
+       والاشتراكات بتتجمّع (api.js/subscription)، فالاتنين بيشتغلوا سوا. */
     const abo = S.levels.length
-      ? `<div class="abos">${S.levels.map(aboRow).join('')}</div>` : '';
+      ? `<div class="abos">${S.levels.map(aboRow).join('')}</div>
+         <button class="btn ghost" id="addcode"
+                 style="width:100%;margin:-2px 0 14px">${esc(t('addCode'))}</button>`
+      : '';
 
     app.innerHTML = `
       ${setbarHTML()}
@@ -471,6 +481,8 @@ function screenHome(){
       b.onclick = () => openModell(b.dataset.id));
     app.querySelectorAll('[data-lvl]').forEach(b =>
       b.onclick = () => switchLevel(b.dataset.lvl));
+    const addc = document.getElementById('addcode');
+    if (addc) addc.onclick = () => screenCode();
     document.getElementById('resbtn').onclick = screenResources;
     const dr = document.getElementById('drill');
     if (dr) dr.onclick = async () => {

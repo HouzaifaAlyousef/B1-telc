@@ -30,6 +30,7 @@ const I18N = (() => {
       fillConfig: 'assets/config.js ausfüllen.',
 
       codeTitle: 'Zugang',
+      addCode: 'Ich habe einen weiteren Code',
       codeHint: 'Geben Sie Ihren Zugangscode ein. Sie haben ihn beim Kauf ' +
                 'erhalten. Der Code wird nur einmal gebraucht — danach bleibt ' +
                 'dieses Gerät angemeldet.',
@@ -193,6 +194,7 @@ const I18N = (() => {
       fillConfig: 'عبّي assets/config.js.',
 
       codeTitle: 'الدخول',
+      addCode: 'عندي كود تاني',
       codeHint: 'أدخل رمز الدخول. أخذته عند الشراء. الرمز بينستعمل مرة ' +
                 'وحدة — وبعدها بيضل هالجهاز مسجّل.',
       codeButton: 'تفعيل',
@@ -370,6 +372,7 @@ const I18N = (() => {
       fillConfig: 'Заповніть assets/config.js.',
 
       codeTitle: 'Доступ',
+      addCode: 'У мене є ще один код',
       codeHint: 'Введіть код доступу. Ви отримали його під час покупки. ' +
                 'Код потрібен лише один раз — далі пристрій залишається ' +
                 'підключеним.',

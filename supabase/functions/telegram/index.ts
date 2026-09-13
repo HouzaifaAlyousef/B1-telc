@@ -73,6 +73,9 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 وصول كامل",
     mLang: "🌐 اللغة",
     mShare: "📣 شارك البوت",
+    waShare: "💬 واتساب",
+    tgShare: "📲 تلغرام",
+    copyHint: "أو انسخ الرابط وابعته لوين ما بدّك:",
   },
   de: {
     hello: "Willkommen! 👋\nBitte Sprache wählen:",
@@ -107,6 +110,9 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Vollzugang",
     mLang: "🌐 Sprache",
     mShare: "📣 Bot teilen",
+    waShare: "💬 WhatsApp",
+    tgShare: "📲 Telegram",
+    copyHint: "Oder Link kopieren und überall teilen:",
   },
   uk: {
     hello: "Вітаємо! 👋\nОберіть мову:",
@@ -141,6 +147,9 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Повний доступ",
     mLang: "🌐 Мова",
     mShare: "📣 Поділитися",
+    waShare: "💬 WhatsApp",
+    tgShare: "📲 Telegram",
+    copyHint: "Або скопіюйте посилання й надішліть будь-де:",
   },
   en: {
     hello: "Welcome! 👋\nChoose your language:",
@@ -175,6 +184,9 @@ const T: Record<Lang, Record<string, string>> = {
     mFull: "🔓 Full access",
     mLang: "🌐 Language",
     mShare: "📣 Share bot",
+    waShare: "💬 WhatsApp",
+    tgShare: "📲 Telegram",
+    copyHint: "Or copy the link and share it anywhere:",
   },
 };
 
@@ -339,10 +351,25 @@ async function botUsername() {
   } catch { /* بيرجع فاضي، والزرّ بينشال تحت */ }
   return uname;
 }
-async function shareLink(lang: Lang) {
+/* ★ زرّ t.me/share بيفتح تلغرام وبس. الطالب بدّه يبعت لرفقاته على
+   واتساب وإنستغرام كمان — فمنعطيه تلاتة بنفس الرسالة: زرّ تلغرام،
+   زرّ واتساب، والرابط بـ<code> يلي ضغطة عليه بتنسخه لأي مطرح. */
+async function shareMsg(chat: number, lang: Lang) {
   const u = await botUsername();
-  return `https://t.me/share/url?url=${encodeURIComponent(`https://t.me/${u}`)}`
-       + `&text=${encodeURIComponent(t(lang, "shareText"))}`;
+  // ★ بلا اسم البوت الرابط بيطلع «https://t.me/» — مكسور. أحسن نبعت
+  //   النصّ لحاله من نبعت رابط ما بيفتح. وbotUsername ما بتخزّن الفشل،
+  //   فالرسالة الجاي بتجرّب من جديد.
+  if (!u) return void await send(chat, t(lang, "shareText"));
+  const link = `https://t.me/${u}`;
+  const text = t(lang, "shareText");
+  const enc = encodeURIComponent(`${text}\n${link}`);
+
+  await send(chat,
+    `${text}\n\n${t(lang, "copyHint")}\n<code>${link}</code>`,
+    [[{ text: t(lang, "tgShare"),
+        url: `https://t.me/share/url?url=${encodeURIComponent(link)}`
+           + `&text=${encodeURIComponent(text)}` },
+      { text: t(lang, "waShare"), url: `https://wa.me/?text=${enc}` }]]);
 }
 
 const who = (from: any) =>
@@ -658,10 +685,8 @@ Deno.serve(async (req) => {
         await stepProvider(chat, L, await rpc("bot_levels"));
       else if (hit.act === "mFull")  await stepMonths(chat, L);
       else if (hit.act === "mLang")  await stepLang(chat, L);
-      else if (hit.act === "mShare")
-        // اللوحة الثابتة ما بتحمل روابط — فالمشاركة بزرّ مدمج برسالتها
-        await send(chat, t(L, "shareText"),
-                   [[{ text: t(L, "share"), url: await shareLink(L) }]]);
+      // اللوحة الثابتة ما بتحمل روابط — فالمشاركة برسالتها هي
+      else if (hit.act === "mShare") await shareMsg(chat, L);
       return new Response("ok");
     }
 

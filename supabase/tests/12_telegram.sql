@@ -71,23 +71,33 @@ begin
   perform t_check('الكود مربوط بحساب تلغرام بالملاحظة',
                   c.note = 'telegram:111222333');
 
-  ------------------------------------- ٣ ★ حساب واحد = تجريبي واحد للأبد
+  ------------------------------------- ٣ ★ تجريبي واحد **لكل مستوى**
   r2 := bot_demo_code(111222333, 111222333, 'ahmad', 'ar', 'b1');
   perform t_check('★ الطلب التاني بيرجّع نفس الكود مو كود جديد',
                   (r2->>'code') = (r->>'code') and (r2->>'again')::boolean);
   select count(*) into n from access_codes where note = 'telegram:111222333';
   perform t_check(format('★ وما انولّد كود زيادة (%s)', n), n = 1);
 
-  -- ★ وحتى لو طلب مستوى تاني: نفس الكود. هيك ما بيجمّع أكواد.
+  -- ★ بس مستوى تاني بياخد كوده هو (ترحيل 0028).
+  --   قبل، كان بيرجّع كود B1 ويقول «أخدت من قبل» لواحد ما شاف B2
+  --   بحياته — وهاد بيقفل باب مبيعات مفتوح. الحدّ ضلّ مكانه: كل كود
+  --   ٢٤ ساعة وامتحان واحد ومستواه هو، فما ربح ولا امتحان زيادة.
   insert into levels (id, title, provider, stufe, published)
   values ('bot-b2', 'Bot B2', 'botprov3', 'B2', true);
   insert into tests (level_id, slug, title, blocks, aufgaben, published, sort)
   values ('bot-b2', 'bot-b2-01', 'B2 Modell 1', '[]'::jsonb, 0, true, 1);
   r2 := bot_demo_code(111222333, 111222333, 'ahmad', 'ar', 'bot-b2');
-  perform t_check('★ ولا حتى بمستوى تاني بياخد كود جديد',
-                  (r2->>'code') = (r->>'code'));
+  perform t_check('★ مستوى تاني بياخد كود لحاله',
+                  (r2->>'code') <> (r->>'code') and not (r2->>'again')::boolean);
+  perform t_check('★ وكل كود لمستواه',
+    (select levels[1] from access_codes where code = r2->>'code') = 'bot-b2');
   select count(*) into n from access_codes where note like 'telegram:%';
-  perform t_check(format('★ المجموع كود واحد لهالحساب (%s)', n), n = 1);
+  perform t_check(format('★ كود لكل مستوى، مو أكتر (%s)', n), n = 2);
+
+  -- ★ والرجعة لـB1 لسا بتعطي نفس كود B1
+  r2 := bot_demo_code(111222333, 111222333, 'ahmad', 'ar', 'b1');
+  perform t_check('★ والرجعة لنفس المستوى بترجّع نفس الكود',
+                  (r2->>'code') = (r->>'code') and (r2->>'again')::boolean);
 
   -- حساب تاني بياخد كوده هو
   r2 := bot_demo_code(444555666, 444555666, null, 'de', 'b1');

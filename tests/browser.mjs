@@ -302,6 +302,33 @@ await page.evaluate(() => document.getElementById('godo').click());
 await page.waitForSelector('.tile[data-id]', { timeout: 5000 });
 check('الكود الصح بيفتح القائمة', await page.locator('.tile[data-id]').count() > 0);
 
+// ---- ٣ب) ★ كود تاني بلا خروج ----
+// الطالب بياخد تجريبي وبعدين كود كامل. قبل، ما كان في ولا طريق يحطّه:
+// شاشة الكود بتطلع بس لمين ما عنده اشتراك — فكان لازم يمسح بيانات
+// الموقع، ويخسر نتايجه وباقي تجريبيّه.
+check('★★ زرّ «عندي كود تاني» ظاهر بالرئيسية',
+      await page.locator('#addcode').isVisible());
+await page.evaluate(() => document.getElementById('addcode').click());
+await page.waitForSelector('#code', { timeout: 5000 });
+check('★★ وبيوصّل لشاشة الكود بلا ما يطلّعه',
+      await page.locator('#code').isVisible());
+check('★★ ومعها زرّ رجوع — مو حبسة',
+      await page.locator('#btnBack').isVisible());
+
+// الرجوع بيرجّعه لمكانه بلا ما يخسر شي
+await page.evaluate(() => document.getElementById('btnBack').click());
+await page.waitForSelector('.tile[data-id]', { timeout: 5000 });
+check('★★ والرجوع بيرجّعه للقائمة متل ما كان',
+      await page.locator('.tile[data-id]').count() > 0);
+
+// ★ وأوّل دخول (بلا اشتراك) الرجوع بيضل مخفي — ما في مطرح يرجعله
+await page.evaluate(() => { const b = S.sub; S.sub = null; screenCode(); S.sub = b; });
+await page.waitForSelector('#code');
+check('★★ وبأوّل دخول الرجوع مخفي',
+      await page.locator('#btnBack').isVisible() === false);
+await page.evaluate(() => screenHome());
+await page.waitForSelector('.tile[data-id]', { timeout: 5000 });
+
 // ---- ٤) فتح الامتحان ----
 await page.evaluate(() => document.querySelector('.tile[data-id]').click());
 await page.waitForSelector('[data-block]', { timeout: 5000 });
