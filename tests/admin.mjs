@@ -8,6 +8,13 @@ import { execFileSync } from 'child_process';
 import http from 'http';
 import path from 'path';
 
+/* ★ مصدر واحد للرقم: لو انثبّت هون، أول ترحيل جديد بيفشّل الاختبار
+   على تغيير صحيح. */
+const SCHEMA_MIN = Number(
+  /const SCHEMA_MIN = (\d+)/.exec(
+    readFileSync(new URL('../admin/admin.js', import.meta.url), 'utf8'))?.[1]);
+if (!SCHEMA_MIN) { console.error('✗ ما لقيت SCHEMA_MIN بـadmin/admin.js'); process.exit(1); }
+
 const ROOT = path.resolve(import.meta.dirname, '..');
 const ADMIN = 'aaaaaaaa-0000-0000-0000-000000000001';
 
@@ -631,8 +638,11 @@ try {
     const banner = await page.textContent('#app');
     check('★ شريط «القاعدة ورا» ظهر',
           /Datenbank ist \d+ Migration/.test(banner) && /setup\.sql/.test(banner));
-    check(`★ وبيقول كم ترحيل ناقص`,
-          /Stand 12/.test(banner) && /gebraucht 23/.test(banner));
+    // ★ الرقم من admin.js مو مثبّت هون: كل ترحيل جديد بيرفع SCHEMA_MIN،
+    //   ورقم مثبّت بيفشل على تغيير صحيح بدل ما يمسك خلل — وهاد صار.
+    check(`★ وبيقول كم ترحيل ناقص (${SCHEMA_MIN})`,
+          /Stand 12/.test(banner)
+          && new RegExp(`gebraucht ${SCHEMA_MIN}`).test(banner));
     await page.evaluate(() => document.querySelector('[data-tab="codes"]').click());
     await page.waitForTimeout(900);
     check('★ وبيطلع بالشاشات التانية كمان',
