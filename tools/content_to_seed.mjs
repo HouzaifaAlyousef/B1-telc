@@ -38,6 +38,7 @@ const modelle = readdirSync(dir)
 
 const tmp = mkdtempSync(path.join(tmpdir(), 'seed-'));
 const index = { modelle: [] };
+const docs = [];
 let empty = 0;
 
 for (const m of modelle) {
@@ -59,6 +60,9 @@ for (const m of modelle) {
   const doc = { id: m, ...r.test };
   writeFileSync(path.join(tmp, `${m}.json`), JSON.stringify(doc, null, 1));
   index.modelle.push({ file: `${m}.json`, aufgaben: r.counts.items });
+  docs.push({ id: m, title: r.test.title, n: r.counts.items,
+              min: (r.test.blocks || []).reduce((a, b) => a + (b.minutes || 0), 0),
+              pts: (r.test.blocks || []).reduce((a, b) => a + (b.maxPoints || 0), 0) });
 }
 
 if (!index.modelle.length) { console.error('✗ ما في ولا نموذج معبّى'); process.exit(1); }
@@ -76,6 +80,15 @@ const PROV = {
 
 const stufe = lvl.toUpperCase();
 const meta = PROV[prov] ?? { name: prov, title: (s) => `${prov} ${s}` };
+/* ★ والفهرس كمان: مكتوب بالإيد معناه إنّه بيصير قديم بصمت أوّل ما
+   يتغيّر اسم أو عدد. هون بينولّد من نفس القراءة. */
+const head = readFileSync(path.join(dir, 'README.md'), 'utf8')
+  .split('\n| Ordner')[0].trimEnd();
+writeFileSync(path.join(dir, 'README.md'),
+  head + '\n\n| Ordner | Name | Aufgaben | Minuten | Punkte |\n|---|---|---|---|---|\n'
+  + docs.map(d => `| [${d.id}](${d.id}/) | **${d.title}** | ${d.n} | ${d.min} `
+                + `| ${d.pts} |`).join('\n') + '\n');
+
 execFileSync('python3', [
   path.join(ROOT, 'tools/export_sql.py'), tmp, path.resolve(ROOT, out),
   '--level', `${prov}-${lvl}`,

@@ -6,9 +6,9 @@ on conflict (id) do update set title = excluded.title,
   provider = coalesce(levels.provider, excluded.provider),
   stufe    = coalesce(levels.stufe,    excluded.stufe);
 
--- ================= modell-01 · MODELLSATZ =================
+-- ================= modell-01 · RAFAELA =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-01', 'MODELLSATZ', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-01', 'RAFAELA', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 1)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -99,9 +99,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-02 · ÜBUNGSSATZ 1 =================
+-- ================= modell-02 · MARTIN =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-02', 'ÜBUNGSSATZ 1', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-02', 'MARTIN', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 2)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -192,9 +192,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-03 · ÜBUNGSSATZ 2 =================
+-- ================= modell-03 · MAGDA =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-03', 'ÜBUNGSSATZ 2', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-03', 'MAGDA', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 3)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -285,9 +285,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-04 · ÜBUNGSSATZ 3 =================
+-- ================= modell-04 · MATTHIAS =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-04', 'ÜBUNGSSATZ 3', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-04', 'MATTHIAS', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 4)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -378,9 +378,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-05 · MODELLSATZ ÖSTERREICH =================
+-- ================= modell-05 · METIN =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-05', 'MODELLSATZ ÖSTERREICH', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-05', 'METIN', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 5)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -471,9 +471,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-06 · ÜBUNGSSATZ 4 =================
+-- ================= modell-06 · HERBERT =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-06', 'ÜBUNGSSATZ 4', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-06', 'HERBERT', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 6)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -564,9 +564,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-07 · ÜBUNGSSATZ 5 =================
+-- ================= modell-07 · HELENA =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-07', 'ÜBUNGSSATZ 5', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-07', 'HELENA', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 7)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
@@ -657,9 +657,9 @@ join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
 
--- ================= modell-08 · ÜBUNGSSATZ 6 =================
+-- ================= modell-08 · MARCO =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('oesd-a1', 'modell-08', 'ÜBUNGSSATZ 6', '29 Aufgaben · 55 Minuten',
+values ('oesd-a1', 'modell-08', 'MARCO', '29 Aufgaben · 55 Minuten',
         '[{"id": "block-lesen", "parts": ["lv1", "lv2", "lv3"], "title": "Lesen", "minutes": 25, "hint": "Aufgaben 1–16", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-hoeren", "parts": ["hv1", "hv2", "hv3"], "title": "Hören", "minutes": 10, "hint": "Aufgaben 17–27", "maxPoints": 30, "availablePoints": 30, "missing": 0}, {"id": "block-schreiben", "parts": ["s1", "s2"], "title": "Schreiben", "minutes": 20, "hint": "Aufgaben 28–29", "maxPoints": 20, "availablePoints": 20, "missing": 0}]'::jsonb, 29, true, 8)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 

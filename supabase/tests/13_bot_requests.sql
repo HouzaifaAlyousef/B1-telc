@@ -345,3 +345,56 @@ begin
   raise notice '';
   raise notice '  كل اختبارات كودي والتنبيه نجحت ✓';
 end $$;
+
+-- ── نطاق التجريبي: امتحان واحد، مهما كان عدد امتحانات المستوى ──
+-- ★ الحدّ هاد هو الفرق بين تجريبي ومنتج مجّاني. لو انكسر، الطالب بياخد
+--   كل شي ببلاش وما حدا بينتبه إلا لما تخسر المبيعات.
+insert into tests (level_id, slug, title, blocks, aufgaben, published, sort)
+values ('req-b1', 'm3', 'DRITTER', '[]'::jsonb, 5, true, 3),
+       ('req-b1', 'm4', 'VIERTER', '[]'::jsonb, 5, true, 4)
+on conflict (level_id, slug) do nothing;
+
+do $$
+declare tg bigint := 940001; u uuid := 'ffffffff-0000-0000-0000-000000000001';
+        r jsonb; n int;
+begin
+  raise notice '';
+  raise notice '── نطاق التجريبي ──';
+  delete from telegram_demos; delete from telegram_users;
+  delete from code_redemptions; delete from devices;
+  delete from subscriptions; delete from access_codes;
+  insert into auth.users (id) values (u) on conflict do nothing;
+  insert into profiles (id, is_admin) values (u, false)
+    on conflict (id) do update set is_admin = false;
+
+  select count(*) into n from tests where level_id = 'req-b1' and published;
+  perform t_check('المستوى فيه ' || n || ' امتحانات منشورة', n >= 4);
+
+  r := bot_demo_code(tg, tg, 'k', 'de', 'req-b1');
+  perform t_check('★ الكود نطاقه امتحان واحد',
+    (select array_length(test_slugs, 1) from access_codes where code = r->>'code') = 1);
+
+  perform set_config('request.jwt.claim.sub', u::text, false);
+  perform redeem_code(r->>'code', 'fp-scope', 'ua');
+
+  -- ★★ هون السؤال: بعد التفعيل، كم امتحان بيقدر يفتح؟
+  select count(*) into n from tests t
+   where t.level_id = 'req-b1' and t.published
+     and has_test_access(u, t.level_id, t.slug);
+  perform t_check('★★ وبعد التفعيل بيفتح امتحان واحد بس (' || n || ' من '
+    || (select count(*) from tests where level_id='req-b1' and published) || ')', n = 1);
+
+  perform t_check('★★ وهو أوّل امتحان منشور بالترتيب',
+    has_test_access(u, 'req-b1',
+      (select slug from tests where level_id='req-b1' and published
+        order by sort, slug limit 1)));
+
+  -- ★ ولا امتحان من مستوى تاني
+  select count(*) into n from tests t
+   where t.level_id = 'req-b2' and has_test_access(u, t.level_id, t.slug);
+  perform t_check('★★ ولا امتحان من مستوى تاني (' || n || ')', n = 0);
+
+  perform set_config('request.jwt.claim.sub', '', false);
+  raise notice '';
+  raise notice '  كل اختبارات نطاق التجريبي نجحت ✓';
+end $$;
