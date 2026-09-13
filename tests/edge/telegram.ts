@@ -317,7 +317,10 @@ await post({ callback_query: { id: "c3", data: `R|${req2}`,
   from: { id: MATE }, message: { chat: { id: GROUP }, message_id: 33, text: "طلب" } } });
 const rk = lastOf("editMessageReplyMarkup")?.reply_markup?.inline_keyboard?.flat() ?? [];
 check(`★ «ارفض» بيبدّل الأزرار بأسباب بنفس الرسالة (${rk.length})`,
-      rk.length === 4 && rk.every((b: any) => String(b.callback_data).startsWith("X|")));
+      rk.length === 5 && rk.filter((b: any) =>
+        String(b.callback_data).startsWith("X|")).length === 4);
+check("★ ومعهن زرّ سبب بخطّ إيدك",
+      rk.some((b: any) => String(b.callback_data).startsWith("W|")));
 sent.length = 0;
 await post({ callback_query: { id: "c4", data: `X|${req2}|soon`,
   from: { id: MATE }, message: { chat: { id: GROUP }, message_id: 33, text: "طلب" } } });
@@ -333,6 +336,53 @@ check("★ والسبب انحفظ",
       psql(`select reason from access_requests where id='${req2}';`) === "soon");
 check("★ ورفض ما بيعمل كود",
       psql(`select count(*) from access_codes where note like 'telegram-full:%';`) === "1");
+
+/* ---- ١٤ب) ★ سبب رفض بخطّ إيدك ---- */
+psql(`delete from telegram_users where telegram_id = 55503;`);
+await post({ callback_query: { id: "d1", data: "l|de|b1",
+  from: { id: 55503, username: "drei", language_code: "de" },
+  message: { chat: { id: 55503 } } } });
+await post({ callback_query: { id: "d2", data: "m|de|2",
+  from: { id: 55503, username: "drei", language_code: "de" },
+  message: { chat: { id: 55503 } } } });
+const req3 = psql(`select id from access_requests where telegram_id=55503 and status='pending';`);
+
+sent.length = 0;
+await post({ callback_query: { id: "d3", data: `W|${req3}|77`,
+  from: { id: MATE }, message: { chat: { id: GROUP }, message_id: 77, text: "طلب" } } });
+const ask = last();
+check("★ زرّ الكتابة بيطلب ردّ (force_reply)",
+      ask?.reply_markup?.force_reply === true);
+check(`★ والوسم فيه رقم الطلب ورقم الرسالة`,
+      String(ask?.text).includes(req3) && /:77/.test(String(ask?.text)));
+
+sent.length = 0;
+await post({ message: { chat: { id: GROUP }, from: { id: MATE, username: "mate" },
+  text: "Bitte zuerst die Testversion nutzen, danke!",
+  reply_to_message: { text: String(ask?.text).replace(/<[^>]+>/g, "") } } });
+check("★★ ردّك انبعت للطالب متل ما كتبته",
+      /Bitte zuerst die Testversion/.test(String(toChat(55503)?.text)));
+check("★★ وبلغته: العنوان ألماني مو عربي",
+      /nicht bewilligt/.test(String(toChat(55503)?.text)));
+check("★ وانحفظ كامل بالقاعدة",
+      psql(`select reason from access_requests where id='${req3}';`)
+        === "Bitte zuerst die Testversion nutzen, danke!");
+check("★ وبطاقة الطلب انختمت بنفس النص",
+      /Bitte zuerst/.test(String(lastOf("editMessageText")?.text))
+      && lastOf("editMessageText").message_id === 77);
+
+/* ---- ١٤ج) ★ اللغة بتتحدّث مع الطلب ---- */
+psql(`delete from access_requests; delete from telegram_users where telegram_id = 55504;`);
+await post({ callback_query: { id: "e1", data: "l|ar|b1",
+  from: { id: 55504, username: "vier", language_code: "ar" },
+  message: { chat: { id: 55504 } } } });
+check("الطالب أخد التجريبي بالعربي",
+      psql(`select lang from telegram_users where telegram_id=55504;`) === "ar");
+await post({ callback_query: { id: "e2", data: "m|de|1",
+  from: { id: 55504, username: "vier", language_code: "ar" },
+  message: { chat: { id: 55504 } } } });
+check("★★ وطلب الوصول بالألماني ← لغته المحفوظة صارت de",
+      psql(`select lang from telegram_users where telegram_id=55504;`) === "de");
 
 /* ---- ١٥) /id بيرجّع رقمك ---- */
 sent.length = 0;

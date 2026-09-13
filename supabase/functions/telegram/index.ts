@@ -372,7 +372,8 @@ async function stepRequest(chat: number, lang: Lang, from: any, months: number) 
   let res: any;
   try {
     res = await rpc("bot_request_access",
-      { p_telegram_id: from.id, p_months: months });
+      // ★ آخر لغة اختارها هي لغته — بلاها بياخد الردّ بلغة تجريبيّه القديم
+      { p_telegram_id: from.id, p_months: months, p_lang: lang });
   } catch (e) {
     // ما أخد تجريبي بعد: منقلّه بلغته بدل رسالة خطأ عامّة
     if (String(e).includes("no_demo_yet"))
@@ -393,6 +394,10 @@ async function stepRequest(chat: number, lang: Lang, from: any, months: number) 
 
 /* ---------------- قرارك ---------------- */
 const REASONS = ["soon", "demo", "contact", "no"];
+/* وسم بيربط ردّك بالطلب. بتنكتب بنصّ رسالة الطلب منك، وردّك بيرجّعها
+   جوّا reply_to_message — فما منحتاج نخزّن «مين عم يكتب لأي طلب». */
+const TAG = (id: string, msg: number) => `#${id}:${msg}`;
+const TAG_RE = /#([0-9a-f-]{36}):(\d+)/i;
 const REASON_LABEL: Record<string, string> = {
   soon: "مو هلق", demo: "جرّب التجريبي", contact: "احكي معنا", no: "مرفوض",
 };
@@ -414,6 +419,30 @@ async function seal(cb: any, verdict: string) {
 const nameOf = (from: any) =>
   from?.username ? "@" + from.username : (from?.first_name ?? String(from?.id ?? ""));
 
+/* رفض بسبب مكتوب. منختم بطاقة الطلب الأصلية بـmsgId يلي حملناه بالوسم. */
+async function rejectFree(chat: number, from: any, id: string,
+                          msgId: number, why: string) {
+  let res: any;
+  try {
+    res = await rpc("bot_decide_request", {
+      p_admin_telegram_id: from.id, p_request_id: id,
+      p_approve: false, p_reason: why, p_chat_id: chat });
+  } catch (e) {
+    if (String(e).includes("not_bot_admin"))
+      return void await send(chat, "⛔ ما عندك صلاحية.");
+    throw e;
+  }
+  if (!res.ok) return void await send(chat, `سبق وانبتّ فيه: ${res.already}`);
+
+  const lang = (T[res.lang as Lang] ? res.lang : "de") as Lang;
+  await send(Number(res.chat_id), `${t(lang, "noFull")}\n\n${why}`);
+  await tg("editMessageText", {
+    chat_id: chat, message_id: msgId,
+    text: `✖️ رفض ${nameOf(from)} · ${why}`,
+  });
+  await send(chat, "✖️ انبعت السبب للطالب.");
+}
+
 async function adminAction(cb: any, kind: string, id: string, reason: string) {
   const from = cb.from;
   const pop = (text: string, alert = true) =>
@@ -424,8 +453,23 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
     await tg("answerCallbackQuery", { callback_query_id: cb.id });
     return void await tg("editMessageReplyMarkup", {
       chat_id: cb.message?.chat?.id, message_id: cb.message?.message_id,
-      reply_markup: { inline_keyboard: rows(
-        REASONS.map((k) => ({ text: REASON_LABEL[k], callback_data: `X|${id}|${k}` }))) },
+      reply_markup: { inline_keyboard: [
+        ...rows(REASONS.map((k) =>
+          ({ text: REASON_LABEL[k], callback_data: `X|${id}|${k}` }))),
+        [{ text: "✏️ سبب بخطّ إيدك",
+           callback_data: `W|${id}|${cb.message?.message_id}` }],
+      ] },
+    });
+  }
+
+  // «سبب بخطّ إيدك»: منبعت طلب ردّ، وردّك بيحمل وسم الطلب معه
+  if (kind === "W") {
+    await tg("answerCallbackQuery", { callback_query_id: cb.id });
+    return void await tg("sendMessage", {
+      chat_id: cb.message?.chat?.id,
+      text: `✏️ اكتب سبب الرفض — ردّ على هالرسالة.\n<code>${TAG(id, Number(reason))}</code>`,
+      parse_mode: "HTML",
+      reply_markup: { force_reply: true, selective: true },
     });
   }
 
@@ -464,7 +508,8 @@ async function adminAction(cb: any, kind: string, id: string, reason: string) {
     await pop("✅ انبعت الكود", false);
     await seal(cb, `✅ وافق ${nameOf(from)} · الكود ${res.code}`);
   } else {
-    await send(stud, `${t(lang, "noFull")}\n\n${t(lang, "rj_" + reason)}`);
+    const why = REASONS.includes(reason) ? t(lang, "rj_" + reason) : reason;
+    await send(stud, `${t(lang, "noFull")}\n\n${why}`);
     await pop("✖️ انرفض", false);
     await seal(cb, `✖️ رفض ${nameOf(from)} · ${REASON_LABEL[reason] ?? reason}`);
   }
@@ -500,7 +545,7 @@ Deno.serve(async (req) => {
 
       // أزرارك إنت: بتردّ على الضغطة لحالها (التنبيه لازم يطلع للضاغط
       // وحده)، فما منمرقها عالردّ العام تحت
-      if (kind === "A" || kind === "R" || kind === "X") {
+      if (kind === "A" || kind === "R" || kind === "X" || kind === "W") {
         await adminAction(cb, kind, a, b);
         return new Response("ok");
       }
@@ -527,6 +572,13 @@ Deno.serve(async (req) => {
       const here = chat !== from.id
         ? `\n👥 رقم هالمجموعة: <code>${chat}</code>` : "";
       return void await send(chat, mine + here), new Response("ok");
+    }
+
+    // ردّ على «اكتب سبب الرفض»: الوسم بالرسالة الأصلية بيقول لأي طلب
+    const tag = TAG_RE.exec(String(update.message?.reply_to_message?.text ?? ""));
+    if (tag && text) {
+      await rejectFree(chat, from, tag[1], Number(tag[2]), text);
+      return new Response("ok");
     }
 
     // ★ زرّ من اللوحة الثابتة: نصّه بيقول الفعل واللغة سوا
