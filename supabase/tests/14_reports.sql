@@ -123,6 +123,16 @@ begin
   r := report_problem(tst, 'أول تبليغ حقيقي بعد ستّ محاولات فاضية');
   perform t_check('★ محاولات قصيرة ما بتحرق الحصّة', (r->>'ok')::boolean);
 
+  ------------------------------------------- ٨ب امتحان مو موجود
+  -- ★ الحالة الحقيقية: الامتحان انعاد استيراده (uuid جديد) والطالب
+  -- فاتح الشاشة من قبل. النص لازم يوصل، لأنّه هو المطلوب.
+  r := report_problem('00000000-0000-0000-0000-0000000000ff',
+                      'الامتحان اختفى من تحت إيدي وأنا عم بكتب');
+  perform t_check('★ امتحان مو موجود: التبليغ بيوصل بلا سياق',
+                  (r->>'ok')::boolean);
+  rep := t_rep('الامتحان اختفى%');
+  perform t_check('★ وtest_id فاضي مو مكسور', rep->>'test_id' is null);
+
   ------------------------------------------------------- ٩ الطالب ما بيقرا
   perform set_config('request.jwt.claim.sub', stu::text, true);
   select count(*) into n from reports;
@@ -153,7 +163,7 @@ begin
   perform set_config('request.jwt.claim.sub', adm::text, true);
   rows := admin_reports();
   perform t_check(format('الأدمن بيشوف %s تبليغ', jsonb_array_length(rows)),
-                  jsonb_array_length(rows) = 6);
+                  jsonb_array_length(rows) = 7);
   row1 := rows->0;
   perform t_check('ومعه اسم صاحبه', (row1->>'name') in ('RP-Student', 'RP-Andere'));
   perform t_check('ومعه الامتحان', (row1->>'test') is not null
@@ -161,23 +171,23 @@ begin
   perform t_check('والمؤسسة والدرجة', row1 ? 'provider' and row1 ? 'stufe');
 
   select count(*) into n from reports;          -- قراءة مباشرة، بسياسة RLS
-  perform t_check('★ والقراءة المباشرة بتشتغل للأدمن بس', n = 6);
+  perform t_check('★ والقراءة المباشرة بتشتغل للأدمن بس', n = 7);
 
   ------------------------------------------------------- ١١ معالَج
   r := admin_report_status((row1->>'id')::uuid, true);
   perform t_check('التعليم كمعالَج بيشتغل', (r->>'ok')::boolean);
   perform t_check('والمفتوحة صارت أقل',
-                  jsonb_array_length(admin_reports('new')) = 5);
+                  jsonb_array_length(admin_reports('new')) = 6);
   perform t_check('وانسجّل بالبروتوكول',
     exists (select 1 from admin_audit_log
              where action = 'report_status' and target_id = row1->>'id'));
   perform admin_report_status((row1->>'id')::uuid, false);
   perform t_check('★ وبيرجع لو انضغط بالغلط',
-                  jsonb_array_length(admin_reports('new')) = 6);
+                  jsonb_array_length(admin_reports('new')) = 7);
 
   ------------------------------------------------------- ١٢ العدّاد بالشاشة
   perform t_check('شاشة البداية بتعدّ المفتوحة',
-                  (admin_overview()->>'reports_open')::int = 6);
+                  (admin_overview()->>'reports_open')::int = 7);
 end $$;
 
 -- ★ الامتحان انمسح: التبليغ بيضل مفهوم
@@ -207,7 +217,7 @@ begin
   select count(*) into n from reports where test_label = s and test_id is null;
   perform t_check(format('الامتحان انمسح، والتبليغ بقي (%s)', n), n = 1);
   perform t_check('★ والتبليغ ما انمسح معه (on delete set null)',
-                  t_rep_count() = 7);
+                  t_rep_count() = 8);
   select x->>'test' into s from jsonb_array_elements(admin_reports()) x
    where (x->>'test_id') is null limit 1;
   perform t_check(format('★ واسمه لسا ظاهر: %s', s),

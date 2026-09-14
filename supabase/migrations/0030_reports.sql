@@ -84,6 +84,7 @@ declare
   v_lim   jsonb := report_limits();
   v_body  text;
   v_lang  text;
+  v_test  uuid;
   v_level text;
   v_label text;
   v_n     int;
@@ -121,14 +122,18 @@ begin
 
   -- السياق بيتقرا من الجدول، مو من العميل: الطالب ما بيقدر يزعم إنه
   -- بيبلّغ عن امتحان تاني.
-  select t.level_id,
+  select t.id, t.level_id,
          coalesce(l.provider || ' · ' || l.stufe, l.title, t.level_id) || ' — ' || t.title
-    into v_level, v_label
+    into v_test, v_level, v_label
     from tests t left join levels l on l.id = t.level_id
    where t.id = p_test_id;
 
+  -- ★ امتحان مو موجود ← التبليغ بيوصل بلا سياق، ما بينرفض.
+  -- الحالة حقيقية: الامتحان بينعاد استيراده (uuid جديد) والطالب فاتح
+  -- الشاشة من قبل. بلا هالسطر المفتاح الأجنبي بيرمي، والنص يلي كتبه
+  -- بيضيع — وهو بالضبط النص يلي بدنا ياه.
   insert into reports (user_id, test_id, level_id, test_label, body, lang)
-  values (v_user, p_test_id, v_level, v_label, v_body, v_lang);
+  values (v_user, v_test, v_level, v_label, v_body, v_lang);
 
   return jsonb_build_object('ok', true);
 end $$;

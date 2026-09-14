@@ -61,4 +61,4 @@ select report_limits();
 | الدوال | `report_problem` · `admin_reports` · `admin_report_status` · `report_limits` |
 | التطبيق | `assets/app.js` (`openReport`) · `assets/api.js` (`reportProblem`) · `assets/i18n.js` |
 | اللوحة | `admin/admin.js` (`screenReports`) |
-| الاختبارات | `supabase/tests/14_reports.sql` (٣٦) · `tests/browser.mjs` · `tests/admin.mjs` · `tests/xss.mjs` |
+| الاختبارات | `supabase/tests/14_reports.sql` (٣٨) · `tests/browser.mjs` · `tests/admin.mjs` · `tests/xss.mjs` |
