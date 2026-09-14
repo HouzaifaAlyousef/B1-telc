@@ -30,6 +30,19 @@ const SVC     = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 
 const TG = (m: string) => `https://api.telegram.org/bot${TOKEN}/${m}`;
 
+/* ---------------- مهلة الخمول ----------------
+   البوت بلا ذاكرة مؤقّتة عن قصد: كل زرّ حامل سياقه بـcallback_data.
+   بس الأزرار بتضل بالمحادثة للأبد — ومين فتح البوت الصبح وضغط زرّ
+   بعد ساعتين بيكمّل من نصّ طريق نسيه.
+
+   ★ الوقت بيجي مع التحديث نفسه، فما بده تخزين: تلغرام بيعطي وقت
+     الرسالة (date)، ووقت آخر تعديل عليها (edit_date). وبما إنّ كل
+     خطوة صارت تعدّل نفس الرسالة، edit_date هو «إمتى آخر مرّة رسم
+     البوت شاشة لهالشخص» — يعني آخر تفاعل بالضبط.
+   أزرارك إنت (الموافقة والحجز) مستثناة: بطاقة الطلب ممكن تقعد ساعات
+   وبتضل شغّالة، والحجز عنده مؤقّته هو. */
+const IDLE_SEC = 300;            // خمس دقايق
+
 /* ---------------- النصوص ---------------- */
 type Lang = "ar" | "de" | "uk" | "en";
 const LANGS: { id: Lang; label: string }[] = [
@@ -53,6 +66,7 @@ const T: Record<Lang, Record<string, string>> = {
     again: "أخدت نسختك التجريبية من قبل — هيدا نفس الرمز:",
     used: "⚠️ هالرمز انستعمل. للوصول الكامل احكي معنا.",
     err: "صار خطأ. جرّب بعد شوي.",
+    expired: "⌛ مرّ وقت طويل — منبلّش من جديد.",
     back: "‹ رجوع",
     full: "🔓 بدّي الوصول الكامل",
     share: "📣 خبّر رفقاتك",
@@ -105,6 +119,7 @@ const T: Record<Lang, Record<string, string>> = {
     again: "Sie haben Ihre Testversion schon erhalten — das ist derselbe Code:",
     used: "⚠️ Dieser Code wurde bereits eingelöst. Für den vollen Zugang melden Sie sich bei uns.",
     err: "Es ist ein Fehler aufgetreten. Bitte später noch einmal.",
+    expired: "⌛ Zu lange her — wir fangen neu an.",
     back: "‹ Zurück",
     full: "🔓 Vollzugang anfragen",
     share: "📣 Bot weiterempfehlen",
@@ -157,6 +172,7 @@ const T: Record<Lang, Record<string, string>> = {
     again: "Ви вже отримали пробну версію — це той самий код:",
     used: "⚠️ Цей код уже використано. Щодо повного доступу — напишіть нам.",
     err: "Сталася помилка. Спробуйте пізніше.",
+    expired: "⌛ Минуло забагато часу — починаємо спочатку.",
     back: "‹ Назад",
     full: "🔓 Повний доступ",
     share: "📣 Поділитися ботом",
@@ -209,6 +225,7 @@ const T: Record<Lang, Record<string, string>> = {
     again: "You already got your trial — this is the same code:",
     used: "⚠️ This code has been used. Contact us for full access.",
     err: "Something went wrong. Please try again later.",
+    expired: "⌛ That was a while ago — let's start again.",
     back: "‹ Back",
     full: "🔓 Request full access",
     share: "📣 Share this bot",
@@ -274,8 +291,22 @@ async function tg(method: string, body: unknown) {
     headers: { "content-type": "application/json" },
     body: JSON.stringify(body),
   });
-  if (!r.ok) console.error(`telegram ${method}: ${r.status} ${await r.text()}`);
+  if (!r.ok) console.error(`telegram ${method}: ${r.status} ${await r.clone().text()}`);
   return r;
+}
+
+/* نفس النداء بس بيرجّع الجواب مفكوك.
+   ★ ما بيرمي أبداً. سبب: ضغطة قديمة (أكتر من نصف دقيقة) تلغرام بيرفض
+   الردّ عليها؛ لو رمينا، الـwebhook بيرجّع 500، وتلغرام بيعيد نفس
+   الضغطة بلا نهاية وبيحبس كل الضغطات الجديدة وراها. الفشل خبر، مو
+   انهيار. */
+async function tgJson(method: string, body: unknown):
+    Promise<{ ok: boolean; result?: any; description?: string }> {
+  try {
+    return await (await tg(method, body)).json();
+  } catch (e) {
+    return { ok: false, description: String(e) };
+  }
 }
 
 const rows = (btns: Btn[], perRow = 2) => {
@@ -292,6 +323,40 @@ const send = (chat: number, text: string, keyboard?: Btn[][],
     ...(keyboard ? { reply_markup: { inline_keyboard: keyboard } } : {}),
     ...(extra ?? {}),
   });
+
+/* ---------------- شاشة وحدة بتنكتب فوق حالها ----------------
+   القاعدة المتعارف عليها ببوتات تلغرام: **التنقّل بيعدّل الرسالة،
+   والأحداث بتبعت رسالة جديدة**. الطالب بيختار المؤسسة، بعدها الدرجة —
+   هاد تنقّل، مو تلات أخبار. رسالة وحدة بتتبدّل بتخلّي المحادثة نظيفة
+   وبتثبّت مطرح الشاشة، وبتمنع إنّه يرجع يضغط أزرار قديمة فوق.
+
+   تلات حالات لازم تنعالج، وكلها بتصير فعلاً:
+   · «message is not modified» — نفس النص ونفس الأزرار. مو خطأ: الشاشة
+     أصلاً صحيحة، فمنسكت.
+   · رسالة قديمة كتير أو انمسحت — ما بتنعدّل، فمنبعت وحدة جديدة.
+   · ما في رسالة أصلاً (إجا من زرّ اللوحة الثابتة) — منبعت. */
+async function screen(chat: number, msg: number | undefined | null,
+                      text: string, keyboard?: Btn[][],
+                      extra?: Record<string, unknown>) {
+  if (msg) {
+    const r = await tgJson("editMessageText", {
+      chat_id: chat, message_id: msg, text, parse_mode: "HTML",
+      disable_web_page_preview: true,
+      reply_markup: { inline_keyboard: keyboard ?? [] },
+      ...(extra ?? {}),
+    });
+    if (r.ok) return msg;
+    if (/not modified/i.test(r.description ?? "")) return msg;
+    // غير هيك: الرسالة ما عاد فيها تعديل — منكمّل برسالة جديدة
+  }
+  const r = await tgJson("sendMessage", {
+    chat_id: chat, text, parse_mode: "HTML",
+    disable_web_page_preview: true,
+    ...(keyboard ? { reply_markup: { inline_keyboard: keyboard } } : {}),
+    ...(extra ?? {}),
+  });
+  return r?.result?.message_id as number | undefined;
+}
 
 /* ---------------- اللوحة الثابتة ----------------
    أزرار بتضل تحت الشاشة — الطالب ما بده يكتب /start ولا /sprache.
@@ -356,33 +421,41 @@ const levelName = (l: Level) =>
   l.provider && l.stufe ? `${l.provider} · ${l.stufe}` : l.title;
 
 /* ---------------- الخطوات ---------------- */
-async function stepLang(chat: number, lang: Lang) {
-  await send(chat, t(lang, "hello"),
+async function stepLang(chat: number, lang: Lang, msg?: number) {
+  await screen(chat, msg, t(lang, "hello"),
     rows(LANGS.map(l => ({ text: l.label, callback_data: `g|${l.id}` }))));
 }
 
-async function stepProvider(chat: number, lang: Lang, levels: Level[]) {
-  if (!levels.length) return void await send(chat, t(lang, "none"));
+/* head: شرح بينحطّ فوق السؤال بنفس الرسالة.
+   بدونه كان لازم رسالتين — وحدة للشرح ووحدة للسؤال — وتانية بتعدّل
+   الأولى بتمسح الشرح قبل ما يقراه. */
+async function stepProvider(chat: number, lang: Lang, levels: Level[],
+                            msg?: number, head?: string) {
+  const ask = (body: string) => (head ? `${head}\n\n${body}` : body);
+  if (!levels.length) return void await screen(chat, msg, ask(t(lang, "none")));
   const provs = [...new Set(levels.map(l => l.provider || "—"))];
 
   // مؤسسة وحدة بس: ما في معنى نسأل — منقفز للدرجات
-  if (provs.length === 1) return stepStufe(chat, lang, levels, provs[0]);
+  if (provs.length === 1) return stepStufe(chat, lang, levels, provs[0], msg, head);
 
-  await send(chat, t(lang, "pickProvider"),
+  await screen(chat, msg, ask(t(lang, "pickProvider")),
     rows(provs.map(p => ({ text: p, callback_data: `p|${lang}|${p}` }))));
 }
 
-async function stepStufe(chat: number, lang: Lang, levels: Level[], prov: string) {
+async function stepStufe(chat: number, lang: Lang, levels: Level[], prov: string,
+                         msg?: number, head?: string) {
   const mine = levels.filter(l => (l.provider || "—") === prov);
-  if (!mine.length) return void await send(chat, t(lang, "none"));
-  await send(chat, t(lang, "pickStufe"), [
+  if (!mine.length) return void await screen(chat, msg, t(lang, "none"));
+  await screen(chat, msg, head ? `${head}\n\n${t(lang, "pickStufe")}`
+                               : t(lang, "pickStufe"), [
     ...rows(mine.map(l => ({
       text: l.stufe || l.title, callback_data: `l|${lang}|${l.id}` })), 3),
     [{ text: t(lang, "back"), callback_data: `b|${lang}` }],
   ]);
 }
 
-async function stepCode(chat: number, lang: Lang, from: any, levelId: string) {
+async function stepCode(chat: number, lang: Lang, from: any, levelId: string,
+                        msg?: number) {
   const res = await rpc("bot_demo_code", {
     p_telegram_id: from.id,
     p_chat_id: chat,
@@ -403,19 +476,26 @@ async function stepCode(chat: number, lang: Lang, from: any, levelId: string) {
     t(lang, "what", { test: res.test ?? "", h: res.hours }),
   ];
   if (spent) lines.push("", t(lang, "used"));
-  // زرّ النسخ مدمج، فالرسالة ما بتحمل اللوحة الثابتة معه
-  await send(chat, lines.join("\n"), [[copyBtn(lang, res.code)]]);
-  // والخطوة التالية هي يلي بتحمل اللوحة — رسالة قصيرة إلها معنى،
-  // مو «👇» فاضية
-  if (!spent) await send(chat, t(lang, "how"), undefined, menu(lang));
 
   // ★ صار عنده تجريبي لهالمستوى — والباب مفتوح لغيره. بلا هالزرّ
   //   الطالب ما بيعرف إنّه بيقدر يجرّب مستوى تاني أصلاً.
   const other: Level[] = await rpc("bot_untried_levels", { p_telegram_id: from.id })
     .catch(() => []);
-  if (other.length) await send(chat, t(lang, "tryOther"),
-    rows(other.map((l) => ({
+  // ★ أزرار «جرّب مستوى تاني» جوّا رسالة الكود نفسها مو برسالة تالتة.
+  //   الرسالة الوحدة بتحمل تخطيط أزرار واحد، والكود وزرّ نسخه وبقيّة
+  //   المستويات كلهن نفس الموضوع — ففصلهن كان بيزيد رسالة بلا فايدة.
+  const kb: Btn[][] = [[copyBtn(lang, res.code)]];
+  if (other.length) {
+    lines.push("", t(lang, "tryOther"));
+    kb.push(...rows(other.map((l) => ({
       text: levelName(l), callback_data: `l|${lang}|${l.id}` })), 2));
+  }
+  // الكود بياخد مطرح شاشة الاختيار — نفس الرسالة، محتوى جديد
+  await screen(chat, msg, lines.join("\n"), kb);
+  // واللوحة الثابتة بدها رسالة جديدة: editMessageText ما بيحمل لوحة
+  // تحت الشاشة، بس أزرار جوّا الرسالة. ورسالة قصيرة إلها معنى أحسن
+  // من «👇» فاضية.
+  if (!spent) await send(chat, t(lang, "how"), undefined, menu(lang));
 
   // ★ خبر إلك بس أوّل مرّة. الرجعات ما بتنبّهك — وإلا كل من فتح
   //   الرسالة القديمة بيرنّ عندك.
@@ -509,15 +589,16 @@ async function stepOther(chat: number, lang: Lang, from: any) {
 }
 
 /* ---------------- الوصول الكامل ---------------- */
-async function stepMonths(chat: number, lang: Lang) {
-  await send(chat, t(lang, "pickMonths"), [
+async function stepMonths(chat: number, lang: Lang, msg?: number) {
+  await screen(chat, msg, t(lang, "pickMonths"), [
     [1, 2, 3].map((n) => ({
       text: t(lang, "mon", { n }), callback_data: `m|${lang}|${n}` })),
     [{ text: t(lang, "back"), callback_data: `b|${lang}` }],
   ]);
 }
 
-async function stepRequest(chat: number, lang: Lang, from: any, months: number) {
+async function stepRequest(chat: number, lang: Lang, from: any, months: number,
+                           msg?: number) {
   let res: any;
   try {
     res = await rpc("bot_request_access",
@@ -526,11 +607,13 @@ async function stepRequest(chat: number, lang: Lang, from: any, months: number) 
   } catch (e) {
     // ما أخد تجريبي بعد: منقلّه بلغته بدل رسالة خطأ عامّة
     if (String(e).includes("no_demo_yet"))
-      return void await send(chat, t(lang, "needDemo"), undefined, menu(lang));
+      return void await screen(chat, msg, t(lang, "needDemo"));
     throw e;
   }
 
-  await send(chat, t(lang, res.again ? "pending" : "sent"), undefined, menu(lang));
+  // اللوحة الثابتة موجودة أصلاً (is_persistent) — فالتأكيد بياخد مطرح
+  // شاشة اختيار الشهور بدل ما يزيد رسالة
+  await screen(chat, msg, t(lang, res.again ? "pending" : "sent"));
   if (res.again) return;          // ما منزعجك مرّتين بنفس الطلب
 
   // ★ الحجز أوّلاً: بمجموعة فيها أكتر من شخص، تنين بيفتحوا نفس الطلب
@@ -791,20 +874,32 @@ Deno.serve(async (req) => {
         return new Response("ok");
       }
 
-      await tg("answerCallbackQuery", { callback_query_id: cb.id });
       const lang = (T[a as Lang] ? a : fallback) as Lang;
+      const mid: number | undefined = cb.message?.message_id;
+
+      // ★ زرّ قديم: بلّش من جديد بدل ما تكمّل من نصّ طريق منسي
+      const seen = Number(cb.message?.edit_date ?? cb.message?.date ?? 0);
+      if (seen && Math.floor(Date.now() / 1000) - seen > IDLE_SEC) {
+        await tg("answerCallbackQuery", {
+          callback_query_id: cb.id, text: t(lang, "expired"), show_alert: false });
+        await stepLang(chat, lang, mid);
+        return new Response("ok");
+      }
+
+      await tg("answerCallbackQuery", { callback_query_id: cb.id });
 
       if (kind === "g" || kind === "b") {
         const L = (T[a as Lang] ? a : lang) as Lang;
         // ★ الشرح بعد اختيار اللغة بس — مو مع «رجوع».
         //   الطالب لازم يعرف شو رح ياخد قبل ما يختار، وبلغته.
-        if (kind === "g") await send(chat, t(L, "intro"));
-        await stepProvider(chat, L, await rpc("bot_levels"));
+        //   وبياخد مطرح شاشة اللغات: رسالة وحدة بتمشي مع الطالب.
+        await stepProvider(chat, L, await rpc("bot_levels"), mid,
+                           kind === "g" ? t(L, "intro") : undefined);
       }
-      else if (kind === "p") await stepStufe(chat, lang, await rpc("bot_levels"), b);
-      else if (kind === "l") await stepCode(chat, lang, from, b);
-      else if (kind === "f") await stepMonths(chat, lang);
-      else if (kind === "m") await stepRequest(chat, lang, from, Number(b));
+      else if (kind === "p") await stepStufe(chat, lang, await rpc("bot_levels"), b, mid);
+      else if (kind === "l") await stepCode(chat, lang, from, b, mid);
+      else if (kind === "f") await stepMonths(chat, lang, mid);
+      else if (kind === "m") await stepRequest(chat, lang, from, Number(b), mid);
       return new Response("ok");
     }
 

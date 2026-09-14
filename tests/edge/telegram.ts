@@ -103,16 +103,21 @@ const post = (update: unknown, secret: string | null = "s3cret") =>
   }));
 
 const last = (m = "sendMessage") => [...sent].reverse().find(s => s.method === m)?.body;
+/* ★ «آخر شاشة» بعد ما صار التنقّل يعدّل رسالة وحدة: التعديل والإرسال
+   الاتنين بيغيّروا اللي قدّام الطالب، فالفحص لازم يشوفهن سوا. */
+const screenNow = () => [...sent].reverse().find(x =>
+  x.method === "sendMessage" || x.method === "editMessageText")?.body;
 /* ★ صار في شاتين: الطالب وقناتك. «آخر رسالة» لحالها صارت ملتبسة —
    إشعارك بيوصل بعد رسالة الطالب فبيسرق last(). منسأل عن شات بعينه. */
 const toChat = (id: number) =>
   [...sent].reverse().find(x => x.method === "sendMessage" && x.body?.chat_id === id)?.body;
-const kb = () => last()?.reply_markup?.inline_keyboard ?? [];
+const kb = () => screenNow()?.reply_markup?.inline_keyboard ?? [];
 const lastOf = (m: string) => [...sent].reverse().find(x => x.method === m)?.body;
 /* اللوحة الثابتة: reply_markup.keyboard مو inline_keyboard */
 /* ★ رسالة الكود هي يلي عليها زرّ النسخ — مو «آخر رسالة»، لأنّ بعدها
    بتجي خطوة «كيف تستعمله» وهي يلي بتحمل اللوحة الثابتة. */
-const codeMsg = () => [...sent].reverse().find(x => x.method === "sendMessage"
+const codeMsg = () => [...sent].reverse().find(x =>
+  (x.method === "sendMessage" || x.method === "editMessageText")
   && (x.body?.reply_markup?.inline_keyboard ?? []).flat()
        .some((b: any) => b.copy_text))?.body;
 const perm = (id: number) =>
@@ -123,11 +128,31 @@ const TG_ID = 987654321;
 const msg = (text: string, lc = "ar") => ({
   message: { chat: { id: TG_ID }, from: { id: TG_ID, username: "kiko", language_code: lc }, text },
 });
-const click = (data: string, lc = "ar") => ({
+/* ★ الضغطة الحقيقية بتجي ومعها الرسالة يلي عليها الزرّ: رقمها ووقتها.
+   كانت ناقصة هون — فالدالة ما كان عندها شي تعدّله وكانت تبعت رسالة
+   جديدة دايماً، يعني مسار التعديل كله ما كان ينفحص أصلاً.
+   وnow-ageSec بيسمح نجرّب زرّ قديم بلا ما ننطر. */
+let clickMid = 500;
+const click = (data: string, lc = "ar", ageSec = 0) => ({
   callback_query: { id: "cb1", data,
     from: { id: TG_ID, username: "kiko", language_code: lc },
-    message: { chat: { id: TG_ID } } },
+    message: { chat: { id: TG_ID }, message_id: ++clickMid,
+               date: Math.floor(Date.now() / 1000) - ageSec } },
 });
+/* نفس الزرّ على نفس الرسالة — تا نتابع إنّها هي يلي عم تتعدّل */
+const clickSame = (data: string, m: number, ageSec = 0) => ({
+  callback_query: { id: "cb1", data,
+    from: { id: TG_ID, username: "kiko", language_code: "ar" },
+    message: { chat: { id: TG_ID }, message_id: m,
+               date: Math.floor(Date.now() / 1000) - ageSec } },
+});
+
+/* شو بيشوف الطالب فعلاً: آخر رسالة انبعتتله أو انتعدّلت عنده.
+   بعد ما صار التنقّل بيعدّل رسالة وحدة، «آخر sendMessage» ما عادت
+   تعني «آخر شاشة». */
+const shown = (id: number) => [...sent].reverse().find(x =>
+  (x.method === "sendMessage" || x.method === "editMessageText")
+  && x.body?.chat_id === id)?.body;
 
 /* ---- ١) ★ بلا الترويسة السرّية ما في شي بيصير ---- */
 sent.length = 0;
@@ -148,15 +173,20 @@ check("★ وفيهن العربي والأوكراني والإنكليزي",
    مؤسسة وحدة معناها ما في شي تختار — السؤال وقتها ضغطة بلا معنى. */
 sent.length = 0;
 await post(click("g|ar"));
-/* ★ الشرح بيجي قبل الأزرار: الطالب لازم يعرف شو رح ياخد */
-const introMsg = sent.filter(x => x.method === "sendMessage")[0]?.body;
+/* ★ الشرح فوق الأزرار **بنفس الرسالة**: الطالب لازم يعرف شو رح ياخد.
+   كان برسالة لحاله، وبعد ما صار التنقّل يعدّل شاشة وحدة، رسالة الشرح
+   كانت رح تنمسح بالشاشة يلي بعدها قبل ما يقراها. */
+const introMsg = screenNow();
 check("★★ بعد اختيار اللغة بيشرح شو رح ياخد",
       /رمز مجّاني/.test(String(introMsg?.text))
       && /٢٤ ساعة/.test(String(introMsg?.text)));
+check("★★ والشرح والسؤال بنفس الشاشة، مو رسالتين",
+      /رمز مجّاني/.test(String(introMsg?.text))
+      && (introMsg?.reply_markup?.inline_keyboard ?? []).flat().length > 0);
 check("★ وبلغته يلي اختارها", !/kostenlos|Welcome/.test(String(introMsg?.text)));
 const stufen = flat().filter((b: any) => String(b.callback_data).startsWith("l|"));
 check(`★ مؤسسة وحدة ← بيقفز للدرجات مباشرة (${stufen.length})`, stufen.length >= 1);
-check("★ والنص بالعربي", /اختار المستوى/.test(String(last()?.text)));
+check("★ والنص بالعربي", /اختار المستوى/.test(String(screenNow()?.text)));
 
 /* ---- ٣ب) مؤسستين ← بيسأل عن المؤسسة أول ---- */
 // اسم مؤسسة ما بيتصادم مع يلي بتخلّفه اختبارات SQL —
@@ -292,7 +322,7 @@ check("★ بيسأل لكم شهر",
 
 sent.length = 0;
 await post(click("m|ar|3"));
-check("★ الطالب بيوصله «استنى»", /طلبك وصل/.test(String(toChat(TG_ID)?.text)));
+check("★ الطالب بيوصله «استنى»", /طلبك وصل/.test(String(shown(TG_ID)?.text)));
 const adminMsg = toChat(GROUP);
 check("★★ والطلب بيوصل المجموعة",
       !!adminMsg && /طلب وصول كامل/.test(String(adminMsg.text)) && /3/.test(String(adminMsg.text)));
@@ -305,7 +335,7 @@ check(`★ ومعه رقم الطلب (${reqId.slice(0, 8)}…)`, /^[0-9a-f-]{36
 /* ---- ٩ب) ★ «كودي» و«جرّب مستوى تاني» ---- */
 sent.length = 0;
 await post(msg("🎟 كودي"));
-const mine = String(toChat(TG_ID)?.text ?? "");
+const mine = String(shown(TG_ID)?.text ?? "");
 check("★★ «كودي» بيرجّع كوده والمستوى وكم باقي",
       new RegExp(`<code>${code}</code>`).test(mine)
       && /telc · B1/.test(mine) && /(ما انفعّل|باقي)/.test(mine));
@@ -326,11 +356,14 @@ sent.length = 0;
 await post(msg("🎁 نسختي التجريبية"));   // بيعرض المؤسسات — مو المقصود
 sent.length = 0;
 await post(click("l|ar|b1"));            // نفس كوده + زرّ مستوى تاني
-// ★ عناصر sent شكلها {method, body} — الجسم هو يلي فيه النصّ
-const oth = [...sent].filter(x => x.method === "sendMessage"
-             && x.body?.chat_id === TG_ID).pop()?.body;
+/* ★ «جرّب مستوى تاني» صار جوّا رسالة الكود نفسها مو برسالة تالتة:
+   نفس الموضوع، ورسالة زيادة بتزحّط الكود لفوق وبتوسّخ المحادثة. */
+const oth = codeMsg();
 check("★★ مع الكود بيطلع «جرّب مستوى تاني»",
       /جرّب مستوى تاني/.test(String(oth?.text)));
+check("★★ وبنفس رسالة الكود، مو برسالة تالتة",
+      (oth?.reply_markup?.inline_keyboard ?? []).flat()
+        .some((b: any) => b.copy_text));
 const othKb = (oth?.reply_markup?.inline_keyboard ?? []).flat();
 check("★★ وفيه المستوى يلي ما جرّبه، وما فيه يلي جرّبه",
       othKb.some((b: any) => b.callback_data === "l|ar|oth-a2")
@@ -410,7 +443,7 @@ const full = psql(`select code || '/' || duration_days || '/' ||
                    from access_codes where note like 'telegram-full:%';`);
 check(`★ انعمل كود كامل: ٩٠ يوم وكل الامتحانات (${full})`, /\/90\/كل$/.test(full));
 check("★ والطالب وصله الكود",
-      /تمّت الموافقة/.test(String(toChat(TG_ID)?.text)));
+      /تمّت الموافقة/.test(String(shown(TG_ID)?.text)));
 check("★★ ورسالة الطلب انختمت: مين وافق مكتوب",
       /وافق @boss/.test(String(lastOf("editMessageText")?.text)));
 check("★★ وBOSS نفسه مو مسجّل — مرق بالعضوية بس",
@@ -535,9 +568,9 @@ sent.length = 0;
 await post(msg("شي عادي"));
 await new Promise((r) => setTimeout(r, 300));
 check("★★ باقي ٤٠ دقيقة ← التنبيه وصل الطالب",
-      /أقلّ من ساعة/.test(String(toChat(TG_ID)?.text)));
+      /أقلّ من ساعة/.test(String(shown(TG_ID)?.text)));
 check("★★ ومعه زرّ الوصول الكامل — أقوى لحظة بيع",
-      (toChat(TG_ID)?.reply_markup?.inline_keyboard ?? []).flat()
+      (shown(TG_ID)?.reply_markup?.inline_keyboard ?? []).flat()
         .some((b: any) => String(b.callback_data).startsWith("f|")));
 sent.length = 0;
 await post(msg("شي عادي"));
@@ -554,6 +587,88 @@ await post({ message: { chat: { id: -1001234567890 },
   from: { id: TG_ID, username: "kiko" }, text: "/id" } });
 check("★ ولا بالمجموعة كمان",
       !/-1001234567890<\/code>/.test(String(last()?.text ?? "")));
+
+/* ---- ١٧) ★★ شاشة وحدة بتمشي مع الطالب ----
+   القاعدة المتعارف عليها ببوتات تلغرام: التنقّل بيعدّل الرسالة،
+   والأحداث بتبعت رسالة جديدة. قبل هيك، كل ضغطة كانت تزيد رسالة —
+   والمحادثة بتصير عمود قوايم ميتة والطالب بيضيع بينهن. */
+{
+  const M = 777;
+  sent.length = 0;
+  await post(clickSame("g|ar", M));
+  const editsA = sent.filter(x => x.method === "editMessageText");
+  check(`★★ اختيار اللغة بيعدّل نفس الرسالة (${editsA.length} تعديل)`,
+        editsA.length === 1 && editsA[0].body.message_id === M);
+  check("★★ وما بيبعت ولا رسالة جديدة للطالب",
+        !sent.some(x => x.method === "sendMessage" && x.body?.chat_id === TG_ID));
+
+  sent.length = 0;
+  await post(clickSame("p|ar|telc", M));
+  const editsB = sent.filter(x => x.method === "editMessageText");
+  check(`★★ واختيار المؤسسة كمان بنفس الرسالة (${editsB[0]?.body?.message_id})`,
+        editsB.length === 1 && editsB[0].body.message_id === M
+        && /اختار المستوى/.test(String(editsB[0].body.text)));
+
+  // ★ رسالة ما بتنعدّل (انمسحت / قديمة كتير) لازم ما تضيّع الشاشة
+  const realFetch2 = globalThis.fetch;
+  globalThis.fetch = ((u: any, o?: any) => {
+    if (String(u).includes("/editMessageText"))
+      return Promise.resolve(new Response(
+        JSON.stringify({ ok: false, description: "Bad Request: message to edit not found" }),
+        { headers: { "content-type": "application/json" } }));
+    return realFetch2(u, o);
+  }) as any;
+  sent.length = 0;
+  await post(clickSame("p|ar|telc", M));
+  globalThis.fetch = realFetch2;
+  check("★★ ولو الرسالة ما انعدّلت، بيبعت وحدة جديدة بدل ما يختفي",
+        sent.some(x => x.method === "sendMessage" && x.body?.chat_id === TG_ID
+                       && /اختار المستوى/.test(String(x.body?.text))));
+}
+
+/* ---- ١٨) ★★ زرّ قديم: بيبلّش من جديد ----
+   الأزرار بتضل بالمحادثة للأبد. مين فتح البوت الصبح وضغط زرّ بعد
+   ساعتين كان بيكمّل من نصّ طريق نسيه — ويطلع كود لمستوى ما عاد بدّه
+   ياه. خمس دقايق، وبعدها منرجّعه للبداية.
+   ★ بلا ذاكرة: الوقت جاي مع التحديث نفسه (date / edit_date). */
+{
+  const M = 888;
+  sent.length = 0;
+  await post(clickSame("p|ar|telc", M, 299));          // أقلّ من خمس دقايق
+  check("★ زرّ عمره ٢٩٩ ثانية لسا شغّال",
+        /اختار المستوى/.test(String(lastOf("editMessageText")?.text)));
+
+  sent.length = 0;
+  await post(clickSame("p|ar|telc", M, 301));          // أكتر من خمس دقايق
+  const back = lastOf("editMessageText");
+  check("★★ وعمره ٣٠١ ثانية بيرجّعه لاختيار اللغة",
+        /اختار لغتك/.test(String(back?.text))
+        && (back?.reply_markup?.inline_keyboard ?? []).flat().length === 4);
+  check("★★ ومعه تنبيه بيشرح ليش، بلغته",
+        /مرّ وقت طويل/.test(String(lastOf("answerCallbackQuery")?.text ?? "")));
+  check("★★ وبنفس الرسالة — ما بيزيد وحدة جديدة",
+        back?.message_id === M
+        && !sent.some(x => x.method === "sendMessage" && x.body?.chat_id === TG_ID));
+
+  // ★ التنبيه لازم يكون بلغة الزرّ مو بالعربي دايماً
+  sent.length = 0;
+  await post({ callback_query: { id: "cb1", data: "p|de|telc",
+    from: { id: TG_ID, username: "kiko", language_code: "ar" },
+    message: { chat: { id: TG_ID }, message_id: M,
+               date: Math.floor(Date.now() / 1000) - 400 } } });
+  check("★★ والتنبيه بلغة الزرّ (ألماني) مو بلغة الجهاز",
+        /Zu lange her/.test(String(lastOf("answerCallbackQuery")?.text ?? "")));
+
+  // ★ أزرارك إنت مستثناة: بطاقة الطلب بتقعد ساعات وبتضل شغّالة
+  sent.length = 0;
+  await post({ callback_query: { id: "old1", data: "V|00000000-0000-0000-0000-000000000000",
+    from: { id: BOSS, username: "boss" },
+    message: { chat: { id: GROUP }, message_id: 42, text: "طلب",
+               date: Math.floor(Date.now() / 1000) - 7200 } } });
+  check("★★ وبطاقة الطلب بعد ساعتين لسا بتشتغل — ما بترجع لاختيار اللغة",
+        !sent.some(x => x.method === "editMessageText"
+                        && /اختار لغتك/.test(String(x.body?.text))));
+}
 
 await supa.shutdown(); await tgSrv.shutdown();
 const bad = R.filter(x => !x[1]);
