@@ -1,5 +1,5 @@
 # VLADIMIR
-Untertitel: 21 Aufgaben · 45 Minuten
+Untertitel: 17 Aufgaben · 45 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -131,10 +131,10 @@ Lösung: r
 
 ### Teil: s1
 Format: writing
-Titel: Schreiben, Teil 1
+Titel: Schreiben, Teil 1 (Formular)
 Gruppe: Schreiben
 Minuten: 10
-Punkte: 1
+Punkte: 5
 Maximum: 5
 Anweisung: Ihr Freund, Vladimir Serjakov, 30 Jahre alt, kommt aus Sankt Petersburg in Russland und lebt seit einem Monat in Hamburg. Er hat eine neue Stelle bei TUI als Reiseleiter. Seit gestern hat er 39 Grad Fieber. Heute geht er zum Arzt. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
@@ -144,17 +144,12 @@ Text:
 Ihr Freund, Vladimir Serjakov, 30 Jahre alt, kommt aus Sankt Petersburg in Russland und lebt seit einem Monat in Hamburg. Er hat eine neue Stelle bei TUI als Reiseleiter. Seit gestern hat er 39 Grad Fieber. Heute geht er zum Arzt.
 Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Aufgaben:
-[16] Postleitzahl, Wohnort
-Lösung: Hamburg | 20969 Hamburg
-[17] Alter
-Lösung: 30
-[18] Beruf
-Lösung: Reiseleiter
-[19] Seit wann sind Sie krank?
-Lösung: seit gestern | gestern
-[20] Was fehlt Ihnen?
-Lösung: Fieber | 39 Grad Fieber | hohes Fieber
-
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Postleitzahl, Wohnort: Hamburg / 20969 Hamburg
+Punkt: (2) Alter: 30
+Punkt: (3) Beruf: Reiseleiter
+Punkt: (4) Seit wann sind Sie krank? — seit gestern / gestern
+Punkt: (5) Was fehlt Ihnen? — Fieber / 39 Grad Fieber / hohes Fieber
 ### Teil: s2
 Format: writing
 Titel: Schreiben, Teil 2

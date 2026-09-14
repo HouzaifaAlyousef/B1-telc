@@ -1,5 +1,5 @@
 # PAOLO
-Untertitel: 21 Aufgaben · 45 Minuten
+Untertitel: 17 Aufgaben · 45 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -133,10 +133,10 @@ Lösung: f
 
 ### Teil: s1
 Format: writing
-Titel: Schreiben, Teil 1
+Titel: Schreiben, Teil 1 (Formular)
 Gruppe: Schreiben
 Minuten: 10
-Punkte: 1
+Punkte: 5
 Maximum: 5
 Anweisung: Ihr Freund Paolo Pellizzari aus Turin möchte mit seiner Familie (Ehefrau, drei Kinder, 2–7 Jahre alt) an der Ostsee Urlaub machen. Paolo hat drei Wochen Urlaub, vom 25.6. bis zum 15.7. Er sucht eine ruhige Wohnung am Meer, zwei Schlafzimmer, Wohnraum mit Küche, Bad. Paolo will mit dem Auto nach Deutschland kommen. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
@@ -146,17 +146,12 @@ Text:
 Ihr Freund Paolo Pellizzari aus Turin möchte mit seiner Familie (Ehefrau, drei Kinder, 2–7 Jahre alt) an der Ostsee Urlaub machen. Paolo hat drei Wochen Urlaub, vom 25.6. bis zum 15.7. Er sucht eine ruhige Wohnung am Meer, zwei Schlafzimmer, Wohnraum mit Küche, Bad. Paolo will mit dem Auto nach Deutschland kommen.
 Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Aufgaben:
-[16] Anzahl der Personen
-Lösung: 5
-[17] davon Kinder
-Lösung: 3
-[18] Brauchen Sie eine Küche?
-Lösung: ja | Ja
-[19] Abreise
-Lösung: 15. Juli | 15.7. | 15.07.
-[20] Wie reisen Sie an? (Flugzeug, Zug, Auto)
-Lösung: Auto | mit dem Auto
-
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Anzahl der Personen: 5
+Punkt: (2) davon Kinder: 3
+Punkt: (3) Brauchen Sie eine Küche? — ja / Ja
+Punkt: (4) Abreise: 15. Juli / 15.7. / 15.07.
+Punkt: (5) Wie reisen Sie an? (Flugzeug, Zug, Auto): Auto / mit dem Auto
 ### Teil: s2
 Format: writing
 Titel: Schreiben, Teil 2

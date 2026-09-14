@@ -1,5 +1,5 @@
 # KARIN
-Untertitel: 21 Aufgaben · 45 Minuten
+Untertitel: 17 Aufgaben · 45 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -130,10 +130,10 @@ Lösung: r
 
 ### Teil: s1
 Format: writing
-Titel: Schreiben, Teil 1
+Titel: Schreiben, Teil 1 (Formular)
 Gruppe: Schreiben
 Minuten: 10
-Punkte: 1
+Punkte: 5
 Maximum: 5
 Anweisung: Ihr Freund Munir Kassem kommt aus Ägypten und wohnt jetzt in Hamburg. Er ist 35 Jahre alt und von Beruf Arzt. In seiner Freizeit will er in einem Verein Fußball spielen. Bezahlen will er mit Kreditkarte. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
@@ -144,17 +144,12 @@ Ihr Freund Munir Kassem kommt aus Ägypten und wohnt jetzt in Hamburg. Er ist 35
 Munir hat ein Formular für die Anmeldung in einem Sportverein bekommen.
 Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Aufgaben:
-[16] Wohnort
-Lösung: Hamburg
-[17] Beruf
-Lösung: Arzt
-[18] Alter
-Lösung: 35
-[19] Sport
-Lösung: Fußball
-[20] Zahlung (bar, Überweisung, Kreditkarte)
-Lösung: Kreditkarte
-
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Wohnort: Hamburg
+Punkt: (2) Beruf: Arzt
+Punkt: (3) Alter: 35
+Punkt: (4) Sport: Fußball
+Punkt: (5) Zahlung (bar, Überweisung, Kreditkarte): Kreditkarte
 ### Teil: s2
 Format: writing
 Titel: Schreiben, Teil 2

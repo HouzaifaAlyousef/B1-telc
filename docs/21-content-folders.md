@@ -118,11 +118,15 @@ Two tests plant that leak on purpose and check the build fails.
 ## من المحتوى للقاعدة — لصقة وحدة
 
 ```bash
-node tools/content_to_seed.mjs oesd/a1 supabase/seed/a1.sql
+node tools/content_to_seed.mjs goethe/a1 supabase/seed/goethe-a1.sql
 ```
 
-بيقرا `content/oesd/a1/modell-*/text.txt` وبيطلّع ملف بذور واحد بيعمل
+بيقرا `content/goethe/a1/modell-*/text.txt` وبيطلّع ملف بذور واحد بيعمل
 المستوى **وبينشره** وبيدخّل كل الامتحانات. الصقه بـSQL Editor وخلص.
+
+★ **سمّي الملف `<مؤسسة>-<درجة>.sql`.** الدرجة لحالها ما بتكفي: ÖSD A1
+وGoethe A1 درجتهن وحدة ومنتجين مختلفين. (التلاتة القدام — `b1.sql`
+و`b2.sql` و`a1.sql` — انعملوا قبل هالقاعدة وضلّوا بأساميهن.)
 
 الملف الكبير بينقسم لأجزاء تنلصق وحدة وحدة (المحرّر بيتعتّر فوق
 ~٢٠٠ ك.ب):

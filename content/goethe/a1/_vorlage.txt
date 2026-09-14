@@ -16,7 +16,7 @@
 // =====================================================================
 
 # <PRUEFUNGSNAME>
-Untertitel: 36 Aufgaben · 65 Minuten
+Untertitel: 32 Aufgaben · 65 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -237,10 +237,10 @@ Lösung: <A, B oder C>
 
 ### Teil: s1
 Format: writing
-Titel: Schreiben, Teil 1
+Titel: Schreiben, Teil 1 (Formular)
 Gruppe: Schreiben
 Minuten: 10
-Punkte: 1
+Punkte: 5
 Maximum: 5
 Anweisung: Helfen Sie Ihrer Freundin / Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
@@ -249,16 +249,12 @@ Text:
 **<Situation / Angaben zur Person>**
 <Beschreibung>
 Aufgaben:
-[31] <Feld 1>
-Lösung: <Lösung 1>
-[32] <Feld 2>
-Lösung: <Lösung 2>
-[33] <Feld 3>
-Lösung: <Lösung 3>
-[34] <Feld 4>
-Lösung: <Lösung 4>
-[35] <Feld 5>
-Lösung: <Lösung 5>
+[31] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 31–35):
+Punkt: (1) <Feld 1>: <Lösung 1>
+Punkt: (2) <Feld 2>: <Lösung 2>
+Punkt: (3) <Feld 3>: <Lösung 3>
+Punkt: (4) <Feld 4>: <Lösung 4>
+Punkt: (5) <Feld 5>: <Lösung 5>
 
 ### Teil: s2
 Format: writing

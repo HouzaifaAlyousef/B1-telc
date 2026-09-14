@@ -165,17 +165,42 @@ check "★ كل الترحيلات بتنقرا (نفس فحص البايبلا�
 SEEDED=0
 for D in content/*/*/; do
   P=$(basename "$(dirname "$D")"); L=$(basename "$D")
-  [ -f "supabase/seed/$L.sql" ] || continue
-  grep -q "content/$P/$L" "supabase/seed/$L.sql" 2>/dev/null || continue
+
+  # ★ الاسم بياخد المؤسسة كمان.
+  # كان بيشتقّ «supabase/seed/<درجة>.sql» وبس — وأوّل ما صار في مؤسستين
+  # بنفس الدرجة (ÖSD A1 وGoethe A1)، الملف صار ملك وحدة والتانية
+  # انتخطّت **بصمت**: مستوى كامل برّا الفحص، وهاد بالضبط الشي يلي هالفحص
+  # موجود ليمنعه. القديم بيضل شغّال، والجديد بياخد <مؤسسة>-<درجة>.sql.
+  SEED=""
+  for C in "supabase/seed/$P-$L.sql" "supabase/seed/$L.sql"; do
+    [ -f "$C" ] && grep -q "content/$P/$L" "$C" 2>/dev/null && { SEED="$C"; break; }
+  done
+
+  WANT=$(node tools/check_content.mjs "$P/$L" 2>/dev/null | grep -c "✓ $P/$L")
+
+  # ★ معبّى وبلا بذور = محتوى ما رح يوصل لولا طالب، وما حدا بينتبه.
+  # القوالب الفاضية ما إلها بذور وهاد طبيعي، فالتنبيه بيطلع لما يكون
+  # في نماذج معبّاية فعلاً.
+  # ★ استثناء واحد، موثّق: telc/b1 بذوره مولّدة من data/ مو من content/
+  # (ومعرّف مستواه «b1» من أيام ما كان في مستوى واحد). مغطّى بفحص تاني
+  # فوق — «content/telc/b1 مطابق لـdata/» — يعني مغطّى بس من طريق تانية.
+  if [ -z "$SEED" ] && [ "$P/$L" = "telc/b1" ]; then continue; fi
+
+  if [ -z "$SEED" ]; then
+    if [ "$WANT" != 0 ]; then
+      false
+      check "★ content/$P/$L فيه $WANT نموذج معبّى بلا ملف بذور" $?
+    fi
+    continue
+  fi
   SEEDED=$((SEEDED + 1))
 
-  node tools/content_to_seed.mjs "$P/$L" "supabase/seed/$L.sql" >/dev/null 2>&1
-  git diff --quiet -- "supabase/seed/$L.sql" 2>/dev/null
-  check "★ supabase/seed/$L.sql مطابق لـcontent/$P/$L" $?
+  node tools/content_to_seed.mjs "$P/$L" "$SEED" >/dev/null 2>&1
+  git diff --quiet -- "$SEED" 2>/dev/null
+  check "★ $SEED مطابق لـcontent/$P/$L" $?
 
   # كل نموذج معبّى لازم يوصل للبذور — مو بس يمرق الفحص
-  WANT=$(node tools/check_content.mjs "$P/$L" 2>/dev/null | grep -c "✓ $P/$L")
-  GOT=$(grep -c "^insert into tests" "supabase/seed/$L.sql")
+  GOT=$(grep -c "^insert into tests" "$SEED")
   [ "$WANT" = "$GOT" ]
   check "★ وكل نماذجه وصلت ($GOT من $WANT)" $?
 done

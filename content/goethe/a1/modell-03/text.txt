@@ -1,5 +1,5 @@
 # YVONNE
-Untertitel: 21 Aufgaben · 45 Minuten
+Untertitel: 17 Aufgaben · 45 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -142,10 +142,10 @@ Lösung: f
 
 ### Teil: s1
 Format: writing
-Titel: Schreiben, Teil 1
+Titel: Schreiben, Teil 1 (Formular)
 Gruppe: Schreiben
 Minuten: 10
-Punkte: 1
+Punkte: 5
 Maximum: 5
 Anweisung: Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt. Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
@@ -155,17 +155,12 @@ Text:
 Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt.
 Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Aufgaben:
-[16] Geburtsort
-Lösung: Lyon
-[17] Andere Sprachen
-Lösung: Englisch
-[18] Wie lange Deutsch gelernt?
-Lösung: 6 Monate | sechs Monate
-[19] Kurstermin
-Lösung: 1. - 28. August | 1. bis 28. August | vom 1. bis zum 28. August
-[20] Kurszeit
-Lösung: von 9 - 12 Uhr | von 9 bis 12 Uhr | 9 - 12 Uhr | 9 bis 12 Uhr
-
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Geburtsort: Lyon
+Punkt: (2) Andere Sprachen: Englisch
+Punkt: (3) Wie lange Deutsch gelernt? — 6 Monate / sechs Monate
+Punkt: (4) Kurstermin: 1. - 28. August / 1. bis 28. August / vom 1. bis zum 28. August
+Punkt: (5) Kurszeit: von 9 - 12 Uhr / von 9 bis 12 Uhr / 9 - 12 Uhr / 9 bis 12 Uhr
 ### Teil: s2
 Format: writing
 Titel: Schreiben, Teil 2

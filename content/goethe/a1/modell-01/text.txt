@@ -1,5 +1,5 @@
 # WINFRIED
-Untertitel: 21 Aufgaben · 45 Minuten
+Untertitel: 17 Aufgaben · 45 Minuten
 
 ## Block: block-lesen
 Titel: Lesen
@@ -133,10 +133,10 @@ Lösung: f
 
 ### Teil: s1
 Format: writing
-Titel: Schreiben, Teil 1
+Titel: Schreiben, Teil 1 (Formular)
 Gruppe: Schreiben
 Minuten: 10
-Punkte: 1
+Punkte: 5
 Maximum: 5
 Anweisung: Ihre Freundin Eva Kadavy macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte. Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
@@ -146,17 +146,12 @@ Text:
 Ihre Freundin Eva Kadavy macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte.
 Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Aufgaben:
-[16] Anzahl der Personen
-Lösung: 4
-[17] Davon Kinder
-Lösung: 2
-[18] PLZ, Urlaubsort
-Lösung: Seeheim
-[19] Zahlungsweise (Bar oder Kreditkarte)
-Lösung: Bar
-[20] Reisetermin
-Lösung: Sonntag
-
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Anzahl der Personen: 4
+Punkt: (2) Davon Kinder: 2
+Punkt: (3) PLZ, Urlaubsort: Seeheim
+Punkt: (4) Zahlungsweise (Bar oder Kreditkarte): Bar
+Punkt: (5) Reisetermin: Sonntag
 ### Teil: s2
 Format: writing
 Titel: Schreiben, Teil 2
