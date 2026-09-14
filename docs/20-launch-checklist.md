@@ -79,6 +79,7 @@ modell-08 عنده Aufgabe 58 أصلاً.
 node tools/check_content.mjs                       # فحص
 node tools/content_to_seed.mjs <مؤسسة>/<درجة> supabase/seed/<درجة>.sql
 ./tools/split_seed.sh <درجة>                       # لو أكبر من ٢٠٠ ك.ب
+python3 tools/shrink_images.py content             # PNG ← JPEG قبل الرفع
 python3 tools/upload_images.py content             # الصور كلها بأمر واحد
 ```
 

@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m05-lv1.png
+Bild: img/m05-lv1.jpg
 Auswahl:
 1 = GLOBAL UNION: Geldtransfer in alle Länder. Barauszahlung in wenigen Minuten. Gebühren für Überweisungen in die Türkei: bis € 50: € 4,90; € 51 bis € 100: € 6,90. www.globalunion.at
 2 = Oma/Opa-Projekt: Wir lernen mit dir am Nachmittag in deiner Schule. derverein@nl40.at, 0699/1123 8004
@@ -115,7 +115,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m05-lv3.png
+Bild: img/m05-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -144,7 +144,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m05-hv1.png
+Bild: img/m05-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

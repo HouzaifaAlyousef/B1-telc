@@ -140,7 +140,7 @@ Punkte: 5
 Maximum: 5
 Anweisung: Ihr Freund Paolo Pellizzari aus Turin möchte mit seiner Familie (Ehefrau, drei Kinder, 2–7 Jahre alt) an der Ostsee Urlaub machen. Paolo hat drei Wochen Urlaub, vom 25.6. bis zum 15.7. Er sucht eine ruhige Wohnung am Meer, zwei Schlafzimmer, Wohnraum mit Küche, Bad. Paolo will mit dem Auto nach Deutschland kommen. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
-Bild: img/m05-s1.png
+Bild: img/m05-s1.jpg
 Text:
 **Ferienwohnung an der Ostsee Reservierung**
 Ihr Freund Paolo Pellizzari aus Turin möchte mit seiner Familie (Ehefrau, drei Kinder, 2–7 Jahre alt) an der Ostsee Urlaub machen. Paolo hat drei Wochen Urlaub, vom 25.6. bis zum 15.7. Er sucht eine ruhige Wohnung am Meer, zwei Schlafzimmer, Wohnraum mit Küche, Bad. Paolo will mit dem Auto nach Deutschland kommen.

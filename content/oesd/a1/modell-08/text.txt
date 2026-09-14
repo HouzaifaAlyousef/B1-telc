@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m08-lv1.png
+Bild: img/m08-lv1.jpg
 Auswahl:
 1 = E.M.N.I.N.S: Schubertgasse 23. Egal, ob für Sommer oder Winter. Kaufen Sie gebrauchte Damen- und Herrenkleidung und helfen Sie so unserer Umwelt! Wir sind auch online für Sie da. www.es-muss-nicht-immer-neu-sein.at
 2 = 22 m² großes WG-Zimmer in Gartenwohnung: Bist du ordentlich und willst mit zwei netten Sport-Studenten zusammenwohnen? Dann melde dich bei uns! Jana & Klaus, 0664/2276892
@@ -114,7 +114,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m08-lv3.png
+Bild: img/m08-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -143,7 +143,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m08-hv1.png
+Bild: img/m08-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

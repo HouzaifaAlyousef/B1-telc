@@ -149,7 +149,7 @@ Punkte: 5
 Maximum: 5
 Anweisung: Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt. Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
-Bild: img/m03-s1.png
+Bild: img/m03-s1.jpg
 Text:
 **Sprachenschule NEWbornSCHOOL Anmeldung**
 Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt.

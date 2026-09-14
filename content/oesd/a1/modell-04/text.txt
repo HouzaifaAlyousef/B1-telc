@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m04-lv1.png
+Bild: img/m04-lv1.jpg
 Auswahl:
 1 = Reisebüro Smekal: Bahnreisen in alle deutschen Städte: schnell, billig und ohne Stress. auf Wunsch mit Übernachtung im Hotel. Aktuelle Angebote finden Sie unter: www.reise-smekal.de
 2 = Wir organisieren Ihren Geburtstag! Feiern Sie Ihren Geburtstag im Nostalgiezug und schenken Sie sich und Ihren Freunden eine romantische Fahrt durch Wien. Start: 20.00 Uhr, Hauptbahnhof. Dauer: 2 Stunden, auf Wunsch mit Abendessen. www.agenturspezial.com
@@ -117,7 +117,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m04-lv3.png
+Bild: img/m04-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -146,7 +146,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m04-hv1.png
+Bild: img/m04-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

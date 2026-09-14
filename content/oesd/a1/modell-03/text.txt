@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m03-lv1.png
+Bild: img/m03-lv1.jpg
 Auswahl:
 1 = Kunst zum kleinen Preis: Fotos und Naturbilder von berühmten KünstlerInnen und FotografInnen – schon ab 30 Euro! Kunst-Supermarkt, Neubaugasse 14, 1070 Wien
 2 = Wir suchen eine/n Kellnerin/Kellner: Hotelrestaurant „Zur Goldenen Buche“. Erfahrung im Service notwendig, Essen und Unterkunft gratis. Kontakt: Frau Garcia, Tel.-Nr.: 012 785 1254
@@ -121,7 +121,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m03-lv3.png
+Bild: img/m03-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -150,7 +150,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m03-hv1.png
+Bild: img/m03-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m06-lv1.png
+Bild: img/m06-lv1.jpg
 Auswahl:
 1 = Zusammen macht es mehr Spaß: Unsere Gruppe trifft sich jeden Samstag zum Laufen, Schwimmen oder Radfahren. Möchtest du auch dabei sein? Ruf einfach an unter 03685/45875.
 2 = Zum Sonnengarten: Das Lokal für Groß und Klein. Bei uns gibt es: Kaffee und Kuchen, Frühstück, Mittagessen, einen Kindertisch zum Spielen und Malen. täglich geöffnet von 7 bis 15 Uhr
@@ -120,7 +120,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m06-lv3.png
+Bild: img/m06-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -149,7 +149,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m06-hv1.png
+Bild: img/m06-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

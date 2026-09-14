@@ -122,7 +122,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/<name>-lv3.png
+Bild: img/<name>-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -151,7 +151,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/<name>-hv1.png
+Bild: img/<name>-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

@@ -138,7 +138,7 @@ Punkte: 5
 Maximum: 5
 Anweisung: Ihr Freund, Vladimir Serjakov, 30 Jahre alt, kommt aus Sankt Petersburg in Russland und lebt seit einem Monat in Hamburg. Er hat eine neue Stelle bei TUI als Reiseleiter. Seit gestern hat er 39 Grad Fieber. Heute geht er zum Arzt. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
-Bild: img/m04-s1.png
+Bild: img/m04-s1.jpg
 Text:
 **Patienteninformation Dr. Arnold Friedrich**
 Ihr Freund, Vladimir Serjakov, 30 Jahre alt, kommt aus Sankt Petersburg in Russland und lebt seit einem Monat in Hamburg. Er hat eine neue Stelle bei TUI als Reiseleiter. Seit gestern hat er 39 Grad Fieber. Heute geht er zum Arzt.
