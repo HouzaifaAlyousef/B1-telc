@@ -137,6 +137,57 @@ r = M.parse('# T\n### Teil: hv1\nFormat: truefalse\n'
 check('Hörtext + Wiedergaben انقروا',
       r.test.sections[0].audio === 'm01.mp3' && r.test.sections[0].audioPlays === 2);
 
+/* ---- ★ «Text:» بعد «Aufgaben:» — قسم فيه أكتر من فقرة ----
+   صيغة telc/ÖSD/Goethe بتحطّ إعلان، وبعده أسئلته، وبعده إعلان تاني،
+   وهكذا. المحلّل كان بيقفل السؤال بس على عنوان أو سؤال جديد، فسطر
+   «Text:» كان بينبلع كأنه جزء من نصّ السؤال — ومعه الإعلان كله وسطر
+   «Aufgaben:» والأسئلة يلي بعده.
+
+   النتيجة يلي كان الطالب يشوفها: سؤال صار صفحة كاملة فيها إعلان
+   ووسوم حرفية، والفقرة يلي المفروض تنعرض فوق الأسئلة مو موجودة.
+   ٤٤ سؤال بتلاتة مستويات كانوا هيك. */
+{
+  const src = `# T
+## Block: b
+Titel: B
+Minuten: 10
+Punkte: 4
+Teile: lv1
+
+### Teil: lv1
+Format: truefalse
+Titel: LV1
+Punkte: 1
+Maximum: 4
+Text:
+**Erste Anzeige**
+Zimmer frei ab Juli.
+Aufgaben:
+[1] Aussage eins.
+Lösung: r
+[2] Aussage zwei.
+Lösung: f
+Text:
+**Zweite Anzeige**
+Kurse jeden Montag.
+Aufgaben:
+[3] Aussage drei.
+Lösung: r
+[4] Aussage vier.
+Lösung: f
+`;
+  const p = M.parse(src).test.sections[0];
+  check(`★ الفقرتين انعرضوا الاتنين (${(p.passages || []).length})`,
+        (p.passages || []).length === 2);
+  check(`★ والأسئلة الأربعة كلها (${p.items.length})`, p.items.length === 4);
+  check('★★ ولا سؤال بلع «Text:» ولا «Aufgaben:»',
+        p.items.every(it => !/(Text:|Aufgaben:)/.test(it.text || '')));
+  check('★ ونصّ السؤال ضل جملته لحالها',
+        p.items[1].text === 'Aussage zwei.');
+  check('★ والفقرة التانية فيها متنها',
+        JSON.stringify(p.passages[1]).includes('Kurse jeden Montag'));
+}
+
 /* ---- الذهاب والإياب على شي مبني بالإيد ---- */
 const round = M.parse(M.serialize(r.test)).test;
 check('round-trip على قسم صوت',
