@@ -1,0 +1,181 @@
+# PAOLO
+Untertitel: 21 Aufgaben · 45 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–15
+Punkte: 15
+Teile: lv1, lv2, lv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 16–21
+Punkte: 15
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: truefalse
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Entschuldigung für die Schule**
+Sehr geehrte Frau Helbich,
+
+ich möchte meine Tochter Andrea entschuldigen. Sie hat Fieber und kann nicht zur Schule kommen. Nächste Woche kann sie wieder kommen. Können Sie mir bitte die Hausaufgaben sagen – am besten per Mail?
+
+Danke und viele Grüße
+Julia Schmidt
+Aufgaben:
+[1] Das Kind von Frau Schmidt ist krank.
+Lösung: r
+[2] Frau Schmidt möchte die Hausaufgaben wissen.
+Lösung: r
+Text:
+**Urlaubsplanung an der Nordsee**
+Hallo Robert,
+
+wie geht es dir? Du, Robert, wir möchten nächsten Sommer an der Nordsee Urlaub machen. Du warst doch letzten Sommer dort. Kannst du mir ein paar Tipps geben, kannst du mir etwas empfehlen? Vielleicht fahren wir auch ein paar Tage nach Hamburg. Kennst du gute Hotels? Welche Sehenswürdigkeiten gibt es dort?
+
+Wir können uns ja bald mal wieder treffen. Dann lade ich dich zu einem Glas Wein ein.
+
+Viele Grüße
+Fabian
+Aufgaben:
+[3] Fabian sucht Informationen über Urlaub an der Nordsee.
+Lösung: r
+[4] Robert und Fabian waren noch nie an der Nordsee.
+Lösung: f
+[5] Fabian möchte Robert in Hamburg treffen.
+Lösung: f
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.
+Aufgaben:
+[6] Sie suchen Informationen über München.
+A) www.münchen-outdoor.de: Ihr Outdoor-Laden jetzt auch in München. Alles für Ihren Urlaub. Campingsachen, Schlafsäcke, Rucksäcke, Fahrräder.
+B) www.meine-stadt.de: Klicken Sie auf eine Stadt in Deutschland. Klicken Sie dann auf: Hotels – Sehenswürdigkeiten – Was ist los in ...
+Lösung: B
+[7] Sie möchten in einem Restaurant Fisch essen.
+A) www.viva-andaluz.com: Essen in angenehmer Atmosphäre. Fleisch- und Fischspezialitäten aus dem Mittelmeerraum. Öffnungszeiten täglich 18–24 Uhr.
+B) www.tapas-co.de: Tapas und Co. Lebensmittelimport aus Spanien und Südamerika. Fische und Meeresfrüchte. Auch online bestellen.
+Lösung: A
+[8] Sie machen im Sommer einen Deutschkurs in Berlin. Sie suchen ein billiges Zimmer.
+A) www.wohnungsfinder.de: Supergünstige 1-Zimmer-Wohnungen und Apartments überall in Deutschland. Angebote gibt es jeden Monat.
+B) www.wohnungsbörse.de: Suche dringend für Juli kleine Wohnung oder Zimmer in Berlin – gerne auch möbliert. Bitte rufen Sie mich an: 0033-1-5678888.
+Lösung: A
+[9] Sie suchen eine Arbeit. Sie können nicht Auto fahren.
+A) www.euro-pizza.de: EURO-PIZZA sucht Fahrer für die Auslieferung von Pizzen und Getränken. Ab sofort.
+B) www.praxis-markt.de: PRAXIS-MARKT sucht ab sofort Verkäufer/Verkäuferinnen. Arbeitszeiten flexibel, gute Bezahlung.
+Lösung: B
+[10] Sie suchen einen neuen Kühlschrank. Er soll nicht mehr als 300 Euro kosten.
+A) www.alles-für-die-küche.de: Superangebote von Ihrem Küchenspezialisten. Alles, was Sie in der Küche brauchen, zu günstigen Preisen.
+B) www.küchenchef.de: Keine Idee, was Sie kochen können? Mehr als 300 Kochrezepte auf dieser Seite. Einfach ausprobieren.
+Lösung: A
+
+### Teil: lv3
+Format: truefalse
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**In der Sprachschule**
+Griechischlehrer/in gesucht.
+Die Volkshochschule sucht ab sofort KursleiterInnen für Griechischkurse auf allen Stufen.
+Aufgaben:
+[11] Hier gibt es Sprachkurse für Griechen.
+Lösung: f
+Text:
+**An der Post**
+Räder abstellen verboten.
+Aufgaben:
+[12] Sie dürfen hier keine Räder abstellen.
+Lösung: r
+Text:
+**Beim Zahnarzt**
+Dr. Kern – Sprechstunde
+Mo–Di, Do–Fr 9–12 Uhr, 14–18 Uhr
+Mi 9–12 Uhr.
+Aufgaben:
+[13] Am Vormittag ist die Praxis immer geöffnet.
+Lösung: r
+Text:
+**Im Kaufhaus**
+Weihnachten steht vor der Tür.
+Haben Sie schon alle Geschenke?
+An den vier Sonntagen vor Weihnachten haben wir für Sie geöffnet.
+Aufgaben:
+[14] Am Sonntag vor Weihnachten können Sie einkaufen.
+Lösung: r
+Text:
+**An einer Videothek**
+Videothek SATURN
+Neueröffnung am 1. Juni.
+In zwei Wochen können Sie in der Heidestraße DVDs kaufen und ausleihen.
+Aufgaben:
+[15] Sie können ab sofort in der Heidestraße DVDs bekommen.
+Lösung: f
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Ihr Freund Paolo Pellizzari aus Turin möchte mit seiner Familie (Ehefrau, drei Kinder, 2–7 Jahre alt) an der Ostsee Urlaub machen. Paolo hat drei Wochen Urlaub, vom 25.6. bis zum 15.7. Er sucht eine ruhige Wohnung am Meer, zwei Schlafzimmer, Wohnraum mit Küche, Bad. Paolo will mit dem Auto nach Deutschland kommen. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Auswahltitel: Formular
+Bild: img/m05-s1.png
+Text:
+**Ferienwohnung an der Ostsee Reservierung**
+Ihr Freund Paolo Pellizzari aus Turin möchte mit seiner Familie (Ehefrau, drei Kinder, 2–7 Jahre alt) an der Ostsee Urlaub machen. Paolo hat drei Wochen Urlaub, vom 25.6. bis zum 15.7. Er sucht eine ruhige Wohnung am Meer, zwei Schlafzimmer, Wohnraum mit Küche, Bad. Paolo will mit dem Auto nach Deutschland kommen.
+Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Aufgaben:
+[16] Anzahl der Personen
+Lösung: 5
+[17] davon Kinder
+Lösung: 3
+[18] Brauchen Sie eine Küche?
+Lösung: ja | Ja
+[19] Abreise
+Lösung: 15. Juli | 15.7. | 15.07.
+[20] Wie reisen Sie an? (Flugzeug, Zug, Auto)
+Lösung: Auto | mit dem Auto
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Sie haben bald Geburtstag und möchten am Freitag feiern. Sie möchten Ihre Freunde Linda und Martin aus dem Sprachkurs einladen. Schreiben Sie an Linda und Martin. Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter).
+Text:
+**Schreibaufgabe**
+Sie haben bald Geburtstag und möchten am Freitag feiern. Sie möchten Ihre Freunde Linda und Martin aus dem Sprachkurs einladen.
+Schreiben Sie an Linda und Martin.
+Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter):
+• Warum schreiben Sie?
+• Uhrzeit der Party?
+• Musik?
+Aufgaben:
+[21] Schreiben Sie eine Einladung an Ihre Freunde Linda und Martin:
+Mindestwoerter: 30
+Punkt: Warum schreiben Sie?
+Punkt: Uhrzeit der Party?
+Punkt: Musik?

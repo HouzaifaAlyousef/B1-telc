@@ -1,0 +1,181 @@
+# WINFRIED
+Untertitel: 21 Aufgaben · 45 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–15
+Punkte: 15
+Teile: lv1, lv2, lv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 16–21
+Punkte: 15
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: truefalse
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Einladung zum Jazz-Konzert**
+Liebe Frau Dehner,
+vielen Dank für die Einladung zu Ihrem Jazz-Konzert. Ich komme gern und ich freue mich sehr auf das Konzert.
+Ich danke Ihnen auch, dass ich in Ihrem Gästezimmer schlafen kann und kein Hotel suchen muss. Mein Zug kommt schon um circa 16 Uhr an.
+Kann ich Ihnen am Nachmittag dann vor dem Konzert etwas helfen?
+Bis bald und herzliche Grüße
+Winfried Beck
+Aufgaben:
+[1] Herr Beck übernachtet im Hotel.
+Lösung: f
+[2] Herr Beck bietet Frau Dehner seine Hilfe an.
+Lösung: r
+Text:
+**Betreff: Neuer Arbeitsplan**
+Liebe Frau Jakobs,
+ich komme heute, Dienstag, noch nicht aus Berlin zurück.
+Ich habe morgen ein Gespräch mit dem Kunden Maybach. Der ist ganz wichtig für uns. Und am Donnerstag habe ich zwei weitere neue Termine.
+Aber am Freitag bin ich ab 8 Uhr wieder im Büro.
+Bitte machen Sie mir für 11 Uhr einen Termin mit Dr. Falk.
+Vielen Dank und herzliche Grüße
+Helga Stein
+Aufgaben:
+[3] Frau Stein ist in Berlin.
+Lösung: r
+[4] Am Mittwoch hat Frau Stein frei.
+Lösung: f
+[5] Frau Stein will am Freitag Dr. Falk treffen.
+Lösung: r
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.
+Aufgaben:
+[6] Sie wollen viele Freunde zu Ihrem Geburtstag einladen. Sie suchen einen Ort.
+A) www.raum-in-koeln.de: Raum für Tanz, Sport, Hochzeiten und andere private Feiern zu vermieten. Auch abends Termine frei, günstige Preise.
+B) www.wohnen-in-koeln.de: Schöne Zimmer und Apartments für 2 - 12 Wochen im Großraum Köln zu interessanten Preisen.
+Lösung: A
+[7] Der Computer ist kaputt. Sie können ihn nicht allein reparieren.
+A) www.computer-loesungen.de: Für alles, was mit Computern, Druckern, Scannern, Internet usw. zu tun hat. Auch Reparaturen.
+B) www.technohaus.de: Gebrauchte Kühlschränke, Herde, Waschmaschinen, Computer, Drucker, Fernseher, Radios, Handys usw. zu supergünstigen Preisen!
+Lösung: A
+[8] Sie möchten am Samstagabend mit Freunden tanzen gehen.
+A) www.tanzen-macht-spass.de: Tanzschule Renz. Informieren Sie sich jetzt über die neuen Tanzkurse für Jugendliche und Erwachsene. Bitte bestellen Sie unseren Tanzplan.
+B) www.wohin-am-wochenende.de: Ins Aladin! Das neue Tanz-Restaurant! Erst gut essen, dann Tanzen - die ganze Nacht! Freitag - Samstag haben wir bis 4 Uhr geöffnet.
+Lösung: B
+[9] Sie möchten am Wochenende Fußball spielen.
+A) www.freizeitsport-freiburg.de: Basketball, Fitness, Fußball und mehr. Montags bis donnerstags 18.30 bis 21.00 Uhr im Südpark am See.
+B) www.fc-1897.de/training: Der Fußballklub FC 1897 sucht Spieler und Spielerinnen. Treffpunkt: Sportanlage Ulrichsplatz, sonntags 10-12 Uhr. Keine Anmeldung.
+Lösung: B
+[10] Sie studieren und möchten ein bisschen arbeiten.
+A) Tel.: 0176 - 55 44 321 (Unsere Bäckerei braucht Hilfe. Wir suchen eine junge Frau / einen jungen Mann im Verkauf am Samstag von 7 bis 11 Uhr.)
+B) Tel.: 0160 - 683 456 20 (Junge Verkäuferin / Junger Verkäufer gesucht für Zeitungskiosk. 42 Stunden / Woche, bei guter Bezahlung.)
+Lösung: A
+
+### Teil: lv3
+Format: truefalse
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Vor einem Blumenladen**
+Neu! Neu! Neu! Neu! Neu!
+Liebe Kunden!
+Ab sofort haben wir auch sonntags von 9-12 Uhr für Sie geöffnet!
+Aufgaben:
+[11] Am Sonntagvormittag bekommen Sie hier Blumen.
+Lösung: r
+Text:
+**Im Restaurant**
+Liebe Gäste,
+im nächsten Monat kocht bei uns ein Koch aus Kalkutta indische Spezialitäten.
+Wir freuen uns auf Ihren Besuch.
+Aufgaben:
+[12] Jeden Montag bietet das Restaurant indisches Essen an.
+Lösung: f
+Text:
+**Bei der Straßenbahn**
+Linie 8:
+Ab 15. nur bis Hauptbahnhof.
+Zur Weiterfahrt nach Huchting: Linie 1 oder Bus Nr. 53.
+Aufgaben:
+[13] Es ist der 2. Mai, 21 Uhr. Sie können jetzt nicht zum Hauptbahnhof fahren.
+Lösung: f
+Text:
+**An einer Haustür**
+Sehr geehrte Interessenten,
+es gibt leider keine Besichtigungen mehr. Die 3-Zimmer-Wohnung im 3. Stock ist schon vermietet.
+Aufgaben:
+[14] Sie können die Wohnung nicht besichtigen.
+Lösung: r
+Text:
+**Im Bahnhof**
+Sehr geehrte Fahrgäste!
+Ab 22 Uhr sind unsere Schalter geschlossen. Fahrkarten bekommen Sie dann an unseren Automaten.
+Aufgaben:
+[15] Ab 22 Uhr können Sie keine Fahrkarten mehr kaufen.
+Lösung: f
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Ihre Freundin Eva Kadavy macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte. Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Auswahltitel: Formular
+Bild: img/m01-s1.png
+Text:
+**Bodensee-Rundfahrt Anmeldung**
+Ihre Freundin Eva Kadavy macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte.
+Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Aufgaben:
+[16] Anzahl der Personen
+Lösung: 4
+[17] Davon Kinder
+Lösung: 2
+[18] PLZ, Urlaubsort
+Lösung: Seeheim
+[19] Zahlungsweise (Bar oder Kreditkarte)
+Lösung: Bar
+[20] Reisetermin
+Lösung: Sonntag
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Schreiben Sie an Ihren Nachbarn, Herrn Maier, und bitten Sie um Hilfe. Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter).
+Text:
+**Schreibaufgabe**
+Sie bekommen am Dienstag einen neuen Kühlschrank. Sie müssen arbeiten. Schreiben Sie an Ihren Nachbarn, Herrn Maier, und bitten Sie um Hilfe.
+Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter):
+• Warum schreiben Sie?
+• Uhrzeit?
+• Schlüssel?
+Aufgaben:
+[21] Schreiben Sie eine E-Mail oder einen kurzen Brief an Herrn Maier:
+Mindestwoerter: 30
+Punkt: Warum schreiben Sie?
+Punkt: Uhrzeit?
+Punkt: Schlüssel?
+

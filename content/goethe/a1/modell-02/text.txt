@@ -1,0 +1,178 @@
+# KARIN
+Untertitel: 21 Aufgaben · 45 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–15
+Punkte: 15
+Teile: lv1, lv2, lv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 16–21
+Punkte: 15
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: truefalse
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Hallo Li,**
+danke für deine Mail. Dein Zug kommt hier in Hannover um 12.36 Uhr an. Ich bin ab 12.15 Uhr im Hauptbahnhof und warte auf dich vor der Auskunft.
+Du kannst mich den ganzen Vormittag auf meinem Handy (++49 173 62 205 59) erreichen.
+Deine Karin
+Aufgaben:
+[1] Lis Zug kommt nach halb eins an.
+Lösung: r
+[2] Karin wartet den ganzen Vormittag vor der Auskunft.
+Lösung: f
+Text:
+**Liebe Carmen,**
+am kommenden Sonntag habe ich Geburtstag.
+Ich möchte gerne mit dir feiern und lade dich herzlich zu meiner Party am Samstagabend ein.
+Wir fangen um 21 Uhr an. Ist das okay für dich?
+Es werden viele Leute da sein, die du auch kennst.
+Kannst du vielleicht einen Salat mitbringen? Und vergiss bitte nicht einen Pullover oder eine Jacke!
+Wir wollen nämlich draußen im Garten feiern.
+Ich freue mich sehr auf dich!
+Bis zum Wochenende
+Ralf
+Aufgaben:
+[3] Ralf hatte am letzten Wochenende Geburtstag.
+Lösung: f
+[4] Ralf hat nur zwei oder drei Leute eingeladen.
+Lösung: f
+[5] Die Party findet draußen statt.
+Lösung: r
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.
+Aufgaben:
+[6] Sie möchten mit dem Schiff auf dem Rhein fahren.
+A) www.schiff-ruedesheim.de: Hotel - Pension „Schiff“, Einzel- und Doppelzimmer mit Dusche/WC, Restaurant mit Rhein-Terrasse, Preise über uns.
+B) www.bingen-ruedesheimer.de: Bingen-Rüdesheimer Rheinschiffe: täglich von Rüdesheim nach Koblenz, alle Abfahrtszeiten und Preise hier.
+Lösung: B
+[7] Sie möchten Deutsch in Deutschland lernen.
+A) www.sprachenfuchs.de: Sprachinstitut Fuchs, Dresden, Prager Str. 4. Deutsch · Englisch · Französisch · Russisch. Die Schule · Die Preise · Die Kurse · Kontakt.
+B) www.eviva.com: Eviva-Idiomas: Sprachkurse für Deutsche. Spanisch auf Mallorca, Englisch auf Malta. Unsere Preise · Unser Unterricht · Buchungen.
+Lösung: A
+[8] Sie möchten ein Zugticket im Internet kaufen.
+A) www.DER.com: Deutsches Reisebüro: Ticketbestellungen und Reservierungen für Flüge weltweit, Deutsche Bahn, Eurobus, 24-Stunden-Service, E-Mail Ticketbestellung.
+B) www.RED.com: Reisedienst GmbH: Ticketservice für Theater, Konzerte, Busreisen in Deutschland und nach Polen, Tschechien und Ungarn.
+Lösung: A
+[9] Sie möchten Informationen über den Bodensee.
+A) www.bodensee.de: Touristeninformation Bodensee: Urlaubsorte · Hotelservice · Ferienwohnungen · Rundreisen.
+B) www.rottenmeier.de: Hans Rottenmeier: Ferienwohnungen am Bodensee. Häuser · Preise · Kontakt.
+Lösung: A
+[10] Sie sind in Wiesbaden und möchten mit dem Zug am Mittag in Hamburg sein.
+A) www.reiseauskunft.bahn.de: ab Hamburg 12.18, an Wiesbaden 16.52
+B) www.reiseauskunft.bahn.de: ab Wiesbaden 08.09, an Hamburg 12.40
+Lösung: B
+
+### Teil: lv3
+Format: truefalse
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**In der Sprachschule**
+In der 10-Uhr-Pause bekommen Sie an der Rezeption ein Frühstückspaket:
+Belegte Brötchen und Getränke für 2 Euro.
+Aufgaben:
+[11] In der Sprachschule können Sie etwas zu essen kaufen.
+Lösung: r
+Text:
+**An der Post**
+Öffnungszeiten:
+montags – freitags: 8.00 – 12.00 und 13.00 – 18.00
+samstags: 8.00 – 12.00
+Aufgaben:
+[12] Es ist Samstagnachmittag. Sie können auf der Post Briefmarken kaufen.
+Lösung: f
+Text:
+**Am Bahnhof**
+Auf dem gesamten Bahnhof ist das Rauchen verboten.
+Aufgaben:
+[13] Sie können hier Zigaretten rauchen.
+Lösung: f
+Text:
+**Eingang Restaurant**
+Heute im Bavaria:
+Bayerischer Abend: Brezeln, Weißwürste, Sauerkraut.
+Volksmusik, ab 20 Uhr Tanz.
+Aufgaben:
+[14] Heute Abend können Sie in diesem Restaurant tanzen.
+Lösung: r
+Text:
+**An der Haltestelle**
+In der Neujahrsnacht:
+Busverkehr bis 23.00 Uhr und von 1.00 Uhr bis 5.00 Uhr alle 30 Minuten.
+Aufgaben:
+[15] Von 23 Uhr bis 1 Uhr fährt kein Bus.
+Lösung: r
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Ihr Freund Munir Kassem kommt aus Ägypten und wohnt jetzt in Hamburg. Er ist 35 Jahre alt und von Beruf Arzt. In seiner Freizeit will er in einem Verein Fußball spielen. Bezahlen will er mit Kreditkarte. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Auswahltitel: Formular
+Bild: img/m02-s1.png
+Text:
+**Sportclub von 1896 Anmeldung**
+Ihr Freund Munir Kassem kommt aus Ägypten und wohnt jetzt in Hamburg. Er ist 35 Jahre alt und von Beruf Arzt. In seiner Freizeit will er in einem Verein Fußball spielen. Bezahlen will er mit Kreditkarte.
+Munir hat ein Formular für die Anmeldung in einem Sportverein bekommen.
+Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Aufgaben:
+[16] Wohnort
+Lösung: Hamburg
+[17] Beruf
+Lösung: Arzt
+[18] Alter
+Lösung: 35
+[19] Sport
+Lösung: Fußball
+[20] Zahlung (bar, Überweisung, Kreditkarte)
+Lösung: Kreditkarte
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Sie suchen eine Arbeit als Verkäufer / Verkäuferin und Sie lesen in der Zeitung eine Anzeige. Antworten Sie an den Supermarkt „cent“. Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter).
+Text:
+**Schreibaufgabe**
+Sie suchen eine Arbeit als Verkäufer / Verkäuferin und Sie lesen in der Zeitung eine Anzeige. Antworten Sie an den Supermarkt „cent“.
+Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter):
+• Warum schreiben Sie?
+• Informationen über sich?
+• Arbeitszeit?
+Aufgaben:
+[21] Antworten Sie an den Supermarkt:
+Mindestwoerter: 30
+Punkt: Warum schreiben Sie?
+Punkt: Informationen über sich?
+Punkt: Arbeitszeit?
