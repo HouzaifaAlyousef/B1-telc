@@ -78,6 +78,14 @@ input,select,textarea{background:var(--card);color:var(--ink);
 .codes{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
 .codes div{background:var(--bg);border:1px solid var(--line);border-radius:9px;
   padding:10px;text-align:center;font-weight:700;letter-spacing:.06em}
+/* ---- Meldungen ----
+   Der Text ist die Sache selbst, nicht eine Zelle unter anderen: er darf
+   Platz und Umbrüche haben. Sehr lange Meldungen bekommen einen eigenen
+   Scroll, damit eine Zeile die Tabelle nicht meterhoch macht. */
+.toolbar{display:flex;gap:8px;margin:0 0 12px}
+.reporttext{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55;
+  min-width:260px;max-width:520px;max-height:220px;overflow:auto}
+
 .login{max-width:360px;margin:12vh auto}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);
   background:var(--ink);color:var(--bg);padding:11px 18px;border-radius:10px;

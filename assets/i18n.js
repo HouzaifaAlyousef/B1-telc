@@ -151,6 +151,22 @@ const I18N = (() => {
       aiFailed: 'Die Korrektur ist fehlgeschlagen.',
       correction: 'Korrektur',
 
+      /* ---- Problem melden ---- */
+      reportBtn: 'Problem melden',
+      reportTitle: 'Helfen Sie uns',
+      reportIntro: 'Liebe Nutzerin, lieber Nutzer: helfen Sie uns, die App '
+                 + 'besser zu machen — oder sagen Sie uns Ihren Wunsch. '
+                 + 'Stimmt etwas nicht bei „{exam}"?',
+      reportPlaceholder: 'Schreiben Sie hier, was nicht stimmt …',
+      reportMin: 'Bitte mindestens {n} Zeichen',
+      reportSend: 'Senden',
+      reportSending: 'Wird gesendet …',
+      reportThanks: 'Danke! Ihre Meldung ist angekommen.',
+      reportTooShort: 'Bitte schreiben Sie etwas mehr.',
+      reportTooMany: 'Sie haben gerade mehrere Meldungen geschickt. '
+                   + 'Bitte versuchen Sie es in einer Stunde noch einmal.',
+      reportFailed: 'Die Meldung konnte nicht gesendet werden.',
+
       yes: 'Ja',
       no: 'Abbrechen',
       leave: 'Verlassen',
@@ -317,6 +333,20 @@ const I18N = (() => {
       aiOffline: 'بلا اتصال ما في تصحيح.',
       aiFailed: 'فشل التصحيح.',
       correction: 'التصحيح',
+
+      /* ---- بلّغ عن مشكلة ---- */
+      reportBtn: 'بلّغ عن مشكلة',
+      reportTitle: 'ساعدنا',
+      reportIntro: 'عزيزي المستخدم، ساعدنا نحسّن التطبيق — أو قلّنا شو بتتمنّى. '
+                 + 'في شي غلط بـ«{exam}»؟',
+      reportPlaceholder: 'اكتب هون شو المشكلة …',
+      reportMin: 'اكتب {n} حروف على الأقل',
+      reportSend: 'إرسال',
+      reportSending: 'عم ينبعت …',
+      reportThanks: 'شكراً! وصلنا تبليغك.',
+      reportTooShort: 'اكتب شوي كمان لو سمحت.',
+      reportTooMany: 'بعتت كذا تبليغ هلق. جرّب بعد ساعة لو سمحت.',
+      reportFailed: 'ما انبعت التبليغ.',
 
       yes: 'نعم',
       no: 'إلغاء',
@@ -495,6 +525,21 @@ const I18N = (() => {
       aiOffline: 'Без зв’язку перевірка неможлива.',
       aiFailed: 'Перевірка не вдалася.',
       correction: 'Перевірка',
+
+      /* ---- Повідомити про проблему ---- */
+      reportBtn: 'Повідомити про проблему',
+      reportTitle: 'Допоможіть нам',
+      reportIntro: 'Шановний користувачу, допоможіть нам покращити застосунок — '
+                 + 'або напишіть своє побажання. Щось не так у «{exam}»?',
+      reportPlaceholder: 'Напишіть тут, що не так …',
+      reportMin: 'Щонайменше {n} символів',
+      reportSend: 'Надіслати',
+      reportSending: 'Надсилається …',
+      reportThanks: 'Дякуємо! Ваше повідомлення надійшло.',
+      reportTooShort: 'Напишіть, будь ласка, трохи більше.',
+      reportTooMany: 'Ви щойно надіслали кілька повідомлень. '
+                   + 'Спробуйте, будь ласка, за годину.',
+      reportFailed: 'Не вдалося надіслати повідомлення.',
 
       yes: 'Так',
       no: 'Скасувати',

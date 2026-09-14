@@ -3,7 +3,7 @@
    على قاعدة Postgres المحلية، وبينفّذ بهويّة الأدمن — يعني الدوال يلي
    بتنجرّب هي نفسها يلي رح تشتغل بالإنتاج. */
 import { chromium } from 'playwright';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { execFileSync } from 'child_process';
 import http from 'http';
 import path from 'path';
@@ -176,8 +176,17 @@ let downgraded = false;
 const restoreSchema = () => {
   if (!downgraded) return;
   downgraded = false;
+  /* ★ آخر ترحيل بيعلن schema_version، مو رقم مكتوب هون.
+     كان مكتوب 0019 — و0019 بيعلن ٢٣، بينما الرأس صار ٣٠ لأنّ كل ترحيل
+     جديد بيعيد إعلانها. يعني كل جولة كاملة كانت بتخلّي القاعدة المحليّة
+     تقول ٢٣، وأي فحص بعدها (health.sql مثلاً) بيقرا رقم غلط ويقول
+     «القاعدة ورا» وهي محدّثة. */
+  const MIG = path.join(ROOT, 'supabase/migrations');
+  const lastVersionMig = readdirSync(MIG).filter(f => f.endsWith('.sql')).sort()
+    .filter(f => /create or replace function schema_version/
+                   .test(readFileSync(path.join(MIG, f), 'utf8'))).pop();
   for (const f of ['supabase/migrations/0015_admin_upload.sql',
-                   'supabase/migrations/0019_version.sql'])
+                   `supabase/migrations/${lastVersionMig}`])
     try {
       execFileSync('psql', ['-h','/tmp','-p', process.env.PGPORT || '5433','-U','postgres',
         '-d','telc','-q','-v','ON_ERROR_STOP=1','-f', f], { encoding:'utf8' });
@@ -299,6 +308,41 @@ try {
   await page.waitForSelector('table');
   check('صفحة التدقيق بتعرض الإجراءات',
         (await page.textContent('table')).includes('code.create'));
+
+  // ---- التبليغات ----
+  // ★ الجولة كاملة: تبليغ حقيقي بقاعدة البيانات ← بيطلع باللوحة مع
+  //   سياقه ← زرّ «تمّت» بيغيّر الحالة فعلاً ← بينشال من «المفتوحة».
+  {
+    const tid = sql(`select id from tests where slug='modell-01' limit 1;`);
+    const uid = sql(`select id from profiles where not is_admin limit 1;`);
+    sql(`delete from reports;
+         insert into reports (user_id, test_id, level_id, test_label, body, lang)
+         values ('${uid}', '${tid}', 'b1', 'telc · B1 — PETRA',
+                 'Bei Aufgabe 7 stimmt der Schlüssel nicht.', 'ar');`);
+
+    await page.evaluate(() => document.querySelector('[data-tab="reports"]').click());
+    await page.waitForSelector('table');
+    const tbl = (await page.textContent('table')).replace(/\s+/g, ' ');
+    check('★ التبليغ ظاهر باللوحة', tbl.includes('Bei Aufgabe 7'));
+    check('★ ومعه الامتحان', tbl.includes('PETRA'));
+    check('★ ومعه المستخدم', tbl.includes('أحمد'));
+    check(`★ وشاشة البداية بتعدّه (${
+      asAdmin(`select admin_overview()->>'reports_open';`)})`,
+      asAdmin(`select admin_overview()->>'reports_open';`) === '1');
+
+    await page.evaluate(() => document.querySelector('[data-rep]').click());
+    await page.waitForTimeout(700);
+    check('★ زرّ «تمّت» غيّر الحالة بقاعدة البيانات',
+          sql(`select status from reports limit 1;`) === 'done');
+    check('★ وانشال من «المفتوحة»',
+          (await page.textContent('table')).includes('Nichts Offenes'));
+
+    await page.evaluate(() => document.getElementById('r_all').click());
+    await page.waitForTimeout(700);
+    check('★ و«الكل» لسا بيعرضه',
+          (await page.textContent('table')).includes('Bei Aufgabe 7'));
+    sql('delete from reports;');
+  }
 
   // ---- المحتوى: إنشاء امتحان (مؤسسة + درجة) ----
   // «A1» لحالها مو منتج: A1 من telc غير A1 من Goethe. فالنموذج بياخد

@@ -607,7 +607,9 @@ function screenModell(m){
       <p class="sub">${esc(m.subtitle || '')}</p>
       ${blocks}
       <p class="sub" style="margin-top:16px">Schriftliche Prüfung insgesamt
-        ${fmtP(total)} Punkte — bestanden ab ${fmtP(total * 0.6)} Punkten (60 %).</p>`;
+        ${fmtP(total)} Punkte — bestanden ab ${fmtP(total * 0.6)} Punkten (60 %).</p>
+      <button class="btn ghost reportbtn" id="report">
+        <span class="i">ℹ</span>${esc(t('reportBtn'))}</button>`;
 
     app.querySelectorAll('[data-block]').forEach(b =>
       b.onclick = () => screenIntro(blockRun(m, b.dataset.block)));
@@ -618,7 +620,79 @@ function screenModell(m){
         clearResult(m.id, b.dataset.clear);
         screenModell(m);
       }, 'Löschen'));
+    document.getElementById('report').onclick = () => openReport(m);
   });
+}
+
+/* ============ Problem melden ============ */
+/* Der einzige Rückkanal. Wer einen falschen Lösungsschlüssel, ein fehlendes
+   Bild oder eine doppelte Aufgabe findet, ist der oder die Einzige, die es
+   sieht — und hatte bisher keinen Weg, es uns zu sagen.
+
+   ★ Der Text ist Text, nie Code.
+     · Gesendet wird er als Parameter einer Funktion; nirgends wird SQL
+       daraus zusammengebaut.
+     · Angezeigt wird er im Panel nur durch esc() — tests/xss.mjs schießt
+       eine echte Nutzlast durch diesen Weg und prüft, dass sie tot bleibt.
+     · Länge, Steuerzeichen und Häufigkeit regelt die Datenbank, nicht
+       dieser Bildschirm: hier prüfen heißt nur, früher „nein" zu sagen.
+   ★ Welche Prüfung gemeldet wird, entscheidet ebenfalls die Datenbank —
+     von hier geht nur die ID. */
+function examName(m){
+  const l = S.levels.find(x => x.id === S.level);
+  const who = l && l.provider && l.stufe ? `${l.provider} · ${l.stufe}`
+            : (l && (l.title || l.id)) || '';
+  return who ? `${who} — ${m.title}` : m.title;
+}
+
+function openReport(m){
+  const MIN = 10, MAX = 2000;
+  const back = document.createElement('div');
+  back.className = 'modalback';
+  back.innerHTML = `<div class="modal report" role="dialog" aria-modal="true">
+    <h2>${esc(t('reportTitle'))}</h2>
+    <p>${esc(t('reportIntro', { exam: examName(m) }))}</p>
+    <textarea id="rtext" maxlength="${MAX}" dir="auto"
+      placeholder="${esc(t('reportPlaceholder'))}"></textarea>
+    <div class="counter" id="rcount"></div>
+    <div class="modalbtns">
+      <button class="btn grey" data-no>${esc(t('no'))}</button>
+      <button class="btn" data-yes>${esc(t('reportSend'))}</button>
+    </div></div>`;
+  const close = () => back.remove();
+  const ta   = back.querySelector('#rtext');
+  const send = back.querySelector('[data-yes]');
+  const cnt  = back.querySelector('#rcount');
+
+  const paint = () => {
+    const n = ta.value.trim().length;
+    cnt.textContent = n < MIN ? t('reportMin', { n: MIN }) : `${n}/${MAX}`;
+    send.disabled = n < MIN;
+  };
+  ta.oninput = paint;
+  paint();
+
+  back.querySelector('[data-no]').onclick = close;
+  // Klick daneben schließt — aber nicht, wenn schon etwas getippt ist:
+  // ein halber Absatz, der durch ein Fehltippen verschwindet, wird nicht
+  // noch einmal geschrieben.
+  back.onclick = e => { if (e.target === back && !ta.value.trim()) close(); };
+
+  send.onclick = async () => {
+    send.disabled = true;
+    const was = send.textContent;
+    send.textContent = t('reportSending');
+    let r;
+    try { r = await API.reportProblem(m.uuid, ta.value.trim(), I18N.lang); }
+    catch { r = { ok: false, error: 'network' }; }
+    if (r && r.ok){ close(); return toast(t('reportThanks'), 3600); }
+    send.textContent = was; send.disabled = false;
+    toast(t({ too_short: 'reportTooShort', too_many: 'reportTooMany' }[r && r.error]
+             || 'reportFailed'));
+  };
+
+  document.body.appendChild(back);
+  ta.focus();
 }
 
 /* Punkte kurz schreiben: 2.5 → "2,5", 25.0 → "25" */

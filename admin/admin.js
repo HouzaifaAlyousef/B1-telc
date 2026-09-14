@@ -181,6 +181,8 @@ async function screenHome(){
       ${stat(o.codes_unused, 'freie Codes', o.codes_unused < 3 ? 'warn' : '')}
       ${stat(o.attempts_7d, 'Prüfungen (7 Tage)')}
       ${stat(o.tests_published, 'Tests online')}
+      ${stat(o.reports_open ?? 0, 'offene Meldungen',
+             o.reports_open > 0 ? 'warn' : '')}
     </div>
     ${act ? `<h2>Code-Eingaben</h2>
     <p class="sub" style="margin-bottom:10px">Viele Fehlversuche heißt entweder
@@ -655,6 +657,58 @@ async function screenCodes(){
   });
 }
 
+/* ============ التبليغات ============ */
+/* الطالب هو الوحيد يلي بيشوف الغلط جوّا الامتحان. هون بتوصل كلمته —
+   مع سياقها: مين، وأي امتحان، وإمتى.
+
+   ★ كل نص جاي من برّا بيمرق من esc(). هو نص شخص مجهول، فاحتمال يكون
+     فيه وسوم مقصودة موجود — وtests/xss.mjs بيرمي حمولة حقيقية من نفس
+     الطريق وبيتأكّد إنها بتطلع حروف مو كود. */
+let reportsOpenOnly = true;
+
+async function screenReports(){
+  app.innerHTML = '<div class="empty">Lädt …</div>';
+  const rows = await rpc('admin_reports', reportsOpenOnly ? { p_status: 'new' } : {});
+
+  const row = r => `<tr>
+    <td style="white-space:nowrap">${fmtDT(r.created_at)}</td>
+    <td>${esc(r.test || '—')}
+      ${r.provider || r.stufe
+        ? `<div class="mono" style="color:var(--muted);font-size:12px">${
+            esc([r.provider, r.stufe, r.slug].filter(Boolean).join(' · '))}</div>` : ''}</td>
+    <td>${esc(r.name || 'ohne Namen')}
+      <div class="mono" style="color:var(--muted);font-size:12px">${
+        esc(String(r.user_id || '').slice(0, 8))}${r.lang ? ' · ' + esc(r.lang) : ''}</div></td>
+    <td><div class="reporttext">${esc(r.body)}</div></td>
+    <td><button class="btn sm ${r.status === 'new' ? '' : 'grey'}"
+          data-rep="${esc(r.id)}" data-done="${r.status === 'new' ? 1 : 0}">${
+          r.status === 'new' ? 'erledigt' : 'wieder öffnen'}</button></td>
+  </tr>`;
+
+  app.innerHTML = `
+    <h1>Meldungen</h1>
+    <p class="sub">Was Nutzerinnen und Nutzer aus einer Prüfung heraus
+      gemeldet haben — falsche Lösungen, fehlende Bilder, Wünsche.</p>
+    <div class="toolbar">
+      <button class="btn sm ${reportsOpenOnly ? '' : 'grey'}" id="r_open">offen</button>
+      <button class="btn sm ${reportsOpenOnly ? 'grey' : ''}" id="r_all">alle</button>
+    </div>
+    <div class="card"><div class="wrap"><table>
+      <tr><th>Zeit</th><th>Prüfung</th><th>Nutzer</th><th>Meldung</th><th></th></tr>
+      ${rows.map(row).join('') || `<tr><td colspan="5" class="empty">${
+        reportsOpenOnly ? 'Nichts Offenes' : 'Noch keine Meldungen'}</td></tr>`}
+    </table></div></div>`;
+
+  document.getElementById('r_open').onclick = () => { reportsOpenOnly = true;  screenReports(); };
+  document.getElementById('r_all').onclick  = () => { reportsOpenOnly = false; screenReports(); };
+  app.querySelectorAll('[data-rep]').forEach(b =>
+    b.onclick = async () => {
+      await act(b, () => rpc('admin_report_status',
+        { p_id: b.dataset.rep, p_done: b.dataset.done === '1' }));
+      screenReports();
+    });
+}
+
 async function screenAudit(){
   app.innerHTML = '<div class="empty">Lädt …</div>';
   const rows = await api('admin_audit_log?select=created_at,action,target_type,' +
@@ -1086,7 +1140,7 @@ const STALE_MSG = '⚠ Die Datenbank ist noch nicht aktualisiert — bitte '
    بتفشل بصمت بطريقتها، وولا وحدة بتقول السبب. الرقم بيخلّي اللوحة تقوله.
 
    لما يتضاف ترحيل: يزيد الرقم هون وبـ0019_version.sql. */
-const SCHEMA_MIN = 29;
+const SCHEMA_MIN = 30;
 let schemaHave = null;      // null = لسا ما انفحص
 
 async function checkSchema(){
@@ -1419,7 +1473,7 @@ async function saveImport(btn, status){
 /* ============ التشغيل ============ */
 const TABS = { home: screenHome, users: screenUsers, codes: screenCodes,
                content: screenContent, assets: screenAssets,
-               import: screenImport, audit: screenAudit };
+               import: screenImport, reports: screenReports, audit: screenAudit };
 
 async function show(name){
   tab = name;

@@ -18,9 +18,9 @@ declare v int; t text; n int; m int; begin
   -- ١) نسخة السكيما
   begin
     execute 'select schema_version()' into v;
-    insert into _health values (1, case when v >= 29 then '✅' else '❌' end,
-      'نسخة السكيما', 'عندك ' || v || ' · لازم 29'
-      || case when v < 29 then '  ←  شغّل supabase/setup.sql' else '' end);
+    insert into _health values (1, case when v >= 30 then '✅' else '❌' end,
+      'نسخة السكيما', 'عندك ' || v || ' · لازم 30'
+      || case when v < 30 then '  ←  شغّل supabase/setup.sql' else '' end);
   exception when others then
     insert into _health values (1, '❌', 'نسخة السكيما',
       'الدالة مفقودة  ←  شغّل supabase/setup.sql');
@@ -161,6 +161,22 @@ declare v int; t text; n int; m int; begin
     insert into _health values (12, '✅', 'استعمال البوت',
       n || ' تجريبي انوزّع'
       || case when m > 0 then ' · ⏳ ' || m || ' طلب معلّق مستنّي قرارك' else '' end);
+  end if;
+
+  -- ١٣) تبليغات المستخدمين
+  -- مو فحص جاهزية: هي بريد وارد. الرقم هون تا تعرف إنّ في شي مستنّيك،
+  -- ومطرحه اللوحة ← Meldungen.
+  if to_regclass('public.reports') is null then
+    insert into _health values (13, '❌', 'تبليغات المستخدمين',
+      'الجدول مفقود  ←  شغّل supabase/setup.sql');
+  else
+    execute $q$ select count(*) filter (where status = 'new'), count(*)
+                  from reports $q$ into m, n;
+    insert into _health values (13, case when m > 0 then '⏳' else '✅' end,
+      'تبليغات المستخدمين',
+      case when m > 0 then m || ' تبليغ مفتوح من ' || n || '  ←  اللوحة ← Meldungen'
+           when n > 0 then n || ' تبليغ، كلهن معالَجين'
+           else 'ولا تبليغ لهلق' end);
   end if;
 
 exception when others then

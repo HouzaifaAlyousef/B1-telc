@@ -202,6 +202,13 @@ await page.addInitScript(fx => {
       return { ok: true, right, total: n, mastered: 0,
                pct: n ? Math.round(1000*right/n)/10 : null, results: out };
     },
+    // «بلّغ عن مشكلة»: منسجّل شو انبعت فعلاً — النص، ورقم الامتحان،
+    // واللغة. الفحص لازم يشوف إنّ السياق انبعت، مو بس إنّ النافذة فتحت.
+    reportProblem: async (uuid, text, lang) => {
+      window.__sent = { uuid, text, lang };
+      if (state.reportFail) return { ok: false, error: state.reportFail };
+      return { ok: true };
+    },
     __answers: fx.answers
   };
 }, fx);
@@ -361,6 +368,63 @@ check(`★ وبعرض الصفحة (${bk && Math.round(bk.w)} من ${bk && Math.
       !!bk && bk.w >= bk.page - 40);
 // (الفحص إنه ما بينختفي تحت شريط «سلّم» بيصير جوّا الامتحان — هون
 //  لسا ما في شريط، فالفحص هون بيمرق بلا ما يفحص شي)
+
+// ---- ٤ب) ★ «بلّغ عن مشكلة» ----
+// الطريق الوحيد يلي بيرجّع خبر من الطالب. لازم يكون موجود، ويقول عن أي
+// امتحان، ويبعت السياق مع النص — وما يبعت نص فاضي.
+{
+  const rb = await page.locator('#report');
+  check('★ زرّ التبليغ موجود بشاشة الامتحان', await rb.count() === 1);
+
+  await rb.click();
+  await page.waitForSelector('.modal.report', { timeout: 4000 });
+  const intro = await page.textContent('.modal.report p');
+  // اسم الامتحان + الدرجة + المؤسسة — الطلب الصريح
+  check(`★ ومكتوب باسم الامتحان والمؤسسة والدرجة: ${intro.slice(-40).trim()}`,
+        intro.includes(fx.test.title) && intro.includes('telc') && intro.includes('B1'));
+
+  const send = page.locator('.modal.report [data-yes]');
+  check('★ وزرّ الإرسال مقفول وهو فاضي', await send.isDisabled());
+
+  await page.fill('.modal.report textarea', 'kurz');
+  check('★ ولسا مقفول بنص قصير', await send.isDisabled());
+
+  await page.fill('.modal.report textarea',
+                  'Aufgabe 7 hat den falschen Lösungsschlüssel.');
+  check('★ وبينفتح لما يصير النص كافي', !await send.isDisabled());
+
+  // ★ الضغط جنب النافذة ما بيضيّع اللي انكتب
+  await page.locator('.modalback').click({ position: { x: 5, y: 5 } });
+  check('★ الضغط برّا ما بيسكّر وفي نص مكتوب',
+        await page.locator('.modal.report').count() === 1);
+
+  await send.click();
+  await page.waitForTimeout(300);
+  const sent = await page.evaluate(() => window.__sent);
+  check('★ النص انبعت متل ما انكتب', sent.text.startsWith('Aufgabe 7'));
+  check(`★ ومعه رقم الامتحان (${String(sent.uuid).slice(0, 8)})`,
+        sent.uuid === fx.test.id);
+  check(`★ ومعه اللغة (${sent.lang})`, !!sent.lang);
+  check('★ والنافذة سكّرت بعد النجاح',
+        await page.locator('.modal.report').count() === 0);
+  check('★ وطلعت رسالة شكر',
+        /Danke|شكرا|شكراً|Дяк/i.test(await page.textContent('#toast')));
+
+  // ★ الرفض: الرسالة لازم تشرح، والنافذة تضل مفتوحة تا ما يضيع النص
+  await page.evaluate(() => window.__state.reportFail = 'too_many');
+  await page.locator('#report').click();
+  await page.waitForSelector('.modal.report', { timeout: 4000 });
+  await page.fill('.modal.report textarea', 'Noch ein Hinweis zur Aufgabe 12.');
+  await page.locator('.modal.report [data-yes]').click();
+  await page.waitForTimeout(300);
+  check('★ الرفض ما بيسكّر النافذة — النص ما بيضيع',
+        await page.locator('.modal.report textarea').inputValue() === 'Noch ein Hinweis zur Aufgabe 12.');
+  check('★ وبيقول ليش (كتير تبليغات)',
+        /Stunde|ساعة|годину/i.test(await page.textContent('#toast')));
+  await page.evaluate(() => { window.__state.reportFail = null; });
+  await page.locator('.modal.report [data-no]').click();
+  await page.waitForTimeout(200);
+}
 
 // ---- ٥) ★ الحلول مو موجودة بالمتصفّح قبل التسليم ----
 const leaked = await page.evaluate(() => {

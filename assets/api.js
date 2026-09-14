@@ -290,6 +290,14 @@ const API = (() => {
     return rows && rows[0] || null;
   }
 
+  /* ---------- بلّغ عن مشكلة ----------
+     الطالب هو الوحيد يلي بيشوف الغلط. النص بيمرق كوسيط لدالة وحدة —
+     ما منركّب منه لا SQL ولا HTML بأي مكان — والقاعدة بتقصّه وبتنظّفه
+     وبتحدّ معدّله. السياق (أي امتحان، أي مستوى) بتقراه القاعدة من
+     جدول الامتحانات، مو من هون: العميل بيقول الرقم بس. */
+  const reportProblem = (testUuid, text, lang) =>
+    rpc('report_problem', { p_test_id: testUuid, p_text: text, p_lang: lang || null });
+
   /* ---------- التصحيح ---------- */
   const submitAttempt = (testUuid, blockId, answers) =>
     rpc('submit_attempt', { p_test_id: testUuid, p_block_id: blockId, p_answers: answers });
@@ -320,6 +328,7 @@ const API = (() => {
   return { configured, deviceId, loadSession, ensureSession, signInAnonymously,
            redeem, waitlist, subscription, levels, myLevels, index, catalog, test, resources, imageUrl, audioUrl,
            submitAttempt, submitDrill, mistakes, reviewSummary, attempts,
+           reportProblem,
            correctWriting, writingFeedback,
            signOut: () => storeSession(null),
            hasSession: () => !!session };

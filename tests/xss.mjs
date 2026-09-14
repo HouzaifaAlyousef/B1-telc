@@ -162,6 +162,11 @@ sql(`insert into access_codes (code, levels, duration_days, note)
 sql(`insert into resources (title, body, published) values (${lit(PAY)}, ${lit(PAY2)}, true);`);
 sql(`insert into admin_audit_log (admin_id, action, target_type, target_id, detail)
      values ('${A}', ${lit(PAY)}, 'x', ${lit(PAY2)}, jsonb_build_object('n', ${lit(PAY)}));`);
+/* ★ تبليغ المستخدم: النص الوحيد بالنظام يلي بيكتبه شخص مجهول من برّا
+   وبينعرض لك إنت باللوحة. لازم يمرق من نفس الفحص. */
+sql(`delete from reports;
+     insert into reports (user_id, body, test_label, lang)
+     values ('${A}', ${lit(PAY + '\n' + PAY2)}, ${lit(PAY)}, ${lit(PAY2)});`);
 
 const asAdmin = (inner) => {
   const out = sql(`set local role authenticated;
@@ -220,7 +225,7 @@ catch { console.log('   شاشة اللوحة وقتها:',
 const fired2 = () => page2.evaluate(() => window.__XSS || 0);
 check('لوحة: الصفحة الرئيسية', await fired2() === 0);
 
-for (const tab of ['users','codes','content','audit']){
+for (const tab of ['users','codes','content','reports','audit']){
   await page2.evaluate(t => document.querySelector(`[data-tab="${t}"]`).click(), tab);
   await page2.waitForTimeout(700);
   check(`لوحة: تبويب ${tab}`, await fired2() === 0);
@@ -228,6 +233,17 @@ for (const tab of ['users','codes','content','audit']){
 await page2.evaluate(() => document.querySelector('[data-more]')?.click());
 await page2.waitForTimeout(400);
 check('لوحة: حوار تفاصيل المستخدم', await fired2() === 0);
+
+// ★ «ما اشتغل» لحاله ما بيكفي: ممكن يكون التبويب ما فتح أصلاً.
+// لازم نشوف الحمولة مكتوبة حروف بالصفحة — يعني وصلت وانعرضت مهرّبة.
+await page2.evaluate(() => document.querySelector('[data-tab="reports"]').click());
+await page2.waitForTimeout(700);
+{
+  const txt = await page2.textContent('.reporttext').catch(() => '');
+  check('لوحة: نص التبليغ ظاهر كحروف', txt.includes('<img src=x'));
+  check('★ ولا عنصر img انبنى منه',
+        await page2.evaluate(() => !document.querySelector('.reporttext img')));
+}
 
 const t2 = await fired2();
 check(`لوحة: المجموع ${t2} تنفيذ`, t2 === 0);
