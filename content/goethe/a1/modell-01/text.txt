@@ -140,7 +140,7 @@ Punkte: 5
 Maximum: 5
 Anweisung: Ihre Freundin Eva Kadavy macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte. Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
 Auswahltitel: Formular
-Bild: img/m01-s1.jpg
+Bild: img/goethe-a1-m01-s1.jpg
 Text:
 **Bodensee-Rundfahrt Anmeldung**
 Ihre Freundin Eva Kadavy macht mit ihrem Mann und ihren beiden Söhnen (8 und 11 Jahre alt) Urlaub in Seeheim. Im Reisebüro bucht sie für den nächsten Sonntag eine Busfahrt um den Bodensee. Frau Kadavy hat keine Kreditkarte.

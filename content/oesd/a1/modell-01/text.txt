@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m01-lv1.jpg
+Bild: img/oesd-a1-m01-lv1.jpg
 Auswahl:
 1 = Sekretärin/Sekretär gesucht: Internationale Firma sucht Sekretärin/Sekretär mit Berufserfahrung (Vollzeit). Aufgaben: telefonische Kundenbetreuung, organisatorische Tätigkeiten. Bewerbungen an: info@personalvermittlung-holzer.de
 2 = Fitnesscenter Olymp: Unser Angebot: 120 Geräte für Kraft- und Fitnesstraining, Rückengymnastik, Beratung durch geprüfte Trainer. Burggasse 10, 1070 Wien, täglich 10–22 Uhr
@@ -114,7 +114,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m01-lv3.jpg
+Bild: img/oesd-a1-m01-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -143,7 +143,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m01-hv1.jpg
+Bild: img/oesd-a1-m01-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B

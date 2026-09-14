@@ -32,7 +32,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
 Auswahltitel: Anzeigen
-Bild: img/m07-lv1.jpg
+Bild: img/oesd-a1-m07-lv1.jpg
 Auswahl:
 1 = Meyer & Loos: jetzt auch in der Schweiz! Viele Angebote erwarten Sie! -25% auf Möbel für Bad, Schlafzimmer und Wohnzimmer. Karweg 78, 1702 Freiburg, Mo–Sa 8:30 bis 19:30
 2 = Einfach und leicht!: Egal, ob schnelles Frühstück oder leckeres Abendessen für den Geburtstag oder den Jahrestag. Bei uns finden Sie tolle Ideen und italienische Rezepte zum Nachkochen. www.speisenfuerzuhause.de
@@ -116,7 +116,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
 Auswahltitel: Bilder
-Bild: img/m07-lv3.jpg
+Bild: img/oesd-a1-m07-lv3.jpg
 Auswahl:
 1 = Bild 1
 2 = Bild 2
@@ -145,7 +145,7 @@ Punkte: 2
 Maximum: 10
 Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
 Auswahltitel: Fotos
-Bild: img/m07-hv1.jpg
+Bild: img/oesd-a1-m07-hv1.jpg
 Auswahl:
 A = Foto A
 B = Foto B
