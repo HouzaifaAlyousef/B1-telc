@@ -809,27 +809,27 @@
     {
      "id": "41",
      "text": "Die Sprecherin verbringt ihren Urlaub oft auf dem Land.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "42",
      "text": "Der Sprecher findet Stadturlaub in Wien interessanter als die Berge.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "43",
      "text": "Die Sprecherin meint, dass sich ihre ganze Familie im Urlaub gut erholt.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "44",
      "text": "Die Sprecherin findet den Urlaub in Österreich langweilig.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "45",
      "text": "Die Sprecherin denkt, dass Österreich vor allem für ältere Menschen interessant ist.",
-     "answer": "-"
+     "answer": "f"
     }
    ],
    "pointsPerItem": 5.0,

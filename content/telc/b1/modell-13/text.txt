@@ -6,7 +6,7 @@ Titel: Leseverstehen und Sprachbausteine
 Minuten: 90
 Hinweis: Aufgaben 1–40
 Punkte: 105
-Fehlend: 9
+Fehlend: 0
 Teile: lv1, lv2, lv3, sb1, sb2
 
 ## Block: block-hv

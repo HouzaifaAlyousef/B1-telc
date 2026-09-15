@@ -305,11 +305,11 @@ from (values
     ('sb2', '38', 'D', 'Das Wort lautet: ERZÄHLT'),
     ('sb2', '39', 'N', 'Das Wort lautet: WÜRDE'),
     ('sb2', '40', 'E', 'Das Wort lautet: FALLS'),
-    ('hv1', '41', '-', null),
-    ('hv1', '42', '+', null),
-    ('hv1', '43', '+', null),
-    ('hv1', '44', '-', null),
-    ('hv1', '45', '-', null),
+    ('hv1', '41', 'f', null),
+    ('hv1', '42', 'r', null),
+    ('hv1', '43', 'r', null),
+    ('hv1', '44', 'f', null),
+    ('hv1', '45', 'f', null),
     ('hv2', '46', 'f', null),
     ('hv2', '47', 'r', null),
     ('hv2', '48', 'f', null),
@@ -334,7 +334,7 @@ on conflict (item_id) do update set answer = excluded.answer, explanation = excl
 -- ================= modell-13 · THOMAS =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
 values ('b1', 'modell-13', 'THOMAS', '61 Aufgaben · 150 Minuten',
-        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 84.0, "missing": 9}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45, "missing": 0}]'::jsonb, 61, true, 13)
+        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 105.0, "missing": 0}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45, "missing": 0}]'::jsonb, 61, true, 13)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
 insert into sections (test_id, section_id, "group", title, minutes, instruction, format, config, sort)

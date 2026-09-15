@@ -744,27 +744,27 @@
     {
      "id": "41",
      "text": "Der Sprecher isst nicht mehr so viel Fleisch wie früher.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "42",
      "text": "Die Sprecherin ist überzeugt, dass die Lebensmittel in den Supermärkten kontrolliert werden.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "43",
      "text": "Die Sprecherin hat Angst vor Krankheiten, weil die Lebensmittel so schlecht sind.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "44",
      "text": "Dem Sprecher gefällt die Atmosphäre auf dem Wochenmarkt.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "45",
      "text": "Der Sprecher findet, dass die meisten Menschen zu viel Geld für unwichtige Dinge ausgeben.",
-     "answer": "-"
+     "answer": "f"
     }
    ],
    "pointsPerItem": 5.0,
@@ -784,52 +784,52 @@
     {
      "id": "46",
      "text": "Beim JP-Morgan-Firmenlauf trifft man viele Kollegen zum ersten Mal.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "47",
      "text": "Die Läufer und Läuferinnen kommen aus dem In- und Ausland.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "48",
      "text": "Nur wer aktiv Sport treibt, kann beim JP-Morgan-Firmenlauf mitmachen.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "49",
      "text": "Jasmins Tochter war bei dem Lauf auch schon dabei.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "50",
      "text": "Jasmin hat vor zwei Jahren zum ersten Mal am JP-Morgan-Firmenlauf teilgenommen.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "51",
      "text": "Der JP-Morgan-Firmenlauf findet nur in Deutschland statt.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "52",
      "text": "Jasmin hat sich nach ihrem ersten Lauf nicht mehr so allein gefühlt.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "53",
      "text": "Die Chefs müssen bei dem Lauf auch dabei sein.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "54",
      "text": "Die T-Shirts sind ein Erkennungszeichen.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "55",
      "text": "Die Firmen müssen das Startgeld bezahlen.",
-     "answer": "-"
+     "answer": "f"
     }
    ],
    "pointsPerItem": 2.5,
@@ -849,27 +849,27 @@
     {
      "id": "56",
      "text": "Das Buch kann erst morgen ab 9 Uhr in der Buchhandlung abgeholt werden.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "57",
      "text": "Die Firma ist in der Wilhelmstraße.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "58",
      "text": "Sie können den Film von Rainer Bölkow heute Abend im Kino sehen.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "59",
      "text": "Sie können eine Zeitung im Zugrestaurant kaufen.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "60",
      "text": "Vom Bahnhof zur Universität dauert es mit der U-Bahn und dem Bus nur 5 Minuten.",
-     "answer": "+"
+     "answer": "r"
     }
    ],
    "pointsPerItem": 5.0,

@@ -291,9 +291,9 @@ Aufgaben:
 [41] Die Sprecherin verbringt ihren Urlaub oft auf dem Land.
 Lösung: falsch
 [42] Der Sprecher findet Stadturlaub in Wien interessanter als die Berge.
-Lösung: falsch
+Lösung: richtig
 [43] Die Sprecherin meint, dass sich ihre ganze Familie im Urlaub gut erholt.
-Lösung: falsch
+Lösung: richtig
 [44] Die Sprecherin findet den Urlaub in Österreich langweilig.
 Lösung: falsch
 [45] Die Sprecherin denkt, dass Österreich vor allem für ältere Menschen interessant ist.

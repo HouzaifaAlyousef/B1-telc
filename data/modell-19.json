@@ -740,27 +740,27 @@
     {
      "id": "41",
      "text": "Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "42",
      "text": "Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "43",
      "text": "Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "44",
      "text": "Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "45",
      "text": "Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.",
-     "answer": "+"
+     "answer": "r"
     }
    ],
    "pointsPerItem": 5.0,
@@ -780,52 +780,52 @@
     {
      "id": "46",
      "text": "Die Sendung heißt „Kinder und Computer“.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "47",
      "text": "Herr Russo findet es gut, dass Kinder Interesse an Neuem haben.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "48",
      "text": "Früher hielt man das Lesen für gefährlich.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "49",
      "text": "Eltern kennen das Verhalten ihrer Kinder aus ihrer eigenen Jugend.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "50",
      "text": "Eltern sollen Kindern Computerspiele verbieten.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "51",
      "text": "Für viele Eltern sind die Neuen Medien nach wie vor unheimlich.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "52",
      "text": "Erst ab 19 Uhr sind elektronische Spielsachen bei Familie Russo erlaubt.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "53",
      "text": "Der Experte hält nichts von Chats für Kinder.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "54",
      "text": "Herr Russo empfiehlt, dass Kinder mehr Bücher lesen sollten.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "55",
      "text": "In der kommenden Sendung geht es um Ernährung.",
-     "answer": "+"
+     "answer": "r"
     }
    ],
    "pointsPerItem": 2.5,
@@ -845,27 +845,27 @@
     {
      "id": "56",
      "text": "Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "57",
      "text": "Die Firma liefert das bestellte Sofa am Dienstagnachmittag zwischen drei und sechs Uhr liefern.",
-     "answer": "-"
+     "answer": "f"
     },
     {
      "id": "58",
      "text": "Der Gasthof Lindner liegt neben einer Tankstelle.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "59",
      "text": "Der Film Komiker wird mehrmals am Tag gezeigt.",
-     "answer": "+"
+     "answer": "r"
     },
     {
      "id": "60",
      "text": "Für den Abend wird kein Regen erwartet.",
-     "answer": "-"
+     "answer": "f"
     }
    ],
    "pointsPerItem": 5.0,

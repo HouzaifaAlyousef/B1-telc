@@ -244,13 +244,13 @@ Aufgaben:
 [41] Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.
 Lösung: falsch
 [42] Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.
-Lösung: falsch
+Lösung: richtig
 [43] Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.
 Lösung: falsch
 [44] Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.
-Lösung: falsch
+Lösung: richtig
 [45] Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.
-Lösung: falsch
+Lösung: richtig
 
 ### Teil: hv2
 Format: truefalse
@@ -263,25 +263,25 @@ Anweisung: Sie hören ein Gespräch. Dazu sollen Sie zehn Aufgaben lösen. Sie h
 Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
 Aufgaben:
 [46] Die Sendung heißt „Kinder und Computer“.
-Lösung: falsch
+Lösung: richtig
 [47] Herr Russo findet es gut, dass Kinder Interesse an Neuem haben.
 Lösung: falsch
 [48] Früher hielt man das Lesen für gefährlich.
-Lösung: falsch
+Lösung: richtig
 [49] Eltern kennen das Verhalten ihrer Kinder aus ihrer eigenen Jugend.
 Lösung: falsch
 [50] Eltern sollen Kindern Computerspiele verbieten.
-Lösung: falsch
+Lösung: richtig
 [51] Für viele Eltern sind die Neuen Medien nach wie vor unheimlich.
 Lösung: falsch
 [52] Erst ab 19 Uhr sind elektronische Spielsachen bei Familie Russo erlaubt.
 Lösung: falsch
 [53] Der Experte hält nichts von Chats für Kinder.
-Lösung: falsch
+Lösung: richtig
 [54] Herr Russo empfiehlt, dass Kinder mehr Bücher lesen sollten.
 Lösung: falsch
 [55] In der kommenden Sendung geht es um Ernährung.
-Lösung: falsch
+Lösung: richtig
 
 ### Teil: hv3
 Format: truefalse
@@ -294,13 +294,13 @@ Anweisung: Sie hören fünf kurze Texte. Sie hören die Texte zweimal. Entscheid
 Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
 Aufgaben:
 [56] Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.
-Lösung: falsch
+Lösung: richtig
 [57] Die Firma liefert das bestellte Sofa am Dienstagnachmittag zwischen drei und sechs Uhr liefern.
 Lösung: falsch
 [58] Der Gasthof Lindner liegt neben einer Tankstelle.
-Lösung: falsch
+Lösung: richtig
 [59] Der Film Komiker wird mehrmals am Tag gezeigt.
-Lösung: falsch
+Lösung: richtig
 [60] Für den Abend wird kein Regen erwartet.
 Lösung: falsch
 

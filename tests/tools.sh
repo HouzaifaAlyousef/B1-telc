@@ -181,9 +181,9 @@ for D in content/*/*/; do
   # ★ معبّى وبلا بذور = محتوى ما رح يوصل لولا طالب، وما حدا بينتبه.
   # القوالب الفاضية ما إلها بذور وهاد طبيعي، فالتنبيه بيطلع لما يكون
   # في نماذج معبّاية فعلاً.
-  # ★ استثناء واحد، موثّق: telc/b1 بذوره مولّدة من data/ مو من content/
-  # (ومعرّف مستواه «b1» من أيام ما كان في مستوى واحد). مغطّى بفحص تاني
-  # فوق — «content/telc/b1 مطابق لـdata/» — يعني مغطّى بس من طريق تانية.
+  # telc/b1 بذوره مولّدة من data/ مو من content/ (ومعرّف مستواه «b1» من
+  # أيام ما كان في مستوى واحد)، فما بينطبق عليه الدوران هون — بس إله
+  # فحصه هو تحت، مو استثناء مفتوح.
   if [ -z "$SEED" ] && [ "$P/$L" = "telc/b1" ]; then continue; fi
 
   if [ -z "$SEED" ]; then
@@ -206,6 +206,53 @@ for D in content/*/*/; do
 done
 [ "$SEEDED" -gt 0 ]
 check "★ في بذور مولّدة من content/ ($SEEDED مستوى)" $?
+
+# ---------- ★ صحّة data/ نفسها ----------
+# الملفّات هدول مصدر B1 كله. غلطتين صاروا فيهن وما بان أثرهن إلا
+# بالتصحيح عند الطالب:
+#
+# · جواب صح-خطأ مكتوب «+» أو «-» (علامات ورقة إجابات telc) بدل r/f.
+#   التطبيق بيبعت r أو f، فولا وحدة كانت بتطابق: ٤٥ سؤال بتلات نماذج
+#   كانوا بينحسبوا غلط دايماً. وأسوأ: التحويل لنصّ كان بيخلّي «+»
+#   تصير «falsch»، يعني ٢٢ جواب صح انقلبوا غلط بصمت.
+# · بلوك بيقول «ناقص ٩ أسئلة» بعد ما انكمّل — الطالب بيشوف تحذير كذب
+#   وبتنعاد حسبة نقاطه على أساس غلط.
+node -e '
+const fs=require("fs"); const M=require("./admin/parse.js");
+let bad=[];
+for (const f of fs.readdirSync("data").filter(x=>/^modell-\d+\.json$/.test(x))){
+  const o=JSON.parse(fs.readFileSync("data/"+f,"utf8"));
+  for (const s of o.sections||[])
+    if (s.format==="truefalse")
+      for (const i of s.items||[])
+        if (i.answer!=="r" && i.answer!=="f")
+          bad.push(`${f} ${s.id}/${i.id}=${JSON.stringify(i.answer)}`);
+  for (const b of o.blocks||[]){
+    const secs=(b.parts||[]).map(p=>(o.sections||[]).find(s=>s.id===p)).filter(Boolean);
+    const av=secs.reduce((a,s)=>a+(s.availablePoints??0),0);
+    const ms=secs.reduce((a,s)=>a+(s.missing??0),0);
+    if (b.availablePoints!==av || b.missing!==ms)
+      bad.push(`${f} ${b.id}: ${b.availablePoints}n/${b.missing} ← ${av}n/${ms}`);
+  }
+}
+if (bad.length){ console.error(bad.slice(0,4).join(" · ")); process.exit(1); }
+'
+check "★ data/: أجوبة صح-خطأ كلها r/f، ونقاط الكتل مطابقة لأقسامها" $?
+
+# ---------- ★ بذرة B1: الثغرة الوحيدة يلي كانت مكشوفة ----------
+# b1.sql مولّد من data/ بطريق تانية، فدوران البذور فوق ما بيلمسه. يعني
+# كان الملف الوحيد يلي بيقدر يصير قديم بصمت — وهاد بالضبط يلي صار:
+# نموذجين (TAMARA وJAN) ضلّوا بالقاعدة بنسخة ناقصة ١٨ سؤال، وما حدا
+# انتبه إلا لما عدّينا الأسئلة بالإيد.
+python3 tools/export_sql.py data "$TMP/b1.sql" --level b1 >/dev/null 2>&1
+cmp -s "$TMP/b1.sql" supabase/seed/b1.sql
+check "★ supabase/seed/b1.sql مطابق لـdata/ (ما نسيت تعيدي التوليد)" $?
+
+# وكل نموذج بـdata/ لازم يوصل للبذرة
+WANT=$(ls data/modell-*.json 2>/dev/null | wc -l)
+GOT=$(grep -c "^insert into tests" supabase/seed/b1.sql)
+[ "$WANT" = "$GOT" ]
+check "★ وكل نماذج data/ وصلت ($GOT من $WANT)" $?
 
 # الأجزاء المقسّمة لازم تتبع ملفاتها الكاملة
 for F in supabase/seed/parts/*-1.sql; do
