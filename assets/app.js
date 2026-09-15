@@ -895,7 +895,9 @@ const wordCount = s => String(s || '').trim().split(/\s+/).filter(Boolean).lengt
 
 function checksHTML(it, text){
   const n    = wordCount(text);
-  const min  = it.minWords || 100;
+  // ★ نفس الغلط يلي كان بشاشة النتيجة: `|| 100` كان بيطالب طالب A1
+  //   بمئة كلمة باستمارة من خمس خانات. اللي ما إله حدّ ما بينعرضله سطر.
+  const min  = it.minWords || 0;
   const body = String(text || '');
   const tail = body.slice(-140);          // السلام بيكون بالآخر، مو بأي مطرح
   const pts  = it.points || [];
@@ -907,7 +909,7 @@ function checksHTML(it, text){
   return `<div class="checks">
     <h3>${esc(t('checksTitle'))}</h3>
     <ul>
-      ${row(n >= min, t('chkWords', { n, min }))}
+      ${min ? row(n >= min, t('chkWords', { n, min })) : ''}
       ${row(GREET.test(body), t('chkGreeting'))}
       ${row(CLOSE.test(tail), t('chkClosing'))}
     </ul>

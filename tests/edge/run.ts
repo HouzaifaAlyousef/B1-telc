@@ -150,9 +150,6 @@ const examDb = await psql(
 const sysText = geminiSaw?.systemInstruction?.parts?.[0]?.text ?? "";
 check(`تعليمات النظام انبعتت باسم الامتحان من القاعدة (${examDb})`,
       examDb.length > 0 && sysText.includes(`${examDb} Prüfung`));
-check("★ ولا اسم امتحان مثبّت بالمصدر",
-      !(await Deno.readTextFile("supabase/functions/correct-writing/index.ts"))
-        .includes("telc Deutsch B1"));
 const p = geminiSaw?.contents?.[0]?.parts?.[0]?.text ?? "";
 check("نص الطالب انبعت", p.includes("Liebe Anna"));
 check("المعايير الثلاثة انبعتوا",
@@ -222,6 +219,23 @@ check(`★ نموذج غلط بيرجّع القائمة المتاحة (${Strin
       e.error === "bad_model" && String(e.detail).includes("gemini-flash-latest"));
 check("★ وما بيعرض نماذج ما بتصلح للتوليد",
       !String(e.detail).includes("gemini-embed"));
+
+/* ---- ١١) ★ اسم الامتحان بيتبع القاعدة، مو مكتوب بالكود ----
+   كان «Du bist Prüfer für die telc Deutsch B1 Prüfung» مثبّت حرفياً —
+   يعني رسالة ÖSD A1 كانت تنصحّح بمعيار B1. البرهان مو قراءة المصدر
+   (التعليق بيخرّب الفحص)، البرهان إنّ التعليمات بتتغيّر مع القاعدة. */
+await psql(`update levels set provider='ÖSD', stufe='A1' where id='b1';
+            update subscriptions set writing_quota = 99 where user_id='${U}';`);
+const aid2 = await psql(`insert into attempts (user_id,test_id,block_id,answers,submitted_at)
+  values ('${U}','${tid}','block-sa', jsonb_build_object('${iid}', ${lit(brief)}), now())
+  returning id;`);
+await call({ attempt_id: aid2 });
+const sys2 = geminiSaw?.systemInstruction?.parts?.[0]?.text ?? "";
+check("★ غيّرنا المستوى بالقاعدة ← التعليمات تبعته (ÖSD A1)",
+      sys2.includes("ÖSD A1 Prüfung") && !sys2.includes("telc"));
+await psql(`update levels set provider='telc', stufe='B1' where id='b1';
+            delete from writing_feedback where attempt_id='${aid2}';
+            delete from attempts where id='${aid2}';`);
 
 await supa.shutdown(); await gem.shutdown();
 const bad = R.filter(x => !x[1]);
