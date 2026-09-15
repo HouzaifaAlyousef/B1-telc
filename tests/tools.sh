@@ -364,6 +364,27 @@ OUT=$(cd "$TMP/sa" && python3 "$HERE/tools/shrink_audio.py" content --dry-run 2>
 echo "$OUT" | grep -q 'big.mp3' && ! echo "$OUT" | grep -q 'small.mp3'
 check "★ تصغير الصوت: بيمسك الكبير وبيترك الصغير" $?
 
+# ★★ والترميز الحقيقي، مو بس الكشف.
+#   أوّل نسخة كانت بتسمّي المؤقّت «hv1.mp3.tmp» — وffmpeg بيختار صيغة
+#   الإخراج من الامتداد، فطلع «Unable to choose an output format» وفشلت
+#   الأربعة كلها عند المستخدم. الفحص كان بيمرق لأنّه بيجرّب --dry-run بس.
+if command -v ffmpeg >/dev/null 2>&1; then
+  RE="$TMP/re/content/telc/b2/modell-08/audio"; mkdir -p "$RE"
+  ffmpeg -y -loglevel error -f lavfi -i "sine=frequency=300:duration=20" \
+    -ac 2 -b:a 320k "$RE/telc-b2-m08-hv1.mp3" 2>/dev/null
+  SZ0=$(stat -c%s "$RE/telc-b2-m08-hv1.mp3")
+  ( cd "$TMP/re" && python3 "$HERE/tools/shrink_audio.py" content --over=0.1 \
+      --bitrate=64k ) >/dev/null 2>&1
+  SZ1=$(stat -c%s "$RE/telc-b2-m08-hv1.mp3" 2>/dev/null || echo 0)
+  [ "$SZ1" -gt 0 ] && [ "$SZ1" -lt "$SZ0" ]
+  check "★★ الترميز بيشتغل فعلاً ($((SZ0/1024)) ← $((SZ1/1024)) ك.ب)" $?
+
+  [ -z "$(find "$RE" -name '*__tmp__*' 2>/dev/null)" ]
+  check "★ وما بيخلّي ملفّات مؤقّتة وراه" $?
+else
+  echo "  · ffmpeg مو مثبّت — تخطّي فحص الترميز"
+fi
+
 # ★ وما بيضلّ ملفّ فوق حدّ الدلو بالمحتوى
 BIGA=$(find content -path '*/audio/*' -type f -size +49M 2>/dev/null | head -3 | tr '\n' ' ')
 [ -z "$BIGA" ]

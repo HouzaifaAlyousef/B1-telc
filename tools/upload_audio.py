@@ -67,7 +67,8 @@ def main():
     #   فرصة تنسي وحدة. (الصور انصلّحت من زمان، والصوت ضلّ ناقص.)
     if not files and src.is_dir():
         files = sorted(f for f in src.rglob('audio/*')
-                       if f.is_file() and f.suffix.lower() in EXT)
+                       if f.is_file() and f.suffix.lower() in EXT
+                       and '.__tmp__.' not in f.name)
     if not files:
         sys.exit(f'ما في ملفات صوت بـ{src}')
 

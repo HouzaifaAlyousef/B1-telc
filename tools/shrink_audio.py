@@ -103,6 +103,10 @@ def main():
     if not a.dry_run:
         need('ffmpeg')
 
+    # بقايا تشغيل انقطع بالنصّ
+    for junk in src.rglob('audio/*.__tmp__.*'):
+        junk.unlink(missing_ok=True)
+
     before = after = 0
     for f in big:
         b = f.stat().st_size
@@ -111,7 +115,10 @@ def main():
         if a.dry_run:
             print(f'  → مونو {a.bitrate}')
             continue
-        tmp = f.with_suffix(f.suffix + '.tmp')
+        # ★ الامتداد لازم يضلّ صحيح: ffmpeg بيختار صيغة الإخراج من
+        #   الامتداد، و«hv1.mp3.tmp» بيعطي «Unable to choose an output
+        #   format». فالمؤقّت بياخد الامتداد الحقيقي بالآخر.
+        tmp = f.with_name(f'{f.stem}.__tmp__{f.suffix}')
         r = subprocess.run(
             ['ffmpeg', '-y', '-loglevel', 'error', '-i', str(f),
              '-ac', '1', '-b:a', a.bitrate, '-map_metadata', '-1', str(tmp)],
