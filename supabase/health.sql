@@ -18,9 +18,9 @@ declare v int; t text; n int; m int; k int; begin
   -- ١) نسخة السكيما
   begin
     execute 'select schema_version()' into v;
-    insert into _health values (1, case when v >= 30 then '✅' else '❌' end,
-      'نسخة السكيما', 'عندك ' || v || ' · لازم 30'
-      || case when v < 30 then '  ←  شغّل supabase/setup.sql' else '' end);
+    insert into _health values (1, case when v >= 31 then '✅' else '❌' end,
+      'نسخة السكيما', 'عندك ' || v || ' · لازم 31'
+      || case when v < 31 then '  ←  شغّل supabase/setup.sql' else '' end);
   exception when others then
     insert into _health values (1, '❌', 'نسخة السكيما',
       'الدالة مفقودة  ←  شغّل supabase/setup.sql');

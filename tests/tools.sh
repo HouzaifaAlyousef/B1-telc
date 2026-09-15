@@ -465,6 +465,19 @@ else
   echo "  · Postgres مو شغّال — تخطّي فحص health.sql"
 fi
 
+# ---------- رقم السكيما مكتوب بتلات أمكنة ----------
+# ★ الترحيل بيعلن schema_version()، واللوحة وhealth.sql بيقارنوا فيه —
+#   وكل واحد فيهن رقم مكتوب بالإيد. 0031 انكتب والاتنين بقيوا على ٣٠:
+#   health.sql بيقول «✅ عندك ٣١ · لازم ٣٠» واللوحة ما بتنبّه إنّ القاعدة
+#   ورا. ما بينكسر شي، بس التحذير يلي مهمّته يمسك النقص بيصير كذب.
+LAST_MIG=$(grep -l "create or replace function schema_version" \
+             supabase/migrations/*.sql | sort | tail -1)
+WANT=$(grep -oE "select [0-9]+" "$LAST_MIG" | tail -1 | grep -oE "[0-9]+")
+HAVE_ADMIN=$(grep -oE "const SCHEMA_MIN = [0-9]+" admin/admin.js | grep -oE "[0-9]+")
+HAVE_HEALTH=$(grep -oE "when v >= [0-9]+" supabase/health.sql | grep -oE "[0-9]+")
+[ -n "$WANT" ] && [ "$HAVE_ADMIN" = "$WANT" ] && [ "$HAVE_HEALTH" = "$WANT" ]
+check "★ رقم السكيما واحد بالترحيل واللوحة وhealth.sql ($WANT · $HAVE_ADMIN · $HAVE_HEALTH)" $?
+
 # ---------- setup.sql مطابق للترحيلات ----------
 ./tools/build_setup.sh >/dev/null 2>&1
 git diff --quiet -- supabase/setup.sql 2>/dev/null
