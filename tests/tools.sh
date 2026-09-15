@@ -508,6 +508,36 @@ else
   echo "  · Postgres مو شغّال — تخطّي فحص setup.sql"
 fi
 
+# ---------- النشر بأمر واحد ----------
+bash -n tools/deploy_db.sh; check "deploy_db.sh سليم" $?
+
+# بلا رابط بينوقف، ما بيحاول يوصل لقاعدة ما إلها اسم
+OUT=$(DATABASE_URL= ./tools/deploy_db.sh 2>&1 || true)
+case "$OUT" in *DATABASE_URL*) R=0 ;; *) R=1 ;; esac
+check "★ بلا DATABASE_URL بيوقف وبيقول من وين تجيبيه" $R
+
+if psql -h /tmp -p "${PGPORT:-5433}" -U postgres -c '' 2>/dev/null; then
+  # ★ الفحص الحقيقي: قاعدة فاضية ← أمر واحد ← المحتوى كامل جوّا.
+  #   بلاه، «شغّلي هالأمر» بالتعليمات بيضل وعد ما انجرّب — وصار قبل:
+  #   upload_audio.py content انكتب بالتعليمات وهو ما بيلمّ الشجرة.
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -q \
+    -c "drop database if exists deploytest;" -c "create database deploytest;" >/dev/null 2>&1
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d deploytest -q \
+    -f supabase/tests/bootstrap.sql >/dev/null 2>&1
+  DATABASE_URL="postgresql://postgres@127.0.0.1:${PGPORT:-5433}/deploytest" \
+    ./tools/deploy_db.sh >/dev/null 2>&1
+  GOT=$(psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d deploytest -tAc \
+    "select count(*)||'/'||(select count(*) from items) from tests;" 2>/dev/null)
+  WANT_T=$(grep -c "^-- ================= modell-" supabase/seed/*.sql | \
+           awk -F: '{s+=$2} END {print s}')
+  [ "${GOT%%/*}" = "$WANT_T" ] && [ "${GOT##*/}" -gt 2000 ]
+  check "★★ قاعدة فاضية ← أمر واحد ← كل المحتوى جوّا ($GOT امتحان/سؤال)" $?
+  psql -h /tmp -p "${PGPORT:-5433}" -U postgres -q \
+    -c "drop database deploytest;" >/dev/null 2>&1
+else
+  echo "  · Postgres مو شغّال — تخطّي فحص deploy_db.sh"
+fi
+
 # ---------- run.sh ----------
 bash -n run.sh;             check "run.sh سليم" $?
 bash -n tools/build_dist.sh; check "build_dist.sh سليم" $?
