@@ -370,6 +370,8 @@ Lösung: B
 
 ### Teil: hvs
 Format: writing
+Hörtext: telc-b2-m03-hvs.mp3
+Wiedergaben: 2
 Titel: Hören und Schreiben, Telefonnotiz
 Gruppe: Hören und Schreiben
 Minuten: 15

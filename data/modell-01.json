@@ -14,8 +14,8 @@
     "sb1",
     "sb2"
    ],
-   "maxPoints": 105.0,
-   "availablePoints": 105.0,
+   "maxPoints": 105,
+   "availablePoints": 105,
    "missing": 0
   },
   {
@@ -28,8 +28,8 @@
     "hv2",
     "hv3"
    ],
-   "maxPoints": 75.0,
-   "availablePoints": 75.0,
+   "maxPoints": 75,
+   "availablePoints": 75,
    "missing": 0
   },
   {
@@ -40,7 +40,7 @@
    "parts": [
     "sa"
    ],
-   "maxPoints": 45.0,
+   "maxPoints": 45,
    "availablePoints": 45,
    "missing": 0
   }
@@ -124,9 +124,9 @@
      "answer": "G"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0
   },
   {
@@ -271,9 +271,9 @@
      "answer": "C"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0
   },
   {
@@ -391,8 +391,8 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0,
    "bankImage": "img/m01-lv3.jpg"
   },
@@ -622,8 +622,8 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0,
-   "availablePoints": 15.0,
+   "maxPoints": 15,
+   "availablePoints": 15,
    "missing": 0
   },
   {
@@ -781,8 +781,8 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0,
-   "availablePoints": 15.0,
+   "maxPoints": 15,
+   "availablePoints": 15,
    "missing": 0
   },
   {
@@ -791,7 +791,6 @@
    "title": "Hörverstehen, Teil 1",
    "minutes": 8,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -820,11 +819,11 @@
      "answer": "f"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0,
-   "audio": "https://deutsch-vorbereitung.com/assets/audio/exercises/Arbeitsplatz%20f%C3%BCr%20ihren%20Vater-2025-12-17.MP3",
+   "audio": "telc-b1-m01-hv1.mp3",
    "audioPlays": 2
   },
   {
@@ -833,7 +832,6 @@
    "title": "Hörverstehen, Teil 2",
    "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -888,10 +886,10 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0,
-   "audio": "https://deutsch-vorbereitung.com/assets/audio/exercises/Frau%20Sch%C3%A4ffer%20und%20ein%20Verein-2025-12-17.MP3",
+   "audio": "telc-b1-m01-hv2.mp3",
    "audioPlays": 2
   },
   {
@@ -900,7 +898,6 @@
    "title": "Hörverstehen, Teil 3",
    "minutes": 8,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -929,11 +926,11 @@
      "answer": "r"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0,
-   "audio": "https://deutsch-vorbereitung.com/assets/audio/exercises/Georg%20und%20Claudia-2025-12-17.MP3",
+   "audio": "telc-b1-m01-hv3.mp3",
    "audioPlays": 2
   },
   {

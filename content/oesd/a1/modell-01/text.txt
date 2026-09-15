@@ -136,6 +136,8 @@ Lösung: 3
 
 ### Teil: hv1
 Format: matching
+Hörtext: oesd-a1-m01-hv1.mp3
+Wiedergaben: 2
 Titel: Hören, Teil 1
 Gruppe: Hören
 Minuten: 4
@@ -165,6 +167,8 @@ Lösung: A
 
 ### Teil: hv2
 Format: writing
+Hörtext: oesd-a1-m01-hv2.mp3
+Wiedergaben: 2
 Titel: Hören, Teil 2 (Telefonnotiz)
 Gruppe: Hören
 Minuten: 3
@@ -187,6 +191,8 @@ Punkt: Telefonnummer: 0664 / 2582641
 
 ### Teil: hv3
 Format: mc
+Hörtext: oesd-a1-m01-hv3.mp3
+Wiedergaben: 2
 Titel: Hören, Teil 3
 Gruppe: Hören
 Minuten: 3

@@ -246,6 +246,8 @@ Punkt: Begründung des Nachlieferungstermins mit der aktuellen personellen Engpa
 
 ### Teil: hv1
 Format: mc
+Hörtext: telc-b2-m08-hv1.mp3
+Wiedergaben: 2
 Titel: Hören, Teil 1
 Gruppe: Hören
 Minuten: 6
@@ -283,6 +285,8 @@ Lösung: B
 
 ### Teil: hv2
 Format: matching
+Hörtext: telc-b2-m08-hv2.mp3
+Wiedergaben: 2
 Titel: Hören, Teil 2
 Gruppe: Hören
 Minuten: 5
@@ -309,6 +313,8 @@ Lösung: C
 
 ### Teil: hv3
 Format: mc
+Hörtext: telc-b2-m08-hv3.mp3
+Wiedergaben: 2
 Titel: Hören, Teil 3
 Gruppe: Hören
 Minuten: 4
@@ -374,6 +380,8 @@ Lösung: A
 
 ### Teil: hvs
 Format: writing
+Hörtext: telc-b2-m08-hvs.mp3
+Wiedergaben: 2
 Titel: Hören und Schreiben
 Gruppe: Hören und Schreiben
 Minuten: 15
