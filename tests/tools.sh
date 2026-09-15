@@ -508,6 +508,55 @@ else
   echo "  · Postgres مو شغّال — تخطّي فحص setup.sql"
 fi
 
+# ---------- إرجاع ربط الصوت من قائمة الدلو ----------
+# ★ ملفّات الصوت مستثناة من git عن قصد، ومحلّها الدائم الدلو. يعني مين
+#   ما مسح مجلّد التحميل بعد الرفع ما خسر شي — بس link_audio.mjs بده
+#   المجلّد تا يعرف مين لمين. relink_audio بياخد نفس المعلومة من الاسم.
+node --check tools/relink_audio.mjs;  check "relink_audio.mjs سليم" $?
+node --check tools/lib/audio_link.mjs; check "audio_link.mjs سليم" $?
+
+# كاتب واحد: link_audio ما عاد عنده نسخته الخاصة من setAudio
+! grep -q "^function setAudio" tools/link_audio.mjs \
+  && grep -q "lib/audio_link.mjs" tools/link_audio.mjs
+check "★ كاتب واحد لسطر Hörtext (link_audio بيستورده، ما بيكرّره)" $?
+
+OUT=$(node -e '
+import("./tools/lib/audio_link.mjs").then(({ parseAudioName: p, setAudio }) => {
+  const fs = require("fs"), os = require("os"), path = require("path");
+  // ١) الاسم بينقرا صح، والمزبّط بس
+  const ok = p("oesd-a1-m03-hv2.mp3");
+  if (!ok || ok.prov !== "oesd" || ok.lvl !== "a1"
+      || ok.model !== "modell-03" || ok.sec !== "hv2") throw new Error("parse");
+  for (const bad of ["m01-hv1.mp3", "telc-b1-hv1.mp3", "x.txt", "telc-b1-m03-hv2.txt"])
+    if (p(bad)) throw new Error("قبل اسم غلط: " + bad);
+  // ٢) والكتابة بتصير فعلاً — على نسخة مؤقّتة، مو على المستودع
+  const T = fs.mkdtempSync(path.join(os.tmpdir(), "relink-"));
+  fs.mkdirSync(path.join(T, "data"), { recursive: true });
+  fs.copyFileSync("data/modell-01.json", path.join(T, "data/modell-01.json"));
+  const cd = path.join(T, "content/oesd/a1/modell-01");
+  fs.mkdirSync(cd, { recursive: true });
+  fs.copyFileSync("content/oesd/a1/modell-01/text.txt", path.join(cd, "text.txt"));
+
+  setAudio(T, "telc", "b1", "modell-01", "hv1", "telc-b1-m01-hv1.mp3", 2);
+  setAudio(T, "oesd", "a1", "modell-01", "hv2", "oesd-a1-m01-hv2.mp3", 2);
+
+  const j = JSON.parse(fs.readFileSync(path.join(T, "data/modell-01.json"), "utf8"));
+  const hv1 = j.sections.find(x => x.id === "hv1");
+  if (hv1.audio !== "telc-b1-m01-hv1.mp3" || hv1.audioPlays !== 2)
+    throw new Error("data/ ما انكتب");
+  const t = fs.readFileSync(path.join(cd, "text.txt"), "utf8");
+  if (!/^H(ö|oe)rtext: oesd-a1-m01-hv2\.mp3$/m.test(t)
+      || !/^Wiedergaben: 2$/m.test(t)) throw new Error("text.txt ما انكتب");
+  // والسطر لازم يكون جوّا قسم hv2، مو بأوّل الملفّ
+  const seg = /^### Teil: hv2$([\s\S]*?)(?=^### Teil: |$(?![\s\S]))/m.exec(t);
+  if (!seg || !/H(ö|oe)rtext: oesd-a1-m01-hv2/.test(seg[1]))
+    throw new Error("انكتب بالقسم الغلط");
+  fs.rmSync(T, { recursive: true, force: true });
+  console.log("OK");
+}).catch(e => { console.log("FAIL " + e.message); });' 2>&1 | tail -1)
+[ "$OUT" = "OK" ]
+check "★★ الاسم بيرجّع الربط لمحلّه الصح بالمصدرين ($OUT)" $?
+
 # ---------- النشر بأمر واحد ----------
 bash -n tools/deploy_db.sh; check "deploy_db.sh سليم" $?
 

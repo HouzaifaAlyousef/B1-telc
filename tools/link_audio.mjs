@@ -15,8 +15,8 @@
  * ★ telc/b1 مصدره data/*.json مو content/ — الأداة بتكتب هونيك، وبتقلّك
  *   تشغّل sync_b1_content بعدها. غيره بينكتب بـtext.txt مباشرةً.
  */
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync,
-         copyFileSync, statSync } from 'fs';
+import { readdirSync, existsSync, mkdirSync, copyFileSync, statSync } from 'fs';
+import { setAudio as writeLink } from './lib/audio_link.mjs';
 import { spawnSync } from 'child_process';
 import path from 'path';
 
@@ -116,41 +116,12 @@ for (const m of models) {
     if (!dry) {
       mkdirSync(adir, { recursive: true });
       copyFileSync(path.join(src, box, f), path.join(adir, name));
-      setAudio(prov, lvl, m, sec, name, plays);
+      writeLink(ROOT, prov, lvl, m, sec, name, plays);
     }
     linked++;
   }
 }
 
-/* كتابة `Hörtext:` بمصدر المستوى — data/ لـtelc/b1، وtext.txt لغيره */
-function setAudio(prov, lvl, m, sec, name, plays) {
-  if (prov === 'telc' && lvl === 'b1') {
-    const f = path.join(ROOT, 'data', `${m}.json`);
-    const d = JSON.parse(readFileSync(f, 'utf8'));
-    const s = (d.sections || []).find(x => x.id === sec);
-    if (!s) throw new Error(`${m}: ما في قسم ${sec}`);
-    s.audio = name; s.audioPlays = plays;
-    // ★ ملاحظة «ما في تسجيلات بالـPDF» صارت كذب بعد ما إجا التسجيل.
-    //   التطبيق بيخفيها لحاله لما يكون في صوت، بس خلّيها تنشال من
-    //   المصدر كمان — ملاحظة كاذبة بالملف بترجع تطلع بأوّل تصدير.
-    if (/H(ö|oe)rtexte .*nicht enthalten/i.test(s.note || '')) delete s.note;
-    writeFileSync(f, JSON.stringify(d, null, 1) + '\n');
-    return;
-  }
-  const f = path.join(ROOT, 'content', prov, lvl, m, 'text.txt');
-  let t = readFileSync(f, 'utf8');
-  const re = new RegExp(`(^### Teil: ${sec}$)([\\s\\S]*?)(?=^### Teil: |\\Z)`, 'm');
-  const mt = re.exec(t);
-  if (!mt) throw new Error(`${m}: ما في قسم ${sec} بـtext.txt`);
-  let body = mt[2]
-    .replace(/^H(ö|oe)rtext: .*\n/gm, '')
-    .replace(/^Wiedergaben: .*\n/gm, '')
-    .replace(/^Hinweis: .*H(ö|oe)rtexte .*nicht enthalten.*\n/gm, '');
-  // بعد سطر Format: — مطرحه الطبيعي بباقي الملفّات
-  body = body.replace(/(^Format: .*\n)/m, `$1Hörtext: ${name}\nWiedergaben: ${plays}\n`);
-  t = t.slice(0, mt.index) + mt[1] + body + t.slice(mt.index + mt[0].length);
-  writeFileSync(f, t);
-}
 
 console.log(`\n${linked} قسم انربط${dry ? ' (تجربة — ما انحفظ شي)' : ''}`);
 if (whole.length)   console.log(`\n⚠ ${whole.length} ملف للامتحان كامل — ما بينقسم لأقسام، فانتخطّى:\n   ${whole.slice(0,4).join('\n   ')}${whole.length>4?'\n   …':''}`);
