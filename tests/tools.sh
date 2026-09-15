@@ -290,6 +290,25 @@ check "★ ولا PNG بصور الامتحانات ($PNGS) — tools/shrink_ima
 python3 -c "import ast,sys; ast.parse(open('tools/shrink_images.py').read())"
 check "shrink_images.py صحيح نحوياً" $?
 
+# ---------- ربط التسجيلات ----------
+# ★ الأداة بتنسخ وبتكتب `Hörtext:` بضربة. الفحص بيجرّبها على بنية
+#   تحميل حقيقية الشكل — مجلّد لكل نموذج، وملفّ لكل جزء — وبيتأكّد إنّ
+#   الاسم الناتج بيحمل مستواه. دلو الصوت مسطّح متل دلو الصور، و
+#   «modell-01-hv1.mp3» موجود بتلات مستويات: بلا بادئة بيدعسوا بعض.
+DL="$TMP/dl/modell-01_PETRA"; mkdir -p "$DL"
+: > "$DL/hv1_Arbeitsplatz.mp3"; : > "$DL/hv2_Verein.mp3"
+: > "$DL/modell-01_PETRA_hoeren_komplett.mp3"
+OUT=$(node tools/link_audio.mjs "$TMP/dl" telc/b1 --dry-run 2>&1)
+echo "$OUT" | grep -q 'audio/telc-b1-m01-hv1.mp3' \
+  && echo "$OUT" | grep -q 'audio/telc-b1-m01-hv2.mp3'
+check "★ ربط التسجيلات: الاسم بيحمل مستواه (telc-b1-m01-hv1.mp3)" $?
+
+echo "$OUT" | grep -q 'للامتحان كامل'
+check "★ وملفّ الامتحان الكامل بينتخطّى مع سببه، ما بينحطّ بقسم غلط" $?
+
+git diff --quiet -- data/ content/ 2>/dev/null
+check "★ و--dry-run ما بيلمس ولا ملف" $?
+
 # ★ الدلو مسطّح: كل الصور بتنزل جنب بعض تحت img/، فالاسم لازم يكون
 #   فريد بكل المستويات مو بالمستوى لحاله.
 #

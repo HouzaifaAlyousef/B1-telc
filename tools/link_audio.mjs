@@ -1,0 +1,126 @@
+/* يربط تسجيلاتك المحمّلة بأقسام الاستماع — نسخ + كتابة `Hörtext:` بضربة.
+ *
+ *   node tools/link_audio.mjs ~/downloads/telc-b1 telc/b1 --dry-run
+ *   node tools/link_audio.mjs ~/downloads/telc-b1 telc/b1
+ *
+ * بيتوقّع مجلّد لكل نموذج، اسمه بيبلّش بـmodell-NN (الباقي ما بيهمّ):
+ *   modell-01_PETRA/hv1_Arbeitsplatz_fuer_ihren_Vater.mp3
+ *   modell-08_FIRMENORGANIGRAMM/..._teil1.mp3
+ *   modell-01_RAFAELA/ZA1_MS_A1_060917.mp3
+ *
+ * ★ الاسم بالدلو لازم يكون فريد **بكل المستويات**: دلو الصوت مسطّح متل
+ *   دلو الصور، و«modell-01-hv1.mp3» موجود بتلات مستويات. فالاسم الناتج
+ *   بيحمل مستواه: telc-b1-m01-hv1.mp3
+ *
+ * ★ telc/b1 مصدره data/*.json مو content/ — الأداة بتكتب هونيك، وبتقلّك
+ *   تشغّل sync_b1_content بعدها. غيره بينكتب بـtext.txt مباشرةً.
+ */
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync,
+         copyFileSync, statSync } from 'fs';
+import path from 'path';
+
+const ROOT = path.resolve(import.meta.dirname, '..');
+const [src, rel, ...rest] = process.argv.slice(2);
+const dry   = rest.includes('--dry-run');
+const plays = Number((rest.find(x => x.startsWith('--plays=')) || '').split('=')[1]) || 2;
+
+if (!src || !rel) {
+  console.error('الاستعمال: node tools/link_audio.mjs <مجلّد التحميل> <مؤسسة>/<درجة> [--plays=2] [--dry-run]');
+  process.exit(2);
+}
+const [prov, lvl] = rel.split('/');
+const cdir = path.join(ROOT, 'content', prov, lvl);
+if (!existsSync(cdir)) { console.error(`✗ ما في ${cdir}`); process.exit(1); }
+if (!existsSync(src))  { console.error(`✗ ما في ${src}`); process.exit(1); }
+
+/* أي ملف لأي قسم. الترتيب مهمّ: «komplett» قبل «hv1» تا ما يلقفه hv1. */
+const RULES = [
+  [/hoeren[_-]?komplett|hoeren\.mp3$|_hoeren_simulation/i, '*'],   // الامتحان كله
+  [/hoeren[_-]?schreiben/i, 'hvs'],
+  [/(^|[^a-z])hv1|teil[_-]?1|_A1_/i, 'hv1'],
+  [/(^|[^a-z])hv2|teil[_-]?2|_A2_/i, 'hv2'],
+  [/(^|[^a-z])hv3|teil[_-]?3|_A3_/i, 'hv3'],
+  [/(^|[^a-z])hv4|teil[_-]?4|_A4_/i, 'hv4'],
+];
+const sectionOf = (name) => (RULES.find(([re]) => re.test(name)) || [])[1] ?? null;
+
+const models = readdirSync(cdir)
+  .filter(d => d.startsWith('modell-') && statSync(path.join(cdir, d)).isDirectory())
+  .sort();
+
+let linked = 0, whole = [], missing = [], extra = [];
+
+for (const m of models) {
+  const nn  = m.slice('modell-'.length);
+  const box = readdirSync(src).find(d =>
+    statSync(path.join(src, d)).isDirectory() && d.startsWith(`modell-${nn}`));
+  if (!box) { missing.push(m); continue; }
+
+  const files = readdirSync(path.join(src, box))
+    .filter(f => /\.(mp3|m4a|ogg|wav)$/i.test(f));
+  const pick = {};
+  for (const f of files) {
+    const sec = sectionOf(f);
+    if (sec === '*') { whole.push(`${box}/${f}`); continue; }
+    if (!sec) { extra.push(`${box}/${f}`); continue; }
+    pick[sec] ??= f;                       // أول تطابق بيفوز
+  }
+  if (!Object.keys(pick).length) continue;
+
+  const adir = path.join(cdir, m, 'audio');
+  for (const [sec, f] of Object.entries(pick)) {
+    const ext  = path.extname(f).toLowerCase();
+    const name = `${prov}-${lvl}-m${nn}-${sec}${ext}`;
+    console.log(`  ${m}/${sec.padEnd(3)} ← ${f}`);
+    console.log(`      → audio/${name}`);
+    if (!dry) {
+      mkdirSync(adir, { recursive: true });
+      copyFileSync(path.join(src, box, f), path.join(adir, name));
+      setAudio(prov, lvl, m, sec, name, plays);
+    }
+    linked++;
+  }
+}
+
+/* كتابة `Hörtext:` بمصدر المستوى — data/ لـtelc/b1، وtext.txt لغيره */
+function setAudio(prov, lvl, m, sec, name, plays) {
+  if (prov === 'telc' && lvl === 'b1') {
+    const f = path.join(ROOT, 'data', `${m}.json`);
+    const d = JSON.parse(readFileSync(f, 'utf8'));
+    const s = (d.sections || []).find(x => x.id === sec);
+    if (!s) throw new Error(`${m}: ما في قسم ${sec}`);
+    s.audio = name; s.audioPlays = plays;
+    // ★ ملاحظة «ما في تسجيلات بالـPDF» صارت كذب بعد ما إجا التسجيل.
+    //   التطبيق بيخفيها لحاله لما يكون في صوت، بس خلّيها تنشال من
+    //   المصدر كمان — ملاحظة كاذبة بالملف بترجع تطلع بأوّل تصدير.
+    if (/H(ö|oe)rtexte .*nicht enthalten/i.test(s.note || '')) delete s.note;
+    writeFileSync(f, JSON.stringify(d, null, 1) + '\n');
+    return;
+  }
+  const f = path.join(ROOT, 'content', prov, lvl, m, 'text.txt');
+  let t = readFileSync(f, 'utf8');
+  const re = new RegExp(`(^### Teil: ${sec}$)([\\s\\S]*?)(?=^### Teil: |\\Z)`, 'm');
+  const mt = re.exec(t);
+  if (!mt) throw new Error(`${m}: ما في قسم ${sec} بـtext.txt`);
+  let body = mt[2]
+    .replace(/^H(ö|oe)rtext: .*\n/gm, '')
+    .replace(/^Wiedergaben: .*\n/gm, '')
+    .replace(/^Hinweis: .*H(ö|oe)rtexte .*nicht enthalten.*\n/gm, '');
+  // بعد سطر Format: — مطرحه الطبيعي بباقي الملفّات
+  body = body.replace(/(^Format: .*\n)/m, `$1Hörtext: ${name}\nWiedergaben: ${plays}\n`);
+  t = t.slice(0, mt.index) + mt[1] + body + t.slice(mt.index + mt[0].length);
+  writeFileSync(f, t);
+}
+
+console.log(`\n${linked} قسم انربط${dry ? ' (تجربة — ما انحفظ شي)' : ''}`);
+if (whole.length)   console.log(`\n⚠ ${whole.length} ملف للامتحان كامل — ما بينقسم لأقسام، فانتخطّى:\n   ${whole.slice(0,4).join('\n   ')}${whole.length>4?'\n   …':''}`);
+if (missing.length) console.log(`\n⚠ ${missing.length} نموذج ما لقيتله مجلّد: ${missing.join(', ')}`);
+if (extra.length)   console.log(`\n· ${extra.length} ملف ما عرفت لأي قسم: ${extra.slice(0,3).join(', ')}${extra.length>3?' …':''}`);
+if (!dry && linked) {
+  console.log('\n▸ وبعدها:');
+  if (prov === 'telc' && lvl === 'b1')
+    console.log('   node tools/sync_b1_content.mjs && python3 tools/export_sql.py data supabase/seed/b1.sql --level b1');
+  else
+    console.log(`   node tools/content_to_seed.mjs ${rel} supabase/seed/…sql`);
+  console.log('   python3 tools/upload_audio.py content');
+}

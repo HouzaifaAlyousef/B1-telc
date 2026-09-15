@@ -237,3 +237,43 @@ Wiedergaben: 2
 من برّا، وأخد ملفّ من موقع تاني وعرضه بمنتج مدفوع سؤال ترخيص. لمّا توصل
 التسجيلات الحقيقية، حطّها بـ`audio/` وارفعها بـ`tools/upload_audio.py`
 وبدّل السطر لاسم الملف.
+
+## ربط تسجيلاتك المحمّلة
+
+عندك مجلّد تحميل، مجلّد لكل نموذج وملفّ لكل جزء:
+
+```
+downloads/telc-b1/modell-01_PETRA/hv1_Arbeitsplatz_fuer_ihren_Vater.mp3
+                                  hv2_Frau_Schaeffer_und_ein_Verein.mp3
+                                  hv3_Georg_und_Claudia.mp3
+```
+
+أمر واحد بيربطهن كلهن:
+
+```bash
+node tools/link_audio.mjs ~/downloads/telc-b1 telc/b1 --dry-run   # شوف أوّلاً
+node tools/link_audio.mjs ~/downloads/telc-b1 telc/b1             # ونفّذ
+```
+
+بينسخ الملفّ لـ`content/.../audio/`، وبيكتب `Hörtext:` و`Wiedergaben: 2`
+بمصدر المستوى (`data/*.json` لـtelc B1، و`text.txt` لغيره)، وبيشيل
+ملاحظة «ما في تسجيلات بالـPDF» لأنّها صارت كذب.
+
+بيعرف الأجزاء من أسماء الملفّات: `hv1_` · `_teil1` · `_A1_` … ونفس الشي
+للتاني والتالت، و`hoeren_schreiben` بيروح لـ`hvs`.
+
+★ **الاسم الناتج بيحمل مستواه** — `telc-b1-m01-hv1.mp3`. دلو الصوت مسطّح
+متل دلو الصور، و`modell-01-hv1.mp3` موجود بتلات مستويات: بلا بادئة
+بيدعسوا بعض.
+
+⚠ **ملفّ الامتحان الكامل** (`*_hoeren_komplett.mp3`) بينتخطّى: ما بينقسم
+لأقسام، وحطّه بقسم واحد معناه إنّ الطالب بيسمع الامتحان كلّه بجزء واحد
+ويحرق تشغيلاته. الأداة بتسمّيه بالتقرير وبتتركه إلك.
+
+وبعد الربط:
+
+```bash
+node tools/sync_b1_content.mjs                                     # telc B1 فقط
+python3 tools/export_sql.py data supabase/seed/b1.sql --level b1   # أو content_to_seed لغيره
+python3 tools/upload_audio.py content
+```
