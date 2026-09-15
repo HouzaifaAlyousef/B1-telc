@@ -92,8 +92,8 @@
    "id": "modell-12",
    "file": "modell-12.json",
    "title": "ANDREAS2",
-   "sections": 6,
-   "aufgaben": 40,
+   "sections": 9,
+   "aufgaben": 61,
    "minutes": 150
   },
   {
@@ -101,7 +101,7 @@
    "file": "modell-13.json",
    "title": "THOMAS",
    "sections": 9,
-   "aufgaben": 52,
+   "aufgaben": 61,
    "minutes": 150
   },
   {
@@ -134,6 +134,22 @@
    "title": "TANJA",
    "sections": 6,
    "aufgaben": 41,
+   "minutes": 150
+  },
+  {
+   "id": "modell-18",
+   "file": "modell-18.json",
+   "title": "LAURA",
+   "sections": 9,
+   "aufgaben": 61,
+   "minutes": 150
+  },
+  {
+   "id": "modell-19",
+   "file": "modell-19.json",
+   "title": "MORITZ",
+   "sections": 9,
+   "aufgaben": 61,
    "minutes": 150
   }
  ]

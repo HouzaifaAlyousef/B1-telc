@@ -1768,19 +1768,22 @@ on conflict (item_id) do update set answer = excluded.answer, explanation = excl
 
 -- ================= modell-12 · ANDREAS2 =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('b1', 'modell-12', 'ANDREAS2', '40 Aufgaben · 150 Minuten',
-        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv3", "sb2"], "maxPoints": 105.0, "availablePoints": 62.5, "missing": 16}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 50.0, "missing": 5}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45, "missing": 0}]'::jsonb, 40, true, 12)
+values ('b1', 'modell-12', 'ANDREAS2', '61 Aufgaben · 150 Minuten',
+        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 105.0, "missing": 0}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45.0, "missing": 0}]'::jsonb, 61, true, 12)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
 insert into sections (test_id, section_id, "group", title, minutes, instruction, format, config, sort)
 select t.id, v.section_id, v.grp, v.title, v.minutes, v.instruction, v.format, v.config, v.sort
 from (values
     ('lv1', 'Leseverstehen', 'Leseverstehen, Teil 1', 15, 'Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.', 'matching', '{"bank": [{"key": "A", "text": "Bilder mit dem Computer bearbeiten"}, {"key": "B", "text": "Kirche bietet Backkurs für Kinder an"}, {"key": "C", "text": "Kirche eröffnet neuen Treffpunkt"}, {"key": "D", "text": "Neu: Kochbuch über Weiner Fleischgerichte"}, {"key": "E", "text": "Neue Computerprogramme werden getestet"}, {"key": "F", "text": "Preis für bestes Lernprogramm"}, {"key": "G", "text": "Rezepte für Kuchen und Torten"}, {"key": "H", "text": "Studie zeigt: Kaffeetrinker sind glücklicher"}, {"key": "I", "text": "Warum die Wiener ins Café gehen"}, {"key": "J", "text": "Zürcher Fotografen stellen aus"}], "bankTitle": "Überschriften", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 0),
-    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.', 'matching', '{"bank": [{"key": "A", "text": ""}, {"key": "B", "text": ""}, {"key": "C", "text": ""}, {"key": "D", "text": ""}, {"key": "E", "text": ""}, {"key": "F", "text": ""}, {"key": "G", "text": ""}, {"key": "H", "text": ""}, {"key": "I", "text": ""}, {"key": "J", "text": ""}, {"key": "K", "text": ""}, {"key": "L", "text": ""}, {"key": "X", "text": ""}], "bankTitle": "Anzeigen", "bankImage": "img/m12-lv3.jpg", "maxPoints": 25.0, "availablePoints": 22.5, "missing": 1, "pointsPerItem": 2.5}'::jsonb, 1),
-    ('sb2', 'Sprachbausteine', 'Sprachbausteine, Teil 2', 15, 'Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.', 'wordbank', '{"bank": [{"key": "A", "text": "ALS"}, {"key": "B", "text": "ANFANGEN"}, {"key": "C", "text": "ARBEITEN"}, {"key": "D", "text": "ERZÄHLT"}, {"key": "E", "text": "FALLS"}, {"key": "F", "text": "INFORMIERT"}, {"key": "G", "text": "INTERESSIERT"}, {"key": "H", "text": "MÖCHTEN"}, {"key": "I", "text": "MÖGLICH"}, {"key": "J", "text": "NUR"}, {"key": "K", "text": "ÖFTER"}, {"key": "L", "text": "UNBEKANNT"}, {"key": "M", "text": "VOR"}, {"key": "N", "text": "WÜRDE"}, {"key": "O", "text": "ZWISCHEN"}], "bankTitle": "Wörterliste", "passages": [{"paragraphs": [{"t": ") (", "b": false}, {"t": "Neuendorf, den…. Sehr geehrte Frau Bauer, ich habe Ihre Anzeige in der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31).", "b": false}, {"t": "ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe ich während meines Studiums viele Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, acht Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe.", "b": false}, {"t": "Am Anfang war es sehr schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen gelernt, die mir auch über die Kultur und das Leben in Portugal (38) haben.", "b": false}, {"t": "Ich glaube, dass meine Erfahrungen für viele andere Menschen, die auch im Ausland leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich gerne anrufen, meine Telefonnummer ist 07612/64788980.", "b": false}, {"t": "Ich würde mich freuen, bald von Ihnen zu hören. Mit freundlichen Grüßen KAROLINE POINTNER", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 2),
-    ('hv2', 'Hörverstehen', 'Hörverstehen, Teil 2', 14, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 3),
-    ('hv3', 'Hörverstehen', 'Hörverstehen, Teil 3', 8, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 4),
-    ('sa', 'Schriftlicher Ausdruck', 'Schriftlicher Ausdruck', 30, 'Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:', 'writing', '{"brief": {"intro": "Ein Bekannter hat Ihnen folgenden Brief geschrieben:", "greeting": "Liebe(r)........", "paragraphs": ["es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentlich viel am Computer?", "Lass doch mal wieder was von dir hören!", "Liebe Grüße und bis bald"], "signature": "Andreas"}, "hints": ["Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"], "criteria": [{"title": "Aufgabenbewältigung", "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"}, {"title": "Kommunikative Gestaltung", "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"}, {"title": "Formale Richtigkeit", "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"}], "grades": [{"key": "A", "points": 5}, {"key": "B", "points": 3}, {"key": "C", "points": 1}, {"key": "D", "points": 0}], "factor": 3, "maxPoints": 45, "availablePoints": 45, "missing": 0}'::jsonb, 5)
+    ('lv2', 'Leseverstehen', 'Leseverstehen, Teil 2', 20, 'Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Mehr Platz und Schutz für Bienen", "b": true}, {"t": "Seit einiger Zeit hört man immer wieder, dass Bienen vom Aussterben bedroht sind. Welche Folgen hat das für die Menschheit und was wird dagegen unternommen?", "b": false}, {"t": "Bienen spielen eine sehr wichtige Rolle für unsere Umwelt. Weltweit stirbt seit Jahren ein großer Teil der Bienenbevölkerung. Warum so viele Bienen sterben, lässt sich nicht so einfach sagen, denn meistens spielen mehrere Faktoren eine Rolle, wie zum Beispiel der Gebrauch von Pestiziden in der Landwirtschaft, fehlende Wiesen und Grünflächen, Luftverschmutzung und Klimawandel.", "b": false}, {"t": "In den letzten Jahren sind vor allem in den Städten immer mehr Aktionen ins Leben gerufen worden, um neuen Lebensraum von Bienen zu schaffen. Bienen finden heute in vielen Städten ausreichend Nahrung, weil immer mehr Menschen für sie sorgen. „Bienen sind spannend“, meint Sebastian Werner. „Man sieht sie nicht immer, sie sind eher im Verborgenen und haben etwas Geheimnisvolles.“ „Die Biene ist für viele Menschen auch ein Symbol für Wildnis“, sagt Thorsten Gottlieb. „Und es ist schön für uns Menschen, das zu erleben. Faszinierend, ihnen bei ihrer Arbeit zu beobachten, stundenlang.“ Werner und Kessel sind der Überzeugung, dass ohne die Biene die Arbeit des Menschen kaum möglich wäre. Bienen bestäuben einen Großteil unserer Nahrungsmittel. Diese drei sind mit dem Thema vertraut, da sie das jährliche Frankfurter Bienenfestival vorbereiten. Gottlieb und Werner sind Gründer der Initiative und Kessel ist der Gastgeber und Leiter des Botanischen Gartens, wo das Festival stattfindet.", "b": false}, {"t": "Die Beschäftigung mit Bienen wirkt entspannend im stressigen Tempo des Alltags. Außerdem ist die Welt, wie sie ist, ohne Bienen gar nicht vorstellbar. Sie sorgen für die Verbreitung hunderttausender Pflanzen, die Mensch und Tier zur Ernährung brauchen.", "b": false}, {"t": "In Frankfurt besteht seit vielen hundert Jahren eine Tradition der Bienenhaltung. Für Einsteiger gibt es ein großes Angebot an Kursen.", "b": false}, {"t": "„Du brauchst Grundlagen und eine gute Ausbildung, sonst machst du einfach zu viele Fehler“, warnt Thorsten Gottlieb. „Du hast eine riesengroße Verantwortung“, fügt Sebastian Werner hinzu. „Du musst wissen, was du da tust – nicht nur, weil du für bis zu 60 000 Bienen in einem einzigen Volk zu sorgen hast. Alle Bienenvölker im Umkreis sind betroffen, wenn dein Volk krank ist.“", "b": false}]}], "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 1),
+    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.', 'matching', '{"bank": [{"key": "A", "text": ""}, {"key": "B", "text": ""}, {"key": "C", "text": ""}, {"key": "D", "text": ""}, {"key": "E", "text": ""}, {"key": "F", "text": ""}, {"key": "G", "text": ""}, {"key": "H", "text": ""}, {"key": "I", "text": ""}, {"key": "J", "text": ""}, {"key": "K", "text": ""}, {"key": "L", "text": ""}, {"key": "X", "text": ""}], "bankTitle": "Anzeigen", "bankImage": "img/m12-lv3.jpg", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 2),
+    ('sb1', 'Sprachbausteine', 'Sprachbausteine, Teil 1', 20, 'Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Hallo Kathrin,", "b": false}, {"t": "wir sind heute wieder mit unseren Enkeln unterwegs. Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht. Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier. Nun (23) wir einfach nur Porto genießen. Die Wettervorhersage hört sich gut an.", "b": false}, {"t": "Die Flüge von Hannover (24) Frankfurt waren verspätet, aber wir sind gut angekommen. Die Verspätung wurde durch Nebel und technische Probleme verursacht. (25) wir in Porto landeten, schien zum Glück wieder die Sonne.", "b": false}, {"t": "Wir sind sehr zufrieden mit (26) Unterkunft. Es gibt zwei Zimmer mit einer gut eingerichteten Küche, sogar eine Waschmaschine (27) vorhanden.", "b": false}, {"t": "Morgen werden wir (28) Ruhe die Stadt erkunden. Wir haben uns ein kleines Programm (29), das wir gerne in den nächsten Tagen machen wollen. Die Reihenfolge haben wir aber (30) nicht festgelegt. Da sind wir flexibel.", "b": false}, {"t": "Viele Grüße", "b": false}, {"t": "Anne", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 3),
+    ('sb2', 'Sprachbausteine', 'Sprachbausteine, Teil 2', 15, 'Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.', 'wordbank', '{"bank": [{"key": "A", "text": "ALS"}, {"key": "B", "text": "ANFANGEN"}, {"key": "C", "text": "ARBEITEN"}, {"key": "D", "text": "ERZÄHLT"}, {"key": "E", "text": "FALLS"}, {"key": "F", "text": "INFORMIERT"}, {"key": "G", "text": "INTERESSIERT"}, {"key": "H", "text": "MÖCHTEN"}, {"key": "I", "text": "MÖGLICH"}, {"key": "J", "text": "NUR"}, {"key": "K", "text": "ÖFTER"}, {"key": "L", "text": "UNBEKANNT"}, {"key": "M", "text": "VOR"}, {"key": "N", "text": "WÜRDE"}, {"key": "O", "text": "ZWISCHEN"}], "bankTitle": "Wörterliste", "passages": [{"paragraphs": [{"t": ") (", "b": false}, {"t": "Neuendorf, den…. Sehr geehrte Frau Bauer, ich habe Ihre Anzeige in der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31).", "b": false}, {"t": "ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe ich während meines Studiums viele Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, acht Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe.", "b": false}, {"t": "Am Anfang war es sehr schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen gelernt, die mir auch über die Kultur und das Leben in Portugal (38) haben.", "b": false}, {"t": "Ich glaube, dass meine Erfahrungen für viele andere Menschen, die auch im Ausland leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich gerne anrufen, meine Telefonnummer ist 07612/64788980.", "b": false}, {"t": "Ich würde mich freuen, bald von Ihnen zu hören. Mit freundlichen Grüßen KAROLINE POINTNER", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 4),
+    ('hv1', 'Hörverstehen', 'Hörverstehen, Teil 1', 8, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 5),
+    ('hv2', 'Hörverstehen', 'Hörverstehen, Teil 2', 14, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 6),
+    ('hv3', 'Hörverstehen', 'Hörverstehen, Teil 3', 8, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 7),
+    ('sa', 'Schriftlicher Ausdruck', 'Schriftlicher Ausdruck', 30, 'Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:', 'writing', '{"brief": {"intro": "Ein Bekannter hat Ihnen folgenden Brief geschrieben:", "greeting": "Liebe(r)........", "paragraphs": ["es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentlich viel am Computer?", "Lass doch mal wieder was von dir hören!", "Liebe Grüße und bis bald"], "signature": "Andreas"}, "hints": ["Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"], "criteria": [{"title": "Aufgabenbewältigung", "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"}, {"title": "Kommunikative Gestaltung", "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"}, {"title": "Formale Richtigkeit", "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"}], "grades": [{"key": "A", "points": 5}, {"key": "B", "points": 3}, {"key": "C", "points": 1}, {"key": "D", "points": 0}], "factor": 3, "maxPoints": 45, "availablePoints": 45, "missing": 0}'::jsonb, 8)
 ) as v(section_id, grp, title, minutes, instruction, format, config, sort)
 join tests t on t.level_id = 'b1' and t.slug = 'modell-12'
 on conflict (test_id, section_id) do update set "group" = excluded."group", title = excluded.title, minutes = excluded.minutes, instruction = excluded.instruction, format = excluded.format, config = excluded.config, sort = excluded.sort;
@@ -1793,6 +1796,11 @@ from (values
     ('lv1', '3', 'Geheimnisse der modernen Konditorkunst der Meister des Süßen, Herwig Gasser, in Jahre hinweg sammelte der Bäcker des berühmten Wiener Café Landmann Mehlspeisenrezepte. Von der Birnentorte über den Apfelstrudel bis hin zum Heidelbeerstolle Verlag Kettel, 110 Fotos, 300 Seiten. – – ISBAN 3 85134 014 -0', null::jsonb, 5.0, null::jsonb, 2),
     ('lv1', '4', 'Am Montag wird in Stuttgart die Bildungs-Didacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.', null::jsonb, 5.0, null::jsonb, 3),
     ('lv1', '5', '– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus', null::jsonb, 5.0, null::jsonb, 4),
+    ('lv2', '6', 'Das Bienensterben', '[{"key": "A", "text": "ist ein noch ungelöstes Problem."}, {"key": "B", "text": "kann man nur in bestimmten Regionen beobachten."}, {"key": "C", "text": "lässt sich auf eine einzige Ursache zurückführen."}]'::jsonb, 5.0, null::jsonb, 0),
+    ('lv2', '7', 'In vielen Städten', '[{"key": "A", "text": "finden Bienen wenig Futter."}, {"key": "B", "text": "kann man keine Bienen mehr sehen."}, {"key": "C", "text": "schafft man mehr Platz für Bienen."}]'::jsonb, 5.0, null::jsonb, 1),
+    ('lv2', '8', 'Werner, Gottlieb und Kessel', '[{"key": "A", "text": "arbeiten in einer Parkanlage in Frankfurt."}, {"key": "B", "text": "forschen über Bienen und ihren Lebensraum."}, {"key": "C", "text": "organisieren eine Veranstaltung über Bienen."}]'::jsonb, 5.0, null::jsonb, 2),
+    ('lv2', '9', 'Experten nehmen an, dass', '[{"key": "A", "text": "es in vier Jahren keine Bienen mehr gibt."}, {"key": "B", "text": "man viele Lebensmittel ohne Bienen herstellen kann."}, {"key": "C", "text": "menschliches Leben ohne Bienen nicht möglich ist."}]'::jsonb, 5.0, null::jsonb, 3),
+    ('lv2', '10', 'In Frankfurt gibt es', '[{"key": "A", "text": "schon lange Bienenhalter."}, {"key": "B", "text": "viele kranke Bienenvölker."}, {"key": "C", "text": "zurzeit 60 000 Bienen."}]'::jsonb, 5.0, null::jsonb, 4),
     ('lv3', '11', 'Sie mögen thailändisches Essen und möchten lernen, einige Speisen selbst zu kochen.', null::jsonb, 2.5, null::jsonb, 0),
     ('lv3', '12', 'Sie müssen umziehen und brauchen jemand, der Ihnen hilft.', null::jsonb, 2.5, null::jsonb, 1),
     ('lv3', '13', 'Ihr Kind hat in Mathematik schlechte Noten bekommen und braucht Nachhilfe.', null::jsonb, 2.5, null::jsonb, 2),
@@ -1802,6 +1810,17 @@ from (values
     ('lv3', '17', 'Sie wollen für eine Hochzeit einen Luxuswagen mieten.', null::jsonb, 2.5, null::jsonb, 6),
     ('lv3', '18', 'Am nächsten Montag möchten Sie mit Ihren Freunden thailändisch essen gehen.', null::jsonb, 2.5, null::jsonb, 7),
     ('lv3', '19', 'Für Ihre Geburtstagfeier suchen Sie jemanden, der bei Ihnen zu Hause kocht.', null::jsonb, 2.5, null::jsonb, 8),
+    ('lv3', '20', 'Sie wollen sich über Wohnwagen informieren.', null::jsonb, 2.5, null::jsonb, 9),
+    ('sb1', '21', 'Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht.', '[{"key": "A", "text": "kurze"}, {"key": "B", "text": "kurzen"}, {"key": "C", "text": "kurzes"}]'::jsonb, 1.5, null::jsonb, 0),
+    ('sb1', '22', 'Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier.', '[{"key": "A", "text": "bei"}, {"key": "B", "text": "mit"}, {"key": "C", "text": "ohne"}]'::jsonb, 1.5, null::jsonb, 1),
+    ('sb1', '23', 'Nun (23) wir einfach nur Porto genießen.', '[{"key": "A", "text": "haben"}, {"key": "B", "text": "müssen"}, {"key": "C", "text": "wollen"}]'::jsonb, 1.5, null::jsonb, 2),
+    ('sb1', '24', 'Die Flüge von Hannover (24) Frankfurt waren verspätet …', '[{"key": "A", "text": "aus"}, {"key": "B", "text": "unter"}, {"key": "C", "text": "über"}]'::jsonb, 1.5, null::jsonb, 3),
+    ('sb1', '25', '(25) wir in Porto landeten, schien zum Glück wieder die Sonne.', '[{"key": "A", "text": "Als"}, {"key": "B", "text": "Wann"}, {"key": "C", "text": "Wenn"}]'::jsonb, 1.5, null::jsonb, 4),
+    ('sb1', '26', 'Wir sind sehr zufrieden mit (26) Unterkunft.', '[{"key": "A", "text": "deiner"}, {"key": "B", "text": "meiner"}, {"key": "C", "text": "unserer"}]'::jsonb, 1.5, null::jsonb, 5),
+    ('sb1', '27', '… sogar eine Waschmaschine (27) vorhanden.', '[{"key": "A", "text": "hat"}, {"key": "B", "text": "ist"}, {"key": "C", "text": "wird"}]'::jsonb, 1.5, null::jsonb, 6),
+    ('sb1', '28', 'Morgen werden wir (28) Ruhe die Stadt erkunden.', '[{"key": "A", "text": "in"}, {"key": "B", "text": "mit"}, {"key": "C", "text": "zu"}]'::jsonb, 1.5, null::jsonb, 7),
+    ('sb1', '29', 'Wir haben uns ein kleines Programm (29) …', '[{"key": "A", "text": "überlegen"}, {"key": "B", "text": "überlegt"}, {"key": "C", "text": "überlegte"}]'::jsonb, 1.5, null::jsonb, 8),
+    ('sb1', '30', 'Die Reihenfolge haben wir aber (30) nicht festgelegt.', '[{"key": "A", "text": "noch"}, {"key": "B", "text": "nur"}, {"key": "C", "text": "schon"}]'::jsonb, 1.5, null::jsonb, 9),
     ('sb2', '31', '… der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor …', null::jsonb, 1.5, null::jsonb, 0),
     ('sb2', '32', '… und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe …', null::jsonb, 1.5, null::jsonb, 1),
     ('sb2', '33', '… Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein …', null::jsonb, 1.5, null::jsonb, 2),
@@ -1812,6 +1831,11 @@ from (values
     ('sb2', '38', '… die mir auch über die Kultur und das Leben in Portugal (38) haben. Ich glaube, dass meine Erfahrungen für viele …', null::jsonb, 1.5, null::jsonb, 7),
     ('sb2', '39', '… leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch …', null::jsonb, 1.5, null::jsonb, 8),
     ('sb2', '40', '… und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich …', null::jsonb, 1.5, null::jsonb, 9),
+    ('hv1', '41', 'Die Sprecherin verbringt ihren Urlaub oft auf dem Land.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv1', '42', 'Der Sprecher findet Stadturlaub in Wien interessanter als die Berge.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv1', '43', 'Die Sprecherin meint, dass sich ihre ganze Familie im Urlaub gut erholt.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv1', '44', 'Die Sprecherin findet den Urlaub in Österreich langweilig.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv1', '45', 'Die Sprecherin denkt, dass Österreich vor allem für ältere Menschen interessant ist.', null::jsonb, 5.0, null::jsonb, 4),
     ('hv2', '46', 'Herr Schütz arbeitet erst seit kurzer Zeit als Taxifahrer.', null::jsonb, 2.5, null::jsonb, 0),
     ('hv2', '47', 'In der Kleinstadt hatte Herr Schütz keine Geschäftsleute als Kunden', null::jsonb, 2.5, null::jsonb, 1),
     ('hv2', '48', 'Herr Schütz hat sich schon einmal in einen Fahrgast verliebt.', null::jsonb, 2.5, null::jsonb, 2),
@@ -1841,6 +1865,11 @@ from (values
     ('lv1', '3', 'G', null),
     ('lv1', '4', 'E', null),
     ('lv1', '5', 'I', null),
+    ('lv2', '6', 'A', null),
+    ('lv2', '7', 'C', null),
+    ('lv2', '8', 'C', null),
+    ('lv2', '9', 'C', null),
+    ('lv2', '10', 'A', null),
     ('lv3', '11', 'F', null),
     ('lv3', '12', 'K', null),
     ('lv3', '13', 'B', null),
@@ -1850,6 +1879,17 @@ from (values
     ('lv3', '17', 'X', null),
     ('lv3', '18', 'X', null),
     ('lv3', '19', 'D', null),
+    ('lv3', '20', 'J', null),
+    ('sb1', '21', 'A', null),
+    ('sb1', '22', 'B', null),
+    ('sb1', '23', 'C', null),
+    ('sb1', '24', 'C', null),
+    ('sb1', '25', 'A', null),
+    ('sb1', '26', 'C', null),
+    ('sb1', '27', 'B', null),
+    ('sb1', '28', 'A', null),
+    ('sb1', '29', 'B', null),
+    ('sb1', '30', 'A', null),
     ('sb2', '31', 'G', 'Das Wort lautet: INTERESSIERT'),
     ('sb2', '32', 'K', 'Das Wort lautet: ÖFTER'),
     ('sb2', '33', 'J', 'Das Wort lautet: NUR'),
@@ -1860,6 +1900,11 @@ from (values
     ('sb2', '38', 'D', 'Das Wort lautet: ERZÄHLT'),
     ('sb2', '39', 'N', 'Das Wort lautet: WÜRDE'),
     ('sb2', '40', 'E', 'Das Wort lautet: FALLS'),
+    ('hv1', '41', '-', null),
+    ('hv1', '42', '+', null),
+    ('hv1', '43', '+', null),
+    ('hv1', '44', '-', null),
+    ('hv1', '45', '-', null),
     ('hv2', '46', 'f', null),
     ('hv2', '47', 'r', null),
     ('hv2', '48', 'f', null),
@@ -1883,17 +1928,17 @@ on conflict (item_id) do update set answer = excluded.answer, explanation = excl
 
 -- ================= modell-13 · THOMAS =================
 insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
-values ('b1', 'modell-13', 'THOMAS', '52 Aufgaben · 150 Minuten',
-        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 84.0, "missing": 9}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45, "missing": 0}]'::jsonb, 52, true, 13)
+values ('b1', 'modell-13', 'THOMAS', '61 Aufgaben · 150 Minuten',
+        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 84.0, "missing": 9}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45, "missing": 0}]'::jsonb, 61, true, 13)
 on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
 
 insert into sections (test_id, section_id, "group", title, minutes, instruction, format, config, sort)
 select t.id, v.section_id, v.grp, v.title, v.minutes, v.instruction, v.format, v.config, v.sort
 from (values
     ('lv1', 'Leseverstehen', 'Leseverstehen, Teil 1', 15, 'Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.', 'matching', '{"bank": [{"key": "A", "text": "Eine Karte – viele Vorteile"}, {"key": "B", "text": "Endlich Ferien ohne Kinder"}, {"key": "C", "text": "Günstiger Urlaub für Vereinsmitglieder"}, {"key": "D", "text": "Meer statt Berge"}, {"key": "E", "text": "Neues Wohnprojekt für Alleinerziehende"}, {"key": "F", "text": "Reisebüros weltweit vernetzt"}, {"key": "G", "text": "Schweizer Seen weiterhin sehr beliebt"}, {"key": "H", "text": "Söhne schenken mehr als Töchter"}, {"key": "I", "text": "Schöne werden großzügiger beschenkt"}, {"key": "J", "text": "Ti W h Ki d ih S ß h b"}], "bankTitle": "Überschriften", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 0),
-    ('lv2', 'Leseverstehen', 'Leseverstehen, Teil 2', 20, 'Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Gelsenkirchen bietet schon seit Jahren preisgünstige Ferien. Über 1100 Zimmer und", "b": false}, {"t": "– –", "b": false}, {"t": "Wohnungen auch für das kleine Portemonnaie stehen zwischen Nordsee und Sizilien den", "b": false}, {"t": "Mitgliedern im neuen Katalog zur Auswahl. Nichtmitglieder erhalten diesen Katalog gegen eine", "b": false}, {"t": "Gebühr von 5 Euro. Infos: Telefon 061/981 25 25 oder", "b": false}, {"t": "www.ferienwohnung.ch", "b": false}, {"t": "Du oder Sie das ist hier die Frage", "b": true}, {"t": "Sprachliche Regeln am Arbeitsplatz", "b": true}, {"t": "Häufig erscheint Invar Kamprad, lekea-Gründer und-Besitzer, am Morgen unangemeldet angemeldet am Hintereingang einer seiner Filialen Guten Morgen ich bin der Invar Das schwedische Möbelbaus ist das beste Beispiel für die Du Kultur am Arbeitsplatz, denn alle Beschäftigten sprechen sich mit Du an. Die Gesellschaft für deutsche Sprache in Wiesbaden hat nun in einer Untersuchung festgestellt, dass mehr als 53 Prozent der befragten Personen alle Arbeitskollegen duzen. Wie zu erwarten sind es vor allem die 16 bis 29 jährigen (59 Prozent) die sich lieber schnell duzen Bei den über 60 Jährigen sank die Zahl auf 14 Prozent warum eigentlich sagt man am Arbeitsplatz immer öfter Du Zum Beispiel pflegen Ikea Greenpeace und McDonalds alle das obligatorische Du Damit wollen sie Vertrauen aufbauen und ein familiäres Umfeld schaffen. Gegenüber den Kunden ist an jedoch vorsichtiger geworden. So hat Ikea im Verkaufskatalog statt dem Du wieder das sie eingeführt Man hofft mit Sie mehr Leute nicht nur jüngere anzusprechen. Bis heute üblich ist das Du zum Beispiel in Schweizer Gewerkschaften Viele Mitglieder sind sogar beleidigt, wenn sie mit sie angesprochen werden Es gibt aber auch umgekehrten Fall, zwar bei der Polizei Wer in Deutschland einen Polizisten duzt riskiert eine Strafe in der Schweizer hingegen findet man eine Anzeige wegen Duzens eines Beamten übertrieben Polizisten werden sowieso kaum mit Du angesprochen meint Hanspeter Fäh von der Zürcher Stadtpolizei Der Trend zum Du kann jedoch auch als sozialer Druck oder Zwang empfunden werden. Ein Du abzulehnen gilt nämlich als unfreundlich. Das hat Dieter S Angestellter bei einem Textilgeschäft in Deutschland erfahren Ein Gericht entschied, dass er seine Kollegen weiterhin mit Du ansprechen musste.", "b": false}, {"t": "So sehr das Du in der Gesellschaft auch an Bedeutung gewinnt das Sie hat immer noch eine feste soziale Basis und kann diese sogar ausbauen Benimmkurse, wo man Höflichkeit und die richtigen Umgangsformen lernt, sind heute im Trend immer mehr Firmen schulen ihre Mitarbeiter in stilvollem Verhalten. Dazu gehören folgende Grundregeln: Die ältere Person bietet der jüngeren das Du an Oft ist jedoch auch die Stellung entscheidend Der ältere Mitarbeiter bietet seinem jüngeren Chef nie das Du an.", "b": false}]}], "maxPoints": 25.0, "availablePoints": 20.0, "missing": 1, "pointsPerItem": 5.0}'::jsonb, 1),
-    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.', 'matching', '{"bank": [{"key": "A", "text": ""}, {"key": "B", "text": ""}, {"key": "C", "text": ""}, {"key": "D", "text": ""}, {"key": "E", "text": ""}, {"key": "F", "text": ""}, {"key": "G", "text": ""}, {"key": "H", "text": ""}, {"key": "I", "text": ""}, {"key": "J", "text": ""}, {"key": "K", "text": ""}, {"key": "L", "text": ""}, {"key": "X", "text": ""}], "bankTitle": "Anzeigen", "bankImage": "img/m13-lv3.jpg", "maxPoints": 25.0, "availablePoints": 15.0, "missing": 4, "pointsPerItem": 2.5}'::jsonb, 2),
-    ('sb1', 'Sprachbausteine', 'Sprachbausteine, Teil 1', 20, 'Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien bestellt und diese zwei Tage vor Abflug am 27. Juni auch erhalten. Leider entsprachen die Tickets überhaupt nicht dem, was zuvor bei der Buchung am Telefon ausgemacht worden (22).", "b": false}, {"t": "(23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro.", "b": false}, {"t": "Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Bank of India in Mumbai bitten. Meine Bankdaten finden Sie unten. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.", "b": false}, {"t": "Mit freundlichen Grüßen Luisa Martin", "b": false}]}], "maxPoints": 15.0, "availablePoints": 9.0, "missing": 4, "pointsPerItem": 1.5}'::jsonb, 3),
+    ('lv2', 'Leseverstehen', 'Leseverstehen, Teil 2', 20, 'Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Gelsenkirchen bietet schon seit Jahren preisgünstige Ferien. Über 1100 Zimmer und", "b": false}, {"t": "– –", "b": false}, {"t": "Wohnungen auch für das kleine Portemonnaie stehen zwischen Nordsee und Sizilien den", "b": false}, {"t": "Mitgliedern im neuen Katalog zur Auswahl. Nichtmitglieder erhalten diesen Katalog gegen eine", "b": false}, {"t": "Gebühr von 5 Euro. Infos: Telefon 061/981 25 25 oder", "b": false}, {"t": "www.ferienwohnung.ch", "b": false}, {"t": "Du oder Sie das ist hier die Frage", "b": true}, {"t": "Sprachliche Regeln am Arbeitsplatz", "b": true}, {"t": "Häufig erscheint Invar Kamprad, lekea-Gründer und-Besitzer, am Morgen unangemeldet angemeldet am Hintereingang einer seiner Filialen Guten Morgen ich bin der Invar Das schwedische Möbelbaus ist das beste Beispiel für die Du Kultur am Arbeitsplatz, denn alle Beschäftigten sprechen sich mit Du an. Die Gesellschaft für deutsche Sprache in Wiesbaden hat nun in einer Untersuchung festgestellt, dass mehr als 53 Prozent der befragten Personen alle Arbeitskollegen duzen. Wie zu erwarten sind es vor allem die 16 bis 29 jährigen (59 Prozent) die sich lieber schnell duzen Bei den über 60 Jährigen sank die Zahl auf 14 Prozent warum eigentlich sagt man am Arbeitsplatz immer öfter Du Zum Beispiel pflegen Ikea Greenpeace und McDonalds alle das obligatorische Du Damit wollen sie Vertrauen aufbauen und ein familiäres Umfeld schaffen. Gegenüber den Kunden ist an jedoch vorsichtiger geworden. So hat Ikea im Verkaufskatalog statt dem Du wieder das sie eingeführt Man hofft mit Sie mehr Leute nicht nur jüngere anzusprechen. Bis heute üblich ist das Du zum Beispiel in Schweizer Gewerkschaften Viele Mitglieder sind sogar beleidigt, wenn sie mit sie angesprochen werden Es gibt aber auch umgekehrten Fall, zwar bei der Polizei Wer in Deutschland einen Polizisten duzt riskiert eine Strafe in der Schweizer hingegen findet man eine Anzeige wegen Duzens eines Beamten übertrieben Polizisten werden sowieso kaum mit Du angesprochen meint Hanspeter Fäh von der Zürcher Stadtpolizei Der Trend zum Du kann jedoch auch als sozialer Druck oder Zwang empfunden werden. Ein Du abzulehnen gilt nämlich als unfreundlich. Das hat Dieter S Angestellter bei einem Textilgeschäft in Deutschland erfahren Ein Gericht entschied, dass er seine Kollegen weiterhin mit Du ansprechen musste.", "b": false}, {"t": "So sehr das Du in der Gesellschaft auch an Bedeutung gewinnt das Sie hat immer noch eine feste soziale Basis und kann diese sogar ausbauen Benimmkurse, wo man Höflichkeit und die richtigen Umgangsformen lernt, sind heute im Trend immer mehr Firmen schulen ihre Mitarbeiter in stilvollem Verhalten. Dazu gehören folgende Grundregeln: Die ältere Person bietet der jüngeren das Du an Oft ist jedoch auch die Stellung entscheidend Der ältere Mitarbeiter bietet seinem jüngeren Chef nie das Du an.", "b": false}]}], "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 1),
+    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.', 'matching', '{"bank": [{"key": "A", "text": ""}, {"key": "B", "text": ""}, {"key": "C", "text": ""}, {"key": "D", "text": ""}, {"key": "E", "text": ""}, {"key": "F", "text": ""}, {"key": "G", "text": ""}, {"key": "H", "text": ""}, {"key": "I", "text": ""}, {"key": "J", "text": ""}, {"key": "K", "text": ""}, {"key": "L", "text": ""}, {"key": "X", "text": ""}], "bankTitle": "Anzeigen", "bankImage": "img/m13-lv3.jpg", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 2),
+    ('sb1', 'Sprachbausteine', 'Sprachbausteine, Teil 1', 20, 'Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien bestellt und diese zwei Tage vor Abflug am 27. Juni auch erhalten. Leider entsprachen die Tickets überhaupt nicht dem, was zuvor bei der Buchung am Telefon ausgemacht worden (22).", "b": false}, {"t": "(23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit nicht genug. Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro.", "b": false}, {"t": "Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten auf mein Konto (29) der Bank of India in Mumbai bitten. Meine Bankdaten finden Sie unten. Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten.", "b": false}, {"t": "Mit freundlichen Grüßen Luisa Martin", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 3),
     ('sb2', 'Sprachbausteine', 'Sprachbausteine, Teil 2', 15, 'Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.', 'wordbank', '{"bank": [{"key": "A", "text": "AUCH"}, {"key": "B", "text": "AUFTRAG"}, {"key": "C", "text": "BESCHREIBEN"}, {"key": "D", "text": "FRAGEN"}, {"key": "E", "text": "GEEIGENET"}, {"key": "F", "text": "GEGEÜBER"}, {"key": "G", "text": "INFORMATIONEN"}, {"key": "H", "text": "KÖNNTEN"}, {"key": "I", "text": "STATTFINDEN"}, {"key": "J", "text": "SUCHEN"}, {"key": "K", "text": "TERMIN"}, {"key": "L", "text": "TOUR"}, {"key": "M", "text": "VOR"}, {"key": "N", "text": "WÄREN"}, {"key": "O", "text": "WEIL"}], "bankTitle": "Wörterliste", "passages": [{"paragraphs": [{"t": "3. anach an", "b": false}, {"t": "Obwohl sondern bei", "b": false}, {"t": "B B", "b": false}, {"t": "Nämlich sonst vor", "b": false}, {"t": "C C", "b": false}, {"t": ") (", "b": false}, {"t": "Sehr geehrte Damen und Herren,", "b": false}, {"t": "unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen", "b": false}, {"t": "Entwicklungsprogrammen vorzubereiten.", "b": false}, {"t": "Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die verschiedenen touristischen Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt.", "b": false}, {"t": "Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit Konferenz- und Arbeitsräumen, ausgestattet mit den notwendigen technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge schicken? Der (39) wäre 15.-21. November. Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen", "b": false}, {"t": "ADRIAN SCHÖLLER EVD Trans GmbH", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 4),
     ('hv1', 'Hörverstehen', 'Hörverstehen, Teil 1', 8, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 5),
     ('hv2', 'Hörverstehen', 'Hörverstehen, Teil 2', 14, 'Entscheiden Sie, ob die Aussagen richtig oder falsch sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 6),
@@ -1915,18 +1960,27 @@ from (values
     ('lv2', '7', 'In der Schweiz', '[{"key": "A", "text": "gilt das Du in Gewerkschaften als Beleidigung."}, {"key": "B", "text": "werden Polizisten nur selten mit Du angesprochen."}, {"key": "C", "text": "wird man bestraft, wenn man zu Beamten Du sagt."}]'::jsonb, 5.0, null::jsonb, 1),
     ('lv2', '8', 'Eine Untersuchung hat gezeigt,', '[{"key": "A", "text": "dass 14 Prozent der jüngeren Mitarbeiter das Sie vorziehen."}, {"key": "B", "text": "dass besonders jüngere Arbeitskollegen schneller das Du wählen."}, {"key": "C", "text": "dass sich alle Arbeitskollegen gern mit Du anderen würden."}]'::jsonb, 5.0, null::jsonb, 2),
     ('lv2', '9', 'Durch Kurse können Angestellte', '[{"key": "A", "text": "höfliches Verhalten am Arbeitsplatz lernen."}, {"key": "B", "text": "ihre Stellung im Arbeitsleben verbessern."}, {"key": "C", "text": "neue Trends beim Einrichten des Arbeitsplatzes kennen lernen."}]'::jsonb, 5.0, null::jsonb, 3),
+    ('lv2', '10', 'Im Berufsleben', '[{"key": "A", "text": "bietet immer die ranghöhere Person das Du an."}, {"key": "B", "text": "duzt der ältere Mitarbeiter den jüngeren Chef."}, {"key": "C", "text": "entscheidet immer das Alter, wer das Du anbietet."}]'::jsonb, 5.0, null::jsonb, 4),
     ('lv3', '11', 'Sie haben von einer Schweizer Schauspielerin gehört und möchten gern einen Film sehen.', null::jsonb, 2.5, null::jsonb, 0),
     ('lv3', '12', 'Sie haben gerade Ihre Ausbildung beendet und suchen eine Stelle an der Rezeption.', null::jsonb, 2.5, null::jsonb, 1),
     ('lv3', '13', 'Sie interessieren sich für Umweltschutz und suchen eine passende Sendung.', null::jsonb, 2.5, null::jsonb, 2),
     ('lv3', '14', 'Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz.', null::jsonb, 2.5, null::jsonb, 3),
     ('lv3', '15', 'In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren.', null::jsonb, 2.5, null::jsonb, 4),
     ('lv3', '16', 'Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk.', null::jsonb, 2.5, null::jsonb, 5),
+    ('lv3', '17', 'Sie sind mit der Schule fertig und wollen bei der Deutschen Bahn eine Ausbildung machen.', null::jsonb, 2.5, null::jsonb, 6),
+    ('lv3', '18', 'Sie interessieren sich für politisches Theater und möchten dazu am Wochenende etwas hören oder sehen.', null::jsonb, 2.5, null::jsonb, 7),
+    ('lv3', '19', 'Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma.', null::jsonb, 2.5, null::jsonb, 8),
+    ('lv3', '20', 'Sie wollen mehr über das Thema Arbeiten in Europa erfahren.', null::jsonb, 2.5, null::jsonb, 9),
     ('sb1', '21', 'Sehr geehrter Herr Samir, im Mai habe ich bei (21) für mich und meine Familie Flugtickets nach Indien …', '[{"key": "A", "text": "ihnen"}, {"key": "B", "text": "Ihnen"}, {"key": "C", "text": "Sie"}]'::jsonb, 1.5, null::jsonb, 0),
     ('sb1', '22', '… was zuvor bei der Buchung am Telefon ausgemacht worden (22). (23) ich ausdrücklich einen Direktflug nach Mumbai …', '[{"key": "A", "text": "hat"}, {"key": "B", "text": "war"}, {"key": "C", "text": "wäre"}]'::jsonb, 1.5, null::jsonb, 1),
-    ('sb1', '24', '… nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …', '[{"key": "A", "text": "für"}, {"key": "B", "text": "mit"}, {"key": "C", "text": "zu"}]'::jsonb, 1.5, null::jsonb, 2),
-    ('sb1', '25', '… Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit …', '[{"key": "A", "text": "erst"}, {"key": "B", "text": "jetzt"}, {"key": "C", "text": "schon"}]'::jsonb, 1.5, null::jsonb, 3),
-    ('sb1', '27', '… noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der …', '[{"key": "A", "text": "den"}, {"key": "B", "text": "der"}, {"key": "C", "text": "die"}]'::jsonb, 1.5, null::jsonb, 4),
-    ('sb1', '30', '… Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Luisa Martin', '[{"key": "A", "text": "mich"}, {"key": "B", "text": "mir"}, {"key": "C", "text": "sich"}]'::jsonb, 1.5, null::jsonb, 5),
+    ('sb1', '23', '… (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets …', '[{"key": "A", "text": "Obwohl"}, {"key": "B", "text": "Weil"}, {"key": "C", "text": "Da"}]'::jsonb, 1.5, null::jsonb, 2),
+    ('sb1', '24', '… nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …', '[{"key": "A", "text": "für"}, {"key": "B", "text": "mit"}, {"key": "C", "text": "zu"}]'::jsonb, 1.5, null::jsonb, 3),
+    ('sb1', '25', '… Wir mussten eine Nacht in Delhi verbringen und kamen so (25) einen Tag später als geplant in Mumbai an. Doch damit …', '[{"key": "A", "text": "erst"}, {"key": "B", "text": "jetzt"}, {"key": "C", "text": "schon"}]'::jsonb, 1.5, null::jsonb, 4),
+    ('sb1', '26', '… Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. …', '[{"key": "A", "text": "aber"}, {"key": "B", "text": "sondern"}, {"key": "C", "text": "und"}]'::jsonb, 1.5, null::jsonb, 5),
+    ('sb1', '27', '… noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der …', '[{"key": "A", "text": "den"}, {"key": "B", "text": "der"}, {"key": "C", "text": "die"}]'::jsonb, 1.5, null::jsonb, 6),
+    ('sb1', '28', '… Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten … bitten. …', '[{"key": "A", "text": "an"}, {"key": "B", "text": "auf"}, {"key": "C", "text": "um"}]'::jsonb, 1.5, null::jsonb, 7),
+    ('sb1', '29', '… auf mein Konto (29) der Bank of India in Mumbai bitten. …', '[{"key": "A", "text": "an"}, {"key": "B", "text": "bei"}, {"key": "C", "text": "zu"}]'::jsonb, 1.5, null::jsonb, 8),
+    ('sb1', '30', '… Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Luisa Martin', '[{"key": "A", "text": "mich"}, {"key": "B", "text": "mir"}, {"key": "C", "text": "sich"}]'::jsonb, 1.5, null::jsonb, 9),
     ('sb2', '31', '… geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen …', null::jsonb, 1.5, null::jsonb, 0),
     ('sb2', '32', '… vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer …', null::jsonb, 1.5, null::jsonb, 1),
     ('sb2', '33', '… in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von …', null::jsonb, 1.5, null::jsonb, 2),
@@ -1975,17 +2029,26 @@ from (values
     ('lv2', '7', 'B', null),
     ('lv2', '8', 'B', null),
     ('lv2', '9', 'A', null),
+    ('lv2', '10', 'A', null),
     ('lv3', '11', 'D', null),
     ('lv3', '12', 'G', null),
     ('lv3', '13', 'F', null),
     ('lv3', '14', 'A', null),
     ('lv3', '15', 'I', null),
     ('lv3', '16', 'K', null),
+    ('lv3', '17', 'X', null),
+    ('lv3', '18', 'J', null),
+    ('lv3', '19', 'L', null),
+    ('lv3', '20', 'B', null),
     ('sb1', '21', 'B', null),
     ('sb1', '22', 'B', null),
+    ('sb1', '23', 'A', null),
     ('sb1', '24', 'B', null),
     ('sb1', '25', 'A', null),
+    ('sb1', '26', 'B', null),
     ('sb1', '27', 'C', null),
+    ('sb1', '28', 'C', null),
+    ('sb1', '29', 'B', null),
     ('sb1', '30', 'B', null),
     ('sb2', '31', 'B', 'Das Wort lautet: AUFTRAG'),
     ('sb2', '32', 'I', 'Das Wort lautet: STATTFINDEN'),
@@ -2616,6 +2679,326 @@ from (values
     ('sb2', '40', 'K', null)
 ) as v(section_id, item_id, answer, explanation)
 join tests t on t.level_id = 'b1' and t.slug = 'modell-17'
+join sections s on s.test_id = t.id and s.section_id = v.section_id
+join items i on i.section_id = s.id and i.item_id = v.item_id
+on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
+
+-- ================= modell-18 · LAURA =================
+insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
+values ('b1', 'modell-18', 'LAURA', '61 Aufgaben · 150 Minuten',
+        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 105.0, "missing": 0}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45.0, "missing": 0}]'::jsonb, 61, true, 18)
+on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
+
+insert into sections (test_id, section_id, "group", title, minutes, instruction, format, config, sort)
+select t.id, v.section_id, v.grp, v.title, v.minutes, v.instruction, v.format, v.config, v.sort
+from (values
+    ('lv1', 'Leseverstehen', 'Leseverstehen, Teil 1', 20, 'Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.', 'matching', '{"maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 0),
+    ('lv2', 'Leseverstehen', 'Leseverstehen, Teil 2', 20, 'Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Weltreise? Lieber ein Praktikum in Kuala Lumpur!", "b": true}, {"t": "Umfrage unter Abiturienten: Welche Pläne gibt es für die Zeit nach der Schule? Jura-Studium sehr beliebt", "b": true}, {"t": "„Nachdem ich das Abitur nun bestanden habe, fühle ich mich befreit. Jetzt gehe ich einen Monat nach San Francisco, um Freunde zu besuchen. Danach wartet ein Praktikum bei der Lufthansa in Kuala Lumpur auf mich, weil ich Luftverkehrsmanagement studieren möchte.“ Das sagt die 19-jährige Aynur Üstüner, die gerade erst ihr Abitur gemacht hat.", "b": false}, {"t": "Nicht nur für Aynur, sondern auch für 85 weitere Schüler der Heinrich-Mann-Schule (HMS) und der Rudolf-Steiner-Schule (RSS) fängt nun das Berufs- oder Universitätsleben an. Alle können sehr stolz auf sich sein: Zweimal gab es sogar die Bestnote 1,0. Insgesamt lag der Durchschnitt bei 2,5 und war damit etwas besser als im Vorjahr. Durchgefallen ist keiner, nur ein Teilnehmer hat das Abitur abgebrochen. Für alle Grund genug, um den Erfolg richtig zu feiern.", "b": false}, {"t": "Während die Steiner-Schüler eine ganz ruhige Feier machten, drehten die Abiturienten der Heinrich-Mann-Schule im Bürgerhaus so richtig auf und präsentierten dem Publikum eine filmreife, fantastische Show. Bilder von den beiden Partys zeigen wir ab heute in unserer Bilder-Galerie im Internet.", "b": false}, {"t": "Nun haben also alle ihre Zeugnisse und endlich einmal richtig ausgeschlafen. Kein Wunder: In den letzten Wochen haben die Abiturienten nächtelang gelernt und gleichzeitig Abschied gefeiert – das war sehr anstrengend. Aber jetzt müssen wichtige Entscheidungen getroffen werden: Eine Ausbildung machen? Studieren? Oder vielleicht doch lieber eine Weltreise unternehmen? Wir haben außer Aynur Üstüner noch vier weitere Abiturienten nach ihren Plänen gefragt. Hier sind ihre Antworten:", "b": false}, {"t": "Christopher Hallgarten (20, RSS): „Ich bin froh, dass das Abitur vorbei ist. Nach einem kurzen Urlaub werde ich erstmal zwei Praktika in Krankenhäusern machen. Danach möchte ich Medizin studieren. Am liebsten in Bayreuth, da soll es schön gemütlich sein.“", "b": false}, {"t": "Inka Schröder (18, RSS): „Jetzt werde ich erstmal die freien Wochen bis zum Studium genießen. Wahrscheinlich wird es Jura werden. Natürlich will ich später auch einige Zeit im Ausland studieren. Eine Pause nach dem Abitur brauche ich nicht unbedingt, schließlich freue ich mich auf mein Studium.“", "b": false}, {"t": "Fabian Sänger (20, HMS): „Ich mache zunächst ein Freiwilliges Soziales Jahr. Auf diese Zeit freue ich mich schon sehr. Danach will ich unbedingt Sport studieren, weiß aber noch nicht, welche Uni mich nehmen wird. Ich lasse mich einfach überraschen, wohin die Reise geht.“", "b": false}, {"t": "Alexander Michels (19, HMS): „Ich habe mich für das Fach Jura entschieden und werde dafür nach München ziehen. Zuerst brauche ich aber ein paar Wochen Urlaub, um mich von dem Abi-Stress zu erholen. Die Schule werde ich nicht vermissen!“", "b": false}]}], "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 1),
+    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.', 'matching', '{"bankImage": "img/m18-lv3.jpg", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 2),
+    ('sb1', 'Sprachbausteine', 'Sprachbausteine, Teil 1', 20, 'Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Hallo Nikolas,", "b": false}, {"t": "in knapp einer Woche ist es so weit: Unsere spanische Theatergruppe „Los Mutantes“ geht auf große Tour (21) Deutschland und Spanien mit dem Stück „Niebla“ (Nebel). Wir planen, mindestens 30 Vorstellungen zu geben und das mit so (22) bunt gemischten Gruppe aus zehn (!!) Ländern. Am 7. April beginnen wir unsere Theaterreise an der Uni von Alicante/Spanien. Du kannst (23) denken, dass ich als Nichtmuttersprachlerin sehr (24) bin, dort vor spanischem Publikum zu spielen, (25) ich ja fließend und fast ohne Akzent Spanisch spreche.", "b": false}, {"t": "(26) Herbst steht vielleicht auch meine alte „Wahlheimatstadt“ Barcelona auf dem Programm, wie gerne (27) ich euch alle wiedersehen! Ohne eure Hilfe hätte ich die Sprache niemals so gut lernen (28). Ich denke oft an unsere multikulturelle Wohngemeinschaft: das gemeinsame Kochen, die tollen Feste ... Ein bisschen (29) habe ich jetzt in der Theatergruppe (30).", "b": false}, {"t": "Liebe Grüße auch an deine Mitbewohner schickt dir Sarah", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 3),
+    ('sb2', 'Sprachbausteine', 'Sprachbausteine, Teil 2', 20, 'Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.', 'wordbank', '{"passages": [{"paragraphs": [{"t": "Songwettbewerb auf der Burg Tanneck vom 5. bis 7. September. Der Songwettbewerb findet statt für Sologesang, Sologesang mit Instrument, Gruppengesang (2–5 Teilnehmer). Professionelle Musiker dürfen nicht teilnehmen. Informationen zur Anmeldung und zum Ort unter: www.burg-tanneck.de", "b": true}, {"t": "Hallo Benny, hallo Verena, diese kurze Notiz habe ich gestern im Internet gefunden und (31) gleich an euch (32) denken. Es waren doch wunderbare Abende, (33) wir im letzten Urlaub in Griechenland verbracht haben. Eure Lieder und Bennys tolles Gitarrenspiel sind mir in guter Erinnerung geblieben. Wie (34) es, hättet ihr nicht mal Lust, bei so einem Songwettbewerb mitzumachen?", "b": false}, {"t": "Ich kenne die Burg Tanneck (35) seit meiner Kindheit, als mich meine musikbegeisterten Eltern zu den Festivals mitgenommen haben. Was ganz wichtig ist: Dieser Songwettbewerb hat (36) nichts mit Kommerz und Vermarktung zu tun, wie man es sonst aus dem Fernsehen (37).", "b": false}, {"t": "Es geht nur (38), Spaß zu haben und zu singen! Schon allein die romantische Burg ist eine Reise wert, auch (39) ihr nur den anderen Sängern zuhören wollt. Lasst (40) was von euch hören! Bis dann, liebe Grüße aus Saarbrücken Astrid", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 4),
+    ('hv1', 'Hörverstehen', 'Hörverstehen, Teil 1', 8, 'Sie hören nun fünf kurze Texte. Dazu sollen Sie fünf Aufgaben lösen. Sie hören diese Texte nur einmal. Entscheiden Sie beim Hören, ob die Aussagen 41–45 richtig (+) oder falsch (-) sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 5),
+    ('hv2', 'Hörverstehen', 'Hörverstehen, Teil 2', 12, 'Sie hören ein Gespräch. Dazu sollen Sie zehn Aufgaben lösen. Sie hören das Gespräch zweimal. Entscheiden Sie beim Hören, ob die Aussagen 46–55 richtig (+) oder falsch (-) sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 6),
+    ('hv3', 'Hörverstehen', 'Hörverstehen, Teil 3', 10, 'Sie hören fünf kurze Texte. Sie hören die Texte zweimal. Entscheiden Sie beim Hören, ob die Aussagen 56–60 richtig (+) oder falsch (-) sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 7),
+    ('sa', 'Schriftlicher Ausdruck', 'Schriftlicher Ausdruck', 30, 'Sie haben von einer Freundin folgende E-Mail erhalten:', 'writing', '{"brief": {"intro": "Sie haben von einer Freundin folgende E-Mail erhalten:", "greeting": "Liebe/r __________,", "paragraphs": ["du weißt ja, dass ich schon lange nach einem Job suche, der mit meinem Hobby Musik zu tun hat. Stell dir vor, nun habe ich den perfekten Job gefunden. Ich gehe für sechs Monate mit der berühmten deutschen Musikgruppe „Wohnraumhelden“ auf Tournee durch verschiedene Länder – als Assistentin des Managers. Dabei kommen wir auch ganz in die Nähe deiner Stadt. Leider war ich ja noch nie da. Kannst du mir ein paar Tipps geben, was ich dort so machen kann?", "Im Moment sind wir noch mit der Planung beschäftigt. Deshalb weiß ich noch nicht genau, wann es losgeht. Wenn ich den genauen Termin kenne, melde ich mich sofort bei dir. Ich hoffe, dass wir uns dann einmal treffen können, und natürlich organisiere ich auch Freikarten für dich und deine Freunde. Ich freue mich schon!", "Liebe Grüße"], "signature": "Laura"}, "hints": ["Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss."], "criteria": [{"title": "Aufgabenbewältigung", "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"}, {"title": "Kommunikative Gestaltung", "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"}, {"title": "Formale Richtigkeit", "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"}], "grades": [{"key": "A", "points": 5}, {"key": "B", "points": 3}, {"key": "C", "points": 1}, {"key": "D", "points": 0}], "factor": 3, "maxPoints": 45, "availablePoints": 45, "missing": 0}'::jsonb, 8)
+) as v(section_id, grp, title, minutes, instruction, format, config, sort)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-18'
+on conflict (test_id, section_id) do update set "group" = excluded."group", title = excluded.title, minutes = excluded.minutes, instruction = excluded.instruction, format = excluded.format, config = excluded.config, sort = excluded.sort;
+
+insert into items (section_id, item_id, text, options, points, meta, sort)
+select s.id, v.item_id, v.text, v.options, v.points, v.meta, v.sort
+from (values
+    ('lv1', '1', 'London. Der wohl teuerste Hamburger der Welt wird seit gestern in London verkauft. Der Hamburger besteht aus japanischem Kobe-Rindfleisch, weißen Trüffeln sowie iranischem Safran und kostet umgerechnet 120 Euro. Das übertrifft den bisherigen Weltrekordhalter in New York: Dort bot ein Bistro ein edles Fleischbrötchen für rund 80 Euro an. „The Burger“ ist nur in einer Londoner Filiale zu haben. Bereits am Morgen wurde ein Dutzend der Hamburger verkauft.', null::jsonb, 5.0, null::jsonb, 0),
+    ('lv1', '2', 'Bielefeld. Die Benutzung eines Handys bei ausgeschaltetem Motor wird nicht mit einem Bußgeld bestraft. Das geht aus einem Urteil des Landgerichts Bielefeld hervor. Ein Autofahrer hatte an einer roten Ampel den Motor abgestellt und mit seinem Handy telefoniert, ohne die Freisprechanlage einzuschalten. Bevor die Ampel auf Grün schaltete, beendete er das Gespräch. Trotzdem wurde der Autofahrer von einem Polizisten angehalten und bekam eine Strafe von 40 Euro. Zu Unrecht, wie das Gericht jetzt urteilte.', null::jsonb, 5.0, null::jsonb, 1),
+    ('lv1', '3', 'Wuppertal. Drei Jungen haben mit einem Physik-Test der besonderen Art den Bahnverkehr stark gestört. Die Schüler im Alter von zehn und elf Jahren hatten ihre Butterbrote und Getränkekartons auf die Gleise der S-Bahnstrecke Wuppertal-Essen gelegt. „Sie wollten beobachten, was passiert“, sagte die Polizei gestern in Düsseldorf. Der Bahnverkehr wurde gestoppt und das Trio von den Gleisen geholt. Die Polizei erklärte den Jungs, wie gefährlich ihre Aktion war. Mehrere Züge verspäteten sich.', null::jsonb, 5.0, null::jsonb, 2),
+    ('lv1', '4', 'Paris. In Frankreich hat ein junger Mann bei Tempo 200 auf einer Autobahn am Steuer Filme auf DVD angeschaut. „Ich habe nicht gewusst, dass das verboten ist“, sagte der 21-jährige Pascal A. vor Gericht in Tours. Das Gericht nahm ihm nicht nur den Führerschein weg, sondern beschlagnahmte auch das Auto. Außerdem bekam er eine Geldstrafe von 150 Euro. Die Polizei hatte den Fahranfänger auf der Autobahn angehalten, nachdem er vorher mit über 200 Stundenkilometern viel zu schnell unterwegs gewesen war. Erlaubt war nur Tempo 110.', null::jsonb, 5.0, null::jsonb, 3),
+    ('lv1', '5', 'Frankfurt. Die gebürtige Hamburgerin Tanja Bauer beliefert das „Main Äppel Haus Lohrberg“ schon lange mit ihren Marmeladen-Variationen. Jetzt möchte sie ihr Wissen und ihre Leidenschaft teilen: Am Dienstag weiht sie Interessierte in ihre Tricks ein. Der Kurs dauert von 18 Uhr bis 20 Uhr und findet im „Main Äppel Haus“ in Frankfurt statt. Die Teilnahme kostet 15 Euro pro Person. Anmeldung ist erforderlich unter (06 109) 22 59 13.', null::jsonb, 5.0, null::jsonb, 4),
+    ('lv2', '6', 'An den beiden Schulen', '[{"key": "A", "text": "haben alle teilnehmenden Schüler das Abitur bestanden."}, {"key": "B", "text": "haben zwei Schüler die Note 2,5 erreicht."}, {"key": "C", "text": "sind die Durchschnittsnoten gleich geblieben."}]'::jsonb, 5.0, null::jsonb, 0),
+    ('lv2', '7', 'Die Abiparty der Heinrich-Mann-Schule war fantastisch, weil', '[{"key": "A", "text": "die Abiturienten einen Film über die Party gemacht haben."}, {"key": "B", "text": "die ganze Party im Internet gezeigt wurde."}, {"key": "C", "text": "es eine tolle Show gab."}]'::jsonb, 5.0, null::jsonb, 1),
+    ('lv2', '8', 'In den letzten Wochen haben die Schülerinnen und Schüler', '[{"key": "A", "text": "immer nur nachts für das Abitur gelernt."}, {"key": "B", "text": "lieber gefeiert als gelernt."}, {"key": "C", "text": "viel zu wenig geschlafen."}]'::jsonb, 5.0, null::jsonb, 2),
+    ('lv2', '9', 'Inka und Alexander', '[{"key": "A", "text": "finden es schade, dass die Schulzeit vorbei ist."}, {"key": "B", "text": "haben vor, Jura zu studieren."}, {"key": "C", "text": "machen erst einmal zusammen Urlaub im Ausland."}]'::jsonb, 5.0, null::jsonb, 3),
+    ('lv2', '10', 'Einer der vier Abiturienten', '[{"key": "A", "text": "möchte in Bayreuth studieren, weil die Stadt so schön groß ist."}, {"key": "B", "text": "weiß noch nicht genau, wo er studieren wird."}, {"key": "C", "text": "will nach dem Freiwilligen Sozialen Jahr zwei Praktika machen."}]'::jsonb, 5.0, null::jsonb, 4),
+    ('lv3', '11', 'Sie suchen zwei Stühle für Ihren Garten, möchten aber insgesamt nicht mehr als 15 € bezahlen.', null::jsonb, 2.5, null::jsonb, 0),
+    ('lv3', '12', 'Sie müssen Ihren guten Teppich reinigen lassen und suchen eine Firma mit langjähriger Erfahrung.', null::jsonb, 2.5, null::jsonb, 1),
+    ('lv3', '13', 'Sie haben Geburtstag und möchten mit Ihren Gästen etwas Besonderes machen: Abends in den Zoo gehen.', null::jsonb, 2.5, null::jsonb, 2),
+    ('lv3', '14', 'Sie sind gerade umgezogen und möchten sich eine neue Waschmaschine kaufen.', null::jsonb, 2.5, null::jsonb, 3),
+    ('lv3', '15', 'Die Tochter Ihrer Nachbarin will später einmal Tierärztin werden und sucht einen Job für die Sommerferien. Geben Sie ihr einen Tipp.', null::jsonb, 2.5, null::jsonb, 4),
+    ('lv3', '16', 'Kindergeburtstag! Ihr kleiner Sohn wird fünf. Sie möchten ihn und seine Freunde ins Kino einladen.', null::jsonb, 2.5, null::jsonb, 5),
+    ('lv3', '17', 'Ein guter Freund hat ein Aquarium. Schenken Sie ihm etwas für sein Hobby.', null::jsonb, 2.5, null::jsonb, 6),
+    ('lv3', '18', 'Sie bekommen mitten in der Nacht starke Kopfschmerzen und brauchen schnell Tabletten.', null::jsonb, 2.5, null::jsonb, 7),
+    ('lv3', '19', 'Ihre Kinder möchten gern ein Haustier. Sie haben nichts dagegen, es soll aber ein Tier aus dem Tierheim sein.', null::jsonb, 2.5, null::jsonb, 8),
+    ('lv3', '20', 'Sie richten Ihr Schlafzimmer neu ein und suchen einen Kleiderschrank aus Skandinavien.', null::jsonb, 2.5, null::jsonb, 9),
+    ('sb1', '21', '… geht auf große Tour (21) Deutschland und Spanien …', '[{"key": "A", "text": "aus"}, {"key": "B", "text": "durch"}, {"key": "C", "text": "von"}]'::jsonb, 1.5, null::jsonb, 0),
+    ('sb1', '22', '… und das mit so (22) bunt gemischten Gruppe aus zehn (!!) Ländern.', '[{"key": "A", "text": "eine"}, {"key": "B", "text": "einen"}, {"key": "C", "text": "einer"}]'::jsonb, 1.5, null::jsonb, 1),
+    ('sb1', '23', 'Du kannst (23) denken, dass ich als Nichtmuttersprachlerin …', '[{"key": "A", "text": "dich"}, {"key": "B", "text": "dir"}, {"key": "C", "text": "sich"}]'::jsonb, 1.5, null::jsonb, 2),
+    ('sb1', '24', '… sehr (24) bin, dort vor spanischem Publikum zu spielen …', '[{"key": "A", "text": "aufgeregt"}, {"key": "B", "text": "aufregend"}, {"key": "C", "text": "aufzuregen"}]'::jsonb, 1.5, null::jsonb, 3),
+    ('sb1', '25', '… (25) ich ja fließend und fast ohne Akzent Spanisch spreche.', '[{"key": "A", "text": "obwohl"}, {"key": "B", "text": "weil"}, {"key": "C", "text": "zwar"}]'::jsonb, 1.5, null::jsonb, 4),
+    ('sb1', '26', '(26) Herbst steht vielleicht auch meine alte „Wahlheimatstadt“ Barcelona auf dem Programm …', '[{"key": "A", "text": "Im"}, {"key": "B", "text": "In"}, {"key": "C", "text": "Während"}]'::jsonb, 1.5, null::jsonb, 5),
+    ('sb1', '27', '… wie gerne (27) ich euch alle wiedersehen!', '[{"key": "A", "text": "hätte"}, {"key": "B", "text": "würde"}, {"key": "C", "text": "wurde"}]'::jsonb, 1.5, null::jsonb, 6),
+    ('sb1', '28', 'Ohne eure Hilfe hätte ich die Sprache niemals so gut lernen (28).', '[{"key": "A", "text": "können"}, {"key": "B", "text": "müssen"}, {"key": "C", "text": "sollen"}]'::jsonb, 1.5, null::jsonb, 7),
+    ('sb1', '29', 'Ein bisschen (29) habe ich jetzt in der Theatergruppe …', '[{"key": "A", "text": "damit"}, {"key": "B", "text": "davon"}, {"key": "C", "text": "dazu"}]'::jsonb, 1.5, null::jsonb, 8),
+    ('sb1', '30', '… habe ich jetzt in der Theatergruppe (30).', '[{"key": "A", "text": "wiederfinden"}, {"key": "B", "text": "wiedergefunden"}, {"key": "C", "text": "wiederzufinden"}]'::jsonb, 1.5, null::jsonb, 9),
+    ('sb2', '31', '… und (31) gleich an euch …', null::jsonb, 1.5, null::jsonb, 0),
+    ('sb2', '32', '… an euch (32) denken.', null::jsonb, 1.5, null::jsonb, 1),
+    ('sb2', '33', '… wunderbare Abende, (33) wir im letzten Urlaub …', null::jsonb, 1.5, null::jsonb, 2),
+    ('sb2', '34', 'Wie (34) es, hättet ihr nicht mal Lust …', null::jsonb, 1.5, null::jsonb, 3),
+    ('sb2', '35', 'Ich kenne die Burg Tanneck (35) seit meiner Kindheit …', null::jsonb, 1.5, null::jsonb, 4),
+    ('sb2', '36', '… hat (36) nichts mit Kommerz und Vermarktung zu tun …', null::jsonb, 1.5, null::jsonb, 5),
+    ('sb2', '37', '… wie man es sonst aus dem Fernsehen (37).', null::jsonb, 1.5, null::jsonb, 6),
+    ('sb2', '38', 'Es geht nur (38), Spaß zu haben und zu singen!', null::jsonb, 1.5, null::jsonb, 7),
+    ('sb2', '39', '… auch (39) ihr nur den anderen Sängern zuhören wollt.', null::jsonb, 1.5, null::jsonb, 8),
+    ('sb2', '40', 'Lasst (40) was von euch hören!', null::jsonb, 1.5, null::jsonb, 9),
+    ('hv1', '41', 'Der Sprecher isst nicht mehr so viel Fleisch wie früher.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv1', '42', 'Die Sprecherin ist überzeugt, dass die Lebensmittel in den Supermärkten kontrolliert werden.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv1', '43', 'Die Sprecherin hat Angst vor Krankheiten, weil die Lebensmittel so schlecht sind.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv1', '44', 'Dem Sprecher gefällt die Atmosphäre auf dem Wochenmarkt.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv1', '45', 'Der Sprecher findet, dass die meisten Menschen zu viel Geld für unwichtige Dinge ausgeben.', null::jsonb, 5.0, null::jsonb, 4),
+    ('hv2', '46', 'Beim JP-Morgan-Firmenlauf trifft man viele Kollegen zum ersten Mal.', null::jsonb, 2.5, null::jsonb, 0),
+    ('hv2', '47', 'Die Läufer und Läuferinnen kommen aus dem In- und Ausland.', null::jsonb, 2.5, null::jsonb, 1),
+    ('hv2', '48', 'Nur wer aktiv Sport treibt, kann beim JP-Morgan-Firmenlauf mitmachen.', null::jsonb, 2.5, null::jsonb, 2),
+    ('hv2', '49', 'Jasmins Tochter war bei dem Lauf auch schon dabei.', null::jsonb, 2.5, null::jsonb, 3),
+    ('hv2', '50', 'Jasmin hat vor zwei Jahren zum ersten Mal am JP-Morgan-Firmenlauf teilgenommen.', null::jsonb, 2.5, null::jsonb, 4),
+    ('hv2', '51', 'Der JP-Morgan-Firmenlauf findet nur in Deutschland statt.', null::jsonb, 2.5, null::jsonb, 5),
+    ('hv2', '52', 'Jasmin hat sich nach ihrem ersten Lauf nicht mehr so allein gefühlt.', null::jsonb, 2.5, null::jsonb, 6),
+    ('hv2', '53', 'Die Chefs müssen bei dem Lauf auch dabei sein.', null::jsonb, 2.5, null::jsonb, 7),
+    ('hv2', '54', 'Die T-Shirts sind ein Erkennungszeichen.', null::jsonb, 2.5, null::jsonb, 8),
+    ('hv2', '55', 'Die Firmen müssen das Startgeld bezahlen.', null::jsonb, 2.5, null::jsonb, 9),
+    ('hv3', '56', 'Das Buch kann erst morgen ab 9 Uhr in der Buchhandlung abgeholt werden.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv3', '57', 'Die Firma ist in der Wilhelmstraße.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv3', '58', 'Sie können den Film von Rainer Bölkow heute Abend im Kino sehen.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv3', '59', 'Sie können eine Zeitung im Zugrestaurant kaufen.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv3', '60', 'Vom Bahnhof zur Universität dauert es mit der U-Bahn und dem Bus nur 5 Minuten.', null::jsonb, 5.0, null::jsonb, 4),
+    ('sa', 'A', 'Antworten Sie auf die E-Mail. Schreiben Sie etwas zu den folgenden vier Punkten:', null::jsonb, 0, '{"minWords": 100, "points": ["Ihre Lieblingsmusik", "wichtige Tipps", "Reaktion auf Freikarten", "Treffen?"]}'::jsonb, 0)
+) as v(section_id, item_id, text, options, points, meta, sort)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-18'
+join sections s on s.test_id = t.id and s.section_id = v.section_id
+on conflict (section_id, item_id) do update set text = excluded.text, options = excluded.options, points = excluded.points, meta = excluded.meta, sort = excluded.sort;
+
+insert into item_answers (item_id, answer, explanation)
+select i.id, v.answer, v.explanation
+from (values
+    ('lv1', '1', 'H', null),
+    ('lv1', '2', 'F', null),
+    ('lv1', '3', 'C', null),
+    ('lv1', '4', 'J', null),
+    ('lv1', '5', 'G', null),
+    ('lv2', '6', 'A', null),
+    ('lv2', '7', 'C', null),
+    ('lv2', '8', 'C', null),
+    ('lv2', '9', 'B', null),
+    ('lv2', '10', 'B', null),
+    ('lv3', '11', 'D', null),
+    ('lv3', '12', 'L', null),
+    ('lv3', '13', 'I', null),
+    ('lv3', '14', 'X', null),
+    ('lv3', '15', 'F', null),
+    ('lv3', '16', 'X', null),
+    ('lv3', '17', 'E', null),
+    ('lv3', '18', 'C', null),
+    ('lv3', '19', 'B', null),
+    ('lv3', '20', 'J', null),
+    ('sb1', '21', 'B', null),
+    ('sb1', '22', 'C', null),
+    ('sb1', '23', 'B', null),
+    ('sb1', '24', 'A', null),
+    ('sb1', '25', 'A', null),
+    ('sb1', '26', 'A', null),
+    ('sb1', '27', 'B', null),
+    ('sb1', '28', 'A', null),
+    ('sb1', '29', 'B', null),
+    ('sb1', '30', 'B', null),
+    ('sb2', '31', 'J', 'musste'),
+    ('sb2', '32', 'C', 'beide'),
+    ('sb2', '33', 'E', 'die'),
+    ('sb2', '34', 'L', 'wäre'),
+    ('sb2', '35', 'K', 'schon'),
+    ('sb2', '36', 'O', 'überhaupt'),
+    ('sb2', '37', 'I', 'kennt'),
+    ('sb2', '38', 'D', 'darum'),
+    ('sb2', '39', 'M', 'wenn'),
+    ('sb2', '40', 'B', 'bald'),
+    ('hv1', '41', '+', null),
+    ('hv1', '42', '-', null),
+    ('hv1', '43', '-', null),
+    ('hv1', '44', '+', null),
+    ('hv1', '45', '-', null),
+    ('hv2', '46', '-', null),
+    ('hv2', '47', '-', null),
+    ('hv2', '48', '-', null),
+    ('hv2', '49', '+', null),
+    ('hv2', '50', '+', null),
+    ('hv2', '51', '-', null),
+    ('hv2', '52', '+', null),
+    ('hv2', '53', '-', null),
+    ('hv2', '54', '+', null),
+    ('hv2', '55', '-', null),
+    ('hv3', '56', '+', null),
+    ('hv3', '57', '+', null),
+    ('hv3', '58', '-', null),
+    ('hv3', '59', '-', null),
+    ('hv3', '60', '+', null)
+) as v(section_id, item_id, answer, explanation)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-18'
+join sections s on s.test_id = t.id and s.section_id = v.section_id
+join items i on i.section_id = s.id and i.item_id = v.item_id
+on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;
+
+-- ================= modell-19 · MORITZ =================
+insert into tests (level_id, slug, title, subtitle, blocks, aufgaben, published, sort)
+values ('b1', 'modell-19', 'MORITZ', '61 Aufgaben · 150 Minuten',
+        '[{"id": "block-lv-sb", "title": "Leseverstehen und Sprachbausteine", "minutes": 90, "hint": "Aufgaben 1–40", "parts": ["lv1", "lv2", "lv3", "sb1", "sb2"], "maxPoints": 105.0, "availablePoints": 105.0, "missing": 0}, {"id": "block-hv", "title": "Hörverstehen", "minutes": 30, "hint": "Aufgaben 41–60", "parts": ["hv1", "hv2", "hv3"], "maxPoints": 75.0, "availablePoints": 75.0, "missing": 0}, {"id": "block-sa", "title": "Schriftlicher Ausdruck", "minutes": 30, "hint": "", "parts": ["sa"], "maxPoints": 45.0, "availablePoints": 45.0, "missing": 0}]'::jsonb, 61, true, 19)
+on conflict (level_id, slug) do update set title = excluded.title, subtitle = excluded.subtitle, blocks = excluded.blocks, aufgaben = excluded.aufgaben, sort = excluded.sort;
+
+insert into sections (test_id, section_id, "group", title, minutes, instruction, format, config, sort)
+select t.id, v.section_id, v.grp, v.title, v.minutes, v.instruction, v.format, v.config, v.sort
+from (values
+    ('lv1', 'Leseverstehen', 'Leseverstehen, Teil 1', 20, 'Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.', 'matching', '{"maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 0),
+    ('lv2', 'Leseverstehen', 'Leseverstehen, Teil 2', 20, 'Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Ein Leben auf Sumatra", "b": true}, {"t": "Der Abend, an dem Svenja Peters ihr Herz verlor, war ihr erster auf der Insel. Sie hatte gar nicht geplant, nach Sumatra zu reisen. Aber dann hatten ihr in Thailand andere Reisende von dem großen und traumhaft gelegenen See erzählt. Und sie war dann einfach nach Indonesien geflogen. Für den Mann, den die damals 26-Jährige auf Sumatra traf, gab sie ihre geplante Karriere als Anwältin auf.", "b": false}, {"t": "Die Reise sollte eine kurze Pause zwischen Uni und Job sein. Doch zurück in Deutschland packte sie ihre Sachen in Kisten und machte sich mit ihnen wieder auf den Weg zurück nach Sumatra.", "b": false}, {"t": "„Meine Eltern machten sich damals große Sorgen, dass ich meine Fachkenntnisse nicht nutze“, sagt Svenja Peters. „Aber als ich 18 wurde, hatten sie mir gesagt: Du stehst jetzt auf eigenen Füßen! Und daran erinnerte ich sie. Bei ihren jährlichen Besuchen sehen sie auch, wie gut es mir hier geht.“", "b": false}, {"t": "Sie selbst habe keine Sekunde an ihrer Entscheidung gezweifelt, sagt sie. Und es sind viele Sekunden seit damals vergangen. Mehr als 800 Millionen, um genau zu sein. Svenja Peters lebt seit 26 Jahren auf Sumatra.", "b": false}, {"t": "Sie hat den Mann geheiratet, in den sie sich auf ihrer Reise verliebte, und ist mit ihm seit 26 Jahren zusammen. Die beiden besitzen ein kleines Hotel mit 36 Zimmern und haben drei Kinder. Zwei leben gerade in Deutschland. Die Tochter studiert Tourismus und der Sohn macht eine Ausbildung zum Koch. Svenja Peters ist überzeugt, dass sie wieder zurückkommen werden.", "b": false}, {"t": "Ihr Start in die Selbstständigkeit war ein vegetarisches Restaurant. Mit den ersten Einnahmen kaufte sie ihr erstes kleines Haus mit zwei Gästezimmern. Nach und nach kaufte sie weitere Häuser. Heute sagt sie: „Ich verdiene so viel wie eine deutsche Anwältin.“", "b": false}]}], "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 1),
+    ('lv3', 'Leseverstehen', 'Leseverstehen, Teil 3', 20, 'Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.', 'matching', '{"bankImage": "img/m19-lv3.jpg", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 2),
+    ('sb1', 'Sprachbausteine', 'Sprachbausteine, Teil 1', 20, 'Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?', 'mc', '{"passages": [{"paragraphs": [{"t": "Liebe Lisa,", "b": false}, {"t": "ich hoffe, es geht dir gut! Wir (21) viel zu lange nichts mehr voneinander gehört. Seit wir (22) das letzte Mal gesehen haben, warst du mit Severin (23) New York und ich bin mit Maurizio durch Slowenien gereist.", "b": false}, {"t": "Du (24) mir unbedingt erzählen, was ihr alles erlebt habt. Wart ihr auch im Central Park spazieren? (25) würde ich ja so gerne mal machen!", "b": false}, {"t": "Uns hat es in Slowenien unglaublich gut gefallen. Wandern konnten wir leider (26) meiner Verletzung nicht. Dafür haben wir gut gegessen, jeden Abend am Feuer gesessen und (27) Ruhe genossen. Stell dir vor, in unserer (28) hatten wir kein Internet. Und auch mit (29) Handy hatte ich keinen Netzempfang. Diese (30) Pause hat sehr gutgetan. Jetzt bin ich wirklich erholt.", "b": false}, {"t": "Bis hoffentlich bald! Deine Ruth", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 3),
+    ('sb2', 'Sprachbausteine', 'Sprachbausteine, Teil 2', 20, 'Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.', 'wordbank', '{"passages": [{"paragraphs": [{"t": "Hallo Emilia,", "b": false}, {"t": "gestern hat mir mein Englischlehrer Informationen über ein Stipendium in den USA geschickt und ich (31) gleich an uns beide denken. Wir haben uns doch sowieso schon (32) einiger Zeit überlegt, nach dem Abitur im Ausland zu studieren. Vielleicht sollten wir diese Gelegenheit nutzen. Es gibt natürlich (33) Garantie, dass wir genommen werden, aber probieren können wir es, oder?", "b": false}, {"t": "Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen. Eine andere Kultur zu erleben und (35) unsere Englischkenntnisse zu verbessern – das wäre doch genial! So ein Auslandsaufenthalt ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.", "b": false}, {"t": "Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen. Außerdem gibt es viele (38) Wahlveranstaltungen wie Chorsingen, Theater und sportliche Aktivitäten. Wenn du Lust hast, könnten wir uns treffen und die (39) zusammen durchsehen. Wie sieht es (40) Woche bei dir aus?", "b": false}, {"t": "Liebe Grüße Madeleine", "b": false}]}], "maxPoints": 15.0, "availablePoints": 15.0, "missing": 0, "pointsPerItem": 1.5}'::jsonb, 4),
+    ('hv1', 'Hörverstehen', 'Hörverstehen, Teil 1', 8, 'Sie hören nun fünf kurze Texte. Dazu sollen Sie fünf Aufgaben lösen. Sie hören diese Texte nur einmal. Entscheiden Sie beim Hören, ob die Aussagen 41–45 richtig (+) oder falsch (-) sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 5),
+    ('hv2', 'Hörverstehen', 'Hörverstehen, Teil 2', 12, 'Sie hören ein Gespräch. Dazu sollen Sie zehn Aufgaben lösen. Sie hören das Gespräch zweimal. Entscheiden Sie beim Hören, ob die Aussagen 46–55 richtig (+) oder falsch (-) sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 2.5}'::jsonb, 6),
+    ('hv3', 'Hörverstehen', 'Hörverstehen, Teil 3', 10, 'Sie hören fünf kurze Texte. Sie hören die Texte zweimal. Entscheiden Sie beim Hören, ob die Aussagen 56–60 richtig (+) oder falsch (-) sind.', 'truefalse', '{"note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.", "maxPoints": 25.0, "availablePoints": 25.0, "missing": 0, "pointsPerItem": 5.0}'::jsonb, 7),
+    ('sa', 'Schriftlicher Ausdruck', 'Schriftlicher Ausdruck', 30, 'Ihr Freund Moritz hat Ihnen folgende E-Mail geschrieben:', 'writing', '{"brief": {"intro": "Ihr Freund Moritz hat Ihnen folgende E-Mail geschrieben:", "greeting": "Liebe(r) ...,", "paragraphs": ["ich sende dir ganz viele Grüße aus San Diego! Du weißt ja, wie sehr ich Kalifornien mag! Ich habe mir ein Auto gemietet und bin von morgens bis abends nur unterwegs. Ich liebe die Architektur hier, diese Hochhäuser und natürlich die Strände – wunderbar! Gestern Abend war ich übrigens in einem Club. Die Musik war super.", "Doch leider ist mein Urlaub schon fast vorbei. In zwei Tagen fliege ich zurück und dann beginnt der Alltag wieder ...", "Vielleicht können wir uns ja in der nächsten Woche treffen. Dann erzähle ich dir alles genauer. Welches Land ist eigentlich dein Lieblingsland?", "Viele Grüße"], "signature": "Moritz"}, "hints": ["Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss."], "criteria": [{"title": "Aufgabenbewältigung", "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"}, {"title": "Kommunikative Gestaltung", "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"}, {"title": "Formale Richtigkeit", "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"}], "grades": [{"key": "A", "points": 5}, {"key": "B", "points": 3}, {"key": "C", "points": 1}, {"key": "D", "points": 0}], "factor": 3, "maxPoints": 45, "availablePoints": 45, "missing": 0}'::jsonb, 8)
+) as v(section_id, grp, title, minutes, instruction, format, config, sort)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-19'
+on conflict (test_id, section_id) do update set "group" = excluded."group", title = excluded.title, minutes = excluded.minutes, instruction = excluded.instruction, format = excluded.format, config = excluded.config, sort = excluded.sort;
+
+insert into items (section_id, item_id, text, options, points, meta, sort)
+select s.id, v.item_id, v.text, v.options, v.points, v.meta, v.sort
+from (values
+    ('lv1', '1', 'Man muss auch mal mutig sein! Das dachte sich Jannik. Warum ist er so mutig? Seit drei Jahren kauft er regelmäßig in einem Unverpackt-Laden ein. „Dabei spare ich nicht nur eine Menge Plastik“, sagt er. „Auch an der Frische der Produkte merkt man einen Unterschied. Die Schokolade bei uns ist immer knackiger als im Supermarkt.“ Offenbar sind Unverpackt-Läden gerade im Trend. Das merkt man auch daran, dass in den letzten zwei Jahren doppelt so viele Läden eröffnet haben. Doch es funktioniert: die Kundinnen und Kunden geben mehr aus, weil es der Umwelt gut geht.', null::jsonb, 5.0, null::jsonb, 0),
+    ('lv1', '2', 'Warum nicht das Angenehme mit dem Nützlichen verbinden? „Umweltschutz fängt mit kleinen Schritten an. Ich fahre jetzt seit Monaten mit meinem Rad zur Arbeit. Da tue ich etwas für mich, aber auch für die Umwelt“, sagt Lea. Seit ihrem Auslandssemester in Schweden ist sie überzeugt: „Dort ist Umweltschutz ganz selbstverständlich. Warum kann man nicht auch hier sein Hobby mit dem Umweltschutz verbinden?“', null::jsonb, 5.0, null::jsonb, 1),
+    ('lv1', '3', 'Wir merken deutlich, dass Getränke in Glasflaschen wieder beliebter werden, besonders bei Mineralwasser, berichtet Jürgen Fischer auf der Getränkemesse in Düsseldorf. Auch die Verkaufszahlen bestätigen diesen Trend. Dabei sind Glasflaschen nicht unbedingt besser für die Umwelt als Plastikflaschen. Der Grund ist der teilweise weite Transportweg: Für Milch zum Beispiel wird die Milch-Glasflasche im Durchschnitt 721 Kilometer transportiert, bis sie ankommt.', null::jsonb, 5.0, null::jsonb, 2),
+    ('lv1', '4', 'Am 25. November beginnt wieder der Frankfurter Weihnachtsmarkt. Los geht es um 17:05 Uhr mit einem Glockenspiel von der Nikolaikirche. Danach gibt es eine Rede des Bürgermeisters. „Es ist für mich immer etwas ganz Besonderes, den Weihnachtsbaum mit seinen 6500 Lichtern zu sehen“, erzählt dieser der Frankfurter Rundschau. 700 Sterne sollen den Römerberg verschönern. Das hr-Blasorchester sorgt an mehreren Abenden mit Weihnachtsliedern für gemütliche Stimmung.', null::jsonb, 5.0, null::jsonb, 3),
+    ('lv1', '5', 'Ein Spaziergang in der Regensburger Altstadt ist in der Weihnachtszeit besonders schön. Im Schatten des Alten Rathauses lädt der Lucrezia-Markt zum Träumen ein. Suchen Sie noch ein besonderes Geschenk? Dann sind Sie dort genau richtig: Denn Handwerker präsentieren und verkaufen ihre Produkte aus Metall, Glas oder Holz. Und Kreativen wird eine Bühne für Musik und Theater geboten. Außerdem gibt es heißen Apfelsaft aus der Region.', null::jsonb, 5.0, null::jsonb, 4),
+    ('lv2', '6', 'Svenja Peters blieb auf Sumatra, weil', '[{"key": "A", "text": "ihr Thailand nicht gefiel."}, {"key": "B", "text": "sie dort als Anwältin arbeiten konnte."}, {"key": "C", "text": "sie sich verliebte."}]'::jsonb, 5.0, null::jsonb, 0),
+    ('lv2', '7', 'Nach ihrer Rückkehr nach Deutschland', '[{"key": "A", "text": "organisierte Svenja ihren Umzug."}, {"key": "B", "text": "setzte Svenja ihr Studium fort."}, {"key": "C", "text": "suchte Svenja eine Stelle als Anwältin."}]'::jsonb, 5.0, null::jsonb, 1),
+    ('lv2', '8', 'Ihre Eltern hatten Angst, dass', '[{"key": "A", "text": "sie Svenja nicht wiedersehen würden."}, {"key": "B", "text": "Svenja nicht selbstständig sein würde."}, {"key": "C", "text": "Svenjas Studium umsonst war."}]'::jsonb, 5.0, null::jsonb, 2),
+    ('lv2', '9', 'Svenja und ihr Mann', '[{"key": "A", "text": "führen ein Hotel mit 36 Zimmern."}, {"key": "B", "text": "haben zwei Kinder."}, {"key": "C", "text": "sind seit 36 Jahren ein Paar."}]'::jsonb, 5.0, null::jsonb, 3),
+    ('lv2', '10', 'Svenja eröffnete auf Sumatra', '[{"key": "A", "text": "direkt das Hotel."}, {"key": "B", "text": "ein Büro als Anwältin."}, {"key": "C", "text": "zuerst ein Restaurant."}]'::jsonb, 5.0, null::jsonb, 4),
+    ('lv3', '11', 'Sie sind in der Schweiz und möchten sich ein paar Tage beim Baden erholen.', null::jsonb, 2.5, null::jsonb, 0),
+    ('lv3', '12', 'Sie hören gerne klassische Musik, am liebsten Barocklieder. Sie möchten in ein Konzert gehen.', null::jsonb, 2.5, null::jsonb, 1),
+    ('lv3', '13', 'Ihr Sohn möchte gerne in den Schulferien seine Fremdsprachenkenntnisse verbessern. Er möchte auch Sport treiben.', null::jsonb, 2.5, null::jsonb, 2),
+    ('lv3', '14', 'Sie reisen nicht gerne allein und suchen deshalb Reisepartner.', null::jsonb, 2.5, null::jsonb, 3),
+    ('lv3', '15', 'Sie möchten am Donnerstagabend mit Ihrer Bekannten eine Musikveranstaltung besuchen.', null::jsonb, 2.5, null::jsonb, 4),
+    ('lv3', '16', 'Ihre Familie möchte den nächsten Urlaub am Meer verbringen.', null::jsonb, 2.5, null::jsonb, 5),
+    ('lv3', '17', 'Sie leben in Zürich und möchten dort möglichst schnell Englisch lernen.', null::jsonb, 2.5, null::jsonb, 6),
+    ('lv3', '18', 'Sie bekommen Besuch von Ihrer Freundin. Sie möchte gerne tanzen gehen.', null::jsonb, 2.5, null::jsonb, 7),
+    ('lv3', '19', 'Sie möchten Freunde im Ausland besuchen und suchen ein Reisebüro.', null::jsonb, 2.5, null::jsonb, 8),
+    ('lv3', '20', 'Sie sind sportlich und möchten im Sommer in den Bergen wandern gehen.', null::jsonb, 2.5, null::jsonb, 9),
+    ('sb1', '21', 'Wir (21) viel zu lange nichts mehr voneinander gehört.', '[{"key": "A", "text": "habe"}, {"key": "B", "text": "haben"}, {"key": "C", "text": "habt"}]'::jsonb, 1.5, null::jsonb, 0),
+    ('sb1', '22', 'Seit wir (22) das letzte Mal gesehen haben …', '[{"key": "A", "text": "mich"}, {"key": "B", "text": "sie"}, {"key": "C", "text": "uns"}]'::jsonb, 1.5, null::jsonb, 1),
+    ('sb1', '23', '… warst du mit Severin (23) New York …', '[{"key": "A", "text": "aus"}, {"key": "B", "text": "auf"}, {"key": "C", "text": "in"}]'::jsonb, 1.5, null::jsonb, 2),
+    ('sb1', '24', 'Du (24) mir unbedingt erzählen, was ihr alles erlebt habt.', '[{"key": "A", "text": "brauchst"}, {"key": "B", "text": "hast"}, {"key": "C", "text": "musst"}]'::jsonb, 1.5, null::jsonb, 3),
+    ('sb1', '25', '(25) würde ich ja so gerne mal machen!', '[{"key": "A", "text": "Das"}, {"key": "B", "text": "Was"}, {"key": "C", "text": "Welches"}]'::jsonb, 1.5, null::jsonb, 4),
+    ('sb1', '26', 'Wandern konnten wir leider (26) meiner Verletzung nicht.', '[{"key": "A", "text": "außer"}, {"key": "B", "text": "trotz"}, {"key": "C", "text": "wegen"}]'::jsonb, 1.5, null::jsonb, 5),
+    ('sb1', '27', '… jeden Abend am Feuer gesessen und (27) Ruhe genossen.', '[{"key": "A", "text": "der"}, {"key": "B", "text": "die"}, {"key": "C", "text": "eine"}]'::jsonb, 1.5, null::jsonb, 6),
+    ('sb1', '28', 'Stell dir vor, in unserer (28) hatten wir kein Internet.', '[{"key": "A", "text": "Unterkunft"}, {"key": "B", "text": "Unterkünfte"}, {"key": "C", "text": "Unterkünften"}]'::jsonb, 1.5, null::jsonb, 7),
+    ('sb1', '29', 'Und auch mit (29) Handy hatte ich keinen Netzempfang.', '[{"key": "A", "text": "deinem"}, {"key": "B", "text": "ihrem"}, {"key": "C", "text": "meinem"}]'::jsonb, 1.5, null::jsonb, 8),
+    ('sb1', '30', 'Diese (30) Pause hat sehr gutgetan.', '[{"key": "A", "text": "digital"}, {"key": "B", "text": "digitale"}, {"key": "C", "text": "digitalen"}]'::jsonb, 1.5, null::jsonb, 9),
+    ('sb2', '31', '… und ich (31) gleich an uns beide denken.', null::jsonb, 1.5, null::jsonb, 0),
+    ('sb2', '32', '… schon (32) einiger Zeit überlegt …', null::jsonb, 1.5, null::jsonb, 1),
+    ('sb2', '33', 'Es gibt natürlich (33) Garantie …', null::jsonb, 1.5, null::jsonb, 2),
+    ('sb2', '34', 'Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen.', null::jsonb, 1.5, null::jsonb, 3),
+    ('sb2', '35', '… und (35) unsere Englischkenntnisse zu verbessern …', null::jsonb, 1.5, null::jsonb, 4),
+    ('sb2', '36', '… ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.', null::jsonb, 1.5, null::jsonb, 5),
+    ('sb2', '37', 'Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen.', null::jsonb, 1.5, null::jsonb, 6),
+    ('sb2', '38', 'Außerdem gibt es viele (38) Wahlveranstaltungen …', null::jsonb, 1.5, null::jsonb, 7),
+    ('sb2', '39', '… und die (39) zusammen durchsehen.', null::jsonb, 1.5, null::jsonb, 8),
+    ('sb2', '40', 'Wie sieht es (40) Woche bei dir aus?', null::jsonb, 1.5, null::jsonb, 9),
+    ('hv1', '41', 'Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv1', '42', 'Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv1', '43', 'Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv1', '44', 'Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv1', '45', 'Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.', null::jsonb, 5.0, null::jsonb, 4),
+    ('hv2', '46', 'Die Sendung heißt „Kinder und Computer“.', null::jsonb, 2.5, null::jsonb, 0),
+    ('hv2', '47', 'Herr Russo findet es gut, dass Kinder Interesse an Neuem haben.', null::jsonb, 2.5, null::jsonb, 1),
+    ('hv2', '48', 'Früher hielt man das Lesen für gefährlich.', null::jsonb, 2.5, null::jsonb, 2),
+    ('hv2', '49', 'Eltern kennen das Verhalten ihrer Kinder aus ihrer eigenen Jugend.', null::jsonb, 2.5, null::jsonb, 3),
+    ('hv2', '50', 'Eltern sollen Kindern Computerspiele verbieten.', null::jsonb, 2.5, null::jsonb, 4),
+    ('hv2', '51', 'Für viele Eltern sind die Neuen Medien nach wie vor unheimlich.', null::jsonb, 2.5, null::jsonb, 5),
+    ('hv2', '52', 'Erst ab 19 Uhr sind elektronische Spielsachen bei Familie Russo erlaubt.', null::jsonb, 2.5, null::jsonb, 6),
+    ('hv2', '53', 'Der Experte hält nichts von Chats für Kinder.', null::jsonb, 2.5, null::jsonb, 7),
+    ('hv2', '54', 'Herr Russo empfiehlt, dass Kinder mehr Bücher lesen sollten.', null::jsonb, 2.5, null::jsonb, 8),
+    ('hv2', '55', 'In der kommenden Sendung geht es um Ernährung.', null::jsonb, 2.5, null::jsonb, 9),
+    ('hv3', '56', 'Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.', null::jsonb, 5.0, null::jsonb, 0),
+    ('hv3', '57', 'Die Firma liefert das bestellte Sofa am Dienstagnachmittag zwischen drei und sechs Uhr liefern.', null::jsonb, 5.0, null::jsonb, 1),
+    ('hv3', '58', 'Der Gasthof Lindner liegt neben einer Tankstelle.', null::jsonb, 5.0, null::jsonb, 2),
+    ('hv3', '59', 'Der Film Komiker wird mehrmals am Tag gezeigt.', null::jsonb, 5.0, null::jsonb, 3),
+    ('hv3', '60', 'Für den Abend wird kein Regen erwartet.', null::jsonb, 5.0, null::jsonb, 4),
+    ('sa', 'A', 'Antworten Sie Moritz. Schreiben Sie etwas zu allen vier Punkten:', null::jsonb, 0, '{"minWords": 100, "points": ["Ihr Lieblingsland", "Was Sie an fremden Orten interessiert", "Welche Musik Sie gern hören", "Vorschlag für Treffen mit Moritz"]}'::jsonb, 0)
+) as v(section_id, item_id, text, options, points, meta, sort)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-19'
+join sections s on s.test_id = t.id and s.section_id = v.section_id
+on conflict (section_id, item_id) do update set text = excluded.text, options = excluded.options, points = excluded.points, meta = excluded.meta, sort = excluded.sort;
+
+insert into item_answers (item_id, answer, explanation)
+select i.id, v.answer, v.explanation
+from (values
+    ('lv1', '1', 'E', null),
+    ('lv1', '2', 'F', null),
+    ('lv1', '3', 'B', null),
+    ('lv1', '4', 'A', null),
+    ('lv1', '5', 'J', null),
+    ('lv2', '6', 'C', null),
+    ('lv2', '7', 'A', null),
+    ('lv2', '8', 'C', null),
+    ('lv2', '9', 'A', null),
+    ('lv2', '10', 'C', null),
+    ('lv3', '11', 'D', null),
+    ('lv3', '12', 'H', null),
+    ('lv3', '13', 'I', null),
+    ('lv3', '14', 'E', null),
+    ('lv3', '15', 'A', null),
+    ('lv3', '16', 'X', null),
+    ('lv3', '17', 'L', null),
+    ('lv3', '18', 'X', null),
+    ('lv3', '19', 'F', null),
+    ('lv3', '20', 'G', null),
+    ('sb1', '21', 'B', null),
+    ('sb1', '22', 'C', null),
+    ('sb1', '23', 'C', null),
+    ('sb1', '24', 'C', null),
+    ('sb1', '25', 'A', null),
+    ('sb1', '26', 'C', null),
+    ('sb1', '27', 'B', null),
+    ('sb1', '28', 'A', null),
+    ('sb1', '29', 'C', null),
+    ('sb1', '30', 'B', null),
+    ('sb2', '31', 'F', 'musste'),
+    ('sb2', '32', 'I', 'seit'),
+    ('sb2', '33', 'E', 'keine'),
+    ('sb2', '34', 'H', 'paar'),
+    ('sb2', '35', 'C', 'gleichzeitig'),
+    ('sb2', '36', 'K', 'sondern'),
+    ('sb2', '37', 'N', 'würden'),
+    ('sb2', '38', 'O', 'zusätzliche'),
+    ('sb2', '39', 'M', 'Unterlagen'),
+    ('sb2', '40', 'G', 'nächste'),
+    ('hv1', '41', '-', null),
+    ('hv1', '42', '+', null),
+    ('hv1', '43', '-', null),
+    ('hv1', '44', '+', null),
+    ('hv1', '45', '+', null),
+    ('hv2', '46', '+', null),
+    ('hv2', '47', '-', null),
+    ('hv2', '48', '+', null),
+    ('hv2', '49', '-', null),
+    ('hv2', '50', '+', null),
+    ('hv2', '51', '-', null),
+    ('hv2', '52', '-', null),
+    ('hv2', '53', '+', null),
+    ('hv2', '54', '-', null),
+    ('hv2', '55', '+', null),
+    ('hv3', '56', '+', null),
+    ('hv3', '57', '-', null),
+    ('hv3', '58', '+', null),
+    ('hv3', '59', '+', null),
+    ('hv3', '60', '-', null)
+) as v(section_id, item_id, answer, explanation)
+join tests t on t.level_id = 'b1' and t.slug = 'modell-19'
 join sections s on s.test_id = t.id and s.section_id = v.section_id
 join items i on i.section_id = s.id and i.item_id = v.item_id
 on conflict (item_id) do update set answer = excluded.answer, explanation = excluded.explanation;

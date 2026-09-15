@@ -9,12 +9,14 @@
    "hint": "Aufgaben 1–40",
    "parts": [
     "lv1",
+    "lv2",
     "lv3",
+    "sb1",
     "sb2"
    ],
    "maxPoints": 105.0,
-   "availablePoints": 62.5,
-   "missing": 16
+   "availablePoints": 105.0,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -22,12 +24,13 @@
    "minutes": 30,
    "hint": "Aufgaben 41–60",
    "parts": [
+    "hv1",
     "hv2",
     "hv3"
    ],
    "maxPoints": 75.0,
-   "availablePoints": 50.0,
-   "missing": 5
+   "availablePoints": 75.0,
+   "missing": 0
   },
   {
    "id": "block-sa",
@@ -38,11 +41,11 @@
     "sa"
    ],
    "maxPoints": 45.0,
-   "availablePoints": 45,
+   "availablePoints": 45.0,
    "missing": 0
   }
  ],
- "subtitle": "40 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -119,6 +122,149 @@
      "id": "5",
      "text": "– Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus",
      "answer": "I"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 20,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Mehr Platz und Schutz für Bienen",
+       "b": true
+      },
+      {
+       "t": "Seit einiger Zeit hört man immer wieder, dass Bienen vom Aussterben bedroht sind. Welche Folgen hat das für die Menschheit und was wird dagegen unternommen?",
+       "b": false
+      },
+      {
+       "t": "Bienen spielen eine sehr wichtige Rolle für unsere Umwelt. Weltweit stirbt seit Jahren ein großer Teil der Bienenbevölkerung. Warum so viele Bienen sterben, lässt sich nicht so einfach sagen, denn meistens spielen mehrere Faktoren eine Rolle, wie zum Beispiel der Gebrauch von Pestiziden in der Landwirtschaft, fehlende Wiesen und Grünflächen, Luftverschmutzung und Klimawandel.",
+       "b": false
+      },
+      {
+       "t": "In den letzten Jahren sind vor allem in den Städten immer mehr Aktionen ins Leben gerufen worden, um neuen Lebensraum von Bienen zu schaffen. Bienen finden heute in vielen Städten ausreichend Nahrung, weil immer mehr Menschen für sie sorgen. „Bienen sind spannend“, meint Sebastian Werner. „Man sieht sie nicht immer, sie sind eher im Verborgenen und haben etwas Geheimnisvolles.“ „Die Biene ist für viele Menschen auch ein Symbol für Wildnis“, sagt Thorsten Gottlieb. „Und es ist schön für uns Menschen, das zu erleben. Faszinierend, ihnen bei ihrer Arbeit zu beobachten, stundenlang.“ Werner und Kessel sind der Überzeugung, dass ohne die Biene die Arbeit des Menschen kaum möglich wäre. Bienen bestäuben einen Großteil unserer Nahrungsmittel. Diese drei sind mit dem Thema vertraut, da sie das jährliche Frankfurter Bienenfestival vorbereiten. Gottlieb und Werner sind Gründer der Initiative und Kessel ist der Gastgeber und Leiter des Botanischen Gartens, wo das Festival stattfindet.",
+       "b": false
+      },
+      {
+       "t": "Die Beschäftigung mit Bienen wirkt entspannend im stressigen Tempo des Alltags. Außerdem ist die Welt, wie sie ist, ohne Bienen gar nicht vorstellbar. Sie sorgen für die Verbreitung hunderttausender Pflanzen, die Mensch und Tier zur Ernährung brauchen.",
+       "b": false
+      },
+      {
+       "t": "In Frankfurt besteht seit vielen hundert Jahren eine Tradition der Bienenhaltung. Für Einsteiger gibt es ein großes Angebot an Kursen.",
+       "b": false
+      },
+      {
+       "t": "„Du brauchst Grundlagen und eine gute Ausbildung, sonst machst du einfach zu viele Fehler“, warnt Thorsten Gottlieb. „Du hast eine riesengroße Verantwortung“, fügt Sebastian Werner hinzu. „Du musst wissen, was du da tust – nicht nur, weil du für bis zu 60 000 Bienen in einem einzigen Volk zu sorgen hast. Alle Bienenvölker im Umkreis sind betroffen, wenn dein Volk krank ist.“",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Das Bienensterben",
+     "options": [
+      {
+       "key": "A",
+       "text": "ist ein noch ungelöstes Problem."
+      },
+      {
+       "key": "B",
+       "text": "kann man nur in bestimmten Regionen beobachten."
+      },
+      {
+       "key": "C",
+       "text": "lässt sich auf eine einzige Ursache zurückführen."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "7",
+     "text": "In vielen Städten",
+     "options": [
+      {
+       "key": "A",
+       "text": "finden Bienen wenig Futter."
+      },
+      {
+       "key": "B",
+       "text": "kann man keine Bienen mehr sehen."
+      },
+      {
+       "key": "C",
+       "text": "schafft man mehr Platz für Bienen."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "8",
+     "text": "Werner, Gottlieb und Kessel",
+     "options": [
+      {
+       "key": "A",
+       "text": "arbeiten in einer Parkanlage in Frankfurt."
+      },
+      {
+       "key": "B",
+       "text": "forschen über Bienen und ihren Lebensraum."
+      },
+      {
+       "key": "C",
+       "text": "organisieren eine Veranstaltung über Bienen."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "9",
+     "text": "Experten nehmen an, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "es in vier Jahren keine Bienen mehr gibt."
+      },
+      {
+       "key": "B",
+       "text": "man viele Lebensmittel ohne Bienen herstellen kann."
+      },
+      {
+       "key": "C",
+       "text": "menschliches Leben ohne Bienen nicht möglich ist."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "10",
+     "text": "In Frankfurt gibt es",
+     "options": [
+      {
+       "key": "A",
+       "text": "schon lange Bienenhalter."
+      },
+      {
+       "key": "B",
+       "text": "viele kranke Bienenvölker."
+      },
+      {
+       "key": "C",
+       "text": "zurzeit 60 000 Bienen."
+      }
+     ],
+     "answer": "A"
     }
    ],
    "pointsPerItem": 5.0,
@@ -233,13 +379,256 @@
      "id": "19",
      "text": "Für Ihre Geburtstagfeier suchen Sie jemanden, der bei Ihnen zu Hause kocht.",
      "answer": "D"
+    },
+    {
+     "id": "20",
+     "text": "Sie wollen sich über Wohnwagen informieren.",
+     "answer": "J"
     }
    ],
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
-   "availablePoints": 22.5,
-   "missing": 1,
+   "availablePoints": 25.0,
+   "missing": 0,
    "bankImage": "img/m12-lv3.jpg"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Hallo Kathrin,",
+       "b": false
+      },
+      {
+       "t": "wir sind heute wieder mit unseren Enkeln unterwegs. Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht. Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier. Nun (23) wir einfach nur Porto genießen. Die Wettervorhersage hört sich gut an.",
+       "b": false
+      },
+      {
+       "t": "Die Flüge von Hannover (24) Frankfurt waren verspätet, aber wir sind gut angekommen. Die Verspätung wurde durch Nebel und technische Probleme verursacht. (25) wir in Porto landeten, schien zum Glück wieder die Sonne.",
+       "b": false
+      },
+      {
+       "t": "Wir sind sehr zufrieden mit (26) Unterkunft. Es gibt zwei Zimmer mit einer gut eingerichteten Küche, sogar eine Waschmaschine (27) vorhanden.",
+       "b": false
+      },
+      {
+       "t": "Morgen werden wir (28) Ruhe die Stadt erkunden. Wir haben uns ein kleines Programm (29), das wir gerne in den nächsten Tagen machen wollen. Die Reihenfolge haben wir aber (30) nicht festgelegt. Da sind wir flexibel.",
+       "b": false
+      },
+      {
+       "t": "Viele Grüße",
+       "b": false
+      },
+      {
+       "t": "Anne",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht.",
+     "options": [
+      {
+       "key": "A",
+       "text": "kurze"
+      },
+      {
+       "key": "B",
+       "text": "kurzen"
+      },
+      {
+       "key": "C",
+       "text": "kurzes"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "22",
+     "text": "Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier.",
+     "options": [
+      {
+       "key": "A",
+       "text": "bei"
+      },
+      {
+       "key": "B",
+       "text": "mit"
+      },
+      {
+       "key": "C",
+       "text": "ohne"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "23",
+     "text": "Nun (23) wir einfach nur Porto genießen.",
+     "options": [
+      {
+       "key": "A",
+       "text": "haben"
+      },
+      {
+       "key": "B",
+       "text": "müssen"
+      },
+      {
+       "key": "C",
+       "text": "wollen"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "24",
+     "text": "Die Flüge von Hannover (24) Frankfurt waren verspätet …",
+     "options": [
+      {
+       "key": "A",
+       "text": "aus"
+      },
+      {
+       "key": "B",
+       "text": "unter"
+      },
+      {
+       "key": "C",
+       "text": "über"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "25",
+     "text": "(25) wir in Porto landeten, schien zum Glück wieder die Sonne.",
+     "options": [
+      {
+       "key": "A",
+       "text": "Als"
+      },
+      {
+       "key": "B",
+       "text": "Wann"
+      },
+      {
+       "key": "C",
+       "text": "Wenn"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "26",
+     "text": "Wir sind sehr zufrieden mit (26) Unterkunft.",
+     "options": [
+      {
+       "key": "A",
+       "text": "deiner"
+      },
+      {
+       "key": "B",
+       "text": "meiner"
+      },
+      {
+       "key": "C",
+       "text": "unserer"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "27",
+     "text": "… sogar eine Waschmaschine (27) vorhanden.",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat"
+      },
+      {
+       "key": "B",
+       "text": "ist"
+      },
+      {
+       "key": "C",
+       "text": "wird"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "Morgen werden wir (28) Ruhe die Stadt erkunden.",
+     "options": [
+      {
+       "key": "A",
+       "text": "in"
+      },
+      {
+       "key": "B",
+       "text": "mit"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "29",
+     "text": "Wir haben uns ein kleines Programm (29) …",
+     "options": [
+      {
+       "key": "A",
+       "text": "überlegen"
+      },
+      {
+       "key": "B",
+       "text": "überlegt"
+      },
+      {
+       "key": "C",
+       "text": "überlegte"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "30",
+     "text": "Die Reihenfolge haben wir aber (30) nicht festgelegt.",
+     "options": [
+      {
+       "key": "A",
+       "text": "noch"
+      },
+      {
+       "key": "B",
+       "text": "nur"
+      },
+      {
+       "key": "C",
+       "text": "schon"
+      }
+     ],
+     "answer": "A"
+    }
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -406,6 +795,46 @@
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
    "availablePoints": 15.0,
+   "missing": 0
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin verbringt ihren Urlaub oft auf dem Land.",
+     "answer": "-"
+    },
+    {
+     "id": "42",
+     "text": "Der Sprecher findet Stadturlaub in Wien interessanter als die Berge.",
+     "answer": "+"
+    },
+    {
+     "id": "43",
+     "text": "Die Sprecherin meint, dass sich ihre ganze Familie im Urlaub gut erholt.",
+     "answer": "+"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin findet den Urlaub in Österreich langweilig.",
+     "answer": "-"
+    },
+    {
+     "id": "45",
+     "text": "Die Sprecherin denkt, dass Österreich vor allem für ältere Menschen interessant ist.",
+     "answer": "-"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
    "missing": 0
   },
   {

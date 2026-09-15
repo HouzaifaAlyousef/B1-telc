@@ -1,21 +1,21 @@
 # ANDREAS2
-Untertitel: 40 Aufgaben · 150 Minuten
+Untertitel: 61 Aufgaben · 150 Minuten
 
 ## Block: block-lv-sb
 Titel: Leseverstehen und Sprachbausteine
 Minuten: 90
 Hinweis: Aufgaben 1–40
 Punkte: 105
-Fehlend: 16
-Teile: lv1, lv3, sb2
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
 
 ## Block: block-hv
 Titel: Hörverstehen
 Minuten: 30
 Hinweis: Aufgaben 41–60
 Punkte: 75
-Fehlend: 5
-Teile: hv2, hv3
+Fehlend: 0
+Teile: hv1, hv2, hv3
 
 ## Block: block-sa
 Titel: Schriftlicher Ausdruck
@@ -56,6 +56,49 @@ Lösung: G
 Lösung: E
 [5] – Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus
 Lösung: I
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Mehr Platz und Schutz für Bienen**
+Seit einiger Zeit hört man immer wieder, dass Bienen vom Aussterben bedroht sind. Welche Folgen hat das für die Menschheit und was wird dagegen unternommen?
+Bienen spielen eine sehr wichtige Rolle für unsere Umwelt. Weltweit stirbt seit Jahren ein großer Teil der Bienenbevölkerung. Warum so viele Bienen sterben, lässt sich nicht so einfach sagen, denn meistens spielen mehrere Faktoren eine Rolle, wie zum Beispiel der Gebrauch von Pestiziden in der Landwirtschaft, fehlende Wiesen und Grünflächen, Luftverschmutzung und Klimawandel.
+In den letzten Jahren sind vor allem in den Städten immer mehr Aktionen ins Leben gerufen worden, um neuen Lebensraum von Bienen zu schaffen. Bienen finden heute in vielen Städten ausreichend Nahrung, weil immer mehr Menschen für sie sorgen. „Bienen sind spannend“, meint Sebastian Werner. „Man sieht sie nicht immer, sie sind eher im Verborgenen und haben etwas Geheimnisvolles.“ „Die Biene ist für viele Menschen auch ein Symbol für Wildnis“, sagt Thorsten Gottlieb. „Und es ist schön für uns Menschen, das zu erleben. Faszinierend, ihnen bei ihrer Arbeit zu beobachten, stundenlang.“ Werner und Kessel sind der Überzeugung, dass ohne die Biene die Arbeit des Menschen kaum möglich wäre. Bienen bestäuben einen Großteil unserer Nahrungsmittel. Diese drei sind mit dem Thema vertraut, da sie das jährliche Frankfurter Bienenfestival vorbereiten. Gottlieb und Werner sind Gründer der Initiative und Kessel ist der Gastgeber und Leiter des Botanischen Gartens, wo das Festival stattfindet.
+Die Beschäftigung mit Bienen wirkt entspannend im stressigen Tempo des Alltags. Außerdem ist die Welt, wie sie ist, ohne Bienen gar nicht vorstellbar. Sie sorgen für die Verbreitung hunderttausender Pflanzen, die Mensch und Tier zur Ernährung brauchen.
+In Frankfurt besteht seit vielen hundert Jahren eine Tradition der Bienenhaltung. Für Einsteiger gibt es ein großes Angebot an Kursen.
+„Du brauchst Grundlagen und eine gute Ausbildung, sonst machst du einfach zu viele Fehler“, warnt Thorsten Gottlieb. „Du hast eine riesengroße Verantwortung“, fügt Sebastian Werner hinzu. „Du musst wissen, was du da tust – nicht nur, weil du für bis zu 60 000 Bienen in einem einzigen Volk zu sorgen hast. Alle Bienenvölker im Umkreis sind betroffen, wenn dein Volk krank ist.“
+Aufgaben:
+[6] Das Bienensterben
+A) ist ein noch ungelöstes Problem.
+B) kann man nur in bestimmten Regionen beobachten.
+C) lässt sich auf eine einzige Ursache zurückführen.
+Lösung: A
+[7] In vielen Städten
+A) finden Bienen wenig Futter.
+B) kann man keine Bienen mehr sehen.
+C) schafft man mehr Platz für Bienen.
+Lösung: C
+[8] Werner, Gottlieb und Kessel
+A) arbeiten in einer Parkanlage in Frankfurt.
+B) forschen über Bienen und ihren Lebensraum.
+C) organisieren eine Veranstaltung über Bienen.
+Lösung: C
+[9] Experten nehmen an, dass
+A) es in vier Jahren keine Bienen mehr gibt.
+B) man viele Lebensmittel ohne Bienen herstellen kann.
+C) menschliches Leben ohne Bienen nicht möglich ist.
+Lösung: C
+[10] In Frankfurt gibt es
+A) schon lange Bienenhalter.
+B) viele kranke Bienenvölker.
+C) zurzeit 60 000 Bienen.
+Lösung: A
 
 ### Teil: lv3
 Format: matching
@@ -100,6 +143,76 @@ Lösung: X
 Lösung: X
 [19] Für Ihre Geburtstagfeier suchen Sie jemanden, der bei Ihnen zu Hause kocht.
 Lösung: D
+[20] Sie wollen sich über Wohnwagen informieren.
+Lösung: J
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Hallo Kathrin,
+wir sind heute wieder mit unseren Enkeln unterwegs. Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht. Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier. Nun (23) wir einfach nur Porto genießen. Die Wettervorhersage hört sich gut an.
+Die Flüge von Hannover (24) Frankfurt waren verspätet, aber wir sind gut angekommen. Die Verspätung wurde durch Nebel und technische Probleme verursacht. (25) wir in Porto landeten, schien zum Glück wieder die Sonne.
+Wir sind sehr zufrieden mit (26) Unterkunft. Es gibt zwei Zimmer mit einer gut eingerichteten Küche, sogar eine Waschmaschine (27) vorhanden.
+Morgen werden wir (28) Ruhe die Stadt erkunden. Wir haben uns ein kleines Programm (29), das wir gerne in den nächsten Tagen machen wollen. Die Reihenfolge haben wir aber (30) nicht festgelegt. Da sind wir flexibel.
+Viele Grüße
+Anne
+Aufgaben:
+[21] Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht.
+A) kurze
+B) kurzen
+C) kurzes
+Lösung: A
+[22] Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier.
+A) bei
+B) mit
+C) ohne
+Lösung: B
+[23] Nun (23) wir einfach nur Porto genießen.
+A) haben
+B) müssen
+C) wollen
+Lösung: C
+[24] Die Flüge von Hannover (24) Frankfurt waren verspätet …
+A) aus
+B) unter
+C) über
+Lösung: C
+[25] (25) wir in Porto landeten, schien zum Glück wieder die Sonne.
+A) Als
+B) Wann
+C) Wenn
+Lösung: A
+[26] Wir sind sehr zufrieden mit (26) Unterkunft.
+A) deiner
+B) meiner
+C) unserer
+Lösung: C
+[27] … sogar eine Waschmaschine (27) vorhanden.
+A) hat
+B) ist
+C) wird
+Lösung: B
+[28] Morgen werden wir (28) Ruhe die Stadt erkunden.
+A) in
+B) mit
+C) zu
+Lösung: A
+[29] Wir haben uns ein kleines Programm (29) …
+A) überlegen
+B) überlegt
+C) überlegte
+Lösung: B
+[30] Die Reihenfolge haben wir aber (30) nicht festgelegt.
+A) noch
+B) nur
+C) schon
+Lösung: A
 
 ### Teil: sb2
 Format: wordbank
@@ -164,6 +277,27 @@ Lösung: N
 [40] … und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich …
 Erklärung: Das Wort lautet: FALLS
 Lösung: E
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin verbringt ihren Urlaub oft auf dem Land.
+Lösung: falsch
+[42] Der Sprecher findet Stadturlaub in Wien interessanter als die Berge.
+Lösung: falsch
+[43] Die Sprecherin meint, dass sich ihre ganze Familie im Urlaub gut erholt.
+Lösung: falsch
+[44] Die Sprecherin findet den Urlaub in Österreich langweilig.
+Lösung: falsch
+[45] Die Sprecherin denkt, dass Österreich vor allem für ältere Menschen interessant ist.
+Lösung: falsch
 
 ### Teil: hv2
 Format: truefalse

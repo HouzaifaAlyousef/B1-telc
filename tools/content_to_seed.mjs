@@ -76,6 +76,7 @@ const PROV = {
   telc:   { name: 'telc',   title: (s) => `telc Deutsch ${s}` },
   oesd:   { name: 'ÖSD',    title: (s) => `ÖSD Zertifikat ${s}` },
   goethe: { name: 'Goethe', title: (s) => `Goethe-Zertifikat ${s}` },
+  dtz:    { name: 'DTZ',    title: (s) => `Deutsch-Test für Zuwanderer ${s}` },
 };
 
 const stufe = lvl.toUpperCase();

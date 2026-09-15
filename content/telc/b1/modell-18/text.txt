@@ -1,0 +1,370 @@
+# LAURA
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.
+Aufgaben:
+[1] London. Der wohl teuerste Hamburger der Welt wird seit gestern in London verkauft. Der Hamburger besteht aus japanischem Kobe-Rindfleisch, weißen Trüffeln sowie iranischem Safran und kostet umgerechnet 120 Euro. Das übertrifft den bisherigen Weltrekordhalter in New York: Dort bot ein Bistro ein edles Fleischbrötchen für rund 80 Euro an. „The Burger“ ist nur in einer Londoner Filiale zu haben. Bereits am Morgen wurde ein Dutzend der Hamburger verkauft.
+Lösung: H
+[2] Bielefeld. Die Benutzung eines Handys bei ausgeschaltetem Motor wird nicht mit einem Bußgeld bestraft. Das geht aus einem Urteil des Landgerichts Bielefeld hervor. Ein Autofahrer hatte an einer roten Ampel den Motor abgestellt und mit seinem Handy telefoniert, ohne die Freisprechanlage einzuschalten. Bevor die Ampel auf Grün schaltete, beendete er das Gespräch. Trotzdem wurde der Autofahrer von einem Polizisten angehalten und bekam eine Strafe von 40 Euro. Zu Unrecht, wie das Gericht jetzt urteilte.
+Lösung: F
+[3] Wuppertal. Drei Jungen haben mit einem Physik-Test der besonderen Art den Bahnverkehr stark gestört. Die Schüler im Alter von zehn und elf Jahren hatten ihre Butterbrote und Getränkekartons auf die Gleise der S-Bahnstrecke Wuppertal-Essen gelegt. „Sie wollten beobachten, was passiert“, sagte die Polizei gestern in Düsseldorf. Der Bahnverkehr wurde gestoppt und das Trio von den Gleisen geholt. Die Polizei erklärte den Jungs, wie gefährlich ihre Aktion war. Mehrere Züge verspäteten sich.
+Lösung: C
+[4] Paris. In Frankreich hat ein junger Mann bei Tempo 200 auf einer Autobahn am Steuer Filme auf DVD angeschaut. „Ich habe nicht gewusst, dass das verboten ist“, sagte der 21-jährige Pascal A. vor Gericht in Tours. Das Gericht nahm ihm nicht nur den Führerschein weg, sondern beschlagnahmte auch das Auto. Außerdem bekam er eine Geldstrafe von 150 Euro. Die Polizei hatte den Fahranfänger auf der Autobahn angehalten, nachdem er vorher mit über 200 Stundenkilometern viel zu schnell unterwegs gewesen war. Erlaubt war nur Tempo 110.
+Lösung: J
+[5] Frankfurt. Die gebürtige Hamburgerin Tanja Bauer beliefert das „Main Äppel Haus Lohrberg“ schon lange mit ihren Marmeladen-Variationen. Jetzt möchte sie ihr Wissen und ihre Leidenschaft teilen: Am Dienstag weiht sie Interessierte in ihre Tricks ein. Der Kurs dauert von 18 Uhr bis 20 Uhr und findet im „Main Äppel Haus“ in Frankfurt statt. Die Teilnahme kostet 15 Euro pro Person. Anmeldung ist erforderlich unter (06 109) 22 59 13.
+Lösung: G
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Weltreise? Lieber ein Praktikum in Kuala Lumpur!**
+**Umfrage unter Abiturienten: Welche Pläne gibt es für die Zeit nach der Schule? Jura-Studium sehr beliebt**
+„Nachdem ich das Abitur nun bestanden habe, fühle ich mich befreit. Jetzt gehe ich einen Monat nach San Francisco, um Freunde zu besuchen. Danach wartet ein Praktikum bei der Lufthansa in Kuala Lumpur auf mich, weil ich Luftverkehrsmanagement studieren möchte.“ Das sagt die 19-jährige Aynur Üstüner, die gerade erst ihr Abitur gemacht hat.
+Nicht nur für Aynur, sondern auch für 85 weitere Schüler der Heinrich-Mann-Schule (HMS) und der Rudolf-Steiner-Schule (RSS) fängt nun das Berufs- oder Universitätsleben an. Alle können sehr stolz auf sich sein: Zweimal gab es sogar die Bestnote 1,0. Insgesamt lag der Durchschnitt bei 2,5 und war damit etwas besser als im Vorjahr. Durchgefallen ist keiner, nur ein Teilnehmer hat das Abitur abgebrochen. Für alle Grund genug, um den Erfolg richtig zu feiern.
+Während die Steiner-Schüler eine ganz ruhige Feier machten, drehten die Abiturienten der Heinrich-Mann-Schule im Bürgerhaus so richtig auf und präsentierten dem Publikum eine filmreife, fantastische Show. Bilder von den beiden Partys zeigen wir ab heute in unserer Bilder-Galerie im Internet.
+Nun haben also alle ihre Zeugnisse und endlich einmal richtig ausgeschlafen. Kein Wunder: In den letzten Wochen haben die Abiturienten nächtelang gelernt und gleichzeitig Abschied gefeiert – das war sehr anstrengend. Aber jetzt müssen wichtige Entscheidungen getroffen werden: Eine Ausbildung machen? Studieren? Oder vielleicht doch lieber eine Weltreise unternehmen? Wir haben außer Aynur Üstüner noch vier weitere Abiturienten nach ihren Plänen gefragt. Hier sind ihre Antworten:
+Christopher Hallgarten (20, RSS): „Ich bin froh, dass das Abitur vorbei ist. Nach einem kurzen Urlaub werde ich erstmal zwei Praktika in Krankenhäusern machen. Danach möchte ich Medizin studieren. Am liebsten in Bayreuth, da soll es schön gemütlich sein.“
+Inka Schröder (18, RSS): „Jetzt werde ich erstmal die freien Wochen bis zum Studium genießen. Wahrscheinlich wird es Jura werden. Natürlich will ich später auch einige Zeit im Ausland studieren. Eine Pause nach dem Abitur brauche ich nicht unbedingt, schließlich freue ich mich auf mein Studium.“
+Fabian Sänger (20, HMS): „Ich mache zunächst ein Freiwilliges Soziales Jahr. Auf diese Zeit freue ich mich schon sehr. Danach will ich unbedingt Sport studieren, weiß aber noch nicht, welche Uni mich nehmen wird. Ich lasse mich einfach überraschen, wohin die Reise geht.“
+Alexander Michels (19, HMS): „Ich habe mich für das Fach Jura entschieden und werde dafür nach München ziehen. Zuerst brauche ich aber ein paar Wochen Urlaub, um mich von dem Abi-Stress zu erholen. Die Schule werde ich nicht vermissen!“
+Aufgaben:
+[6] An den beiden Schulen
+A) haben alle teilnehmenden Schüler das Abitur bestanden.
+B) haben zwei Schüler die Note 2,5 erreicht.
+C) sind die Durchschnittsnoten gleich geblieben.
+Lösung: A
+[7] Die Abiparty der Heinrich-Mann-Schule war fantastisch, weil
+A) die Abiturienten einen Film über die Party gemacht haben.
+B) die ganze Party im Internet gezeigt wurde.
+C) es eine tolle Show gab.
+Lösung: C
+[8] In den letzten Wochen haben die Schülerinnen und Schüler
+A) immer nur nachts für das Abitur gelernt.
+B) lieber gefeiert als gelernt.
+C) viel zu wenig geschlafen.
+Lösung: C
+[9] Inka und Alexander
+A) finden es schade, dass die Schulzeit vorbei ist.
+B) haben vor, Jura zu studieren.
+C) machen erst einmal zusammen Urlaub im Ausland.
+Lösung: B
+[10] Einer der vier Abiturienten
+A) möchte in Bayreuth studieren, weil die Stadt so schön groß ist.
+B) weiß noch nicht genau, wo er studieren wird.
+C) will nach dem Freiwilligen Sozialen Jahr zwei Praktika machen.
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.
+Bild: img/m18-lv3.jpg
+Aufgaben:
+[11] Sie suchen zwei Stühle für Ihren Garten, möchten aber insgesamt nicht mehr als 15 € bezahlen.
+Lösung: D
+[12] Sie müssen Ihren guten Teppich reinigen lassen und suchen eine Firma mit langjähriger Erfahrung.
+Lösung: L
+[13] Sie haben Geburtstag und möchten mit Ihren Gästen etwas Besonderes machen: Abends in den Zoo gehen.
+Lösung: I
+[14] Sie sind gerade umgezogen und möchten sich eine neue Waschmaschine kaufen.
+Lösung: X
+[15] Die Tochter Ihrer Nachbarin will später einmal Tierärztin werden und sucht einen Job für die Sommerferien. Geben Sie ihr einen Tipp.
+Lösung: F
+[16] Kindergeburtstag! Ihr kleiner Sohn wird fünf. Sie möchten ihn und seine Freunde ins Kino einladen.
+Lösung: X
+[17] Ein guter Freund hat ein Aquarium. Schenken Sie ihm etwas für sein Hobby.
+Lösung: E
+[18] Sie bekommen mitten in der Nacht starke Kopfschmerzen und brauchen schnell Tabletten.
+Lösung: C
+[19] Ihre Kinder möchten gern ein Haustier. Sie haben nichts dagegen, es soll aber ein Tier aus dem Tierheim sein.
+Lösung: B
+[20] Sie richten Ihr Schlafzimmer neu ein und suchen einen Kleiderschrank aus Skandinavien.
+Lösung: J
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Hallo Nikolas,
+in knapp einer Woche ist es so weit: Unsere spanische Theatergruppe „Los Mutantes“ geht auf große Tour (21) Deutschland und Spanien mit dem Stück „Niebla“ (Nebel). Wir planen, mindestens 30 Vorstellungen zu geben und das mit so (22) bunt gemischten Gruppe aus zehn (!!) Ländern. Am 7. April beginnen wir unsere Theaterreise an der Uni von Alicante/Spanien. Du kannst (23) denken, dass ich als Nichtmuttersprachlerin sehr (24) bin, dort vor spanischem Publikum zu spielen, (25) ich ja fließend und fast ohne Akzent Spanisch spreche.
+(26) Herbst steht vielleicht auch meine alte „Wahlheimatstadt“ Barcelona auf dem Programm, wie gerne (27) ich euch alle wiedersehen! Ohne eure Hilfe hätte ich die Sprache niemals so gut lernen (28). Ich denke oft an unsere multikulturelle Wohngemeinschaft: das gemeinsame Kochen, die tollen Feste ... Ein bisschen (29) habe ich jetzt in der Theatergruppe (30).
+Liebe Grüße auch an deine Mitbewohner schickt dir Sarah
+Aufgaben:
+[21] … geht auf große Tour (21) Deutschland und Spanien …
+A) aus
+B) durch
+C) von
+Lösung: B
+[22] … und das mit so (22) bunt gemischten Gruppe aus zehn (!!) Ländern.
+A) eine
+B) einen
+C) einer
+Lösung: C
+[23] Du kannst (23) denken, dass ich als Nichtmuttersprachlerin …
+A) dich
+B) dir
+C) sich
+Lösung: B
+[24] … sehr (24) bin, dort vor spanischem Publikum zu spielen …
+A) aufgeregt
+B) aufregend
+C) aufzuregen
+Lösung: A
+[25] … (25) ich ja fließend und fast ohne Akzent Spanisch spreche.
+A) obwohl
+B) weil
+C) zwar
+Lösung: A
+[26] (26) Herbst steht vielleicht auch meine alte „Wahlheimatstadt“ Barcelona auf dem Programm …
+A) Im
+B) In
+C) Während
+Lösung: A
+[27] … wie gerne (27) ich euch alle wiedersehen!
+A) hätte
+B) würde
+C) wurde
+Lösung: B
+[28] Ohne eure Hilfe hätte ich die Sprache niemals so gut lernen (28).
+A) können
+B) müssen
+C) sollen
+Lösung: A
+[29] Ein bisschen (29) habe ich jetzt in der Theatergruppe …
+A) damit
+B) davon
+C) dazu
+Lösung: B
+[30] … habe ich jetzt in der Theatergruppe (30).
+A) wiederfinden
+B) wiedergefunden
+C) wiederzufinden
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.
+Text:
+**Songwettbewerb auf der Burg Tanneck vom 5. bis 7. September. Der Songwettbewerb findet statt für Sologesang, Sologesang mit Instrument, Gruppengesang (2–5 Teilnehmer). Professionelle Musiker dürfen nicht teilnehmen. Informationen zur Anmeldung und zum Ort unter: www.burg-tanneck.de**
+Hallo Benny, hallo Verena, diese kurze Notiz habe ich gestern im Internet gefunden und (31) gleich an euch (32) denken. Es waren doch wunderbare Abende, (33) wir im letzten Urlaub in Griechenland verbracht haben. Eure Lieder und Bennys tolles Gitarrenspiel sind mir in guter Erinnerung geblieben. Wie (34) es, hättet ihr nicht mal Lust, bei so einem Songwettbewerb mitzumachen?
+Ich kenne die Burg Tanneck (35) seit meiner Kindheit, als mich meine musikbegeisterten Eltern zu den Festivals mitgenommen haben. Was ganz wichtig ist: Dieser Songwettbewerb hat (36) nichts mit Kommerz und Vermarktung zu tun, wie man es sonst aus dem Fernsehen (37).
+Es geht nur (38), Spaß zu haben und zu singen! Schon allein die romantische Burg ist eine Reise wert, auch (39) ihr nur den anderen Sängern zuhören wollt. Lasst (40) was von euch hören! Bis dann, liebe Grüße aus Saarbrücken Astrid
+Aufgaben:
+[31] … und (31) gleich an euch …
+Erklärung: musste
+Lösung: J
+[32] … an euch (32) denken.
+Erklärung: beide
+Lösung: C
+[33] … wunderbare Abende, (33) wir im letzten Urlaub …
+Erklärung: die
+Lösung: E
+[34] Wie (34) es, hättet ihr nicht mal Lust …
+Erklärung: wäre
+Lösung: L
+[35] Ich kenne die Burg Tanneck (35) seit meiner Kindheit …
+Erklärung: schon
+Lösung: K
+[36] … hat (36) nichts mit Kommerz und Vermarktung zu tun …
+Erklärung: überhaupt
+Lösung: O
+[37] … wie man es sonst aus dem Fernsehen (37).
+Erklärung: kennt
+Lösung: I
+[38] Es geht nur (38), Spaß zu haben und zu singen!
+Erklärung: darum
+Lösung: D
+[39] … auch (39) ihr nur den anderen Sängern zuhören wollt.
+Erklärung: wenn
+Lösung: M
+[40] Lasst (40) was von euch hören!
+Erklärung: bald
+Lösung: B
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Sie hören nun fünf kurze Texte. Dazu sollen Sie fünf Aufgaben lösen. Sie hören diese Texte nur einmal. Entscheiden Sie beim Hören, ob die Aussagen 41–45 richtig (+) oder falsch (-) sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Der Sprecher isst nicht mehr so viel Fleisch wie früher.
+Lösung: falsch
+[42] Die Sprecherin ist überzeugt, dass die Lebensmittel in den Supermärkten kontrolliert werden.
+Lösung: falsch
+[43] Die Sprecherin hat Angst vor Krankheiten, weil die Lebensmittel so schlecht sind.
+Lösung: falsch
+[44] Dem Sprecher gefällt die Atmosphäre auf dem Wochenmarkt.
+Lösung: falsch
+[45] Der Sprecher findet, dass die meisten Menschen zu viel Geld für unwichtige Dinge ausgeben.
+Lösung: falsch
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 12
+Punkte: 2.5
+Maximum: 25
+Anweisung: Sie hören ein Gespräch. Dazu sollen Sie zehn Aufgaben lösen. Sie hören das Gespräch zweimal. Entscheiden Sie beim Hören, ob die Aussagen 46–55 richtig (+) oder falsch (-) sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Beim JP-Morgan-Firmenlauf trifft man viele Kollegen zum ersten Mal.
+Lösung: falsch
+[47] Die Läufer und Läuferinnen kommen aus dem In- und Ausland.
+Lösung: falsch
+[48] Nur wer aktiv Sport treibt, kann beim JP-Morgan-Firmenlauf mitmachen.
+Lösung: falsch
+[49] Jasmins Tochter war bei dem Lauf auch schon dabei.
+Lösung: falsch
+[50] Jasmin hat vor zwei Jahren zum ersten Mal am JP-Morgan-Firmenlauf teilgenommen.
+Lösung: falsch
+[51] Der JP-Morgan-Firmenlauf findet nur in Deutschland statt.
+Lösung: falsch
+[52] Jasmin hat sich nach ihrem ersten Lauf nicht mehr so allein gefühlt.
+Lösung: falsch
+[53] Die Chefs müssen bei dem Lauf auch dabei sein.
+Lösung: falsch
+[54] Die T-Shirts sind ein Erkennungszeichen.
+Lösung: falsch
+[55] Die Firmen müssen das Startgeld bezahlen.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 10
+Punkte: 5
+Maximum: 25
+Anweisung: Sie hören fünf kurze Texte. Sie hören die Texte zweimal. Entscheiden Sie beim Hören, ob die Aussagen 56–60 richtig (+) oder falsch (-) sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Das Buch kann erst morgen ab 9 Uhr in der Buchhandlung abgeholt werden.
+Lösung: falsch
+[57] Die Firma ist in der Wilhelmstraße.
+Lösung: falsch
+[58] Sie können den Film von Rainer Bölkow heute Abend im Kino sehen.
+Lösung: falsch
+[59] Sie können eine Zeitung im Zugrestaurant kaufen.
+Lösung: falsch
+[60] Vom Bahnhof zur Universität dauert es mit der U-Bahn und dem Bus nur 5 Minuten.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Sie haben von einer Freundin folgende E-Mail erhalten:
+Extra:
+{
+ "brief": {
+  "intro": "Sie haben von einer Freundin folgende E-Mail erhalten:",
+  "greeting": "Liebe/r __________,",
+  "paragraphs": [
+   "du weißt ja, dass ich schon lange nach einem Job suche, der mit meinem Hobby Musik zu tun hat. Stell dir vor, nun habe ich den perfekten Job gefunden. Ich gehe für sechs Monate mit der berühmten deutschen Musikgruppe „Wohnraumhelden“ auf Tournee durch verschiedene Länder – als Assistentin des Managers. Dabei kommen wir auch ganz in die Nähe deiner Stadt. Leider war ich ja noch nie da. Kannst du mir ein paar Tipps geben, was ich dort so machen kann?",
+   "Im Moment sind wir noch mit der Planung beschäftigt. Deshalb weiß ich noch nicht genau, wann es losgeht. Wenn ich den genauen Termin kenne, melde ich mich sofort bei dir. Ich hoffe, dass wir uns dann einmal treffen können, und natürlich organisiere ich auch Freikarten für dich und deine Freunde. Ich freue mich schon!",
+   "Liebe Grüße"
+  ],
+  "signature": "Laura"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss."
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie auf die E-Mail. Schreiben Sie etwas zu den folgenden vier Punkten:
+Mindestwörter: 100
+Punkt: Ihre Lieblingsmusik
+Punkt: wichtige Tipps
+Punkt: Reaktion auf Freikarten
+Punkt: Treffen?

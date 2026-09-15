@@ -73,12 +73,12 @@ untimed. Answer one correctly and it leaves the list.
 | Sprachbausteine (grammar/vocab gaps) | Full |
 | **Hörverstehen (listening)** | **Text only — no audio exists in the source PDF** |
 | Schriftlicher Ausdruck (writing) | Full task, self-assessed against telc's 3 criteria |
-| Mündliche Prüfung (speaking) | **Not covered at all** |
+| Mündliche Prüfung (speaking) | **Full guide & catalog** — 27 topics, 14 planning dialogues, full Redemittel in `Doku/telc-b1-muendlich/` (see [27-telc-b1-muendlich.md](27-telc-b1-muendlich.md)) |
 
 The listening gap is handled honestly: the app shows a warning before you start
 that section, explaining it is for reviewing statements against the solution,
-not for ear training. The speaking part is simply absent — telc B1 has an oral
-exam and this app does not touch it.
+not for ear training. The speaking part is documented as a standalone preparation
+module with complete task cards, model presentations, dialogues, and photo assets.
 
 Both gaps matter commercially and are covered in
 [10-commercialisation.md](10-commercialisation.md).

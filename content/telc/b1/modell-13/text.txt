@@ -1,5 +1,5 @@
 # THOMAS
-Untertitel: 52 Aufgaben · 150 Minuten
+Untertitel: 61 Aufgaben · 150 Minuten
 
 ## Block: block-lv-sb
 Titel: Leseverstehen und Sprachbausteine
@@ -97,6 +97,11 @@ A) höfliches Verhalten am Arbeitsplatz lernen.
 B) ihre Stellung im Arbeitsleben verbessern.
 C) neue Trends beim Einrichten des Arbeitsplatzes kennen lernen.
 Lösung: A
+[10] Im Berufsleben
+A) bietet immer die ranghöhere Person das Du an.
+B) duzt der ältere Mitarbeiter den jüngeren Chef.
+C) entscheidet immer das Alter, wer das Du anbietet.
+Lösung: A
 
 ### Teil: lv3
 Format: matching
@@ -135,6 +140,14 @@ Lösung: A
 Lösung: I
 [16] Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk.
 Lösung: K
+[17] Sie sind mit der Schule fertig und wollen bei der Deutschen Bahn eine Ausbildung machen.
+Lösung: X
+[18] Sie interessieren sich für politisches Theater und möchten dazu am Wochenende etwas hören oder sehen.
+Lösung: J
+[19] Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma.
+Lösung: L
+[20] Sie wollen mehr über das Thema Arbeiten in Europa erfahren.
+Lösung: B
 
 ### Teil: sb1
 Format: mc
@@ -160,6 +173,11 @@ A) hat
 B) war
 C) wäre
 Lösung: B
+[23] … (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets …
+A) Obwohl
+B) Weil
+C) Da
+Lösung: A
 [24] … nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …
 A) für
 B) mit
@@ -170,11 +188,26 @@ A) erst
 B) jetzt
 C) schon
 Lösung: A
+[26] … Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. …
+A) aber
+B) sondern
+C) und
+Lösung: B
 [27] … noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der …
 A) den
 B) der
 C) die
 Lösung: C
+[28] … Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten … bitten. …
+A) an
+B) auf
+C) um
+Lösung: C
+[29] … auf mein Konto (29) der Bank of India in Mumbai bitten. …
+A) an
+B) bei
+C) zu
+Lösung: B
 [30] … Ich bitte Sie, die Angelegenheit bald zu klären und (30) dann zu antworten. Mit freundlichen Grüßen Luisa Martin
 A) mich
 B) mir

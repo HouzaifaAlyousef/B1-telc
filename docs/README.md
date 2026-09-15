@@ -35,6 +35,7 @@ English — that is a deliberate split (see [09-code-review.md](09-code-review.m
 | 24 | [Telegram live](24-telegram-live.md) | Bot setup step by step: group as approver, reserve, decide |
 | 25 | [Bot full access](25-bot-full-access.md) | Requests, reservations, and the codes they hand out |
 | 26 | [Problem melden](26-problem-melden.md) | The (ℹ) button in each exam, where reports land, and why they can't be injected |
+| 27 | [Mündliche Prüfung](27-telc-b1-muendlich.md) | The speaking exam: structure, 27 topics, 14 planning dialogues, and full Redemittel |
 
 > Tests, how to run them, and the twelve bugs they found: [../TESTING.md](../TESTING.md)
 
