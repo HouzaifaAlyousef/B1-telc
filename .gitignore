@@ -5,3 +5,12 @@ tests/fixture.json
 dist/
 .venv/
 downloads/
+
+# ★ تسجيلات الاستماع ما بتنحفظ بـgit.
+# ٥٥ ملفّ × ١٢ دقيقة ≈ مئات الميغات: كل واحد بينسخ الريبو بيجرّهن معه
+# للأبد، وGitHub بيشتكي فوق ٥٠ ميغا للملفّ. مطرحهن الطبيعي هو دلو
+# Storage — منرفعهن بـtools/upload_audio.py، وسطر `Hörtext:` بالمحتوى
+# (وهو **محفوظ** بـgit) هو الرابط بينهن.
+# لو بدّلت جهاز: نزّلهن من جديد وشغّل tools/link_audio.mjs.
+content/**/audio/*
+!content/**/audio/.gitkeep

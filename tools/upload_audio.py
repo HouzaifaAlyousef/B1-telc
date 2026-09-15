@@ -57,11 +57,29 @@ def main():
     # config.audio محفوظ كاسم الملف — المسار بالدلو لازم يطابقه حرفياً.
     prefix = a.prefix if a.prefix is not None else ''
     prefix = prefix.strip('/')
-    files = sorted(p for p in src.iterdir() if p.is_file()
-                   and p.suffix.lower() in ('.mp3', '.m4a', '.ogg', '.wav', '.aac')) \
+    EXT = ('.mp3', '.m4a', '.ogg', '.wav', '.aac')
+    files = sorted(p for p in src.iterdir()
+                   if p.is_file() and p.suffix.lower() in EXT) \
             if src.is_dir() else []
+
+    # ★ الصوت موزّع متل الصور: content/<مؤسسة>/<درجة>/modell-NN/audio/*.
+    #   بلا هالمسار لازم تشغّلي الأمر مرّة لكل نموذج — ٥٥ مرّة، وكل مرّة
+    #   فرصة تنسي وحدة. (الصور انصلّحت من زمان، والصوت ضلّ ناقص.)
+    if not files and src.is_dir():
+        files = sorted(f for f in src.rglob('audio/*')
+                       if f.is_file() and f.suffix.lower() in EXT)
     if not files:
         sys.exit(f'ما في ملفات صوت بـ{src}')
+
+    # ★ اسمين متل بعض من مجلدين مختلفين بيدعسوا بعض بالدلو
+    dupes = {}
+    for f in files:
+        dupes.setdefault(f.name, []).append(str(f))
+    clash = {k: v for k, v in dupes.items() if len(v) > 1}
+    if clash:
+        for k, v in list(clash.items())[:5]:
+            print(f'✗ تصادم: {k} ← {", ".join(v)}')
+        sys.exit(f'{len(clash)} اسم مكرّر — الدلو مسطّح، فالأسماء لازم تكون فريدة')
 
     total = sum(f.stat().st_size for f in files)
     key_of = lambda f: f'{prefix}/{f.name}' if prefix else f.name

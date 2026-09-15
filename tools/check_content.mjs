@@ -67,9 +67,14 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
       }
       // ★ رابط خارجي (http) مو ملفّ عنا: التطبيق بيمرّره كما هو
       //   (assets/api.js — signed())، فما منفتّش عنه بالقرص.
-      const gone = want.filter(([kind, f]) =>
-        !/^https?:\/\//i.test(f)
-        && !existsSync(path.join(dir, kind, path.basename(f))));
+      // ★ الصوت ما بينحفظ بـgit (شوف .gitignore) — مطرحه دلو Storage.
+      //   فغيابه عن القرص مو نقص محتوى، وسؤال «هل انرفع؟» بيجاوب عليه
+      //   supabase/health.sql من القاعدة نفسها.
+      const here = ([kind, f]) => /^https?:\/\//i.test(f)
+        || existsSync(path.join(dir, kind, path.basename(f)));
+      const gone = want.filter(x => x[0] !== 'audio' && !here(x));
+      const offsite = want.filter(x => x[0] === 'audio' && !here(x)).length;
+      if (offsite) note.push(`${offsite} تسجيل بالدلو`);
       if (gone.length) {
         nMissing += gone.length;
         note.push(`★ ناقص ${gone.length}: ${gone.map(g => path.basename(g[1])).join(', ')}`);

@@ -326,6 +326,27 @@ echo "$OUT" | grep -q 'audio/telc-b2-m08-hv1.mp3' \
   && echo "$OUT" | grep -q 'audio/telc-b2-m08-hvs.mp3'
 check "★ و«_teil1» و«_hoeren_schreiben» بيوصلوا hv1 وhvs" $?
 
+# ★ الرفع لازم يلمّ الشجرة كلها. الصور انصلّحت من زمان والصوت ضلّ
+#   ناقص — و`upload_audio.py content` كانت بتموت بـ«ما في ملفات صوت»
+#   بينما ٥٥ ملفّ تحتها. ونفس حارس التصادم: الدلو مسطّح.
+HERE=$PWD
+AT="$TMP/at/content/telc/b1/modell-01/audio"; mkdir -p "$AT"
+: > "$AT/telc-b1-m01-hv1.mp3"
+( cd "$TMP/at" && python3 "$HERE/tools/upload_audio.py" content --dry-run ) \
+  2>&1 | grep -q 'telc-b1-m01-hv1.mp3'
+check "★ رفع الصوت بيلمّ الشجرة كلها (مو مجلّد واحد)" $?
+
+mkdir -p "$TMP/at/content/oesd/a1/modell-01/audio"
+: > "$TMP/at/content/oesd/a1/modell-01/audio/telc-b1-m01-hv1.mp3"
+! ( cd "$TMP/at" && python3 "$HERE/tools/upload_audio.py" content --dry-run ) \
+  >/dev/null 2>&1
+check "★ وبيرفض اسمين متل بعض — الدلو مسطّح" $?
+
+# ★ التسجيلات ما بتنحفظ بـgit: مئات الميغات بتتعلّق برقبة كل نسخة
+git check-ignore -q content/telc/b1/modell-01/audio/x.mp3 \
+  && ! git check-ignore -q content/telc/b1/modell-01/audio/.gitkeep
+check "★ الصوت مستثنى من git، و.gitkeep محفوظ" $?
+
 # ★ الدلو مسطّح: كل الصور بتنزل جنب بعض تحت img/، فالاسم لازم يكون
 #   فريد بكل المستويات مو بالمستوى لحاله.
 #
