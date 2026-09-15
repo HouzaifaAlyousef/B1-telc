@@ -347,6 +347,28 @@ git check-ignore -q content/telc/b1/modell-01/audio/x.mp3 \
   && ! git check-ignore -q content/telc/b1/modell-01/audio/.gitkeep
 check "★ الصوت مستثنى من git، و.gitkeep محفوظ" $?
 
+python3 -c "import ast,sys; ast.parse(open('tools/shrink_audio.py').read())"
+check "shrink_audio.py صحيح نحوياً" $?
+
+# ★ دلو Supabase بيرفض فوق ٥٠ ميغا («Payload too large»)، وأربع ملفّات
+#   بـtelc B2 طلعوا ٦٤–٨٠ ميغا وفشل رفعهن. وحتى مع حدّ أعلى: ٨٠ ميغا
+#   لقسم استماع واحد كارثة على طالب بالموبايل — باقي أقسام نفس المستوى
+#   ٢٫٣ ميغا. الأداة بتمسك الكبير وبس.
+SA="$TMP/sa/content/telc/b2/modell-08/audio"; mkdir -p "$SA"
+python3 -c "
+import pathlib,sys
+p=pathlib.Path(sys.argv[1])
+(p/'big.mp3').write_bytes(b'x'*(60*1024*1024))
+(p/'small.mp3').write_bytes(b'x'*(2*1024*1024))" "$SA"
+OUT=$(cd "$TMP/sa" && python3 "$HERE/tools/shrink_audio.py" content --dry-run 2>&1)
+echo "$OUT" | grep -q 'big.mp3' && ! echo "$OUT" | grep -q 'small.mp3'
+check "★ تصغير الصوت: بيمسك الكبير وبيترك الصغير" $?
+
+# ★ وما بيضلّ ملفّ فوق حدّ الدلو بالمحتوى
+BIGA=$(find content -path '*/audio/*' -type f -size +49M 2>/dev/null | head -3 | tr '\n' ' ')
+[ -z "$BIGA" ]
+check "★ ولا تسجيل فوق ٤٩ ميغا (حدّ الدلو)${BIGA:+ — $BIGA}" $?
+
 # ★ الدلو مسطّح: كل الصور بتنزل جنب بعض تحت img/، فالاسم لازم يكون
 #   فريد بكل المستويات مو بالمستوى لحاله.
 #
