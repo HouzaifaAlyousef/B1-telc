@@ -243,16 +243,32 @@ Wiedergaben: 2
 عندك مجلّد تحميل، مجلّد لكل نموذج وملفّ لكل جزء:
 
 ```
-downloads/telc-b1/modell-01_PETRA/hv1_Arbeitsplatz_fuer_ihren_Vater.mp3
-                                  hv2_Frau_Schaeffer_und_ein_Verein.mp3
-                                  hv3_Georg_und_Claudia.mp3
+downloads/02_telc_b1/modell-01_PETRA/hv1_Arbeitsplatz_fuer_ihren_Vater.mp3
+                                     hv2_Frau_Schaeffer_und_ein_Verein.mp3
+downloads/03_telc_b2_beruf/modell-08_FIRMENORGANIGRAMM/
+                                     modell-08_..._teil1.mp3
+                                     modell-08_..._hoeren_schreiben.mp3
 ```
 
-أمر واحد بيربطهن كلهن:
+أمر واحد بيربطهن كلهن — **وجّهه على مجلّد التحميل الكبير**، وهو
+بيعرف مستوى كل مجلّد من اسمه:
 
 ```bash
-node tools/link_audio.mjs ~/downloads/telc-b1 telc/b1 --dry-run   # شوف أوّلاً
-node tools/link_audio.mjs ~/downloads/telc-b1 telc/b1             # ونفّذ
+node tools/link_audio.mjs ~/downloads --dry-run   # شوف أوّلاً
+node tools/link_audio.mjs ~/downloads             # ونفّذ
+```
+
+```
+downloads/01_oesd_a1        → oesd/a1
+downloads/02_telc_b1        → telc/b1
+downloads/03_telc_b2_beruf  → telc/b2
+```
+
+الترقيم بالأوّل بينشال، وأوّل كلمتين هنّ المؤسسة والدرجة والباقي وصف.
+ولو الاسم ما دلّ على شي، حدّده صراحةً:
+
+```bash
+node tools/link_audio.mjs ~/downloads/irgendwas telc/b1
 ```
 
 بينسخ الملفّ لـ`content/.../audio/`، وبيكتب `Hörtext:` و`Wiedergaben: 2`

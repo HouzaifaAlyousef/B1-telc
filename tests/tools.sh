@@ -309,6 +309,23 @@ check "★ وملفّ الامتحان الكامل بينتخطّى مع سبب
 git diff --quiet -- data/ content/ 2>/dev/null
 check "★ و--dry-run ما بيلمس ولا ملف" $?
 
+# ★ بنية التحميل الحقيقية: مجلّدات مرقّمة باسم المستوى، وأسماء ملفّات
+#   طويلة فيها اسم النموذج قبل الجزء. هون بالضبط غلطنا أوّل مرّة —
+#   التعليمات كانت تفترض «~/downloads/telc-b1» والواقع «02_telc_b1».
+B2="$TMP/dl/03_telc_b2_beruf/modell-08_FIRMENORGANIGRAMM"; mkdir -p "$B2"
+: > "$B2/modell-08_FIRMENORGANIGRAMM_teil1.mp3"
+: > "$B2/modell-08_FIRMENORGANIGRAMM_hoeren_schreiben.mp3"
+mv "$TMP/dl/modell-01_PETRA" "$TMP/dl/02_telc_b1_modell" 2>/dev/null
+mkdir -p "$TMP/dl/02_telc_b1"; mv "$TMP/dl/02_telc_b1_modell" "$TMP/dl/02_telc_b1/modell-01_PETRA"
+OUT=$(node tools/link_audio.mjs "$TMP/dl" --dry-run 2>&1)
+echo "$OUT" | grep -q '02_telc_b1  →  telc/b1' \
+  && echo "$OUT" | grep -q '03_telc_b2_beruf  →  telc/b2'
+check "★ المستوى بينستنتج من اسم المجلّد (02_telc_b1 · 03_telc_b2_beruf)" $?
+
+echo "$OUT" | grep -q 'audio/telc-b2-m08-hv1.mp3' \
+  && echo "$OUT" | grep -q 'audio/telc-b2-m08-hvs.mp3'
+check "★ و«_teil1» و«_hoeren_schreiben» بيوصلوا hv1 وhvs" $?
+
 # ★ الدلو مسطّح: كل الصور بتنزل جنب بعض تحت img/، فالاسم لازم يكون
 #   فريد بكل المستويات مو بالمستوى لحاله.
 #

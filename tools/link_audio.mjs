@@ -17,21 +17,61 @@
  */
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync,
          copyFileSync, statSync } from 'fs';
+import { spawnSync } from 'child_process';
 import path from 'path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const [src, rel, ...rest] = process.argv.slice(2);
+const [src, ...rest] = process.argv.slice(2);
 const dry   = rest.includes('--dry-run');
 const plays = Number((rest.find(x => x.startsWith('--plays=')) || '').split('=')[1]) || 2;
+let rel = rest.find(x => x.includes('/') && !x.startsWith('-'));
 
-if (!src || !rel) {
-  console.error('الاستعمال: node tools/link_audio.mjs <مجلّد التحميل> <مؤسسة>/<درجة> [--plays=2] [--dry-run]');
+if (!src) {
+  console.error('الاستعمال:\n'
+    + '  node tools/link_audio.mjs <مجلّد التحميل الكبير> [--plays=2] [--dry-run]\n'
+    + '  node tools/link_audio.mjs <مجلّد مستوى واحد> <مؤسسة>/<درجة>');
   process.exit(2);
 }
+if (!existsSync(src)) { console.error(`✗ ما في ${src}`); process.exit(1); }
+
+/* ★ بلا تحديد مستوى: منمشي على مجلّدات التحميل ومنستنتجه من اسم كل
+   وحدة. «01_oesd_a1» و«03_telc_b2_beruf» ← oesd/a1 وtelc/b2: منشيل
+   الترقيم من الأوّل، وأوّل كلمتين هنّ المؤسسة والدرجة، والباقي وصف.
+   هيك أمر واحد بيمشّي كل شي، وما بتغلط بالمسار. */
+const levelOf = (dir) => {
+  const parts = dir.replace(/^\d+[_-]/, '').split(/[_-]/).filter(Boolean);
+  if (parts.length < 2) return null;
+  const guess = `${parts[0]}/${parts[1]}`;
+  return existsSync(path.join(ROOT, 'content', parts[0], parts[1])) ? guess : null;
+};
+
+if (!rel) {
+  const subs = readdirSync(src)
+    .filter(d => statSync(path.join(src, d)).isDirectory())
+    .map(d => [d, levelOf(d)]);
+  const ok = subs.filter(([, l]) => l);
+  if (!ok.length) {
+    console.error('✗ ما عرفت المستوى من أسماء المجلّدات. حدّده صراحةً:\n'
+      + '   node tools/link_audio.mjs <مجلّد> <مؤسسة>/<درجة>');
+    subs.forEach(([d]) => console.error(`   · ${d}`));
+    process.exit(1);
+  }
+  let code = 0;
+  for (const [d, l] of ok) {
+    console.log(`\n━━ ${d}  →  ${l}`);
+    const r = spawnSync(process.execPath,
+      [import.meta.filename, path.join(src, d), l, ...rest],
+      { stdio: 'inherit' });
+    code ||= r.status ?? 0;
+  }
+  subs.filter(([, l]) => !l).forEach(([d]) =>
+    console.log(`\n· ${d}: ما عرفت أي مستوى — شغّله لحاله مع <مؤسسة>/<درجة>`));
+  process.exit(code);
+}
+
 const [prov, lvl] = rel.split('/');
 const cdir = path.join(ROOT, 'content', prov, lvl);
 if (!existsSync(cdir)) { console.error(`✗ ما في ${cdir}`); process.exit(1); }
-if (!existsSync(src))  { console.error(`✗ ما في ${src}`); process.exit(1); }
 
 /* أي ملف لأي قسم. الترتيب مهمّ: «komplett» قبل «hv1» تا ما يلقفه hv1. */
 const RULES = [
