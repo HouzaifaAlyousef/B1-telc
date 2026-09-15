@@ -517,6 +517,18 @@ try {
   // الرفع الحقيقي بده Storage شغّال، وما عندنا هون. يلي منفحصه إنو
   // الشاشة بتعرف شو ناقص وإنها بتربط اسم الملف بالقسم قبل الرفع —
   // هاد الجزء يلي بينكسر بصمت لو انعكس ترتيبه.
+  /* ★ رابط خارجي بالتجهيزة، مو بالمحتوى الحقيقي.
+     كان الفحص متّكل على إنّ modell-01 لسا على روابط خارجية — وأوّل ما
+     انربطت التسجيلات بأسماء ملفّات، صار صفر روابط والفحص فشل بلا ما
+     ينكسر شي باللوحة. الحالة يلي بينفحصها لازم تنعمل هون. */
+  // psql -tAc بيطبع الـid وبعده «UPDATE 1» — أوّل سطر بس
+  const LINKED = sql(`update sections set config = config ||
+      jsonb_build_object('audio', 'https://example.org/probe.mp3')
+    where id = (select s.id from sections s join tests t on t.id = s.test_id
+                 where t.slug = 'modell-01' and s.section_id = 'hv1'
+                 order by t.created_at limit 1)
+    returning id;`).split('\n')[0].trim();
+
   await page.evaluate(() => document.querySelector('[data-tab="assets"]').click());
   await page.waitForSelector('#as_lvl');
   const asTxt = await page.textContent('#app');
@@ -537,13 +549,14 @@ try {
      كاسم ملفّ قابل للتعديل، وتعطي زرّ رفع بلا معنى. */
   {
     const linkRows = await page.locator('.pill', { hasText: 'Link' }).count();
-    check(`★ الروابط الخارجية بتطلع «Link» مو «fehlt» (${linkRows})`, linkRows > 0);
+    check(`★ الروابط الخارجية بتطلع «Link» مو «fehlt» (${linkRows})`, linkRows === 1);
     const anchors = await page.locator('a[href^="http"].mono').count();
     check('★ وبتنعرض كرابط بينفتح، مو حقل اسم', anchors > 0);
     const names = await page.locator('[data-name]').evaluateAll(
       els => els.map(e => e.value));
     check('★ وما بينعرض ولا رابط كاسم ملفّ',
           !names.some(v => /^https?:\/\//i.test(v)));
+    sql(`update sections set config = config - 'audio' where id = '${LINKED}';`);
   }
 
   // التصفية بالستوفة
