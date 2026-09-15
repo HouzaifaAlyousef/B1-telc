@@ -304,7 +304,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m03-hv1.mp3
+Wiedergaben: 2
 Aufgaben:
 [41] Der Sprecher hat zu Hause keinen Computer.
 Lösung: falsch
@@ -325,7 +326,8 @@ Minuten: 14
 Punkte: 2.5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m03-hv2.mp3
+Wiedergaben: 2
 Aufgaben:
 [46] Herr Bachinger hat ein Buch über Väter geschrieben.
 Lösung: richtig
@@ -356,7 +358,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m03-hv3.mp3
+Wiedergaben: 2
 Aufgaben:
 [56] Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.
 Lösung: richtig

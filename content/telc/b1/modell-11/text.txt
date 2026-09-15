@@ -285,7 +285,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m11-hv1.mp3
+Wiedergaben: 2
 Aufgaben:
 [41] Herr Pawliczek erledigt alle seine Einkäufe im Internet.
 Lösung: richtig
@@ -306,7 +307,8 @@ Minuten: 14
 Punkte: 2.5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m11-hv2.mp3
+Wiedergaben: 2
 Aufgaben:
 [46] Mit einem Praktikum können sich Jugendliche auf das Studium vorbereiten.
 Lösung: falsch
@@ -337,7 +339,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m11-hv3.mp3
+Wiedergaben: 2
 Aufgaben:
 [56] In Norddeutschland steigen die Temperaturen morgen auf 5 bis 7 Grad.
 Lösung: falsch

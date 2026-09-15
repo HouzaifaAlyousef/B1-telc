@@ -288,7 +288,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m14-hv1.mp3
+Wiedergaben: 2
 Aufgaben:
 [41] Der Sprecher hätte gern Urlaub wie die anderen Kinder gemacht.
 Lösung: richtig
@@ -309,7 +310,8 @@ Minuten: 14
 Punkte: 2.5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m14-hv2.mp3
+Wiedergaben: 2
 Aufgaben:
 [46] Herr Schütz arbeitet erst seit kurzer Zeit als Taxifahrer
 Lösung: falsch
@@ -340,7 +342,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m14-hv3.mp3
+Wiedergaben: 2
 Aufgaben:
 [56] Der Zug nach Mannheim fährt um 13:14 Uhr ab.
 Lösung: richtig

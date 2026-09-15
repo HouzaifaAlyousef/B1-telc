@@ -317,7 +317,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m15-hv1.mp3
+Wiedergaben: 2
 Aufgaben:
 [41] Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.
 Lösung: falsch
@@ -338,7 +339,8 @@ Minuten: 14
 Punkte: 2.5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m15-hv2.mp3
+Wiedergaben: 2
 Aufgaben:
 [46] In Deutschland gibt es immer mehr Organisationen, die sich um alte und kranke Menschen.
 Lösung: richtig
@@ -369,7 +371,8 @@ Minuten: 8
 Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
-Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: telc-b1-m15-hv3.mp3
+Wiedergaben: 2
 Aufgaben:
 [56] Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.
 Lösung: richtig
