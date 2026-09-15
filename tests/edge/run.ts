@@ -142,8 +142,17 @@ check("★ سكيما مفروضة، مو مرجوّة بالتعليمات",
 check("★ والدرجة محصورة بـA–D بالسكيما نفسها",
       JSON.stringify(geminiSaw?.generationConfig?.responseSchema)
         .includes('"enum":["A","B","C","D"]'));
-check("تعليمات النظام انبعتت", 
-      (geminiSaw?.systemInstruction?.parts?.[0]?.text ?? "").includes("telc Deutsch B1"));
+/* ★ اسم الامتحان لازم يجي من قاعدة البيانات. كان مكتوب «telc Deutsch B1»
+   حرفياً بالكود، يعني رسالة ÖSD A1 كانت تنصحّح على إنها telc B1. الفحص
+   بشقّين: الاسم الحقيقي وصل، والنصّ المثبّت انشال من المصدر. */
+const examDb = await psql(
+  `select coalesce(provider||' '||stufe, title, id) from levels where id='b1';`);
+const sysText = geminiSaw?.systemInstruction?.parts?.[0]?.text ?? "";
+check(`تعليمات النظام انبعتت باسم الامتحان من القاعدة (${examDb})`,
+      examDb.length > 0 && sysText.includes(`${examDb} Prüfung`));
+check("★ ولا اسم امتحان مثبّت بالمصدر",
+      !(await Deno.readTextFile("supabase/functions/correct-writing/index.ts"))
+        .includes("telc Deutsch B1"));
 const p = geminiSaw?.contents?.[0]?.parts?.[0]?.text ?? "";
 check("نص الطالب انبعت", p.includes("Liebe Anna"));
 check("المعايير الثلاثة انبعتوا",

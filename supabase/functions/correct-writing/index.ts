@@ -65,7 +65,7 @@ const SCHEMA = {
           type:       { type: "string", enum: ["Grammatik", "Wortschatz", "Rechtschreibung", "Struktur", "Register"] },
           original:   { type: "string", description: "Die fehlerhafte Stelle, wortgleich aus dem Text" },
           correction: { type: "string", description: "Die korrigierte Fassung" },
-          why:        { type: "string", description: "Kurze Erklärung auf Deutsch, für B1-Niveau verständlich" },
+          why:        { type: "string", description: "Kurze Erklärung auf Deutsch, einfach und für Lernende verständlich" },
         },
         required: ["type", "original", "correction", "why"],
       },
@@ -76,9 +76,12 @@ const SCHEMA = {
   required: ["grades", "errors", "corrected", "summary"],
 };
 
-const SYSTEM = `Du bist Prüfer für die telc Deutsch B1 Prüfung und bewertest den
+/* ★ اسم الامتحان بيجي من قاعدة البيانات، مو مكتوب بالكود.
+   كان مكتوب «telc Deutsch B1» حرفياً — يعني رسالة طالب بـÖSD A1 كانت
+   تنصحّح بمعيار B1. المستوى الغلط بيعني تقييم غلط، بهدوء. */
+const SYSTEM = (exam: string) => `Du bist Prüfer für die ${exam} und bewertest den
 Schriftlichen Ausdruck. Bewerte genau nach den vorgegebenen Kriterien und Stufen,
-nicht nach eigenem Maßstab.
+nicht nach eigenem Maßstab, und lege den Maßstab dieser Prüfung an.
 
 Regeln:
 - Antworte ausschließlich auf Deutsch. Der Lernende liest die Rückmeldung.
@@ -154,8 +157,13 @@ Deno.serve(async (req) => {
     const points = (start.points ?? []) as string[];
     const brief = start.task as { intro?: string; paragraphs?: string[] } | null;
 
+    /* قواعد أقدم من ٣١ ما بترجّع exam — منرجع لصيغة محايدة بدل ما
+       نكذب باسم امتحان تاني. */
+    const examName = typeof start.exam === "string" && start.exam.trim()
+      ? `${start.exam.trim()} Prüfung` : "Deutschprüfung";
+
     const prompt = [
-      `# Aufgabe`,
+      `# Aufgabe (${examName})`,
       start.instruction ?? "",
       points.length ? `\nLeitpunkte, die der Brief abdecken muss:\n` +
         points.map((p, i) => `${i + 1}. ${p}`).join("\n") : "",
@@ -178,7 +186,7 @@ Deno.serve(async (req) => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        systemInstruction: { parts: [{ text: SYSTEM }] },
+        systemInstruction: { parts: [{ text: SYSTEM(examName) }] },
         contents: [{ role: "user", parts: [{ text: prompt }] }],
         generationConfig: {
           responseMimeType: "application/json",

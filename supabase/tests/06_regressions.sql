@@ -74,7 +74,11 @@ begin
    where user_id = u1;
   insert into attempts (user_id, test_id, block_id, answers, submitted_at)
   values (u1, tid, 'block-sa',
-          jsonb_build_object(iid::text, 'Liebe Anna, ich komme gern nach Deutschland.'), now())
+          -- ★ أطول من حدّ الكلمات بـwriting_start (١٢): الفحص هون عن نافذة
+          --   الحصّة، مو عن طول النص — نصّ قصير كان بيخلّيه يمرق للسبب الغلط
+          jsonb_build_object(iid::text,
+            'Liebe Anna, ich komme sehr gern nach Deutschland und moechte '
+            || 'dich im Sommer in Berlin besuchen. Viele Gruesse, Sara'), now())
   returning id into aid;
 
   set local role authenticated;

@@ -69,6 +69,7 @@ const I18N = (() => {
                   + 'Bitte morgen noch einmal versuchen.',
       aiErrNoSub:   'Kein aktives Abo.',
       aiErrEmpty:   'Es ist kein Text zum Korrigieren da.',
+      aiErrShort:   'Der Text ist zu kurz für eine Korrektur.',
       aiErrSetup:   'Die Korrektur ist noch nicht eingerichtet.',
       aiErrRefused: 'Der Text konnte nicht bewertet werden.',
       aiErrNetwork: 'Keine Verbindung.',
@@ -140,10 +141,10 @@ const I18N = (() => {
       better: 'Besser',
 
       yourText: 'Ihr Text',
-      rateSelf: 'Bewerten Sie jedes Kriterium selbst — so wie telc bewertet.',
+      rateSelf: 'Bewerten Sie jedes Kriterium selbst — so wie in der Prüfung bewertet wird.',
       grading: 'Bewertung',
-      aiIntro: 'Ihr Brief wird gelesen und nach den telc-Kriterien bewertet — ' +
-               'mit Hinweisen zu jedem Fehler.',
+      aiIntro: 'Ihr Brief wird gelesen und nach den Kriterien Ihrer Prüfung ' +
+               'bewertet — mit Hinweisen zu jedem Fehler.',
       aiRequest: 'Korrektur anfordern',
       aiWorking: 'Wird korrigiert …',
       aiView: 'Korrigierte Fassung ansehen',
@@ -248,6 +249,7 @@ const I18N = (() => {
       aiErrDaily:   'اليوم انطلبت تصحيحات كتير. جرّب بكرا.',
       aiErrNoSub:   'ما في اشتراك فعّال.',
       aiErrEmpty:   'ما في نص لنصحّحه.',
+      aiErrShort:   'النص قصير كتير عالتصحيح.',
       aiErrSetup:   'التصحيح لسا مو مجهّز.',
       aiErrRefused: 'ما قدرنا نقيّم هالنص.',
       aiErrNetwork: 'ما في اتصال.',
@@ -323,10 +325,10 @@ const I18N = (() => {
       better: 'أفضل',
 
       yourText: 'نصّك',
-      rateSelf: 'قيّم كل معيار بنفسك — متل ما بيقيّم telc.',
+      rateSelf: 'قيّم كل معيار بنفسك — متل ما بيقيّم الامتحان.',
       grading: 'التقييم',
-      aiIntro: 'رسالتك رح تنقرا وتتقيّم حسب معايير telc — مع ملاحظة على ' +
-               'كل خطأ.',
+      aiIntro: 'رسالتك رح تنقرا وتتقيّم حسب معايير امتحانك — مع ملاحظة ' +
+               'على كل خطأ.',
       aiRequest: 'اطلب التصحيح',
       aiWorking: 'جاري التصحيح …',
       aiView: 'شوف النسخة المصحّحة',
@@ -442,6 +444,7 @@ const I18N = (() => {
                   + 'Спробуйте завтра.',
       aiErrNoSub:   'Немає активної підписки.',
       aiErrEmpty:   'Немає тексту для перевірки.',
+      aiErrShort:   'Текст закороткий для перевірки.',
       aiErrSetup:   'Перевірку ще не налаштовано.',
       aiErrRefused: 'Не вдалося оцінити цей текст.',
       aiErrNetwork: 'Немає зв’язку.',
@@ -515,10 +518,10 @@ const I18N = (() => {
       better: 'Краще',
 
       yourText: 'Ваш текст',
-      rateSelf: 'Оцініть кожен критерій самі — так само, як оцінює telc.',
+      rateSelf: 'Оцініть кожен критерій самі — так само, як оцінюють на іспиті.',
       grading: 'Оцінювання',
-      aiIntro: 'Ваш лист буде прочитано й оцінено за критеріями telc — з ' +
-               'поясненням кожної помилки.',
+      aiIntro: 'Ваш лист буде прочитано й оцінено за критеріями вашого ' +
+               'іспиту — з поясненням кожної помилки.',
       aiRequest: 'Запросити перевірку',
       aiWorking: 'Перевіряємо …',
       aiView: 'Переглянути виправлений варіант',
