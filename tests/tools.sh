@@ -560,10 +560,19 @@ check "★★ الاسم بيرجّع الربط لمحلّه الصح بالم�
 # ---------- النشر بأمر واحد ----------
 bash -n tools/deploy_db.sh; check "deploy_db.sh سليم" $?
 
-# بلا رابط بينوقف، ما بيحاول يوصل لقاعدة ما إلها اسم
+# بلا رابط بينوقف، وبيقول من وين تجيب الرابط — مو «Zeile 21» تبع bash
 OUT=$(DATABASE_URL= ./tools/deploy_db.sh 2>&1 || true)
-case "$OUT" in *DATABASE_URL*) R=0 ;; *) R=1 ;; esac
-check "★ بلا DATABASE_URL بيوقف وبيقول من وين تجيبيه" $R
+case "$OUT" in *"Connection string"*) R=0 ;; *) R=1 ;; esac
+case "$OUT" in *"export DATABASE_URL="*) : ;; *) R=1 ;; esac
+check "★ بلا DATABASE_URL بيوقف وبيقول من وين تجيبيه وكيف" $R
+
+# ★ ورابط غلط لازم يشرح، مو يموت بصمت. كان بيموت: تحت set -e،
+#   `ERR=$(psql …)` بيورّث رقم خروج psql والسكربت بينتهي قبل الرسالة.
+OUT=$(DATABASE_URL='postgresql://postgres:x@127.0.0.1:1/nixda' \
+        ./tools/deploy_db.sh 2>&1 || true)
+case "$OUT" in *"ما قدرت أوصل للقاعدة"*) R=0 ;; *) R=1 ;; esac
+case "$OUT" in *pooler*) : ;; *) R=1 ;; esac
+check "★★ رابط غلط بيشرح السبب، ما بيموت بصمت" $R
 
 if psql -h /tmp -p "${PGPORT:-5433}" -U postgres -c '' 2>/dev/null; then
   # ★ الفحص الحقيقي: قاعدة فاضية ← أمر واحد ← المحتوى كامل جوّا.
