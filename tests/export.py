@@ -117,6 +117,33 @@ bad = psql("""select count(*) from tests t
     where s.test_id = t.id);""")
 check(f'عمود aufgaben مطابق للعدّ الحقيقي ({bad} مخالف)', bad == '0')
 
+# ---- ٨) ★ ولا حقل من الأقسام بينضيع بالطريق ----
+# audio وaudioPlays كانوا ناقصين من CONFIG_KEYS، فالمصدّر كان يرميهم
+# بصمت: أي Hörtext بالمحتوى ما كان يوصل القاعدة، يعني المشغّل ما كان
+# يطلع أبداً وأداة رفع الصوت بتشتغل على فراغ. ما بان لأنّ ولا مستوى
+# كان عنده صوت. الفحص هون بيقارن **كل** حقل بالمصدر مع يلي وصل.
+DATA = ROOT / "data"
+COL = {"id", "format", "title", "group", "minutes", "instruction", "items"}
+want, lost = set(), set()
+for f in sorted(DATA.glob('modell-*.json')):
+    for sec in json.loads(f.read_text())['sections']:
+        want |= {k for k in sec if k not in COL}
+# psql() بترجّع آخر سطر بس، فمنلمّ المفاتيح بصف واحد
+got = set(psql("""select string_agg(distinct k, ' ') from sections s
+  join tests t on t.id = s.test_id
+  cross join lateral jsonb_object_keys(s.config) k
+  where t.level_id = 'b1';""").split())
+lost = want - got
+check(f'★ كل حقول الأقسام وصلت للقاعدة ({len(got)} حقل){" — ضايع: " + ", ".join(sorted(lost)) if lost else ""}',
+      not lost)
+
+# وبالذات الصوت: المسار والعدد لازم يوصلوا متل ما هنّ
+aud = psql("""select count(*) from sections s join tests t on t.id = s.test_id
+  where t.level_id = 'b1' and s.config ? 'audio';""")
+src_aud = sum(1 for f in DATA.glob('modell-*.json')
+              for sec in json.loads(f.read_text())['sections'] if sec.get('audio'))
+check(f'★ أقسام الصوت وصلت كلها ({aud} من {src_aud})', str(src_aud) == aud)
+
 fails = [x for x in R if not x[1]]
 print(f"\n{'✗ ' + str(len(fails)) + ' فشل من ' + str(len(R)) if fails else '✓ كل الـ' + str(len(R)) + ' اختبارات نجحت'}")
 sys.exit(1 if fails else 0)

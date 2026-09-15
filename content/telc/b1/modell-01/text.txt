@@ -284,6 +284,8 @@ Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
 Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: https://deutsch-vorbereitung.com/assets/audio/exercises/Arbeitsplatz%20f%C3%BCr%20ihren%20Vater-2025-12-17.MP3
+Wiedergaben: 2
 Aufgaben:
 [41] Die Sprecherin wünscht sich einen Arbeitsplatz für ihren Vater.
 Lösung: falsch
@@ -305,6 +307,8 @@ Punkte: 2.5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
 Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: https://deutsch-vorbereitung.com/assets/audio/exercises/Frau%20Sch%C3%A4ffer%20und%20ein%20Verein-2025-12-17.MP3
+Wiedergaben: 2
 Aufgaben:
 [46] Frau Schäfer hat von dem Verein kurz nach der Gründung zum ersten Mal gehört.
 Lösung: falsch
@@ -336,6 +340,8 @@ Punkte: 5
 Maximum: 25
 Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
 Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Hörtext: https://deutsch-vorbereitung.com/assets/audio/exercises/Georg%20und%20Claudia-2025-12-17.MP3
+Wiedergaben: 2
 Aufgaben:
 [56] Sie sollen um 19:30 Uhr bei Georg und Claudia sein.
 Lösung: falsch

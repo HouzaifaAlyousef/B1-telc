@@ -33,6 +33,17 @@ Minuten: 20
 Punkte: 5
 Maximum: 25
 Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.
+Auswahl:
+A = Bürgermeister eröffnet Weihnachtsmarkt
+B = Glasflaschen nicht so gut wie gedacht
+C = Innenstadt mit Christbäumen geschmückt
+D = Laufend die Welt vom Müll befreien
+E = Mit der eigenen Dose in den Supermarkt
+F = Neue Sportart aus Schweden
+G = Plastikflaschen immer beliebter
+H = Regionale Produkte im Supermarkt
+I = Supermarkt setzt auf Plastik
+J = Weihnachtsmarkt für Kunst-Begeisterte
 Aufgaben:
 [1] Man muss auch mal mutig sein! Das dachte sich Jannik. Warum ist er so mutig? Seit drei Jahren kauft er regelmäßig in einem Unverpackt-Laden ein. „Dabei spare ich nicht nur eine Menge Plastik“, sagt er. „Auch an der Frische der Produkte merkt man einen Unterschied. Die Schokolade bei uns ist immer knackiger als im Supermarkt.“ Offenbar sind Unverpackt-Läden gerade im Trend. Das merkt man auch daran, dass in den letzten zwei Jahren doppelt so viele Läden eröffnet haben. Doch es funktioniert: die Kundinnen und Kunden geben mehr aus, weil es der Umwelt gut geht.
 Lösung: E
@@ -96,7 +107,22 @@ Minuten: 20
 Punkte: 2.5
 Maximum: 25
 Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.
+AuswahlTitel: Anzeigen
 Bild: img/m19-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
 Aufgaben:
 [11] Sie sind in der Schweiz und möchten sich ein paar Tage beim Baden erholen.
 Lösung: D
@@ -199,6 +225,22 @@ gestern hat mir mein Englischlehrer Informationen über ein Stipendium in den US
 Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen. Eine andere Kultur zu erleben und (35) unsere Englischkenntnisse zu verbessern – das wäre doch genial! So ein Auslandsaufenthalt ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.
 Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen. Außerdem gibt es viele (38) Wahlveranstaltungen wie Chorsingen, Theater und sportliche Aktivitäten. Wenn du Lust hast, könnten wir uns treffen und die (39) zusammen durchsehen. Wie sieht es (40) Woche bei dir aus?
 Liebe Grüße Madeleine
+Auswahl:
+A = DURFTE
+B = EINIGE
+C = GLEICHZEITIG
+D = IHRE
+E = KEINE
+F = MUSSTE
+G = NÄCHSTE
+H = PAAR
+I = SEIT
+J = SIE
+K = SONDERN
+L = STATT
+M = UNTERLAGEN
+N = WÜRDEN
+O = ZUSÄTZLICHE
 Aufgaben:
 [31] … und ich (31) gleich an uns beide denken.
 Erklärung: musste

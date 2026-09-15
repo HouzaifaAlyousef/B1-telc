@@ -54,7 +54,38 @@
    "minutes": 20,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.",
    "format": "matching",
-   "pool": [
+   "items": [
+    {
+     "id": "1",
+     "text": "Man muss auch mal mutig sein! Das dachte sich Jannik. Warum ist er so mutig? Seit drei Jahren kauft er regelmäßig in einem Unverpackt-Laden ein. „Dabei spare ich nicht nur eine Menge Plastik“, sagt er. „Auch an der Frische der Produkte merkt man einen Unterschied. Die Schokolade bei uns ist immer knackiger als im Supermarkt.“ Offenbar sind Unverpackt-Läden gerade im Trend. Das merkt man auch daran, dass in den letzten zwei Jahren doppelt so viele Läden eröffnet haben. Doch es funktioniert: die Kundinnen und Kunden geben mehr aus, weil es der Umwelt gut geht.",
+     "answer": "E"
+    },
+    {
+     "id": "2",
+     "text": "Warum nicht das Angenehme mit dem Nützlichen verbinden? „Umweltschutz fängt mit kleinen Schritten an. Ich fahre jetzt seit Monaten mit meinem Rad zur Arbeit. Da tue ich etwas für mich, aber auch für die Umwelt“, sagt Lea. Seit ihrem Auslandssemester in Schweden ist sie überzeugt: „Dort ist Umweltschutz ganz selbstverständlich. Warum kann man nicht auch hier sein Hobby mit dem Umweltschutz verbinden?“",
+     "answer": "F"
+    },
+    {
+     "id": "3",
+     "text": "Wir merken deutlich, dass Getränke in Glasflaschen wieder beliebter werden, besonders bei Mineralwasser, berichtet Jürgen Fischer auf der Getränkemesse in Düsseldorf. Auch die Verkaufszahlen bestätigen diesen Trend. Dabei sind Glasflaschen nicht unbedingt besser für die Umwelt als Plastikflaschen. Der Grund ist der teilweise weite Transportweg: Für Milch zum Beispiel wird die Milch-Glasflasche im Durchschnitt 721 Kilometer transportiert, bis sie ankommt.",
+     "answer": "B"
+    },
+    {
+     "id": "4",
+     "text": "Am 25. November beginnt wieder der Frankfurter Weihnachtsmarkt. Los geht es um 17:05 Uhr mit einem Glockenspiel von der Nikolaikirche. Danach gibt es eine Rede des Bürgermeisters. „Es ist für mich immer etwas ganz Besonderes, den Weihnachtsbaum mit seinen 6500 Lichtern zu sehen“, erzählt dieser der Frankfurter Rundschau. 700 Sterne sollen den Römerberg verschönern. Das hr-Blasorchester sorgt an mehreren Abenden mit Weihnachtsliedern für gemütliche Stimmung.",
+     "answer": "A"
+    },
+    {
+     "id": "5",
+     "text": "Ein Spaziergang in der Regensburger Altstadt ist in der Weihnachtszeit besonders schön. Im Schatten des Alten Rathauses lädt der Lucrezia-Markt zum Träumen ein. Suchen Sie noch ein besonderes Geschenk? Dann sind Sie dort genau richtig: Denn Handwerker präsentieren und verkaufen ihre Produkte aus Metall, Glas oder Holz. Und Kreativen wird eine Bühne für Musik und Theater geboten. Außerdem gibt es heißen Apfelsaft aus der Region.",
+     "answer": "J"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bank": [
     {
      "key": "A",
      "text": "Bürgermeister eröffnet Weihnachtsmarkt"
@@ -95,38 +126,7 @@
      "key": "J",
      "text": "Weihnachtsmarkt für Kunst-Begeisterte"
     }
-   ],
-   "items": [
-    {
-     "id": "1",
-     "text": "Man muss auch mal mutig sein! Das dachte sich Jannik. Warum ist er so mutig? Seit drei Jahren kauft er regelmäßig in einem Unverpackt-Laden ein. „Dabei spare ich nicht nur eine Menge Plastik“, sagt er. „Auch an der Frische der Produkte merkt man einen Unterschied. Die Schokolade bei uns ist immer knackiger als im Supermarkt.“ Offenbar sind Unverpackt-Läden gerade im Trend. Das merkt man auch daran, dass in den letzten zwei Jahren doppelt so viele Läden eröffnet haben. Doch es funktioniert: die Kundinnen und Kunden geben mehr aus, weil es der Umwelt gut geht.",
-     "answer": "E"
-    },
-    {
-     "id": "2",
-     "text": "Warum nicht das Angenehme mit dem Nützlichen verbinden? „Umweltschutz fängt mit kleinen Schritten an. Ich fahre jetzt seit Monaten mit meinem Rad zur Arbeit. Da tue ich etwas für mich, aber auch für die Umwelt“, sagt Lea. Seit ihrem Auslandssemester in Schweden ist sie überzeugt: „Dort ist Umweltschutz ganz selbstverständlich. Warum kann man nicht auch hier sein Hobby mit dem Umweltschutz verbinden?“",
-     "answer": "F"
-    },
-    {
-     "id": "3",
-     "text": "Wir merken deutlich, dass Getränke in Glasflaschen wieder beliebter werden, besonders bei Mineralwasser, berichtet Jürgen Fischer auf der Getränkemesse in Düsseldorf. Auch die Verkaufszahlen bestätigen diesen Trend. Dabei sind Glasflaschen nicht unbedingt besser für die Umwelt als Plastikflaschen. Der Grund ist der teilweise weite Transportweg: Für Milch zum Beispiel wird die Milch-Glasflasche im Durchschnitt 721 Kilometer transportiert, bis sie ankommt.",
-     "answer": "B"
-    },
-    {
-     "id": "4",
-     "text": "Am 25. November beginnt wieder der Frankfurter Weihnachtsmarkt. Los geht es um 17:05 Uhr mit einem Glockenspiel von der Nikolaikirche. Danach gibt es eine Rede des Bürgermeisters. „Es ist für mich immer etwas ganz Besonderes, den Weihnachtsbaum mit seinen 6500 Lichtern zu sehen“, erzählt dieser der Frankfurter Rundschau. 700 Sterne sollen den Römerberg verschönern. Das hr-Blasorchester sorgt an mehreren Abenden mit Weihnachtsliedern für gemütliche Stimmung.",
-     "answer": "A"
-    },
-    {
-     "id": "5",
-     "text": "Ein Spaziergang in der Regensburger Altstadt ist in der Weihnachtszeit besonders schön. Im Schatten des Alten Rathauses lädt der Lucrezia-Markt zum Träumen ein. Suchen Sie noch ein besonderes Geschenk? Dann sind Sie dort genau richtig: Denn Handwerker präsentieren und verkaufen ihre Produkte aus Metall, Glas oder Holz. Und Kreativen wird eine Bühne für Musik und Theater geboten. Außerdem gibt es heißen Apfelsaft aus der Region.",
-     "answer": "J"
-    }
-   ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   ]
   },
   {
    "id": "lv2",
@@ -334,7 +334,62 @@
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
    "availablePoints": 25.0,
-   "missing": 0
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "bankTitle": "Anzeigen"
   },
   {
    "id": "sb1",
@@ -573,68 +628,6 @@
    "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.",
    "format": "wordbank",
-   "pool": [
-    {
-     "key": "A",
-     "text": "DURFTE"
-    },
-    {
-     "key": "B",
-     "text": "EINIGE"
-    },
-    {
-     "key": "C",
-     "text": "GLEICHZEITIG"
-    },
-    {
-     "key": "D",
-     "text": "IHRE"
-    },
-    {
-     "key": "E",
-     "text": "KEINE"
-    },
-    {
-     "key": "F",
-     "text": "MUSSTE"
-    },
-    {
-     "key": "G",
-     "text": "NÄCHSTE"
-    },
-    {
-     "key": "H",
-     "text": "PAAR"
-    },
-    {
-     "key": "I",
-     "text": "SEIT"
-    },
-    {
-     "key": "J",
-     "text": "SIE"
-    },
-    {
-     "key": "K",
-     "text": "SONDERN"
-    },
-    {
-     "key": "L",
-     "text": "STATT"
-    },
-    {
-     "key": "M",
-     "text": "UNTERLAGEN"
-    },
-    {
-     "key": "N",
-     "text": "WÜRDEN"
-    },
-    {
-     "key": "O",
-     "text": "ZUSÄTZLICHE"
-    }
-   ],
    "passages": [
     {
      "paragraphs": [
@@ -726,7 +719,69 @@
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
    "availablePoints": 15.0,
-   "missing": 0
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": "DURFTE"
+    },
+    {
+     "key": "B",
+     "text": "EINIGE"
+    },
+    {
+     "key": "C",
+     "text": "GLEICHZEITIG"
+    },
+    {
+     "key": "D",
+     "text": "IHRE"
+    },
+    {
+     "key": "E",
+     "text": "KEINE"
+    },
+    {
+     "key": "F",
+     "text": "MUSSTE"
+    },
+    {
+     "key": "G",
+     "text": "NÄCHSTE"
+    },
+    {
+     "key": "H",
+     "text": "PAAR"
+    },
+    {
+     "key": "I",
+     "text": "SEIT"
+    },
+    {
+     "key": "J",
+     "text": "SIE"
+    },
+    {
+     "key": "K",
+     "text": "SONDERN"
+    },
+    {
+     "key": "L",
+     "text": "STATT"
+    },
+    {
+     "key": "M",
+     "text": "UNTERLAGEN"
+    },
+    {
+     "key": "N",
+     "text": "WÜRDEN"
+    },
+    {
+     "key": "O",
+     "text": "ZUSÄTZLICHE"
+    }
+   ]
   },
   {
    "id": "hv1",

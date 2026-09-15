@@ -227,6 +227,12 @@ for (const f of fs.readdirSync("data").filter(x=>/^modell-\d+\.json$/.test(x))){
       for (const i of s.items||[])
         if (i.answer!=="r" && i.answer!=="f")
           bad.push(`${f} ${s.id}/${i.id}=${JSON.stringify(i.answer)}`);
+  // ★ قسم ربط/بنك بلا بنك = أسئلة بلا خيارات: الطالب بيشوف السؤال
+  //   وما بيلاقي شي يضغطه. صار فعلاً بنموذجين، لأنّ البنك انكتب باسم
+  //   «pool» — اسم ما بيعرفه ولا مكان بالنظام، فانضاع بصمت.
+  for (const s of o.sections||[])
+    if (["matching","wordbank"].includes(s.format) && !(s.bank||[]).length)
+      bad.push(`${f} ${s.id}: ${s.format} بلا bank`);
   for (const b of o.blocks||[]){
     const secs=(b.parts||[]).map(p=>(o.sections||[]).find(s=>s.id===p)).filter(Boolean);
     const av=secs.reduce((a,s)=>a+(s.availablePoints??0),0);
@@ -237,7 +243,7 @@ for (const f of fs.readdirSync("data").filter(x=>/^modell-\d+\.json$/.test(x))){
 }
 if (bad.length){ console.error(bad.slice(0,4).join(" · ")); process.exit(1); }
 '
-check "★ data/: أجوبة صح-خطأ كلها r/f، ونقاط الكتل مطابقة لأقسامها" $?
+check "★ data/: أجوبة صح-خطأ r/f · بنوك موجودة · نقاط الكتل مطابقة" $?
 
 # ---------- ★ بذرة B1: الثغرة الوحيدة يلي كانت مكشوفة ----------
 # b1.sql مولّد من data/ بطريق تانية، فدوران البذور فوق ما بيلمسه. يعني

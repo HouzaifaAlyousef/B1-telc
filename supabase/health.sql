@@ -13,7 +13,7 @@ drop table if exists _health;
 create temp table _health (ord int, s text, k text, d text);
 
 do $health$
-declare v int; t text; n int; m int; begin
+declare v int; t text; n int; m int; k int; begin
 
   -- ١) نسخة السكيما
   begin
@@ -101,17 +101,26 @@ declare v int; t text; n int; m int; begin
   if to_regclass('storage.objects') is null then
     insert into _health values (8, '⚠️', 'الصوت', 'ما بقدر أفحص');
   else
+    -- ★ رابط خارجي (http) مو ملفّ عنا: التطبيق بيمرّره كما هو
+    --   (assets/api.js — signed()) وما إله وجود بالدلو، فعدّه «ناقص»
+    --   بيقول كذب. منعدّه لحاله: هو حلّ مؤقّت للتجربة، مو جاهزية.
+    execute $q$ select count(*) from (select distinct s.config->>'audio' a
+      from sections s where s.config->>'audio' ~* '^https?://') x $q$ into k;
     execute $q$
       select count(*) filter (where o.name is null), count(*)
         from (select distinct s.config->>'audio' aud from sections s
-               where s.config ? 'audio') w
+               where s.config ? 'audio'
+                 and s.config->>'audio' !~* '^https?://') w
         left join storage.objects o
                on o.bucket_id = 'exam-audio' and o.name = w.aud $q$ into m, n;
     insert into _health values (8,
-      case when n = 0 then '⚠️' when m = 0 then '✅' else '❌' end, 'الصوت',
-      case when n = 0 then 'ما في قسم بيطلب صوت  ←  Hörverstehen معطّل'
+      case when n = 0 and k = 0 then '⚠️' when m = 0 then '✅' else '❌' end,
+      'الصوت',
+      case when n = 0 and k = 0 then 'ما في قسم بيطلب صوت  ←  Hörverstehen معطّل'
+           when n = 0 then k || ' قسم على روابط خارجية (للتجربة) · ولا ملف مرفوع'
            when m = 0 then n || ' مرفوعة'
-           else m || ' من ' || n || ' ناقصة  ←  tools/upload_audio.py' end);
+           else m || ' من ' || n || ' ناقصة  ←  tools/upload_audio.py' end
+      || case when k > 0 and n > 0 then ' · و' || k || ' على روابط خارجية' else '' end);
   end if;
 
   -- ٩) حساب أدمن

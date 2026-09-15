@@ -33,6 +33,17 @@ Minuten: 20
 Punkte: 5
 Maximum: 25
 Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.
+Auswahl:
+A = Ampel auf Rot: Motor abstellen
+B = Autofahrer telefoniert bei mehr als 180 km/h
+C = Bahn mit Butterbroten angehalten
+D = Frankfurter lieben Hamburger mit Marmelade
+E = Gefährlicher Physik-Test: Marmelade auf den Gleisen
+F = Handys an der Ampel in bestimmten Fällen erlaubt
+G = Kurs: Marmeladen selbst kochen
+H = Luxus-Hamburger in Englands Hauptstadt
+I = Niemand will den teuersten Hamburger der Welt
+J = Strafe für Filmeschauen beim Autofahren
 Aufgaben:
 [1] London. Der wohl teuerste Hamburger der Welt wird seit gestern in London verkauft. Der Hamburger besteht aus japanischem Kobe-Rindfleisch, weißen Trüffeln sowie iranischem Safran und kostet umgerechnet 120 Euro. Das übertrifft den bisherigen Weltrekordhalter in New York: Dort bot ein Bistro ein edles Fleischbrötchen für rund 80 Euro an. „The Burger“ ist nur in einer Londoner Filiale zu haben. Bereits am Morgen wurde ein Dutzend der Hamburger verkauft.
 Lösung: H
@@ -99,7 +110,22 @@ Minuten: 20
 Punkte: 2.5
 Maximum: 25
 Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.
+AuswahlTitel: Anzeigen
 Bild: img/m18-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
 Aufgaben:
 [11] Sie suchen zwei Stühle für Ihren Garten, möchten aber insgesamt nicht mehr als 15 € bezahlen.
 Lösung: D
@@ -200,6 +226,22 @@ Text:
 Hallo Benny, hallo Verena, diese kurze Notiz habe ich gestern im Internet gefunden und (31) gleich an euch (32) denken. Es waren doch wunderbare Abende, (33) wir im letzten Urlaub in Griechenland verbracht haben. Eure Lieder und Bennys tolles Gitarrenspiel sind mir in guter Erinnerung geblieben. Wie (34) es, hättet ihr nicht mal Lust, bei so einem Songwettbewerb mitzumachen?
 Ich kenne die Burg Tanneck (35) seit meiner Kindheit, als mich meine musikbegeisterten Eltern zu den Festivals mitgenommen haben. Was ganz wichtig ist: Dieser Songwettbewerb hat (36) nichts mit Kommerz und Vermarktung zu tun, wie man es sonst aus dem Fernsehen (37).
 Es geht nur (38), Spaß zu haben und zu singen! Schon allein die romantische Burg ist eine Reise wert, auch (39) ihr nur den anderen Sängern zuhören wollt. Lasst (40) was von euch hören! Bis dann, liebe Grüße aus Saarbrücken Astrid
+Auswahl:
+A = ALS
+B = BALD
+C = BEIDE
+D = DARUM
+E = DIE
+F = DURFTE
+G = ERST
+H = HÄTTE
+I = KENNT
+J = MUSSTE
+K = SCHON
+L = WÄRE
+M = WENN
+N = WISST
+O = ÜBERHAUPT
 Aufgaben:
 [31] … und (31) gleich an euch …
 Erklärung: musste

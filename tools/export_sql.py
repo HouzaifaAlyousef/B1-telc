@@ -13,9 +13,14 @@ import json, sys, argparse
 from pathlib import Path
 
 # الحقول يلي بتنحفظ بـsections.config بدل أعمدة لحالها
+# ★ audio وaudioPlays كانوا ناقصين، فالمصدّر كان يرميهم بصمت: أي
+# Hörtext بالمحتوى ما كان يوصل القاعدة أبداً — يعني المشغّل ما كان
+# يطلع، وأداة رفع الصوت وفحص الجاهزية الاتنين كانوا بيشتغلوا على فراغ.
+# ما بان لأنّ ولا مستوى كان عنده صوت لهلق.
 CONFIG_KEYS = ('bank', 'bankTitle', 'bankImage', 'passages', 'note', 'brief',
                'hints', 'criteria', 'grades', 'factor', 'maxPoints',
-               'availablePoints', 'missing', 'pointsPerItem')
+               'availablePoints', 'missing', 'pointsPerItem',
+               'audio', 'audioPlays')
 
 
 def q(v):

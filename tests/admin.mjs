@@ -530,7 +530,21 @@ try {
   const nameN = await page.locator('[data-name]').count();
   check(`★ أقسام الاستماع إلها حقل اسم (${nameN})`, nameN > 0);
   const firstName = await page.locator('[data-name]').first().inputValue();
-  check(`الاسم المقترح شكله ملف صوت (${firstName})`, /\.mp3$/.test(firstName));
+  check(`الاسم المقترح شكله ملف صوت (${firstName})`, /\.mp3$/i.test(firstName));
+
+  /* ★ رابط خارجي مو ملفّ عنا: التطبيق بيمرّره كما هو، فما إله وجود
+     بالدلو. كانت اللوحة تقول «fehlt» لرابط شغّال، وتعرض الرابط كلّه
+     كاسم ملفّ قابل للتعديل، وتعطي زرّ رفع بلا معنى. */
+  {
+    const linkRows = await page.locator('.pill', { hasText: 'Link' }).count();
+    check(`★ الروابط الخارجية بتطلع «Link» مو «fehlt» (${linkRows})`, linkRows > 0);
+    const anchors = await page.locator('a[href^="http"].mono').count();
+    check('★ وبتنعرض كرابط بينفتح، مو حقل اسم', anchors > 0);
+    const names = await page.locator('[data-name]').evaluateAll(
+      els => els.map(e => e.value));
+    check('★ وما بينعرض ولا رابط كاسم ملفّ',
+          !names.some(v => /^https?:\/\//i.test(v)));
+  }
 
   // التصفية بالستوفة
   await pick(page, 'as_lvl', 'telc', 'telc-a1');

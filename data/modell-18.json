@@ -54,7 +54,38 @@
    "minutes": 20,
    "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.",
    "format": "matching",
-   "pool": [
+   "items": [
+    {
+     "id": "1",
+     "text": "London. Der wohl teuerste Hamburger der Welt wird seit gestern in London verkauft. Der Hamburger besteht aus japanischem Kobe-Rindfleisch, weißen Trüffeln sowie iranischem Safran und kostet umgerechnet 120 Euro. Das übertrifft den bisherigen Weltrekordhalter in New York: Dort bot ein Bistro ein edles Fleischbrötchen für rund 80 Euro an. „The Burger“ ist nur in einer Londoner Filiale zu haben. Bereits am Morgen wurde ein Dutzend der Hamburger verkauft.",
+     "answer": "H"
+    },
+    {
+     "id": "2",
+     "text": "Bielefeld. Die Benutzung eines Handys bei ausgeschaltetem Motor wird nicht mit einem Bußgeld bestraft. Das geht aus einem Urteil des Landgerichts Bielefeld hervor. Ein Autofahrer hatte an einer roten Ampel den Motor abgestellt und mit seinem Handy telefoniert, ohne die Freisprechanlage einzuschalten. Bevor die Ampel auf Grün schaltete, beendete er das Gespräch. Trotzdem wurde der Autofahrer von einem Polizisten angehalten und bekam eine Strafe von 40 Euro. Zu Unrecht, wie das Gericht jetzt urteilte.",
+     "answer": "F"
+    },
+    {
+     "id": "3",
+     "text": "Wuppertal. Drei Jungen haben mit einem Physik-Test der besonderen Art den Bahnverkehr stark gestört. Die Schüler im Alter von zehn und elf Jahren hatten ihre Butterbrote und Getränkekartons auf die Gleise der S-Bahnstrecke Wuppertal-Essen gelegt. „Sie wollten beobachten, was passiert“, sagte die Polizei gestern in Düsseldorf. Der Bahnverkehr wurde gestoppt und das Trio von den Gleisen geholt. Die Polizei erklärte den Jungs, wie gefährlich ihre Aktion war. Mehrere Züge verspäteten sich.",
+     "answer": "C"
+    },
+    {
+     "id": "4",
+     "text": "Paris. In Frankreich hat ein junger Mann bei Tempo 200 auf einer Autobahn am Steuer Filme auf DVD angeschaut. „Ich habe nicht gewusst, dass das verboten ist“, sagte der 21-jährige Pascal A. vor Gericht in Tours. Das Gericht nahm ihm nicht nur den Führerschein weg, sondern beschlagnahmte auch das Auto. Außerdem bekam er eine Geldstrafe von 150 Euro. Die Polizei hatte den Fahranfänger auf der Autobahn angehalten, nachdem er vorher mit über 200 Stundenkilometern viel zu schnell unterwegs gewesen war. Erlaubt war nur Tempo 110.",
+     "answer": "J"
+    },
+    {
+     "id": "5",
+     "text": "Frankfurt. Die gebürtige Hamburgerin Tanja Bauer beliefert das „Main Äppel Haus Lohrberg“ schon lange mit ihren Marmeladen-Variationen. Jetzt möchte sie ihr Wissen und ihre Leidenschaft teilen: Am Dienstag weiht sie Interessierte in ihre Tricks ein. Der Kurs dauert von 18 Uhr bis 20 Uhr und findet im „Main Äppel Haus“ in Frankfurt statt. Die Teilnahme kostet 15 Euro pro Person. Anmeldung ist erforderlich unter (06 109) 22 59 13.",
+     "answer": "G"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bank": [
     {
      "key": "A",
      "text": "Ampel auf Rot: Motor abstellen"
@@ -95,38 +126,7 @@
      "key": "J",
      "text": "Strafe für Filmeschauen beim Autofahren"
     }
-   ],
-   "items": [
-    {
-     "id": "1",
-     "text": "London. Der wohl teuerste Hamburger der Welt wird seit gestern in London verkauft. Der Hamburger besteht aus japanischem Kobe-Rindfleisch, weißen Trüffeln sowie iranischem Safran und kostet umgerechnet 120 Euro. Das übertrifft den bisherigen Weltrekordhalter in New York: Dort bot ein Bistro ein edles Fleischbrötchen für rund 80 Euro an. „The Burger“ ist nur in einer Londoner Filiale zu haben. Bereits am Morgen wurde ein Dutzend der Hamburger verkauft.",
-     "answer": "H"
-    },
-    {
-     "id": "2",
-     "text": "Bielefeld. Die Benutzung eines Handys bei ausgeschaltetem Motor wird nicht mit einem Bußgeld bestraft. Das geht aus einem Urteil des Landgerichts Bielefeld hervor. Ein Autofahrer hatte an einer roten Ampel den Motor abgestellt und mit seinem Handy telefoniert, ohne die Freisprechanlage einzuschalten. Bevor die Ampel auf Grün schaltete, beendete er das Gespräch. Trotzdem wurde der Autofahrer von einem Polizisten angehalten und bekam eine Strafe von 40 Euro. Zu Unrecht, wie das Gericht jetzt urteilte.",
-     "answer": "F"
-    },
-    {
-     "id": "3",
-     "text": "Wuppertal. Drei Jungen haben mit einem Physik-Test der besonderen Art den Bahnverkehr stark gestört. Die Schüler im Alter von zehn und elf Jahren hatten ihre Butterbrote und Getränkekartons auf die Gleise der S-Bahnstrecke Wuppertal-Essen gelegt. „Sie wollten beobachten, was passiert“, sagte die Polizei gestern in Düsseldorf. Der Bahnverkehr wurde gestoppt und das Trio von den Gleisen geholt. Die Polizei erklärte den Jungs, wie gefährlich ihre Aktion war. Mehrere Züge verspäteten sich.",
-     "answer": "C"
-    },
-    {
-     "id": "4",
-     "text": "Paris. In Frankreich hat ein junger Mann bei Tempo 200 auf einer Autobahn am Steuer Filme auf DVD angeschaut. „Ich habe nicht gewusst, dass das verboten ist“, sagte der 21-jährige Pascal A. vor Gericht in Tours. Das Gericht nahm ihm nicht nur den Führerschein weg, sondern beschlagnahmte auch das Auto. Außerdem bekam er eine Geldstrafe von 150 Euro. Die Polizei hatte den Fahranfänger auf der Autobahn angehalten, nachdem er vorher mit über 200 Stundenkilometern viel zu schnell unterwegs gewesen war. Erlaubt war nur Tempo 110.",
-     "answer": "J"
-    },
-    {
-     "id": "5",
-     "text": "Frankfurt. Die gebürtige Hamburgerin Tanja Bauer beliefert das „Main Äppel Haus Lohrberg“ schon lange mit ihren Marmeladen-Variationen. Jetzt möchte sie ihr Wissen und ihre Leidenschaft teilen: Am Dienstag weiht sie Interessierte in ihre Tricks ein. Der Kurs dauert von 18 Uhr bis 20 Uhr und findet im „Main Äppel Haus“ in Frankfurt statt. Die Teilnahme kostet 15 Euro pro Person. Anmeldung ist erforderlich unter (06 109) 22 59 13.",
-     "answer": "G"
-    }
-   ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   ]
   },
   {
    "id": "lv2",
@@ -346,7 +346,62 @@
    "pointsPerItem": 2.5,
    "maxPoints": 25.0,
    "availablePoints": 25.0,
-   "missing": 0
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "bankTitle": "Anzeigen"
   },
   {
    "id": "sb1",
@@ -581,68 +636,6 @@
    "minutes": 20,
    "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.",
    "format": "wordbank",
-   "pool": [
-    {
-     "key": "A",
-     "text": "ALS"
-    },
-    {
-     "key": "B",
-     "text": "BALD"
-    },
-    {
-     "key": "C",
-     "text": "BEIDE"
-    },
-    {
-     "key": "D",
-     "text": "DARUM"
-    },
-    {
-     "key": "E",
-     "text": "DIE"
-    },
-    {
-     "key": "F",
-     "text": "DURFTE"
-    },
-    {
-     "key": "G",
-     "text": "ERST"
-    },
-    {
-     "key": "H",
-     "text": "HÄTTE"
-    },
-    {
-     "key": "I",
-     "text": "KENNT"
-    },
-    {
-     "key": "J",
-     "text": "MUSSTE"
-    },
-    {
-     "key": "K",
-     "text": "SCHON"
-    },
-    {
-     "key": "L",
-     "text": "WÄRE"
-    },
-    {
-     "key": "M",
-     "text": "WENN"
-    },
-    {
-     "key": "N",
-     "text": "WISST"
-    },
-    {
-     "key": "O",
-     "text": "ÜBERHAUPT"
-    }
-   ],
    "passages": [
     {
      "paragraphs": [
@@ -730,7 +723,69 @@
    "pointsPerItem": 1.5,
    "maxPoints": 15.0,
    "availablePoints": 15.0,
-   "missing": 0
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": "ALS"
+    },
+    {
+     "key": "B",
+     "text": "BALD"
+    },
+    {
+     "key": "C",
+     "text": "BEIDE"
+    },
+    {
+     "key": "D",
+     "text": "DARUM"
+    },
+    {
+     "key": "E",
+     "text": "DIE"
+    },
+    {
+     "key": "F",
+     "text": "DURFTE"
+    },
+    {
+     "key": "G",
+     "text": "ERST"
+    },
+    {
+     "key": "H",
+     "text": "HÄTTE"
+    },
+    {
+     "key": "I",
+     "text": "KENNT"
+    },
+    {
+     "key": "J",
+     "text": "MUSSTE"
+    },
+    {
+     "key": "K",
+     "text": "SCHON"
+    },
+    {
+     "key": "L",
+     "text": "WÄRE"
+    },
+    {
+     "key": "M",
+     "text": "WENN"
+    },
+    {
+     "key": "N",
+     "text": "WISST"
+    },
+    {
+     "key": "O",
+     "text": "ÜBERHAUPT"
+    }
+   ]
   },
   {
    "id": "hv1",

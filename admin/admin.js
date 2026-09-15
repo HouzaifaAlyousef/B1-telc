@@ -1060,31 +1060,41 @@ function assetBlock(title, list, bucket, hint){
         <tr><th>Test</th><th>Teil</th><th>Dateiname</th>
             ${bucket === 'exam-audio' ? '<th>Wdh.</th>' : ''}
             <th>Status</th><th></th></tr>
-        ${list.map(r => `<tr>
+        ${list.map(r => {
+          /* ★ رابط خارجي: التطبيق بيمرّره كما هو (assets/api.js — signed())
+             فما إله وجود بالدلو. بلا هالتفريق كانت اللوحة تقول «fehlt»
+             لرابط شغّال، وتعرض الرابط كلّه كاسم ملف قابل للتعديل. */
+          const ext = /^https?:\/\//i.test(r.path || '');
+          return `<tr>
           <td>${esc(r.test_title)}
             <div class="mono" style="color:var(--muted);font-size:12px">${esc(r.slug)}</div></td>
           <td class="mono">${esc(r.section)}</td>
-          <td>${bucket === 'exam-audio'
+          <td>${ext
+            ? `<a class="mono" href="${esc(r.path)}" target="_blank" rel="noopener"
+                 style="font-size:12px;word-break:break-all">${esc(
+                   decodeURIComponent(r.path).replace(/^https?:\/\//, ''))}</a>`
+            : bucket === 'exam-audio'
             ? `<input class="mono" data-name="${esc(r.section_id)}"
                  value="${esc(r.path)}" style="min-width:170px;font-size:12px">`
             : `<span class="mono" style="font-size:12px">${esc(r.path)}</span>`}</td>
           ${bucket === 'exam-audio'
-            ? `<td><input data-plays="${esc(r.section_id)}" type="number" min="1" max="5"
-                 value="${r.plays}" style="width:64px"></td>` : ''}
-          <td><span class="pill ${r.uploaded ? 'ok' : r.assigned ? 'warn' : ''}">${
-            r.uploaded ? 'da' : r.assigned ? 'fehlt' : 'offen'}</span></td>
+            ? `<td>${ext ? '' : `<input data-plays="${esc(r.section_id)}" type="number"
+                 min="1" max="5" value="${r.plays}" style="width:64px">`}</td>` : ''}
+          <td><span class="pill ${ext ? 'ok' : r.uploaded ? 'ok' : r.assigned ? 'warn' : ''}">${
+            ext ? 'Link' : r.uploaded ? 'da' : r.assigned ? 'fehlt' : 'offen'}</span></td>
           <td style="white-space:nowrap">
-            <input type="file" hidden
+            ${ext ? '' : `<input type="file" hidden
                    accept="${bucket === 'exam-audio' ? 'audio/*' : 'image/*'}"
                    data-file="${esc(r.section_id)}" data-bucket="${bucket}"
                    data-path="${esc(r.path)}">
             <button class="btn sm ${r.uploaded ? 'grey' : ''}"
                     data-pick="${esc(r.section_id)}">${
-              r.uploaded ? 'ersetzen' : 'hochladen'}</button>
+              r.uploaded ? 'ersetzen' : 'hochladen'}</button>`}
             ${bucket === 'exam-audio' && r.assigned
               ? `<button class="btn sm grey" data-unlink="${esc(r.section_id)}"
                    title="Verknüpfung lösen">trennen</button>` : ''}
-          </td></tr>`).join('')}
+          </td></tr>`;
+        }).join('')}
       </table></div>` : '<p class="empty">Nichts nötig</p>'}
     </div>`;
 }

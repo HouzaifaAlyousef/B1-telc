@@ -65,8 +65,11 @@ for (const prov of dirs(path.join(ROOT, 'content'))) {
         if (s.bankImage) want.push(['img', s.bankImage]);
         if (s.audio)     want.push(['audio', s.audio]);
       }
+      // ★ رابط خارجي (http) مو ملفّ عنا: التطبيق بيمرّره كما هو
+      //   (assets/api.js — signed())، فما منفتّش عنه بالقرص.
       const gone = want.filter(([kind, f]) =>
-        !existsSync(path.join(dir, kind, path.basename(f))));
+        !/^https?:\/\//i.test(f)
+        && !existsSync(path.join(dir, kind, path.basename(f))));
       if (gone.length) {
         nMissing += gone.length;
         note.push(`★ ناقص ${gone.length}: ${gone.map(g => path.basename(g[1])).join(', ')}`);
