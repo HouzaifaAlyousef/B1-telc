@@ -45,10 +45,6 @@ fi
 command -v psql >/dev/null 2>&1 || {
   echo "✗ لازم psql:  sudo apt install postgresql-client"; exit 1; }
 
-# ★ setup.sql بيرمي مئات «NOTICE: policy … does not exist, skipping» —
-#   وهاد طبيعي (آمن للإعادة)، بس بيدفن سطر «✓» بجدار نص. التحذيرات
-#   والأخطاء بتضل تطلع.
-export PGOPTIONS='-c client_min_messages=warning'
 
 # وصلة قبل ما نبلّش: فشل بالسطر الأوّل أوضح من فشل بنص البذور
 if ! psql "$DATABASE_URL" -q -tAc 'select 1' >/dev/null 2>&1; then
@@ -84,7 +80,14 @@ run(){
   local f="$1"
   [ -f "$f" ] || { echo "✗ ما في $f"; exit 1; }
   printf '▸ %-34s' "$f"
-  psql "$DATABASE_URL" -q -v ON_ERROR_STOP=1 -f "$f" >/dev/null
+  # ★ setup.sql بيرمي مئات «NOTICE: … already exists, skipping» — طبيعي
+  #   (آمن للإعادة) بس بيدفن سطر «✓» بجدار نص. التحذيرات والأخطاء
+  #   بتضل تطلع.
+  #   ولازم تكون جملة SQL مو PGOPTIONS: الـpooler (Supavisor) ما بيمرّر
+  #   خيارات بدء الاتصال، فـPGOPTIONS بتنضرب بصمت عالوصلة الحقيقية —
+  #   محلياً بتشتغل، وعند المستخدم لأ.
+  psql "$DATABASE_URL" -q -v ON_ERROR_STOP=1 \
+       -c 'set client_min_messages = warning' -f "$f" >/dev/null
   echo "✓"
 }
 
@@ -98,5 +101,5 @@ if [ "$SCHEMA_ONLY" = 0 ]; then
 fi
 
 echo
-psql "$DATABASE_URL" -q -f supabase/health.sql 2>/dev/null \
-  | sed -n '/الفحص/,$p'
+psql "$DATABASE_URL" -q -c 'set client_min_messages = warning' \
+     -f supabase/health.sql 2>/dev/null | sed -n '/الفحص/,$p'

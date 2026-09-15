@@ -584,6 +584,14 @@ if psql -h /tmp -p "${PGPORT:-5433}" -U postgres -c '' 2>/dev/null; then
     -f supabase/tests/bootstrap.sql >/dev/null 2>&1
   DATABASE_URL="postgresql://postgres@127.0.0.1:${PGPORT:-5433}/deploytest" \
     ./tools/deploy_db.sh >/dev/null 2>&1
+
+  # ★ التشغيلة التانية هي الصاخبة: setup.sql بيرمي مئات «already exists,
+  #   skipping» وبيدفن سطر «✓». وPGOPTIONS ما بتنفع — الـpooler ما
+  #   بيمرّرها، فالسكوت لازم يكون جملة SQL بنفس الجلسة.
+  NOISE=$(DATABASE_URL="postgresql://postgres@127.0.0.1:${PGPORT:-5433}/deploytest" \
+    ./tools/deploy_db.sh 2>&1 | grep -c "NOTICE:" || true)
+  [ "$NOISE" = 0 ]
+  check "★ إعادة التشغيل بلا جدار NOTICE ($NOISE سطر)" $?
   GOT=$(psql -h /tmp -p "${PGPORT:-5433}" -U postgres -d deploytest -tAc \
     "select count(*)||'/'||(select count(*) from items) from tests;" 2>/dev/null)
   WANT_T=$(grep -c "^-- ================= modell-" supabase/seed/*.sql | \
