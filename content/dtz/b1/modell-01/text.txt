@@ -1,0 +1,454 @@
+# HANSEN
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Wer ruft an?
+A) Ein Arzt.
+B) Eine Kollegin.
+C) Eine Kundin.
+Lösung: A
+
+[2] Was soll Herr Gerber machen?
+A) Das Formular unterschreiben.
+B) Das Geld überweisen.
+C) Zur Wohngeldstelle kommen.
+Lösung: C
+
+[3] Sie wollen nach Lübeck fahren. Was sollen Sie tun?
+A) Auf Gleis 2 warten.
+B) Den ICE nehmen.
+C) In den Bus steigen.
+Lösung: C
+
+[4] Frau Wagner soll
+A) am Donnerstag um 8.30 Uhr kommen.
+B) am Freitag um 8.30 Uhr anrufen.
+C) ihren Termin absagen.
+Lösung: A
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Am Nachmittag
+A) gibt es Gewitter.
+B) scheint meistens die Sonne.
+C) sinken die Temperaturen.
+Lösung: B
+
+[6] Wer in den Urlaub fahren will,
+A) braucht keinen Regenschirm.
+B) muss mit Regen rechnen.
+C) sollte im Norden bleiben.
+Lösung: B
+
+[7] Auf der Autobahn
+A) fahren viele LKWs.
+B) gibt es Stau in Richtung München.
+C) sollten Autofahrer vorsichtig sein.
+Lösung: C
+
+[8] Die Eintrittskarten
+A) gibt es an der Theaterkasse.
+B) kosten heute weniger.
+C) werden verlost.
+Lösung: C
+
+[9] Autofahrer sollten
+A) das Radio anlassen.
+B) das Tempo drosseln.
+C) von der Autobahn abfahren.
+Lösung: B
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 8
+Punkte: 1
+Maximum: 8
+Wiedergaben: 1
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Herr Hansen ist heute Nachmittag im Büro.
+A) Richtig
+B) Falsch
+Lösung: B
+
+[11] Wann kann Herr Hansen die Unterlagen abgeben?
+A) Heute vor 16.00 Uhr.
+B) Heute nach 16.00 Uhr.
+C) Morgen Vormittag.
+Lösung: A
+
+[12] Die Frau findet das Geschenk zu teuer.
+A) Richtig
+B) Falsch
+Lösung: B
+
+[13] Was schenken sie dem Paar?
+A) Gläser.
+B) Handtücher.
+C) Kaffeetassen.
+Lösung: A
+
+[14] Die Frau hat ein Vorstellungsgespräch.
+A) Richtig
+B) Falsch
+Lösung: A
+
+[15] Um welche Stelle bewirbt sich die Frau?
+A) Altenpflegerin.
+B) Arzthelferin.
+C) Krankenschwester.
+Lösung: A
+
+[16] Die Mutter möchte, dass Fabian mehr lernt.
+A) Richtig
+B) Falsch
+Lösung: B
+
+[17] Wie kann Fabian eine bessere Note in Deutsch bekommen?
+A) Er soll mehr Hausaufgaben machen.
+B) Er soll mehr im Unterricht mitarbeiten.
+C) Er soll mehr Texte auf Deutsch lesen.
+Lösung: C
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen 18–20?
+Auswahltitel: Aussagen
+Auswahl:
+a = Für die Erziehung sind nur die Eltern verantwortlich.
+b = Kinder lernen auch im Kindergarten sehr viel.
+c = Kinder unter drei Jahren sollten zu Hause bleiben.
+d = Kleinkinder lernen am besten von ihren Müttern.
+e = Nicht jedes Kind braucht einen Kindergartenplatz.
+f = Schon kleine Kinder brauchen Kontakt zu anderen Kindern.
+Aufgaben:
+[18] Sprecher 1
+Lösung: d
+
+[19] Sprecher 2
+Lösung: f
+
+[20] Sprecher 3
+Lösung: e
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie suchen im Internet Informationen. Wo klicken Sie an?
+Bild: img/dtz-b1-m01-lv1.jpg
+Aufgaben:
+[21] Sie möchten ein gebrauchtes Auto kaufen.
+A) Audio
+B) Reise
+C) andere Seite
+Lösung: C
+
+[22] Eine Bekannte hört gerne Geschichten. Wo finden Sie ein passendes Geschenk?
+A) Filme & DVDs
+B) Bücher
+C) andere Seite
+Lösung: B
+
+[23] Sie ziehen in zwei Wochen in eine neue Wohnung und suchen dafür Kartons.
+A) Möbel & Wohnen
+B) Heimwerker
+C) andere Seite
+Lösung: B
+
+[24] Sie brauchen am Arbeitsplatz eine Kaffeemaschine.
+A) Feinschmecker
+B) Heimwerker
+C) andere Seite
+Lösung: C
+
+[25] Sie arbeiten abends zu Hause und suchen eine Schreibtischlampe.
+A) Büro
+B) Möbel & Wohnen
+C) andere Seite
+Lösung: B
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m01-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Frau Seifert ist Friseurin und möchte stundenweise arbeiten. Sie wohnt in Berlin.
+Lösung: c
+
+[27] Frau Richter sucht eine Ausbildungsstelle als Köchin ab September.
+Lösung: a
+
+[28] Herr Seibold sucht einen Job als Maler und Tapezierer.
+Lösung: x
+
+[29] Herr Kindler sucht Arbeit in einer Kfz-Werkstatt. Er will auch junge Menschen ausbilden.
+Lösung: f
+
+[30] Frau Kerschel möchte sich ein Auto kaufen und braucht dafür Geld. Deshalb will sie während des Sommers zusätzlich etwas verdienen.
+Lösung: e
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+**Hilfe für Zuwanderer**
+Die Regierung des Landes Hessen will dafür sorgen, dass alle Personen, die Migranten bei der Integration helfen, besser zusammenarbeiten. Zwischen den Projekten in den verschiedenen Orten des Landes gab es bisher kaum Kommunikation. Bis heute haben in hessischen Gemeinden mehr als 800 Helfer Zuwanderer bei der Integration in die deutsche Gesellschaft unterstützt, ohne dafür Geld zu bekommen. Ab Januar wird das Land Hessen die Arbeit der Helfer erstmalig mit 500.000 Euro fördern. Zur Verteilung dieses Geldes wird eine Geschäftsstelle eröffnet. „Damit werden wir zwar die Arbeit der Integrationshelfer nicht ganz bezahlen können. Die Zusammenarbeit der zahlreichen örtlichen Hilfsprojekte wird aber sicher besser werden“, sagte Staatssekretärin Silvia Plassmann am Montag in Kassel.
+Aufgaben:
+[31] Das Land Hessen gibt zukünftig eine halbe Million Euro für Integrationshelfer aus.
+A) Richtig
+B) Falsch
+Lösung: A
+
+[32] Das Ministerium möchte, dass
+A) 800 Helfer mehr eingestellt werden.
+B) die Arbeit der Helfer mehr Wirkung hat.
+C) die Helfer für ihre Arbeit mehr Geld verdienen.
+Lösung: B
+
+Text:
+**Liebe Eltern,**
+am kommenden Samstag, dem 18. Juli, findet in der Villa Kunterbunt das alljährliche Kindergartensommerfest statt.
+Die verschiedenen Kindergruppen zeigen ein buntes Programm, das in diesem Jahr unter dem Thema „Sommerblumen“ steht. Die Kinder haben dazu Kostüme gebastelt und Lieder einstudiert. Nach den Aufführungen gibt es Spiel und Spaß im Hof mit Kaffee und Kuchen für Alt und Jung. Dazu möchten wir alle Eltern ganz herzlich einladen.
+Wir bitten Sie außerdem, zu unserem Kuchenbuffet etwas beizutragen oder uns mit einer kleinen Geldspende zu unterstützen.
+Bitte teilen Sie uns auf dem Formular mit, mit wie vielen Personen Sie kommen und was Sie für das Buffet mitbringen.
+
+Ihr Kindergartenteam
+Aufgaben:
+[33] Die Eltern sollen den Kindergarten putzen.
+A) Richtig
+B) Falsch
+Lösung: B
+
+[34] Das Kindergartenteam möchte, dass die Eltern
+A) das Programm planen und organisieren.
+B) etwas mitbringen oder bezahlen.
+C) Lieder singen oder Sommerblumen basteln.
+Lösung: B
+
+Text:
+**Sehr geehrte Familie Müller,**
+wir haben die Nebenkosten für die Zeit vom 1.1. bis 31.12. des vergangenen Jahres abgerechnet. Die Abrechnung schließt mit einem Guthaben in Höhe von 150 Euro ab. Damit reduziert sich Ihre monatliche Nebenkostenvorauszahlung zukünftig um 12 Euro, so dass die Gesamtmiete ab 1. Februar nur noch 612,50 Euro beträgt.
+
+Die genaue Zusammensetzung der Nebenkostenabrechnung entnehmen Sie bitte den folgenden Seiten.
+
+Mit freundlichen Grüßen
+Ihre Hausverwaltung
+Aufgaben:
+[35] Ab 1. Februar muss Familie Müller mehr Miete zahlen.
+A) Richtig
+B) Falsch
+Lösung: B
+
+[36] Familie Müller
+A) braucht ab Februar nichts mehr für die Nebenkosten auszugeben.
+B) hat zuviel an Nebenkosten bezahlt.
+C) muss im kommenden Jahr 150 Euro Nebenkosten bezahlen.
+Lösung: B
+
+
+### Teil: lv4
+Format: truefalse
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text und die Aufgaben 37 bis 39. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**KOPFSCHMERZFREI plus**
+Produktinformation
+Kopfschmerzfrei plus 400 mg Dragees – schmerzstillendes, entzündungshemmendes und fiebersenkendes Mittel.
+
+Hinweise zur Einnahme
+Die Tabletten sollten mit ausreichend Flüssigkeit (z. B. ein Glas Wasser) während der Mahlzeiten oder nach den Mahlzeiten eingenommen werden.
+
+Weitere Informationen
+Vor der Einnahme ist der Arzt über bestehende Krankheiten und Überempfindlichkeitsreaktionen zu informieren, da es unter Umständen zu Wechselwirkungen bzw. Erhöhung oder Senkung der Wirksamkeit anderer Arzneimittel kommen kann. Während der Frühschwangerschaft, Stillzeit und bei Leberfunktionsstörungen, vorgeschädigter Niere, Magen-Darm-Beschwerden, Magen-Darm-Geschwüren, Bluthochdruck oder Herzleistungsschwäche und Allergieleiden sollte das Mittel nur unter ärztlicher Aufsicht bzw. nach Rücksprache angewendet werden. Die aktive Teilnahme am Straßenverkehr und die Bedienung von Maschinen ist uneingeschränkt möglich.
+
+Gegenanzeigen von Kopfschmerzfrei plus 400 mg Dragees
+Kopfschmerzfrei plus darf nicht angewandt werden: bei bekannter Überempfindlichkeit gegenüber einem der Bestandteile, ungeklärten Blutbildungsstörungen, Magen-Darm-Geschwüren, im letzten Drittel der Schwangerschaft, bei Kindern unter 14 Jahren.
+Aufgaben:
+[37] Man soll die Tabletten nicht vor dem Essen nehmen.
+Lösung: r
+
+[38] Nachdem man die Tabletten genommen hat, darf man nicht selbst Auto fahren.
+Lösung: f
+
+[39] Während der gesamten Schwangerschaft darf das Medikament auf keinen Fall eingenommen werden.
+Lösung: f
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5 (Sprachbausteine)
+Gruppe: Lesen
+Minuten: 8
+Punkte: 1
+Maximum: 6
+Anweisung: Wählen Sie für jede Lücke (40–45) das richtige Wort (a, b oder c).
+Text:
+**Norddeutsche Zeitung (NZ)**
+Leseservice
+Tietjenstr. 33
+20546 Hamburg
+
+Hamburg, 20.5. ...
+
+Kündigung des Probeabonnements
+Kundennummer 522543786
+
+(40) Damen und Herren,
+die zwei Wochen Probelesen Ihrer Tageszeitung enden für (41) am 17.5.2008. Hiermit (42) ich mein Probeabonnement fristgerecht kündigen. Leider (43) ich feststellen, dass ich nicht genug Zeit für regelmäßiges Zeitung lesen habe. (44) möchte ich die Norddeutsche Zeitung nicht weiter abonnieren.
+
+Mit (45) Grüßen
+
+Norbert Schultze
+Aufgaben:
+[40] Lücke 40:
+A) Sehr geehrte
+B) Sehr geehrten
+C) Viele geehrte
+Lösung: A
+
+[41] Lücke 41:
+A) mein
+B) mich
+C) mir
+Lösung: B
+
+[42] Lücke 42:
+A) kann
+B) möchte
+C) soll
+Lösung: B
+
+[43] Lücke 43:
+A) konnte
+B) musste
+C) sollte
+Lösung: B
+
+[44] Lücke 44:
+A) Denn
+B) Deshalb
+C) Weil
+Lösung: B
+
+[45] Lücke 45:
+A) freundlichen
+B) lieben
+C) vielen
+Lösung: A
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie eine Aufgabe (Aufgabe A oder Aufgabe B). Schreiben Sie einen kurzen Brief oder eine E-Mail (ca. 80 Wörter). Schreiben Sie zu allen vier Leitpunkten.
+Text:
+**Aufgabe A**
+Sie besuchen einen Deutschkurs. Sie können diese Woche nicht mehr in den Kurs kommen. Deshalb schreiben Sie einen Brief an Ihre Lehrerin, Frau Meinert.
+
+Schreiben Sie etwas zu folgenden Punkten:
+• Grund für Ihr Schreiben
+• Entschuldigung
+• Hausaufgaben
+• Rückkehr in den Kurs
+
+**Aufgabe B**
+Ihre frühere Deutschlehrerin, Frau Berg, hat bald Geburtstag. Sie möchte eine Geburtstagsparty feiern und hat Ihnen eine Einladung geschickt. Antworten Sie auf diese Einladung mit einem Brief.
+
+Schreiben Sie etwas zu folgenden Punkten:
+• Grund für Ihr Schreiben
+• Was Sie im Moment tun
+• Kommen Sie?
+• Bitte um Wegbeschreibung
+Aufgaben:
+[46] Wählen Sie Aufgabe A oder B und schreiben Sie einen Text:
+Mindestwoerter: 80
+Punkt: Grund für Ihr Schreiben
+Punkt: Entschuldigung / Was Sie im Moment tun
+Punkt: Hausaufgaben / Kommen Sie?
+Punkt: Rückkehr in den Kurs / Bitte um Wegbeschreibung

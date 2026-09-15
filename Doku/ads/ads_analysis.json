@@ -1,0 +1,1991 @@
+{
+  "m01": {
+    "model_id": "m01",
+    "title": "PETRA",
+    "page_in_pdf": 6,
+    "folder": "m01_PETRA",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "WEBERKNECHT • Café-Restaurant (Großer Festsaal für Feiern)",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "224x165",
+        "matched_question": "14",
+        "situation": "Sie möchten ein Geburtstagfest organisieren und brauchen dafür einen Raum. Um das Essen und die Getränke für die Gäste möchten Sie sich selbst kümmern."
+      },
+      {
+        "letter": "B",
+        "title": "Privatkindergarten BAMBI • Betreuung Mo-Fr",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "255x195",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "KINO-CENTER • Filmprogramm 4 Säle",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "260x185",
+        "matched_question": "18",
+        "situation": "Ihre Kinder möchten am Nachmittag ins Kino gehen. Sie suchen einen passenden Film für Kinder."
+      },
+      {
+        "letter": "D",
+        "title": "Partyservice! • Festfeiern, Essen & Getränke",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "268x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "E",
+        "title": "AirPlus • Sachbearbeiter(in) für Kundendienst gesucht",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "255x210",
+        "matched_question": "16",
+        "situation": "Ihre 23 jährige Freundin hat soeben einen Computerkurs abgeschlossen und sucht einen Job."
+      },
+      {
+        "letter": "F",
+        "title": "Psychologie-Studentin • Erfahrene Kinderbetreuung",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "260x220",
+        "matched_question": "12",
+        "situation": "Sie möchten am Abend ins Kino gehen und suchen daher eine verlässliche Person, die auf Ihr Kind aufpasst."
+      },
+      {
+        "letter": "G",
+        "title": "Studentenhit in Wien! • 1-Zimmer-Wohnung 30m²",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "260x109",
+        "matched_question": "11",
+        "situation": "Sie möchten für ein Jahr in Wien Psychologie studieren und suchen daher eine günstige Mietwohnung."
+      },
+      {
+        "letter": "H",
+        "title": "A-1030 Wien, Hangmayerstr. • Studenteneigentum 1-Zi-Wohnung",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "255x171",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "I",
+        "title": "KINO UNTER STERNEN • Open Air im Augarten",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "225x139",
+        "matched_question": "19",
+        "situation": "Sie möchten mit Freunden gern ins Kino gehen. Da es ein sehr warmer Sommerabend ist, suchen Sie nach einer Vorstellung im Ferien."
+      },
+      {
+        "letter": "J",
+        "title": "STADTKINO • Sommer-Mitarbeiter/innen gesucht",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "276x304",
+        "matched_question": "13",
+        "situation": "Sie möchten in den Sommerferien nebenbei ein wenig Geld dazu verdienen und suchen daher einen passenden Job."
+      },
+      {
+        "letter": "K",
+        "title": "Volkshochschule Simmering • Berufsorientierte PC-Kurse",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "255x259",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "L",
+        "title": "Familie sucht Babysitterin bzw. Kindermädchen",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "259x246",
+        "matched_question": "20",
+        "situation": "Ihre Freundin ist Erzieherin und zur Zeit arbeitslos. Sie möchte daher als Kindermädchen bei einer Familie arbeiten."
+      }
+    ]
+  },
+  "m02": {
+    "model_id": "m02",
+    "title": "EVA1",
+    "page_in_pdf": 19,
+    "folder": "m02_EVA1",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Meine Welt ist Beethoven • Kultur- & Musikbegleiterin gesucht",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "240x153",
+        "matched_question": "16",
+        "situation": "Ihre 55-jährige Nachbarin sucht jemanden, mit dem sie reisen und klassische Konzerte besuchen kann."
+      },
+      {
+        "letter": "B",
+        "title": "Richtig bewerben • 11-Punkte-Programm für Bewerbungen",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "285x191",
+        "matched_question": "20",
+        "situation": "Eine Freundin braucht ein paar Ratschläge, wie sie erfolgreich eine neue Arbeit finden kann."
+      },
+      {
+        "letter": "C",
+        "title": "Hotel Vier Jahreszeiten • Rezeptionist(in) gesucht",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "255x190",
+        "matched_question": "15",
+        "situation": "Ihre 30-jährige Freundin hat in einem Hotel in Spanien gearbeitet und sucht jetzt eine ähnliche Arbeit in Deutschland."
+      },
+      {
+        "letter": "D",
+        "title": "Ratgeber Au-pair • Suche & Auswahl des Au-pair-Mädchens",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "240x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "E",
+        "title": "Sportclub Erbach • Jugendtrainer Handball/Fußball/Basketball",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "285x193",
+        "matched_question": "11",
+        "situation": "Ihr Bekannter ist Sportlehrer und sucht eine Nebenbeschäftigung in einem Verein."
+      },
+      {
+        "letter": "F",
+        "title": "Netto Lehrerin sucht Partner (über 30, reise- & wanderfreudig)",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "255x172",
+        "matched_question": "12",
+        "situation": "Ein guter Bekannter (39) sucht eine Partnerin. Er ist reiselustig und geht spazieren."
+      },
+      {
+        "letter": "G",
+        "title": "Autohaus Robert & Sohn • Automechaniker / Autoschlosser",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "240x199",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Großes Modehaus • Junge Models (männlich/weiblich) gesucht",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "266x201",
+        "matched_question": "13",
+        "situation": "Ihre Freundin ist besonders hübsch, Studentin und sucht für die Semesterferien im Sommer einen Job."
+      },
+      {
+        "letter": "I",
+        "title": "Kindergarten Hokuspokus • Neue Mitarbeiterin gesucht",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "268x225",
+        "matched_question": "19",
+        "situation": "Ihre 21-jährige Bekannte sucht eine Stelle als Kindergärtnerin."
+      },
+      {
+        "letter": "J",
+        "title": "Stadtverwaltung Erbach • Broschüre Sportvereine bei uns",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "235x265",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Handbuch Auto • Immer Ärger mit der Autowerkstatt?",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "278x190",
+        "matched_question": "17",
+        "situation": "Sie möchten lernen, wie Sie kleinere Reparaturen an Ihrem Auto selbst machen können."
+      },
+      {
+        "letter": "L",
+        "title": "Russisches Au-pair-Mädchen • Für zwei Kinder gesucht",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "275x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      }
+    ]
+  },
+  "m03": {
+    "model_id": "m03",
+    "title": "SOPHIE",
+    "page_in_pdf": 34,
+    "folder": "m03_SOPHIE",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Kloster Andechs • Koch und Küchenhelfer mit Unterkunft gesucht",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "222x205",
+        "matched_question": "14",
+        "situation": "Sie wollen in einem Restaurant arbeiten und dort auch wohnen."
+      },
+      {
+        "letter": "B",
+        "title": "Programmkino Valentin • Spiel- & Dokumentarfilme aus Nordafrika",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "248x186",
+        "matched_question": "19",
+        "situation": "Sie möchten Filme aus afrikanischen Ländern sehen."
+      },
+      {
+        "letter": "C",
+        "title": "Tanzschule Salsa & Mehr • Grundkurse für Anfänger und Fortgeschrittene",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "260x205",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Studenten-Reiseservice • Europaweite Bahn- und Flugreisen",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "282x190",
+        "matched_question": "11",
+        "situation": "Sie möchten als Student nebenbei Geld verdienen. Sie reisen gern."
+      },
+      {
+        "letter": "E",
+        "title": "Sprachschule Babylon • Arabischkurse und Kulturseminare",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "247x186",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "Restaurant Goldener Hirsch • Servicekraft mit Erfahrung gesucht",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "221x190",
+        "matched_question": "18",
+        "situation": "Sie haben große Berufserfahrung in Gaststätten. Jetzt möchten Sie ein Restaurant leiten."
+      },
+      {
+        "letter": "G",
+        "title": "Buchhandlung Orient • Zeitgenössische arabische Literatur in Übersetzung",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "247x165",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Städtische Kindertagesstätte • Freie Plätze ab Herbst",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "250x163",
+        "matched_question": "15",
+        "situation": "Ihre Freundin sucht einen Kindergartenplatz für ihren kleinen Sohn."
+      },
+      {
+        "letter": "I",
+        "title": "Tanzstudio Movimento • Standard-, Latein- und Swing-Tanzkurse",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "247x161",
+        "matched_question": "17",
+        "situation": "Sie möchten tanzen lernen."
+      },
+      {
+        "letter": "J",
+        "title": "Filmtheater Lichtburg • Mitarbeiter/in an der Kinokasse gesucht",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "248x275",
+        "matched_question": "13",
+        "situation": "Ihr Freund möchte gerne in einem Kino arbeiten."
+      },
+      {
+        "letter": "K",
+        "title": "Kulturzentrum Brücke • Lesung zeitgenössischer arabischer Autoren",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "250x275",
+        "matched_question": "12",
+        "situation": "Sie interessieren sich für Literatur aus arabischen Ländern."
+      },
+      {
+        "letter": "L",
+        "title": "Bistro Café Central • Küchenhilfe in Teilzeit gesucht",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "258x253",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      }
+    ]
+  },
+  "m04": {
+    "model_id": "m04",
+    "title": "NADIA2",
+    "page_in_pdf": 47,
+    "folder": "m04_NADIA2",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Museum der Stadt Füssen • Staatsgalerie im Hohen Schloss Füssen",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "270x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "B",
+        "title": "Franziskaner Stüberl • Gutbürgerliche Allgäuer & Bayerische Küche",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "240x214",
+        "matched_question": "13",
+        "situation": "Sie sind in Süddeutschland im Urlaub und möchten gerne eine bayerische Spezialität essen."
+      },
+      {
+        "letter": "C",
+        "title": "Sennerei Genossenschaft Bayern • Frisch vom Erzeuger: Käsespezialitäten",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "270x220",
+        "matched_question": "15",
+        "situation": "Sie sind in Bayern und wollen Käsespezialitäten einkaufen."
+      },
+      {
+        "letter": "D",
+        "title": "SPRACHCAFFE • Sprachen lernen & Leute treffen (Bildungsurlaub)",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "237x125",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "E",
+        "title": "Stadtmusikdirektor Robert Maul • Jahreskonzert Füssen (Klavierkonzert C-Dur)",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "232x125",
+        "matched_question": "11",
+        "situation": "Sie wollen am Wochenende gerne in ein Klavierkonzert gehen."
+      },
+      {
+        "letter": "F",
+        "title": "Das Heimatmuseum Füssen lädt zum Besuch ein",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "270x125",
+        "matched_question": "12",
+        "situation": "Sie sind in Füssen und wollen am Montag ins Museum gehen."
+      },
+      {
+        "letter": "G",
+        "title": "bonCas • Spezialitätenkäserei & Schweizer Käse",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "246x215",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Alfa Sprachreisen • High-School-Programme & Englischferien für 12-16-Jährige",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "240x215",
+        "matched_question": "17",
+        "situation": "Ihr 16 jähriger Sohn soll in den Ferien im Ausland Englisch lernen."
+      },
+      {
+        "letter": "I",
+        "title": "Café Bistro Amadeus • Deutsche Schlagernacht (70er/80er Party)",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "270x215",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "Institut Grünberger • Free-System Sprachkurse Deutsch in Wien",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "266x229",
+        "matched_question": "16",
+        "situation": "Sie möchten einen Deutschkurs in Wien besuchen."
+      },
+      {
+        "letter": "K",
+        "title": "Ritterstub'n • Fischspezialitäten im Herzen der Altstadt",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "240x183",
+        "matched_question": "14",
+        "situation": "Sie haben sich mit Bekannten zu einem Fischessen verabredet."
+      },
+      {
+        "letter": "L",
+        "title": "Hotel-Restaurant Alpenschlössle • Wollen Sie fein essen gehen?",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "270x188",
+        "matched_question": "20",
+        "situation": "Eine Bekannte will ihren Geburtstag in einem Restaurant feiern und dort auch übernachten."
+      }
+    ]
+  },
+  "m05": {
+    "model_id": "m05",
+    "title": "NICOLE",
+    "page_in_pdf": 60,
+    "folder": "m05_NICOLE",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "ADESSA Moden • Neueröffnung Mode für die ganze Familie",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "203x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "B",
+        "title": "Schischule • Schilehrer / Schilehrerinnen gesucht",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "228x117",
+        "matched_question": "18",
+        "situation": "Sie möchten einen Schikurs machen und sich dafür Schier leihen."
+      },
+      {
+        "letter": "C",
+        "title": "Fashion • Das neue Modemagazin mit Trends",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "217x107",
+        "matched_question": "13",
+        "situation": "Sie suchen eine Zeitschrift für Ihre Freundin, die sich für Mode interessiert."
+      },
+      {
+        "letter": "D",
+        "title": "Der Schi-Ort Ötz • Schikurse für Kinder ab 5 Jahren",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "210x106",
+        "matched_question": "11",
+        "situation": "Sie suchen für Ihnen 5-Jährigen Sohn einen Schikurs."
+      },
+      {
+        "letter": "E",
+        "title": "Tiergarten Schönbrunn • Tag der offenen Tür & Kinderbetreuung",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "230x240",
+        "matched_question": "12",
+        "situation": "Sie möchten am Wochenende in den Zoo gehen."
+      },
+      {
+        "letter": "F",
+        "title": "Heute im Kino • Schweinchen Babe in der großen Stadt",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "215x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "G",
+        "title": "Dachstein • Spaß & Urlaub: Schifahren und Freizeitsport",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "199x205",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Helfen Sie dem WWF • Spenden Sie zum Schutz der Tiere!",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "222x130",
+        "matched_question": "20",
+        "situation": "Sie interessieren sich für Tiere und möchten ihnen helfen."
+      },
+      {
+        "letter": "I",
+        "title": "Zirkus COLOMBO • Streichelzoo & Vorstellung am Sonntag",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "225x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "TOP CENTER WIEN • Filme der Woche (Großes Kinoprogramm)",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "210x188",
+        "matched_question": "16",
+        "situation": "Ihre 10-jährige Tochter möchte sich gern einen Tierfilm ansehen."
+      },
+      {
+        "letter": "K",
+        "title": "Boutique MODE-CLAIRE • Verkäuferin für Modegeschäft gesucht",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "228x220",
+        "matched_question": "14",
+        "situation": "Ihre Bekannte sucht einen Job in einem Modegeschäft."
+      },
+      {
+        "letter": "L",
+        "title": "INTERSPORT • Großer Abverkauf: Sportjacken & Schianzüge",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "222x140",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      }
+    ]
+  },
+  "m06": {
+    "model_id": "m06",
+    "title": "ANDREAS",
+    "page_in_pdf": 73,
+    "folder": "m06_ANDREAS",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Berchtesgadener Land • Bergwandern & geführte Touren im August",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "232x293",
+        "matched_question": "20",
+        "situation": "Sie möchten im August eine Woche in den Bergen wandern und brauchen eine erfahren Person, die mit Ihnen geht."
+      },
+      {
+        "letter": "B",
+        "title": "Kulturreisen Europa • Städtereisen & Kunstführungen",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "275x295",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Fahrradverleih Alpin • Mountainbikes & E-Bikes für Bergtouren",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "295x260",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Sporthotel Alpenrose • Tennis, Wellness & Sporturlaub",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "252x227",
+        "matched_question": "15",
+        "situation": "Ihre Freundin sucht ein angenehmes Hotel, in dem man auch Sport treiben kann."
+      },
+      {
+        "letter": "E",
+        "title": "Marionettentheater Puppenkiste • Märchenvorstellung für Groß & Klein",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "275x240",
+        "matched_question": "14",
+        "situation": "Sie möchten sich eine Märchenvorstellung im Theater ansehen."
+      },
+      {
+        "letter": "F",
+        "title": "Berghotel Enzian • Erholung in Höhenlage mit Panoramablick",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "278x215",
+        "matched_question": "13",
+        "situation": "Sie möchten sich in einem Hotel in den Bergen erholen und mit dem Zug anreisen."
+      },
+      {
+        "letter": "G",
+        "title": "Erlebnispark Märchenwald • Familienausflug mit Kindern am Sonntag",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "245x202",
+        "matched_question": "16",
+        "situation": "Am Sonntag wollen Sie einen kleinen Ausflug mit Kindern machen. Die Kinder mögen Tiere."
+      },
+      {
+        "letter": "H",
+        "title": "Dampfeisenbahn Museumsbahn • Modellbahn-Ausstellung & Fahrten",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "274x201",
+        "matched_question": "19",
+        "situation": "Der kleine Sohn von Freunden ist begeistert von der Eisenbahn. Sie möchten am Wochenende mit ihm etwas Interessantes machen."
+      },
+      {
+        "letter": "I",
+        "title": "Alpengasthof Edelweiß • Regionale Schmankerl und Brotzeiten",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "257x216",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "Kletterhalle Vertical • Schnupperklettern für Anfänger",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "256x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Buchhandlung Thalia • Lesung & Signierstunde mit der Krimiautorin",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "275x220",
+        "matched_question": "11",
+        "situation": "Sie lieben Krimis und möchten daher einer Krimiautorin beim Vorlesen zuhören."
+      },
+      {
+        "letter": "L",
+        "title": "Bodensee-Schiffsbetriebe • Schifffahrt im Mai über den See",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "295x201",
+        "matched_question": "17",
+        "situation": "Ihre Bekannten möchten gerne im Mai eine Schiffsfahrt machen."
+      }
+    ]
+  },
+  "m07": {
+    "model_id": "m07",
+    "title": "ANNIKA3",
+    "page_in_pdf": 87,
+    "folder": "m07_ANNIKA3",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Berchtesgadener Land • Bergwandern & geführte Touren im August",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "231x258",
+        "matched_question": "20",
+        "situation": "Sie möchten im August eine Woche in den Bergen wandern und brauchen eine erfahren Person, die mit Ihnen geht."
+      },
+      {
+        "letter": "B",
+        "title": "Kulturreisen Europa • Städtereisen & Kunstführungen",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "240x260",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Fahrradverleih Alpin • Mountainbikes & E-Bikes für Bergtouren",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "275x228",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Sporthotel Alpenrose • Tennis, Wellness & Sporturlaub",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "248x200",
+        "matched_question": "15",
+        "situation": "Ihre Freundin sucht ein angenehmes Hotel, in dem man auch Sport treiben kann."
+      },
+      {
+        "letter": "E",
+        "title": "Marionettentheater Puppenkiste • Märchenvorstellung für Groß & Klein",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "240x210",
+        "matched_question": "14",
+        "situation": "Sie möchten sich eine Märchenvorstellung im Theater ansehen."
+      },
+      {
+        "letter": "F",
+        "title": "Berghotel Enzian • Erholung in Höhenlage mit Panoramablick",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "257x191",
+        "matched_question": "13",
+        "situation": "Sie möchten sich in einem Hotel in den Bergen erholen und mit dem Zug anreisen."
+      },
+      {
+        "letter": "G",
+        "title": "Erlebnispark Märchenwald • Familienausflug mit Kindern am Sonntag",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "243x205",
+        "matched_question": "16",
+        "situation": "Am Sonntag wollen Sie einen kleinen Ausflug mit Kindern machen. Die Kinder mögen Tiere."
+      },
+      {
+        "letter": "H",
+        "title": "Dampfeisenbahn Museumsbahn • Modellbahn-Ausstellung & Fahrten",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "239x205",
+        "matched_question": "19",
+        "situation": "Der kleine Sohn von Freunden ist begeistert von der Eisenbahn. Sie möchten am Wochenende mit ihm etwas Interessantes machen."
+      },
+      {
+        "letter": "I",
+        "title": "Alpengasthof Edelweiß • Regionale Schmankerl und Brotzeiten",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "238x198",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "Kletterhalle Vertical • Schnupperklettern für Anfänger",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "241x191",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Buchhandlung Thalia • Lesung & Signierstunde mit der Krimiautorin",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "240x210",
+        "matched_question": "11",
+        "situation": "Sie lieben Krimis und möchten daher einer Krimiautorin beim Vorlesen zuhören."
+      },
+      {
+        "letter": "L",
+        "title": "Bodensee-Schiffsbetriebe • Schifffahrt im Mai über den See",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "273x204",
+        "matched_question": "17",
+        "situation": "Ihre Bekannten möchten gerne im Mai eine Schiffsfahrt machen."
+      }
+    ]
+  },
+  "m08": {
+    "model_id": "m08",
+    "title": "IRIS1",
+    "page_in_pdf": 100,
+    "folder": "m08_IRIS1",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Reisebüro Sol • Pauschalreisen nach Mallorca und Andalusien",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "219x196",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "B",
+        "title": "Sprachschule Salamanca • Intensiv-Spanischkurse & Bildungsurlaub",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "250x205",
+        "matched_question": "11",
+        "situation": "Ihre Freund wollen einen Sprachkurs in Spanien machen und ihre Kinder mitnehmen."
+      },
+      {
+        "letter": "C",
+        "title": "Busreisen Ideal • Kursabschlussfahrt nach Rom und Toskana",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "255x201",
+        "matched_question": "14",
+        "situation": "Sie wollen Ihrer Kursleiterin eine Kursabschlussreise vorschlagen."
+      },
+      {
+        "letter": "D",
+        "title": "Kfz-Meisterbetrieb Müller • Reparaturen aller Fabrikate & TÜV",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "221x210",
+        "matched_question": "12",
+        "situation": "Ihr Auto ist kaputt und Sie brauchen jemanden, der es repariert."
+      },
+      {
+        "letter": "E",
+        "title": "Möbelstudio Ambiente • Wohntrends & Esszimmermöbel",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "250x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "Radio- und Fernseh-Service Blitz • Schnelle TV-Reparatur",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "229x210",
+        "matched_question": "15",
+        "situation": "Ihr Fernseher ist kaputt. Sie wollen ihn reparieren lassen."
+      },
+      {
+        "letter": "G",
+        "title": "Spielwarenland • Pädagogisches Spielzeug für 6-Jährige",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "230x120",
+        "matched_question": "17",
+        "situation": "Sie suchen ein Geschenk für ein 6- jähriges Kind."
+      },
+      {
+        "letter": "H",
+        "title": "Deko & Wohnen • Schöne Accessoires für die neue Wohnung",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "225x141",
+        "matched_question": "16",
+        "situation": "Eine Bekannte hat eine neue Wohnung. Sie möchten ihr etwas für die Küche schenken."
+      },
+      {
+        "letter": "I",
+        "title": "Praxis für Sportorthopädie • Behandlung von Fuß- und Knieverletzungen",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "242x160",
+        "matched_question": "20",
+        "situation": "Sie haben sich beim Tennis den Fuß verletzt und brauchen einen Arzt."
+      },
+      {
+        "letter": "J",
+        "title": "Fahrschule Start • Führerschein aller Klassen",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "241x270",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Gartenparadies • Pflanzen, Stauden und Gartengeräte",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "250x270",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "L",
+        "title": "Häuslicher Pflegedienst Sonnenschein • Nachsorge nach Operationen",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "255x252",
+        "matched_question": "19",
+        "situation": "Ihre Tante ist operiert worden. Jetzt ist sie wieder zu Hause und braucht spezielles Essen."
+      }
+    ]
+  },
+  "m09": {
+    "model_id": "m09",
+    "title": "CAROLINA",
+    "page_in_pdf": 126,
+    "folder": "m09_CAROLINA",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Museum der Stadt Füssen • Staatsgalerie im Hohen Schloss Füssen",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "250x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "B",
+        "title": "Franziskaner Stüberl • Gutbürgerliche Allgäuer & Bayerische Küche",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "260x220",
+        "matched_question": "13",
+        "situation": "Sie sind in Süddeutschland im Urlaub und möchten gerne eine bayerische Spezialität essen."
+      },
+      {
+        "letter": "C",
+        "title": "Sennerei Genossenschaft Bayern • Frisch vom Erzeuger: Käsespezialitäten",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "240x220",
+        "matched_question": "15",
+        "situation": "Sie sind in Bayern und wollen Käsespezialitäten einkaufen."
+      },
+      {
+        "letter": "D",
+        "title": "SPRACHCAFFE • Sprachen lernen & Leute treffen (Bildungsurlaub)",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "243x200",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "E",
+        "title": "Stadtmusikdirektor Robert Maul • Jahreskonzert Füssen (Klavierkonzert C-Dur)",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "255x200",
+        "matched_question": "11",
+        "situation": "Sie wollen am Wochenende gerne in ein Klavierkonzert gehen."
+      },
+      {
+        "letter": "F",
+        "title": "Das Heimatmuseum Füssen lädt zum Besuch ein",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "209x200",
+        "matched_question": "12",
+        "situation": "Sie sind in Füssen und wollen am Montag ins Museum gehen."
+      },
+      {
+        "letter": "G",
+        "title": "bonCas • Spezialitätenkäserei & Schweizer Käse",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "250x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Alfa Sprachreisen • High-School-Programme & Englischferien für 12-16-Jährige",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "260x210",
+        "matched_question": "17",
+        "situation": "Ihr 16 jähriger Sohn soll in den Ferien im Ausland Englisch lernen."
+      },
+      {
+        "letter": "I",
+        "title": "Café Bistro Amadeus • Deutsche Schlagernacht (70er/80er Party)",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "224x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "Institut Grünberger • Free-System Sprachkurse Deutsch in Wien",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "250x215",
+        "matched_question": "16",
+        "situation": "Sie möchten einen Deutschkurs in Wien besuchen."
+      },
+      {
+        "letter": "K",
+        "title": "Ritterstub'n • Fischspezialitäten im Herzen der Altstadt",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "260x215",
+        "matched_question": "14",
+        "situation": "Sie haben sich mit Bekannten zu einem Fischessen verabredet."
+      },
+      {
+        "letter": "L",
+        "title": "Hotel-Restaurant Alpenschlössle • Wollen Sie fein essen gehen?",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "240x215",
+        "matched_question": "20",
+        "situation": "Eine Bekannte will ihren Geburtstag in einem Restaurant feiern und dort auch übernachten."
+      }
+    ]
+  },
+  "m10": {
+    "model_id": "m10",
+    "title": "VERA",
+    "page_in_pdf": 139,
+    "folder": "m10_VERA",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "TAPE Media Film • Praktikant/in im Bereich Medien- und Veranstaltungstechnik",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "240x142",
+        "matched_question": "14",
+        "situation": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz."
+      },
+      {
+        "letter": "B",
+        "title": "ARTE Themenabend • 20.45 \"UNSERE ZUKUNFT: Jugendliche in der EU\"",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "274x169",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Deutsche Bahn / Bahnreisenforschung • Mitarbeiter/innen für Kundenbefragung",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "275x175",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Tatort (ARD) • 20.15 Krimi mit Axel Prahl & Jan Josef Liefers",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "249x230",
+        "matched_question": "11",
+        "situation": "Sie haben von einer noch unbekannten Schauspielerin gehört und möchten gern einen Film sehen."
+      },
+      {
+        "letter": "E",
+        "title": "Loewe New Media GmbH • Lukrative Halbtagstätigkeit am Telefon",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "275x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "3Sat Live • 20.15 Talk-Show: Umwelt & Verkehrskollaps",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "237x219",
+        "matched_question": "13",
+        "situation": "Sie interessieren sich für Umweltschutz und suchen eine passende Sendung."
+      },
+      {
+        "letter": "G",
+        "title": "Blatti's Hotels • Mitarbeiter/innen am Empfang / Rezeption",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "248x250",
+        "matched_question": "12",
+        "situation": "Sie haben bereits in einem Hotel gearbeitet und suchen wieder eine neue interessante Stelle."
+      },
+      {
+        "letter": "H",
+        "title": "PSA-Zeitarbeit / Nachhilfe • Studenten für Schüler-Nachhilfeunterricht",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "275x250",
+        "matched_question": "20",
+        "situation": "Sie studieren Fremdsprachen und suchen einen Job, bei dem Sie mit Kindern arbeiten können."
+      },
+      {
+        "letter": "I",
+        "title": "VOX Fernsehen • 22.55 Stern TV-Countdown: 10 Reportagen neue Regierung",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "275x250",
+        "matched_question": "15",
+        "situation": "In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren."
+      },
+      {
+        "letter": "J",
+        "title": "Hessischer Rundfunk / HR2 • Max Frisch: Biedermann und die Brandstifter",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "255x270",
+        "matched_question": "18",
+        "situation": "Sie interessieren sich für politisches Theater und möchten am Wochenende dazu etwas hören oder sehen."
+      },
+      {
+        "letter": "K",
+        "title": "Radio Bremen / Radio Wien • Architektur & Moderne Stadtentwicklung",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "275x270",
+        "matched_question": "16",
+        "situation": "Sie interessieren sich für moderne Stadtentwicklung und suchen dazu eine Sendung im Rundfunk."
+      },
+      {
+        "letter": "L",
+        "title": "PRIMA-Werbung • Telefonmarketing & Dialogservice für Kunden",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "275x270",
+        "matched_question": "19",
+        "situation": "Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma."
+      }
+    ]
+  },
+  "m11": {
+    "model_id": "m11",
+    "title": "JENNIFER",
+    "page_in_pdf": 152,
+    "folder": "m11_JENNIFER",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "TAPE Media Film • Praktikant/in im Bereich Medien- und Veranstaltungstechnik",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "242x185",
+        "matched_question": "14",
+        "situation": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz."
+      },
+      {
+        "letter": "B",
+        "title": "ARTE Themenabend • 20.45 \"UNSERE ZUKUNFT: Jugendliche in der EU\"",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "275x173",
+        "matched_question": "20",
+        "situation": "Sie wollen mehr über das Thema Arbeiten in Europa erfahren. ) ( DB"
+      },
+      {
+        "letter": "C",
+        "title": "Deutsche Bahn / Bahnreisenforschung • Mitarbeiter/innen für Kundenbefragung",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "265x185",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Tatort (ARD) • 20.15 Krimi mit Axel Prahl & Jan Josef Liefers",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "250x220",
+        "matched_question": "11",
+        "situation": "Sie haben von einer Schweizer Schauspielerin gehört und möchten gern einen Film sehen."
+      },
+      {
+        "letter": "E",
+        "title": "Loewe New Media GmbH • Lukrative Halbtagstätigkeit am Telefon",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "268x207",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "3Sat Live • 20.15 Talk-Show: Umwelt & Verkehrskollaps",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "225x195",
+        "matched_question": "13",
+        "situation": "Sie interessieren sich für Umweltschutz und suchen eine passende Sendung."
+      },
+      {
+        "letter": "G",
+        "title": "Blatti's Hotels • Mitarbeiter/innen am Empfang / Rezeption",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "250x210",
+        "matched_question": "12",
+        "situation": "Sie haben gerade Ihre Ausbildung beendet und suchen eine Stelle an der Rezeption."
+      },
+      {
+        "letter": "H",
+        "title": "PSA-Zeitarbeit / Nachhilfe • Studenten für Schüler-Nachhilfeunterricht",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "275x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "I",
+        "title": "VOX Fernsehen • 22.55 Stern TV-Countdown: 10 Reportagen neue Regierung",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "263x182",
+        "matched_question": "15",
+        "situation": "In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren."
+      },
+      {
+        "letter": "J",
+        "title": "Hessischer Rundfunk / HR2 • Max Frisch: Biedermann und die Brandstifter",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "242x222",
+        "matched_question": "18",
+        "situation": "Sie interessieren sich für politisches Theater und möchten dazu am Wochenende etwas hören oder sehen."
+      },
+      {
+        "letter": "K",
+        "title": "Radio Bremen / Radio Wien • Architektur & Moderne Stadtentwicklung",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "270x257",
+        "matched_question": "16",
+        "situation": "Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk."
+      },
+      {
+        "letter": "L",
+        "title": "PRIMA-Werbung • Telefonmarketing & Dialogservice für Kunden",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "265x260",
+        "matched_question": "19",
+        "situation": "Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma."
+      }
+    ]
+  },
+  "m12": {
+    "model_id": "m12",
+    "title": "ANDREAS2",
+    "page_in_pdf": 163,
+    "folder": "m12_ANDREAS2",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Sprachschule Aktiv • Englisch- und Spanischkurse am Abend",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "218x249",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "B",
+        "title": "Lernstudio Genius • Gezielte Mathe-Nachhilfe für Schüler",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "242x270",
+        "matched_question": "13",
+        "situation": "Ihr Kind hat in Mathematik schlechte Noten bekommen und braucht Nachhilfe."
+      },
+      {
+        "letter": "C",
+        "title": "Italienisches Spezialitätengeschäft • Pasta, Wein & Olivenöl",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "230x270",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Catering Gourmet • Party-Service & Buffet für private Geburtstagsfeiern",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "230x210",
+        "matched_question": "19",
+        "situation": "Für Ihre Geburtstagfeier suchen Sie jemanden, der bei Ihnen zu Hause kocht."
+      },
+      {
+        "letter": "E",
+        "title": "Botanischer Garten • Große Blumenausstellung und Orchideenschau",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "249x210",
+        "matched_question": "15",
+        "situation": "Am Samstag wollen sie mit Ihrer Tante eine Blumenausstellung besuchen."
+      },
+      {
+        "letter": "F",
+        "title": "Kochstudio Lemongrass • Authentischer Kochkurs Thailändische Küche",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "210x210",
+        "matched_question": "11",
+        "situation": "Sie mögen thailändisches Essen und möchten lernen, einige Speisen selbst zu kochen."
+      },
+      {
+        "letter": "G",
+        "title": "IT-Dienstleistungen • Computerhilfe und Software-Installationen",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "233x192",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Buchhandlung am Dom • Romane, Sachbücher und Bildbände",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "233x205",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "I",
+        "title": "Blumenboutique Rosenrot • Meisterhafte Blumensträuße & Floristik",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "211x203",
+        "matched_question": "14",
+        "situation": "Ihre Freundin hat Geburtstag. Sie möchten ihr einen Blumenstrauß schicken lassen."
+      },
+      {
+        "letter": "J",
+        "title": "Fitnessclub Vitalis • Gerätetraining, Sauna und Yoga",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "218x206",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Umzugsservice Stark • Packservice, Möbeltransport und Montage",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "250x222",
+        "matched_question": "12",
+        "situation": "Sie müssen umziehen und brauchen jemand, der Ihnen hilft."
+      },
+      {
+        "letter": "L",
+        "title": "Haushaltswaren WMF • Edles Kochgeschirr & Küchenmesser als Geschenk",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "226x221",
+        "matched_question": "16",
+        "situation": "Ihr Kollege heiratet. Sie möchten ihm etwas für die Küche schenken."
+      }
+    ]
+  },
+  "m13": {
+    "model_id": "m13",
+    "title": "THOMAS",
+    "page_in_pdf": 174,
+    "folder": "m13_THOMAS",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "TAPE Media Film • Praktikant/in im Bereich Medien- und Veranstaltungstechnik",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "247x185",
+        "matched_question": "14",
+        "situation": "Ihr Freund, der am Institut für Film und Bild studiert, sucht einen geeigneten Praktikumsplatz."
+      },
+      {
+        "letter": "B",
+        "title": "ARTE Themenabend • 20.45 \"UNSERE ZUKUNFT: Jugendliche in der EU\"",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "275x185",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Deutsche Bahn / Bahnreisenforschung • Mitarbeiter/innen für Kundenbefragung",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "258x185",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Tatort (ARD) • 20.15 Krimi mit Axel Prahl & Jan Josef Liefers",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "255x230",
+        "matched_question": "11",
+        "situation": "Sie haben von einer Schweizer Schauspielerin gehört und möchten gern einen Film sehen."
+      },
+      {
+        "letter": "E",
+        "title": "Loewe New Media GmbH • Lukrative Halbtagstätigkeit am Telefon",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "275x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "3Sat Live • 20.15 Talk-Show: Umwelt & Verkehrskollaps",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "258x230",
+        "matched_question": "13",
+        "situation": "Sie interessieren sich für Umweltschutz und suchen eine passende Sendung."
+      },
+      {
+        "letter": "G",
+        "title": "Blatti's Hotels • Mitarbeiter/innen am Empfang / Rezeption",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "255x221",
+        "matched_question": "12",
+        "situation": "Sie haben gerade Ihre Ausbildung beendet und suchen eine Stelle an der Rezeption."
+      },
+      {
+        "letter": "H",
+        "title": "PSA-Zeitarbeit / Nachhilfe • Studenten für Schüler-Nachhilfeunterricht",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "275x250",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "I",
+        "title": "VOX Fernsehen • 22.55 Stern TV-Countdown: 10 Reportagen neue Regierung",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "275x220",
+        "matched_question": "15",
+        "situation": "In einer Sendereihe wird im Fernsehen über die neue politische Entwicklung in Deutschland berichtet. Sie wollen sich informieren."
+      },
+      {
+        "letter": "J",
+        "title": "Hessischer Rundfunk / HR2 • Max Frisch: Biedermann und die Brandstifter",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "255x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Radio Bremen / Radio Wien • Architektur & Moderne Stadtentwicklung",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "261x220",
+        "matched_question": "16",
+        "situation": "Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk."
+      },
+      {
+        "letter": "L",
+        "title": "PRIMA-Werbung • Telefonmarketing & Dialogservice für Kunden",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "275x220",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      }
+    ]
+  },
+  "m14": {
+    "model_id": "m14",
+    "title": "TAMARA",
+    "page_in_pdf": 187,
+    "folder": "m14_TAMARA",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Möbelhaus Schlafwelt • Elegantes Schlafsofa & Gästebett-Lösungen",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "234x175",
+        "matched_question": "13",
+        "situation": "Sie suchen ein schönes Sofa, das man auch als Gästebett benutzen kann."
+      },
+      {
+        "letter": "B",
+        "title": "Antiquitäten Kontor • Stilmöbel aus Gründerzeit und Biedermeier",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "275x174",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Kinderzimmerland • Hochbetten und Etagenbetten aus Kiefernholz",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "225x173",
+        "matched_question": "11",
+        "situation": "Sie suchen für Ihre beiden Kinder neue Betten und möchten höchstens 200 Euro ausgeben."
+      },
+      {
+        "letter": "D",
+        "title": "Sprachinstitut Europa • Französisch und Italienisch für den Urlaub",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "248x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "E",
+        "title": "Hotel Zum Hirschen • Romantische Wochenenden im Schwarzwald",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "271x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "Teppichgalerie Orient • Handgeknüpfte Perserteppiche und Kelims",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "225x230",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "G",
+        "title": "Feriendorf Seeblick • Gemütliche Ferienhäuser für die ganze Familie",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "247x210",
+        "matched_question": "16",
+        "situation": "Ihre Verwandten haben eine Woche Urlaub und suchen einen Ferienort am Meer."
+      },
+      {
+        "letter": "H",
+        "title": "Malerfachbetrieb Meister • Innenanstriche, Lackieren & Tapezieren",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "265x210",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "I",
+        "title": "Schreibwaren & Bürobedarf • Schulranzen, Füllfederhalter und Notizbücher",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "216x207",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "RadReisen Altmühltal • Organisierte Radtouren mit Gepäcktransfer",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "260x279",
+        "matched_question": "15",
+        "situation": "Ihre Freunde möchten eine organisierte Radtour machen und suchen ein geeignetes Angebot."
+      },
+      {
+        "letter": "K",
+        "title": "Schuhhaus Elegance • Bequeme Wanderschuhe und Markenschuhe",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "275x280",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "L",
+        "title": "Zweirad-Zentrum • Frühjahrscheck, Inspektion & Reparatur für Fahrräder",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "225x278",
+        "matched_question": "14",
+        "situation": "Vor Ihre Urlaubsreise möchten Sie Ihr Fahrrad überprüfen lassen."
+      }
+    ]
+  },
+  "m15": {
+    "model_id": "m15",
+    "title": "JAN",
+    "page_in_pdf": 200,
+    "folder": "m15_JAN",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Musikverein Konzerthaus • Klassischer Musikabend am Donnerstag",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "274x245",
+        "matched_question": "15",
+        "situation": "Sie möchten am Donnerstag Abend mit Ihrer Bekannten eine Musikveranstaltung besuchen."
+      },
+      {
+        "letter": "B",
+        "title": "Galerie Moderne Kunst • Zeitgenössische Gemälde und Skulpturen",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "235x245",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Feinkost Käfer • Delikatessen, Champagner und Geschenkkörbe",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "199x245",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "D",
+        "title": "Vitalhotel Schweizer Alpen • Wellness, Wandern und Erholung",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "270x180",
+        "matched_question": "11",
+        "situation": "Sie sind in der Schweiz und möchten sich ein paar Tage beim Baden erholen."
+      },
+      {
+        "letter": "E",
+        "title": "Reiseclub Singletreff • Gemeinsam reisen, Reisepartner finden",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "235x180",
+        "matched_question": "14",
+        "situation": "Sie reisen nicht gerne allein und suchen deshalb Reisepartner."
+      },
+      {
+        "letter": "F",
+        "title": "Uhrmachermeister Becker • Reparatur antiker Wand- und Standuhren",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "213x180",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "G",
+        "title": "Restaurant Schifferstube • Frischer Ostseefisch direkt vom Kutter",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "274x200",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Vokalensemble Barock • Geistliche Lieder und Werke alter Meister",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "235x200",
+        "matched_question": "12",
+        "situation": "Sie hören gerne klassische Musik, am liebsten Barocklieder. Sie möchten in ein Konzert gehen."
+      },
+      {
+        "letter": "I",
+        "title": "Camp Adventure • Internationales Sommer-Sprachcamp für Schüler",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "209x200",
+        "matched_question": "13",
+        "situation": "Ihr Sohn möchte gerne in den Schulfeien seinen Fremdsprachenkenntnisse verbessern.. Er möchte auch Sport treiben."
+      },
+      {
+        "letter": "J",
+        "title": "Buchantiquariat • Seltene Erstausgaben und historische Stiche",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "320x296",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Tanzschule swing & dance • Discofox, Walzer und Salsa am Wochenende",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "235x300",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "L",
+        "title": "Goldschmiedeatelier • Individueller Schmuck und Trauringe handgearbeitet",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "225x300",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      }
+    ]
+  },
+  "m16": {
+    "model_id": "m16",
+    "title": "VIKTOR",
+    "page_in_pdf": 213,
+    "folder": "m16_VIKTOR",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Volkshochschule • Schreib- und Literaturwerkstatt (Kurs 52 M 595)",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "203x189",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "B",
+        "title": "Isenburg-Zentrum • Antik- u. Sammlermarkt am kommenden Sonntag",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "234x195",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "C",
+        "title": "Walter GmbH • Defekte Wasserleitungen, Wasserschaden, Sanitär",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "262x195",
+        "matched_question": "14",
+        "situation": "In Ihrer Wohnung gibt es Probleme mit dem Wasser in Bad und Küche und Sie wollen das verändern."
+      },
+      {
+        "letter": "D",
+        "title": "Magazin auspuff • Redaktionspraktikanten für junges Stadtmagazin",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "195x170",
+        "matched_question": "12",
+        "situation": "Ihr Freund sucht einen Praktikumsplatz bei einer Zeitung."
+      },
+      {
+        "letter": "E",
+        "title": "THERMOKOMFORT • Heizungsinstallation, Reparatur & 24h-Wartung",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "234x195",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "F",
+        "title": "Jukebox Lagerverkauf • Schallplatten, CDs, Comics & Romane",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "262x195",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "G",
+        "title": "Fa. Peter Hinz • Trockenlegung von Häusern, Keller & Schimmel",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "203x185",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "H",
+        "title": "Volkshochschule • Schneidern für alle (Kurs 52 E 684)",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "243x185",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "I",
+        "title": "Musikhaus Arthur Knopp • Pianos und Flügel (Klavier, Miete & Kauf)",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "195x185",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "J",
+        "title": "Kuck und Schmidt • Telefonmarketing & Telefonservice",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "195x200",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "Volkshochschule • Einführung in das Saz-Spiel (Kurs 52 S 560)",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "235x200",
+        "matched_question": "13",
+        "situation": "Sie wollen ein neues Musikinstrument spielen lernen."
+      },
+      {
+        "letter": "L",
+        "title": "Miele Werkkundendienst • Waschmaschinen Ausstellung, Beratung, Verkauf",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "207x200",
+        "matched_question": "11",
+        "situation": "Sie interessiert sich für eine neue Waschmaschine."
+      }
+    ]
+  },
+  "sonja3": {
+    "model_id": "sonja3",
+    "title": "SONJA3",
+    "page_in_pdf": 113,
+    "folder": "sonja3_SONJA3",
+    "ads_count": 12,
+    "ads": [
+      {
+        "letter": "A",
+        "title": "Tonhalle Konzert • Haydn & Beethoven Symphonien am Donnerstag",
+        "raw_image": "ad_a.png",
+        "card_image": "ad_a_card.png",
+        "dimensions": "229x126",
+        "matched_question": 18,
+        "situation": "Sie sind im Juni in München und möchten ein Konzert mit Gesang besuchen."
+      },
+      {
+        "letter": "B",
+        "title": "Cantino • Tapas-Brunch & modern gestalteter Innenraum",
+        "raw_image": "ad_b.png",
+        "card_image": "ad_b_card.png",
+        "dimensions": "230x150",
+        "matched_question": 13,
+        "situation": "Sie möchten gerne in einem Restaurant mit Live-Musik essen."
+      },
+      {
+        "letter": "C",
+        "title": "Korea Pavillon • Asiatische Gastlichkeit & Spezialitäten",
+        "raw_image": "ad_c.png",
+        "card_image": "ad_c_card.png",
+        "dimensions": "218x130",
+        "matched_question": 11,
+        "situation": "Während Ihres Sommerurlaubs in der Schweiz möchten Sie ein Konzert besuchen."
+      },
+      {
+        "letter": "D",
+        "title": "Das Casel Quartett • Werke von Beethoven, Crumb & Dvořák im Saalbau Aarau",
+        "raw_image": "ad_d.png",
+        "card_image": "ad_d_card.png",
+        "dimensions": "240x165",
+        "matched_question": 18,
+        "situation": "Konzertbesuch klassische Musik (Beethoven / Dvořák)."
+      },
+      {
+        "letter": "E",
+        "title": "SPICK • Das clevere Schülermagazin für neugierige Kinder",
+        "raw_image": "ad_e.png",
+        "card_image": "ad_e_card.png",
+        "dimensions": "240x160",
+        "matched_question": 14,
+        "situation": "Sie suchen ein Geschenk für die 12-jährige Tochter Ihrer Schweizer Freunde."
+      },
+      {
+        "letter": "F",
+        "title": "Galakonzert • Symphonisches Blasorchester Oerlikon-Seebach",
+        "raw_image": "ad_f.png",
+        "card_image": "ad_f_card.png",
+        "dimensions": "220x173",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "G",
+        "title": "Flughafenrestaurants TOP AIR • Gastland Norwegen: Kulinarische Märchen",
+        "raw_image": "ad_g.png",
+        "card_image": "ad_g_card.png",
+        "dimensions": "239x209",
+        "matched_question": 20,
+        "situation": "Sie sind am Flughafen und möchten etwas essen."
+      },
+      {
+        "letter": "H",
+        "title": "Hofkonzerte Winterthur • Alpenklänge (Schweizer Volksmusik)",
+        "raw_image": "ad_h.png",
+        "card_image": "ad_h_card.png",
+        "dimensions": "305x270",
+        "matched_question": 11,
+        "situation": "Traditionelle Musik der Schweiz."
+      },
+      {
+        "letter": "I",
+        "title": "Hiltl, Vegetarisch nach Lust und Laune • Über 60 beliebte Rezepte",
+        "raw_image": "ad_i.png",
+        "card_image": "ad_i_card.png",
+        "dimensions": "193x230",
+        "matched_question": 15,
+        "situation": "Sie suchen für Ihre Freunde ein passendes Geschenk (kochen gern selbst & probieren Rezepte)."
+      },
+      {
+        "letter": "J",
+        "title": "András Adorján & Uwe Komischke • Konzert für Flöte, Trompete & Orchester",
+        "raw_image": "ad_j.png",
+        "card_image": "ad_j_card.png",
+        "dimensions": "159x265",
+        "matched_question": null,
+        "situation": "Distractor / No direct matching situation in exam"
+      },
+      {
+        "letter": "K",
+        "title": "SCHWEIZER HEIMATWERK • Traditionelles Kunsthandwerk & Geschenke von hier",
+        "raw_image": "ad_k.png",
+        "card_image": "ad_k_card.png",
+        "dimensions": "465x212",
+        "matched_question": 19,
+        "situation": "Sie sind in der Schweiz und suchen ein Souvenir für Ihre Freunde."
+      },
+      {
+        "letter": "L",
+        "title": "Neuburger • Griechische Spezialitäten am Wochenende",
+        "raw_image": "ad_l.png",
+        "card_image": "ad_l_card.png",
+        "dimensions": "163x235",
+        "matched_question": 16,
+        "situation": "Sie möchten am Samstagabend griechisch essen gehen."
+      }
+    ]
+  }
+}

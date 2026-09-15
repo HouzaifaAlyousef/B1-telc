@@ -14,9 +14,9 @@
     "sb1",
     "sb2"
    ],
-   "maxPoints": 105.0,
-   "availablePoints": 84.0,
-   "missing": 9
+   "maxPoints": 105,
+   "availablePoints": 105,
+   "missing": 0
   },
   {
    "id": "block-hv",
@@ -28,8 +28,8 @@
     "hv2",
     "hv3"
    ],
-   "maxPoints": 75.0,
-   "availablePoints": 75.0,
+   "maxPoints": 75,
+   "availablePoints": 75,
    "missing": 0
   },
   {
@@ -40,12 +40,12 @@
    "parts": [
     "sa"
    ],
-   "maxPoints": 45.0,
+   "maxPoints": 45,
    "availablePoints": 45,
    "missing": 0
   }
  ],
- "subtitle": "52 Aufgaben · 150 Minuten",
+ "subtitle": "61 Aufgaben · 150 Minuten",
  "sections": [
   {
    "id": "lv1",
@@ -124,9 +124,9 @@
      "answer": "C"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0
   },
   {
@@ -258,12 +258,31 @@
       }
      ],
      "answer": "A"
+    },
+    {
+     "id": "10",
+     "text": "Im Berufsleben",
+     "options": [
+      {
+       "key": "A",
+       "text": "bietet immer die ranghöhere Person das Du an."
+      },
+      {
+       "key": "B",
+       "text": "duzt der ältere Mitarbeiter den jüngeren Chef."
+      },
+      {
+       "key": "C",
+       "text": "entscheidet immer das Alter, wer das Du anbietet."
+      }
+     ],
+     "answer": "A"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 20.0,
-   "missing": 1
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0
   },
   {
    "id": "lv3",
@@ -357,12 +376,32 @@
      "id": "16",
      "text": "Sie interessieren sich für Großstädte und ihre Entwicklung und suchen dazu eine Sendung im Rundfunk.",
      "answer": "K"
+    },
+    {
+     "id": "17",
+     "text": "Sie sind mit der Schule fertig und wollen bei der Deutschen Bahn eine Ausbildung machen.",
+     "answer": "X"
+    },
+    {
+     "id": "18",
+     "text": "Sie interessieren sich für politisches Theater und möchten dazu am Wochenende etwas hören oder sehen.",
+     "answer": "J"
+    },
+    {
+     "id": "19",
+     "text": "Sie arbeiten gern mit anderen zusammen und suchen eine Tätigkeit bei einer Werbefirma.",
+     "answer": "L"
+    },
+    {
+     "id": "20",
+     "text": "Sie wollen mehr über das Thema Arbeiten in Europa erfahren.",
+     "answer": "B"
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0,
-   "availablePoints": 15.0,
-   "missing": 4,
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0,
    "bankImage": "img/m13-lv3.jpg"
   },
   {
@@ -434,6 +473,25 @@
      "answer": "B"
     },
     {
+     "id": "23",
+     "text": "… (23) ich ausdrücklich einen Direktflug nach Mumbai bestellt hatte, haben Sie mir Tickets …",
+     "options": [
+      {
+       "key": "A",
+       "text": "Obwohl"
+      },
+      {
+       "key": "B",
+       "text": "Weil"
+      },
+      {
+       "key": "C",
+       "text": "Da"
+      }
+     ],
+     "answer": "A"
+    },
+    {
      "id": "24",
      "text": "… nach Mumbai bestellt hatte, haben Sie mir Tickets (24) Zwischenstopp in Delhi ausgestellt. Wir mussten eine …",
      "options": [
@@ -472,6 +530,25 @@
      "answer": "A"
     },
     {
+     "id": "26",
+     "text": "… Die Tickets waren nämlich nicht nur anders als vereinbart, (26) auch noch viel teurer. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "aber"
+      },
+      {
+       "key": "B",
+       "text": "sondern"
+      },
+      {
+       "key": "C",
+       "text": "und"
+      }
+     ],
+     "answer": "B"
+    },
+    {
      "id": "27",
      "text": "… noch viel teurer. Statt der erwarteten 640 Euro kosteten (27) Tickets 720 Euro. Ich darf Sie daher (28) Rückzahlung der …",
      "options": [
@@ -489,6 +566,44 @@
       }
      ],
      "answer": "C"
+    },
+    {
+     "id": "28",
+     "text": "… Ich darf Sie daher (28) Rückzahlung der zu viel verrechneten Kosten … bitten. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "an"
+      },
+      {
+       "key": "B",
+       "text": "auf"
+      },
+      {
+       "key": "C",
+       "text": "um"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "29",
+     "text": "… auf mein Konto (29) der Bank of India in Mumbai bitten. …",
+     "options": [
+      {
+       "key": "A",
+       "text": "an"
+      },
+      {
+       "key": "B",
+       "text": "bei"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B"
     },
     {
      "id": "30",
@@ -511,9 +626,9 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0,
-   "availablePoints": 9.0,
-   "missing": 4
+   "maxPoints": 15,
+   "availablePoints": 15,
+   "missing": 0
   },
   {
    "id": "sb2",
@@ -702,8 +817,8 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0,
-   "availablePoints": 15.0,
+   "maxPoints": 15,
+   "availablePoints": 15,
    "missing": 0
   },
   {
@@ -712,7 +827,6 @@
    "title": "Hörverstehen, Teil 1",
    "minutes": 8,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -741,10 +855,12 @@
      "answer": "r"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0,
+   "audio": "telc-b1-m13-hv1.mp3",
+   "audioPlays": 2
   },
   {
    "id": "hv2",
@@ -807,8 +923,8 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0
   },
   {
@@ -817,7 +933,6 @@
    "title": "Hörverstehen, Teil 3",
    "minutes": 8,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -846,10 +961,12 @@
      "answer": "f"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0,
+   "audio": "telc-b1-m13-hv3.mp3",
+   "audioPlays": 2
   },
   {
    "id": "sa",
