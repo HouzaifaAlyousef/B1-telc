@@ -57,6 +57,16 @@ const page = await browser.newPage();
 page.on('pageerror', e => { console.log('  ✗ JS-Fehler:', e.message); results.push(['بلا أخطاء JS', false]); });
 
 // نحقن API مزيّف قبل ما يشتغل app.js
+/* ★ `new Audio()` مو عنصر بالـDOM، فالمنتقيات ما بتشوفه. منلفّ الباني
+   قبل ما يشتغل التطبيق ومنمسك كل تسجيل انعمل — هيك منفحص «وقف فعلاً»
+   بدل ما نفحص إنّ الزرّ اختفى (الزرّ بيختفي والصوت بيكمّل). */
+await page.addInitScript(() => {
+  const Real = window.Audio;
+  window.__audios = [];
+  window.Audio = function(...a){ const x = new Real(...a); window.__audios.push(x); return x; };
+  window.Audio.prototype = Real.prototype;
+});
+
 await page.addInitScript(fx => {
   /* ★ الطابور بينحفظ بين الفتحات.
      الخادم الحقيقي بيتذكّر مين بالطابور، فالمزيّف لازم يتذكّر كمان —
@@ -107,7 +117,10 @@ await page.addInitScript(fx => {
     subtitle: 'ÖSD Zertifikat A1',
     blocks: [{ id: 'block-schreiben', title: 'Schreiben', hint: 'Teil 1–2',
                parts: ['s1','s2'], minutes: 30, maxPoints: 20,
-               availablePoints: 20, missing: 0 }],
+               availablePoints: 20, missing: 0 },
+             { id: 'block-lesen', title: 'Lesen', hint: 'gemischt',
+               parts: ['lv9'], minutes: 5, maxPoints: 2,
+               availablePoints: 2, missing: 0 }],
     sections: [
       { id: 's1', group: 'Schreiben', title: 'Schreiben, Teil 1 (Formular)',
         minutes: 10, format: 'writing', maxPoints: 10,
@@ -116,6 +129,22 @@ await page.addInitScript(fx => {
                                   { t: 'Name, Vorname: (1) …', b: false }] }],
         items: [{ id: 'oesd-s1-i1', num: '1', text: 'Formular ausfüllen',
                   points: ['Name','Adresse','Telefon','Sportart','Datum'] }] },
+      /* ★ على شكل DTZ Lesen Teil 3: بنفس القسم سؤال صح-خطأ (خيارين
+         r/f) وسؤال A/B/C. قبل الإصلاح كان سؤال الصح-خطأ بلا خيارات
+         أبداً — undefined.map وشاشة بيضا. */
+      { id: 'lv9', group: 'Lesen', title: 'Lesen, gemischt', minutes: 5,
+        format: 'mc', maxPoints: 2,
+        instruction: 'Richtig oder falsch? Und welche Antwort passt?',
+        items: [
+          { id: 'mix-tf', num: '90', text: 'Der Kurs ist kostenlos.',
+            options: [{ key: 'r', text: 'Richtig' }, { key: 'f', text: 'Falsch' }] },
+          { id: 'mix-mc', num: '91', text: 'Wann beginnt der Kurs?',
+            options: [{ key: 'A', text: 'Montag' }, { key: 'B', text: 'Dienstag' },
+                      { key: 'C', text: 'Mittwoch' }] },
+          // ★ سؤال ناقصه الخيارات: غلط محتوى وارد. المطلوب إنّ الصفحة
+          //   تضل تشتغل وتقول شو ناقص، مو تطلع بيضا وتاخد معها القسم كله
+          { id: 'mix-broken', num: '92', text: 'Aufgabe ohne Auswahl.' },
+        ] },
       { id: 's2', group: 'Schreiben', title: 'Schreiben, Teil 2 (E-Mail)',
         minutes: 20, format: 'writing', maxPoints: 10,
         instruction: 'Schreiben Sie eine E-Mail an Ihre Freundin Rafaela.',
@@ -820,6 +849,67 @@ check('★ بعد مرتين الزرّ بينقفل',
 check('الرسالة صارت «ما في تشغيل بعد»',
       (await page.textContent('.audio [data-left]')).includes('keine'));
 
+/* ★ الطلعة من الامتحان لازم توقّف الصوت.
+   `new Audio()` كائن بالذاكرة ماسكه الـclosure، مو عنصر بالصفحة —
+   استبدال app.innerHTML بيشيل الزرّ وشريط التقدّم وبيخلّي الصوت شغّال.
+   الطالب بيطلع على شاشة تانية والتسجيل بيكمّل بأذنه. */
+{
+  await page.evaluate(() => screenHome());   // نبدأ من شاشة نضيفة
+  await page.waitForTimeout(200);
+  await page.evaluate(() => document.querySelector('.tile[data-id]').click());
+  await page.waitForSelector('[data-block="block-hv"]');
+  await page.evaluate(() => document.querySelector('[data-block="block-hv"]').click());
+  await page.waitForTimeout(300);
+  // #start موجود بالحالتين: «ابدأ» لو ما في جلسة، و«من جديد» لو في
+  await page.waitForSelector('#start', { timeout: 8000 });
+  await page.evaluate(() => document.getElementById('start').click());
+  await page.waitForSelector('.audio [data-play]', { timeout: 8000 });
+  await page.evaluate(() => document.querySelector('.audio [data-play]').click());
+  await page.waitForFunction(() => (window.__audios || []).some(a => !a.paused),
+                             { timeout: 8000 });
+  check('★ الصوت عم يشتغل فعلاً', true);
+
+  await page.evaluate(() => screenHome());
+  await page.waitForTimeout(250);
+  const stillOn = await page.evaluate(() => (window.__audios || []).filter(a => !a.paused).length);
+  check(`★★ الطلعة من الامتحان بتوقّف الصوت (${stillOn} لسا شغّال)`, stillOn === 0);
+}
+
+/* ★ الحدّ لازم يعيش بعد «وقف» و«كمّل».
+   كان `let left = plays` جوّا الرسم: وقف الامتحان ورجوعه بيعيد الرسم
+   وبيرجّع العدّاد لتنتين — يعني حدّ التشغيلتين بينلتفّ عليه بضغطتين. */
+{
+  await page.evaluate(() => document.querySelector('.tile[data-id]').click());
+  await page.waitForSelector('[data-block="block-hv"]');
+  await page.evaluate(() => document.querySelector('[data-block="block-hv"]').click());
+  await page.waitForTimeout(300);
+  await page.waitForSelector('#start', { timeout: 8000 });
+  await page.evaluate(() => document.getElementById('start').click());
+  await page.waitForSelector('.audio [data-play]', { timeout: 8000 });
+  check('بداية جديدة ← تنتين من جديد',
+        (await page.textContent('.audio [data-left]')).includes('2'));
+
+  await page.evaluate(() => document.querySelector('.audio [data-play]').click());
+  await page.waitForFunction(
+    () => /Noch einmal/.test(document.querySelector('.audio [data-play]').textContent),
+    { timeout: 8000 });
+  check('بعد تشغيلة وحدة ← وحدة باقية',
+        (await page.textContent('.audio [data-left]')).includes('1'));
+
+  // «وقف» ← «إنهاء» (بيطلع لشاشة النموذج) ← ورجوع بـ«كمّل»
+  await page.evaluate(() => document.getElementById('pause').click());
+  await page.waitForSelector('.modalback [data-exit]', { timeout: 8000 });
+  await page.evaluate(() => document.querySelector('.modalback [data-exit]').click());
+  await page.waitForSelector('[data-block="block-hv"]', { timeout: 8000 });
+  await page.evaluate(() => document.querySelector('[data-block="block-hv"]').click());
+  await page.waitForSelector('#resume', { timeout: 8000 });
+  await page.evaluate(() => document.getElementById('resume').click());
+  await page.waitForSelector('.audio [data-play]', { timeout: 8000 });
+  const leftTxt = await page.textContent('.audio [data-left]');
+  check(`★★ بعد «وقف/كمّل» بتضل وحدة، ما بترجع تنتين (${leftTxt.trim()})`,
+        leftTxt.includes('1') && !leftTxt.includes('2'));
+}
+
 await page.evaluate(() => { S.answers = {}; finish(S.run, true); });
 await page.waitForSelector('.score');
 check('★ وبعد التسليم النص بيبيّن للمراجعة',
@@ -956,6 +1046,39 @@ await page.evaluate(() => document.getElementById('aigo').click());
 await page.waitForSelector('#aiout .crit', { timeout: 8000 });
 check('★ والتصحيح الآلي اشتغل على هالمستوى كمان',
       await page.locator('#aiout .crit').count() === 3);
+
+/* ---- ١٣) ★ قسم بيخلط صح-خطأ مع A/B/C (شكل DTZ Lesen Teil 3) ----
+   القسم معلّم mc، وسؤال الصح-خطأ ما إله خيارات بالمحتوى الأصلي —
+   renderItem كان بيعمل undefined.map والشاشة كلها بتطلع بيضا. */
+await page.evaluate(() => screenHome());
+await page.waitForTimeout(200);
+await page.evaluate(() => document.querySelector('.tile[data-id="modell-a2-01"]').click());
+await page.waitForSelector('[data-block="block-lesen"]');
+await page.evaluate(() => document.querySelector('[data-block="block-lesen"]').click());
+await page.waitForSelector('#start');
+await page.evaluate(() => document.getElementById('start').click());
+await page.waitForSelector('#q_mix-tf', { timeout: 5000 });
+check('★ القسم المختلط فتح — السؤالين الاتنين ظاهرين',
+      await page.locator('#q_mix-tf .opt').count() === 2
+      && await page.locator('#q_mix-mc .opt').count() === 3);
+check('★ سؤال الصح-خطأ بيطلع Richtig/Falsch مضغوطين بسطر',
+      (await page.textContent('#q_mix-tf')).includes('Richtig')
+      && await page.locator('#q_mix-tf .opts.inline').count() === 1);
+check('★ وسؤال A/B/C بيضل عريض متل باقي الـmc',
+      await page.locator('#q_mix-mc .opts.inline').count() === 0);
+
+// نجاوب ومنسلّم — لازم ينحسبوا، مو ينمرقوا كأنهن ما انوجدوا
+await page.evaluate(() => {
+  document.querySelector('[data-opt="mix-tf|f"]').click();
+  document.querySelector('[data-opt="mix-mc|B"]').click();
+});
+await page.waitForTimeout(150);
+check('★ الاختيار انسجّل بالحالة',
+      await page.evaluate(() => S.answers['mix-tf'] === 'f' && S.answers['mix-mc'] === 'B'));
+check('★★ سؤال ناقصه الخيارات ما بيطيّح الصفحة — بيقول شو ناقص',
+      await page.locator('#q_mix-broken.isbad').count() === 1
+      && (await page.textContent('#q_mix-broken')).includes('Antwortmöglichkeiten')
+      && await page.locator('#q_mix-tf .opt').count() === 2);
 
 await browser.close();
 server.close();

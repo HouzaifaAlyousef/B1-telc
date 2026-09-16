@@ -289,6 +289,52 @@ const Markup = (() => {
       });
     });
 
+    /* ★ الحلّ لازم يكون نفس المفتاح يلي بيقدر الطالب يضغطه.
+       مفاتيح الخيارات والبنك بتنرفع لحروف كبيرة فوق (A، B، C…)، والحلّ
+       كان بينحفظ متل ما انكتب. محتوى DTZ مكتوب بحروف صغيرة — متل
+       الامتحان الأصلي (a–h) — فصار البنك «C» والحلّ «c»، والمقارنة
+       نصيّة: ٧٢ سؤال ما كان فيها ولا جواب صح، مهما ضغط الطالب.
+       ما منرفع كل حرف بالعمياني: «صح/خطأ» بيحفظ r/f صغار عن قصد.
+       منطابق على المفاتيح الموجودة فعلاً، ومنحطّ المفتاح بحرفيّته. */
+    /* ★ «richtig/falsch» جوّا قسم mc.
+       DTZ بيخلط بالجزء الواحد: لكل نصّ سؤال صح-خطأ وبعده سؤال A/B/C.
+       القسم كلّه معلّم mc، فسؤال الصح-خطأ كان بينحفظ بلا خيارات أبداً
+       وحلّه كلمة «falsch». النتيجة: renderItem بيعمل undefined.map —
+       شاشة بيضا — و٦٥ سؤال ما إلهن وجود.
+       منعطيه خياراته بدل ما نخترع صيغة جديدة: صار سؤال mc بخيارين،
+       وكل شي بعده (العرض، التصحيح، المراجعة) بيشتغل متل ما هو. */
+    test.sections.forEach(s => {
+      if (s.format !== 'mc') return;
+      s.items.forEach(it => {
+        if ((it.options && it.options.length) || it.answer == null) return;
+        const v = String(it.answer).trim().toLowerCase();
+        if (!/^(r|f|richtig|falsch|wahr|true|false)$/.test(v)) return;
+        it.options = [{ key: 'r', text: 'Richtig' }, { key: 'f', text: 'Falsch' }];
+        it.answer  = /^(r|richtig|wahr|true)$/.test(v) ? 'r' : 'f';
+      });
+    });
+
+    test.sections.forEach(s => {
+      const keys = new Map();
+      (s.bank || []).forEach(o => keys.set(String(o.key).toLowerCase(), o.key));
+      s.items.forEach(it => {
+        const local = new Map(keys);
+        (it.options || []).forEach(o => local.set(String(o.key).toLowerCase(), o.key));
+        if (it.answer == null) return;
+        if (!local.size){
+          // ★ ولا خيار ولا بنك: الطالب ما عنده شي يضغطه، والشاشة بتنهار
+          if (s.format !== 'writing' && s.format !== 'truefalse')
+            warn.push(`Aufgabe ${it.id} in Teil ${s.id} hat eine Lösung `
+                    + `„${it.answer}“, aber keine Auswahlmöglichkeiten`);
+          return;
+        }
+        const hit = local.get(String(it.answer).toLowerCase());
+        if (hit != null) it.answer = hit;
+        else warn.push(`Aufgabe ${it.id} in Teil ${s.id}: Lösung „${it.answer}“ `
+                     + `steht nicht zur Auswahl (${[...local.values()].join(', ')})`);
+      });
+    });
+
     /* خانات القالب يلي ما انتعبّت.
        القالب الفاضي بيمرق بلا خطأ — وهاد مقصود، تا تقدري تفحصي الهيكل
        قبل التعبئة. بس هيك، خانة واحدة نسيها اللي عم يعبّي (أو الذكاء

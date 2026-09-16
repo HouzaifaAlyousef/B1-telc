@@ -14,6 +14,7 @@ const S = {
   answers: {},      // { itemId: Antwort }
   dropped: {},      // { itemId: [früher gewählte Buchstaben] } — werden durchgestrichen
   checks: {},       // { itemId: [Leitpunkt abgehakt?] } — Selbstkontrolle beim Brief
+  plays:  {},       // { sectionId: كم مرّة انشغّل الصوت } — بينحفظ مع الجلسة
   tick: null,       // Timer
   left: 0,          // verbleibende Sekunden
   view: 'home',
@@ -82,7 +83,18 @@ function stopTimer(){
 }
 
 /* ============ Navigation ============ */
+/* ★ `new Audio()` مو عنصر بالصفحة: استبدال app.innerHTML بيشيل الأزرار
+   وشريط التقدّم، بس الصوت كائن بالذاكرة ماسكه الـclosure — وبيضل شغّال
+   بعد ما الطالب يطلع من الامتحان، ويسمع الحلول على شاشة تانية. لهيك
+   منسجّل كل تسجيل، ومنوقّفه عند كل تنقّل. */
+const LIVE = new Set();
+function stopAudio(){
+  for (const a of LIVE) { try { a.pause(); a.src = ''; } catch {} }
+  LIVE.clear();
+}
+
 function go(view, fn){
+  stopAudio();
   S.view = view;
   // آخر دالة رسم: تبديل اللغة بيعيد نداءها بمكانها. الشاشات بتاخد
   // وسائط (نتيجة، جولة…)، فإعادة بنائها من اسم الشاشة بيضيّعهن.
@@ -751,6 +763,7 @@ function screenIntro(run){
   S.run = run;
   S.answers = {};
   S.dropped = {};
+  S.plays   = {};
   // Übungen kennen weder Entwurf noch angefangene Sitzung
   const sess = run.drill ? null : loadSession(run.id);
   stopTimer();
@@ -790,12 +803,14 @@ function screenIntro(run){
       </div>`;
     document.getElementById('start').onclick = () => {
       clearSession(run.id);
-      S.answers = {}; S.dropped = {};
+      S.answers = {}; S.dropped = {}; S.plays = {};
       screenExam(run);
     };
     const res = document.getElementById('resume');
     if (res) res.onclick = () => {
       S.answers = { ...sess.answers }; S.dropped = { ...sess.dropped };
+      // ★ «كمّل» لازم ترجّع كم مرّة انشغّل الصوت كمان، مو بس الأجوبة
+      S.plays = { ...(sess.plays || {}) };
       screenExam(run, sess.left);
     };
   });
@@ -959,35 +974,57 @@ function renderAudio(sec){
     if (!el) return;
     if (!url){ el.innerHTML = `<p class="sub">${esc(t('audioFailed'))}</p>`; return; }
 
-    let left = plays;
+    /* ★ الحدّ بيتحمّل بالجلسة، مو بمتغيّر بالشاشة. كان `let left = plays`
+       جوّا الرسم: أي إعادة رسم بترجّعه للأول — «وقف الامتحان» وبعدين
+       «كمّل» بتعطي تشغيلتين جداد كل مرّة، والحدّ يلي المفروض يشبه
+       الامتحان الحقيقي بيصير بلا معنى.
+       وبعد التسليم الحدّ بينشال: الامتحان خلص، والمراجعة مو امتحان. */
+    const limited = S.view === 'exam';
+    let used = limited ? (S.plays[sec.id] || 0) : 0;
+    const left = () => Math.max(0, plays - used);
+
     el.innerHTML = `
-      <button class="btn" data-play>${esc(t('audioPlay'))}</button>
-      <span class="sub" data-left>${esc(plural(left, 'audioLeft'))}</span>
+      <button class="btn" data-play></button>
+      <span class="sub" data-left></span>
       <div class="audiobar"><i></i></div>`;
     const audio = new Audio(url);
     audio.preload = 'auto';
+    LIVE.add(audio);
     const btn  = el.querySelector('[data-play]');
     const info = el.querySelector('[data-left]');
     const bar  = el.querySelector('.audiobar i');
 
+    const paint = (running) => {
+      const n = left();
+      btn.disabled = running || n <= 0;
+      btn.textContent = running ? '⏸ Läuft …'
+                      : n <= 0 ? t('audioDone')
+                      : used === 0 ? t('audioPlay') : t('audioAgain');
+      info.textContent = n > 0 ? plural(n, 'audioLeft') : t('audioNone');
+    };
+    paint(false);
+
     audio.addEventListener('timeupdate', () => {
       if (audio.duration) bar.style.width = (audio.currentTime / audio.duration * 100) + '%';
     });
-    audio.addEventListener('ended', () => {
-      left--;
-      btn.disabled = left <= 0;
-      btn.textContent = left > 0 ? t('audioAgain') : t('audioDone');
-      info.textContent = left > 0 ? plural(left, 'audioLeft') : t('audioNone');
-      bar.style.width = '100%';
-    });
+    audio.addEventListener('ended', () => { bar.style.width = '100%'; paint(false); });
+
+    const spend = (n) => {
+      used += n;
+      if (limited){ S.plays[sec.id] = used; saveSession(S.run); }
+    };
+
     btn.onclick = () => {
-      if (left <= 0) return;
-      btn.disabled = true;
-      btn.textContent = '⏸ Läuft …';
+      if (left() <= 0) return;
+      // ★ الحصّة بتنحسب عند الضغط، مو عند نهاية التسجيل: وإلا الطالب
+      //   بيسمع نصّه وبيطلع من الشاشة، وبيرجع بتشغيلة كاملة بجيبته.
+      spend(1);
+      paint(true);
       // kein Zurückspulen: jede Wiedergabe startet von vorn und läuft durch
       audio.currentTime = 0;
       audio.play().catch(() => {
-        btn.disabled = false; btn.textContent = t('audioPlay');
+        spend(-1);                       // ما اشتغل فعلاً — ما بتنحسب
+        paint(false);
         info.textContent = 'Wiedergabe nicht möglich';
       });
     };
@@ -1048,10 +1085,18 @@ function renderItem(sec, it){
   if (sec.format === 'mc' || sec.format === 'truefalse'){
     const opts = sec.format === 'truefalse'
       ? [{ key: 'r', text: 'Richtig' }, { key: 'f', text: 'Falsch' }]
-      : it.options;
+      : (it.options || []);
+    /* ★ سؤال بلا خيارات كان بيعمل undefined.map — شاشة بيضا، وما بتعرف
+       وين ولا ليش. هلق بيقول شو ناقص بمطرحه. */
+    if (!opts.length)
+      return `<div class="q isbad" id="q_${esc(it.id)}">${head}
+        <p class="sub">${esc(t('itemBroken'))}</p></div>`;
+    // صح-خطأ جوّا قسم mc (DTZ): نفس الشكل المضغوط تبع قسم الصح-خطأ
+    const tf = sec.format === 'truefalse'
+            || (opts.length === 2 && opts[0].key === 'r' && opts[1].key === 'f');
     const chosen = S.answers[it.id];
     const gone = S.dropped[it.id] || [];
-    body = `<div class="opts ${sec.format === 'truefalse' ? 'inline' : ''}">${
+    body = `<div class="opts ${tf ? 'inline' : ''}">${
       opts.map(o => `<label class="opt${o.key === chosen ? ' sel' : ''}${gone.includes(o.key) ? ' dropped' : ''}" data-opt="${esc(it.id)}|${esc(o.key)}">
         <input type="radio" name="q_${esc(it.id)}" value="${esc(o.key)}"${o.key === chosen ? ' checked' : ''}>
         <span class="k">${esc(o.key)}</span><span class="grow">${esc(o.text)}</span>
@@ -1287,7 +1332,7 @@ const sessKey = runId => `b1.session.${S.modell ? S.modell.id : '-'}.${runId}`;
 function saveSession(run){
   if (!run || run.drill || S.view !== 'exam') return;
   save(sessKey(run.id), {
-    answers: S.answers, dropped: S.dropped, left: S.left,
+    answers: S.answers, dropped: S.dropped, left: S.left, plays: S.plays,
     date: new Date().toLocaleDateString('de-DE')
   });
 }
@@ -1390,6 +1435,9 @@ function finish(run, auto){
 function answerLabel(sec, it, k){
   if (!k) return 'keine Antwort';
   if (sec.format === 'truefalse') return k === 'r' ? 'Richtig' : 'Falsch';
+  // صح-خطأ جوّا قسم mc: «Richtig» أوضح من «r — Richtig»
+  if ((k === 'r' || k === 'f') && (it.options || []).length === 2
+      && it.options[0].key === 'r') return k === 'r' ? 'Richtig' : 'Falsch';
   if (sec.bank){
     const o = sec.bank.find(x => x.key === k);
     return o ? (o.text ? `${k} — ${o.text}` : k) : '—';

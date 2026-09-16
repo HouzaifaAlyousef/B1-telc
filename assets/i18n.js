@@ -68,6 +68,7 @@ const I18N = (() => {
       aiErrDaily:   'Heute wurden schon sehr viele Korrekturen angefordert. '
                   + 'Bitte morgen noch einmal versuchen.',
       aiErrNoSub:   'Kein aktives Abo.',
+      itemBroken:   'Zu dieser Aufgabe fehlen die Antwortmöglichkeiten.',
       aiErrEmpty:   'Es ist kein Text zum Korrigieren da.',
       aiErrShort:   'Der Text ist zu kurz für eine Korrektur.',
       aiErrSetup:   'Die Korrektur ist noch nicht eingerichtet.',
@@ -248,6 +249,7 @@ const I18N = (() => {
       aiErrQuota:   'حصّة التصحيح لهالفترة خلصت.',
       aiErrDaily:   'اليوم انطلبت تصحيحات كتير. جرّب بكرا.',
       aiErrNoSub:   'ما في اشتراك فعّال.',
+      itemBroken:   'هالسؤال ناقصه الخيارات.',
       aiErrEmpty:   'ما في نص لنصحّحه.',
       aiErrShort:   'النص قصير كتير عالتصحيح.',
       aiErrSetup:   'التصحيح لسا مو مجهّز.',
@@ -443,6 +445,7 @@ const I18N = (() => {
       aiErrDaily:   'Сьогодні вже було багато запитів на перевірку. '
                   + 'Спробуйте завтра.',
       aiErrNoSub:   'Немає активної підписки.',
+      itemBroken:   'У цього завдання немає варіантів відповіді.',
       aiErrEmpty:   'Немає тексту для перевірки.',
       aiErrShort:   'Текст закороткий для перевірки.',
       aiErrSetup:   'Перевірку ще не налаштовано.',

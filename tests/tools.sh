@@ -245,6 +245,51 @@ if (bad.length){ console.error(bad.slice(0,4).join(" · ")); process.exit(1); }
 '
 check "★ data/: أجوبة صح-خطأ r/f · بنوك موجودة · نقاط الكتل مطابقة" $?
 
+# ---------- ★★ كل حلّ لازم يكون شي يقدر الطالب يضغطه ----------
+# الفحص فوق بيمشي على data/ بس (telc B1). هدول العطبين كانوا بـcontent/:
+#
+# · محتوى DTZ مكتوب بحروف صغيرة متل الامتحان الأصلي (a–h)، والمحلّل
+#   بيرفع مفاتيح البنك لحروف كبيرة وما كان يرفع الحلّ. البنك «C»
+#   والحلّ «c»، والمقارنة نصيّة ← ٧٢ سؤال ما فيها ولا جواب صح.
+# · وDTZ بيخلط بالجزء الواحد: سؤال صح-خطأ وبعده A/B/C. القسم معلّم mc،
+#   فسؤال الصح-خطأ انحفظ بلا خيارات وحلّه كلمة «falsch» ← renderItem
+#   بيعمل undefined.map، شاشة بيضا، و٦٥ سؤال ما إلهن وجود.
+#
+# الاتنين ما بيرموا خطأ ولا بيفشّلوا بذرة — بيوصلوا للطالب.
+node -e '
+const fs=require("fs"), path=require("path"), M=require("./admin/parse.js");
+const bad=[];
+const audit=(where, secs)=>{
+  for (const s of secs||[]){
+    if (s.format==="writing") continue;
+    const bank=new Set((s.bank||[]).map(o=>String(o.key)));
+    for (const it of s.items||[]){
+      if (it.answer==null){ bad.push(`${where} ${s.id}/${it.id}: بلا حلّ`); continue; }
+      if (s.format==="truefalse"){
+        if (it.answer!=="r" && it.answer!=="f")
+          bad.push(`${where} ${s.id}/${it.id}: صح-خطأ بحلّ ${JSON.stringify(it.answer)}`);
+        continue;
+      }
+      const keys=new Set([...bank, ...(it.options||[]).map(o=>String(o.key))]);
+      if (!keys.size){ bad.push(`${where} ${s.id}/${it.id}: حلّ بلا خيارات`); continue; }
+      if (!keys.has(String(it.answer)))
+        bad.push(`${where} ${s.id}/${it.id}: حلّ «${it.answer}» مو من [${[...keys].join("")}]`);
+    }
+  }
+};
+for (const f of fs.readdirSync("data").filter(x=>/^modell-\d+\.json$/.test(x)))
+  audit("data/"+f, JSON.parse(fs.readFileSync("data/"+f,"utf8")).sections);
+for (const prov of fs.readdirSync("content").filter(d=>fs.statSync("content/"+d).isDirectory()))
+  for (const lvl of fs.readdirSync(`content/${prov}`).filter(d=>fs.statSync(`content/${prov}/${d}`).isDirectory()))
+    for (const m of fs.readdirSync(`content/${prov}/${lvl}`).filter(d=>d.startsWith("modell-"))){
+      const f=`content/${prov}/${lvl}/${m}/text.txt`;
+      if (!fs.existsSync(f)) continue;
+      audit(`${prov}/${lvl}/${m}`, M.parse(fs.readFileSync(f,"utf8")).test.sections);
+    }
+if (bad.length){ console.error(`${bad.length} سؤال: `+bad.slice(0,3).join(" · ")); process.exit(1); }
+'
+check "★★ كل حلّ بكل المستويات هو مفتاح موجود بالخيارات (حرفياً)" $?
+
 # ---------- ★ بذرة B1: الثغرة الوحيدة يلي كانت مكشوفة ----------
 # b1.sql مولّد من data/ بطريق تانية، فدوران البذور فوق ما بيلمسه. يعني
 # كان الملف الوحيد يلي بيقدر يصير قديم بصمت — وهاد بالضبط يلي صار:
