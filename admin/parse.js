@@ -321,6 +321,10 @@ const Markup = (() => {
         const local = new Map(keys);
         (it.options || []).forEach(o => local.set(String(o.key).toLowerCase(), o.key));
         if (it.answer == null) return;
+        /* خانة القالب لسا ما انتعبّت (<A bis J>): فحص الخانات تحت
+           بيبلّغ عنها بدقّة أكتر. تبليغين عن نفس الشي بيزحّوا الأهم
+           برّا لوحة التحذيرات. */
+        if (/<[^<>]{0,80}>/.test(String(it.answer))) return;
         if (!local.size){
           // ★ ولا خيار ولا بنك: الطالب ما عنده شي يضغطه، والشاشة بتنهار
           if (s.format !== 'writing' && s.format !== 'truefalse')
