@@ -171,7 +171,7 @@ Aufgaben:
 A) dass
 B) darum
 C) weil
-Lösung: B
+Lösung: A
 [22] … (21) Sie bisher noch nicht Kunde bei Kaffee Partner (22). Vielleicht liegt das an uns, weil wir (23) nicht das …
 A) seid
 B) sein
@@ -201,7 +201,7 @@ Lösung: B
 A) für
 B) von
 C) wegen
-Lösung: B
+Lösung: A
 [28] … kleine Leckereien und nette Kalender für Büro und Zuhause (28) Ihnen unser Geschenkkatalog. Viel Spaß beim Blättern und …
 A) gezeigt
 B) zeigen

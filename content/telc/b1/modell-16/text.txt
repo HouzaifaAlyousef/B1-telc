@@ -189,7 +189,7 @@ Lösung: C
 A) lange
 B) langem
 C) langer
-Lösung: C
+Lösung: A
 [25] … Trotzdem – ohne meine Sprachkenntnisse und meine Auslandserfahrung (25) ich die Stelle sicher nicht bekommen. …
 A) habe
 B) hätte
@@ -209,7 +209,7 @@ Lösung: C
 A) dem
 B) den
 C) denen
-Lösung: C
+Lösung: A
 [29] … Ich würde dich am liebsten kurz (29) , um mit dir persönlich zu sprechen. Geht das vielleicht (30) …
 A) getroffen
 B) treffe
@@ -281,7 +281,7 @@ Erklärung: Das Wort lautet: WIE VIELE
 Lösung: N
 [39] … für die Exkursionen extra bezahlen oder sind die Kosten (39) schon im Kursgeld enthalten? Für Ihre Antwort (40) meine …
 Erklärung: Das Wort lautet: WIE
-Lösung: M
+Lösung: B
 [40] … Kosten (39) schon im Kursgeld enthalten? Für Ihre Antwort (40) meine Fragen bedanke ich mich vielmals. Mit freundlichen …
 Erklärung: Das Wort lautet: AUF
 Lösung: A

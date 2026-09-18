@@ -233,7 +233,7 @@ B = BIS
 C = DASS
 D = FÜR
 E = GUTE
-F = KENIE
+F = KEINE
 G = MICH
 H = MIR
 I = MIT
@@ -251,7 +251,7 @@ Lösung: H
 Erklärung: Das Wort lautet: FÜR
 Lösung: D
 [33] … lernen. Für einen richtigen Sprachkurs habe ich leider (33) Zeit. Aber Ihre Methode interessiert mich, vor allem die …
-Erklärung: Das Wort lautet: KENIE
+Erklärung: Das Wort lautet: KEINE
 Lösung: F
 [34] … Methode interessiert mich, vor allem die Sprachübungen (34) den CDs. Ich denke, damit könnte ich ganz (35) Ich …
 Erklärung: Das Wort lautet: MIT

@@ -667,7 +667,7 @@
    "bank": [
     {
      "key": "A",
-     "text": "AM"
+     "text": "AUCH"
     },
     {
      "key": "B",
@@ -675,35 +675,35 @@
     },
     {
      "key": "C",
-     "text": "FRAGEN"
+     "text": "BESCHREIBEN"
     },
     {
      "key": "D",
-     "text": "GEEIGENET"
+     "text": "FRAGEN"
     },
     {
      "key": "E",
-     "text": "GEGEÜBER"
+     "text": "GEEIGNET"
     },
     {
      "key": "F",
-     "text": "INFORMATIONEN"
+     "text": "GEGENÜBER"
     },
     {
      "key": "G",
-     "text": "KÖNNTEN"
+     "text": "INFORMATIONEN"
     },
     {
      "key": "H",
-     "text": "NENNEN"
+     "text": "KÖNNTEN"
     },
     {
      "key": "I",
-     "text": "NUN"
+     "text": "STATTFINDEN"
     },
     {
      "key": "J",
-     "text": "STATTFINDEN"
+     "text": "SUCHEN"
     },
     {
      "key": "K",
@@ -711,7 +711,7 @@
     },
     {
      "key": "L",
-     "text": "TROTZDEM"
+     "text": "TOUR"
     },
     {
      "key": "M",
@@ -723,7 +723,7 @@
     },
     {
      "key": "O",
-     "text": "WEGEN"
+     "text": "WEIL"
     }
    ],
    "items": [
@@ -736,25 +736,25 @@
     {
      "id": "32",
      "text": "… vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer …",
-     "answer": "J",
+     "answer": "I",
      "explain": "Das Wort lautet: STATTFINDEN"
     },
     {
      "id": "33",
      "text": "… in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von …",
-     "answer": "F",
+     "answer": "G",
      "explain": "Das Wort lautet: INFORMATIONEN"
     },
     {
      "id": "34",
      "text": "… daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die …",
-     "answer": "H",
+     "answer": "C",
      "explain": "Das Wort lautet: NENNEN"
     },
     {
      "id": "35",
      "text": "… Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir …",
-     "answer": "D",
+     "answer": "E",
      "explain": "Das Wort lautet: GEEIGNET"
     },
     {
@@ -766,7 +766,7 @@
     {
      "id": "37",
      "text": "… Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit …",
-     "answer": "I",
+     "answer": "J",
      "explain": "Das Wort lautet: NUN"
     },
     {

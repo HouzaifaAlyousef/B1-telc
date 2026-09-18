@@ -230,43 +230,43 @@ Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel,
 Bitte geben Sie uns möglichst bald Bescheid. Für Prospekte und Informationen zu Preisen und Buchungsbedingungen(40) wir Ihnen dankbar. Mit freundlichen Grüßen
 ADRIAN SCHÖLLER EVD Trans GmbH
 Auswahl:
-A = AM
+A = AUCH
 B = AUFTRAG
-C = FRAGEN
-D = GEEIGENET
-E = GEGEÜBER
-F = INFORMATIONEN
-G = KÖNNTEN
-H = NENNEN
-I = NUN
-J = STATTFINDEN
+C = BESCHREIBEN
+D = FRAGEN
+E = GEEIGNET
+F = GEGENÜBER
+G = INFORMATIONEN
+H = KÖNNTEN
+I = STATTFINDEN
+J = SUCHEN
 K = TERMIN
-L = TROTZDEM
+L = TOUR
 M = VOR
 N = WÄREN
-O = WEGEN
+O = WEIL
 Aufgaben:
 [31] … geehrte Damen und Herren, unsere Organisation hat den (31) , eine deutsch-französische Konferenz zu europäischen …
 Erklärung: Das Wort lautet: AUFTRAG
 Lösung: B
 [32] … vorzubereiten. Diese Veranstaltung könnte in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer …
 Erklärung: Das Wort lautet: STATTFINDEN
-Lösung: J
+Lösung: I
 [33] … in Breisach (32) , und daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von …
 Erklärung: Das Wort lautet: INFORMATIONEN
-Lösung: F
+Lösung: G
 [34] … daher brauchen wir von Ihnen nähere(33). In Ihrer Anzeige (34) Sie die Sehenswürdigkeiten von Breisach und die …
 Erklärung: Das Wort lautet: NENNEN
-Lösung: H
+Lösung: C
 [35] … Möglichkeiten. Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir …
 Erklärung: Das Wort lautet: GEEIGNET
-Lösung: D
+Lösung: E
 [36] … Deshalb erscheint uns Ihre Stadt als sehr (35) , auch (36) sie als Brücke zu Europa gilt. Nun haben wir folgende …
 Erklärung: Das Wort lautet: WEGEN
 Lösung: O
 [37] … Nun haben wir folgende Bitte: Für diese Veranstaltung (37) wir ein gutes Hotel, möglichst am Ufer des Rheins, mit …
 Erklärung: Das Wort lautet: NUN
-Lösung: I
+Lösung: J
 [38] … technischen Anlagen, Internetanschluss usw. Es sollte (38) ruhig gelegen sein. Können Sie uns dazu Vorschläge …
 Erklärung: Das Wort lautet: AM
 Lösung: A
