@@ -250,7 +250,7 @@
      "options": [
       {
        "key": "A",
-       "text": "arbeitet seit 41 Jahren in der gleichen Firma."
+       "text": "arbeitet seit 21 Jahren in der gleichen Firma."
       },
       {
        "key": "B",
@@ -261,7 +261,7 @@
        "text": "ist seit 21 Jahren an der gleichen Maschine beschäftigt."
       }
      ],
-     "answer": "C"
+     "answer": "A"
     },
     {
      "id": "10",

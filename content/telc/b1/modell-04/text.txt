@@ -92,12 +92,12 @@ Lösung: B
 A) wollen viele Menschen weniger arbeiten.
 B) kann viel Arbeit den Menschen gut tun.
 C) leben viele Menschen nur noch für ihren Beruf.
-Lösung: B
+Lösung: C
 [10] In Seminaren sollen die Teilnehmer lernen,
 A) kranken Mitarbeitern zu helfen.
 B) wie man die Arbeit im Büro besser organisieren kann.
 C) ein gesundes Verhältnis zur Arbeit zu finden.
-Lösung: B
+Lösung: C
 
 ### Teil: lv3
 Format: matching
