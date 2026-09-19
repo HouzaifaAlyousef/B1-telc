@@ -1,0 +1,466 @@
+# SCHMIDT
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Was soll Frau Schmidt machen?
+A) An die Schule schreiben.
+B) Am Samstag in die Schule kommen.
+C) Auf einen Brief warten.
+Lösung: C
+
+[2] Wann soll Svetlana am Kino sein?
+A) Um 20 Uhr.
+B) Um kurz vor halb neun.
+C) Um 20 Uhr 30.
+Lösung: A
+
+[3] Wann hat das Bürgeramt geöffnet?
+A) Täglich bis 18 Uhr.
+B) Auch samstagmittags.
+C) Auch samstagabends.
+Lösung: B
+
+[4] Sie müssen dringend zum Orthopäden. Was sollen Sie tun?
+A) Am 1. März vorbeikommen.
+B) Am 1. März anrufen.
+C) Eine andere Nummer anrufen.
+Lösung: C
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Wo liegen Gegenstände auf der Straße?
+A) Auf der A 3.
+B) Auf der A 5.
+C) Auf der A 45.
+Lösung: B
+
+[6] Wie wird das Wetter am Sonntag?
+A) Es wird wärmer.
+B) Es gibt Regen.
+C) Es wird sehr windig.
+Lösung: A
+
+[7] Was hören Sie?
+A) Verkehrsmeldungen.
+B) Die Nachrichten.
+C) Tipps für Autobesitzer.
+Lösung: C
+
+[8] Wann kann man den Krimi sehen?
+A) Heute um 20.15 Uhr.
+B) Es gibt noch keinen neuen Termin.
+C) Morgen.
+Lösung: B
+
+[9] Die Bewohner des Stadtteils sollen
+A) die Feuerwehr anrufen.
+B) die Löscharbeiten nicht stören.
+C) ihre Wohnungen verlassen.
+Lösung: B
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 8
+Punkte: 1
+Maximum: 8
+Wiedergaben: 2
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Die Kundin beschwert sich über eine Reparatur.
+A) richtig
+B) falsch
+Lösung: B
+
+[11] Was bietet der Verkäufer an?
+A) Ein neues Fahrrad.
+B) Ein Ersatzrad.
+C) Geld für das alte Rad.
+Lösung: B
+
+[12] Der Sprecher will verreisen.
+A) richtig
+B) falsch
+Lösung: A
+
+[13] Worum bittet der Mann Frau Scholz?
+A) Sie soll ihn im Urlaub anrufen.
+B) Sie soll nach den Blumen sehen.
+C) Sie soll wichtige Post an seine Adresse schicken.
+Lösung: B
+
+[14] Sie hören ein Gespräch zwischen einer Patientin und einer Apothekerin.
+A) richtig
+B) falsch
+Lösung: A
+
+[15] Was ist richtig?
+A) Das Medikament kostet nichts.
+B) Das Medikament kann man nicht mehr bekommen.
+C) Das Medikament ist rezeptfrei.
+Lösung: A
+
+[16] Herr Braun und Herr Martin sind Kollegen.
+A) richtig
+B) falsch
+Lösung: A
+
+[17] Kommt Herr Braun zur Versammlung?
+A) Nein, er muss arbeiten.
+B) Nein, er hat Urlaub.
+C) Er weiß es noch nicht genau.
+Lösung: C
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 3
+Wiedergaben: 2
+Anweisung: Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen 18–20?
+Auswahltitel: Meinungen zum Fernsehen bei Kindern
+Auswahl:
+a = Die Sprecherin hat ihren Fernseher verkauft, nachdem sie ein Kind bekam.
+b = Wichtig sind eindeutige Regeln beim Fernsehen.
+c = Es hängt vom Alter ab, wie viel Kinder fernsehen sollten.
+d = Man soll die Kinder nicht alleine fernsehen lassen.
+e = Ohne Fernsehen würde es keine Probleme mehr geben.
+f = Eltern müssen ihr eigenes Fernsehverhalten ändern.
+Aufgaben:
+[18] Sprecher 1
+Lösung: f
+
+[19] Sprecher 2
+Lösung: c
+
+[20] Sprecher 3
+Lösung: d
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie wollen etwas einkaufen. Lesen Sie die Aufgaben 21–25 und die Internetseite. Wo (a, b oder c) finden Sie etwas Passendes?
+Bild: img/dtz-b1-m09-lv1.jpg
+Aufgaben:
+[21] Sie interessieren sich für eine Kaffeemaschine.
+A) Feinschmecker
+B) Haushaltsgeräte
+C) andere Seite
+Lösung: B
+
+[22] Sie suchen einen neuen Teppich.
+A) Wohnen
+B) Mode
+C) andere Seite
+Lösung: A
+
+[23] Sie wollen Ihre Wohnung streichen und tapezieren.
+A) Wohnen
+B) Heimwerken & Garten
+C) andere Seite
+Lösung: B
+
+[24] Sie möchten Ihrer Tochter eine Eintrittskarte für ein Konzert schenken.
+A) Audio & HiFi
+B) Geschenkartikel
+C) andere Seite
+Lösung: C
+
+[25] Sie wollen mit dem Auto in den Urlaub fahren und brauchen Tabletten, weil Ihnen im Auto immer schlecht wird.
+A) Fit, Schön & Gesund
+B) Freizeit, Urlaub & Reise
+C) andere Seite
+Lösung: A
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m09-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Es ist Sonntagabend. Ihre Tochter hat plötzlich starke Kopfschmerzen und Sie brauchen ein Medikament für sie.
+Lösung: c
+
+[27] Sie können schlecht schlafen und suchen Hilfe.
+Lösung: b
+
+[28] Sie arbeiten viel am Computer und brauchen eine neue Brille.
+Lösung: h
+
+[29] Sie möchten wissen, wie Sie Ihre Krankenkasse wechseln können.
+Lösung: x
+
+[30] Sie haben jeden Morgen starke Rückenschmerzen. Sie suchen Hilfe.
+Lösung: g
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+Liebe Eltern
+
+gut erhaltene Kleidung für Kinder und Jugendliche, Spielzeug, Bücher und vieles mehr bietet der Flohmarkt der Peter Petersen Grundschule, Kaiserstraße 20.
+
+Am Samstag 24. April können Eltern dort einkaufen, während ihre Kinder betreut werden.
+Der Markt ist von 14 bis 17 Uhr geöffnet. Der Verkauf findet auf dem Schulhof statt.
+Wer etwas verkaufen möchte und einen eigenen Tapeziertisch mitbringt, zahlt sechs Euro. Ein Leihtisch ist für vier Euro zu haben. Tischreservierung unter Telefon 089 – 23 76 33 (16 bis 21 Uhr). Für Getränke und einen kleinen Imbiss wird gesorgt.
+
+Bitte geben Sie uns Bescheid, ob Sie kommen möchten und ob Sie einen Leihtisch benötigen.
+
+Mit freundlichen Grüßen
+Die Schulleitung
+Aufgaben:
+[31] Am 24. April kann man in der Peter Petersen Grundschule günstig Sachen kaufen.
+Lösung: richtig
+
+[32] Die Schulleitung möchte,
+A) dass die Eltern etwas zu essen und zu trinken mitbringen.
+B) dass die Eltern eigene Tische mitbringen.
+C) dass die Eltern eine kleine Gebühr bezahlen, wenn sie etwas verkaufen.
+Lösung: C
+
+Text:
+Sehr geehrte Familie Gonzales,
+
+aus Gründen der Sicherheit muss auch dieses Jahr Ihre Gasheizung wieder überprüft und gereinigt werden. Dazu wird sich die Firma Bauer – Sanitärinstallation in den nächsten Tagen telefonisch mit Ihnen in Verbindung setzen, um einen Termin auszumachen.
+
+Die Kosten für diese Wartung sind laut Mietvertrag von Ihnen zu zahlen. Wir weisen Sie aber darauf hin, dass Sie einen Teil der Kosten als sogenannte „haushaltsnahe Dienstleistung“ beim Finanzamt von Ihrer Steuer abziehen können.
+
+Mit freundlichen Grüßen
+Ihr Hausverwaltung
+Aufgaben:
+[33] Im Haus werden alle Gasöfen ausgetauscht. Die Firma Bauer kommt in den nächsten Tagen vorbei.
+Lösung: falsch
+
+[34] Die Kosten für Überprüfung und Reinigung
+A) zahlt der Vermieter.
+B) muss der Mieter bezahlen.
+C) sind dieses Jahr 20 Prozent geringer.
+Lösung: B
+
+Text:
+Berufsbezogene Sprachförderung
+Kursangebot für Migranten
+
+Diese Kurse richten sich an Migrantinnen und Migranten, die sich beruflich und sprachlich weiterbilden möchten. Ziel ist es, den Teilnehmerinnen und Teilnehmern zu helfen, einen Arbeitsplatz zu finden.
+
+Migranten/Migrantinnen können an einer berufsbezogenen Sprachförderung teilnehmen, wenn sie Arbeit suchen und eine sprachliche und fachliche Qualifizierung für den Arbeitsmarkt benötigen, aber auch wenn sie bereits in einem Beschäftigungsverhältnis stehen.
+
+Sie müssen einen Integrationskurs abgeschlossen haben. Wenn sie nachweisen können, dass sie ein Sprachniveau von mindestens B1 haben, gilt diese Bedingung jedoch nicht.
+
+In den Kursen lernen die Teilnehmerinnen und Teilnehmer nicht nur Deutsch für den Beruf, sie besuchen auch Betriebe und machen ein Praktikum.
+
+Die Kurse sind kostenlos. Haben Sie Kinder, können die Kosten für Kinderbetreuung eventuell übernommen werden.
+Aufgaben:
+[35] Die Kurse kann man auch besuchen, wenn man schon eine Arbeit hat.
+Lösung: richtig
+
+[36] Wenn man an den Kursen teilnehmen möchte,
+A) muss man gleichzeitig einen Integrationskurs machen
+B) muss man gute Deutschkenntnisse (Niveau B1) haben.
+C) kann man seine Kinder zum Unterricht mitnehmen.
+Lösung: B
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+Auszug aus den Allgemeinen Geschäftsbedingungen der Volkshochschule
+
+Allgemeines
+(1) Wer sich zu einem der Kurse der Volkshochschule, nachfolgend VHS genannt, anmeldet, erkennt die AGB und die Hausordnungen der jeweiligen Veranstaltungsorte an.
+
+Kündigung durch den/die Teilnehmer/in
+(1) Bei Abmeldung/Kündigung bis 10 Tage vor Kursbeginn werden die bereits gezahlten Kursgebühren und besondere Kosten in voller Höhe zurückgezahlt.
+(2) Bei späterer Abmeldung bis einen Werktag vor Kursbeginn sind 30% der Kursgebühr, mindestens jedoch 10 Euro zu zahlen. Besondere Kosten sind in voller Höhe zu zahlen.
+(3) Ab dem Tag des Kursbeginns besteht kein Anspruch auf Rückzahlung der Kursgebühr und der besonderen Kosten.
+(4) Rückzahlungen können in der Regel nur unbar erfolgen.
+
+Ummeldung
+Eine Ummeldung von einem Kurs in einen vergleichbaren anderen Kurs im laufenden Programm kann nur vor Kursbeginn und mit Zustimmung der VHS erfolgen. Bereits gezahlte Kursgebühren und besondere Kosten werden verrechnet.
+
+Teilnahmebescheinigungen
+Die Teilnahme an einem Kurs kann unter der Voraussetzung regelmäßiger Teilnahme auf Wunsch bescheinigt werden. Die Ausstellung einer Teilnahmebescheinigung ist bis spätestens zwei Jahre nach Ablauf des Jahres, in dem der Kurs beendet ist, möglich.
+Aufgaben:
+[37] Wenn ein Teilnehmer seine Anmeldung zurücknehmen möchte, muss er immer mindestens zehn Euro bezahlen.
+Lösung: falsch
+
+[38] Man kann sich nicht mehr ummelden, wenn ein Kurs angefangen hat.
+Lösung: richtig
+
+[39] Die VHS stellt für ihre Kurse automatisch Teilnahmebescheinigungen aus.
+Lösung: falsch
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+Versandhaus
+Mode für Sie
+Postfach
+50100 Köln
+
+Berlin, den 5. Oktober 2010
+
+REKLAMATION
+
+Sehr geehrte Damen und Herren,
+
+am 20. November habe ich bei Ihnen eine Hose bestellt (Levis Jeans 501 31/32). Die Jeans ist am 27. November (40) mir angekommen. Leider musste ich (41), dass die Hose zu klein ist (29!/32). Ich bitte Sie, mir die Hose in der von mir bestellten (42) zuzusenden.
+
+Ich werde Ihnen die zu kleine Jeans (43). Auch bitte ich Sie, die Gebühren für die Rücksendung (Porto) zu (44).
+
+Vielen Dank für Ihre (45).
+
+Mit freundlichen Grüßen
+Sergej Naumenkow
+Aufgaben:
+[40] Lücke 40
+A) an
+B) bei
+C) zu
+Lösung: B
+
+[41] Lücke 41
+A) bestätigen
+B) festsetzen
+C) feststellen
+Lösung: C
+
+[42] Lücke 42
+A) Größe
+B) Form
+C) Menge
+Lösung: A
+
+[43] Lücke 43
+A) bestellen
+B) bezahlen
+C) zurückschicken
+Lösung: C
+
+[44] Lücke 44
+A) überlegen
+B) übernehmen
+C) überprüfen
+Lösung: B
+
+[45] Lücke 45
+A) Mühe
+B) Bestellung
+C) Auftrag
+Lösung: A
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie haben die Fernsehzeitschrift „TV aktuell“ abonniert. Die Zeitschrift gefällt Ihnen nicht mehr und Sie möchten das Abonnement kündigen. Schreiben Sie an TV aktuell.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Was hat Ihnen nicht gefallen?
+- Zu welchem Termin können Sie kündigen?
+- Bitte um Bestätigung
+
+oder
+
+Aufgabe B:
+Sie möchten am nächsten Samstag im Baumarkt einkaufen. Jetzt ist Ihr Auto kaputt gegangen. Sie möchten das Auto Ihres Nachbarn, Herrn Scholz, für diesen Tag leihen. Schreiben Sie Herrn Scholz eine kurze Nachricht.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Wie lange Sie das Auto brauchen
+- Auch etwas für Herrn Scholz holen?
+- Als Dankeschön Einladung zum Essen

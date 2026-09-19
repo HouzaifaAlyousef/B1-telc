@@ -1,0 +1,275 @@
+# MARCO
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/oesd-a1-m08-lv1.jpg
+Auswahl:
+1 = E.M.N.I.N.S: Schubertgasse 23. Egal, ob für Sommer oder Winter. Kaufen Sie gebrauchte Damen- und Herrenkleidung und helfen Sie so unserer Umwelt! Wir sind auch online für Sie da. www.es-muss-nicht-immer-neu-sein.at
+2 = 22 m² großes WG-Zimmer in Gartenwohnung: Bist du ordentlich und willst mit zwei netten Sport-Studenten zusammenwohnen? Dann melde dich bei uns! Jana & Klaus, 0664/2276892
+3 = Neueröffnung Mamidu: günstige Babykleidung und -spiele von guter Qualität; Café im 1. Stock lädt müde Mamis ein, auch mal eine Pause zu machen. Adlergasse 6, 6900 Bregenz
+4 = Wir haben die besten Angebote!: Ausflugsziele und Termine, die schönsten Museen, Sehenswürdigkeiten, Restaurants, Hotels und vieles mehr mit nur einem Klick. www.urlaub-in-muenster.de
+5 = WGM Wohnpark Grün: Sie wohnen wie auf dem Land und sind doch mitten im Zentrum von Zürich! Noch Wohnungen in allen Größen frei! www.makler-blume.ch, Tel. +4144 76294062
+6 = Kaufen und verkaufen Sie bei uns alte Autos, Motorräder und auch Fahrräder – zum besten Preis in ganz Österreich. schnell und einfach, gratis Anzeige, Hilfe von Experten. www.verkaufundkauf.at
+Aufgaben:
+[1] Situation A: Sie sind kulturell interessiert und brauchen Informationen für Ihre nächste Reise.
+Lösung: 4
+[2] Situation B: Sie wollen mehr Sport machen und suchen ein billiges Rad.
+Lösung: 6
+[3] Situation C: Ihre Freundin bekommt eine Tochter. Sie möchten dem kleinen Mädchen ein Geschenk kaufen.
+Lösung: 3
+[4] Situation D: Sie möchten umziehen und alleine leben.
+Lösung: 5
+[5] Situation E: Es wird kalt. Sie wollen eine Jacke im Internet bestellen.
+Lösung: 1
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**NEUE DEUTSCHKURSE**
+★ 1. bis 31. August
+★ Anmeldung: Mo.–Fr. 09:00–11:00 Uhr, im Zimmer 19 bei Frau Dorn
+★ Mitbringen: Reisepass, Führerschein o. Ä.
+★ Welcher Kurs ist der richtige? Online-Test: www.deutschmachtspass.at/kurse
+Aufgaben:
+[6] Kann man sich im Internet für den Deutschkurs anmelden?
+A) JA
+B) NEIN
+Lösung: B
+[7] Braucht man bei Frau Dorn einen Ausweis?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Wald-Fest**
+Freitag: Beginn um 20:00 Uhr mit DJ Ron
+Samstag: Live-Musik ab 11:00 Uhr, -50 % auf Ihr erstes Getränk (bis 15:00 Uhr)
+Samstag und Sonntag: Spaß und Spiele für kleine Gäste ab 4 Jahren (bis 15:00 Uhr)
+Aufgaben:
+[8] Sind Getränke am Samstagabend billiger?
+A) JA
+B) NEIN
+Lösung: B
+[9] Gibt es am Wochenende ein Kinderprogramm?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Jumping Fitness-Kurs – Trainieren Sie 300 Muskeln auf einmal!**
+Dienstag bis Donnerstag und Samstag 9–10:30 Uhr
+Hubertstraße 87, 28757 Bremen
+Direkt bar im Kurs bezahlen. Die erste Stunde kostet nichts!
+www.jumpingfitness.de
+Aufgaben:
+[10] Ist der Kurs am Mittwoch?
+A) JA
+B) NEIN
+Lösung: A
+[11] Kann man das Geld für den Kurs überweisen?
+A) JA
+B) NEIN
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/oesd-a1-m08-lv3.jpg
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: Probleme? Ruf uns an! Wir hören dir zu! Wir reden mit dir! 24 Stunden täglich, 0800 777 383
+Lösung: 2
+[13] Text B: Liebe Gäste! Sie können Speisen und Getränke auch mit Kreditkarte bezahlen.
+Lösung: 3
+[14] Text C: Abgedreht! Ab sofort sind Handys an dieser Schule nicht erlaubt!
+Lösung: 5
+[15] Text D: Nicht nur wir Menschen brauchen Wasser – auch Ihre Blumen haben Durst! Im Sommer tägliches Gießen nicht vergessen! Ihr „Flora-Fauna“-Team
+Lösung: 6
+[16] Text E: Willkommen im Kindergarten Sonne! Spiel und Spaß für kleine und große Kinder!
+Lösung: 4
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/oesd-a1-m08-hv1.jpg
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: C
+[18] Text 2
+Lösung: E
+[19] Text 3
+Lösung: B
+[20] Text 4
+Lösung: A
+[21] Text 5
+Lösung: D
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Treffen im neuen Frühstücks-Lokal**
+Treffen im neuen Frühstücks-Lokal
+Wann: am ............................, um ............................ Uhr
+Lokal heißt: ............................
+Adresse: Wagnergasse ............................
+Lauras Nummer: 0676 / ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Wann (Wochentag): Dienstag / Di(.)
+Punkt: Uhrzeit: 09:30 / halb 10 / halb zehn Uhr
+Punkt: Lokal heißt: Artner
+Punkt: Adresse: Wagnergasse 14
+Punkt: Lauras Nummer: 1756293
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Was gefällt Ihnen an Deutschland am besten?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Text 1: Was gefällt Ihnen an Deutschland am besten?
+A) Essen
+B) Menschen
+C) Städte
+D) Natur
+Lösung: D
+[24] Text 2: Was gefällt Ihnen an Deutschland am besten?
+A) Essen
+B) Menschen
+C) Städte
+D) Natur
+Lösung: A
+[25] Text 3: Was gefällt Ihnen an Deutschland am besten?
+A) Essen
+B) Menschen
+C) Städte
+D) Natur
+Lösung: C
+[26] Text 4: Was gefällt Ihnen an Deutschland am besten?
+A) Essen
+B) Menschen
+C) Städte
+D) Natur
+Lösung: B
+[27] Text 5: Was gefällt Ihnen an Deutschland am besten?
+A) Essen
+B) Menschen
+C) Städte
+D) Natur
+Lösung: D
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Sie möchten sich bei einem Wanderverein anmelden. Dafür müssen Sie ein Formular ausfüllen. Bitte füllen Sie das Formular aus. Sie können die Antworten auch erfinden.
+Text:
+**WANDERVEREIN – FORMULAR**
+Vorname(n): ............................
+Nachname(n): ............................
+Alter: ............................
+E-Mail-Adresse: ............................
+Adresse (Straße + Nr.): ............................
+Postleitzahl + Ort: ............................
+Telefonnummer: ............................
+Datum und Unterschrift: ............................
+Aufgaben:
+[28] Füllen Sie das Formular mit Ihren Angaben aus:
+Punkt: Vorname(n) und Nachname(n)
+Punkt: Alter und E-Mail-Adresse
+Punkt: Adresse (Straße + Nr., Postleitzahl + Ort)
+Punkt: Telefonnummer
+Punkt: Datum und Unterschrift
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Sie haben eine neue Wohnung gefunden und ziehen bald um. Ein Freund möchte Ihnen helfen. Sie bekommen folgendes E-Mail von ihm. Antworten Sie Marco. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Neue Wohnung**
+Hallo!
+Schön, dass du endlich eine neue Wohnung gefunden hast! Ich hoffe, sie gefällt dir. Erzähl mir: Wie ist deine neue Wohnung? Und wann ziehst du um? Ich helfe dir gerne. Es gibt bestimmt viel zu tun. Bitte schreib mir, wie ich zu deiner neuen Wohnung komme.
+Liebe Grüße
+Marco
+Aufgaben:
+[29] Antworten Sie Marco (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: Wie ist deine neue Wohnung?
+Punkt: Wann ziehst du um?
+Punkt: Wie komme ich zu deiner neuen Wohnung? (Wegbeschreibung)
+Punkt: Gruß am Ende

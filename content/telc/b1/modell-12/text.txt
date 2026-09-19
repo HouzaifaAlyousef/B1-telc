@@ -1,0 +1,418 @@
+# ANDREAS2
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 15
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.
+AuswahlTitel: Überschriften
+Auswahl:
+A = Bilder mit dem Computer bearbeiten
+B = Kirche bietet Backkurs für Kinder an
+C = Kirche eröffnet neuen Treffpunkt
+D = Neu: Kochbuch über Weiner Fleischgerichte
+E = Neue Computerprogramme werden getestet
+F = Preis für bestes Lernprogramm
+G = Rezepte für Kuchen und Torten
+H = Studie zeigt: Kaffeetrinker sind glücklicher
+I = Warum die Wiener ins Café gehen
+J = Zürcher Fotografen stellen aus
+Aufgaben:
+[1] Die Kunst – und Medienschule F+ F Zürich bietet bereits zum dritten Mal den Computerkurs Digitale Bildbearbeitung an im neuen Semester steht für zehn Samstage Fotografie nach der Fotografie also die digitale Bearbeitung von Bildern im Mittelpunkt Dabei kommen verschiedene Softwareprodukte zum Einsatz Der Kurs befasst sich aber nicht nur mit dem – – Vermitteln auch Themen und Problembereiche rund um die digitale Foto und Bildbearbeitung kurskosten 800Franken Nähere Informationen und Anmeldung zu diesem Kurs www.f- f.ch.
+Lösung: A
+[2] – Neuperlach-Süd Nach dem Einkaufen eine Kaffee genießen, mit anderen ins Gespräch Immen, sich mit Bekannten treffen oder einfach spannen all das geht ab 11 Juli immer – – dienstags zwischen 14 und 18 Uhr im neuen Eiscafé der Dietrich Bonhoeffer Kirche Wir hotten damit einen Ort der Begegnung für Jung und Alt anbieten und zur Belebung des Stadtteils beitragen erklärt Pfarrer Sebastian Kühnen. Neben kalten und heißen Getränken sowie Kuchen steht während der Öffnungszeiten auch eine Mitarbeiten für Gespräch zur Verfügung.
+Lösung: C
+[3] Geheimnisse der modernen Konditorkunst der Meister des Süßen, Herwig Gasser, in Jahre hinweg sammelte der Bäcker des berühmten Wiener Café Landmann Mehlspeisenrezepte. Von der Birnentorte über den Apfelstrudel bis hin zum Heidelbeerstolle Verlag Kettel, 110 Fotos, 300 Seiten. – – ISBAN 3 85134 014 -0
+Lösung: G
+[4] Am Montag wird in Stuttgart die Bildungs-Didacta eröffnet. Dort werden vor allem Lehrmaterialien vorgestellt. Bei vielen sich um Bildungssoftware. Für ein gelungenes Softwareprojekt wird am der Bildungssoftwarepreis digital vergeben Dabei handelt es sich um die wichtige Auszeichnung für Lehr und Lernprogramm deutschsprachigen Raum Die verzeichnen mit dem digital multimediale Gebote aus, die inhaltlich und formal als ragend und beispielgebend gelten können.
+Lösung: E
+[5] – Des Gallup Instituts hat sich mit Kaffeehausverhaltens der Wiener Ein Vorurteil hat sich dabei bestätigt Kaffeehaus und der Wiener Seine Melange Ergebnisse der Studie 27 der an, zumindest einmal im Monat der Nähe ihrer Wohnung zu gehen. Durchschnittlich 54 Minuten Befragten in ihrem Stamm Café Kundschaft umso länger wird gegessen. Der Grund ein Kaffeehaus wichtiger ist das Plaudern und Freunden. 77 der Befragten Grund für den Besuch im Kaffeehaus
+Lösung: I
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Mehr Platz und Schutz für Bienen**
+Seit einiger Zeit hört man immer wieder, dass Bienen vom Aussterben bedroht sind. Welche Folgen hat das für die Menschheit und was wird dagegen unternommen?
+Bienen spielen eine sehr wichtige Rolle für unsere Umwelt. Weltweit stirbt seit Jahren ein großer Teil der Bienenbevölkerung. Warum so viele Bienen sterben, lässt sich nicht so einfach sagen, denn meistens spielen mehrere Faktoren eine Rolle, wie zum Beispiel der Gebrauch von Pestiziden in der Landwirtschaft, fehlende Wiesen und Grünflächen, Luftverschmutzung und Klimawandel.
+In den letzten Jahren sind vor allem in den Städten immer mehr Aktionen ins Leben gerufen worden, um neuen Lebensraum von Bienen zu schaffen. Bienen finden heute in vielen Städten ausreichend Nahrung, weil immer mehr Menschen für sie sorgen. „Bienen sind spannend“, meint Sebastian Werner. „Man sieht sie nicht immer, sie sind eher im Verborgenen und haben etwas Geheimnisvolles.“ „Die Biene ist für viele Menschen auch ein Symbol für Wildnis“, sagt Thorsten Gottlieb. „Und es ist schön für uns Menschen, das zu erleben. Faszinierend, ihnen bei ihrer Arbeit zu beobachten, stundenlang.“ Werner und Kessel sind der Überzeugung, dass ohne die Biene die Arbeit des Menschen kaum möglich wäre. Bienen bestäuben einen Großteil unserer Nahrungsmittel. Diese drei sind mit dem Thema vertraut, da sie das jährliche Frankfurter Bienenfestival vorbereiten. Gottlieb und Werner sind Gründer der Initiative und Kessel ist der Gastgeber und Leiter des Botanischen Gartens, wo das Festival stattfindet.
+Die Beschäftigung mit Bienen wirkt entspannend im stressigen Tempo des Alltags. Außerdem ist die Welt, wie sie ist, ohne Bienen gar nicht vorstellbar. Sie sorgen für die Verbreitung hunderttausender Pflanzen, die Mensch und Tier zur Ernährung brauchen.
+In Frankfurt besteht seit vielen hundert Jahren eine Tradition der Bienenhaltung. Für Einsteiger gibt es ein großes Angebot an Kursen.
+„Du brauchst Grundlagen und eine gute Ausbildung, sonst machst du einfach zu viele Fehler“, warnt Thorsten Gottlieb. „Du hast eine riesengroße Verantwortung“, fügt Sebastian Werner hinzu. „Du musst wissen, was du da tust – nicht nur, weil du für bis zu 60 000 Bienen in einem einzigen Volk zu sorgen hast. Alle Bienenvölker im Umkreis sind betroffen, wenn dein Volk krank ist.“
+Aufgaben:
+[6] Das Bienensterben
+A) ist ein noch ungelöstes Problem.
+B) kann man nur in bestimmten Regionen beobachten.
+C) lässt sich auf eine einzige Ursache zurückführen.
+Lösung: A
+[7] In vielen Städten
+A) finden Bienen wenig Futter.
+B) kann man keine Bienen mehr sehen.
+C) schafft man mehr Platz für Bienen.
+Lösung: C
+[8] Werner, Gottlieb und Kessel
+A) arbeiten in einer Parkanlage in Frankfurt.
+B) forschen über Bienen und ihren Lebensraum.
+C) organisieren eine Veranstaltung über Bienen.
+Lösung: C
+[9] Experten nehmen an, dass
+A) es in vier Jahren keine Bienen mehr gibt.
+B) man viele Lebensmittel ohne Bienen herstellen kann.
+C) menschliches Leben ohne Bienen nicht möglich ist.
+Lösung: C
+[10] In Frankfurt gibt es
+A) schon lange Bienenhalter.
+B) viele kranke Bienenvölker.
+C) zurzeit 60 000 Bienen.
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.
+AuswahlTitel: Anzeigen
+Bild: img/m12-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie mögen thailändisches Essen und möchten lernen, einige Speisen selbst zu kochen.
+Lösung: F
+[12] Sie müssen umziehen und brauchen jemand, der Ihnen hilft.
+Lösung: K
+[13] Ihr Kind hat in Mathematik schlechte Noten bekommen und braucht Nachhilfe.
+Lösung: B
+[14] Ihre Freundin hat Geburtstag. Sie möchten ihr einen Blumenstrauß schicken lassen.
+Lösung: I
+[15] Am Samstag wollen sie mit Ihrer Tante eine Blumenausstellung besuchen.
+Lösung: E
+[16] Ihr Kollege heiratet. Sie möchten ihm etwas für die Küche schenken.
+Lösung: L
+[17] Sie wollen für eine Hochzeit einen Luxuswagen mieten.
+Lösung: X
+[18] Am nächsten Montag möchten Sie mit Ihren Freunden thailändisch essen gehen.
+Lösung: X
+[19] Für Ihre Geburtstagfeier suchen Sie jemanden, der bei Ihnen zu Hause kocht.
+Lösung: D
+[20] Sie wollen sich über Wohnwagen informieren.
+Lösung: J
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Hallo Kathrin,
+wir sind heute wieder mit unseren Enkeln unterwegs. Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht. Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier. Nun (23) wir einfach nur Porto genießen. Die Wettervorhersage hört sich gut an.
+Die Flüge von Hannover (24) Frankfurt waren verspätet, aber wir sind gut angekommen. Die Verspätung wurde durch Nebel und technische Probleme verursacht. (25) wir in Porto landeten, schien zum Glück wieder die Sonne.
+Wir sind sehr zufrieden mit (26) Unterkunft. Es gibt zwei Zimmer mit einer gut eingerichteten Küche, sogar eine Waschmaschine (27) vorhanden.
+Morgen werden wir (28) Ruhe die Stadt erkunden. Wir haben uns ein kleines Programm (29), das wir gerne in den nächsten Tagen machen wollen. Die Reihenfolge haben wir aber (30) nicht festgelegt. Da sind wir flexibel.
+Viele Grüße
+Anne
+Aufgaben:
+[21] Für diese (21) Reise haben wir uns die Stadt Porto ausgesucht.
+A) kurze
+B) kurzen
+C) kurzes
+Lösung: A
+[22] Vor zehn Jahren waren wir auch schon mal (22) den Motorrädern hier.
+A) bei
+B) mit
+C) ohne
+Lösung: B
+[23] Nun (23) wir einfach nur Porto genießen.
+A) haben
+B) müssen
+C) wollen
+Lösung: C
+[24] Die Flüge von Hannover (24) Frankfurt waren verspätet …
+A) aus
+B) unter
+C) über
+Lösung: C
+[25] (25) wir in Porto landeten, schien zum Glück wieder die Sonne.
+A) Als
+B) Wann
+C) Wenn
+Lösung: A
+[26] Wir sind sehr zufrieden mit (26) Unterkunft.
+A) deiner
+B) meiner
+C) unserer
+Lösung: C
+[27] … sogar eine Waschmaschine (27) vorhanden.
+A) hat
+B) ist
+C) wird
+Lösung: B
+[28] Morgen werden wir (28) Ruhe die Stadt erkunden.
+A) in
+B) mit
+C) zu
+Lösung: A
+[29] Wir haben uns ein kleines Programm (29) …
+A) überlegen
+B) überlegt
+C) überlegte
+Lösung: B
+[30] Die Reihenfolge haben wir aber (30) nicht festgelegt.
+A) noch
+B) nur
+C) schon
+Lösung: A
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 15
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter aus der Liste. Jedes Wort passt nur einmal.
+AuswahlTitel: Wörterliste
+Text:
+) (
+Neuendorf, den…. Sehr geehrte Frau Bauer, ich habe Ihre Anzeige in der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31).
+ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe ich während meines Studiums viele Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, acht Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe.
+Am Anfang war es sehr schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen gelernt, die mir auch über die Kultur und das Leben in Portugal (38) haben.
+Ich glaube, dass meine Erfahrungen für viele andere Menschen, die auch im Ausland leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich gerne anrufen, meine Telefonnummer ist 07612/64788980.
+Ich würde mich freuen, bald von Ihnen zu hören. Mit freundlichen Grüßen KAROLINE POINTNER
+Auswahl:
+A = ALS
+B = ANFANGEN
+C = ARBEITEN
+D = ERZÄHLT
+E = FALLS
+F = INFORMIERT
+G = INTERESSIERT
+H = MÖCHTEN
+I = MÖGLICH
+J = NUR
+K = ÖFTER
+L = UNBEKANNT
+M = VOR
+N = WÜRDE
+O = ZWISCHEN
+Aufgaben:
+[31] … der Neuen Presse gelesen und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor …
+Erklärung: Das Wort lautet: INTERESSIERT
+Lösung: G
+[32] … und bin an dem Filmprojekt sehr (31). ich war schon (32) für einige Wochen im Ausland. Vor allem im Sommer habe …
+Erklärung: Das Wort lautet: ÖFTER
+Lösung: K
+[33] … Sprachkurse besucht. Länger als ein halbes Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein …
+Erklärung: Das Wort lautet: NUR
+Lösung: J
+[34] … Jahr habe ich (33) einmal im Ausland gelebt, und zwar (34) zwei Jahren. Mein Chef machte mir damals das Angebot, …
+Erklärung: Das Wort lautet: VOR
+Lösung: M
+[35] … Monate im Tochterunternehmen der Firma in Portugal zu (35) , was ich dann auch getan habe. Am Anfang war es sehr …
+Erklärung: Das Wort lautet: ARBEITEN
+Lösung: C
+[36] … schwer, weil ich niemanden kannte und alles sehr neu und (36) für mich war. Eigentlich wollte ich so schnell wie (37) …
+Erklärung: Das Wort lautet: UNBEKANNT
+Lösung: L
+[37] … (36) für mich war. Eigentlich wollte ich so schnell wie (37) wieder zurück. Aber dann habe ich nette Kollegen kennen …
+Erklärung: Das Wort lautet: MÖGLICH
+Lösung: I
+[38] … die mir auch über die Kultur und das Leben in Portugal (38) haben. Ich glaube, dass meine Erfahrungen für viele …
+Erklärung: Das Wort lautet: ERZÄHLT
+Lösung: D
+[39] … leben wollen, sehr interessant sein könnten, und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch …
+Erklärung: Das Wort lautet: WÜRDE
+Lösung: N
+[40] … und ich (39) gerne auch vor der Kamera darüber erzählen. (40) Sie noch weitere Fragen an mich haben, können Sie mich …
+Erklärung: Das Wort lautet: FALLS
+Lösung: E
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin verbringt ihren Urlaub oft auf dem Land.
+Lösung: falsch
+[42] Der Sprecher findet Stadturlaub in Wien interessanter als die Berge.
+Lösung: richtig
+[43] Die Sprecherin meint, dass sich ihre ganze Familie im Urlaub gut erholt.
+Lösung: richtig
+[44] Die Sprecherin findet den Urlaub in Österreich langweilig.
+Lösung: falsch
+[45] Die Sprecherin denkt, dass Österreich vor allem für ältere Menschen interessant ist.
+Lösung: falsch
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 14
+Punkte: 2.5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hörtext: telc-b1-m12-hv2.mp3
+Wiedergaben: 2
+Aufgaben:
+[46] Herr Schütz arbeitet erst seit kurzer Zeit als Taxifahrer.
+Lösung: falsch
+[47] In der Kleinstadt hatte Herr Schütz keine Geschäftsleute als Kunden
+Lösung: richtig
+[48] Herr Schütz hat sich schon einmal in einen Fahrgast verliebt.
+Lösung: falsch
+[49] Die Fahrgäste erzählen viel, weil sie den Taxifahrer nicht kennen
+Lösung: richtig
+[50] Männer sprechen oft über unpersönliche Dinge.
+Lösung: falsch
+[51] Herr Schütz bekommt von den Fahrgästen manchmal auch einen Tipp.
+Lösung: falsch
+[52] In der Freizeit steht Sport für Herrn SSchütz an erster Stelle.
+Lösung: richtig
+[53] Beim Schwimmen kann sich Herr Schütz von einem anstrengenden Tag erholen.
+Lösung: falsch
+[54] Herr Schütz hat sich entschieden, nur am Tag Taxi zu fahren
+Lösung: falsch
+[55] Nach Meinung von Herrn Schütz haben jüngere Taxifahrer weniger Angst, nachts zu an.
+Lösung: falsch
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Entscheiden Sie, ob die Aussagen richtig oder falsch sind.
+Hörtext: telc-b1-m12-hv3.mp3
+Wiedergaben: 2
+Aufgaben:
+[56] In Norddeutschland steigen die Temperaturen morgen auf 5 bis 7 Grad.
+Lösung: falsch
+[57] Hamburg hat öfter gewonnen als Stuttgart.
+Lösung: richtig
+[58] Nach zwei Monaten müssen Sie für die Zeitschrift bezahlen.
+Lösung: richtig
+[59] Auf dem Mittleren Ring in München wird die Geschwindigkeit kontrolliert.
+Lösung: falsch
+[60] Janas Geburtstagsfest findet nicht im LEO statt.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:
+Extra:
+{
+ "brief": {
+  "intro": "Ein Bekannter hat Ihnen folgenden Brief geschrieben:",
+  "greeting": "Liebe(r)........",
+  "paragraphs": [
+   "es tut mir wirklich leid, dass ich dir schon so lange nicht geschrieben habe. Bei mir ist im letzten Monat ziemlich viel los gewesen. Vor drei Wochen bin ich nämlich in eine neue Wohnung gezogen, weil die alte für mich zu klein war. Mittlerweile habe ich mich schon sehr schön eingerichtet, mit ein paar neuen Möbeln usw. Ich fühle mich wirklich wohl! Hast du nicht Lust. Im Sommer zu mir zu Besuch zu kommen? In meiner neuen Wohnung habe ich jetzt auch ein kleines Arbeitszimmer für meine ganzen Bücher und den Schreibtisch mit dem Computer. Wie ist das bei dir? Machst du eigentlich viel am Computer?",
+   "Lass doch mal wieder was von dir hören!",
+   "Liebe Grüße und bis bald"
+  ],
+  "signature": "Andreas"
+ },
+ "hints": [
+  "Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende"
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden vier Punkten:
+Mindestwörter: 100
+Punkt: Ihre Erfahrungen mit dem Computer
+Punkt: Etwas über Ihre Wohnung
+Punkt: Ob Sie Andreas besuchen möchten
+Punkt: Was es bei Ihnen Neues gibt

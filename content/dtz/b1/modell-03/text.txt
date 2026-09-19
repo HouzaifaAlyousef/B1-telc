@@ -1,0 +1,459 @@
+# MATUSCHEK
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Was soll Herr Matuschek machen?
+A) Den Stromzähler ablesen.
+B) Die Stromrechnung bezahlen.
+C) Einen neuen Termin machen.
+Lösung: C
+
+[2] Wohin soll Frau Böhmer kommen?
+A) In den Kindergarten.
+B) Zur Agentur für Arbeit.
+C) Zur Schule.
+Lösung: B
+
+[3] Wohin soll Herr Holstein mit seinem Sohn gehen?
+A) Ins Krankenhaus.
+B) Zum Arzt.
+C) Zum Gesundheitsamt.
+Lösung: B
+
+[4] Wo soll Herr Lee sein Auto abholen?
+A) Bei der Polizei.
+B) Bei einem Autohändler.
+C) In der Werkstatt.
+Lösung: C
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Was hören Sie?
+A) Das Horoskop.
+B) Den Wetterbericht.
+C) Die Sportnachrichten.
+Lösung: A
+
+[6] Die Züge ...
+A) fahren mit Verspätung.
+B) fahren wie immer.
+C) werden durch Busse ersetzt.
+Lösung: C
+
+[7] Wie macht man bei dem Gewinnspiel mit?
+A) Man muss beim Sender anrufen.
+B) Man muss sich auf der Internetseite anmelden.
+C) Man schreibt eine Postkarte.
+Lösung: A
+
+[8] Wo fährt der Falschfahrer?
+A) Auf der A 7.
+B) Auf der A 8.
+C) Auf der A 96.
+Lösung: C
+
+[9] Wie wird das Wetter in Westdeutschland?
+A) Es gibt Regen.
+B) Es gibt Schnee.
+C) Es wird sonnig.
+Lösung: C
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 8
+Wiedergaben: 1
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Das Gespräch findet in Norwegen statt.
+Lösung: falsch
+
+[11] Worum bittet Herr Jansen Frau Samsonov?
+A) Sie soll auf das Haus von Familie Jansen aufpassen.
+B) Sie soll Herrn Jansen den Schlüssel geben.
+C) Sie soll sich um die Katzen von Familie Jansen kümmern.
+Lösung: C
+
+[12] Frau Baier und Herr Steiner sind Kollegen.
+Lösung: falsch
+
+[13] Was macht Frau Baier?
+A) Sie kauft die Wohnung.
+B) Sie mietet die Wohnung.
+C) Sie will ihrem Mann von der Wohnung erzählen.
+Lösung: C
+
+[14] Frau Melnik telefoniert mit dem Lehrer ihrer Tochter.
+Lösung: richtig
+
+[15] Was kann Frau Melnik nicht so gut?
+A) Einladungen schreiben.
+B) Getränke verkaufen.
+C) Kuchen backen.
+Lösung: C
+
+[16] Frau Keller ist in einem Lebensmittelgeschäft.
+Lösung: falsch
+
+[17] Wie viel kosten die Medikamente?
+A) 20,00 €
+B) 18,50 €
+C) 1,50 €
+Lösung: B
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören die Meinungen von drei Personen zu einem Thema. Wählen Sie für die Aufgaben 18–20 die passende Aussage (a–f).
+Auswahltitel: Aussagen
+Auswahl:
+a = Es ist gut, wenn Kinder ihre Hausaufgaben in der Schule machen können.
+b = Die ganztägige Grundschule ist zu teuer.
+c = Es ist schade, dass Kinder dann keine Freizeit mehr haben.
+d = Kinder sollen nachmittags nicht allein am Computer sitzen.
+e = Kinder haben nachmittags in der Ganztagsschule interessante Beschäftigung.
+f = In der ganztägigen Grundschule machen die Kinder Lernspiele am Computer.
+Aufgaben:
+[18] Sprecher 1
+Lösung: e
+
+[19] Sprecher 2
+Lösung: a
+
+[20] Sprecher 3
+Lösung: d
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie sind im Bürgerbüro. Lesen Sie die Aufgaben 21–25 und den Wegweiser. Welches Zimmer (a, b oder c) passt am besten?
+Bild: img/dtz-b1-m03-lv1.jpg
+Aufgaben:
+[21] Sie wollen heiraten. Wohin gehen Sie?
+A) 210
+B) 211
+C) anderes Zimmer
+Lösung: A
+
+[22] Sie wollen sich beim Chef des Bürgerbüros über etwas beschweren.
+A) 111
+B) 112
+C) anderes Zimmer
+Lösung: B
+
+[23] Sie haben gestern Ihr Handy verloren und hoffen, dass es jemand abgegeben hat.
+A) 113
+B) 115
+C) anderes Zimmer
+Lösung: A
+
+[24] Sie sind umgezogen und möchten Ihre neue Adresse melden.
+A) 111
+B) 211
+C) anderes Zimmer
+Lösung: A
+
+[25] Sie möchten einen Anwohnerparkausweis beantragen.
+A) 111
+B) 112
+C) anderes Zimmer
+Lösung: C
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m03-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Sie möchten Ihren Vater zum Essen einladen. Ihr Vater liebt die asiatische Küche und kann nicht alleine laufen.
+Lösung: f
+
+[27] Für eine Hochzeitsfeier mit über hundert Gästen suchen Sie ein passendes Restaurant.
+Lösung: a
+
+[28] Sie möchten Ihren Geburtstag zu Hause feiern, aber das Essen nicht selbst kochen. Sie erwarten zwölf Gäste.
+Lösung: b
+
+[29] Sie möchten mit Ihren Kindern (2 und 6 Jahre alt) am Samstagabend essen gehen. Sie wollen im Freien sitzen, aber trotzdem bei Regen nicht nass werden.
+Lösung: e
+
+[30] Sie haben Ihren Kindern versprochen, sie am Sonntag in ein Eiscafé zu einem großen Becher Eis einzuladen.
+Lösung: x
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+Neuer Fitness- und Gesundheitsspezialist
+
+Fitness ist der Schlüssel zu mehr Wohlbefinden. Weil der KKB Krankenkasse die Gesundheit ihrer Mitglieder wichtig ist, hat sie Trainer Tom engagiert. Als echter Alleskönner für Fitness und Gesundheit hat er ein abwechslungsreiches Trainingsprogramm zusammengestellt, von dem ab sofort jedes Mitglied profitieren kann. Um einen erkennbaren Trainingseffekt zu erhalten, spielen Regelmäßigkeit des Trainings, Kraft und Beweglichkeit eine große Rolle. Die ausgewählten Übungen sind einfach zu erlernen, kosten kaum Zeit und lassen sich fast überall durchführen. So werden selbst untrainierte „Bewegungsmuffel“ nach wenigen Trainingseinheiten feststellen, dass sich kleine Sportübungen lohnen. Und das Schöne ist: Man muss weder einen Fitness-Club noch eine Sporthalle aufsuchen. Alle Übungen sind auf der Internet-Seite der KKB Krankenkasse ausführlich mit Bildern beschrieben und können durch Eingabe der Mitgliedsnummer aufgerufen werden.
+Aufgaben:
+[31] Die KKB Krankenkasse bezahlt ihren Mitgliedern einen Kurs im Fitness-Club.
+Lösung: falsch
+
+[32] Um am Trainingsprogramm von Trainer Tom teilzunehmen,
+A) braucht man viel Zeit.
+B) muss man ins Internet gehen.
+C) muss man sehr sportlich sein.
+Lösung: B
+
+Text:
+Liebe Eltern,
+
+damit alle Kinder sicher zur Schule kommen, bitten wir Sie um Ihre Mitarbeit. Wenn Ihr Kind zu Fuß zur Schule geht, wählen Sie nicht den kürzesten Weg, sondern den sichersten. Gehen Sie am Anfang den Weg mehrmals mit Ihrem Kind gemeinsam und üben Sie an kritischen Stellen das richtige Verhalten im Straßenverkehr.
+Wenn Sie Ihr Kind mit dem Auto zur Schule bringen, achten Sie bitte darauf, dass es auf einem entsprechenden Kindersitz sitzt und angeschnallt ist. Fahren Sie im Umkreis der Schule unbedingt langsam und vorsichtig, da es immer wieder vorkommt, dass Kinder plötzlich über die Straße rennen und dabei nicht auf den Verkehr achten.
+
+Ihre Schulleitung
+Aufgaben:
+[33] Kinder sollen immer den kürzesten Weg zur Schule nehmen.
+Lösung: falsch
+
+[34] Eltern sollen
+A) den ganzen Weg zur Schule langsam fahren.
+B) ihre Kinder immer begleiten.
+C) mit ihren Kindern den Schulweg üben.
+Lösung: C
+
+Text:
+Sehr geehrter Herr Demir,
+
+die Kabelanlagen für TV- und Radioempfang werden in der Stettenstraße 19 von unserer Firma neu installiert. Im Rahmen dieser Installationsarbeiten müssen wir
+
+am 30.11. zwischen 09:00 und 16:00 Uhr
+
+in Ihre Wohnung / Ihre privaten Kellerräume und auf den Dachboden.
+Sollten Sie zu dem geplanten Termin nicht zu Hause sein können, vereinbaren Sie bitte unbedingt frühzeitig einen neuen Termin mit uns unter 0233/67177632.
+Um die Einhaltung des Termins bzw. um seine rechtzeitige Verschiebung wird dringend gebeten. Sollten wir an dem genannten Termin keinen Zugang zu Ihren Räumlichkeiten erhalten, kann es sein, dass wir Ihren Anschluss aus technischen Gründen abschalten müssen.
+
+Mit freundlichen Grüßen
+Teletronica GmbH
+Aufgaben:
+[35] Die Firma Teletronica GmbH kann auch an einem anderen Termin kommen.
+Lösung: richtig
+
+[36] Herr Demir soll vor dem 30.11. die Firma Teletronica GmbH anrufen,
+A) wenn er an dem Tag nicht zu Hause ist.
+B) wenn er Informationen zu seinem TV- und Radioempfang braucht.
+C) wenn er keinen neuen Anschluss möchte.
+Lösung: A
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+Allgemeine Geschäftsbedingungen Trendmoden GmbH
+
+Vertragsabschluss
+Ihr Vertragspartner ist die Trendmoden GmbH. Nachdem uns Ihre Bestellung erreicht hat, erhalten Sie eine Eingangsbestätigung. Anschließend erfolgt der Versand der Ware.
+
+Versand
+Sie erhalten Ihre Bestellung nach Möglichkeit in einer einzelnen Sendung, es sei denn, Ihre Bestellung enthält Artikel, die getrennt verpackt befördert werden müssen oder erst zu einem späteren Zeitpunkt lieferbar sind. Wenn die Ware im Lager ist, liefern wir in der Regel in zwei bis fünf Werktagen, in jedem Fall jedoch schnellstmöglich.
+Wir versenden nur an Lieferadressen innerhalb Deutschlands, Österreichs und der Schweiz. Bitte beachten Sie, dass die Rechnungsanschrift ebenfalls in Deutschland, Österreich oder der Schweiz sein muss.
+
+Versandkosten
+Deutschland: € 4,95 für Porto und Verpackung, entfällt ab einem Bestellwert von € 125,00.
+Österreich und Schweiz: € 7,95 für Porto und Verpackung.
+
+Zahlungsart
+Deutschland: Kreditkarte (Master-/Eurocard und VISA) oder Rechnung
+Österreich und Schweiz: Kreditkarte (Master-/Eurocard und VISA)
+Wir behalten uns vor, die Zahlungsart gegebenenfalls zu ändern.
+Alle Preise beinhalten die gesetzliche Mehrwertsteuer. Die Ware bleibt bis zur vollständigen Bezahlung Eigentum der Trendmoden GmbH.
+
+Rückgabebelehrungen und Rückgaberecht
+Sie können die erhaltene Ware ohne Angabe von Gründen innerhalb von einem Monat zurücksenden. Die Frist beginnt frühestens mit Erhalt der Ware. Zur Wahrung der Frist genügt die rechtzeitige Absendung der Ware. Bei einer Rücksendung von Waren bis zu einem Bestellwert von 40,00 € (Bruttopreis) zahlen Sie die Kosten der Rücksendung selbst. Anderenfalls ist die Rücksendung für Sie kostenfrei. Bitte schicken Sie nur ausreichend frankierte Pakete zurück, da wir ansonsten Strafporto zahlen müssen und uns hierfür einen Abzug vom Rückerstattungsbetrag vorbehalten.
+
+Datenschutz und Sicherheit
+Ihre Daten werden ausschließlich im Rahmen der geltenden Datenschutzgesetze genutzt und verarbeitet.
+Aufgaben:
+[37] Die Ware wird immer innerhalb von fünf Werktagen geliefert.
+Lösung: falsch
+
+[38] Die Ware wird an Kunden in der ganzen Welt verschickt.
+Lösung: falsch
+
+[39] Bei Rücksendung der Ware muss der Kunde in bestimmten Fällen das Porto selbst bezahlen.
+Lösung: richtig
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+GUTE KLEIDER – Bahnstraße 1 – 06886 Lutherstadt Wittenberg
+
+Frau
+Barbara Schnied
+Blumenstraße 5
+06889 Reinsdorf
+
+Kundennummer: 123456
+
+Wittenberg, d. 16.04.20..
+
+ZAHLUNGSERINNERUNG
+
+Sehr geehrte Frau Schnied,
+
+bitte helfen Sie (40): Unsere Buchhaltung hat den Betrag von 59,65 € vom 10.03. noch nicht als Zahlungseingang feststellen (41).
+(42) Sie in der Hektik des Alltags vergessen, den Rechnungsbetrag zu überweisen? Wir bitten Sie in diesem Fall um Zahlung innerhalb der (43) 14 Tage. Oder haben Sie den Betrag (44) bezahlt, und wir konnten das Geld nicht richtig zuordnen? (45) bitten wir um Zusendung des Zahlungsbelegs.
+
+Wir bedanken uns für Ihre Mithilfe.
+
+Mit freundlichem Gruß
+
+Maria Kleidermann
+Aufgaben:
+[40] Lücke 40
+A) euch
+B) ihnen
+C) uns
+Lösung: C
+
+[41] Lücke 41
+A) können
+B) müssen
+C) sollen
+Lösung: A
+
+[42] Lücke 42
+A) Haben
+B) Hätten
+C) Würden
+Lösung: A
+
+[43] Lücke 43
+A) letzten
+B) nächsten
+C) vorigen
+Lösung: B
+
+[44] Lücke 44
+A) erst
+B) schon
+C) wieder
+Lösung: B
+
+[45] Lücke 45
+A) Damit
+B) Dann
+C) Sonst
+Lösung: B
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie haben ein interessantes Wohnungsangebot gelesen. Sie schreiben einen Brief an den Vermieter, Herrn Schmitz, weil Sie sich für die Wohnung interessieren.
+
+Schreiben Sie etwas über folgende Punkte. Vergessen Sie nicht die Anrede und den Gruß.
+- Grund für Ihr Schreiben
+- Angaben zu Ihrer Person
+- Termin für Besichtigung
+- möglicher Einzugstermin
+
+oder
+
+Aufgabe B:
+Sie haben vor einem halben Jahr bei der Firma Neumann eine Waschmaschine gekauft. Jetzt ist sie kaputt. Sie erreichen bei der Firma telefonisch niemanden. Deshalb schreiben Sie eine E-Mail.
+
+Schreiben Sie etwas über folgende Punkte. Vergessen Sie nicht die Anrede und den Gruß.
+- Grund für Ihr Schreiben
+- Garantie
+- Reparatur oder neue Waschmaschine
+- wie Sie erreichbar sind
