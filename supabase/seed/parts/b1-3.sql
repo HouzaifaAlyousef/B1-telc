@@ -268,7 +268,7 @@ from (values
     ('lv1', '1', 'A', null),
     ('lv1', '2', 'C', null),
     ('lv1', '3', 'G', null),
-    ('lv1', '4', 'E', null),
+    ('lv1', '4', 'F', null),
     ('lv1', '5', 'I', null),
     ('lv2', '6', 'A', null),
     ('lv2', '7', 'C', null),

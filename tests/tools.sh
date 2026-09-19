@@ -305,12 +305,15 @@ GOT=$(grep -c "^insert into tests" supabase/seed/b1.sql)
 [ "$WANT" = "$GOT" ]
 check "★ وكل نماذج data/ وصلت ($GOT من $WANT)" $?
 
-# الأجزاء المقسّمة لازم تتبع ملفاتها الكاملة
+# الأجزاء المقسّمة لازم تتبع ملفاتها الكاملة. المقارنة مع نسخة على جنب
+# مو مع git: البذرة بتتعدّل وبتتصحّح قبل ما تنحفظ، والفحص لازم يشتغل
+# نفسه سواء الشجرة نظيفة أو لأ.
+cp -a supabase/seed/parts "$TMP/parts-before"
 for F in supabase/seed/parts/*-1.sql; do
   L=$(basename "$F" -1.sql)
   ./tools/split_seed.sh "$L" >/dev/null 2>&1
 done
-git diff --quiet -- supabase/seed/parts/ 2>/dev/null
+diff -rq "$TMP/parts-before" supabase/seed/parts >/dev/null 2>&1
 check "★ والأجزاء مطابقة للملفات الكاملة" $?
 
 # ---------- حجم الصور ----------
@@ -343,6 +346,7 @@ check "shrink_images.py صحيح نحوياً" $?
 DL="$TMP/dl/modell-01_PETRA"; mkdir -p "$DL"
 : > "$DL/hv1_Arbeitsplatz.mp3"; : > "$DL/hv2_Verein.mp3"
 : > "$DL/modell-01_PETRA_hoeren_komplett.mp3"
+: > "$TMP/before-dry"
 OUT=$(node tools/link_audio.mjs "$TMP/dl" telc/b1 --dry-run 2>&1)
 echo "$OUT" | grep -q 'audio/telc-b1-m01-hv1.mp3' \
   && echo "$OUT" | grep -q 'audio/telc-b1-m01-hv2.mp3'
@@ -351,7 +355,7 @@ check "★ ربط التسجيلات: الاسم بيحمل مستواه (telc-b
 echo "$OUT" | grep -q 'للامتحان كامل'
 check "★ وملفّ الامتحان الكامل بينتخطّى مع سببه، ما بينحطّ بقسم غلط" $?
 
-git diff --quiet -- data/ content/ 2>/dev/null
+[ -z "$(find data content -newer "$TMP/before-dry" -type f -print -quit 2>/dev/null)" ]
 check "★ و--dry-run ما بيلمس ولا ملف" $?
 
 # ★ بنية التحميل الحقيقية: مجلّدات مرقّمة باسم المستوى، وأسماء ملفّات
