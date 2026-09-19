@@ -330,7 +330,7 @@ Lösung: richtig
 [53] Beim Schwimmen kann sich Herr Schütz von einem anstrengenden Tag erholen.
 Lösung: falsch
 [54] Herr Schütz hat sich entschieden, nur am Tag Taxi zu fahren.
-Lösung: falsch
+Lösung: richtig
 [55] Nach Meinung von Herrn Schütz haben jüngere Taxifahrer weniger Angst, nachts zu an.
 Lösung: falsch
 

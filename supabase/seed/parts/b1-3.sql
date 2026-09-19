@@ -638,7 +638,7 @@ from (values
     ('hv2', '51', 'f', null),
     ('hv2', '52', 'r', null),
     ('hv2', '53', 'f', null),
-    ('hv2', '54', 'f', null),
+    ('hv2', '54', 'r', null),
     ('hv2', '55', 'f', null),
     ('hv3', '56', 'r', null),
     ('hv3', '57', 'f', null),
