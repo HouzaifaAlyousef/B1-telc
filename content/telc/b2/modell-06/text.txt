@@ -217,6 +217,10 @@ Maximum: 6
 Anweisung: Lesen Sie die E-Mail und die Aufgaben 19 und 20. Entscheiden Sie, welche Lösung am besten passt.
 Text:
 **Beschwerde über Druck- und Kopiergerät Lexios**
+Hallo,
+schau dir mal die Mail von der Firma Mova an. Laut unserem Techniker lag der Fehler erneut an der falschen Bedienung des Geräts. Antworte Herrn Schmidt bitte und weise ihn höflich darauf hin, dass die Lösung des Problems nicht in unserer Verantwortung liegt. Gerne kommt noch einmal ein Techniker in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein. Die Kosten für die Überprüfung des Geräts bleiben die Angelegenheit der Mova GmbH.
+Viele Grüße
+Sibyl Aichele
 Sehr geehrte Frau Aichele,
 vorgestern wurde von einem Ihrer Mitarbeiter unser fast neues Druck- und Kopiergerät der Marke Lexios zum dritten Mal innerhalb von zwei Wochen geprüft, da bei diesem immer wieder Papierstaus aufgetreten sind. Gestern kam es schon wieder zu einer Fehlermeldung, was zur Folge hatte, dass wir Unterlagen nicht fristgerecht einreichen konnten. Aus diesem Grund haben wir eine für uns sehr wichtige Ausschreibung verpasst. Von einer Schadensersatzforderung sehen wir vorerst ab, wir fordern Sie aber auf, uns umgehend auf Ihre Kosten ein anderes Gerät zu liefern. Es handelt sich hier nämlich eindeutig um einen technischen Fehler, den wir nicht zu verantworten haben. Die Rechnungen für die drei vorangegangenen Technikereinsätze werden wir natürlich nicht bezahlen. Ich erwarte Ihre umgehende Rückmeldung.
 Mit freundlichen Grüßen
@@ -462,32 +466,32 @@ Gerne montieren wir die Möbel auch vor Ort. Die Kosten für den Aufbau (54) nac
 Mit freundlichen Grüßen
 Lars Walter
 Aufgaben:
-[52] Lücke 52
+[52] … für Ihre Anfrage vom 08.12.20xx und unterbreiten Ihnen (52) acht Schreibtischcontainer MV 17 WW weiß zum Preis von je …
 A) folgendes Angebot
 B) folgendes Ergebnis
 C) folgende Informationen
 Lösung: A
-[53] Lücke 53
+[53] … liefern wir frei Haus, ansonsten fällt eine Lieferpauschale (53) von 39,00 Euro an. Gerne montieren wir die Möbel auch …
 A) in Absprache
 B) in Bezug
 C) in Höhe
 Lösung: C
-[54] Lücke 54
+[54] … auch vor Ort. Die Kosten für den Aufbau (54) nach dem Warenwert und betragen 20% des Nettopreises. Natürlich besteht …
 A) belaufen sich
 B) ergeben sich
 C) richten sich
 Lösung: C
-[55] Lücke 55
+[55] … und betragen 20% des Nettopreises. Natürlich besteht auch (55) die Ware in unserem Lager abzuholen und selbst aufzubauen. (56) …
 A) die Absicht
 B) die Option
 C) die Verpflichtung
 Lösung: B
-[56] Lücke 56
+[56] … Ware in unserem Lager abzuholen und selbst aufzubauen. (56) ist 14 Tage bindend. Wir würden uns sehr freuen, (57) …
 A) Diese Anfrage
 B) Dieses Angebot
 C) Diese Bestellung
 Lösung: B
-[57] Lücke 57
+[57] … 14 Tage bindend. Wir würden uns sehr freuen, (57) zu erhalten. Sollten Sie noch Fragen haben, stehen wir Ihnen …
 A) Ihren Auftrag
 B) Ihre Wünsche
 C) Ihr Verständnis

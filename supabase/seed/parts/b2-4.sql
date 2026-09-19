@@ -87,12 +87,12 @@ from (values
     ('sb1', '49', '… (49) bitte ich Sie um ein Zwischenzeugnis …', null::jsonb, 0.5, null::jsonb, 3),
     ('sb1', '50', '… am letzten Arbeitstag ausgehändigt oder (50) Nachhinein zugeschickt wird? …', null::jsonb, 0.5, null::jsonb, 4),
     ('sb1', '51', '… Ich bedanke (51) für die interessante Zeit …', null::jsonb, 0.5, null::jsonb, 5),
-    ('sb2', '52', 'Lücke 52', '[{"key": "A", "text": "Dafür mussten"}, {"key": "B", "text": "Daher konnten"}, {"key": "C", "text": "Dazu sollten"}]'::jsonb, 0.5, null::jsonb, 0),
-    ('sb2', '53', 'Lücke 53', '[{"key": "A", "text": "unserem Angebot"}, {"key": "B", "text": "unseren Vorschriften"}, {"key": "C", "text": "unserer Bestellung"}]'::jsonb, 0.5, null::jsonb, 1),
-    ('sb2', '54', 'Lücke 54', '[{"key": "A", "text": "gleich zurückzuschicken"}, {"key": "B", "text": "schnellstmöglich auszutauschen"}, {"key": "C", "text": "sofort zu reparieren"}]'::jsonb, 0.5, null::jsonb, 2),
-    ('sb2', '55', 'Lücke 55', '[{"key": "A", "text": "Aufpreis anbieten"}, {"key": "B", "text": "Preisnachlass gewähren"}, {"key": "C", "text": "Rabatt fordern"}]'::jsonb, 0.5, null::jsonb, 3),
-    ('sb2', '56', 'Lücke 56', '[{"key": "A", "text": "ein Angebot unterbreiten"}, {"key": "B", "text": "ein Gutachten erstellen"}, {"key": "C", "text": "eine Empfehlung geben"}]'::jsonb, 0.5, null::jsonb, 4),
-    ('sb2', '57', 'Lücke 57', '[{"key": "A", "text": "baldige Bezahlung"}, {"key": "B", "text": "gleichzeitige Stornierung"}, {"key": "C", "text": "umgehende Antwort"}]'::jsonb, 0.5, null::jsonb, 5)
+    ('sb2', '52', '… wir zehn Sitzeckbänke in der Farbe Weiß bestellt. (52) Sie zehn Tische und für jede Sitzeinheit drei Stühle in …', '[{"key": "A", "text": "Dafür mussten"}, {"key": "B", "text": "Daher konnten"}, {"key": "C", "text": "Dazu sollten"}]'::jsonb, 0.5, null::jsonb, 0),
+    ('sb2', '53', '… gleichen Farbe liefern. Leider entspricht die Lieferung nicht (53) . Zwei von den zehn Sitzeckbänken wurden in Braun geliefert. …', '[{"key": "A", "text": "unserem Angebot"}, {"key": "B", "text": "unseren Vorschriften"}, {"key": "C", "text": "unserer Bestellung"}]'::jsonb, 0.5, null::jsonb, 1),
+    ('sb2', '54', '… falsche Farbe. Wir bitten Sie, die reklamierten Möbelstücke (54) . Außerdem weisen zwei Tische Kratzer an der Oberfläche auf. …', '[{"key": "A", "text": "gleich zurückzuschicken"}, {"key": "B", "text": "schnellstmöglich auszutauschen"}, {"key": "C", "text": "sofort zu reparieren"}]'::jsonb, 0.5, null::jsonb, 2),
+    ('sb2', '55', '… Tische trotzdem behalten, wenn Sie dafür einen entsprechenden (55) . Könnten Sie uns hierfür (56)? Wir bitten um (57). …', '[{"key": "A", "text": "Aufpreis anbieten"}, {"key": "B", "text": "Preisnachlass gewähren"}, {"key": "C", "text": "Rabatt fordern"}]'::jsonb, 0.5, null::jsonb, 3),
+    ('sb2', '56', '… dafür einen entsprechenden (55). Könnten Sie uns hierfür (56) ? Wir bitten um (57). Für Rückfragen stehen wir Ihnen …', '[{"key": "A", "text": "ein Angebot unterbreiten"}, {"key": "B", "text": "ein Gutachten erstellen"}, {"key": "C", "text": "eine Empfehlung geben"}]'::jsonb, 0.5, null::jsonb, 4),
+    ('sb2', '57', '… Könnten Sie uns hierfür (56)? Wir bitten um (57) . Für Rückfragen stehen wir Ihnen jederzeit zur Verfügung. Mit …', '[{"key": "A", "text": "baldige Bezahlung"}, {"key": "B", "text": "gleichzeitige Stornierung"}, {"key": "C", "text": "umgehende Antwort"}]'::jsonb, 0.5, null::jsonb, 5)
 ) as v(section_id, item_id, text, options, points, meta, sort)
 join tests t on t.level_id = 'telc-b2' and t.slug = 'modell-07'
 join sections s on s.test_id = t.id and s.section_id = v.section_id
@@ -235,12 +235,12 @@ from (values
     ('sb1', '49', '… Mir stehen noch vier Tage Resturlaub (49). …', null::jsonb, 0.5, null::jsonb, 3),
     ('sb1', '50', '… da (50) 31.12.20xx auf einen Samstag fällt. …', null::jsonb, 0.5, null::jsonb, 4),
     ('sb1', '51', '… und den Bescheid, (51) wir mit den restlichen Urlaubstagen verfahren sollen. …', null::jsonb, 0.5, null::jsonb, 5),
-    ('sb2', '52', 'Lücke 52', '[{"key": "A", "text": "bisher noch nicht"}, {"key": "B", "text": "gestern pünktlich"}, {"key": "C", "text": "ohne Verzögerung"}]'::jsonb, 0.5, null::jsonb, 0),
-    ('sb2', '53', 'Lücke 53', '[{"key": "A", "text": "eine Freude machen"}, {"key": "B", "text": "einen Auftrag erteilen"}, {"key": "C", "text": "absagen müssen"}]'::jsonb, 0.5, null::jsonb, 1),
-    ('sb2', '54', 'Lücke 54', '[{"key": "A", "text": "damit"}, {"key": "B", "text": "obwohl"}, {"key": "C", "text": "trotzdem"}]'::jsonb, 0.5, null::jsonb, 2),
-    ('sb2', '55', 'Lücke 55', '[{"key": "A", "text": "hat"}, {"key": "B", "text": "war"}, {"key": "C", "text": "wird"}]'::jsonb, 0.5, null::jsonb, 3),
-    ('sb2', '56', 'Lücke 56', '[{"key": "A", "text": "den"}, {"key": "B", "text": "dem"}, {"key": "C", "text": "des"}]'::jsonb, 0.5, null::jsonb, 4),
-    ('sb2', '57', 'Lücke 57', '[{"key": "A", "text": "im Nachhinein"}, {"key": "B", "text": "irgendwann"}, {"key": "C", "text": "umgehend"}]'::jsonb, 0.5, null::jsonb, 5),
+    ('sb2', '52', '… von zwei Wochen zugesagt, jedoch ist die Ware (52) bei uns eingetroffen. Unser Kunde wartet bereits dringend auf diese …', '[{"key": "A", "text": "bisher noch nicht"}, {"key": "B", "text": "gestern pünktlich"}, {"key": "C", "text": "ohne Verzögerung"}]'::jsonb, 0.5, null::jsonb, 0),
+    ('sb2', '53', '… auf diese Lieferung und wir möchten ihm keinesfalls (53) . Bitte teilen Sie uns dringend mit, wann geliefert wird, …', '[{"key": "A", "text": "eine Freude machen"}, {"key": "B", "text": "einen Auftrag erteilen"}, {"key": "C", "text": "absagen müssen"}]'::jsonb, 0.5, null::jsonb, 1),
+    ('sb2', '54', '… teilen Sie uns dringend mit, wann geliefert wird, (54) wir diese Auskunft an unseren Kunden weitergeben können. Außerdem müssen …', '[{"key": "A", "text": "damit"}, {"key": "B", "text": "obwohl"}, {"key": "C", "text": "trotzdem"}]'::jsonb, 0.5, null::jsonb, 2),
+    ('sb2', '55', '… Rabatt in Höhe von 2% einräumen. Dieser Betrag (55) Ihnen zur Last gelegt. Da der Kunde verständlicherweise verärgert ist, …', '[{"key": "A", "text": "hat"}, {"key": "B", "text": "war"}, {"key": "C", "text": "wird"}]'::jsonb, 0.5, null::jsonb, 3),
+    ('sb2', '56', '… verärgert ist, wird er bei Erhalt der Ware (56) Rechnungsbetrag nicht vollständig begleichen. Wir fordern Sie daher auf, uns …', '[{"key": "A", "text": "den"}, {"key": "B", "text": "dem"}, {"key": "C", "text": "des"}]'::jsonb, 0.5, null::jsonb, 4),
+    ('sb2', '57', '… vollständig begleichen. Wir fordern Sie daher auf, uns (57) über den Lieferstatus zu informieren. Mit freundlichen Grüßen', '[{"key": "A", "text": "im Nachhinein"}, {"key": "B", "text": "irgendwann"}, {"key": "C", "text": "umgehend"}]'::jsonb, 0.5, null::jsonb, 5),
     ('fb', '58', 'Schreiben Sie Ihre Meinung zu Thema A oder Thema B in das Firmenforum.', null::jsonb, 0, '{"points": ["Einleitung — worum geht es?", "Ihre eigene Meinung mit Begründung", "Zwei Argumente aus Ihrer Sicht", "Ein Vorschlag und ein Schlusssatz"]}'::jsonb, 0)
 ) as v(section_id, item_id, text, options, points, meta, sort)
 join tests t on t.level_id = 'telc-b2' and t.slug = 'modell-08'

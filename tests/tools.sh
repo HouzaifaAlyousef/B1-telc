@@ -140,8 +140,9 @@ check "الصوت بينرفع بلا بادئة" $?
 # ---------- vorlagen.js مطابق لملفات القوالب ----------
 # القوالب مصدرها الـ.txt، واللوحة بتقرا النسخة المولّدة. لو انحرفوا،
 # الزرّ بيلزق شي غير يلي انفحص بالاختبارات.
+cp admin/vorlagen.js "$TMP/vorlagen-before.js"
 ./tools/build_vorlagen.sh >/dev/null 2>&1
-git diff --quiet -- admin/vorlagen.js 2>/dev/null
+cmp -s "$TMP/vorlagen-before.js" admin/vorlagen.js
 check "★ vorlagen.js محدّث من docs/vorlage/*.txt" $?
 
 # اللوحة لازم تحمّل الملف، وإلا VORLAGE_* مو معرّفة والزرّ بيرمي خطأ
@@ -195,8 +196,9 @@ for D in content/*/*/; do
   fi
   SEEDED=$((SEEDED + 1))
 
+  cp "$SEED" "$TMP/seed-before.sql"
   node tools/content_to_seed.mjs "$P/$L" "$SEED" >/dev/null 2>&1
-  git diff --quiet -- "$SEED" 2>/dev/null
+  cmp -s "$TMP/seed-before.sql" "$SEED"
   check "★ $SEED مطابق لـcontent/$P/$L" $?
 
   # كل نموذج معبّى لازم يوصل للبذور — مو بس يمرق الفحص
@@ -337,6 +339,23 @@ check "★ ولا PNG بصور الامتحانات ($PNGS) — tools/shrink_ima
 
 python3 -c "import ast,sys; ast.parse(open('tools/shrink_images.py').read())"
 check "shrink_images.py صحيح نحوياً" $?
+
+# ---------- ★ نصّ السؤال لازم يكون سؤال ----------
+# ★ تلات نماذج بـtelc/b2 كان نصّ أسئلتها «Lücke 52» حرفياً بدل المقتطف
+#   يلي حوالين الفراغ. الطالب بيشوف رقم وبس، وما بيعرف شو المطلوب.
+#   الفحص بيمسك أي نايب مكان رجع.
+! grep -rqE --exclude='_vorlage.txt' \
+    '^\[[0-9]+\] (Lücke|Lucke|TODO|Platzhalter) *[0-9]*$' \
+    content/telc content/goethe content/oesd 2>/dev/null
+check "★ ما في سؤال نصّه نايب مكان (Lücke 52) بدل المقتطف" $?
+
+# ★ وفحص مفتاح B2 لازم يضل يقرا: المصدر مشال من الشجرة، فالأداة
+#   بتوقف بوضوح بدل ما تنهار.
+python3 -c "import ast,sys; ast.parse(open('tools/check_b2_keys.py').read())"
+check "check_b2_keys.py صحيح نحوياً" $?
+
+OUT=$(python3 tools/check_b2_keys.py --pdf /nope.pdf 2>&1); [ $? -ne 0 ]
+check "★ وبلا مصدر بيوقف، ما بينهار" $?
 
 # ---------- ربط التسجيلات ----------
 # ★ الأداة بتنسخ وبتكتب `Hörtext:` بضربة. الفحص بيجرّبها على بنية

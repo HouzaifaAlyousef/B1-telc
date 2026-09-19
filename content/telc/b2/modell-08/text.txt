@@ -460,32 +460,32 @@ Außerdem müssen wir unserem Kunden wegen der Verzögerung einen Rabatt in Höh
 Wir fordern Sie daher auf, uns (57) über den Lieferstatus zu informieren.
 Mit freundlichen Grüßen
 Aufgaben:
-[52] Lücke 52
+[52] … von zwei Wochen zugesagt, jedoch ist die Ware (52) bei uns eingetroffen. Unser Kunde wartet bereits dringend auf diese …
 A) bisher noch nicht
 B) gestern pünktlich
 C) ohne Verzögerung
 Lösung: A
-[53] Lücke 53
+[53] … auf diese Lieferung und wir möchten ihm keinesfalls (53) . Bitte teilen Sie uns dringend mit, wann geliefert wird, …
 A) eine Freude machen
 B) einen Auftrag erteilen
 C) absagen müssen
 Lösung: C
-[54] Lücke 54
+[54] … teilen Sie uns dringend mit, wann geliefert wird, (54) wir diese Auskunft an unseren Kunden weitergeben können. Außerdem müssen …
 A) damit
 B) obwohl
 C) trotzdem
 Lösung: A
-[55] Lücke 55
+[55] … Rabatt in Höhe von 2% einräumen. Dieser Betrag (55) Ihnen zur Last gelegt. Da der Kunde verständlicherweise verärgert ist, …
 A) hat
 B) war
 C) wird
 Lösung: C
-[56] Lücke 56
+[56] … verärgert ist, wird er bei Erhalt der Ware (56) Rechnungsbetrag nicht vollständig begleichen. Wir fordern Sie daher auf, uns …
 A) den
 B) dem
 C) des
 Lösung: A
-[57] Lücke 57
+[57] … vollständig begleichen. Wir fordern Sie daher auf, uns (57) über den Lieferstatus zu informieren. Mit freundlichen Grüßen
 A) im Nachhinein
 B) irgendwann
 C) umgehend

@@ -197,9 +197,14 @@ Gruppe: Lesen und Schreiben
 Minuten: 5
 Punkte: 3
 Maximum: 6
-Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
 Text:
 **Entwurf für die neue Firmenwebseite**
+Hallo Frau Holsten,
+ich habe heute Mittag die untenstehende Mail bekommen. Die vertauschten Namen sind unser Fehler und die verbessern wir auch. Bitte bestätigen Sie dem Kunden das. Aber mehr ist nun wirklich nicht drin. Das ist schon das fünfte Mal, dass er Korrekturwünsche hat, obwohl wir uns immer an die Vorgaben gehalten haben. So viele Korrekturen waren nicht vereinbart!
+Wenn wir das noch machen sollten, geht das nur gegen zusätzliche Bezahlung. Ich rechne mit 200 € extra. Bitte teilen Sie ihm dies mit und lassen Sie sich von ihm sein Okay geben.
+Danke und viele Grüße
+Jutta Spindler
 Sehr geehrte Frau Spindler,
 vielen Dank für Ihren Entwurf für unsere neue Firmenwebseite. Ich habe ihn gemeinsam mit dem Team gesichtet und dabei ist uns aufgefallen, dass Ihre Agentur die Vorgaben an zwei Stellen leider nicht umgesetzt hat:
 Zum einen hatten wir besprochen, dass das Farbschema grau-orange sein sollte. Da statt Grau Blau gewählt wurde, glaube ich, dass es zu einem Missverständnis gekommen ist. Zum anderen sind auf der Seite mit den Ansprechpartnern die Namen einiger Mitarbeiter vertauscht worden. Im Anhang schicke ich Ihnen noch einmal eine Auflistung der Namen mit den dazugehörigen Bildern.
@@ -212,10 +217,10 @@ A) ist mit dem Entwurf der Agentur nicht einverstanden.
 B) möchte, dass Frau Spindler sich einen Entwurf ansieht.
 C) möchte wissen, wer den Entwurf überarbeiten kann.
 Lösung: A
-[20] Die Agenturchefin erklärt intern, dass sie
-A) weitere Änderungen nur gegen Aufpreis macht.
-B) überhaupt keine Fehler gemacht hat.
-C) vorab keine Vorgaben von Herrn Stiller hatte.
+[20] Die Agentur sagt, dass sie
+A) Änderungen nur gegen Aufpreis macht.
+B) keine Fehler gemacht hat.
+C) keine Vorgaben von Herrn Stiller hatte.
 Lösung: A
 
 ### Teil: lvs2

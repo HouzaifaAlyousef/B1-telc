@@ -78,7 +78,8 @@ Text:
 **Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter**
 **Zugangskontrolle und Zeiterfassung**
 Als Mitarbeiterinnen und Mitarbeiter erhalten Sie zu Beginn Ihres Arbeitsverhältnisses einen Firmenausweis mit Chip-Karte. Dieser berechtigt zum Zugang in das Unternehmensgebäude und dient gleichzeitig zur Erfassung der Arbeitszeit. Außerdem können Sie mit Ihrem Firmenausweis in der Kantine und am Getränkeautomaten bezahlen und das hauseigene Fitnessstudio benutzen.
-Neben den Aufzügen im Erdgeschoss finden Sie ein digitales Zeiterfassungsgerät. Bitte halten Sie beim Betreten und Verlassen des Gebäudes Ihren Firmenausweis an die blau markierte Fläche. Das Gerät registriert Ihre Anwesenheit automatisch. Sollten Sie Ihren Ausweis einmal vergessen haben, wenden Sie sich bitte unverzüglich an den Empfang.
+Neben den Aufzügen im Erdgeschoss finden Sie ein digitales Zeiterfassungsgerät. Bitte halten Sie beim Betreten und Verlassen des Gebäudes Ihren Firmenausweis an die blau markierte Fläche und vergewissern Sie sich, dass die Zeit des Arbeitsbeginns und Arbeitsendes richtig erfasst wurde. Dies erkennen Sie anhand der Anzeige des Geräts, die Ihnen Ihre monatliche Arbeitszeit anzeigt.
+Die Zeiterfassung berechnet automatisch die reguläre Arbeitszeit sowie eventuelle Über- als auch Minusstunden. Die Personalabteilung richtet Ihnen einen Zugang zu unserem Arbeitskonten-System PersoTime ein. Damit können Sie im Intranet Ihr Arbeitszeitkonto jederzeit einsehen.
 Aufgaben:
 [6] Der Firmenausweis dient ausschließlich zur Erfassung der Arbeitszeit.
 A) richtig
@@ -93,11 +94,11 @@ A) das Fitnessstudio kostenlos nutzen.
 B) in der Kantine bargeldlos bezahlen.
 C) Rabatte im Supermarkt erhalten.
 Lösung: B
-[9] Bei Verlust oder Vergessen des Ausweises
-A) muss man sofort nach Hause fahren.
-B) wendet man sich an den Empfang.
-C) wird das Gehalt gekürzt.
-Lösung: B
+[9] Überstunden
+A) können online eingesehen werden.
+B) sind in der Firma grundsätzlich nicht erlaubt.
+C) werden von der Zeiterfassung nicht registriert.
+Lösung: A
 
 ### Teil: lv3
 Format: matching
