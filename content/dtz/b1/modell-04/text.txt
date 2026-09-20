@@ -1,0 +1,446 @@
+# DEMBROWA
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Was soll Frau Dembrowa machen?
+A) Frau Oberhauser heute anrufen.
+B) Morgen bei der Volksbank anrufen.
+C) Morgen zur Volksbank gehen.
+Lösung: A
+
+[2] Was soll Herr Gruber machen?
+A) Eine Nachricht schreiben.
+B) Herrn Leitner anrufen.
+C) Zum Arbeitsmarktservice gehen.
+Lösung: C
+
+[3] Wie lange kann man heute einkaufen?
+A) Bis 4 Uhr am Nachmittag.
+B) Bis 6 Uhr am Abend.
+C) Bis 7 Uhr abends.
+Lösung: A
+
+[4] Was soll Frau Li machen?
+A) Einen Termin machen.
+B) Herrn Schrader schnell anrufen.
+C) Zum Wohnungsamt gehen.
+Lösung: C
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Im Westen wird es morgen ...
+A) kälter als heute.
+B) wärmer als heute.
+C) windig.
+Lösung: B
+
+[6] Die Musiksendung kommt auf ...
+A) Antenne 3.
+B) Ö6.
+C) Radio FM.
+Lösung: A
+
+[7] Was hören Sie?
+A) Nachrichten
+B) Verkehrshinweise
+C) Wetterbericht
+Lösung: A
+
+[8] Wo sind Tiere auf der Autobahn?
+A) A 1
+B) A 2
+C) A 22
+Lösung: A
+
+[9] Wo können Sie „Vitafix“ kaufen?
+A) In Apotheken und Drogerien.
+B) In Supermärkten.
+C) Nur in Apotheken.
+Lösung: A
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 8
+Wiedergaben: 1
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Die Personen sind Nachbarn.
+Lösung: richtig
+
+[11] Herr Brunner ...
+A) findet Urlaub auf dem Bauernhof langweilig.
+B) möchte auch Urlaub auf dem Bauernhof machen.
+C) will seiner Schwester die Adresse vom Bauernhof geben.
+Lösung: C
+
+[12] Herr Huber sucht Arbeit.
+Lösung: richtig
+
+[13] Der Computerkurs
+A) dauert eine Woche.
+B) ist für Herrn Huber nicht interessant.
+C) wird vom Arbeitsmarktservice bezahlt.
+Lösung: C
+
+[14] Die Frau und der Mann sind Arbeitskollegen.
+Lösung: falsch
+
+[15] Claudia
+A) ist in Chemie nicht so gut.
+B) soll an einem Wettbewerb teilnehmen.
+C) soll nach Salzburg fahren.
+Lösung: B
+
+[16] Die Gastherme von Frau Schuster ist kaputt.
+Lösung: falsch
+
+[17] Herr Fuchs ...
+A) gibt Frau Schuster seinen Wohnungsschlüssel.
+B) ist am Dienstag nicht zuhause.
+C) nimmt Dienstag Urlaub.
+Lösung: C
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören die Meinungen von drei Personen zu einem Thema. Wählen Sie für die Aufgaben 18–20 die passende Aussage (a–f).
+Auswahltitel: Aussagen
+Auswahl:
+a = Am besten sollte man jeden Tag Sport machen.
+b = Sport ist nicht gut für ältere Leute.
+c = Nicht alle haben Zeit für Sport.
+d = Sport ist gut gegen Erkältung.
+e = Sport macht nur zusammen mit anderen Spaß.
+f = Zu viel Sport kann auch schaden.
+Aufgaben:
+[18] Sprecher 1
+Lösung: f
+
+[19] Sprecher 2
+Lösung: e
+
+[20] Sprecher 3
+Lösung: c
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie sind beim Bürgerservice Ihrer Stadtverwaltung. Lesen Sie die Aufgaben 21–25 und den Wegweiser. In welches Zimmer (a, b oder c) gehen Sie?
+Bild: img/dtz-b1-m04-lv1.jpg
+Aufgaben:
+[21] Sie möchten umziehen und brauchen Unterstützung.
+A) EG
+B) 1. OG
+C) anderes Stockwerk
+Lösung: B
+
+[22] Sie suchen einen Babysitter.
+A) 1. OG
+B) 3. OG
+C) anderes Stockwerk
+Lösung: C
+
+[23] Sie möchten sich über Freizeitangebote informieren.
+A) 2. OG
+B) 3. OG
+C) anderes Stockwerk
+Lösung: C
+
+[24] Sie möchten sich über Urlaub für Ihren Sohn (14 Jahre) informieren.
+A) EG
+B) 4. OG
+C) anderes Stockwerk
+Lösung: B
+
+[25] Sie möchten ein Passbild machen.
+A) 1. OG
+B) 2. OG
+C) anderes Stockwerk
+Lösung: B
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m04-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Sie möchten mit anderen Eltern über kleine Kinder reden.
+Lösung: h
+
+[27] Sie suchen eine Teilzeitstelle. Sie haben eine Ausbildung als Verkäuferin.
+Lösung: a
+
+[28] Sie möchten mit Ihrer Familie Urlaub auf dem Bauernhof machen.
+Lösung: x
+
+[29] Sie suchen ein Geschenk für Ihre 3-jährige Nichte.
+Lösung: e
+
+[30] Sie möchten altes Spielzeug von Ihren Kindern abgeben.
+Lösung: c
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+Bauarbeiten verärgern Bürger
+
+Seit Monaten beschäftigt der Neubau des Hauptbahnhofs die Bürger im 10. Gemeindebezirk von Wien. Wer in der Nähe der Baustelle wohnt, hat seit langer Zeit Probleme mit dem Schlaf. „Zu Beginn wurde sogar am Abend bis 21 Uhr gearbeitet“, berichtet Heinz Berger, der nur wenige Häuser von der Baustelle entfernt wohnt. „Ich habe dann mit den Nachbarn gemeinsam Unterschriften gesammelt und sie dem Bezirksvorsteher gebracht – erst dann wurde früher Feierabend gemacht.“ Ein kleiner Erfolg – aber eben nur ein kleiner. Andere Nachbarn erzählen, dass die Bauarbeiter bereits um 5 Uhr früh mit den Arbeiten beginnen und manchmal auch am Samstag arbeiten. Die Anrainer rund um den zukünftigen Wiener Hauptbahnhof haben nur einen Wunsch: endlich wieder in Ruhe schlafen können.
+Aufgaben:
+[31] Herr Berger möchte Ruhe in der Nacht.
+Lösung: richtig
+
+[32] Die Arbeiter ...
+A) arbeiten auch jetzt noch bis 21 Uhr.
+B) arbeiten am Morgen nie vor 6 Uhr.
+C) arbeiten manchmal auch am Wochenende.
+Lösung: C
+
+Text:
+Liebe Eltern,
+
+bald beginnen die Sommerferien und wie Sie sicher wissen, wird dann auch wieder unser großes Sommerfest stattfinden. Aber nicht nur das: Auch unsere Frau Direktor, Frau Baumgartner, geht mit Ende dieses Schuljahres in Pension. Deshalb möchten wir Frau Baumgartner ein besonderes Geschenk machen: Ein Bild von allen Schülern und Eltern. Wir werden das Bild am nächsten Samstag vor dem Schulgebäude machen. Bitte geben Sie uns Bescheid, ob Sie am Samstag um 15 Uhr kommen können.
+Außerdem brauchen wir noch Helfer für das Sommerfest am selben Tag: Wenn Sie einen Salat oder Kuchen mitbringen möchten, melden Sie sich doch bitte bei Frau Wagner, unserer Sekretärin. Sie organisiert Essen und Getränke für das Fest.
+
+Mit freundlichen Grüßen und vielem Dank für Ihre Mitarbeit,
+F. Gruber, Assistentin
+Aufgaben:
+[33] Frau Baumgartner hört bald auf zu arbeiten.
+Lösung: richtig
+
+[34] Die Eltern sollen ...
+A) Frau Baumgartner ein Geschenk mitbringen.
+B) kommenden Samstag Getränke mitbringen.
+C) sagen, ob Sie kommenden Samstag Zeit haben.
+Lösung: C
+
+Text:
+Sehr geehrter Herr Sanchez,
+
+mit Bedauern haben wir die Kündigung Ihrer Haftpflichtversicherung erhalten. Selbstverständlich werden wir den Termin wie gewünscht berücksichtigen.
+
+Uns interessiert aber sehr der Grund für Ihre Kündigung: Waren Sie mit dem Service nicht zufrieden? Haben Sie eine günstigere Versicherung gefunden?
+Wir würden uns freuen, wenn Sie weiterhin unser Kunde bleiben. Deshalb haben wir ein besonderes Angebot für Sie:
+Bleiben Sie bei unserer Versicherung und Sie zahlen für die nächsten 6 Monate keinen Beitrag! Ihr Versicherungsschutz bleibt natürlich bestehen – Sie sind also auch in dieser Zeit rundum versichert.
+Haben Sie Interesse? Dann rufen Sie uns an – alles andere machen wir für Sie!
+
+Mit freundlichen Grüßen
+Hans Schubert, ÖVG
+Aufgaben:
+[35] Herr Sanchez hat seine Versicherung gekündigt.
+Lösung: richtig
+
+[36] Die Versicherung bietet Herrn Sanchez an, dass er ...
+A) ein halbes Jahr gratis versichert bleibt.
+B) eine neue Versicherung bekommt.
+C) einen besseren Service bekommt.
+Lösung: A
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+Alginal extra – Packungsbeilage
+
+1. Was ist Alginal extra und wofür wird es angewendet?
+Alginal extra ist ein entzündungshemmendes und schmerzstillendes Arzneimittel.
+Alginal extra wird angewendet bei:
+- leichten bis mäßig starken Schmerzen (z. B. Kopfschmerzen, Zahnschmerzen)
+- Fieber
+
+2. Was müssen Sie vor der Einnahme von Alginal extra beachten?
+Alginal extra darf nicht eingenommen werden,
+- wenn Sie überempfindlich (allergisch) gegenüber Ibuprofen sind,
+- wenn Sie in der Vergangenheit mit Asthmaanfällen oder Hautreaktionen nach der Einnahme von Acetylsalicylsäure oder anderen Entzündungshemmern reagiert haben,
+- wenn Sie schwanger sind,
+- von Kindern unter 6 Jahren.
+
+3. Wie ist Alginal extra einzunehmen?
+Nehmen Sie Alginal extra immer genau nach der Anweisung in dieser Packungsbeilage ein. Nehmen Sie Alginal extra ohne ärztlichen Rat nicht länger als 4 Tage ein. Falls vom Arzt nicht anders verordnet, ist die übliche Einzeldosis für Kinder zwischen 6 und 14 Jahren ½ Filmtablette, für Jugendliche ab 15 Jahren und Erwachsene ½ bis 1 Filmtablette. An einem Tag dürfen Kinder bis 14 Jahren nicht mehr als ½ Filmtablette einnehmen, Jugendliche und Erwachsene nicht mehr als 2 Filmtabletten. Bei älteren Menschen ist keine spezielle Dosisanpassung erforderlich.
+Nehmen Sie die Filmtabletten unzerkaut mit einem Glas Wasser während einer Mahlzeit ein.
+
+4. Welche Nebenwirkungen sind möglich?
+Sehr selten: Magenbeschwerden
+Selten: Störungen der Blutbildung
+Gelegentlich: Sehstörungen, Erkrankungen des Ohrs
+
+5. Wie ist Alginal extra aufzubewahren?
+Arzneimittel für Kinder unzugänglich aufbewahren!
+Nach dem Verfallsdatum nicht mehr verwenden. Das Verfallsdatum bezieht sich auf den letzten Tag des Monats.
+Aufgaben:
+[37] Auch Schwangere dürfen die Tabletten nehmen.
+Lösung: falsch
+
+[38] Ein 13-jähriges Kind darf eine Tablette pro Tag nehmen.
+Lösung: falsch
+
+[39] Man soll die Tabletten vor dem Essen nehmen.
+Lösung: falsch
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+Sehr geehrte Frau Schickl,
+
+letzte Woche habe ich bei (40) einen Pullover bestellt. (41) gestern das Paket kam, habe ich mich sehr gefreut. Aber leider haben Sie mir den falschen Pullover geschickt! Ich (42) einen blauen Pullover in Größe L für 29,90 Euro, (43) ich habe einen roten bekommen. Was soll ich tun? Und (44) wann bekomme ich den richtigen Pullover?
+Bitte (45) Sie mir schnell!
+
+Mit freundlichen Grüßen
+Maria Gruber
+Aufgaben:
+[40] Lücke 40
+A) Ihnen
+B) Euch
+C) Sie
+Lösung: A
+
+[41] Lücke 41
+A) Als
+B) Ob
+C) Wenn
+Lösung: A
+
+[42] Lücke 42
+A) mochte
+B) sollte
+C) wollte
+Lösung: C
+
+[43] Lücke 43
+A) aber
+B) denn
+C) oder
+Lösung: A
+
+[44] Lücke 44
+A) bis
+B) seit
+C) von
+Lösung: A
+
+[45] Lücke 45
+A) antworten
+B) geben
+C) sagen
+Lösung: A
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie suchen ein gebrauchtes Auto. Im Supermarkt haben Sie eine Anzeige gesehen: Herr Brandmeyer will sein Auto verkaufen. Sie wollen mehr Informationen und schreiben eine E-Mail.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Preis?
+- Alter/Zustand?
+- wann/wo anschauen?
+
+oder
+
+Aufgabe B:
+Ihre Krankenkassa will die Kosten für Ihre Zahnarztbehandlung nicht zahlen. Schreiben Sie Ihrer Krankenkassa einen Brief.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Grund für Ihren Besuch beim Zahnarzt
+- was Sie wollen
+- was Sie tun, wenn nichts passiert

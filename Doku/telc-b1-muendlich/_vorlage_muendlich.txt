@@ -1,0 +1,76 @@
+// ============================================================
+// Vorlage: telc Deutsch B1 — Mündliche Prüfung (Sprechen)
+// Dauer: ca. 15 Minuten (Paarprüfung) | Vorbereitung: 20 Minuten
+// Gesamtpunktzahl: 75 Punkte | Bestehensgrenze: 45 Punkte (60 %)
+// ============================================================
+
+# telc Deutsch B1 · Mündliche Prüfung (Muster-Vorlage)
+
+## Block: Mündliche Prüfung
+
+### Teil: sprech1
+Titel: Teil 1 — Kontaktaufnahme
+Dauer: ca. 3 Minuten
+Punkte: 15
+Format: oral_intro
+Beschreibung: Die Teilnehmenden stellen sich anhand von Stichpunkten vor und stellen sich gegenseitig vertiefende Fragen.
+
+Leitpunkte für die Vorstellung:
+• Name und Alter
+• Herkunft (Land / Stadt)
+• Wohnort in Deutschland
+• Wie lange schon Deutsch gelernt wird
+• Gesprochene Sprachen
+• Beruf / Ausbildung / derzeitige Tätigkeit
+• Familie
+• Hobbys / Freizeitbeschäftigung
+
+Nachfrage an den Partner:
+• Fragen zu Beruf, Deutschlernen, Freizeit oder Zukunftsplänen
+
+
+### Teil: sprech2
+Titel: Teil 2 — Gespräch über ein Thema
+Dauer: ca. 5–6 Minuten
+Punkte: 30
+Format: oral_topic
+Beschreibung: Die Teilnehmenden berichten über einen kurzen Text aus einer Zeitschrift und tauschen ihre Meinungen und Erfahrungen aus.
+
+Rolle: Partner A
+Thema: [Themenname]
+Person: [Vorname Nachname, Alter Jahre, Beruf]
+Bild: img/[dateiname-a].jpg
+Text:
+[Hier steht das Statement von Person A aus der Zeitschrift.]
+
+Rolle: Partner B
+Thema: [Themenname]
+Person: [Vorname Nachname, Alter Jahre, Beruf]
+Bild: img/[dateiname-b].jpg
+Text:
+[Hier steht das Statement von Person B aus der Zeitschrift.]
+
+Aufgaben für beide Partner:
+1. Berichten, was die Person im Text sagt (Wer? Alter? Beruf? Meinung?).
+2. Eigene Meinung zum Thema äußern und begründen.
+3. Von eigenen Erfahrungen berichten.
+4. Situation im Heimatland beschreiben.
+5. Der Partnerin / dem Partner Fragen stellen und auf ihre/seine Fragen reagieren.
+
+
+### Teil: sprech3
+Titel: Teil 3 — Gemeinsam etwas planen
+Dauer: ca. 5–6 Minuten
+Punkte: 30
+Format: oral_planning
+Beschreibung: Die Teilnehmenden planen gemeinsam ein Ereignis oder eine Aktivität anhand vorgegebener Leitpunkte.
+
+Situation:
+[Hier steht die Situationsbeschreibung, z. B. Ein Fest organisieren, einen Ausflug machen, einer Kollegin helfen.]
+
+Leitpunkte:
+• Wann? (Tag, Datum, genaue Uhrzeit)
+• Wo? (Ort, Räumlichkeit, Anreise/Verkehrsmittel)
+• Wer? (Teilnehmerkreis, Einladungen)
+• Was vorbereiten / mitbringen? (Essen, Trinken, Geschenke, Musik)
+• Aufgabenverteilung? (Wer übernimmt welche Aufgabe?)

@@ -1,0 +1,185 @@
+# YVONNE
+Untertitel: 17 Aufgaben · 45 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–15
+Punkte: 15
+Teile: lv1, lv2, lv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 16–21
+Punkte: 15
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: truefalse
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Liebe Nora**
+Liebe Nora,
+
+viele Grüße aus Weimar! Ich habe ein schönes Zimmer im Hotel Drei Kronen ganz in der Nähe vom Zentrum. Die Arbeit an der Universität ist sehr interessant, aber ich muss viel arbeiten. Am Abend habe ich aber frei. Wollen wir uns morgen um 19:30 Uhr im Restaurant „Zum Schwan“ treffen?
+
+Bis morgen
+Renate
+Aufgaben:
+[1] Renate macht in Weimar Urlaub.
+Lösung: f
+[2] Sie möchte am Abend mit Nora zusammen essen.
+Lösung: r
+Text:
+**Sommerausflug Sportsfreunde**
+Liebe Sportsfreunde vom Verein 1896,
+
+auch dieses Jahr wollen wir wieder unseren Sommerausflug machen. Wir fahren mit dem Bus an den Dümmer See. Dort wollen wir wandern und in einem netten Restaurant zu Mittag essen.
+
+Abfahrt ist am 27. Juni um 9 Uhr vor dem Vereinshaus. Die Busfahrt kostet 10 Euro pro Person; das Essen und die Getränke zahlt jeder allein.
+
+Liebe Freunde, bitte meldet euch bald an!
+
+Bis dann
+Heinz Paschke
+Aufgaben:
+[3] Die Sportsfreunde machen jeden Sommer einen Ausflug.
+Lösung: r
+[4] Der Bus wartet vor dem Vereinshaus.
+Lösung: r
+[5] Für die Fahrt und das Essen bezahlt jeder 10 Euro.
+Lösung: f
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.
+Aufgaben:
+[6] Sie studieren in Frankfurt und möchten eine Wohnung mieten.
+A) www.goetheuni-frankfurt.de: Wohnen in Frankfurt. Wohngemeinschaften, Plätze im Studentenwohnheim, Ein- und Zwei-Zimmer-Wohnungen.
+B) www.agentur-spiess.com: AGENTUR-SPIESS. Wir finden für Sie ein neues Zuhause. Günstige Kaufangebote: Häuser, Wohnungen, Apartments.
+Lösung: A
+[7] Sie möchten wissen: Wie kommt man vom Hamburger Bahnhof zum Hamburger Flughafen?
+A) www.flughafen-service.de: Flughafen Hamburg. Unsere Service-Leistungen: Flughafenhotel, Restaurants, Einkaufen / Banken / Geldwechsel, Besucherführungen.
+B) www.hh-flughafen.de: Abflug, Ankunft, Parken. Flughafenbus: Hamburg Hauptbahnhof, Hamburg Altona.
+Lösung: B
+[8] Sie suchen ein Angebot für Ihre Urlaubsreise.
+A) www.travel-münchen.de: Der Reiseladen bietet an: Heute Abend aktuell „Meine schönste Reise – unsere Mitarbeiter erzählen von ihren Expeditionen“. Um 20 Uhr im Laden.
+B) www.lastminute.de: Spanien, Abflug 27.8. ab Hannover, *** Hotel Soller, 370,- Euro/Woche mit Halbpension. Türkei, Abflug 28.8. ab Hamburg, **** Club Side, 465,- Euro/Woche...
+Lösung: B
+[9] Sie suchen eine Wohnung für Ihren Urlaub.
+A) www.st.peter-ording.de/mietwohnungen: Schöne 3-Zimmerwohnung im Zentrum von St. Peter Ording. 5 Minuten zum Meer. 450 € kalt + Nebenkosten. Keine Küche.
+B) www.ferienandernordsee.de: Ferienhäuser und -wohnungen. Alle Größen, das ganze Jahr. Auch auf den Inseln: Sylt, Juist, Amrum, Langeoog.
+Lösung: B
+[10] Sie arbeiten in Deutschland. In Ihrer Freizeit möchten Sie Fußball spielen.
+A) www.goal.de: Aktuelle Informationen aus der Welt des Fußballs. Hier finden Sie alles über die Spiele, die Fußballstars, die Ergebnisse, die Mannschaften.
+B) www.vereinssport.de: Welcher Verein für meinen Sport? Klicken Sie an: Tennis / Squash, Leichtathletik, Radsport, Fußball / Basketball, Schwimmen / Wasserball.
+Lösung: B
+
+### Teil: lv3
+Format: truefalse
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Am Fahrkartenautomaten**
+Bayern-Ticket:
+Ein Tag. Fünf Personen. 29 Euro.
+Montag und Freitag ab 9 Uhr,
+am Wochenende von 6 bis 24 Uhr.
+Aufgaben:
+[11] Am Samstag können Sie und Ihre Freunde mit dem Ticket für 29 Euro fahren.
+Lösung: r
+Text:
+**Im Hotelzimmer**
+Liebe Gäste,
+ab 21 Uhr ist die Haustür geschlossen.
+Bitte nehmen Sie Ihren Zimmerschlüssel mit,
+er ist auch der Hausschlüssel!
+Aufgaben:
+[12] Nach 22 Uhr kommen Sie nicht mehr ins Hotel.
+Lösung: f
+Text:
+**Eingang Restaurant**
+Wir haben für Sie täglich
+von 11.30 bis 15.00 Uhr und
+von 18.00 bis 22.00 Uhr
+geöffnet, auch am Wochenende
+und an Feiertagen.
+Aufgaben:
+[13] Am Sonntagmittag können Sie in diesem Restaurant essen.
+Lösung: r
+Text:
+**Im Kultur-Verein**
+Ab sofort:
+Jeden Samstag um 20 Uhr Filmabend!
+Am 3.5.: „Im Juli“ von Fatih Akın.
+Eintritt 2 Euro.
+Aufgaben:
+[14] Man kann diesen Samstagabend einen Film sehen.
+Lösung: r
+Text:
+**Im Bahnhof**
+Kartenverkauf an Schalter 1 bis 3.
+Informationen an Schalter 4.
+Aufgaben:
+[15] Fahrkarten können Sie an allen Schaltern bekommen.
+Lösung: f
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 5
+Maximum: 5
+Anweisung: Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt. Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Auswahltitel: Formular
+Bild: img/goethe-a1-m03-s1.jpg
+Text:
+**Sprachenschule NEWbornSCHOOL Anmeldung**
+Ihre Freundin Yvonne Legrand aus Frankreich, geboren am 17.4.1993 in Lyon, möchte vom 1. bis zum 28. August einen Deutschkurs in Deutschland besuchen. Sie hat schon sechs Monate Deutsch gelernt. Sie hat am Vormittag Zeit. In der Schule hat sie Englisch gelernt.
+Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Aufgaben:
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Geburtsort: Lyon
+Punkt: (2) Andere Sprachen: Englisch
+Punkt: (3) Wie lange Deutsch gelernt? — 6 Monate / sechs Monate
+Punkt: (4) Kurstermin: 1. - 28. August / 1. bis 28. August / vom 1. bis zum 28. August
+Punkt: (5) Kurszeit: von 9 - 12 Uhr / von 9 bis 12 Uhr / 9 - 12 Uhr / 9 bis 12 Uhr
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Ihre Freundin Nina möchte sich am Samstag mit Ihnen treffen, aber Sie können es nicht. Schreiben Sie an Nina. Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter).
+Text:
+**Schreibaufgabe**
+Ihre Freundin Nina möchte sich am Samstag mit Ihnen treffen, aber Sie können es nicht.
+Schreiben Sie an Nina.
+Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter):
+• Warum schreiben Sie?
+• Treffen, wann?
+• Mitbringen?
+Aufgaben:
+[21] Schreiben Sie eine Mitteilung an Ihre Freundin Nina:
+Mindestwoerter: 30
+Punkt: Warum schreiben Sie?
+Punkt: Treffen, wann?
+Punkt: Mitbringen?

@@ -1,0 +1,852 @@
+{
+ "title": "TANJA",
+ "subtitle": "41 Aufgaben · 120 Minuten",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "maxPoints": 105,
+   "missing": 0,
+   "availablePoints": 105
+  },
+  {
+   "id": "block-sa",
+   "parts": [
+    "sa"
+   ],
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "maxPoints": 45,
+   "missing": 0,
+   "availablePoints": 45
+  }
+ ],
+ "sections": [
+  {
+   "id": "lv1",
+   "items": [
+    {
+     "id": "1",
+     "answer": "B",
+     "text": "Der Schokolade-Boom zeigt sich hierzulande nicht nur im hohen Verbrauch (jeder Schweizer isst fast 12 Kilo Schokolade im Jahr!), nein, er hat nun auch die Schönheitsindustrie erreicht. Vom 16. Januar bis zum 24. Februar bietet das Grand Hotel Bad Ragaz unter dem Namen Choco Therapy zahlreiche kosmetische Behandlungsmethoden mit Schokolade an. Die Bäder, Massagen und Hautcremes mit Kakao sind durchaus ernst gemeint, denn Kakao soll eine belebende Eigenschaft haben, die den Menschen jung und gesund aussehen lässt."
+    },
+    {
+     "id": "2",
+     "answer": "C",
+     "text": "Frisch verheiratete Paare nehmen oft schon in den Flitterwochen einige Kilos zu, weil sie ihre Essgewohnheiten ändern. Das belegt eine neue Studie. In Deutschland sind fast die Hälfte der verheirateten Frauen und circa zwei Drittel der Ehemänner übergewichtig. Alleinstehende sind vermutlich schlanker, weil sie besonderen Wert auf ihr Äußeres legen, mehr Sport treiben und sich selten Zeit für gemütliche Mahlzeiten nehmen."
+    },
+    {
+     "id": "3",
+     "answer": "J",
+     "text": "Wer acht Stunden und länger schläft, hat eine deutlich kürzere Lebenserwartung. Das berichtete das Apothekenmagazin Gesundheit am Mittwoch und bezog sich dabei auf eine neue japanische Studie. Schlecht für die Männer, denn laut dieser Studie schlafen Männer im Durchschnitt eine halbe Stunde länger pro Nacht als Frauen. Aber es gibt auch eine gute Nachricht für die Viel- und Langschläfer: Wer lange schläft, hat weniger Gewichtsprobleme und fühlt sich gesünder."
+    },
+    {
+     "id": "4",
+     "answer": "A",
+     "text": "Nach dem Motto beschwingt und bewegt starten die Schweizer Gesundheitsbehörden eine landesweite Bewegungskampagne. Dabei soll die Schweizer Bevölkerung aufgerufen werden, ausgewogen zu essen und sich täglich zu bewegen. Fast zwei Drittel der Bevölkerung in der Schweiz sind wenig aktiv und essen zu viel. Die Kampagne soll den Leuten zeigen, wie Sport und gesunde Ernährung ohne großen Aufwand in den Alltag integriert werden können, z.B. mit einem Spaziergang am Mittag oder mit einem Apfel zum Znüni statt Schokolade."
+    },
+    {
+     "id": "5",
+     "answer": "G",
+     "text": "Du bist, was du isst hat als Slogan ausgedient. Heute muss es heißen: Gut aussehen mit dem richtigen Essen. Der Trend kommt aus den USA: Dort kaufen bereits viele Leute neue teure Lebensmittel mit wissenschaftlichen Inhaltsstoffen, die dem Kunden jüngeres und schöneres Aussehen versprechen. So bietet z.B. ein New Yorker Nobelhotel das Menü gegen-graue-Haare an, das gegen das Älterwerden wirken soll. Aber wer wird schon eine solche Mahlzeit bestellen? Millionen von Leuten, so die Trendforscher. Und zwar aus dem einfachen Grund, weil jeder jung und gut aussehen will, und das mit möglichst wenig Aufwand."
+    }
+   ],
+   "format": "matching",
+   "title": "Leseverstehen, Teil 1",
+   "group": "Leseverstehen",
+   "minutes": 15,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+   "bankTitle": "Überschriften",
+   "bank": [
+    {
+     "key": "A",
+     "text": "Schweizer sollen gesünder leben"
+    },
+    {
+     "key": "B",
+     "text": "Neu im Trend: Jung und gesund – mit Schokolade!"
+    },
+    {
+     "key": "C",
+     "text": "Studie zeigt: Heiraten macht dick"
+    },
+    {
+     "key": "D",
+     "text": "Japanische Studie: Vielschläfer leben länger"
+    },
+    {
+     "key": "E",
+     "text": "Die Mehrheit der Schweizer treibt aktiv Sport"
+    },
+    {
+     "key": "F",
+     "text": "Statistik: Unverheiratete haben oft ein paar Kilos zu viel"
+    },
+    {
+     "key": "G",
+     "text": "Teures Essen für mehr Jugend und Schönheit"
+    },
+    {
+     "key": "H",
+     "text": "USA: Nachfrage nach teuren Lebensmitteln geht zurück"
+    },
+    {
+     "key": "I",
+     "text": "Schokolade essen – jung bleiben"
+    },
+    {
+     "key": "J",
+     "text": "Weniger schlafen – länger leben"
+    }
+   ],
+   "availablePoints": 25,
+   "missing": 0
+  },
+  {
+   "id": "lv2",
+   "items": [
+    {
+     "id": "6",
+     "options": [
+      {
+       "key": "A",
+       "text": "für Studenten Reisen nach Südamerika organisieren."
+      },
+      {
+       "key": "B",
+       "text": "mit dem Fahrrad durch 50 verschiedene Länder fahren."
+      },
+      {
+       "key": "C",
+       "text": "viele verschiedene Länder kennen lernen."
+      }
+     ],
+     "answer": "C",
+     "text": "Mit 23 Jahren wollte Louis Palmer"
+    },
+    {
+     "id": "7",
+     "options": [
+      {
+       "key": "A",
+       "text": "weil er einen Preis von einer Universität gewonnen hat."
+      },
+      {
+       "key": "B",
+       "text": "weil er finanzielle Unterstützung von vier Universitäten erhalten hat."
+      },
+      {
+       "key": "C",
+       "text": "weil ihn Firmen und Universitäten unterstützt haben."
+      }
+     ],
+     "answer": "C",
+     "text": "Sein Projekt konnte Palmer realisieren,"
+    },
+    {
+     "id": "8",
+     "options": [
+      {
+       "key": "A",
+       "text": "baute Louis an einem umweltfreundlichen Auto."
+      },
+      {
+       "key": "B",
+       "text": "wollte Louis etwas für die Umwelt tun."
+      },
+      {
+       "key": "C",
+       "text": "wusste Louis genau, wie er sein Leben einteilen will."
+      }
+     ],
+     "answer": "B",
+     "text": "Schon als Jugendlicher"
+    },
+    {
+     "id": "9",
+     "options": [
+      {
+       "key": "A",
+       "text": "fährt mit alternativer Energie."
+      },
+      {
+       "key": "B",
+       "text": "geht auf eine dreijährige Weltreise."
+      },
+      {
+       "key": "C",
+       "text": "hat genug Platz für sieben Personen."
+      }
+     ],
+     "answer": "A",
+     "text": "Palmers Auto"
+    },
+    {
+     "id": "10",
+     "options": [
+      {
+       "key": "A",
+       "text": "hat für die Weltreise sechs Sprachen gelernt."
+      },
+      {
+       "key": "B",
+       "text": "möchte mit seinem Auto nicht durch Großstädte fahren."
+      },
+      {
+       "key": "C",
+       "text": "wird sich in nächster Zeit nicht langweilen."
+      }
+     ],
+     "answer": "C",
+     "text": "Louis Palmer"
+    }
+   ],
+   "format": "mc",
+   "title": "Leseverstehen, Teil 2",
+   "group": "Leseverstehen",
+   "minutes": 20,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Abenteuer Weltumrundung",
+       "b": true
+      },
+      {
+       "t": "Von Antje Blinda",
+       "b": true
+      },
+      {
+       "t": "Co2-Ausstoß: null. Geplante Strecke: einmal um die Welt. Endlich wird der Traum von Louis Palmer wahr: Der Schweizer startet mit seinem Auto, das mit Sonnenenergie fährt, zur Weltumrundung. Er will damit zeigen, dass Autofahren auch geht, ohne der Umwelt zu schaden.",
+       "b": false
+      },
+      {
+       "t": "Entwickelt für mich ein Fahrzeug für eine Weltreise, das mit Sonnenenergie fährt, forderte Louis Palmer Studenten an Schweizer Universitäten auf. Das war vor drei Jahren. Heute ist das Auto fertig: ein dreirädriges Fahrzeug mit zwei Sitzplätzen. Und die Weltreise? Am 3. Juli starten er und sein 7-köpfiges Team in Luzern: Das Auto soll als erstes Solarfahrzeug die Welt umrunden.",
+       "b": false
+      },
+      {
+       "t": "Die ganze Welt wartet auf revolutionäre Erfindungen für ein umweltbewusstes Auto, sagt der Schweizer, ich will darauf aufmerksam machen, dass die technischen Lösungen schon jetzt vorhanden sind. Mit 14 Jahren hatte Louis den Entschluss gefasst: Gegen die Veränderung des Klimas muss etwas getan werden. Die Lösung hatte er auch schon: Mit kräftigen Strichen zeichnete er ein Rennauto, verziert mit lachenden Sonnen. Der Rest war nur eine Frage der Organisation und der konsequenten Lebensplanung. Ich unterteile mein Leben in drei Phasen, sagt Palmer und lacht über sich selbst: zwischen 20 und 30 die Welt kennen lernen, zwischen 30 und 40 die Welt aufmerksam machen und zwischen 40 und 50 die Welt verändern.",
+       "b": false
+      },
+      {
+       "t": "Phase eins begann mit 23 Jahren: Er zog aus, um 50 Länder auf allen Kontinenten zu bereisen: Anstatt an die Uni zu gehen, habe ich die Welt studiert. Mit dem Fahrrad fuhr er von Kenia nach Kapstadt, mit einem Segelflugzeug überflog er Südamerika und als Fotograf reiste er mehrmals nach Afghanistan.",
+       "b": false
+      },
+      {
+       "t": "Phase zwei startete vor drei Jahren: Palmer konnte Studenten von vier Universitäten gewinnen, die für ihn das Auto bauten. Schwierig war es aber, Firmen und private Sponsoren für die finanzielle Unterstützung zu finden, meint Palmer. Doch auch das hat dann schließlich geklappt.",
+       "b": false
+      },
+      {
+       "t": "Nun ist Palmer bereit für die Tour. Ich habe keine Ahnung, was auf uns zukommt, sagt der erfahrene Globetrotter, der sechs Sprachen spricht. Ich habe schon etwas Angst, z.B. vor dem Straßenverkehr in Millionenstädten oder unvorhersehbaren Zwischenfällen. Das Schlimmste ist aber, wenn jeder Tag wie der andere ist. In den nächsten 16 Monaten wird es dazu nicht kommen.",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "availablePoints": 25,
+   "missing": 0
+  },
+  {
+   "id": "lv3",
+   "items": [
+    {
+     "id": "11",
+     "answer": "H",
+     "text": "Ihre Bekannte ist Mitte dreißig und sucht einen Partner, mit dem sie regelmäßig ins Kino gehen kann."
+    },
+    {
+     "id": "12",
+     "answer": "I",
+     "text": "Sie wollen Ihren Garten verändern und suchen Beratung/Tipps."
+    },
+    {
+     "id": "13",
+     "answer": "J",
+     "text": "Der Sohn Ihrer Freunde hat gerade das Abitur gemacht und sucht im Sommer für zwei Monate einen Job."
+    },
+    {
+     "id": "14",
+     "answer": "X",
+     "text": "Ihr Freund möchte im Nebenjob Gartenarbeiten übernehmen."
+    },
+    {
+     "id": "15",
+     "answer": "K",
+     "text": "Ihr 45-jähriger Onkel sucht eine Partnerin, mit der er zusammen verreisen kann."
+    },
+    {
+     "id": "16",
+     "answer": "B",
+     "text": "Sie möchten gern bei einem Film mitspielen und etwas Geld verdienen."
+    },
+    {
+     "id": "17",
+     "answer": "D",
+     "text": "Der Sohn Ihrer Freunde interessiert sich für die Geschichte des Autos. Am Sonntag wollen Sie mit ihm etwas Interessantes machen."
+    },
+    {
+     "id": "18",
+     "answer": "X",
+     "text": "Sie suchen eine Stelle und brauchen Tipps für Ihre Bewerbungen."
+    },
+    {
+     "id": "19",
+     "answer": "E",
+     "text": "Im Urlaub wollen Sie mit dem Auto eine Reise durch Deutschland machen und suchen ein passendes Angebot."
+    },
+    {
+     "id": "20",
+     "answer": "L",
+     "text": "Ihre Bekannte möchte lernen, wie sie kleinere Reparaturen an ihrem Wagen selbst machen kann."
+    }
+   ],
+   "format": "matching",
+   "title": "Leseverstehen, Teil 3",
+   "group": "Leseverstehen",
+   "minutes": 20,
+   "pointsPerItem": 2.5,
+   "maxPoints": 25,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen im Bild. Finden Sie für jede Situation die passende Anzeige. Wenn Sie keine passende Anzeige finden, wählen Sie X.",
+   "bankTitle": "Anzeigen",
+   "bankImage": "img/m17-lv3.jpg",
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "availablePoints": 25,
+   "missing": 0
+  },
+  {
+   "id": "sb1",
+   "items": [
+    {
+     "id": "21",
+     "options": [
+      {
+       "key": "A",
+       "text": "dafür"
+      },
+      {
+       "key": "B",
+       "text": "damit"
+      },
+      {
+       "key": "C",
+       "text": "davon"
+      }
+     ],
+     "answer": "C",
+     "text": "… Wie versprochen möchte ich dir gleich (21) erzählen. Am Anfang …"
+    },
+    {
+     "id": "22",
+     "options": [
+      {
+       "key": "A",
+       "text": "bin"
+      },
+      {
+       "key": "B",
+       "text": "habe"
+      },
+      {
+       "key": "C",
+       "text": "war"
+      }
+     ],
+     "answer": "C",
+     "text": "… Am Anfang (22) ich ziemlich enttäuscht, weil ich auf meine …"
+    },
+    {
+     "id": "23",
+     "options": [
+      {
+       "key": "A",
+       "text": "doch"
+      },
+      {
+       "key": "B",
+       "text": "nur"
+      },
+      {
+       "key": "C",
+       "text": "schon"
+      }
+     ],
+     "answer": "B",
+     "text": "… Bewerbungsschreiben insgesamt (23) zwei Antworten bekommen habe. Aber zum Glück …"
+    },
+    {
+     "id": "24",
+     "options": [
+      {
+       "key": "A",
+       "text": "gepasst"
+      },
+      {
+       "key": "B",
+       "text": "passen"
+      },
+      {
+       "key": "C",
+       "text": "passt"
+      }
+     ],
+     "answer": "A",
+     "text": "… Aber zum Glück hat eine davon (24): Ich werde nun zwei Nachmittage …"
+    },
+    {
+     "id": "25",
+     "options": [
+      {
+       "key": "A",
+       "text": "an"
+      },
+      {
+       "key": "B",
+       "text": "bei"
+      },
+      {
+       "key": "C",
+       "text": "zu"
+      }
+     ],
+     "answer": "B",
+     "text": "… Nachmittage in der Woche als Babysitterin (25) einer Familie arbeiten, die …"
+    },
+    {
+     "id": "26",
+     "options": [
+      {
+       "key": "A",
+       "text": "beide"
+      },
+      {
+       "key": "B",
+       "text": "beiden"
+      },
+      {
+       "key": "C",
+       "text": "beides"
+      }
+     ],
+     "answer": "A",
+     "text": "… Sie sind 3 und 5 Jahre alt und (26) sind sehr nett. Wir haben …"
+    },
+    {
+     "id": "27",
+     "options": [
+      {
+       "key": "A",
+       "text": "ersten"
+      },
+      {
+       "key": "B",
+       "text": "erster"
+      },
+      {
+       "key": "C",
+       "text": "erstes"
+      }
+     ],
+     "answer": "A",
+     "text": "… Wir haben in der (27) Woche bereits Vieles gemeinsam gemacht, sind …"
+    },
+    {
+     "id": "28",
+     "options": [
+      {
+       "key": "A",
+       "text": "im"
+      },
+      {
+       "key": "B",
+       "text": "in"
+      },
+      {
+       "key": "C",
+       "text": "ins"
+      }
+     ],
+     "answer": "C",
+     "text": "… sind in den Zoo und (28) Kindermuseum gegangen. (29) kann man …"
+    },
+    {
+     "id": "29",
+     "options": [
+      {
+       "key": "A",
+       "text": "Am besten"
+      },
+      {
+       "key": "B",
+       "text": "Besser"
+      },
+      {
+       "key": "C",
+       "text": "Gut"
+      }
+     ],
+     "answer": "B",
+     "text": "… (29) kann man eine Stadt gar nicht kennen lernen, und es macht …"
+    },
+    {
+     "id": "30",
+     "options": [
+      {
+       "key": "A",
+       "text": "geht"
+      },
+      {
+       "key": "B",
+       "text": "geht's"
+      },
+      {
+       "key": "C",
+       "text": "ging"
+      }
+     ],
+     "answer": "A",
+     "text": "… schreibe mir bald, wie es dir (30). Liebe Grüße …"
+    }
+   ],
+   "format": "mc",
+   "title": "Sprachbausteine, Teil 1",
+   "group": "Sprachbausteine",
+   "minutes": 20,
+   "pointsPerItem": 1.5,
+   "maxPoints": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Liebe Catherine,",
+       "b": false
+      },
+      {
+       "t": "ich hab's geschafft! Endlich habe ich einen Job bekommen. Wie versprochen möchte ich dir gleich (21) erzählen. Am Anfang (22) ich ziemlich enttäuscht, weil ich auf meine vielen Bewerbungsschreiben insgesamt (23) zwei Antworten bekommen habe. Aber zum Glück hat eine davon (24): Ich werde nun zwei Nachmittage in der Woche als Babysitterin (25) einer Familie arbeiten, die zwei Kinder hat. Sie sind 3 und 5 Jahre alt und (26) sind sehr nett. Wir haben in der (27) Woche bereits Vieles gemeinsam gemacht, sind in den Zoo und (28) Kindermuseum gegangen. (29) kann man eine Stadt gar nicht kennen lernen, und es macht mir viel Spaß!",
+       "b": false
+      },
+      {
+       "t": "Für heute wünsche ich dir alles Gute – schreibe mir bald, wie es dir (30).",
+       "b": false
+      },
+      {
+       "t": "Liebe Grüße",
+       "b": false
+      },
+      {
+       "t": "Deine Tanja",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "availablePoints": 15,
+   "missing": 0
+  },
+  {
+   "id": "sb2",
+   "items": [
+    {
+     "id": "31",
+     "answer": "H",
+     "text": "… Demnächst (31) ich aber aus beruflichen Gründen …"
+    },
+    {
+     "id": "32",
+     "answer": "I",
+     "text": "… mit meinem Sohn (3 Jahre) (32) Frankfurt umziehen. …"
+    },
+    {
+     "id": "33",
+     "answer": "B",
+     "text": "… Deshalb suche ich zum 1. November eine Wohnung, (33) möglichst zentral gelegen sein sollte. …"
+    },
+    {
+     "id": "34",
+     "answer": "M",
+     "text": "… Ihre Wohnung (34) deshalb genau richtig für uns. …"
+    },
+    {
+     "id": "35",
+     "answer": "D",
+     "text": "… Ist die Wohnung auch für Kleinkinder (35)? …"
+    },
+    {
+     "id": "36",
+     "answer": "O",
+     "text": "… Und gibt es in der näheren Umgebung einen Spielplatz, (36) mein Sohn spielen könnte? …"
+    },
+    {
+     "id": "37",
+     "answer": "E",
+     "text": "… Außerdem würde ich (37) wissen, ob die Haltung von Haustieren …"
+    },
+    {
+     "id": "38",
+     "answer": "A",
+     "text": "… in (38) Wohnung erlaubt ist. …"
+    },
+    {
+     "id": "39",
+     "answer": "N",
+     "text": "… (39) es möglich ist, würden wir nämlich gerne …"
+    },
+    {
+     "id": "40",
+     "answer": "K",
+     "text": "… Ich danke Ihnen (40) jetzt für Ihre Antwort …"
+    }
+   ],
+   "format": "wordbank",
+   "title": "Sprachbausteine, Teil 2",
+   "group": "Sprachbausteine",
+   "minutes": 20,
+   "pointsPerItem": 1.5,
+   "maxPoints": 15,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.",
+   "bankTitle": "Wörter",
+   "bank": [
+    {
+     "key": "A",
+     "text": "DER"
+    },
+    {
+     "key": "B",
+     "text": "DIE"
+    },
+    {
+     "key": "C",
+     "text": "ERST"
+    },
+    {
+     "key": "D",
+     "text": "GEEIGNET"
+    },
+    {
+     "key": "E",
+     "text": "GERNE"
+    },
+    {
+     "key": "F",
+     "text": "HÄTTE"
+    },
+    {
+     "key": "G",
+     "text": "IN"
+    },
+    {
+     "key": "H",
+     "text": "MUSS"
+    },
+    {
+     "key": "I",
+     "text": "NACH"
+    },
+    {
+     "key": "J",
+     "text": "NOCH"
+    },
+    {
+     "key": "K",
+     "text": "SCHON"
+    },
+    {
+     "key": "L",
+     "text": "WANN"
+    },
+    {
+     "key": "M",
+     "text": "WÄRE"
+    },
+    {
+     "key": "N",
+     "text": "WENN"
+    },
+    {
+     "key": "O",
+     "text": "WO"
+    }
+   ],
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Ihre Anzeige in der Frankfurter Rundschau",
+       "b": true
+      },
+      {
+       "t": "Sehr geehrte Frau Hermann,",
+       "b": false
+      },
+      {
+       "t": "ich habe Ihre Anzeige in der Frankfurter Rundschau vom 5. Oktober gelesen und interessiere mich sehr für die 3-Zimmer-Wohnung.",
+       "b": false
+      },
+      {
+       "t": "Zurzeit wohne ich noch in Krakau (Polen). Demnächst (31) ich aber aus beruflichen Gründen mit meinem Sohn (3 Jahre) (32) Frankfurt umziehen. Deshalb suche ich zum 1. November eine Wohnung, (33) möglichst zentral gelegen sein sollte. Ihre Wohnung (34) deshalb genau richtig für uns.",
+       "b": false
+      },
+      {
+       "t": "Ich hätte jedoch noch einige Fragen zu Ihrer Anzeige: Ist die Wohnung auch für Kleinkinder (35)? Und gibt es in der näheren Umgebung einen Spielplatz, (36) mein Sohn spielen könnte?",
+       "b": false
+      },
+      {
+       "t": "Außerdem würde ich (37) wissen, ob die Haltung von Haustieren in (38) Wohnung erlaubt ist. (39) es möglich ist, würden wir nämlich gerne unseren Hund mitbringen.",
+       "b": false
+      },
+      {
+       "t": "Ich danke Ihnen (40) jetzt für Ihre Antwort und grüße Sie freundlich.",
+       "b": false
+      },
+      {
+       "t": "Kasia Kloc",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "availablePoints": 15,
+   "missing": 0
+  },
+  {
+   "id": "sa",
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie auf diesen Brief. Schreiben Sie in Ihrem Brief etwas zu den folgenden vier Punkten:",
+     "minWords": 100,
+     "points": [
+      "Ihre neue Arbeitsstelle",
+      "Wie man in Ihrem Land heiratet",
+      "Vorschlag für Ritas Hochzeitsreise",
+      "Rita und Karl besuchen?"
+     ]
+    }
+   ],
+   "format": "writing",
+   "title": "Schriftlicher Ausdruck",
+   "group": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "pointsPerItem": 45,
+   "maxPoints": 45,
+   "instruction": "Antworten Sie auf den Brief. Schreiben Sie etwas zu den folgenden Punkten:",
+   "availablePoints": 45,
+   "missing": 0,
+   "brief": {
+    "intro": "Eine Bekannte hat Ihnen folgenden Brief geschrieben:",
+    "greeting": "Liebe(r)........",
+    "paragraphs": [
+     "endlich habe ich Zeit, dir wieder mal zu schreiben. Schade, dass du bei unserer Hochzeit nicht dabei sein konntest! Wir waren mit Freunden und Verwandten über 50 Personen. Ich habe ein langes, weißes Kleid getragen, und Karl hat sich für diesen Tag einen teuren, schwarzen Anzug gekauft, ob wohl er sonst immer nur Jeans trägt. Natürlich gab es ein wunderbares Festessen und danach wurde getanzt. Karl und ich haben viele Geschenke bekommen, vor allem auch Geld für unsere Hochzeitsreise. Wir wissen, aber noch gar nicht wohin wir fahren wollen. Wie läuft’s eigentlich bei dir, du hast doch eine neue Stelle? Wie gefällt dir die Arbeit? Karl und ich würden uns sehr freuen, wenn du uns wieder mal besuchen würdest!",
+     "Liebe Grüße"
+    ],
+    "signature": "Rita"
+   },
+   "hints": [
+    "Bevor Sie den Brief schreiben, überlegen Sie sich eine passende Reihenfolge der punkte, eine passende Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+    "Schreiben Sie mindestens 100 Wörter."
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3
+  }
+ ],
+ "id": "modell-17"
+}

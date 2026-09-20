@@ -1,0 +1,441 @@
+# ARIAS
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Sie wollen zum Flughafen. Von welchem Gleis müssen Sie fahren?
+A) Von Gleis 10.
+B) Von Gleis 12.
+C) Von Gleis 8.
+Lösung: B
+
+[2] Was soll Frau Arias tun?
+A) Herrn Bauer anrufen.
+B) Morgen vorbeikommen.
+C) Frau Maas anrufen.
+Lösung: C
+
+[3] Wann ist der nächste Deutschkurs?
+A) Am Mittwoch.
+B) Am Donnerstag.
+C) Am Freitag.
+Lösung: B
+
+[4] Was soll Herr Aslan machen?
+A) Zum Hausarzt gehen.
+B) Eine Überweisung vorbeibringen.
+C) Einen Termin ausmachen.
+Lösung: A
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Wie ist das Wetter nächste Woche?
+A) Es wird sonnig und heiß.
+B) Es wird kälter.
+C) Es wird starke Gewitter geben.
+Lösung: B
+
+[6] Wie kann man heute Nachmittag zum Hauptbahnhof kommen?
+A) Mit der U- oder S-Bahn.
+B) Mit dem Auto.
+C) Mit der Straßenbahn oder dem Bus.
+Lösung: A
+
+[7] Was gibt es heute Abend im Radio?
+A) Einen Krimi.
+B) Eine Musiksendung.
+C) Eine Sendung aus Wirtschaft und Politik.
+Lösung: C
+
+[8] Welche Probleme gibt es auf der A 8?
+A) Bauarbeiten.
+B) Einen Unfall.
+C) Lange Staus.
+Lösung: A
+
+[9] In der Sendung „Tipps für Patienten“
+A) geht es um günstige Kassenbeiträge.
+B) gibt es Informationen zum Bonusheft.
+C) werden neue Zahnbehandlungen vorgestellt.
+Lösung: B
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 8
+Wiedergaben: 1
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Sonja und ihr Mann haben eine neue Wohnung gemietet.
+Lösung: falsch
+
+[11] Die neue Wohnung
+A) ist teurer als die alte, hat aber mehr Quadratmeter.
+B) hat keine Küche.
+C) ist auf dem Land.
+Lösung: A
+
+[12] Frau Schmidt möchte ein Konto eröffnen.
+Lösung: falsch
+
+[13] Was fragt sie den Bankangestellten?
+A) Ob es in der Müllerstraße auch eine Bank gibt.
+B) Ob Bankgeschäfte im Internet sicher sind.
+C) Ob sie für Überweisungsformulare etwas bezahlen muss.
+Lösung: C
+
+[14] Anette und Claudia planen ein Hoffest.
+Lösung: falsch
+
+[15] Was sind die Pläne der Hausbewohner?
+A) Sie wollen den Hinterhof schöner machen.
+B) Sie wollen jeden Monat feiern.
+C) Sie wollen auch die neuen Nachbarn einladen.
+Lösung: A
+
+[16] Frau Klein und Frau Maier sprechen über einen neuen Mitarbeiter.
+Lösung: richtig
+
+[17] Beide Kolleginnen
+A) mögen Herrn Funke nicht besonders.
+B) haben Angst vor Konflikten.
+C) finden Arbeit im Team wichtig.
+Lösung: C
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören die Meinungen von drei Personen zu einem Thema. Wählen Sie für die Aufgaben 18–20 die passende Aussage (a–f).
+Auswahltitel: Aussagen
+Auswahl:
+a = Regelmäßig Sport treiben ist wichtiger als gesunde Ernährung.
+b = Gesund leben kann man nur, wenn man viel Geld hat.
+c = Wenig Stress und viel Ruhe sind gut für die Gesundheit.
+d = Lebensmittel aus der Region sind frischer.
+e = Spaß und Freude halten auch gesund.
+f = Es ist gut, dass die Preise für viele Bio-Produkte gesunken sind.
+Aufgaben:
+[18] Sprecher 1
+Lösung: f
+
+[19] Sprecher 2
+Lösung: a
+
+[20] Sprecher 3
+Lösung: c
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie sind im Medienhaus Süd. Lesen Sie die Aufgaben 21–25 und die Kaufhaustafel. Wo (a, b oder c) finden Sie etwas Passendes?
+Bild: img/dtz-b1-m07-lv1.jpg
+Aufgaben:
+[21] Sie wollen eine E-Mail schreiben, können aber Ihren eigenen Computer nicht benutzen.
+A) Computer & Software
+B) Haushaltsgeräte & Haustechnik
+C) andere Abteilung
+Lösung: C
+
+[22] Sie haben Ihren Fernseher zur Reparatur gegeben und möchten nachfragen, ob er fertig ist.
+A) Audio, TV, Foto, Handys
+B) Freizeit & Service
+C) andere Abteilung
+Lösung: B
+
+[23] Sie suchen ein neues Radio.
+A) Klang & Licht
+B) Haushaltsgeräte & Haustechnik
+C) andere Abteilung
+Lösung: C
+
+[24] Sie möchten Ihrer Freundin eine Eintrittskarte für ein Konzert schenken.
+A) CDs & DVDs
+B) Freizeit & Service
+C) andere Abteilung
+Lösung: B
+
+[25] Sie suchen für Ihren Computer ein Programm, mit dem Sie Fotos bearbeiten können.
+A) Audio, TV, Foto, Handys
+B) Computer & Software
+C) andere Abteilung
+Lösung: B
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m07-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Sie suchen eine Ausbildungsstelle für Ihren Sohn. Er macht gerade Abitur und arbeitet gern am PC.
+Lösung: e
+
+[27] Ihre Freundin sucht eine zentral gelegene Wohnung mit Balkon.
+Lösung: f
+
+[28] Ein Freund will sich selbstständig machen. Er möchte ein Gemüsegeschäft aufmachen und sucht einen Ladenraum in guter Lage.
+Lösung: d
+
+[29] Ihre Bekannte sucht eine Bürotätigkeit. Sie kann gut rechnen und am Computer arbeiten. Sie möchte keine Arbeit, bei der sie viel telefonieren muss.
+Lösung: c
+
+[30] Sie haben Erfahrung mit der Pflege alter und behinderter Menschen und möchten gern als Pflegekraft arbeiten. Sie suchen eine Festanstellung.
+Lösung: x
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+Arbeit bei der Polizei
+
+Die hessische Polizei startet eine Kooperation mit der türkischen Tageszeitung Hürriyet. Ziel ist es, mehr ausländische Bewerberinnen und Bewerber für den Polizeiberuf zu interessieren. Als Vermittler zwischen den Kulturen genießen ausländische Polizisten besonderes Vertrauen in den unterschiedlichen Bevölkerungsgruppen. Sie sprechen die Sprache und sind mit den Traditionen ihrer Landsleute vertraut. Viele junge Menschen wissen nicht, dass Hessen schon seit 1994 Ausländer in den Polizeidienst einstellt. Dazu wird die deutsche Staatsangehörigkeit nicht benötigt.
+Der Anteil der Neueinstellungen von Polizisten, die nicht in Deutschland geboren sind, lag im vergangenen Jahr bei etwa 12 Prozent. Das entspricht ungefähr dem statistischen Ausländeranteil in Hessen. Ziel ist es, die Zahl der Ausländer bei der Polizei in den kommenden Jahren auf bis zu 20 Prozent zu erhöhen.
+Aufgaben:
+[31] Die Polizei Hessens möchte, dass mehr Ausländer bei ihr arbeiten.
+Lösung: richtig
+
+[32] Wenn man bei der Polizei arbeiten will,
+A) muss man keinen deutschen Pass haben.
+B) muss man seit 1994 in Deutschland leben.
+C) bekommt man nächstes Jahr 20 Prozent mehr Gehalt.
+Lösung: A
+
+Text:
+Liebe Eltern,
+
+am Samstag, den 4. Juni gibt es in der Albert-Schweitzer-Schule ein kleines Fest zur Eröffnung des neuen Schulhofs. Dazu laden wir Sie herzlich ein. Beginn 15 Uhr
+
+16.00 Uhr: Aufführung der Music Kids und ein kleines Theaterstück der Klassen 4a und 4b – alles auf dem neuen Schulhof, bei schlechtem Wetter in der Aula.
+
+Für Essen und Trinken ist gesorgt. Bitte bringen Sie aber, um Müll zu vermeiden, Tassen, Becher usw. mit. Sie finden unsere herzhaften und süßen Angebote sowie die Getränke auf dem neuen Schulhof und in der Cafeteria. Auf dem Fest können Sie auch die neuen Schul-T-Shirts kaufen, die endlich eingetroffen sind. Wir freuen uns auf Ihr Kommen!
+Aufgaben:
+[33] Die Schule plant ein Fest, weil die neue Cafeteria fertig ist.
+Lösung: falsch
+
+[34] Die Festbesucher sollen
+A) T-Shirts der Schule tragen.
+B) eigenes Geschirr mitbringen.
+C) auf dem Schulhof Theater spielen.
+Lösung: B
+
+Text:
+An alle Mieter!
+
+Immer wieder beschweren sich Mieter über den Zustand des Kellers. Dort sind viele Fahrräder abgestellt, die nicht genutzt werden, sodass Mieter Probleme haben, an ihre Fahrräder zu kommen.
+Wir bitten Sie, an Ihr Fahrrad ein Namensschild zu hängen und Räder, die nicht benutzt werden, bis zum 1. August aus dem Keller zu nehmen. Außerdem bitten wir Sie, andere Gegenstände, z. B. alte Möbel, die nicht in den Keller gehören und dort abgestellt wurden, auch bis zum 1. August zu entfernen.
+Wenn das nicht geschieht, werden wir einer Firma den Auftrag geben, Fahrräder ohne Namensschild und die Sachen, die nicht in den Keller gehören, abzutransportieren. Die Kosten verteilen wir auf alle Mieter. Danach gilt die Regelung: Jeder Mieter darf nur noch ein Fahrrad in den Keller stellen.
+
+Vielen Dank für Ihr Verständnis.
+Aufgaben:
+[35] Der Fahrradkeller ist zu voll.
+Lösung: richtig
+
+[36] Nach dem 1. August
+A) dürfen keine Räder mehr in den Keller gestellt werden.
+B) müssen die Mieter etwas zahlen, wenn sie ihr Fahrrad in den Keller stellen.
+C) gibt es im Keller nur noch Platz für ein Fahrrad für jeden Mieter.
+Lösung: C
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+VERBRAUCHER-INFORMATION
+Handy-Kündigung – Wie kündige ich richtig?
+
+Sie wollen Ihren Anbieter wechseln?
+Bei der Kündigung eines Handyvertrags gibt es eine Mindestvertragslaufzeit. Diese beträgt meistens zwei Jahre. Danach verlängert sich der Vertrag automatisch, meistens um weitere sechs bis zwölf Monate.
+
+Unterschreiben Sie das Kündigungsschreiben persönlich. Kündigen Sie nicht per E-Mail. Kündigungen ohne persönliche Unterschrift werden oft nicht anerkannt.
+
+Bei Kündigungen gibt es eine Kündigungsfrist. Diese beträgt in der Regel drei Monate. Die Kündigung muss beim Handyanbieter also spätestens drei Monate vor Ende der Vertragslaufzeit eingehen. In Ausnahmefällen können Sie auch kündigen, ohne sich an diese Frist zu halten. Dann müssen Sie aber einen Kündigungsgrund angeben.
+Informieren Sie sich vorher, falls Sie Zweifel haben.
+Am besten kündigen Sie per Einschreiben mit Rückschein: Der Empfänger unterschreibt dann persönlich, dass er die Kündigung erhalten hat.
+
+Was noch interessant sein könnte:
+Bei einem Wechsel des Anbieters können Sie Ihre alte Nummer meistens mitnehmen. Dafür müssen Sie aber eine Gebühr bezahlen.
+Vorsicht: Einige Anbieter verlangen nach Vertragsende die SIM-Karte zurück. Wenn Sie diese nicht zurückgeben, kann das 30 € kosten.
+
+Wenn Sie Ihre alte Handynummer zum neuen Anbieter mitnehmen möchten, ist es sinnvoll, wenn Sie eine Kündigungsbestätigung von Ihrem alten Anbieter an den neuen Anbieter schicken. Darin sollten die wichtigsten Details wie Zeitpunkt des Vertragsendes und Ihre Kundendaten stehen.
+Aufgaben:
+[37] Normalerweise müssen Sie Ihr Handy mindestens drei Monate vor Ende des Vertrags kündigen.
+Lösung: richtig
+
+[38] Sie müssen bei einer Kündigung immer auch Gründe für die Kündigung angeben.
+Lösung: falsch
+
+[39] Die Mitnahme der alten Handynummer ist kostenlos.
+Lösung: falsch
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+Agentur für Arbeit · Familienkasse · Fischerfeldstraße 10–12 · 60311 Frankfurt
+Frankfurt, den 17. September 2010
+
+Ihr Antrag auf Kindergeld
+
+(40) Herr Usta,
+
+Ihr Antrag auf Kindergeld ist heute eingegangen.
+Leider fehlen noch einige (41). Auch haben Sie vergessen, den Antrag zu (42).
+Wir (43) Sie bitten, in den nächsten Tagen zwischen 8.00 und 12.00 Uhr bei der Familienkasse (Raum 311) vorbeizukommen.
+Falls einige Punkte im Antragsformular unklar sein sollten, helfen wir (44) gern.
+
+Mit (45) Grüßen
+
+Ihre Agentur für Arbeit
+Aufgaben:
+[40] Lücke 40
+A) Sehr geehrte
+B) Sehr geehrter
+C) Lieber
+Lösung: B
+
+[41] Lücke 41
+A) Aufgaben
+B) Angaben
+C) Ansagen
+Lösung: B
+
+[42] Lücke 42
+A) beschreiben
+B) verschreiben
+C) unterschreiben
+Lösung: C
+
+[43] Lücke 43
+A) möchten
+B) können
+C) sollen
+Lösung: A
+
+[44] Lücke 44
+A) Sie
+B) Ihnen
+C) euch
+Lösung: B
+
+[45] Lücke 45
+A) lieben
+B) fröhlichen
+C) freundlichen
+Lösung: C
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie haben von Ihrem Vermieter eine Einladung zur Mieterversammlung bekommen. Sie können an diesem Termin nicht teilnehmen. Schreiben Sie an Ihren Vermieter, Herrn Schneider.
+
+Schreiben Sie etwas über folgende Punkte. Vergessen Sie nicht die Anrede und den Gruß.
+- Grund für Ihr Schreiben
+- Entschuldigung für Ihr Fehlen
+- wer Sie bei der Versammlung vertritt
+- Bitte um Zusendung des Protokolls
+
+oder
+
+Aufgabe B:
+Ihr Sohn hat die Schule gewechselt. Die neue Schule liegt weit von Ihrer Wohnung entfernt. Schreiben Sie einen Brief an das Schulamt und beantragen Sie eine Schulfahrkarte.
+
+Schreiben Sie etwas über folgende Punkte. Vergessen Sie nicht die Anrede und den Gruß.
+- Grund für Ihr Schreiben
+- Angaben zu Ihrem Kind und zur neuen Schule
+- Weg zur Schule
+- Bitte um eine kostenlose Schulfahrkarte

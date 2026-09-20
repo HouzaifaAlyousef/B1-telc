@@ -1,0 +1,428 @@
+// =====================================================================
+// LEERE VORLAGE — telc Deutsch B2 Beruf (DTB B2)
+//
+// Struktur des Deutsch-Tests für den Beruf B2:
+// - Lesen (45 Minuten): Teile 1, 2, 3, 4 (Aufgaben 1–18)
+// - Lesen und Schreiben (20 Minuten): Teile 1, 2 (Aufgaben 19–20 + Beschwerde)
+// - Hören (20 Minuten): Teile 1, 2, 3, 4 (Aufgaben 22–40)
+// - Hören und Schreiben: Telefonnotiz (Aufgabe 41)
+// - Sprachbausteine (20 Minuten): Teile 1, 2 (Aufgaben 46–57)
+// =====================================================================
+
+# <PRUEFUNGSNAME>
+Untertitel: 45 Aufgaben · 120 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 1–18
+Punkte: 54
+Teile: lv1, lv2, lv3, lv4
+
+## Block: block-lesen-schreiben
+Titel: Lesen und Schreiben
+Minuten: 20
+Hinweis: Aufgaben 19–20 und Beschwerdeantwort
+Punkte: 13
+Teile: lvs1, lvs2
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 22–40
+Punkte: 57
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-hoeren-schreiben
+Titel: Hören und Schreiben
+Minuten: 15
+Hinweis: Aufgabe 41 und Telefonnotiz
+Punkte: 9
+Teile: hvs
+
+## Block: block-sb
+Titel: Sprachbausteine
+Minuten: 20
+Hinweis: Aufgaben 46–57
+Punkte: 6
+Teile: sb1, sb2
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie die Aufgaben 1–5 und die Informationen a–h. Welche Information passt zu welcher Situation?
+Auswahltitel: Informationen
+Auswahl:
+A = <Information A>
+B = <Information B>
+C = <Information C>
+D = <Information D>
+E = <Information E>
+F = <Information F>
+G = <Information G>
+H = <Information H>
+Aufgaben:
+[1] <Situation 1>
+Lösung: <A bis H>
+[2] <Situation 2>
+Lösung: <A bis H>
+[3] <Situation 3>
+Lösung: <A bis H>
+[4] <Situation 4>
+Lösung: <A bis H>
+[5] <Situation 5>
+Lösung: <A bis H>
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 12
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie den Text und die Aufgaben 6–9. Entscheiden Sie, welche Lösung richtig ist.
+Text:
+**<Titel der Mitteilung>**
+<Textabsatz 1>
+<Textabsatz 2>
+Aufgaben:
+[6] <Aussage 6>
+A) richtig
+B) falsch
+Lösung: <A oder B>
+[7] <Aussage 7>
+A) richtig
+B) falsch
+Lösung: <A oder B>
+[8] <Frage 8>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[9] <Frage 9>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 3
+Maximum: 12
+Anweisung: Lesen Sie die Situationen 10–13 und die Forumsbeiträge a–f. Welcher Beitrag passt zu welcher Situation? Wenn kein Beitrag passt, wählen Sie X.
+Auswahltitel: Forumsbeiträge
+Auswahl:
+A = <Beitrag A>
+B = <Beitrag B>
+C = <Beitrag C>
+D = <Beitrag D>
+E = <Beitrag E>
+F = <Beitrag F>
+X = <Kein Beitrag passt>
+Aufgaben:
+[10] <Situation 10>
+Lösung: <A bis F oder X>
+[11] <Situation 11>
+Lösung: <A bis F oder X>
+[12] <Situation 12>
+Lösung: <A bis F oder X>
+[13] <Situation 13>
+Lösung: <A bis F oder X>
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 13
+Punkte: 3
+Maximum: 15
+Anweisung: Lesen Sie das Protokoll und die Aufgaben 14–18. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**<Titel des Protokolls>**
+<Protokolltext>
+Aufgaben:
+[14] <Frage 14>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[15] <Frage 15>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[16] <Frage 16>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[17] <Frage 17>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[18] <Frage 18>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: lvs1
+Format: mc
+Titel: Lesen und Schreiben, Teil 1
+Gruppe: Lesen und Schreiben
+Minuten: 5
+Punkte: 3
+Maximum: 6
+Anweisung: Lesen Sie die E-Mail und die Aufgaben 19–20. Welche Lösung ist jeweils richtig?
+Text:
+**<Betreff der E-Mail>**
+<Text der E-Mail>
+Aufgaben:
+[19] <Frage 19>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[20] <Frage 20>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: lvs2
+Format: writing
+Titel: Lesen und Schreiben, Teil 2
+Gruppe: Lesen und Schreiben
+Minuten: 15
+Punkte: 7
+Maximum: 7
+Anweisung: Antworten Sie auf die Beschwerde.
+Text:
+<Beschwerdetext und Anweisungen>
+Aufgaben:
+[B] Antworten Sie auf die Beschwerde.
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 3
+Maximum: 18
+Anweisung: Sie hören drei Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort am besten passt.
+Aufgaben:
+[22] <Aussage 22>
+A) richtig
+B) falsch
+Lösung: <A oder B>
+[23] <Frage 23>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[24] <Aussage 24>
+A) richtig
+B) falsch
+Lösung: <A oder B>
+[25] <Frage 25>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[26] <Aussage 26>
+A) richtig
+B) falsch
+Lösung: <A oder B>
+[27] <Frage 27>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hv2
+Format: matching
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören vier Aussagen. Welche Aussage a–f passt zu welcher Person 28–31?
+Auswahltitel: Aussagen
+Auswahl:
+A = <Aussage A>
+B = <Aussage B>
+C = <Aussage C>
+D = <Aussage D>
+E = <Aussage E>
+F = <Aussage F>
+Aufgaben:
+[28] Person 1
+Lösung: <A bis F>
+[29] Person 2
+Lösung: <A bis F>
+[30] Person 3
+Lösung: <A bis F>
+[31] Person 4
+Lösung: <A bis F>
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 5
+Punkte: 3
+Maximum: 12
+Anweisung: Sie hören einen Vortrag. Wählen Sie für die Aufgaben 32–35 die richtige Lösung A, B oder C.
+Aufgaben:
+[32] <Frage 32>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[33] <Frage 33>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[34] <Frage 34>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[35] <Frage 35>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hv4
+Format: mc
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 3
+Maximum: 15
+Anweisung: Sie hören fünf Ansagen auf der Mailbox. Wählen Sie für die Aufgaben 36–40 die richtige Lösung A, B oder C.
+Aufgaben:
+[36] <Frage 36>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[37] <Frage 37>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[38] <Frage 38>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[39] <Frage 39>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[40] <Frage 40>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hvs
+Format: writing
+Titel: Hören und Schreiben, Telefonnotiz
+Gruppe: Hören und Schreiben
+Minuten: 15
+Punkte: 9
+Maximum: 9
+Anweisung: Hören Sie die Nachricht und füllen Sie die Telefonnotiz aus.
+Text:
+<Telefonnotiz Angaben>
+Aufgaben:
+[41] Dokumentieren Sie die Kundenanfrage in der Telefonnotiz.
+
+### Teil: sb1
+Format: matching
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 46–51. Welches Wort aus der Liste a–h passt in welche Lücke?
+Auswahltitel: Wörterliste
+Auswahl:
+A = <Wort A>
+B = <Wort B>
+C = <Wort C>
+D = <Wort D>
+E = <Wort E>
+F = <Wort F>
+G = <Wort G>
+H = <Wort H>
+Text:
+<Lückentext>
+Aufgaben:
+[46] Lücke 46
+Lösung: <A bis H>
+[47] Lücke 47
+Lösung: <A bis H>
+[48] Lücke 48
+Lösung: <A bis H>
+[49] Lücke 49
+Lösung: <A bis H>
+[50] Lücke 50
+Lösung: <A bis H>
+[51] Lücke 51
+Lösung: <A bis H>
+
+### Teil: sb2
+Format: mc
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 10
+Punkte: 0.5
+Maximum: 3
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 52–57. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+<Lückentext>
+Aufgaben:
+[52] Lücke 52
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[53] Lücke 53
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[54] Lücke 54
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[55] Lücke 55
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[56] Lücke 56
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[57] Lücke 57
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
