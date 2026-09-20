@@ -376,12 +376,23 @@ check "★ كل مفتاح منقول شكله صح (٤٥ حلّ بتسع أقس
 python3 tools/check_dtz_keys.py >/dev/null 2>&1
 check "★★ كل حلّ DTZ مطابق للمفتاح المطبوع" $?
 
-# ---------- ★ مفتاح ÖSD ----------
-python3 -c "import ast,sys; ast.parse(open('tools/check_oesd_keys.py').read())"
-check "check_oesd_keys.py صحيح نحوياً" $?
+# ---------- ★ مفاتيح المستويات يلي مصدرها مسح صور ----------
+# ★ ÖSD وGoethe بنفس الأداة مو بتنتين: نفس الشكل بالضبط، والفرق بترميز
+#   الخيارات وهو مكتوب بالـJSON.
+python3 -c "import ast,sys; ast.parse(open('tools/check_scan_keys.py').read())"
+check "check_scan_keys.py صحيح نحوياً" $?
 
-python3 tools/check_oesd_keys.py >/dev/null 2>&1
-check "★★ كل حلّ ÖSD مطابق للمطبوع" $?
+python3 -c "
+import json, glob
+for f in glob.glob('Doku/schluessel/*.json'):
+    d=json.load(open(f,encoding='utf-8'))
+    assert d.get('schluessel'), f
+    assert d.get('_wie'), f + ' — لازم يقول من وين انجاب المفتاح'
+"
+check "★ كل ملف مفتاح بيقول من وين انجاب" $?
+
+python3 tools/check_scan_keys.py >/dev/null 2>&1
+check "★★ كل حلّ ÖSD وGoethe مطابق للمصدر" $?
 
 # ---------- ربط التسجيلات ----------
 # ★ الأداة بتنسخ وبتكتب `Hörtext:` بضربة. الفحص بيجرّبها على بنية
