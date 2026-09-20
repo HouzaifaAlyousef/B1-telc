@@ -357,6 +357,25 @@ check "check_b2_keys.py صحيح نحوياً" $?
 OUT=$(python3 tools/check_b2_keys.py --pdf /nope.pdf 2>&1); [ $? -ne 0 ]
 check "★ وبلا مصدر بيوقف، ما بينهار" $?
 
+# ---------- ★ مفتاح DTZ ----------
+# ★ مصادر DTZ مسح صور، فالمفتاح منقول بالإيد لـDoku/schluessel/dtz-b1.json.
+#   الفحص بيمشي بلا PDF، فبيشتغل بالبايبلاين كمان.
+python3 -c "import ast,sys; ast.parse(open('tools/check_dtz_keys.py').read())"
+check "check_dtz_keys.py صحيح نحوياً" $?
+
+python3 -c "
+import json
+d=json.load(open('Doku/schluessel/dtz-b1.json',encoding='utf-8'))
+want=[4,5,8,3,5,5,6,3,6]
+for m,v in d['schluessel'].items():
+    got=[len(t.split()) for t in v.split('|')]
+    assert got==want, (m,got)
+"
+check "★ كل مفتاح منقول شكله صح (٤٥ حلّ بتسع أقسام)" $?
+
+python3 tools/check_dtz_keys.py >/dev/null 2>&1
+check "★★ كل حلّ DTZ مطابق للمفتاح المطبوع" $?
+
 # ---------- ربط التسجيلات ----------
 # ★ الأداة بتنسخ وبتكتب `Hörtext:` بضربة. الفحص بيجرّبها على بنية
 #   تحميل حقيقية الشكل — مجلّد لكل نموذج، وملفّ لكل جزء — وبيتأكّد إنّ

@@ -1,0 +1,25 @@
+{
+  "_": "نسخ يدوي لصفحة الحلول المطبوعة بكل نموذج DTZ B1.",
+  "_wie": "مصادر DTZ مسح صور بلا طبقة نصّ، فما بتنقرا آلياً. قرينا صفحة الحلول بالعين وكتبناها هون، وtools/check_dtz_keys.py بيقارنها بالمخزّن.",
+  "_quelle": "Doku/feed pdf/dtz/b1/*.pdf",
+  "_teile": "1-4 hv1 · 5-9 hv2 · 10-17 hv3 · 18-20 hv4 · 21-25 lv1 · 26-30 lv2 · 31-36 lv3 · 37-39 lv4 · 40-45 lv5",
+  "_zeichen": "r = richtig · f = falsch · x = ما في إعلان مناسب",
+  "_ohne": {
+    "10": "ملفّه (النموذج العاشر) ما فيه صفحة حلول — انفحص بالقراءة"
+  },
+  "seiten": {
+    "01": "النموذج-الأول ص18", "02": "النموذج-الثاني ص18", "03": "النموذج-الثالث ص18",
+    "04": "النموذج-الرابع ص21", "06": "النموذج-السادس ص19", "07": "النموذج السابع ص14 (قصاصة حلّ، مو صفحة الكتاب)",
+    "08": "النموذج الثامن ص19", "09": "النموذج التاسع ص19"
+  },
+  "schluessel": {
+    "01": "a c c a | b b c c b | f a f a r a f c | d f e | c b b c b | c a x f e | r b f b f b | r f f | a b b b b a",
+    "02": "b a b c | b a c b b | f a r a f b f c | d e c | b b c b b | c a f x e | f a f b r c | f f r | b b b a a a",
+    "03": "c b b c | a c a c c | f c f c r c f b | e a d | a b a a c | f a b e x | f b f c r a | f f r | c a a b b b",
+    "04": "a c a c | b a a a a | r c r c f b f c | f e c | b c c b b | h a x e c | r c r c r a | f f f | a a c a a a",
+    "06": "b a a c | c c b c a | r a f a r b f c | c e a | a c b a b | c h x d a | f c f b r a | r f f | b b a a c b",
+    "07": "b c b a | b a c a b | f a f c f a r c | f a c | c b c b b | e f d c x | r a f b r c | r f f | b b c a b c",
+    "08": "b c a c | a b c b a | f c f b r c f b | f a c | a b a c b | c h e x d | r c r b r b | r r f | a c b c b a",
+    "09": "c a b c | b a c b b | f b r b r a r c | f c d | b a b c a | c b h x g | r c f b r b | f r f | b c a c b a"
+  }
+}
