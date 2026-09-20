@@ -376,6 +376,13 @@ check "★ كل مفتاح منقول شكله صح (٤٥ حلّ بتسع أقس
 python3 tools/check_dtz_keys.py >/dev/null 2>&1
 check "★★ كل حلّ DTZ مطابق للمفتاح المطبوع" $?
 
+# ---------- ★ مفتاح ÖSD ----------
+python3 -c "import ast,sys; ast.parse(open('tools/check_oesd_keys.py').read())"
+check "check_oesd_keys.py صحيح نحوياً" $?
+
+python3 tools/check_oesd_keys.py >/dev/null 2>&1
+check "★★ كل حلّ ÖSD مطابق للمطبوع" $?
+
 # ---------- ربط التسجيلات ----------
 # ★ الأداة بتنسخ وبتكتب `Hörtext:` بضربة. الفحص بيجرّبها على بنية
 #   تحميل حقيقية الشكل — مجلّد لكل نموذج، وملفّ لكل جزء — وبيتأكّد إنّ
