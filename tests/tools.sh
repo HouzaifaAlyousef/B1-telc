@@ -390,13 +390,37 @@ python3 -c "
 import json, glob
 for f in glob.glob('Doku/schluessel/*.json'):
     d=json.load(open(f,encoding='utf-8'))
-    assert d.get('schluessel'), f
-    assert d.get('_wie'), f + ' — لازم يقول من وين انجاب المفتاح'
+    # ملف مفتاح منقول، أو ملف تسجيل قراءة — التنين لازم يقولوا من وين
+    assert d.get('schluessel') or d.get('gelesen'), f
+    assert d.get('_wie'), f + ' — لازم يقول من وين انجاب'
 "
-check "★ كل ملف مفتاح بيقول من وين انجاب" $?
+check "★ كل ملف مفتاح/قراءة بيقول من وين انجاب" $?
 
 python3 tools/check_scan_keys.py >/dev/null 2>&1
 check "★★ كل حلّ ÖSD وGoethe مطابق للمصدر" $?
+
+# ---------- ★ الصور ----------
+# ★ بأقسام كتير الصورة هي مصدر الجواب الوحيد: بنك telc B1 lv3 النصّي
+#   فاضي تماماً، وDTZ lv1 نصّه كلّه بالصورة. صورة بمحلّ غلط = قسم بلا
+#   جواب، وما في شي بيصرخ وقتها.
+python3 -c "import ast,sys; ast.parse(open('tools/check_images.py').read())"
+check "check_images.py صحيح نحوياً" $?
+
+python3 tools/check_images.py >/dev/null 2>&1
+check "★★ كل صورة موجودة، بمحلّها، بلا يتيم ولا مكرّر" $?
+
+# ---------- ★ جرد التغطية ----------
+python3 -c "import ast,sys; ast.parse(open('tools/coverage.py').read())"
+check "coverage.py صحيح نحوياً" $?
+
+python3 -c "
+import json
+d=json.load(open('Doku/schluessel/gelesen.json',encoding='utf-8'))
+assert d['gelesen'] and d.get('_offen')
+for e in d['gelesen']:
+    assert e.get('grund'), e   # كل قسم مقروء لازم يقول ليش وكيف
+"
+check "★ كل قسم مفحوص بالقراءة مكتوب معه دليله" $?
 
 # ---------- ربط التسجيلات ----------
 # ★ الأداة بتنسخ وبتكتب `Hörtext:` بضربة. الفحص بيجرّبها على بنية
@@ -629,7 +653,7 @@ check "check_keys.py صحيح نحوياً" $?
 python3 -c "import pymupdf" 2>/dev/null || python3 -c "import pypdf" 2>/dev/null
 if [ $? = 0 ] && [ -f "Doku/B1 Telc.pdf" ]; then
   OUT=$(python3 tools/check_keys.py 2>&1); R=$?
-  echo "$OUT" | grep -q "مغطّى 15 نموذج"
+  echo "$OUT" | grep -qE "بـ15 نموذج من 19"
   check "★ مفتاح الكتاب انقرا لـ١٥ نموذج" $?
   [ "$R" = 0 ]
   check "★★ كل حلّ مطابق للمفتاح أو مخالفته موثّقة ($(echo "$OUT" | grep -o '[0-9]* مخالفة موثّقة'))" $?

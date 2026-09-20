@@ -116,11 +116,13 @@ def main():
              json.load(open(ALLOW, encoding='utf-8'))['abweichungen']} \
             if os.path.exists(ALLOW) else set()
 
-    diffs, known = [], 0
+    diffs, known, checked, lesen_n = [], 0, 0, 0
     for m in sorted(best):
         sc, k, w, origin = best[m]
         for n, (sid, cur, opts) in sorted(app[m].items()):
             if n not in k or not cur: continue
+            checked += 1
+            if not sid.startswith('hv'): lesen_n += 1
             truth = resolve(k[n], w.get(n), opts)
             truth = truth.lower() if sid.startswith('hv') else truth
             if str(cur).lower() == str(truth).lower():
@@ -132,7 +134,8 @@ def main():
 
     missing = sorted(set(app) - set(best))
     print(f'محرّك القراءة: {engine}')
-    print(f'مغطّى {len(best)} نموذج من {len(app)} · {known} مخالفة موثّقة')
+    print(f'انفحص {checked} حلّ بـ{len(best)} نموذج من {len(app)} '
+          f'(منهن {lesen_n} قراءة) · {known} مخالفة موثّقة')
     if missing:
         print(f'· بلا مفتاح بهالكتاب: {", ".join(missing)} — ما انفحصوا')
     if diffs:
