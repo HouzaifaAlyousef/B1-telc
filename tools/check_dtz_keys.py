@@ -73,6 +73,8 @@ def main():
             s = secs.get(sid)
             for j in range(n):
                 want = vals[i]; i += 1
+                # «؟» = ما في مفتاح مطبوع لهالسؤال (نموذج ١٠ سماعه)
+                if want == '?': continue
                 if not s or j >= len(s.get('items') or []): continue
                 it = s['items'][j]
                 cur = it.get('answer')
