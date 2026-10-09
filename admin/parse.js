@@ -75,7 +75,14 @@ const Markup = (() => {
           const b = /^\*\*.*\*\*$/.test(t);
           paragraphs.push({ t: b ? t.replace(/^\*\*|\*\*$/g, '').trim() : t, b });
         });
-        if (paragraphs.length) passages.push({ paragraphs });
+        if (paragraphs.length){
+          const p = { paragraphs };
+          // ★ at = كم سؤال انكتب قبل هالنص. بيخلّي العرض يحط كل نص فوق
+          //    أسئلته هو. بينتخزّن بس لما > 0، فالأقسام بنص واحد أو §§§
+          //    بتضل بلا at ومتل ما هي.
+          if (sec && sec.items && sec.items.length) p.at = sec.items.length;
+          passages.push(p);
+        }
       }
       buf = [];
     };
@@ -419,20 +426,8 @@ const Markup = (() => {
         L.push('Extra:', JSON.stringify(extra, null, 1));
       }
 
-      if (s.passages && s.passages.length){
-        L.push('Text:');
-        s.passages.forEach((p, i) => {
-          if (i) L.push('§§§');
-          (p.paragraphs || []).forEach(x => L.push(x.b ? `**${x.t}**` : x.t));
-        });
-      }
-      if (s.bank && s.bank.length){
-        L.push('Auswahl:');
-        s.bank.forEach(o => L.push(`${o.key} = ${o.text || ''}`));
-      }
-
-      L.push('Aufgaben:');
-      (s.items || []).forEach(it => {
+      const items = s.items || [];
+      const writeItem = it => {
         L.push(`[${it.id}] ${String(it.text || '').replace(/\s+/g, ' ').trim()}`);
         (it.options || []).forEach(o => L.push(`${o.key}) ${o.text}`));
         if (it.minWords != null) L.push(`Mindestwörter: ${it.minWords}`);
@@ -442,7 +437,37 @@ const Markup = (() => {
           L.push(`Lösung: ${s.format === 'truefalse'
             ? (it.answer === 'r' ? 'richtig' : 'falsch') : it.answer}`);
         }
-      });
+      };
+      const passages = s.passages || [];
+      // ★ نص متداخل مع أسئلته: Text: … Aufgaben: [أسئلته] متكرّر. بيحفظ
+      //    at عند الـround-trip. بس لما في at فعلي وما في بنك اختيارات.
+      const interleaved = passages.length > 1
+        && passages.some(p => p.at) && !(s.bank && s.bank.length);
+
+      if (interleaved){
+        passages.forEach((p, i) => {
+          L.push('Text:');
+          (p.paragraphs || []).forEach(x => L.push(x.b ? `**${x.t}**` : x.t));
+          const start = p.at || 0;
+          const end = (i + 1 < passages.length) ? (passages[i + 1].at || 0) : items.length;
+          L.push('Aufgaben:');
+          items.slice(start, end).forEach(writeItem);
+        });
+      } else {
+        if (passages.length){
+          L.push('Text:');
+          passages.forEach((p, i) => {
+            if (i) L.push('§§§');
+            (p.paragraphs || []).forEach(x => L.push(x.b ? `**${x.t}**` : x.t));
+          });
+        }
+        if (s.bank && s.bank.length){
+          L.push('Auswahl:');
+          s.bank.forEach(o => L.push(`${o.key} = ${o.text || ''}`));
+        }
+        L.push('Aufgaben:');
+        items.forEach(writeItem);
+      }
     });
     return L.join('\n') + '\n';
   }

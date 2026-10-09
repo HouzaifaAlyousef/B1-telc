@@ -828,8 +828,7 @@ function screenExam(run, resumeLeft){
       <section class="part" id="part-${esc(p.id)}">
         ${run.parts.length > 1 ? `<h2 class="parthead">${esc(p.title)}</h2>
           <div class="instr">${esc(p.instruction)}</div>` : ''}
-        ${renderPassages(p)}${renderBank(p)}
-        ${p.items.map(it => renderItem(p, it)).join('')}
+        ${examBody(p)}
       </section>`).join('');
 
     app.innerHTML = nav + body +
@@ -1033,18 +1032,43 @@ function renderAudio(sec){
   return `<div class="audio" id="${slot}"><p class="sub">${esc(t('audioLoading'))}</p></div>`;
 }
 
+function passageHTML(p){
+  return `<div class="passage">
+      ${p.title ? `<h3>${esc(p.title)}</h3>` : ''}
+      ${(p.paragraphs || []).map(x =>
+        `<p${x.b ? ' class="strong"' : ''}>${esc(x.t)}</p>`).join('')}
+    </div>`;
+}
+
 function renderPassages(sec){
   if (sec.brief) return renderBrief(sec);
   // Bei einem echten Hörtext ist das Transkript die Lösung — während der
   // Prüfung bleibt es weg, in der Auswertung darf es erscheinen.
   if (sec.audio && S.view === 'exam') return renderAudio(sec);
   if (!sec.passages || !sec.passages.length) return renderAudio(sec);
-  return renderAudio(sec) + sec.passages.map(p => `
-    <div class="passage">
-      ${p.title ? `<h3>${esc(p.title)}</h3>` : ''}
-      ${(p.paragraphs || []).map(x =>
-        `<p${x.b ? ' class="strong"' : ''}>${esc(x.t)}</p>`).join('')}
-    </div>`).join('');
+  return renderAudio(sec) + sec.passages.map(passageHTML).join('');
+}
+
+/* محتوى القسم بشاشة الامتحان: النصوص والأسئلة سوا.
+   لو النصوص عندها at (نص متداخل مع أسئلته) → كل نص ثم أسئلته مباشرة.
+   غير هيك → السلوك المعتاد: كل النصوص، ثم البنك، ثم كل الأسئلة. */
+function examBody(sec){
+  const pas = sec.passages || [];
+  const canInterleave = !sec.brief && !(sec.audio && S.view === 'exam')
+    && pas.length > 1 && pas.some(p => p.at);
+  if (!canInterleave)
+    return renderPassages(sec) + renderBank(sec)
+         + (sec.items || []).map(it => renderItem(sec, it)).join('');
+
+  const items = sec.items || [];
+  let html = renderAudio(sec) + renderBank(sec);
+  pas.forEach((p, i) => {
+    const start = p.at || 0;
+    const end = (i + 1 < pas.length) ? (pas[i + 1].at || 0) : items.length;
+    html += passageHTML(p)
+          + items.slice(start, end).map(it => renderItem(sec, it)).join('');
+  });
+  return html;
 }
 
 function renderBank(sec){
