@@ -1,0 +1,478 @@
+# BOUZIDI
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Sie müssen heute noch zum Arzt. Welche Nummer müssen Sie anrufen?
+A) 19292.
+B) 457732.
+C) 0160 3221320.
+Lösung: B
+
+[2] Sie möchten sich für einen Deutschkurs anmelden. Was sollen Sie tun?
+A) Sich im Kurs anmelden.
+B) Montags oder mittwochs vorbeikommen.
+C) Die Nummer 21271555 wählen.
+Lösung: B
+
+[3] Was für eine Wohnung kann Familie Kim bekommen?
+A) Eine 3-Zimmer-Wohnung.
+B) Eine Wohnung mit Balkon.
+C) Eine 2-Zimmer-Wohnung.
+Lösung: C
+
+[4] Was soll Herr Bouzidi tun?
+A) Die Firma Thor anrufen.
+B) Zwischen 17 und 19 Uhr bei der Firma Thor vorbeikommen.
+C) Den Gasherd anschließen.
+Lösung: B
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Was hören Sie?
+A) Den Wetterbericht.
+B) Eine Verkehrsmeldung.
+C) Die Nachrichten.
+Lösung: B
+
+[6] Wie wird das Wetter im Norden?
+A) Es wird wärmer.
+B) Es wird kühl.
+C) Es regnet.
+Lösung: B
+
+[7] Wo gibt es einen Stau?
+A) Auf der A 3.
+B) Auf der A 8.
+C) Auf der A 9.
+Lösung: B
+
+[8] Auf der Silvesterparty
+A) treten Gruppen aus verschiedenen Ländern auf.
+B) gibt es nur Musik in deutscher Sprache.
+C) kann man Preise gewinnen.
+Lösung: A
+
+[9] Bis wann müssen Sie Ihre Versicherung kündigen?
+A) Bis Ende November.
+B) Bis zum Jahresende.
+C) Es gibt keinen festen Termin.
+Lösung: A
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 8
+Punkte: 1
+Maximum: 8
+Wiedergaben: 2
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Die Kundin bringt ihren Computer zur Reparatur.
+A) richtig
+B) falsch
+Lösung: A
+
+[11] Die Kundin
+A) braucht den Computer erst am Donnerstag.
+B) braucht den Computer für die Arbeit.
+C) möchte am liebsten einen Laptop kaufen.
+Lösung: B
+
+[12] Herr Tsegai ist zurzeit arbeitslos.
+A) richtig
+B) falsch
+Lösung: A
+
+[13] Welche Pläne hat Herr Tsegai?
+A) Er möchte einen Deutschkurs machen.
+B) Er sucht eine Ausbildung als Verkäufer.
+C) Er möchte als Bäcker arbeiten.
+Lösung: B
+
+[14] Das Gespräch findet in der Kinderbibliothek statt.
+A) richtig
+B) falsch
+Lösung: A
+
+[15] In der Kinderbibliothek
+A) werden auch Filme gezeigt.
+B) kann man Filme für zwei Euro ausleihen.
+C) kann man sehr günstig alte Bücher kaufen.
+Lösung: A
+
+[16] Die Kundin möchte eine Ware zurückgeben.
+A) richtig
+B) falsch
+Lösung: A
+
+[17] Was ist das Problem?
+A) Die Kundin hat den Kassenzettel verloren.
+B) Die Ware ist nicht frisch.
+C) Die Kasse ist geschlossen.
+Lösung: A
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 3
+Wiedergaben: 2
+Anweisung: Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen 18–20?
+Auswahltitel: Aussagen zum Umweltschutz
+Auswahl:
+a = Die Politik müsste die Parkgebühren erhöhen.
+b = Die Fahrpreise für Busse, Straßenbahnen, S- und U-Bahnen sollten niedriger sein.
+c = Beim Umweltschutz müssten alle Länder zusammenarbeiten.
+d = Man sollte weniger Verpackung herstellen.
+e = Um die Umwelt zu schützen, sollte man weniger einkaufen.
+f = Jeder Müll müsste kostenlos abgeholt werden.
+Aufgaben:
+[18] Sprecher 1
+Lösung: b
+
+[19] Sprecher 2
+Lösung: d
+
+[20] Sprecher 3
+Lösung: a
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie suchen Adressen, Telefonnummern und Tipps in Ihrem Stadtmagazin. Lesen Sie die Aufgaben 21–25 und das Inhaltsverzeichnis aus dem Stadtmagazin. In welcher Rubrik (a, b oder c) finden Sie die passende Information?
+Bild: img/dtz-b1-m10-lv1.jpg
+Aufgaben:
+[21] Ihr Kind hat etwas Schlechtes gegessen und ist sehr krank.
+A) Hilfe
+B) Kinder & Jugend
+C) andere Rubrik
+Lösung: A
+
+[22] Sie möchten wissen, ob in Ihrer Stadt Ihr alter Fernseher kostenlos abgeholt wird.
+A) Kommunikation & Medien
+B) Wohnen
+C) andere Rubrik
+Lösung: B
+
+[23] Sie suchen Adressen, wo Ihre Kinder nachmittags betreut werden können.
+A) Kinder & Jugend
+B) Wohnen
+C) andere Rubrik
+Lösung: A
+
+[24] Ein Kollege besucht Sie. Er sucht ein Zimmer für zwei Monate in einer Wohngemeinschaft.
+A) Soziale Einrichtungen
+B) Besucher
+C) andere Rubrik
+Lösung: C
+
+[25] Sie möchten ein Abendessen machen und suchen ein Kochbuch mit Tipps für ein Essen aus der Region.
+A) Besucher
+B) Einkaufen
+C) andere Rubrik
+Lösung: A
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Situationen 26–30 und die Anzeigen a–h. Finden Sie für jede Situation die passende Anzeige. Für eine Aufgabe gibt es keine Lösung. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m10-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Ihr Bruder hat gerade angefangen, Deutsch zu lernen. Er möchte als KfZ-Mechaniker oder Schlosser arbeiten.
+Lösung: x
+
+[27] Sie möchten sich selbstständig machen, wissen aber noch nicht, ob das das Richtige für Sie ist, und suchen Informationen.
+Lösung: b
+
+[28] Sie arbeiten in einem Büro und möchten sich weiterbilden. Sie möchten besser mit dem Computer arbeiten können.
+Lösung: f
+
+[29] Sie suchen einen Job in einem Restaurant. Sie haben den ganzen Juli über Zeit für den Job.
+Lösung: e
+
+[30] Nach Ihrem Integrationskurs möchten Sie Deutsch für den Beruf lernen, mündlich und schriftlich. Ihr Berufswunsch ist die Arbeit in einem Restaurant. In Ihrer Heimat haben Sie Koch/Köchin gelernt.
+Lösung: d
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+Sehr geehrte Familie Kowalski,
+
+aus dem Jahresabschluss für das letzte Jahr ergeben sich für Ihren Haushalt die folgenden Rechnungsbeträge:
+
+Strom Brutto: 623,58 €,
+Erdgas Brutto: 1 798,35 €,
+Gesamtbetrag: 2 421,93 €.
+
+Einzelheiten zur Berechnung entnehmen Sie bitte der beigefügten Aufstellung.
+
+Die Jahresabrechnung weist für Sie ein Guthaben von 252,20 € auf. Dieses haben wir in den monatlichen Abschlagzahlungen für dieses Jahr berücksichtigt, die sich deshalb auf 180 € monatlich reduzieren.
+
+Wir möchten Sie nochmals auf unser Aktionsangebot SuperSpar aufmerksam machen. Wenn Sie sich für eine Vertragslaufzeit bis zum Ende dieses Jahres verpflichten, können Sie 126,33 € Energiekosten pro Jahr sparen. Sie erhalten für diesen Zeitraum eine Preisgarantie.
+
+Das Angebot ist noch 14 Tage gültig.
+
+Vielen Dank für Ihr Vertrauen in uns, den Energieversorger Mainstrom.
+
+Mit freundlichen Grüßen
+Ihre Mainstrom AG
+Aufgaben:
+[31] Familie Kowalski hat im letzten Jahr zu viel an die Mainstrom AG gezahlt.
+Lösung: richtig
+
+[32] Familie Kowalski kann Geld sparen,
+A) wenn sie monatlich 180 € überweist.
+B) wenn sie bis Ende des Jahres den Energieanbieter nicht wechselt.
+C) wenn sie sich bis Ende des Jahres für den Tarif SuperSpar entscheidet.
+Lösung: C
+
+Text:
+Liebe Eltern,
+
+für das nächste Schuljahr suchen wir wieder engagierte Eltern für unsere
+Hausaufgabenbetreuung.
+
+Haben Sie Lust, Schülern der Klassenstufe 5–7 zu helfen und Ihr Wissen und Ihre Erfahrungen weiterzugeben? Dann machen Sie mit!
+
+• Sie betreuen Kinder der Klassenstufen 5–7 in einer Gruppe von fünf bis zehn Schülern.
+• Sie verpflichten sich, an einem bestimmten Tag in der Woche bei der Hausaufgabenbetreuung mitzuhelfen.
+• Für Ihre Mitarbeit zahlen wir 8,00 Euro je abgehaltener Hausaufgabenbetreuung.
+• Die Betreuung wird mindestens an einem Tag in der Woche angeboten. Wenn die Nachfrage sehr groß ist und genügend Eltern mithelfen, kann das Angebot auch täglich stattfinden.
+
+Die Schule plant einen Info-Abend, an dem wir Ihnen Ihre Aufgaben näher vorstellen und Ihre Fragen beantworten wollen. Über den Termin informieren wir Sie rechtzeitig.
+Aufgaben:
+[33] Die Schule sucht Kinder für die Hausaufgabenbetreuung.
+Lösung: falsch
+
+[34] Die Hausaufgabenbetreuung
+A) gibt es täglich.
+B) kostet 8,00 € pro Stunde.
+C) wird auf einer Veranstaltung der Schule genauer vorgestellt.
+Lösung: C
+
+Text:
+INTEGRATION UND BERUFSORIENTIERUNG
+
+Die neue interkulturelle Internet-Seite Mixopolis ist ein Projekt des Vereins Schulen ans Netz. Mit diesem Projekt soll ein Beitrag zur Integration geleistet werden. Mixopolis will gezielt junge Menschen mit Migrationshintergrund ansprechen, weil diese häufig das Internet als Kommunikationsmedium nutzen.
+
+Bei Mixopolis können Jugendliche ihre Ideen und Gedanken austauschen, dabei spielt es keine Rolle, woher sie kommen: aus Deutschland oder aus anderen Ländern. Man kann hier Ideen und Ratschläge zu den Themen Schule und Studium, Ausbildung und Bewerbung finden. Auch Fragen zum Medienalltag oder zum Studentenleben werden angesprochen.
+
+Nach kostenloser Anmeldung bekommen Jugendliche wichtige Informationen zu Wettbewerben, Aktionen und Messen. Besucher der Website, die sich in neuer Software auskennen, können hierzu Berichte schreiben. Außerdem werden aktuelle Kinofilme vorgestellt, Berufe präsentiert und berühmte Persönlichkeiten interviewt. Junge Menschen vor allem mit Migrationshintergrund beantworten online Fragen zu den verschiedensten Bereichen, unter anderem zum Berufsleben und zu gesellschaftlichen Problemen.
+Aufgaben:
+[35] Beim Projekt Mixopolis haben Jugendliche die Möglichkeit, sich im Internet gegenseitig von ihren Erfahrungen und Problemen zu berichten.
+Lösung: richtig
+
+[36] Auf der Internet-Seite Mixopolis können Jugendliche
+A) kostenlos Filme und Software bekommen.
+B) sich beraten lassen.
+C) Sachen kaufen und verkaufen.
+Lösung: B
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+PATIENTENINFORMATION
+
+Was tun, wenn Ihnen hohe Kosten für eine Zahnbehandlung entstehen?
+Die Lösung: Teilzahlung! Zahlen Sie in monatlichen Raten.
+
+Sie selbst bestimmen nicht nur die Höhe der monatlichen Raten, sondern auch, wann jeden Monat die Zahlung von Ihrem Konto abgebucht wird.
+
+Teilzahlungsmodell A
+Wenn Sie Ihre Zahnarztrechnung in maximal sechs gleich hohen Monatsraten bezahlen, entstehen Ihnen aus der Teilzahlung keine zusätzlichen Kosten. Achten Sie bitte unbedingt darauf, dass Ihr schriftlicher Teilzahlungswunsch und die erste Zahlung innerhalb von 30 Tagen nach Rechnungsdatum bei uns eingehen. Sie müssen den Rechnungsbetrag innerhalb von sechs Monaten ab Rechnungsdatum vollständig bezahlen.
+
+Teilzahlungsmodell B
+Sie möchten den Rechnungsbetrag über einen längeren Zeitraum als sechs Monate aufteilen. Wenn Sie sich für Teilzahlungen mit einer Gesamtlaufzeit von mehr als sechs Monaten ab Rechnungsdatum entscheiden, berechnen wir Zinsen von 0,5 % monatlich. Außerdem berechnen wir eine einmalige Bearbeitungsgebühr von 1 % aus der Forderung, mindestens jedoch € 10.
+
+Stellen Sie heute noch Ihren Antrag.
+Ihre Abrechnungsstelle für Zahnärzte
+Aufgaben:
+[37] Die Teilzahlungen sind nur zinsfrei, wenn Sie Ihre Zahnarztrechnung innerhalb von 30 Tagen bezahlen.
+Lösung: falsch
+
+[38] Wenn Sie länger als sechs Monate bezahlen, entstehen Ihnen neben den Zinsen noch weitere Kosten.
+Lösung: richtig
+
+[39] Sie können selbst festlegen, an welchem Tag im Monat Sie die Raten zahlen möchten.
+Lösung: richtig
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+SCHNEIDER TECHNIK
+Hauptstraße 12 · 70563 Stuttgart · Telefon: 0711-5422132
+
+Frau
+Ilona Lanz
+Mauserstraße 4
+70468 Stuttgart
+
+Stuttgart, 30. November 2010
+
+Zahlungserinnerung – Unsere Rechnung vom 8. Oktober 2010
+
+Sehr geehrte Frau Lanz,
+
+Leider (40) wir Sie daran erinnern, dass unsere Rechnung vom 8. Oktober 2010 bereits vor einem Monat (41) war. Bis heute konnten wir keine Überweisung von Ihnen feststellen.
+
+Wir bitten Sie, den zu zahlenden (42) spätestens bis zum 10. Dezember 2010 auf unser Konto bei der Postbank Stuttgart Kontonummer 31928-707 BLZ 760 100 85 zu überweisen.
+
+(43) Sie die Rechnung inzwischen bezahlt haben, betrachten Sie bitte dieses Schreiben als gegenstandslos.
+
+Haben Sie Fragen? Unser Mitarbeiter Herr Groß gibt (44) unter der oben angegebenen Telefonnummer gerne Auskunft.
+
+Mit freundlichen (45)
+i. A. Schneider
+Aufgaben:
+[40] Lücke 40
+A) können
+B) sollen
+C) müssen
+Lösung: C
+
+[41] Lücke 41
+A) bezahlt
+B) fällig
+C) gefallen
+Lösung: B
+
+[42] Lücke 42
+A) Betrag
+B) Rechnung
+C) Zahlung
+Lösung: A
+
+[43] Lücke 43
+A) Als
+B) Wann
+C) Wenn
+Lösung: C
+
+[44] Lücke 44
+A) euch
+B) Ihnen
+C) Sie
+Lösung: B
+
+[45] Lücke 45
+A) Gruß
+B) Grüße
+C) Grüßen
+Lösung: C
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie haben seit einiger Zeit einen Telefon- und Internetanschluss bei der Firma Internet & Telefon. Seit einiger Zeit funktionieren Ihr Telefon und Internet nicht mehr gut. Sie schreiben deshalb einen Brief.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Was schlagen Sie vor?
+- Wenn keine Lösung, dann Vertrag kündigen
+- Bitte um schnelle Antwort
+
+oder
+
+Aufgabe B:
+Sie haben in Ihrer Tageszeitung eine Wohnungsanzeige gesehen, die Sie interessiert. Schreiben Sie einen Brief an die zuständige Mitarbeiterin der Hausverwaltung Hausmann & Gärtner, Frau Busch.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Angaben zu Ihrer Person
+- Fragen zur Wohnung
+- Besichtigungstermin?

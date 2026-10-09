@@ -1,0 +1,448 @@
+# EBERT
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Was soll Frau Ebert machen?
+A) Die Polizei anrufen.
+B) Die Rechnung bezahlen.
+C) Die Versicherung bezahlen.
+Lösung: B
+
+[2] Die Tochter von Frau San braucht Hilfe in der Schule. Mit wem soll Frau San sprechen?
+A) Mit der Lehrerin.
+B) Mit ihrem Mann.
+C) Mit ihrer Tochter.
+Lösung: A
+
+[3] Frau Hetzel hat ein Problem mit der Gasrechnung. Was soll sie tun?
+A) Den Gaszähler ablesen.
+B) Die Gasfirma anrufen.
+C) Die Gasrechnung bezahlen.
+Lösung: A
+
+[4] Was soll Herr Bartel machen?
+A) Das Reisebüro anrufen.
+B) Den Flug buchen.
+C) Ins Reisebüro gehen.
+Lösung: C
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Was kann man gewinnen?
+A) Eine CD.
+B) Eine Fahrt nach München.
+C) Konzertkarten.
+Lösung: C
+
+[6] Was hören Sie?
+A) Den Verkehrsfunk.
+B) Die Nachrichten.
+C) Ein Horoskop.
+Lösung: C
+
+[7] Wie wird das Wetter morgen?
+A) Die Sonne scheint.
+B) Es schneit.
+C) Es wird warm.
+Lösung: B
+
+[8] In der Innenstadt ...
+A) dürfen Taxis nicht fahren.
+B) fahren keine Busse.
+C) gibt es keine Parkplätze mehr.
+Lösung: C
+
+[9] Wo gibt es einen Stau?
+A) Auf der A 3.
+B) Auf der A 42.
+C) Auf der A 57.
+Lösung: A
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 8
+Wiedergaben: 1
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Herr Hamann spricht mit seiner Chefin.
+Lösung: richtig
+
+[11] Was soll Herr Hamann am Wochenende tun?
+A) Er soll am Wochenende arbeiten.
+B) Er soll einen Kollegen anrufen.
+C) Er soll zur Firma Müller gehen.
+Lösung: A
+
+[12] Herr Förster und Frau Knauer sind Freunde.
+Lösung: falsch
+
+[13] Was soll Herr Förster machen?
+A) Den Briefkasten leeren.
+B) Die Blumen gießen.
+C) Die Katze versorgen.
+Lösung: A
+
+[14] Melanie und Leo lernen zusammen Russisch.
+Lösung: richtig
+
+[15] Was soll Melanie mitbringen?
+A) Musik-CDs.
+B) Eine DVD.
+C) Bilder.
+Lösung: B
+
+[16] Margit ist im Reisebüro.
+Lösung: falsch
+
+[17] Wie möchte Margit reisen?
+A) Mit dem Auto.
+B) Mit dem Flugzeug.
+C) Mit der Bahn.
+Lösung: C
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören die Meinungen von drei Personen zu einem Thema. Wählen Sie für die Aufgaben 18–20 die passende Aussage (a–f).
+Auswahltitel: Aussagen
+Auswahl:
+a = Es ist wichtig, regelmäßig zum Arzt zu gehen.
+b = Man hat keine Probleme mit der Gesundheit, wenn man schlank bleibt.
+c = Man sollte nicht rauchen und wenig Alkohol trinken.
+d = Wenn man sich viel bewegt, bleibt man auch gesund.
+e = Die Gesundheit kommt von selbst, wenn man keinen Ärger hat.
+f = Viele Medikamente schaden mehr als sie nützen.
+Aufgaben:
+[18] Sprecher 1
+Lösung: c
+
+[19] Sprecher 2
+Lösung: e
+
+[20] Sprecher 3
+Lösung: a
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie sind im Rathaus Ihrer Stadt. Lesen Sie die Aufgaben 21–25 und den Wegweiser. In welches Zimmer (a, b oder c) gehen Sie?
+Bild: img/dtz-b1-m06-lv1.jpg
+Aufgaben:
+[21] Ihre Frau hat ein Kind bekommen.
+A) Zimmer 13
+B) Zimmer 14
+C) anderes Zimmer
+Lösung: A
+
+[22] Sie haben gestern Ihre Tasche im Bus vergessen.
+A) Zimmer 12
+B) Zimmer 14
+C) anderes Zimmer
+Lösung: C
+
+[23] Sie müssen in den nächsten Schulferien arbeiten und suchen für Ihr Kind eine Betreuung.
+A) Zimmer 21
+B) Zimmer 22
+C) anderes Zimmer
+Lösung: B
+
+[24] Sie haben ein Auto gekauft und möchten es anmelden.
+A) Zimmer 12
+B) Zimmer 23
+C) anderes Zimmer
+Lösung: A
+
+[25] Sie möchten Ihre Arbeitserlaubnis für Deutschland verlängern.
+A) Zimmer 14
+B) Zimmer 21
+C) anderes Zimmer
+Lösung: B
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m06-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Sie möchten Englisch lernen und suchen einen Abendkurs. Der Lehrer soll unbedingt Muttersprachler sein.
+Lösung: c
+
+[27] Sie kennen sich nicht gut mit Computern aus und möchten etwas über E-Mails lernen.
+Lösung: h
+
+[28] Ihre achtzehnjährige Tochter ist sehr gut in Englisch und Französisch. Sie möchte gern anderen Schülern Nachhilfe geben.
+Lösung: x
+
+[29] Sie suchen Informationen zur beruflichen Weiterbildung und wie Sie eine finanzielle Unterstützung bekommen können.
+Lösung: d
+
+[30] Sie interessieren sich für die deutsche Geschichte und möchten gern kostenlos darüber etwas erfahren.
+Lösung: a
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+Nordhausen: Freie Fahrt für Familien und Personen mit geringem Einkommen
+
+Die Stadt Nordhausen führt zum 1. Februar für kinderreiche Familien und Personen mit geringem Einkommen einen neuen Fahrkarten-Service ein. Die Stadt schafft zwei Monatskarten für Einzelpersonen und zwei Familienmonatskarten für den Verkehrsverbund Nordhausen an. Die Einzeltickets sollen vor allem für Fahrten zu Behörden, Ärzten und Vorstellungsgesprächen genutzt werden, das Familienticket zum Besuch von kulturellen Veranstaltungen.
+Die Fahrkarten kann man jeweils für einen Tag ab 7:30 Uhr im Rathaus abholen. Sie müssen am nächsten Tag spätestens bis 7 Uhr zurückgegeben werden. Für die Abholung sind eine Unterschrift und ein gültiger Ausweis notwendig. Die Rückgabe ist auf zwei Wegen möglich: Man kann die Fahrkarten persönlich abgeben oder in den Briefkasten am Rathaus einwerfen.
+Nähere Informationen gibt es unter www.nordhausen.de oder von den Mitarbeitern des Bürgerbüros. Unter 01 31 - 73 73 72 ist eine telefonische Reservierung möglich.
+Aufgaben:
+[31] Die Stadt Nordhausen verkauft billige Fahrkarten für Familien.
+Lösung: falsch
+
+[32] Die Fahrkarten kann man
+A) sich schicken lassen.
+B) online bestellen.
+C) im Rathaus bekommen.
+Lösung: C
+
+Text:
+Sehr geehrte Eltern,
+
+unsere Grundschule nimmt an dem Leseförderungsprogramm „Wir lesen!“ teil. Die Kinder können mit Fragen testen, wie gut sie den Inhalt eines Buches verstanden haben und bekommen dafür Punkte. Das Programm bietet nur die Fragen an, aber in der Stadtbücherei können Sie viele der darin behandelten Bücher ausleihen.
+
+Unsere Schule nimmt schon seit einigen Jahren an diesem Projekt teil. In der 2. Klasse beginnen wir mit dem Programm und führen es bis zur vierten Klasse durch. Zur Anmeldung ist ein Passwort notwendig, das die Kinder von der Klassenlehrkraft erhalten. Dafür benötigen wir einmalig eine Einverständniserklärung mit der Unterschrift der Eltern. Bitte geben Sie uns diese bis zum 01.10.
+Weitere Informationen erhalten Sie unter www.wirlesen.de.
+
+Mit freundlichen Grüßen
+Eva Kaubisch
+Aufgaben:
+[33] Das Leseprogramm ist für Eltern und Kindern.
+Lösung: falsch
+
+[34] Die Eltern sollen bei Interesse
+A) ihr Kind selbst im Internet anmelden.
+B) eine Erklärung unterschreiben.
+C) der Lehrkraft ein Passwort mitteilen.
+Lösung: B
+
+Text:
+Guten Tag Frau Kim,
+
+wir haben Ihren Heil- und Kostenplan für den Zahnersatz vom 23.2.2010 erhalten. Wir freuen uns Ihnen mitteilen zu können, dass wir 60 % der Kosten übernehmen. Leider ist eine Erstattung der Gesamtkosten nicht möglich, denn in Ihrem Versicherungsvertrag ist nur eine Bezuschussung von bis zu 60 % festgelegt.
+
+Bitte reichen Sie den Heil- und Kostenplan und diese Zusage vor der Behandlung an Ihre Praxis weiter. Ihr Zahnarzt rechnet nach der Behandlung die Kosten mit uns ab und Sie erhalten dann eine Rechnung über die Restsumme von Ihrem Zahnarzt.
+
+Bei Fragen rufen Sie uns gerne an.
+
+Freundliche Grüße
+Alexandra Klein
+Aufgaben:
+[35] Die Versicherung bezahlt einen Teil der Kosten.
+Lösung: richtig
+
+[36] Bevor Frau Kim behandelt wird,
+A) muss sie diesen Brief Ihrem Zahnarzt geben.
+B) überweist die Versicherung das Geld an Frau Kim.
+C) muss Frau Kim Geld überweisen.
+Lösung: A
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+Ihr neuer Telefonanschluss – Ihr neuer Anrufbeantworter!
+
+Mit Ihrem neuen Telefonanschluss erhalten Sie automatisch einen Anrufbeantworter. Hier die wichtigsten Tipps für die Benutzung:
+
+Automatische Installation des Anrufbeantworters
+Innerhalb von einer Woche nach der Freischaltung Ihres neuen Anschlusses schaltet sich automatisch Ihr Anrufbeantworter ein. Er nimmt Anrufe entgegen, wenn Sie innerhalb von einer Minute den Anruf nicht entgegen nehmen oder wenn Ihr Apparat besetzt ist. Wenn Sie eine neue Nachricht haben, ruft Sie der Anrufbeantworter automatisch an und spielt Ihnen die Nachrichten vor. Sie können Ihren Anrufbeantworter auch personalisieren, indem Sie einen Begrüßungstext aufsprechen oder die Zeiten für die Aufnahme u. ä. ändern.
+
+Anrufbeantworter ein- und ausschalten
+Sie haben die Möglichkeit, den Anrufbeantworter auszuschalten. Dafür müssen Sie den Anrufbeantworter anwählen und dann die Tastenkombination 4# drücken.
+
+Nachrichten abfragen
+Sie können jederzeit Ihre Nachrichten abfragen, auch von unterwegs. Vom Festnetz wählen Sie den Anrufbeantworter an und drücken Sie im Hauptmenü 1. Für die Fernabfrage benötigen Sie eine PIN-Nummer, die Sie getrennt zugeschickt bekommen. Sie wählen dann Ihre eigene Rufnummer und drücken nach dem Begrüßungstext „0“. Anschließend geben Sie Ihre PIN-Nummer ein und bestätigen Sie diese erneut mit „0“.
+
+Nachrichten löschen
+Vom Festnetzanschluss oder per Fernabfrage können Sie Nachrichten auf dem Anrufbeantworter auch einzeln löschen. Geben Sie nach der Nachricht „*“ ein und die Nachricht wird gelöscht und kann nicht wieder aufgerufen werden.
+
+Benachrichtigung per SMS
+Über neue Nachrichten können Sie kostenfrei per SMS an Ihre Handy-Nummer informiert werden. Um diesen Service nutzen zu können, rufen Sie bitte die Nummer 08 00-70 07 00 an und registrieren Sie sich direkt bei unseren MitarbeiterInnen.
+Aufgaben:
+[37] Man kann auf den Anrufbeantworter sprechen, wenn Sie telefonieren.
+Lösung: richtig
+
+[38] Sie können die Nachrichten nur zu Hause anhören.
+Lösung: falsch
+
+[39] Sie bekommen eine SMS über eine neue Nachricht, wenn Sie eine Gebühr bezahlt haben.
+Lösung: falsch
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+DB Fernverkehr AG
+BahnCard-Service
+60643 Frankfurt am Main
+09.03.2010
+
+Kündigung der Bahncard Nr. 215762010
+
+(40) geehrte Damen und Herren,
+
+ich besitze (41) Juli 2009 eine BahnCard 25. Leider konnte ich die BahnCard nur wenig nutzen. Deshalb (42) ich mein Abonnement der Bahncard fristgerecht zum 01.07.2010 kündigen. Bitte schicken Sie mir (43) neue BahnCard, (44) bestätigen Sie mir diese Kündigung schriftlich.
+
+Bei Fragen erreichen Sie (45) telefonisch unter 0 69 – 7 44 89 33.
+
+Mit freundlichen Grüßen
+Hasan Özdemir
+Aufgaben:
+[40] Lücke 40
+A) Meine
+B) Sehr
+C) Viel
+Lösung: B
+
+[41] Lücke 41
+A) bis
+B) seit
+C) von
+Lösung: B
+
+[42] Lücke 42
+A) möchte
+B) wünsche
+C) würde
+Lösung: A
+
+[43] Lücke 43
+A) keine
+B) nicht
+C) nichts
+Lösung: A
+
+[44] Lücke 44
+A) aber
+B) denn
+C) sondern
+Lösung: C
+
+[45] Lücke 45
+A) mein
+B) mich
+C) mir
+Lösung: B
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Ihre früheren Nachbarn sind vor einem Monat umgezogen und feiern ein Fest in der neuen Wohnung. Sie haben eine Einladung bekommen. Antworten Sie auf die Einladung.
+
+Schreiben Sie etwas über folgende Punkte. Vergessen Sie nicht die Anrede und den Gruß.
+- Grund des Schreibens
+- Geschenk
+- wer kommt noch?
+- Bitte um Wegbeschreibung
+
+oder
+
+Aufgabe B:
+In Ihrer Wohnung haben Sie seit einiger Zeit Probleme mit der Heizung. Der Vermieter soll die Heizung reparieren lassen. Leider können Sie Ihren Vermieter telefonisch nicht erreichen, deshalb schreiben Sie einen Brief.
+
+Schreiben Sie etwas über folgende Punkte. Vergessen Sie nicht die Anrede und den Gruß.
+- Grund des Schreibens
+- Problem: wie lange schon?
+- Termin für Reparatur
+- wie Sie erreichbar sind

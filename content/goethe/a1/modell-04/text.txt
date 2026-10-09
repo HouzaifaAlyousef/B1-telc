@@ -1,0 +1,174 @@
+# VLADIMIR
+Untertitel: 17 Aufgaben · 45 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–15
+Punkte: 15
+Teile: lv1, lv2, lv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 16–21
+Punkte: 15
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: truefalse
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**Nachricht von Andrea**
+Hallo Julia,
+
+ich muss heute länger im Büro bleiben. Ich weiß noch nicht, wie lange. Aber um 20 Uhr kann ich nicht beim Kino sein. Können wir morgen Abend ins Kino gehen? Auch um 20 Uhr? Ist das ok für dich?
+
+Tut mir leid ...
+Liebe Grüße
+Andrea
+Aufgaben:
+[1] Andrea muss heute lange arbeiten.
+Lösung: r
+[2] Sie möchte Julia morgen treffen.
+Lösung: r
+Text:
+**Notiz von Julia Berger**
+Liebe Frau Schmidt,
+
+wir fahren doch nächsten Montag in den Urlaub, in die Türkei. Können Sie bitte nach der Post und den Blumen sehen? Als Dankeschön möchte ich Sie gerne zu einem Essen bei mir zu Hause einladen. Wann haben Sie Zeit? Dann gebe ich Ihnen auch die Wohnungsschlüssel.
+
+Danke
+Julia Berger
+Aufgaben:
+[3] Frau Berger braucht Hilfe.
+Lösung: r
+[4] Frau Schmidt soll die Schlüssel abholen.
+Lösung: f
+[5] Frau Berger möchte ein Essen machen.
+Lösung: r
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.
+Aufgaben:
+[6] Sie möchten Urlaub am Meer machen.
+A) www.staedtereisen.de: Ferien in deutschen Städten. Lernen Sie Berlin, München, Köln und andere Städte in Deutschland kennen. Pauschalangebote mit Hotel und Reiseführer.
+B) www.familienferien.de: Familienferien in der Natur an der Nordsee und Ostsee. Wassersport, Schwimmkurse und vieles mehr.
+Lösung: B
+[7] Sie suchen einen Fußballverein.
+A) www.fge.de: Werden Sie Mitglied in unserem Verein. Alle Sportarten - Alle Altersstufen. Jahresbeitrag 12 Euro pro Monat.
+B) www.ballania.de: Bei uns können Sie alles machen, was mit Wassersport zu tun hat. Wasserball, Surfen, Wassergymnastik und vieles mehr. Einfach Mitglied werden.
+Lösung: A
+[8] Sie sind in Frankfurt und möchten am Abend in Wien sein. Sie möchten mit dem Zug fahren.
+A) www.reiseauskunft-bahn.de: Frankfurt ab 12.21, Wien an 19.48. Dauer 7:20, Gleis 5.
+B) www.reiseportal.de: Frankfurt ab 23.00, Wien an 09.38. Dauer 10:38, Gleis 6.
+Lösung: A
+[9] Sie suchen einen billigen Fernseher.
+A) www.tv-und-partner.de: Günstig zu verkaufen: DVD-Recorder, 1 Jahr Garantie, mit diesem Gerät können Sie ohne Probleme Ihre Lieblingsprogramme im Fernsehen aufnehmen.
+B) www.hifi-und-co.com: NEUERÖFFNUNG mit super Angeboten: Farbfernseher HD-tauglich zu günstigen Preisen.
+Lösung: B
+[10] Ihr Freund möchte Deutsch lernen. Er kann noch kein Deutsch.
+A) www.vhs.de: Nächste Woche beginnen unsere Anfängerkurse Deutsch als Fremdsprache. Schnell anmelden – es sind noch wenige Plätze frei.
+B) www.sprachschule-mitte.de: Deutsch für den Beruf – schriftliche Geschäftskorrespondenz. Haben Sie schon Deutsch gelernt? (Stufe A2 oder B1?) Dann ist dieser Kurs der richtige für Sie!
+Lösung: A
+
+### Teil: lv3
+Format: truefalse
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**In der Schule**
+Schulfest am nächsten Samstag.
+Alle Schülerinnen, Schüler und Eltern sind eingeladen.
+Kaffee und Kuchen gibt es in der Cafeteria.
+Abends Disco
+Aufgaben:
+[11] In der Schule können Sie am Samstag tanzen.
+Lösung: r
+Text:
+**Am Busbahnhof**
+Ab Januar günstige Busreisen in ganz Deutschland.
+Informationen am Busbahnhof, Schalter 12
+Aufgaben:
+[12] Im Januar gibt es Busfahrten nach Deutschland.
+Lösung: f
+Text:
+**Vor dem Ticketshop**
+Das Konzert der Toten Hosen in der Stadthalle ist ausverkauft.
+Aufgaben:
+[13] Es gibt keine Karten mehr.
+Lösung: r
+Text:
+**Im Internet**
+Hessenticket der Deutschen Bahn
+Bis zu 5 Personen können an einem Tag durch ganz Hessen mit Bus oder Bahn fahren.
+Für nur 31,- Euro.
+Aufgaben:
+[14] Das Hessenticket gibt es nur für Gruppen ab 5 Personen.
+Lösung: f
+Text:
+**Beim Arzt**
+In der Praxis sind Handys verboten.
+Aufgaben:
+[15] Sie dürfen mit dem Handy nicht telefonieren.
+Lösung: r
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 5
+Maximum: 5
+Anweisung: Ihr Freund, Vladimir Serjakov, 30 Jahre alt, kommt aus Sankt Petersburg in Russland und lebt seit einem Monat in Hamburg. Er hat eine neue Stelle bei TUI als Reiseleiter. Seit gestern hat er 39 Grad Fieber. Heute geht er zum Arzt. Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Auswahltitel: Formular
+Bild: img/goethe-a1-m04-s1.jpg
+Text:
+**Patienteninformation Dr. Arnold Friedrich**
+Ihr Freund, Vladimir Serjakov, 30 Jahre alt, kommt aus Sankt Petersburg in Russland und lebt seit einem Monat in Hamburg. Er hat eine neue Stelle bei TUI als Reiseleiter. Seit gestern hat er 39 Grad Fieber. Heute geht er zum Arzt.
+Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Aufgaben:
+[16] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 16–20):
+Punkt: (1) Postleitzahl, Wohnort: Hamburg / 20969 Hamburg
+Punkt: (2) Alter: 30
+Punkt: (3) Beruf: Reiseleiter
+Punkt: (4) Seit wann sind Sie krank? — seit gestern / gestern
+Punkt: (5) Was fehlt Ihnen? — Fieber / 39 Grad Fieber / hohes Fieber
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Sie möchten umziehen und suchen eine neue Wohnung. Sie haben eine Anzeige gelesen. Schreiben Sie an den Vermieter, Herrn Mawat. Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter).
+Text:
+**Schreibaufgabe**
+Sie möchten umziehen und suchen eine neue Wohnung. Sie haben eine Anzeige gelesen.
+Schreiben Sie an den Vermieter, Herrn Mawat.
+Schreiben Sie zu jedem Punkt ein bis zwei Sätze (ca. 30 Wörter):
+• Warum schreiben Sie?
+• Wann können Sie die Wohnung sehen?
+• Adresse der Wohnung?
+Aufgaben:
+[21] Schreiben Sie eine E-Mail an den Vermieter, Herrn Mawat:
+Mindestwoerter: 30
+Punkt: Warum schreiben Sie?
+Punkt: Wann können Sie die Wohnung sehen?
+Punkt: Adresse der Wohnung?

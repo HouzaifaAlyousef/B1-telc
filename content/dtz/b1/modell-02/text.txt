@@ -1,0 +1,464 @@
+# MEYBOHM
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Sie brauchen einen Termin bei Ihrer Versicherung? Was sollen Sie tun?
+A) Am Montag um acht Uhr anrufen.
+B) Eine Nachricht auf den Anrufbeantworter sprechen.
+C) Persönlich vorbeikommen.
+Lösung: B
+
+[2] Sie möchten Mitglied werden. Wo kann man sich informieren?
+A) Am Empfang.
+B) Im Erdgeschoss.
+C) Im Untergeschoss.
+Lösung: A
+
+[3] Was kostet das Stück Kuchen?
+A) Für alle 50 Cent.
+B) Für Kursteilnehmer 50 Cent.
+C) Für Lehrer 50 Cent.
+Lösung: B
+
+[4] Was soll Felix tun?
+A) Mit dem Jobcenter telefonieren.
+B) Seinen Lebenslauf ins Jobcenter bringen.
+C) Seine Zeugnisse ins Jobcenter bringen.
+Lösung: C
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Wie wird das Wetter am Nachmittag?
+A) Die Sonne scheint.
+B) Es kann regnen.
+C) Es regnet nicht.
+Lösung: B
+
+[6] Auf der A 8 gibt es
+A) einen Stau.
+B) einen Unfall.
+C) eine Umleitung.
+Lösung: A
+
+[7] Wann kann man frühstücken gehen?
+A) Am Freitag.
+B) Am Samstag.
+C) Am Sonntag.
+Lösung: C
+
+[8] Was für eine Sendung kann man um 18:10 Uhr im Radio hören?
+A) Eine Kindersendung.
+B) Ein Gespräch mit Forschern.
+C) Ein Gewinnspiel.
+Lösung: B
+
+[9] Was hören Sie?
+A) Den Wetterbericht.
+B) Einen Gesundheitstipp.
+C) Tipps für das Wochenende.
+Lösung: B
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 9
+Punkte: 1
+Maximum: 8
+Wiedergaben: 2
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Frau Meybohm spricht mit ihrem Lehrer.
+richtig
+falsch
+Lösung: falsch
+
+[11] Ihr Problem bei technischen Berufen ist, dass
+A) das Männerberufe sind.
+B) sie dafür nicht gut genug ist.
+C) Technik sie nicht interessiert.
+Lösung: A
+
+[12] Frau Bathily möchte ein Konto eröffnen.
+richtig
+falsch
+Lösung: richtig
+
+[13] Was ist das Problem?
+A) Beide Eltern müssen unterschreiben.
+B) Sie verdient noch kein Geld.
+C) Sie weiß nicht, wo ihr Vater wohnt.
+Lösung: A
+
+[14] Tanja möchte einen Computer kaufen.
+richtig
+falsch
+Lösung: falsch
+
+[15] Wann treffen sich Julia und Tanja?
+A) Heute Nachmittag.
+B) Morgen Nachmittag.
+C) Morgen Vormittag.
+Lösung: B
+
+[16] Michael lädt Jasmin ins Kino ein.
+richtig
+falsch
+Lösung: falsch
+
+[17] Wie viel muss Michael bezahlen?
+A) 30 Euro.
+B) Mehr als 30 Euro.
+C) Nichts.
+Lösung: C
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen 18–20?
+Auswahltitel: Aussagen
+Auswahl:
+a = Das Leben in einer Wohngemeinschaft bringt nur Probleme.
+b = Die meisten Menschen leben heute lieber alleine.
+c = Ein Leben in der Großfamilie ist heute eher selten.
+d = In einer Wohngemeinschaft fühlen sich junge Leute nicht einsam.
+e = Wenn Alt und Jung zusammenwohnen, hat das viele Vorteile.
+f = Wenn man mit anderen zusammenlebt, kann man viel voneinander lernen.
+Aufgaben:
+[18] Sprecher 1
+Lösung: d
+
+[19] Sprecher 2
+Lösung: e
+
+[20] Sprecher 3
+Lösung: c
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie wollen etwas einkaufen. Lesen Sie die Aufgaben 21–25 und die Internetseite. Wo (a, b oder c) finden Sie etwas Passendes?
+Bild: img/dtz-b1-m02-lv1.jpg
+Aufgaben:
+[21] Sie möchten tanzen gehen.
+A) Aula
+B) Musiksaal
+C) anderer Ort
+Lösung: B
+
+[22] Sie möchten wissen, wie die VHS früher war.
+A) Pausenhalle
+B) Schulhof
+C) anderer Ort
+Lösung: B
+
+[23] Sie wollen ein paar chinesische Wörter lernen.
+A) Musiksaal
+B) Pausenhalle
+C) anderer Ort
+Lösung: C
+
+[24] Sie möchten fotografieren lernen.
+A) Pausenhalle
+B) Schulhof
+C) anderer Ort
+Lösung: B
+
+[25] Sie möchten Speisen aus anderen Ländern probieren.
+A) Musiksaal
+B) Pausenhalle
+C) anderer Ort
+Lösung: B
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m02-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Marisa ist gerade 20 Jahre alt geworden und will in den Sommerferien etwas für den Schutz der Natur und der Tiere tun.
+Lösung: c
+
+[27] Sandra ist gerne im Internet und möchte damit etwas Geld verdienen.
+Lösung: a
+
+[28] Peter sucht eine Ausbildung, bei der er viel mit Menschen zu tun hat.
+Lösung: f
+
+[29] Eva interessiert sich für Pflegeberufe.
+Lösung: x
+
+[30] Niko möchte regelmäßig etwas Geld verdienen und hat dafür am Wochenende Zeit.
+Lösung: e
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 12
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+Text:
+Sprachunterricht auf der Bühne
+
+„The Flying Fish Theatre“ besuchte in dieser Woche die Kaiserpfalz-Realschule. Das englische Schauspiel-Team bringt Schülerinnen und Schülern die englische Sprache durch Theater näher. Aufgeführt wurden an diesem Vormittag zwei Stücke. Die siebten Klassen sahen das Musical „Mc Vamp“. Für die achten und neunten Klassen stand das Stück „Furious Games“ auf dem Stundenplan. Nach den Stücken konnten die Schüler die Schauspieler befragen. Natürlich auf Englisch.
+
+Bereits zum dritten Mal war „The Flying Fish Theatre“ an der Realschule zu Gast und hat gute Erfahrungen gemacht. Das sei besser, als Grammatik zu büffeln oder Vokabeln zu pauken, meinten natürlich auch die Schüler.
+
+[31] In der Kaiserpfalz-Realschule lernen die Schüler Englisch nur über das Theaterspielen.
+richtig
+falsch
+Lösung: falsch
+
+[32] Die Schüler
+A) lernen so am liebsten Englisch.
+B) sehen alle dasselbe Stück.
+C) spielen selbst Theater.
+Lösung: A
+
+Text:
+Führerschein mit 17 ist eine gute Sache
+
+Die Fahrprüfung zum begleiteten Fahren mit 17 kann inzwischen in vielen Bundesländern abgelegt werden. Seit dem 1. September 2005 können sich Jugendliche, die mindestens 16,5 Jahre alt sind, bei einer Fahrschule zur Führerscheinausbildung anmelden. Wenn die Fahranfänger die Fahrprüfung bestanden haben und 17 Jahre alt sind, dürfen sie dann selbst fahren, wenn ein geübter älterer Fahrer mit im Auto sitzt. Sie erhalten eine Prüfungsbescheinigung, in der die Begleitpersonen mit Namen eingetragen sind. Nach Einschätzung vieler Experten ist der Führerschein mit 17 ein wichtiger Baustein für mehr Sicherheit bei Fahranfängern, da die jungen Fahrer später 40 Prozent weniger Unfälle verursachen.
+
+[33] Den Führerschein mit 17 kann man in ganz Deutschland machen.
+richtig
+falsch
+Lösung: falsch
+
+[34] 17-Jährige
+A) dürfen auch ohne Fahrschule einen Führerschein machen.
+B) dürfen nur zusammen mit Erwachsenen fahren.
+C) müssen mehr auf ältere Personen im Straßenverkehr achten.
+Lösung: B
+
+Text:
+Liebe junge Kunden,
+
+wir möchten euch heute unser gebührenfreies Girokonto vorstellen. Das XL-Konto ist speziell für Schüler, Studenten und Auszubildende bis zum 27. Lebensjahr.
+
+Es gibt Zinsen wie auf einem Sparbuch. Mit der XL-BankCard könnt ihr Kontoauszüge drucken und Geld am Geldautomaten abheben.
+
+Außerdem könnt ihr das Taschengeld der Eltern oder das erste Gehalt überweisen lassen und Rechnungen selber bezahlen. Auch Handyrechnungen könnt ihr problemlos abbuchen lassen. Die Teilnahme am Online-Banking ist mit diesem Konto ebenfalls möglich.
+
+Ab dem nächsten Jahr haben wir dann etwas Besonderes für euch: Mit eurer XL-BankCard spart ihr 20 Euro beim Kauf eines neuen Handys bei Elektro Schmidt.
+
+Euer Volksbank-Team
+
+[35] Die Bank bietet jungen Leuten ein kostenloses Konto an.
+richtig
+falsch
+Lösung: richtig
+
+[36] Ab nächstem Jahr kann man
+A) Rechnungen bezahlen.
+B) eine Bankkarte bekommen.
+C) ein neues Mobiltelefon günstiger kaufen.
+Lösung: C
+
+
+### Teil: lv4
+Format: truefalse
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+Ausbildung im Lebensmitteleinzelhandel
+
+Cent Supermärkte sind ein Teil der Cent Group, einem der bedeutendsten Handelskonzerne in Europa. Mit rund 2000 Märkten gilt Cent als Frische-Spezialist.
+
+Werden auch Sie Azubi
+Die Berufswahl ist eine Entscheidung fürs Leben. Jetzt kommt es darauf an, den Beruf zu wählen, der Ihnen Spaß macht. Prüfen Sie deshalb genau, ob unser Angebot Ihren Zukunftsvorstellungen entspricht.
+
+Erst einmal reinschnuppern
+Die richtige Berufswahl zu treffen ist eine schwere Entscheidung. Wir unterstützen Sie dabei mit unserem Angebot, für einige Tage die Praxis in einem unserer Märkte kennenzulernen.
+
+Schülerpraktikum
+Ein Praktikum bei uns gibt Ihnen die Möglichkeit, unser Unternehmen und Ihren zukünftigen Beruf einmal so richtig „unter die Lupe“ zu nehmen.
+
+Vor Ort werden Sie mehrere Wochen lang alles Wichtige über die Organisation eines Marktes hautnah miterleben.
+
+Wenn Sie sich dann für eine Ausbildung bei uns entscheiden, profitieren Sie von zahlreichen Vorteilen.
+
+Wir bieten:
+- Eine je nach Berufswunsch zwei- oder dreijährige Ausbildung, die Spaß macht
+- Abwechslungsreiche Tätigkeiten
+- 5-Tage-Woche
+- Seminare
+
+Und nach der Ausbildung
+- Sicherer Arbeitsplatz
+- Perspektiven
+- Schnelle Übernahme von ersten Fach- und Führungsaufgaben
+- Weiterbildung
+
+Interessante Berufe warten auf Sie!
+
+Bitte senden Sie uns Ihre vollständigen Bewerbungsunterlagen.
+Wir freuen uns auf Ihre Zuschrift.
+Aufgaben:
+[37] Auszubildende müssen bei Cent erst eine Prüfung machen.
+Lösung: falsch
+
+[38] Die Ausbildung bei Cent dauert mehrere Wochen.
+Lösung: falsch
+
+[39] Cent bietet außer einer Ausbildung auch die Möglichkeit für ein Praktikum.
+Lösung: richtig
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+Delmenhorst, den 12.09.20..
+
+Spaß am Unterrichten?
+
+Vielleicht können Sie (0) helfen? Ich bin 19 Jahre alt und (40) im Herbst eine Lehre bei einer Bank. Deshalb (41) ich mein Deutsch verbessern. (42) Sie fließend Deutsch sprechen und zweimal in der Woche Zeit haben, dann wäre das perfekt (43) mich. Die Stunden kann ich (44) bezahlen oder Ihnen im Haushalt und Garten helfen.
+Sie (45) mich telefonisch unter 0341/41 41 41.
+Aufgaben:
+[40] Lücke 40
+A) anfange
+B) beginne
+C) werde
+Lösung: B
+
+[41] Lücke 41
+A) mag
+B) möchte
+C) mochte
+Lösung: B
+
+[42] Lücke 42
+A) Wann
+B) Wenn
+C) Wie
+Lösung: B
+
+[43] Lücke 43
+A) für
+B) um
+C) vor
+Lösung: A
+
+[44] Lücke 44
+A) entweder
+B) oder
+C) sowohl
+Lösung: A
+
+[45] Lücke 45
+A) erreichen
+B) rufen
+C) telefonieren
+Lösung: A
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie haben im Internet die Werbung für einen Kurs „Deutsche Sprache und Kultur für junge Leute“ gesehen. Sie interessieren sich dafür, haben aber noch einige Fragen. Sie schreiben einen Brief an Frau Pfeiffer vom Sprachinstitut.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Unterrichtsprogramm / Lehrbuch
+- Kontakte zu Vereinen
+- Freizeitprogramm
+
+oder
+
+Aufgabe B:
+Sie möchten einen Ausbildungsplatz finden. In der Zeitung haben Sie gelesen, dass eine Firma in einem für Sie interessanten Beruf Auszubildende sucht. Sie schreiben eine Bewerbung an Herrn Schmitz von der Personalabteilung.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Schule
+- Hobbys / Interessen
+- Sprachkenntnisse

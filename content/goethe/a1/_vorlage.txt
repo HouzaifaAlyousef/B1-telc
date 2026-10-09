@@ -1,0 +1,278 @@
+// =====================================================================
+// LEERE VORLAGE — Goethe-Zertifikat A1: Start Deutsch 1
+//
+// Struktur der schriftlichen Prüfung (ca. 65 Minuten · 45 Punkte · 36 Aufgaben):
+// - Lesen (25 Minuten · 15 Punkte):
+//   - lv1 (truefalse): 5 Aufgaben [1–5] · Punkte: 1 · Maximum: 5
+//   - lv2 (mc): 5 Aufgaben [6–10] · Punkte: 1 · Maximum: 5
+//   - lv3 (truefalse): 5 Aufgaben [11–15] · Punkte: 1 · Maximum: 5
+// - Hören (ca. 20 Minuten · 15 Punkte):
+//   - hv1 (mc): 6 Aufgaben [16–21] · Punkte: 1 · Maximum: 6
+//   - hv2 (truefalse): 4 Aufgaben [22–25] · Punkte: 1 · Maximum: 4
+//   - hv3 (mc): 5 Aufgaben [26–30] · Punkte: 1 · Maximum: 5
+// - Schreiben (ca. 20 Minuten · 15 Punkte):
+//   - s1 (writing): 5 Aufgaben [31–35] (Formular) · Punkte: 1 · Maximum: 5
+//   - s2 (writing): 1 Aufgabe [36] (Brief/E-Mail) · Punkte: 10 · Maximum: 10
+// =====================================================================
+
+# <PRUEFUNGSNAME>
+Untertitel: 32 Aufgaben · 65 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–15
+Punkte: 15
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 20
+Hinweis: Aufgaben 16–30
+Punkte: 15
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 31–36
+Punkte: 15
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: truefalse
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**<Titel Text 1>**
+<Text 1>
+Aufgaben:
+[1] <Aussage 1>
+Lösung: <r oder f>
+[2] <Aussage 2>
+Lösung: <r oder f>
+Text:
+**<Titel Text 2>**
+<Text 2>
+Aufgaben:
+[3] <Aussage 3>
+Lösung: <r oder f>
+[4] <Aussage 4>
+Lösung: <r oder f>
+[5] <Aussage 5>
+Lösung: <r oder f>
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.
+Aufgaben:
+[6] <Situation 1>
+A) <Anzeige A: Titel / Text>
+B) <Anzeige B: Titel / Text>
+Lösung: <A oder B>
+[7] <Situation 2>
+A) <Anzeige A: Titel / Text>
+B) <Anzeige B: Titel / Text>
+Lösung: <A oder B>
+[8] <Situation 3>
+A) <Anzeige A: Titel / Text>
+B) <Anzeige B: Titel / Text>
+Lösung: <A oder B>
+[9] <Situation 4>
+A) <Anzeige A: Titel / Text>
+B) <Anzeige B: Titel / Text>
+Lösung: <A oder B>
+[10] <Situation 5>
+A) <Anzeige A: Titel / Text>
+B) <Anzeige B: Titel / Text>
+Lösung: <A oder B>
+
+### Teil: lv3
+Format: truefalse
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Anweisung: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**<Schild / Aushang 1: Ort/Überschrift>**
+<Schildtext 1>
+Aufgaben:
+[11] <Aussage 1>
+Lösung: <r oder f>
+Text:
+**<Schild / Aushang 2: Ort/Überschrift>**
+<Schildtext 2>
+Aufgaben:
+[12] <Aussage 2>
+Lösung: <r oder f>
+Text:
+**<Schild / Aushang 3: Ort/Überschrift>**
+<Schildtext 3>
+Aufgaben:
+[13] <Aussage 3>
+Lösung: <r oder f>
+Text:
+**<Schild / Aushang 4: Ort/Überschrift>**
+<Schildtext 4>
+Aufgaben:
+[14] <Aussage 4>
+Lösung: <r oder f>
+Text:
+**<Schild / Aushang 5: Ort/Überschrift>**
+<Schildtext 5>
+Aufgaben:
+[15] <Aussage 5>
+Lösung: <r oder f>
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 6
+Hoertext: audio/m01-hv1.mp3
+Wiedergaben: 2
+Anweisung: Sie hören kurze Gespräche. Sie hören jeden Text zweimal. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+Aufgaben:
+[16] <Frage 1>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[17] <Frage 2>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[18] <Frage 3>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[19] <Frage 4>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[20] <Frage 5>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[21] <Frage 6>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hv2
+Format: truefalse
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Hoertext: audio/m01-hv2.mp3
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie an: Richtig oder Falsch. Sie hören jeden Text einmal.
+Aufgaben:
+[22] <Aussage 1>
+Lösung: <r oder f>
+[23] <Aussage 2>
+Lösung: <r oder f>
+[24] <Aussage 3>
+Lösung: <r oder f>
+[25] <Aussage 4>
+Lösung: <r oder f>
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 5
+Hoertext: audio/m01-hv3.mp3
+Wiedergaben: 2
+Anweisung: Sie hören fünf kurze Texte. Sie hören jeden Text zweimal. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+Aufgaben:
+[26] <Frage 1>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[27] <Frage 2>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[28] <Frage 3>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[29] <Frage 4>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[30] <Frage 5>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 5
+Maximum: 5
+Anweisung: Helfen Sie Ihrer Freundin / Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.
+Auswahltitel: Formular
+Bild: img/goethe-a1-m01-s1.jpg
+Text:
+**<Situation / Angaben zur Person>**
+<Beschreibung>
+Aufgaben:
+[31] Schreiben Sie die fünf fehlenden Informationen in das Formular (Aufgaben 31–35):
+Punkt: (1) <Feld 1>: <Lösung 1>
+Punkt: (2) <Feld 2>: <Lösung 2>
+Punkt: (3) <Feld 3>: <Lösung 3>
+Punkt: (4) <Feld 4>: <Lösung 4>
+Punkt: (5) <Feld 5>: <Lösung 5>
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Schreiben Sie eine E-Mail / einen Brief (ca. 30 Wörter). Schreiben Sie zu allen drei Punkten.
+Text:
+**<Situation / Schreibaufgabe>**
+<Aufgabentext>
+• <Leitpunkt 1>
+• <Leitpunkt 2>
+• <Leitpunkt 3>
+Aufgaben:
+[36] Schreiben Sie eine Mitteilung:
+Mindestwoerter: 30
+Punkt: <Leitpunkt 1>
+Punkt: <Leitpunkt 2>
+Punkt: <Leitpunkt 3>

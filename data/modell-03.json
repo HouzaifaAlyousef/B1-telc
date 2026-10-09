@@ -14,8 +14,8 @@
     "sb1",
     "sb2"
    ],
-   "maxPoints": 105.0,
-   "availablePoints": 105.0,
+   "maxPoints": 105,
+   "availablePoints": 105,
    "missing": 0
   },
   {
@@ -28,8 +28,8 @@
     "hv2",
     "hv3"
    ],
-   "maxPoints": 75.0,
-   "availablePoints": 75.0,
+   "maxPoints": 75,
+   "availablePoints": 75,
    "missing": 0
   },
   {
@@ -40,7 +40,7 @@
    "parts": [
     "sa"
    ],
-   "maxPoints": 45.0,
+   "maxPoints": 45,
    "availablePoints": 45,
    "missing": 0
   }
@@ -124,9 +124,9 @@
      "answer": "D"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0
   },
   {
@@ -158,74 +158,6 @@
       {
        "t": "Die Maus ist inzwischen auch bei Künstlern beliebt. Sie ist auf Bildern, Postkarten und Plakaten auf der ganzen Welt zu sehen. Schöner aber sind die kleinen Kunstwerke aus Kinderhand, die die Fernsehmacher im Laufe der Jahre gesammelt und Papier bunte Bilder und sogar ein Puppen Theater ganz aus Pappe alles für die Maus Öffnungszeiten Die Ausstellung in Speyer ist noch bis zum 27 Oktober geöffnet. Dienstags bis sonntags von 10 bis 18 mittwochs bis 20 Uhr.",
        "b": false
-      },
-      {
-       "t": "6. Die Maus",
-       "b": false
-      },
-      {
-       "t": "führt Kinder durch das Museum.",
-       "b": false
-      },
-      {
-       "t": "wird in einer Werbefirma gezeichnet.",
-       "b": false
-      },
-      {
-       "t": "wurde von Friedrich Streich erfunden. 7. Das Thema der Ausstellung",
-       "b": false
-      },
-      {
-       "t": "ist die Geschichte der Sendung mit der Maus.",
-       "b": false
-      },
-      {
-       "t": "ist 30 Jahre Junges Museum.",
-       "b": false
-      },
-      {
-       "t": "sind Kinder aus aller Welt.",
-       "b": false
-      },
-      {
-       "t": "8. Die Sendung mit der Maus",
-       "b": false
-      },
-      {
-       "t": "erhält Post aus der ganzen Welt.",
-       "b": false
-      },
-      {
-       "t": "hat es schwer, noch neue Themen zu finden.",
-       "b": false
-      },
-      {
-       "t": "nimmt nur Vorschläge von Kindern an. 9. Die Ausstellung",
-       "b": false
-      },
-      {
-       "t": "erlaubt den Kindern, mit den Ausstellungsstücken zu spielen.",
-       "b": false
-      },
-      {
-       "t": "erlaubt den Kindern nicht, die Ausstellungsstücke anzufassen.",
-       "b": false
-      },
-      {
-       "t": "ist nur für Kinder geöffnet. 10. Die Maus",
-       "b": false
-      },
-      {
-       "t": "erhält von den Kindern Geschenke aus verschiedenen Materialien.",
-       "b": false
-      },
-      {
-       "t": "B gibt es nur auf Postkarten und Plakaten zu kaufen.",
-       "b": false
-      },
-      {
-       "t": "ist aus Wolle und Papier.",
-       "b": false
       }
      ]
     }
@@ -233,30 +165,11 @@
    "items": [
     {
      "id": "6",
-     "text": "Die Sendung mit der Maus",
-     "options": [
-      {
-       "key": "A",
-       "text": "erhält Post aus der ganzen Welt."
-      },
-      {
-       "key": "B",
-       "text": "hat es schwer, noch neue Themen zu finden."
-      },
-      {
-       "key": "C",
-       "text": "nimmt nur Vorschläge von Kindern an."
-      }
-     ],
-     "answer": "C"
-    },
-    {
-     "id": "7",
      "text": "Die Maus",
      "options": [
       {
        "key": "A",
-       "text": "erzählt die Sachgeschichten."
+       "text": "führt Kinder durch das Museum."
       },
       {
        "key": "B",
@@ -267,10 +180,10 @@
        "text": "wurde von Friedrich Streich erfunden."
       }
      ],
-     "answer": "A"
+     "answer": "C"
     },
     {
-     "id": "8",
+     "id": "7",
      "text": "Das Thema der Ausstellung",
      "options": [
       {
@@ -284,6 +197,25 @@
       {
        "key": "C",
        "text": "sind Kinder aus aller Welt."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "8",
+     "text": "Die Sendung mit der Maus",
+     "options": [
+      {
+       "key": "A",
+       "text": "erhält Post aus der ganzen Welt."
+      },
+      {
+       "key": "B",
+       "text": "hat es schwer, noch neue Themen zu finden."
+      },
+      {
+       "key": "C",
+       "text": "nimmt nur Vorschläge von Kindern an."
       }
      ],
      "answer": "A"
@@ -327,9 +259,9 @@
      "answer": "A"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0
   },
   {
@@ -447,8 +379,8 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
+   "maxPoints": 25,
+   "availablePoints": 25,
    "missing": 0,
    "bankImage": "img/m03-lv3.jpg"
   },
@@ -714,8 +646,8 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0,
-   "availablePoints": 15.0,
+   "maxPoints": 15,
+   "availablePoints": 15,
    "missing": 0
   },
   {
@@ -865,8 +797,8 @@
     }
    ],
    "pointsPerItem": 1.5,
-   "maxPoints": 15.0,
-   "availablePoints": 15.0,
+   "maxPoints": 15,
+   "availablePoints": 15,
    "missing": 0
   },
   {
@@ -875,7 +807,6 @@
    "title": "Hörverstehen, Teil 1",
    "minutes": 8,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -904,10 +835,12 @@
      "answer": "f"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0,
+   "audio": "telc-b1-m03-hv1.mp3",
+   "audioPlays": 2
   },
   {
    "id": "hv2",
@@ -915,7 +848,6 @@
    "title": "Hörverstehen, Teil 2",
    "minutes": 14,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -970,9 +902,11 @@
     }
    ],
    "pointsPerItem": 2.5,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0,
+   "audio": "telc-b1-m03-hv2.mp3",
+   "audioPlays": 2
   },
   {
    "id": "hv3",
@@ -980,7 +914,6 @@
    "title": "Hörverstehen, Teil 3",
    "minutes": 8,
    "instruction": "Entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
-   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
    "format": "truefalse",
    "items": [
     {
@@ -1009,10 +942,12 @@
      "answer": "f"
     }
    ],
-   "pointsPerItem": 5.0,
-   "maxPoints": 25.0,
-   "availablePoints": 25.0,
-   "missing": 0
+   "pointsPerItem": 5,
+   "maxPoints": 25,
+   "availablePoints": 25,
+   "missing": 0,
+   "audio": "telc-b1-m03-hv3.mp3",
+   "audioPlays": 2
   },
   {
    "id": "sa",

@@ -1,0 +1,390 @@
+// =====================================================================
+// LEERE VORLAGE — Deutsch-Test für Zuwanderer (DTZ) A2–B1
+//
+// Struktur der schriftlichen Prüfung (100 Minuten · 65 Punkte · 46 Aufgaben):
+// - Hören (ca. 25 Minuten · 20 Punkte · 20 Aufgaben):
+//   - hv1 (mc): 4 Aufgaben [1–4] · Punkte: 1 · Maximum: 4
+//   - hv2 (mc): 5 Aufgaben [5–9] · Punkte: 1 · Maximum: 5
+//   - hv3 (mc): 8 Aufgaben [10–17] · Punkte: 1 · Maximum: 8
+//   - hv4 (matching): 3 Aufgaben [18–20] · Punkte: 1 · Maximum: 3
+// - Lesen (45 Minuten · 25 Punkte · 25 Aufgaben):
+//   - lv1 (mc): 5 Aufgaben [21–25] · Punkte: 1 · Maximum: 5 (Bild: Webportal)
+//   - lv2 (matching): 5 Aufgaben [26–30] · Punkte: 1 · Maximum: 5 (Bild: Anzeigen)
+//   - lv3 (mc): 6 Aufgaben [31–36] · Punkte: 1 · Maximum: 6
+//   - lv4 (truefalse): 3 Aufgaben [37–39] · Punkte: 1 · Maximum: 3
+//   - lv5 (mc): 6 Aufgaben [40–45] · Punkte: 1 · Maximum: 6 (Sprachbausteine)
+// - Schreiben (30 Minuten · 20 Punkte · 1 Aufgabe):
+//   - s1 (writing): 1 Aufgabe [46] (Auswahl Aufgabe A oder B mit 4 Leitpunkten) · Maximum: 20
+// =====================================================================
+
+# <PRUEFUNGSNAME>
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] <Frage 1>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[2] <Frage 2>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[3] <Frage 3>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[4] <Frage 4>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 7
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] <Frage 5>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[6] <Frage 6>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[7] <Frage 7>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[8] <Frage 8>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[9] <Frage 9>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 8
+Punkte: 1
+Maximum: 8
+Wiedergaben: 1
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] <Aussage zu Gespräch 1>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[11] <Frage zu Gespräch 1>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[12] <Aussage zu Gespräch 2>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[13] <Frage zu Gespräch 2>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[14] <Aussage zu Gespräch 3>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[15] <Frage zu Gespräch 3>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[16] <Aussage zu Gespräch 4>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[17] <Frage zu Gespräch 4>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 4
+Punkte: 1
+Maximum: 3
+Wiedergaben: 1
+Anweisung: Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen 18–20?
+Auswahltitel: Aussagen
+Auswahl:
+a = <Aussage a>
+b = <Aussage b>
+c = <Aussage c>
+d = <Aussage d>
+e = <Aussage e>
+f = <Aussage f>
+Aufgaben:
+[18] <Sprecher 1>
+Lösung: <a, b, c, d, e oder f>
+[19] <Sprecher 2>
+Lösung: <a, b, c, d, e oder f>
+[20] <Sprecher 3>
+Lösung: <a, b, c, d, e oder f>
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie suchen im Internet Informationen. Wo klicken Sie an?
+Bild: img/dtz-b1-m01-lv1.jpg
+Aufgaben:
+[21] <Situation 21>
+A) <Rubrik a>
+B) <Rubrik b>
+C) Andere Seite
+Lösung: <A, B oder C>
+[22] <Situation 22>
+A) <Rubrik a>
+B) <Rubrik b>
+C) Andere Seite
+Lösung: <A, B oder C>
+[23] <Situation 23>
+A) <Rubrik a>
+B) <Rubrik b>
+C) Andere Seite
+Lösung: <A, B oder C>
+[24] <Situation 24>
+A) <Rubrik a>
+B) <Rubrik b>
+C) Andere Seite
+Lösung: <A, B oder C>
+[25] <Situation 25>
+A) <Rubrik a>
+B) <Rubrik b>
+C) Andere Seite
+Lösung: <A, B oder C>
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m01-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] <Situation 26>
+Lösung: <a–h oder x>
+[27] <Situation 27>
+Lösung: <a–h oder x>
+[28] <Situation 28>
+Lösung: <a–h oder x>
+[29] <Situation 29>
+Lösung: <a–h oder x>
+[30] <Situation 30>
+Lösung: <a–h oder x>
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+**<Titel Text 1>**
+<Text 1>
+Aufgaben:
+[31] <Aussage zu Text 1>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[32] <Frage zu Text 1>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+Text:
+**<Titel Text 2>**
+<Text 2>
+Aufgaben:
+[33] <Aussage zu Text 2>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[34] <Frage zu Text 2>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+Text:
+**<Titel Text 3>**
+<Text 3>
+Aufgaben:
+[35] <Aussage zu Text 3>
+A) Richtig
+B) Falsch
+Lösung: <A oder B>
+[36] <Frage zu Text 3>
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: lv4
+Format: truefalse
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 7
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text und die Aufgaben 37 bis 39. Kreuzen Sie an: Richtig oder Falsch.
+Text:
+**<Titel Informationsbroschüre / Aushang>**
+<Text>
+Aufgaben:
+[37] <Aussage 37>
+Lösung: <r oder f>
+[38] <Aussage 38>
+Lösung: <r oder f>
+[39] <Aussage 39>
+Lösung: <r oder f>
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5 (Sprachbausteine)
+Gruppe: Lesen
+Minuten: 8
+Punkte: 1
+Maximum: 6
+Anweisung: Wählen Sie für jede Lücke (40–45) das richtige Wort (a, b oder c).
+Text:
+**<Titel Brief / E-Mail>**
+<Brieftext mit Lücken (40) bis (45)>
+Aufgaben:
+[40] Lücke 40:
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[41] Lücke 41:
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[42] Lücke 42:
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[43] Lücke 43:
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[44] Lücke 44:
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+[45] Lücke 45:
+A) <Option A>
+B) <Option B>
+C) <Option C>
+Lösung: <A, B oder C>
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie eine Aufgabe (Aufgabe A oder Aufgabe B). Schreiben Sie einen kurzen Brief oder eine E-Mail (ca. 80 Wörter). Schreiben Sie zu allen vier Leitpunkten.
+Text:
+**Aufgabe A: <Thema A>**
+<Situationsbeschreibung A>
+• <Leitpunkt 1>
+• <Leitpunkt 2>
+• <Leitpunkt 3>
+• <Leitpunkt 4>
+
+**Aufgabe B: <Thema B>**
+<Situationsbeschreibung B>
+• <Leitpunkt 1>
+• <Leitpunkt 2>
+• <Leitpunkt 3>
+• <Leitpunkt 4>
+Aufgaben:
+[46] Schreiben Sie einen Text zu Aufgabe A oder B:
+Mindestwoerter: 80
+Punkt: Leitpunkt 1
+Punkt: Leitpunkt 2
+Punkt: Leitpunkt 3
+Punkt: Leitpunkt 4

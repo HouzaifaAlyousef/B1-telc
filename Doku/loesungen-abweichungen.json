@@ -1,0 +1,159 @@
+{
+  "_": "حلول بالتطبيق بتخالف مفتاح الكتاب عن قصد. لكل وحدة سبب من النصّ.",
+  "_wie": "المفتاح تبع هالكتب من إعداد مجموعة تدريس، مو من telc. فيه أغلاط مثبتة.",
+  "abweichungen": [
+    {
+      "m": "02",
+      "teil": "lv2",
+      "nr": 7,
+      "app": "B",
+      "key": "C",
+      "grund": "«Danach geht es wieder hoch in einen leichten Schlaf, der von lebhaften, intensiven Träumen … begleitet wird» — النوم الخفيف = أحلام كتير، مو استيقاظ متكرّر."
+    },
+    {
+      "m": "02",
+      "teil": "sb1",
+      "nr": 26,
+      "app": "C",
+      "key": "B",
+      "grund": "«wenn Sie CHIP … ab und zu am Kiosk kaufen» — «trotz» حرف جرّ وما بينحطّ هون. «trotzdem» هي الصحيحة نحوياً."
+    },
+    {
+      "m": "04",
+      "teil": "lv2",
+      "nr": 9,
+      "app": "C",
+      "key": "B",
+      "grund": "«Millionen von Arbeitnehmern geben ihre ganze Kraft für ihren Job … für die die Arbeit das Wichtigste im Leben ist» — يعني بيعيشوا لشغلهن."
+    },
+    {
+      "m": "04",
+      "teil": "lv2",
+      "nr": 10,
+      "app": "C",
+      "key": "B",
+      "grund": "«lernen sollen wieder zu leben und nicht nur zu funktionieren … genauso viele private wie berufliche Termine» — علاقة صحّية مع الشغل."
+    },
+    {
+      "m": "05",
+      "teil": "sb1",
+      "nr": 21,
+      "app": "A",
+      "key": "B",
+      "grund": "«schade, … Sie bisher noch nicht Kunde … sind» — بدها رابط «dass». «darum» ما بتركّب."
+    },
+    {
+      "m": "05",
+      "teil": "sb1",
+      "nr": 27,
+      "app": "A",
+      "key": "B",
+      "grund": "«Dinge rund um das Thema Kaffee und Trinkwasser … Mitarbeiter und Besucher» — «für» مو «von»."
+    },
+    {
+      "m": "07",
+      "teil": "sb1",
+      "nr": 28,
+      "app": "A",
+      "key": "B",
+      "grund": "«sollte Ihre Kundennummer … den richtigen Zahlen sein» — التعبير «unter den … Zahlen sein»."
+    },
+    {
+      "m": "11",
+      "teil": "sb2",
+      "nr": 34,
+      "app": "C",
+      "key": "H",
+      "grund": "بنك الكلمات المطبوع بهالنموذج ناقص beschreiben/weil/suchen/auch — نفس الرسالة بـmodell-13 وبنكها سليم. بلا التبديل تلات فراغات ما إلها حلّ صح أبداً."
+    },
+    {
+      "m": "11",
+      "teil": "sb2",
+      "nr": 37,
+      "app": "J",
+      "key": "I",
+      "grund": "«Für diese Veranstaltung … wir ein gutes Hotel» بدها فعل. «nun» ظرف وما بتركّب."
+    },
+    {
+      "m": "13",
+      "teil": "lv2",
+      "nr": 10,
+      "app": "A",
+      "key": "C",
+      "grund": "⚠ بند معطوب بالمصدر: الخيارين فيهن «immer»، والنصّ بيقول «Oft ist jedoch auch die Stellung entscheidend» — يعني لا الأول ولا التاني مطلق. محتاج قرارك."
+    },
+    {
+      "m": "13",
+      "teil": "sb1",
+      "nr": 28,
+      "app": "C",
+      "key": "B",
+      "grund": "«Ich darf Sie daher … Rückzahlung … bitten» — التعبير «um etwas bitten»."
+    },
+    {
+      "m": "15",
+      "teil": "sb1",
+      "nr": 28,
+      "app": "A",
+      "key": "B",
+      "grund": "نفس رسالة modell-07 بالحرف."
+    },
+    {
+      "m": "16",
+      "teil": "lv2",
+      "nr": 7,
+      "app": "A",
+      "key": "C",
+      "grund": "«Wohnungen aber auch Büros … so einzurichten, dass sich Menschen in diesen Räumen wohl fühlen können»."
+    },
+    {
+      "m": "16",
+      "teil": "lv2",
+      "nr": 8,
+      "app": "A",
+      "key": "B",
+      "grund": "«Zuerst besprechen die Leute mit Frau Eigenmann, warum sie sich … nicht wohl fühlen» — «zuerst» صريحة."
+    },
+    {
+      "m": "16",
+      "teil": "sb1",
+      "nr": 24,
+      "app": "A",
+      "key": "C",
+      "grund": "«schon … Zeit vorher vorbereitet» — «lange Zeit» ظرف نصب. «langer» ما بتركّب."
+    },
+    {
+      "m": "16",
+      "teil": "sb1",
+      "nr": 28,
+      "app": "A",
+      "key": "C",
+      "grund": "«jemanden, von … ich Informationen bekommen kann» — «jemanden» مفرد ← «dem»."
+    },
+    {
+      "m": "16",
+      "teil": "sb2",
+      "nr": 39,
+      "app": "B",
+      "key": "M",
+      "grund": "«sind die Kosten … schon im Kursgeld enthalten?» — «wie» ما بتركّب، «dafür» بتركّب."
+    },
+    {
+      "m": "10",
+      "teil": "hv1",
+      "nr": 44,
+      "app": "f",
+      "key": "r",
+      "grund": "المفتاحان بيختلفوا: ملفّ النموذج المفرد بيقول r والكتاب الكبير بيقول f. ما عندي التسجيل تا أحكم — خلّيت الأصل (f) يلي بيوافق الكتاب."
+    }
+  ],
+  "quellfehler": [
+    {
+      "m": "06",
+      "teil": "lv2",
+      "nr": 9,
+      "was": "الخيار A مطبوع «seit 41 Jahren» والـ41 هو عمرها (النصّ: «die 41-Jährige, die seit 21 Jahren im Seibert-Elektronikwerk arbeitet»). وحلّ الكتاب C بيقول «seit 21 Jahren an der gleichen Maschine» — بس النصّ بيقول إنها انشالت عن هالماكينة («wurde in einen anderen Arbeitsbereich versetzt»).",
+      "الحالي": "خلّيت النصّ متل ما هو مطبوع، والحلّ C متل الكتاب. البند معطوب بالأصل — محتاج قرارك."
+    }
+  ]
+}

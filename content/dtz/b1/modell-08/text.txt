@@ -1,0 +1,473 @@
+# ASLAN
+Untertitel: 46 Aufgaben · 100 Minuten
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 25
+Hinweis: Aufgaben 1–20
+Punkte: 20
+Teile: hv1, hv2, hv3, hv4
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 45
+Hinweis: Aufgaben 21–45
+Punkte: 25
+Teile: lv1, lv2, lv3, lv4, lv5
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 30
+Hinweis: Aufgabe 46
+Punkte: 20
+Teile: s1
+
+
+### Teil: hv1
+Format: mc
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 4
+Wiedergaben: 1
+Anweisung: Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[1] Wie können Sie heute zum Südbahnhof fahren?
+A) Mit der U 1.
+B) Mit der U-Bahn und dem Bus.
+C) Überhaupt nicht.
+Lösung: B
+
+[2] Was soll Frau Aslan tun?
+A) Am Freitag vorbeikommen.
+B) Eine Fortbildung machen.
+C) Im Sekretariat anrufen.
+Lösung: C
+
+[3] Was kann man mit der Kundenkarte machen?
+A) Einkaufen und später bezahlen.
+B) Billiger einkaufen.
+C) Auch im Ausland einkaufen.
+Lösung: A
+
+[4] Was ist heute im Angebot?
+A) Gemüse.
+B) Fleisch.
+C) Obst.
+Lösung: C
+
+
+### Teil: hv2
+Format: mc
+Titel: Hören, Teil 2
+Gruppe: Hören
+Minuten: 5
+Punkte: 1
+Maximum: 5
+Wiedergaben: 1
+Anweisung: Sie hören fünf Ansagen aus dem Radio. Zu jeder Ansage gibt es eine Aufgabe. Welche Lösung (a, b oder c) passt am besten?
+Aufgaben:
+[5] Wie wird das Wetter in Süddeutschland?
+A) Die Sonne scheint.
+B) Es gibt viele Wolken.
+C) Es regnet und schneit.
+Lösung: A
+
+[6] Wann hören Sie Tipps zur Arbeitssuche?
+A) Am Montag.
+B) Am Mittwoch.
+C) Am Wochenende.
+Lösung: B
+
+[7] Wo muss man sehr vorsichtig fahren?
+A) Auf der A 1.
+B) Auf der A 3.
+C) Auf der A 31.
+Lösung: C
+
+[8] Was kann man gewinnen?
+A) CDs.
+B) Eine Reise.
+C) Bargeld.
+Lösung: B
+
+[9] Herr Lohmann
+A) wird von der Polizei gesucht.
+B) hatte einen Unfall.
+C) wird seit Tagen vermisst.
+Lösung: A
+
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 8
+Punkte: 1
+Maximum: 8
+Wiedergaben: 2
+Anweisung: Sie hören vier Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Entscheiden Sie bei jedem Gespräch, ob die Aussage dazu richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Aufgaben:
+[10] Frau Brodsky telefoniert mit dem Deutschlehrer.
+A) richtig
+B) falsch
+Lösung: B
+
+[11] Was soll Frau Brodsky machen?
+A) Ihrem Sohn mehr bei den Hausaufgaben helfen.
+B) Einen Nachhilfelehrer suchen.
+C) Ihren Sohn mittags länger in der Schule lassen.
+Lösung: C
+
+[12] Herr Kowalski hat ein Gespräch beim JobCenter.
+A) richtig
+B) falsch
+Lösung: B
+
+[13] Was muss Herr Kowalski noch tun?
+A) Verschiedene Unterlagen mitbringen.
+B) Den Antrag unterschreiben.
+C) In vier Wochen den Antrag abgeben.
+Lösung: B
+
+[14] Frau Mavinga bewirbt sich.
+A) richtig
+B) falsch
+Lösung: A
+
+[15] Was ist richtig?
+A) Frau Mavinga möchte 20 Stunden pro Woche arbeiten.
+B) Frau Mavinga möchte nicht am Samstag arbeiten.
+C) Frau Mavinga hat Berufserfahrung.
+Lösung: C
+
+[16] Die Frau kauft eine neue Waschmaschine.
+A) richtig
+B) falsch
+Lösung: B
+
+[17] Wann findet die Lieferung statt?
+A) Am Donnerstagmorgen.
+B) Spätestens Ende der Woche.
+C) Am Nachmittag.
+Lösung: B
+
+
+### Teil: hv4
+Format: matching
+Titel: Hören, Teil 4
+Gruppe: Hören
+Minuten: 6
+Punkte: 1
+Maximum: 3
+Wiedergaben: 2
+Anweisung: Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen 18–20?
+Auswahltitel: Meinungen zur Sonntagsarbeit
+Auswahl:
+a = Wenn die Geschäfte sonntags geöffnet haben, führt das für alle zu mehr Stress.
+b = Sonntagsarbeit ist beliebt, weil sie besser bezahlt wird.
+c = Sonntagsarbeit ist gut für die Wirtschaft.
+d = Warum sollen vor Weihnachten andere Regeln gelten als sonst im Jahr.
+e = Sonntagsarbeit ist kein Problem, weil man dafür einen anderen Tag in der Woche frei bekommt.
+f = Die Angestellten wollen nicht gerne am Sonntag arbeiten.
+Aufgaben:
+[18] Sprecher 1
+Lösung: f
+
+[19] Sprecher 2
+Lösung: a
+
+[20] Sprecher 3
+Lösung: c
+
+
+### Teil: lv1
+Format: mc
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Sie sind im Bürgerbüro Ihrer Stadt. Lesen Sie die Aufgaben 21–25 und den Wegweiser. In welches Zimmer (a, b oder c) gehen Sie?
+Bild: img/dtz-b1-m08-lv1.jpg
+Aufgaben:
+[21] Ihr Bekannter spricht nur wenig Deutsch und sucht einen Deutschkurs. Er will wissen, welcher Kurs für ihn der richtige ist.
+A) Zimmer 106–107
+B) Zimmer 304–306
+C) anderes Zimmer
+Lösung: A
+
+[22] Sie haben Fragen zu Ihrem Mietvertrag. Wo bekommen Sie Informationen?
+A) Zimmer 001–005
+B) Zimmer 215
+C) anderes Zimmer
+Lösung: B
+
+[23] Sie haben Ihre Schlüssel verloren. Wo können Sie sie vielleicht wiederbekommen?
+A) Zimmer 006–007
+B) Zimmer 206–208
+C) anderes Zimmer
+Lösung: A
+
+[24] Sie haben eine Stelle im Krankenhaus gefunden und müssen sich vom Arzt untersuchen lassen. Wohin gehen Sie?
+A) Zimmer 008–015
+B) Zimmer 307–309
+C) anderes Zimmer
+Lösung: C
+
+[25] Sie heiraten heute. Wohin gehen Sie?
+A) Zimmer 001–005
+B) Zimmer 201–203
+C) anderes Zimmer
+Lösung: B
+
+
+### Teil: lv2
+Format: matching
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 5
+Anweisung: Finden Sie zu jeder Situation (26–30) die passende Anzeige (a–h). Für eine Aufgabe gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.
+Auswahltitel: Anzeigen
+Bild: img/dtz-b1-m08-lv2.jpg
+Auswahl:
+a = Anzeige a
+b = Anzeige b
+c = Anzeige c
+d = Anzeige d
+e = Anzeige e
+f = Anzeige f
+g = Anzeige g
+h = Anzeige h
+x = Keine Anzeige passt
+Aufgaben:
+[26] Ihr Sohn zieht in seine erste Wohnung. Sie suchen billige Möbel für sein Wohnzimmer.
+Lösung: c
+
+[27] Sie ziehen nächstes Wochenende um. Sie suchen eine Firma, die Ihre Möbel transportiert.
+Lösung: h
+
+[28] Sie suchen eine ruhige, helle 3-Zimmer-Wohnung mit guten Verkehrsverbindungen in die Innenstadt. Sie möchten keine Wohnung im Erdgeschoss.
+Lösung: e
+
+[29] Sie suchen für sich und Ihre Familie eine 4-Zimmer-Wohnung im Zentrum. Ihre Eltern haben Probleme mit dem Treppensteigen.
+Lösung: x
+
+[30] Ein Kollege kommt im September für drei Monate nach Deutschland. Sie suchen für ihn ein Zimmer oder eine kleine Wohnung.
+Lösung: d
+
+
+### Teil: lv3
+Format: mc
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie die drei Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.
+Text:
+An die Mieter des Hauses Sandweg 12
+
+Liebe Mieterinnen und Mieter,
+
+immer wieder beschweren sich Bewohner des Hauses, dass die Mülltonnen zu voll sind und dass der Müll oft neben die Tonnen gestellt wird. Im Hof ist es dann schmutzig und es riecht schlecht.
+
+Die Hausverwaltung möchte dieses Problem lösen: Ab dem 1. August werden wir zwei zusätzliche Mülltonnen bei der Stadt bestellen.
+
+Wir müssen Sie aber darauf hinweisen, dass für diese Mülltonnen Kosten entstehen, die wir auf alle Mieter umlegen müssen. Ihren Beitrag finden Sie am Jahresende in Ihrer Nebenkostenabrechnung.
+
+Wir hoffen und erwarten, dass alle Seiten mit dieser Lösung zufrieden sein werden.
+
+Mit freundlichen Grüßen
+Ihre Hausverwaltung
+Aufgaben:
+[31] Viele Mieter sind unzufrieden.
+Lösung: richtig
+
+[32] Die Hausverwaltung
+A) möchte die Mülltonnen nicht mehr in den Hof stellen.
+B) möchte, dass die Mieter weniger Müll wegwerfen.
+C) möchte weitere Mülltonnen besorgen.
+Lösung: C
+
+Text:
+Liebe Eltern,
+
+zur Vorbereitung der Klassenfahrt in diesem Schuljahr lade ich Sie herzlich zu einem Elternabend ein. Dieser findet am 1. September um 18 Uhr in Raum 120 statt.
+
+Auf dem Elternabend wollen wir über das Ziel der Klassenfahrt, ihre Dauer und die Kosten sprechen.
+
+Falls Sie Probleme haben sollten, die Reise zu finanzieren, nehmen Sie bitte in den nächsten Tagen, auf jeden Fall aber vor dem Elternabend, Kontakt mit mir auf. Wir werden bestimmt eine Lösung finden.
+
+Wichtig:
+Alles, was an diesem Abend beschlossen wird, gilt für alle Schüler, also auch für die Schüler, deren Eltern nicht anwesend waren. Deshalb ist es in Ihrem Interesse, dass von jedem Schüler ein Elternteil zum Elternabend kommt.
+
+Mit freundlichen Grüßen
+Ihre Schulleitung
+Aufgaben:
+[33] Es ist wichtig, dass Eltern aller Schüler zum Elternabend kommen.
+Lösung: richtig
+
+[34] Wenn Eltern nicht kommen können,
+A) sollen sie den Klassenlehrer vor dem Elternabend anrufen.
+B) müssen sie akzeptieren, was an diesem Abend besprochen wurde.
+C) können ihre Kinder nicht an der Klassenfahrt teilnehmen.
+Lösung: B
+
+Text:
+INFORMATIONEN DER GEZ
+
+Im Moment werden ältere Mitbürger häufig von Personen angerufen, die sagen, dass sie im Auftrag der GEZ telefonieren. Sie behaupten, dass Rentner ab sofort keine Rundfunkgebühren mehr zahlen müssten. Dann bitten sie die Angerufenen, ihre Bankverbindung zu nennen, angeblich, damit sie die zu viel gezahlten Rundfunkgebühren zurückzahlen können.
+
+Die GEZ warnt vor diesen Anrufen. Diese Anrufe kommen nicht von der GEZ.
+
+Hier sind Betrüger unterwegs. Die Anrufer wollen die Kontodaten von GEZ-Kunden haben. Die GEZ hat bereits bei der Polizei Anzeige erstattet und bittet jeden, der von den Betrügern angerufen wird, um schnelle Mitteilung: www.gez.de.
+Aufgaben:
+[35] Durch diese Pressemitteilung will die GEZ die Verbraucher warnen.
+Lösung: richtig
+
+[36] Die GEZ möchte, dass die Kunden
+A) weniger bezahlen.
+B) die GEZ über bestimmte Anrufe informieren.
+C) ihre Bankverbindung angeben.
+Lösung: B
+
+
+### Teil: lv4
+Format: mc
+Titel: Lesen, Teil 4
+Gruppe: Lesen
+Minuten: 9
+Punkte: 1
+Maximum: 3
+Anweisung: Lesen Sie den Text. Entscheiden Sie, ob die Aussagen 37–39 richtig oder falsch sind.
+Text:
+ProBank Telefon-Banking
+
+Schneller, einfacher und bequemer geht es nicht!
+
+Mit dem ProBank Telefon-Banking können Sie Ihr ProBank Girokonto bequem von jedem Telefon aus führen. Egal, ob Sie von zu Hause, vom Arbeitsplatz oder von unterwegs aus anrufen – Sie benötigen nur Ihre persönliche Telefon-Geheimzahl. Diese erhalten Sie mit separater Post.
+
+Unser Telefon-Banking arbeitet mit einem Sprachcomputer und ist 24 Stunden am Tag für Sie erreichbar. Das Telefon-Banking ist für Sie kostenlos, Sie müssen nur die Telefonkosten bezahlen. Bitte wählen Sie die Telefonnummer 0180/256760200 (9 Cent/Minute aus dem Festnetz der Deutschen Telekom; ggf. abweichende Mobilfunktarife).
+
+Die folgenden Leistungen stehen Ihnen zur Verfügung:
+
+► Kontoinformationen, Kontostand abfragen
+Ihr aktueller Kontostand wird Ihnen nach Eingabe Ihrer Kontonummer und Telefon-Geheimzahl genannt. Sie können außerdem einen Kontoauszug über den Sprachcomputer bestellen.
+
+► Buchungsaufträge
+Überweisungen sind ebenfalls direkt über den Sprachcomputer möglich. Inlands-Überweisungsaufträge sind bis maximal 10.000 EUR pro Tag möglich. Überweisungen ins Ausland können im Moment telefonisch leider noch nicht in Auftrag gegeben werden.
+
+► Daueraufträge einrichten
+Für die Einrichtung eines Dauerauftrags lassen Sie sich zu einem Mitarbeiter der Bank verbinden (Direkt-Service).
+
+► Bestellservice
+Auf Wunsch können Sie über unseren Sprachcomputer alle wichtigen Formulare, zum Beispiel Girobriefumschläge und Überweisungsvordrucke bestellen. Fünf Vordrucke pro Monat sind kostenlos.
+Aufgaben:
+[37] Für das Telefonbanking muss der Kunde außer den Telefonkosten nichts bezahlen.
+Lösung: richtig
+
+[38] Nicht jede Überweisung ist mit dem Telefonbanking möglich.
+Lösung: richtig
+
+[39] Der Kunde bekommt jeden Monat Vordrucke und Formulare zugeschickt.
+Lösung: falsch
+
+
+### Teil: lv5
+Format: mc
+Titel: Lesen, Teil 5
+Gruppe: Lesen
+Minuten: 6
+Punkte: 1
+Maximum: 6
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 40–45. Welche Lösung (a, b oder c) passt am besten?
+Text:
+Köln, den 1. Oktober 2010
+
+Kündigung meines Mobilfunkvertrags
+Kundennummer 245 333 22, Vertragsnummer MFV6674X
+
+Sehr geehrte Damen und Herren,
+
+Hiermit kündige ich meinen Mobilfunkvertrag zum nächstmöglichen (40).
+
+Es handelt sich um den zwischen Ihnen und mir bestehenden (41) mit der oben angegebenen Nummer.
+
+Könnten Sie mir bitte mitteilen, ab wann ich meinen Vertrag beenden (42)?
+
+Bitte schicken Sie mir außerdem eine schriftliche (43) über den Eingang der Kündigung zu.
+
+Weiter möchte ich Sie (44), mich aus Ihrer Adressenkartei zu nehmen und mir in Zukunft keine Werbung mehr zuzusenden.
+
+Mit freundlichen (45)
+Karsten Wissman
+Aufgaben:
+[40] Lücke 40
+A) Datum
+B) Frist
+C) Zeit
+Lösung: A
+
+[41] Lücke 41
+A) Antrag
+B) Beitrag
+C) Vertrag
+Lösung: C
+
+[42] Lücke 42
+A) will
+B) kann
+C) muss
+Lösung: B
+
+[43] Lücke 43
+A) Anmeldung
+B) Aufnahme
+C) Bestätigung
+Lösung: C
+
+[44] Lücke 44
+A) fordern
+B) bitten
+C) wünschen
+Lösung: B
+
+[45] Lücke 45
+A) Grüßen
+B) Wiedersehen
+C) Dank
+Lösung: A
+
+
+### Teil: s1
+Format: writing
+Titel: Schreiben
+Gruppe: Schreiben
+Minuten: 30
+Punkte: 20
+Maximum: 20
+Anweisung: Wählen Sie Aufgabe A oder Aufgabe B. Zeigen Sie, was Sie können. Schreiben Sie möglichst viel. Schreiben Sie Ihren Text auf den Antwortbogen.
+Aufgaben:
+[46] Aufgabe A:
+Sie finden an Ihrem Arbeitsplatz eine Nachricht von Ihrem Chef. In der Firma ist im Moment viel zu tun, darum fragt er Sie, ob Sie diese Woche auch am Samstag arbeiten könnten. Sie schreiben Ihrem Chef eine kurze Mitteilung.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Samstag arbeiten ist okay.
+- Wie viele Stunden arbeiten?
+- Ist um 10 Uhr anfangen in Ordnung?
+- Für den Samstag nächste Woche einen Tag frei nehmen?
+
+oder
+
+Aufgabe B:
+Ihr Sohn kann morgen nicht an einem Ausflug teilnehmen, weil er krank geworden ist. Sie schreiben eine kurze Mitteilung an die Lehrerin, Frau Krüger.
+
+Schreiben Sie etwas zu folgenden Punkten:
+- Grund für Ihr Schreiben
+- Was fehlt Ihrem Sohn?
+- Was hat der Arzt gesagt?
+- Wann wieder in der Schule?

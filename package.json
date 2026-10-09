@@ -1,0 +1,11 @@
+{
+  "name": "b1-telc",
+  "private": true,
+  "description": "اختبارات المتصفّح بتحتاج playwright. النسخة مثبّتة: بناء الكروميوم الجاهز بالبيئة بيطابق نسخة وحدة، وغيرها بيدوّر على بناء مو موجود ويفشل.",
+  "scripts": {
+    "test": "bash tests/tools.sh && node tests/browser.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.0"
+  }
+}

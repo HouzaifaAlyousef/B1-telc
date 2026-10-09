@@ -1,0 +1,281 @@
+# HERBERT
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/oesd-a1-m06-lv1.jpg
+Auswahl:
+1 = Zusammen macht es mehr Spaß: Unsere Gruppe trifft sich jeden Samstag zum Laufen, Schwimmen oder Radfahren. Möchtest du auch dabei sein? Ruf einfach an unter 03685/45875.
+2 = Zum Sonnengarten: Das Lokal für Groß und Klein. Bei uns gibt es: Kaffee und Kuchen, Frühstück, Mittagessen, einen Kindertisch zum Spielen und Malen. täglich geöffnet von 7 bis 15 Uhr
+3 = Jetzt neu im „Schwarzen Adler“: Nudel- und Salatbuffet. Essen so viel Sie wollen! Erwachsene: € 15,-, Kinder: € 8,-. Jeden Tag von 17 bis 21 Uhr
+4 = Sie mögen Hunde?: Möchten Sie zweimal am Tag mit meinem Hund spazieren gehen? Ich zahle 7 Euro pro Spaziergang. W. Huber: 0699/4585156
+5 = Neueröffnung in Basel: Willkommen im „Prinz und Prinzessin“! Bei uns finden Sie alles für die Kleinen (0 bis 6 Jahre): Kinderwagen, Kleidung, Spielzeug. Kastelstrasse 17
+6 = Einfach-Raus-Ticket: günstig Zugfahren für 2 bis 5 Personen, gültig jeden Tag in ganz Österreich, Nehmen Sie Ihr Fahrrad gratis mit! Tickets unter www.oebb.at oder direkt am Bahnhof
+Aufgaben:
+[1] Situation A: Ihre Schwester hat ein Baby. Sie wollen ein Geschenk kaufen.
+Lösung: 5
+[2] Situation B: Sie wollen mit Ihrer Freundin einen Ausflug machen. Ihr Auto ist kaputt.
+Lösung: 6
+[3] Situation C: Ihr Freund möchte etwas Geld verdienen. Er liebt Tiere.
+Lösung: 4
+[4] Situation D: Sie möchten mit anderen Sport treiben und haben am Wochenende frei.
+Lösung: 1
+[5] Situation E: Ihr Bruder besucht Sie heute. Sie möchten am Abend essen gehen.
+Lösung: 3
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**Babysitter gesucht!**
+Sie ...
+✿ lieben Kinder?
+✿ können Auto fahren?
+✿ sprechen gut Deutsch und Englisch?
+✿ haben von Samstag bis Mittwoch Zeit?
+Dann haben wir den richtigen Job für Sie!
+Fam. Moosburger
+gabriela.moosburger@yahoo.de
+Aufgaben:
+[6] Braucht man für die Stelle einen Führerschein?
+A) JA
+B) NEIN
+Lösung: A
+[7] Muss man am Wochenende arbeiten?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Haus mit Garten zu verkaufen!**
+Besichtigen möglich ab Donnerstag, 17.05., täglich zwischen 09:00 und 13:30 Uhr!
+Für weitere Informationen melden Sie sich bitte direkt bei Julia Berger.
+julia.berger@gmx.at
+0664 / 8154026 (ab 12:30 Uhr)
+Aufgaben:
+[8] Kann man das Haus Anfang Mai ansehen?
+A) JA
+B) NEIN
+Lösung: B
+[9] Kann man Frau Berger am Vormittag anrufen?
+A) JA
+B) NEIN
+Lösung: B
+Text:
+**TIERPARK Beck in Hamburg**
+Nach der Winterpause sind wir endlich wieder für Sie da!
+Dienstag–Sonntag: 09–20 Uhr
+Unser Frühlings-Angebot im März:
+Von 02.03.–15.03. gibt es -25 % auf alle Eintrittskarten!
+www.tierpark-beck.de
+Aufgaben:
+[10] Ist der Tierpark montags geöffnet?
+A) JA
+B) NEIN
+Lösung: B
+[11] Sind die Tickets den ganzen März lang billiger?
+A) JA
+B) NEIN
+Lösung: B
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/oesd-a1-m06-lv3.jpg
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: Liebe Eltern! Nehmen Sie kleine Kinder am Bahnsteig immer an die Hand!
+Lösung: 4
+[13] Text B: Mahlzeit! Wir kochen jeden Tag frisch und mit viel Liebe. Schauen Sie in unsere Speisekarte.
+Lösung: 6
+[14] Text C: Neues Angebot! Wir kommen zu Ihnen nach Hause und reparieren kaputte Kühlschränke und Waschmaschinen schnell und günstig. Tel.: 0676/4515845
+Lösung: 5
+[15] Text D: Liebe Besucherinnen und Besucher! Bitte benutzen Sie unsere Kästen. Im Schwimmbad sind Schuhe verboten.
+Lösung: 1
+[16] Text E: Wir kaufen und verkaufen Häuser in ganz Österreich. Für mehr Informationen besuchen Sie uns unter www.deinhaus.at.
+Lösung: 3
+
+### Teil: hv1
+Format: matching
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/oesd-a1-m06-hv1.jpg
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: B
+[18] Text 2
+Lösung: D
+[19] Text 3
+Lösung: F
+[20] Text 4
+Lösung: A
+[21] Text 5
+Lösung: E
+
+### Teil: hv2
+Format: writing
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Wandern in Tirol**
+Was: Wandern in Tirol
+Abfahrt: am ............................, um ............................ Uhr
+Übernachten: Haus ............................
+Preis: ............................ Euro
+Telefonnummer: 0660/ ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Abfahrt (Wochentag): Samstag / Sa(.)
+Punkt: Abfahrt (Uhrzeit): 06:30 / halb 7 / halb sieben Uhr
+Punkt: Übernachten: Haus Gimpel
+Punkt: Preis: 27 Euro
+Punkt: Telefonnummer: 4189724
+
+### Teil: hv3
+Format: mc
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Welchen Kurs möchten Sie gerne besuchen?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Text 1: Welchen Kurs möchten Sie gerne besuchen?
+A) Sprachkurs
+B) Tanzkurs
+C) Computerkurs
+D) Kochkurs
+Lösung: C
+[24] Text 2: Welchen Kurs möchten Sie gerne besuchen?
+A) Sprachkurs
+B) Tanzkurs
+C) Computerkurs
+D) Kochkurs
+Lösung: A
+[25] Text 3: Welchen Kurs möchten Sie gerne besuchen?
+A) Sprachkurs
+B) Tanzkurs
+C) Computerkurs
+D) Kochkurs
+Lösung: B
+[26] Text 4: Welchen Kurs möchten Sie gerne besuchen?
+A) Sprachkurs
+B) Tanzkurs
+C) Computerkurs
+D) Kochkurs
+Lösung: D
+[27] Text 5: Welchen Kurs möchten Sie gerne besuchen?
+A) Sprachkurs
+B) Tanzkurs
+C) Computerkurs
+D) Kochkurs
+Lösung: A
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Sie möchten Informationen über ein Studium an der Universität Ihrer Heimatstadt bekommen. Dafür müssen Sie ein Formular ausfüllen. Bitte füllen Sie das Formular aus. Sie können die Antworten auch erfinden.
+Text:
+**UNIVERSITÄT – FORMULAR**
+Vorname(n): ............................
+Nachname(n): ............................
+Geburtsdatum: ............................
+Geburtsland: ............................
+E-Mail-Adresse: ............................
+Adresse (Straße + Nr.): ............................
+Postleitzahl + Ort: ............................
+Datum und Unterschrift: ............................
+Aufgaben:
+[28] Füllen Sie das Formular mit Ihren Angaben aus:
+Punkt: Vorname(n) und Nachname(n)
+Punkt: Geburtsdatum und Geburtsland
+Punkt: E-Mail-Adresse
+Punkt: Adresse (Straße + Nr., Postleitzahl + Ort)
+Punkt: Datum und Unterschrift
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Ihre Freundin Alma heiratet bald in Berlin. Sie und Ihr Freund Herbert sind zum Hochzeitsfest eingeladen. Sie bekommen folgendes E-Mail von Herbert. Antworten Sie Herbert. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Hochzeit in Berlin**
+Hallo!
+Ich freue mich schon sehr auf Almas Fest. Natürlich brauchen wir ein schönes Geschenk für sie. Hast du eine Idee? Wir können zusammen etwas für sie kaufen. Wann hast du Zeit zum Einkaufen? Und noch etwas: Wie kommen wir nach Berlin?
+Liebe Grüße
+Herbert
+Aufgaben:
+[29] Antworten Sie Herbert (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: Was kaufen wir für Alma? (Geschenkidee)
+Punkt: Wann hast du Zeit zum Einkaufen?
+Punkt: Wie kommen wir nach Berlin? (Verkehrsmittel)
+Punkt: Gruß am Ende

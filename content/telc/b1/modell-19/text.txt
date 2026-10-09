@@ -1,0 +1,412 @@
+# MORITZ
+Untertitel: 61 Aufgaben · 150 Minuten
+
+## Block: block-lv-sb
+Titel: Leseverstehen und Sprachbausteine
+Minuten: 90
+Hinweis: Aufgaben 1–40
+Punkte: 105
+Fehlend: 0
+Teile: lv1, lv2, lv3, sb1, sb2
+
+## Block: block-hv
+Titel: Hörverstehen
+Minuten: 30
+Hinweis: Aufgaben 41–60
+Punkte: 75
+Fehlend: 0
+Teile: hv1, hv2, hv3
+
+## Block: block-sa
+Titel: Schriftlicher Ausdruck
+Minuten: 30
+Hinweis: 
+Punkte: 45
+Fehlend: 0
+Teile: sa
+
+### Teil: lv1
+Format: matching
+Titel: Leseverstehen, Teil 1
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.
+Auswahl:
+A = Bürgermeister eröffnet Weihnachtsmarkt
+B = Glasflaschen nicht so gut wie gedacht
+C = Innenstadt mit Christbäumen geschmückt
+D = Laufend die Welt vom Müll befreien
+E = Mit der eigenen Dose in den Supermarkt
+F = Neue Sportart aus Schweden
+G = Plastikflaschen immer beliebter
+H = Regionale Produkte im Supermarkt
+I = Supermarkt setzt auf Plastik
+J = Weihnachtsmarkt für Kunst-Begeisterte
+Aufgaben:
+[1] Man muss auch mal mutig sein! Das dachte sich Jannik. Warum ist er so mutig? Seit drei Jahren kauft er regelmäßig in einem Unverpackt-Laden ein. „Dabei spare ich nicht nur eine Menge Plastik“, sagt er. „Auch an der Frische der Produkte merkt man einen Unterschied. Die Schokolade bei uns ist immer knackiger als im Supermarkt.“ Offenbar sind Unverpackt-Läden gerade im Trend. Das merkt man auch daran, dass in den letzten zwei Jahren doppelt so viele Läden eröffnet haben. Doch es funktioniert: die Kundinnen und Kunden geben mehr aus, weil es der Umwelt gut geht.
+Lösung: E
+[2] Warum nicht das Angenehme mit dem Nützlichen verbinden? „Umweltschutz fängt mit kleinen Schritten an. Ich fahre jetzt seit Monaten mit meinem Rad zur Arbeit. Da tue ich etwas für mich, aber auch für die Umwelt“, sagt Lea. Seit ihrem Auslandssemester in Schweden ist sie überzeugt: „Dort ist Umweltschutz ganz selbstverständlich. Warum kann man nicht auch hier sein Hobby mit dem Umweltschutz verbinden?“
+Lösung: F
+[3] Wir merken deutlich, dass Getränke in Glasflaschen wieder beliebter werden, besonders bei Mineralwasser, berichtet Jürgen Fischer auf der Getränkemesse in Düsseldorf. Auch die Verkaufszahlen bestätigen diesen Trend. Dabei sind Glasflaschen nicht unbedingt besser für die Umwelt als Plastikflaschen. Der Grund ist der teilweise weite Transportweg: Für Milch zum Beispiel wird die Milch-Glasflasche im Durchschnitt 721 Kilometer transportiert, bis sie ankommt.
+Lösung: B
+[4] Am 25. November beginnt wieder der Frankfurter Weihnachtsmarkt. Los geht es um 17:05 Uhr mit einem Glockenspiel von der Nikolaikirche. Danach gibt es eine Rede des Bürgermeisters. „Es ist für mich immer etwas ganz Besonderes, den Weihnachtsbaum mit seinen 6500 Lichtern zu sehen“, erzählt dieser der Frankfurter Rundschau. 700 Sterne sollen den Römerberg verschönern. Das hr-Blasorchester sorgt an mehreren Abenden mit Weihnachtsliedern für gemütliche Stimmung.
+Lösung: A
+[5] Ein Spaziergang in der Regensburger Altstadt ist in der Weihnachtszeit besonders schön. Im Schatten des Alten Rathauses lädt der Lucrezia-Markt zum Träumen ein. Suchen Sie noch ein besonderes Geschenk? Dann sind Sie dort genau richtig: Denn Handwerker präsentieren und verkaufen ihre Produkte aus Metall, Glas oder Holz. Und Kreativen wird eine Bühne für Musik und Theater geboten. Außerdem gibt es heißen Apfelsaft aus der Region.
+Lösung: J
+
+### Teil: lv2
+Format: mc
+Titel: Leseverstehen, Teil 2
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 5
+Maximum: 25
+Anweisung: Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+**Ein Leben auf Sumatra**
+Der Abend, an dem Svenja Peters ihr Herz verlor, war ihr erster auf der Insel. Sie hatte gar nicht geplant, nach Sumatra zu reisen. Aber dann hatten ihr in Thailand andere Reisende von dem großen und traumhaft gelegenen See erzählt. Und sie war dann einfach nach Indonesien geflogen. Für den Mann, den die damals 26-Jährige auf Sumatra traf, gab sie ihre geplante Karriere als Anwältin auf.
+Die Reise sollte eine kurze Pause zwischen Uni und Job sein. Doch zurück in Deutschland packte sie ihre Sachen in Kisten und machte sich mit ihnen wieder auf den Weg zurück nach Sumatra.
+„Meine Eltern machten sich damals große Sorgen, dass ich meine Fachkenntnisse nicht nutze“, sagt Svenja Peters. „Aber als ich 18 wurde, hatten sie mir gesagt: Du stehst jetzt auf eigenen Füßen! Und daran erinnerte ich sie. Bei ihren jährlichen Besuchen sehen sie auch, wie gut es mir hier geht.“
+Sie selbst habe keine Sekunde an ihrer Entscheidung gezweifelt, sagt sie. Und es sind viele Sekunden seit damals vergangen. Mehr als 800 Millionen, um genau zu sein. Svenja Peters lebt seit 26 Jahren auf Sumatra.
+Sie hat den Mann geheiratet, in den sie sich auf ihrer Reise verliebte, und ist mit ihm seit 26 Jahren zusammen. Die beiden besitzen ein kleines Hotel mit 36 Zimmern und haben drei Kinder. Zwei leben gerade in Deutschland. Die Tochter studiert Tourismus und der Sohn macht eine Ausbildung zum Koch. Svenja Peters ist überzeugt, dass sie wieder zurückkommen werden.
+Ihr Start in die Selbstständigkeit war ein vegetarisches Restaurant. Mit den ersten Einnahmen kaufte sie ihr erstes kleines Haus mit zwei Gästezimmern. Nach und nach kaufte sie weitere Häuser. Heute sagt sie: „Ich verdiene so viel wie eine deutsche Anwältin.“
+Aufgaben:
+[6] Svenja Peters blieb auf Sumatra, weil
+A) ihr Thailand nicht gefiel.
+B) sie dort als Anwältin arbeiten konnte.
+C) sie sich verliebte.
+Lösung: C
+[7] Nach ihrer Rückkehr nach Deutschland
+A) organisierte Svenja ihren Umzug.
+B) setzte Svenja ihr Studium fort.
+C) suchte Svenja eine Stelle als Anwältin.
+Lösung: A
+[8] Ihre Eltern hatten Angst, dass
+A) sie Svenja nicht wiedersehen würden.
+B) Svenja nicht selbstständig sein würde.
+C) Svenjas Studium umsonst war.
+Lösung: C
+[9] Svenja und ihr Mann
+A) führen ein Hotel mit 36 Zimmern.
+B) haben zwei Kinder.
+C) sind seit 36 Jahren ein Paar.
+Lösung: A
+[10] Svenja eröffnete auf Sumatra
+A) direkt das Hotel.
+B) ein Büro als Anwältin.
+C) zuerst ein Restaurant.
+Lösung: C
+
+### Teil: lv3
+Format: matching
+Titel: Leseverstehen, Teil 3
+Gruppe: Leseverstehen
+Minuten: 20
+Punkte: 2.5
+Maximum: 25
+Anweisung: Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.
+AuswahlTitel: Anzeigen
+Bild: img/m19-lv3.jpg
+Auswahl:
+A = 
+B = 
+C = 
+D = 
+E = 
+F = 
+G = 
+H = 
+I = 
+J = 
+K = 
+L = 
+X = 
+Aufgaben:
+[11] Sie sind in der Schweiz und möchten sich ein paar Tage beim Baden erholen.
+Lösung: D
+[12] Sie hören gerne klassische Musik, am liebsten Barocklieder. Sie möchten in ein Konzert gehen.
+Lösung: H
+[13] Ihr Sohn möchte gerne in den Schulferien seine Fremdsprachenkenntnisse verbessern. Er möchte auch Sport treiben.
+Lösung: I
+[14] Sie reisen nicht gerne allein und suchen deshalb Reisepartner.
+Lösung: E
+[15] Sie möchten am Donnerstagabend mit Ihrer Bekannten eine Musikveranstaltung besuchen.
+Lösung: A
+[16] Ihre Familie möchte den nächsten Urlaub am Meer verbringen.
+Lösung: X
+[17] Sie leben in Zürich und möchten dort möglichst schnell Englisch lernen.
+Lösung: L
+[18] Sie bekommen Besuch von Ihrer Freundin. Sie möchte gerne tanzen gehen.
+Lösung: X
+[19] Sie möchten Freunde im Ausland besuchen und suchen ein Reisebüro.
+Lösung: F
+[20] Sie sind sportlich und möchten im Sommer in den Bergen wandern gehen.
+Lösung: G
+
+### Teil: sb1
+Format: mc
+Titel: Sprachbausteine, Teil 1
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?
+Text:
+Liebe Lisa,
+ich hoffe, es geht dir gut! Wir (21) viel zu lange nichts mehr voneinander gehört. Seit wir (22) das letzte Mal gesehen haben, warst du mit Severin (23) New York und ich bin mit Maurizio durch Slowenien gereist.
+Du (24) mir unbedingt erzählen, was ihr alles erlebt habt. Wart ihr auch im Central Park spazieren? (25) würde ich ja so gerne mal machen!
+Uns hat es in Slowenien unglaublich gut gefallen. Wandern konnten wir leider (26) meiner Verletzung nicht. Dafür haben wir gut gegessen, jeden Abend am Feuer gesessen und (27) Ruhe genossen. Stell dir vor, in unserer (28) hatten wir kein Internet. Und auch mit (29) Handy hatte ich keinen Netzempfang. Diese (30) Pause hat sehr gutgetan. Jetzt bin ich wirklich erholt.
+Bis hoffentlich bald! Deine Ruth
+Aufgaben:
+[21] Wir (21) viel zu lange nichts mehr voneinander gehört.
+A) habe
+B) haben
+C) habt
+Lösung: B
+[22] Seit wir (22) das letzte Mal gesehen haben …
+A) mich
+B) sie
+C) uns
+Lösung: C
+[23] … warst du mit Severin (23) New York …
+A) aus
+B) auf
+C) in
+Lösung: C
+[24] Du (24) mir unbedingt erzählen, was ihr alles erlebt habt.
+A) brauchst
+B) hast
+C) musst
+Lösung: C
+[25] (25) würde ich ja so gerne mal machen!
+A) Das
+B) Was
+C) Welches
+Lösung: A
+[26] Wandern konnten wir leider (26) meiner Verletzung nicht.
+A) außer
+B) trotz
+C) wegen
+Lösung: C
+[27] … jeden Abend am Feuer gesessen und (27) Ruhe genossen.
+A) der
+B) die
+C) eine
+Lösung: B
+[28] Stell dir vor, in unserer (28) hatten wir kein Internet.
+A) Unterkunft
+B) Unterkünfte
+C) Unterkünften
+Lösung: A
+[29] Und auch mit (29) Handy hatte ich keinen Netzempfang.
+A) deinem
+B) ihrem
+C) meinem
+Lösung: C
+[30] Diese (30) Pause hat sehr gutgetan.
+A) digital
+B) digitale
+C) digitalen
+Lösung: B
+
+### Teil: sb2
+Format: wordbank
+Titel: Sprachbausteine, Teil 2
+Gruppe: Sprachbausteine
+Minuten: 20
+Punkte: 1.5
+Maximum: 15
+Anweisung: Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.
+Text:
+Hallo Emilia,
+gestern hat mir mein Englischlehrer Informationen über ein Stipendium in den USA geschickt und ich (31) gleich an uns beide denken. Wir haben uns doch sowieso schon (32) einiger Zeit überlegt, nach dem Abitur im Ausland zu studieren. Vielleicht sollten wir diese Gelegenheit nutzen. Es gibt natürlich (33) Garantie, dass wir genommen werden, aber probieren können wir es, oder?
+Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen. Eine andere Kultur zu erleben und (35) unsere Englischkenntnisse zu verbessern – das wäre doch genial! So ein Auslandsaufenthalt ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.
+Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen. Außerdem gibt es viele (38) Wahlveranstaltungen wie Chorsingen, Theater und sportliche Aktivitäten. Wenn du Lust hast, könnten wir uns treffen und die (39) zusammen durchsehen. Wie sieht es (40) Woche bei dir aus?
+Liebe Grüße Madeleine
+Auswahl:
+A = DURFTE
+B = EINIGE
+C = GLEICHZEITIG
+D = IHRE
+E = KEINE
+F = MUSSTE
+G = NÄCHSTE
+H = PAAR
+I = SEIT
+J = SIE
+K = SONDERN
+L = STATT
+M = UNTERLAGEN
+N = WÜRDEN
+O = ZUSÄTZLICHE
+Aufgaben:
+[31] … und ich (31) gleich an uns beide denken.
+Erklärung: musste
+Lösung: F
+[32] … schon (32) einiger Zeit überlegt …
+Erklärung: seit
+Lösung: I
+[33] Es gibt natürlich (33) Garantie …
+Erklärung: keine
+Lösung: E
+[34] Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen.
+Erklärung: paar
+Lösung: H
+[35] … und (35) unsere Englischkenntnisse zu verbessern …
+Erklärung: gleichzeitig
+Lösung: C
+[36] … ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.
+Erklärung: sondern
+Lösung: K
+[37] Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen.
+Erklärung: würden
+Lösung: N
+[38] Außerdem gibt es viele (38) Wahlveranstaltungen …
+Erklärung: zusätzliche
+Lösung: O
+[39] … und die (39) zusammen durchsehen.
+Erklärung: Unterlagen
+Lösung: M
+[40] Wie sieht es (40) Woche bei dir aus?
+Erklärung: nächste
+Lösung: G
+
+### Teil: hv1
+Format: truefalse
+Titel: Hörverstehen, Teil 1
+Gruppe: Hörverstehen
+Minuten: 8
+Punkte: 5
+Maximum: 25
+Anweisung: Sie hören nun fünf kurze Texte. Dazu sollen Sie fünf Aufgaben lösen. Sie hören diese Texte nur einmal. Entscheiden Sie beim Hören, ob die Aussagen 41–45 richtig (+) oder falsch (-) sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[41] Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.
+Lösung: falsch
+[42] Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.
+Lösung: richtig
+[43] Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.
+Lösung: falsch
+[44] Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.
+Lösung: richtig
+[45] Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.
+Lösung: richtig
+
+### Teil: hv2
+Format: truefalse
+Titel: Hörverstehen, Teil 2
+Gruppe: Hörverstehen
+Minuten: 12
+Punkte: 2.5
+Maximum: 25
+Anweisung: Sie hören ein Gespräch. Dazu sollen Sie zehn Aufgaben lösen. Sie hören das Gespräch zweimal. Entscheiden Sie beim Hören, ob die Aussagen 46–55 richtig (+) oder falsch (-) sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[46] Die Sendung heißt „Kinder und Computer“.
+Lösung: richtig
+[47] Herr Russo findet es gut, dass Kinder Interesse an Neuem haben.
+Lösung: falsch
+[48] Früher hielt man das Lesen für gefährlich.
+Lösung: richtig
+[49] Eltern kennen das Verhalten ihrer Kinder aus ihrer eigenen Jugend.
+Lösung: falsch
+[50] Eltern sollen Kindern Computerspiele verbieten.
+Lösung: richtig
+[51] Für viele Eltern sind die Neuen Medien nach wie vor unheimlich.
+Lösung: falsch
+[52] Erst ab 19 Uhr sind elektronische Spielsachen bei Familie Russo erlaubt.
+Lösung: falsch
+[53] Der Experte hält nichts von Chats für Kinder.
+Lösung: richtig
+[54] Herr Russo empfiehlt, dass Kinder mehr Bücher lesen sollten.
+Lösung: falsch
+[55] In der kommenden Sendung geht es um Ernährung.
+Lösung: richtig
+
+### Teil: hv3
+Format: truefalse
+Titel: Hörverstehen, Teil 3
+Gruppe: Hörverstehen
+Minuten: 10
+Punkte: 5
+Maximum: 25
+Anweisung: Sie hören fünf kurze Texte. Sie hören die Texte zweimal. Entscheiden Sie beim Hören, ob die Aussagen 56–60 richtig (+) oder falsch (-) sind.
+Hinweis: Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.
+Aufgaben:
+[56] Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.
+Lösung: richtig
+[57] Die Firma liefert das bestellte Sofa am Dienstagnachmittag zwischen drei und sechs Uhr liefern.
+Lösung: falsch
+[58] Der Gasthof Lindner liegt neben einer Tankstelle.
+Lösung: richtig
+[59] Der Film Komiker wird mehrmals am Tag gezeigt.
+Lösung: richtig
+[60] Für den Abend wird kein Regen erwartet.
+Lösung: falsch
+
+### Teil: sa
+Format: writing
+Titel: Schriftlicher Ausdruck
+Gruppe: Schriftlicher Ausdruck
+Minuten: 30
+Maximum: 45
+Anweisung: Ihr Freund Moritz hat Ihnen folgende E-Mail geschrieben:
+Extra:
+{
+ "brief": {
+  "intro": "Ihr Freund Moritz hat Ihnen folgende E-Mail geschrieben:",
+  "greeting": "Liebe(r) ...,",
+  "paragraphs": [
+   "ich sende dir ganz viele Grüße aus San Diego! Du weißt ja, wie sehr ich Kalifornien mag! Ich habe mir ein Auto gemietet und bin von morgens bis abends nur unterwegs. Ich liebe die Architektur hier, diese Hochhäuser und natürlich die Strände – wunderbar! Gestern Abend war ich übrigens in einem Club. Die Musik war super.",
+   "Doch leider ist mein Urlaub schon fast vorbei. In zwei Tagen fliege ich zurück und dann beginnt der Alltag wieder ...",
+   "Vielleicht können wir uns ja in der nächsten Woche treffen. Dann erzähle ich dir alles genauer. Welches Land ist eigentlich dein Lieblingsland?",
+   "Viele Grüße"
+  ],
+  "signature": "Moritz"
+ },
+ "hints": [
+  "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss."
+ ],
+ "criteria": [
+  {
+   "title": "Aufgabenbewältigung",
+   "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+  },
+  {
+   "title": "Kommunikative Gestaltung",
+   "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+  },
+  {
+   "title": "Formale Richtigkeit",
+   "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+  }
+ ],
+ "grades": [
+  {
+   "key": "A",
+   "points": 5
+  },
+  {
+   "key": "B",
+   "points": 3
+  },
+  {
+   "key": "C",
+   "points": 1
+  },
+  {
+   "key": "D",
+   "points": 0
+  }
+ ],
+ "factor": 3
+}
+Aufgaben:
+[A] Antworten Sie Moritz. Schreiben Sie etwas zu allen vier Punkten:
+Mindestwörter: 100
+Punkt: Ihr Lieblingsland
+Punkt: Was Sie an fremden Orten interessiert
+Punkt: Welche Musik Sie gern hören
+Punkt: Vorschlag für Treffen mit Moritz

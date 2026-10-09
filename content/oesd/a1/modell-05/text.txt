@@ -1,0 +1,286 @@
+# METIN
+Untertitel: 29 Aufgaben · 55 Minuten
+
+## Block: block-lesen
+Titel: Lesen
+Minuten: 25
+Hinweis: Aufgaben 1–16
+Punkte: 30
+Teile: lv1, lv2, lv3
+
+## Block: block-hoeren
+Titel: Hören
+Minuten: 10
+Hinweis: Aufgaben 17–27
+Punkte: 30
+Teile: hv1, hv2, hv3
+
+## Block: block-schreiben
+Titel: Schreiben
+Minuten: 20
+Hinweis: Aufgaben 28–29
+Punkte: 20
+Teile: s1, s2
+
+
+### Teil: lv1
+Format: matching
+Titel: Lesen, Teil 1
+Gruppe: Lesen
+Minuten: 10
+Punkte: 2
+Maximum: 10
+Anweisung: Finden Sie zu jeder Situation auf Blatt 1 (Situation A–E) die passende Anzeige auf Blatt 2 (Anzeige Nr. 1–6). Eine Anzeige ist zu viel.
+Auswahltitel: Anzeigen
+Bild: img/oesd-a1-m05-lv1.jpg
+Auswahl:
+1 = GLOBAL UNION: Geldtransfer in alle Länder. Barauszahlung in wenigen Minuten. Gebühren für Überweisungen in die Türkei: bis € 50: € 4,90; € 51 bis € 100: € 6,90. www.globalunion.at
+2 = Oma/Opa-Projekt: Wir lernen mit dir am Nachmittag in deiner Schule. derverein@nl40.at, 0699/1123 8004
+3 = Hals-Nasen-Ohren-Arzt Dr. Claudia Setz: Ordinationszeiten Mo: 10:00–13:00, Mi: 15:00–17:00, Do: 15:00–19:00. Telefon: 01 / 26 23 71 7, Schloßhoferstraße 38/1, 1210 Wien
+4 = Papier & Buch Heyner: Sommeraktionen. alles zum Schulanfang für wenig Geld, 10% auf vegetarische Kochbücher, Hörbücher in verschiedenen Sprachen ab 5 €. Getreidegasse 102, 5020 Salzburg
+5 = SPRACHINSTITUT NEUNER: WIR BIETEN: Kurse in kleinen Gruppen, Niveau A1–C2, aktuelle Materialien. KURSZEITEN: Mo–Fr, 8:30–11:30 Uhr oder 13:00–16:00 Uhr. INFORMATION: info@neuner.at
+6 = Wir brauchen für die Mittagszeit Hilfe in der Küche: Mo, Mi, Fr: 11–14 Uhr, gute Bezahlung. Restaurant „Zum Alpenkönig“, Dorfgasse 12, 6020 Innsbruck
+Aufgaben:
+[1] Situation A: Ihr Sohn hat Probleme in Mathematik. Er muss rechnen üben und braucht Hilfe.
+Lösung: 2
+[2] Situation B: Sie suchen einen Job. Sie können gut kochen.
+Lösung: 6
+[3] Situation C: Sie hören seit zwei Tagen nicht gut. Sie möchten einen Hörtest machen.
+Lösung: 3
+[4] Situation D: Ihre Familie lebt in einem anderen Land. Sie möchten Geld schicken.
+Lösung: 1
+[5] Situation E: Sie möchten in einer Sprachschule Deutsch lernen. Sie haben nur am Nachmittag Zeit.
+Lösung: 5
+
+### Teil: lv2
+Format: mc
+Titel: Lesen, Teil 2
+Gruppe: Lesen
+Minuten: 10
+Punkte: 1.67
+Maximum: 10
+Anweisung: Sie lesen drei Anzeigen. Dazu gibt es je 2 Fragen. Antworten Sie mit JA oder NEIN.
+Text:
+**Achtung!**
+Ihr Deutschkurs fängt erst nächste Woche an. Die Trainerin ist krank.
+Erster Kurstag: Montag, 13. September
+Bücher bitte vor dem Kurs im Büro abholen.
+Informationen telefonisch: 02742/328 oder im Internet: www.vhs-noe.at
+Aufgaben:
+[6] Bekommt man die Bücher im Kurs?
+A) JA
+B) NEIN
+Lösung: B
+[7] Kann man in der Schule anrufen?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Internationaler Abend**
+Orientalische Musik hören, zu afrikanischen Rhythmen tanzen, Essen aus Österreich genießen.
+Bei uns treffen sich Kulturen aus aller Welt.
+Samstag, 27. Juli, ab 20:00 Uhr im Vereinstreff Leopoldsdorf
+Eintritt: 2 Euro
+Aufgaben:
+[8] Gibt es bei der Party Musik aus Afrika?
+A) JA
+B) NEIN
+Lösung: A
+[9] Muss man für die Party etwas bezahlen?
+A) JA
+B) NEIN
+Lösung: A
+Text:
+**Service-Hotline**
+Ist Ihr Kühlschrank kaputt? Dann rufen Sie uns bitte an.
+Wir helfen Ihnen gerne und sind von 6 bis 22 Uhr für Sie da.
+Tel.: 0800 100 107
+Garantie auf Neugeräte: 2 Jahre
+Aufgaben:
+[10] Kann man bei Problemen mit dem Herd Hilfe bekommen?
+A) JA
+B) NEIN
+Lösung: B
+[11] Kann man auch am Abend anrufen?
+A) JA
+B) NEIN
+Lösung: A
+
+### Teil: lv3
+Format: matching
+Titel: Lesen, Teil 3
+Gruppe: Lesen
+Minuten: 5
+Punkte: 2
+Maximum: 10
+Anweisung: Sie lesen hier 5 kurze Texte (Text A–E). Zu jedem Text gibt es ein Bild (Bild 1–6). Welches Bild passt zu welchem Text? Ein Bild ist zu viel.
+Auswahltitel: Bilder
+Bild: img/oesd-a1-m05-lv3.jpg
+Auswahl:
+1 = Bild 1
+2 = Bild 2
+3 = Bild 3
+4 = Bild 4
+5 = Bild 5
+6 = Bild 6
+Aufgaben:
+[12] Text A: Bitte beachten Sie, dass das Fußballspielen auf den Rasenflächen des Parks verboten ist!
+Lösung: 4
+[13] Text B: Kommen Sie zum Buchklub: Wir lesen jeden Monat zusammen ein neues Buch und sprechen darüber. Montags nach dem Deutschkurs, Raum 34.2
+Lösung: 3
+[14] Text C: Schlüssel verloren? Schloss kaputt? Ihr Schlüsseldienst kommt sofort! Rufen Sie uns an: 01 430 25 25. Wir öffnen Ihre Tür für Sie.
+Lösung: 2
+[15] Text D: Sie dürfen hier NICHT HALTEN oder PARKEN! Parkende Autos werden abgeschleppt!
+Lösung: 1
+[16] Text E: Willkommen im Tierpark Herberstein: Über 600 Tiere, viel Natur, alte Bäume ... Mai bis September 9–17 Uhr, www.tierwelt-herberstein.at
+Lösung: 6
+
+### Teil: hv1
+Format: matching
+Hörtext: oesd-a1-m05-hv1.mp3
+Wiedergaben: 2
+Titel: Hören, Teil 1
+Gruppe: Hören
+Minuten: 4
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören fünf verschiedene Texte zu den Fotos. Welcher Text passt zu welchem Foto? Ein Bild ist zu viel.
+Auswahltitel: Fotos
+Bild: img/oesd-a1-m05-hv1.jpg
+Auswahl:
+A = Foto A
+B = Foto B
+C = Foto C
+D = Foto D
+E = Foto E
+F = Foto F
+Aufgaben:
+[17] Text 1
+Lösung: C
+[18] Text 2
+Lösung: E
+[19] Text 3
+Lösung: A
+[20] Text 4
+Lösung: D
+[21] Text 5
+Lösung: F
+
+### Teil: hv2
+Format: writing
+Hörtext: oesd-a1-m05-hv2.mp3
+Wiedergaben: 2
+Titel: Hören, Teil 2 (Telefonnotiz)
+Gruppe: Hören
+Minuten: 3
+Punkte: 10
+Maximum: 10
+Anweisung: Sie hören eine Nachricht. Hören Sie gut zu und schreiben Sie die wichtigsten Informationen auf das Notizblatt. Sie hören den Text zwei Mal.
+Text:
+**Notizen: Wohnung anschauen**
+Was: Wohnung anschauen
+Wann: am ............................, den ............................ März, um ............................ Uhr
+Wo: ............................straße 68
+Telefonnummer: 0650/ ............................
+Aufgaben:
+[22] Füllen Sie die wichtigsten Informationen in die Notizen ein:
+Punkt: Wann (Wochentag): Mittwoch / Mi.
+Punkt: Datum: 31. März
+Punkt: Uhrzeit: 18 / 6 / sechs Uhr
+Punkt: Wo: Ritterstraße 68
+Punkt: Telefonnummer: 4986735
+
+### Teil: hv3
+Format: mc
+Hörtext: oesd-a1-m05-hv3.mp3
+Wiedergaben: 2
+Titel: Hören, Teil 3
+Gruppe: Hören
+Minuten: 3
+Punkte: 2
+Maximum: 10
+Anweisung: Sie hören jetzt 5 Personen, die befragt werden: „Wo möchten Sie am liebsten arbeiten?“ Kreuzen Sie die richtige Antwort an. Pro Person gibt es nur eine Antwort.
+Aufgaben:
+[23] Text 1: Wo möchten Sie am liebsten arbeiten?
+A) im Büro
+B) im Supermarkt
+C) im Wald
+D) im Restaurant
+Lösung: C
+[24] Text 2: Wo möchten Sie am liebsten arbeiten?
+A) im Büro
+B) im Supermarkt
+C) im Wald
+D) im Restaurant
+Lösung: A
+[25] Text 3: Wo möchten Sie am liebsten arbeiten?
+A) im Büro
+B) im Supermarkt
+C) im Wald
+D) im Restaurant
+Lösung: D
+[26] Text 4: Wo möchten Sie am liebsten arbeiten?
+A) im Büro
+B) im Supermarkt
+C) im Wald
+D) im Restaurant
+Lösung: B
+[27] Text 5: Wo möchten Sie am liebsten arbeiten?
+A) im Büro
+B) im Supermarkt
+C) im Wald
+D) im Restaurant
+Lösung: A
+
+### Teil: s1
+Format: writing
+Titel: Schreiben, Teil 1 (Formular)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: Helfen Sie Ihrer Freundin und füllen Sie das Formular aus.
+Text:
+Ihre Freundin, Kristina Pinnow, möchte ihren Sohn Oleg beim Sportverein TGB anmelden. Oleg ist 12 Jahre alt und möchte Fußball spielen. Familie Pinnow wohnt in 60385 Frankfurt, in der Leibnitzstraße 35. Frau Pinnow möchte den Mitgliedsbeitrag alle drei Monate überweisen.
+**Sportverein TGB – ANMELDUNG**
+(0) Name des Kindes: Pinnow
+(1) Vorname des Kindes: ............................
+Straße: Leibnitzstraße 35
+PLZ/Ort: 60385 Frankfurt
+Alter: 12 Jahre
+(2) Geschlecht: [ ] männlich | [ ] weiblich
+(3) Interessen: ............................
+Monatsbeitrag: [ ] Kinder bis 12 Jahre 5 € | [ ] Kinder von 13–18 Jahren 8 €
+(4) Monatsbeitrag: ............................
+zahlbar durch Abbuchung von Konto 315560-606 bei der Postbank Frankfurt BLZ 500 100 60
+(5) Zahlungsweise: [ ] monatlich | [ ] vierteljährlich | [ ] halbjährlich
+Aufgaben:
+[28] Schreiben Sie die fünf fehlenden Informationen in das Formular:
+Punkt: (1) Vorname des Kindes: Oleg
+Punkt: (2) Geschlecht: männlich
+Punkt: (3) Interessen: Fußball / Fussball
+Punkt: (4) Monatsbeitrag: 5 € / 5 Euro
+Punkt: (5) Zahlungsweise: vierteljährlich / alle drei Monate
+
+### Teil: s2
+Format: writing
+Titel: Schreiben, Teil 2 (E-Mail)
+Gruppe: Schreiben
+Minuten: 10
+Punkte: 10
+Maximum: 10
+Anweisung: In einer Woche ist Ihr Deutschkurs zu Ende. Von Ihrem Kollegen Metin bekommen Sie folgendes E-Mail. Antworten Sie Metin. Schreiben Sie circa 30 Wörter. Beantworten Sie alle Fragen und schreiben Sie am Ende einen Gruß.
+Text:
+**Gartenparty**
+Hallo!
+In einer Woche ist unser Deutschkurs zu Ende. Wir können am letzten Kurstag eine Party mit Picknick im Garten unserer Schule machen. Und vielleicht geben wir unserer Lehrerin ein Geschenk.
+Was kannst du am letzten Kurstag zum Essen und Trinken mitbringen? Was geben wir unserer Lehrerin? Was können wir nach dem Essen noch machen?
+Liebe Grüße
+Metin
+Aufgaben:
+[29] Antworten Sie Metin (mindestens 30 Wörter):
+Mindestwoerter: 30
+Punkt: Was kannst du zum Essen und Trinken mitbringen?
+Punkt: Was geben wir unserer Lehrerin?
+Punkt: Was können wir nach dem Essen noch machen?
+Punkt: Gruß am Ende

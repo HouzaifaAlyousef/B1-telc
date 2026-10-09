@@ -1,0 +1,1003 @@
+{
+ "id": "modell-19",
+ "title": "MORITZ",
+ "subtitle": "61 Aufgaben · 150 Minuten",
+ "blocks": [
+  {
+   "id": "block-lv-sb",
+   "title": "Leseverstehen und Sprachbausteine",
+   "minutes": 90,
+   "hint": "Aufgaben 1–40",
+   "parts": [
+    "lv1",
+    "lv2",
+    "lv3",
+    "sb1",
+    "sb2"
+   ],
+   "maxPoints": 105.0,
+   "availablePoints": 105.0,
+   "missing": 0
+  },
+  {
+   "id": "block-hv",
+   "title": "Hörverstehen",
+   "minutes": 30,
+   "hint": "Aufgaben 41–60",
+   "parts": [
+    "hv1",
+    "hv2",
+    "hv3"
+   ],
+   "maxPoints": 75.0,
+   "availablePoints": 75.0,
+   "missing": 0
+  },
+  {
+   "id": "block-sa",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "hint": "",
+   "parts": [
+    "sa"
+   ],
+   "maxPoints": 45.0,
+   "availablePoints": 45.0,
+   "missing": 0
+  }
+ ],
+ "sections": [
+  {
+   "id": "lv1",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Überschriften a–j und die Texte 1–5. Finden Sie für jeden Text die passende Überschrift.",
+   "format": "matching",
+   "items": [
+    {
+     "id": "1",
+     "text": "Man muss auch mal mutig sein! Das dachte sich Jannik. Warum ist er so mutig? Seit drei Jahren kauft er regelmäßig in einem Unverpackt-Laden ein. „Dabei spare ich nicht nur eine Menge Plastik“, sagt er. „Auch an der Frische der Produkte merkt man einen Unterschied. Die Schokolade bei uns ist immer knackiger als im Supermarkt.“ Offenbar sind Unverpackt-Läden gerade im Trend. Das merkt man auch daran, dass in den letzten zwei Jahren doppelt so viele Läden eröffnet haben. Doch es funktioniert: die Kundinnen und Kunden geben mehr aus, weil es der Umwelt gut geht.",
+     "answer": "E"
+    },
+    {
+     "id": "2",
+     "text": "Warum nicht das Angenehme mit dem Nützlichen verbinden? „Umweltschutz fängt mit kleinen Schritten an. Ich fahre jetzt seit Monaten mit meinem Rad zur Arbeit. Da tue ich etwas für mich, aber auch für die Umwelt“, sagt Lea. Seit ihrem Auslandssemester in Schweden ist sie überzeugt: „Dort ist Umweltschutz ganz selbstverständlich. Warum kann man nicht auch hier sein Hobby mit dem Umweltschutz verbinden?“",
+     "answer": "F"
+    },
+    {
+     "id": "3",
+     "text": "Wir merken deutlich, dass Getränke in Glasflaschen wieder beliebter werden, besonders bei Mineralwasser, berichtet Jürgen Fischer auf der Getränkemesse in Düsseldorf. Auch die Verkaufszahlen bestätigen diesen Trend. Dabei sind Glasflaschen nicht unbedingt besser für die Umwelt als Plastikflaschen. Der Grund ist der teilweise weite Transportweg: Für Milch zum Beispiel wird die Milch-Glasflasche im Durchschnitt 721 Kilometer transportiert, bis sie ankommt.",
+     "answer": "B"
+    },
+    {
+     "id": "4",
+     "text": "Am 25. November beginnt wieder der Frankfurter Weihnachtsmarkt. Los geht es um 17:05 Uhr mit einem Glockenspiel von der Nikolaikirche. Danach gibt es eine Rede des Bürgermeisters. „Es ist für mich immer etwas ganz Besonderes, den Weihnachtsbaum mit seinen 6500 Lichtern zu sehen“, erzählt dieser der Frankfurter Rundschau. 700 Sterne sollen den Römerberg verschönern. Das hr-Blasorchester sorgt an mehreren Abenden mit Weihnachtsliedern für gemütliche Stimmung.",
+     "answer": "A"
+    },
+    {
+     "id": "5",
+     "text": "Ein Spaziergang in der Regensburger Altstadt ist in der Weihnachtszeit besonders schön. Im Schatten des Alten Rathauses lädt der Lucrezia-Markt zum Träumen ein. Suchen Sie noch ein besonderes Geschenk? Dann sind Sie dort genau richtig: Denn Handwerker präsentieren und verkaufen ihre Produkte aus Metall, Glas oder Holz. Und Kreativen wird eine Bühne für Musik und Theater geboten. Außerdem gibt es heißen Apfelsaft aus der Region.",
+     "answer": "J"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": "Bürgermeister eröffnet Weihnachtsmarkt"
+    },
+    {
+     "key": "B",
+     "text": "Glasflaschen nicht so gut wie gedacht"
+    },
+    {
+     "key": "C",
+     "text": "Innenstadt mit Christbäumen geschmückt"
+    },
+    {
+     "key": "D",
+     "text": "Laufend die Welt vom Müll befreien"
+    },
+    {
+     "key": "E",
+     "text": "Mit der eigenen Dose in den Supermarkt"
+    },
+    {
+     "key": "F",
+     "text": "Neue Sportart aus Schweden"
+    },
+    {
+     "key": "G",
+     "text": "Plastikflaschen immer beliebter"
+    },
+    {
+     "key": "H",
+     "text": "Regionale Produkte im Supermarkt"
+    },
+    {
+     "key": "I",
+     "text": "Supermarkt setzt auf Plastik"
+    },
+    {
+     "key": "J",
+     "text": "Weihnachtsmarkt für Kunst-Begeisterte"
+    }
+   ]
+  },
+  {
+   "id": "lv2",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 2",
+   "minutes": 20,
+   "instruction": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Ein Leben auf Sumatra",
+       "b": true
+      },
+      {
+       "t": "Der Abend, an dem Svenja Peters ihr Herz verlor, war ihr erster auf der Insel. Sie hatte gar nicht geplant, nach Sumatra zu reisen. Aber dann hatten ihr in Thailand andere Reisende von dem großen und traumhaft gelegenen See erzählt. Und sie war dann einfach nach Indonesien geflogen. Für den Mann, den die damals 26-Jährige auf Sumatra traf, gab sie ihre geplante Karriere als Anwältin auf.",
+       "b": false
+      },
+      {
+       "t": "Die Reise sollte eine kurze Pause zwischen Uni und Job sein. Doch zurück in Deutschland packte sie ihre Sachen in Kisten und machte sich mit ihnen wieder auf den Weg zurück nach Sumatra.",
+       "b": false
+      },
+      {
+       "t": "„Meine Eltern machten sich damals große Sorgen, dass ich meine Fachkenntnisse nicht nutze“, sagt Svenja Peters. „Aber als ich 18 wurde, hatten sie mir gesagt: Du stehst jetzt auf eigenen Füßen! Und daran erinnerte ich sie. Bei ihren jährlichen Besuchen sehen sie auch, wie gut es mir hier geht.“",
+       "b": false
+      },
+      {
+       "t": "Sie selbst habe keine Sekunde an ihrer Entscheidung gezweifelt, sagt sie. Und es sind viele Sekunden seit damals vergangen. Mehr als 800 Millionen, um genau zu sein. Svenja Peters lebt seit 26 Jahren auf Sumatra.",
+       "b": false
+      },
+      {
+       "t": "Sie hat den Mann geheiratet, in den sie sich auf ihrer Reise verliebte, und ist mit ihm seit 26 Jahren zusammen. Die beiden besitzen ein kleines Hotel mit 36 Zimmern und haben drei Kinder. Zwei leben gerade in Deutschland. Die Tochter studiert Tourismus und der Sohn macht eine Ausbildung zum Koch. Svenja Peters ist überzeugt, dass sie wieder zurückkommen werden.",
+       "b": false
+      },
+      {
+       "t": "Ihr Start in die Selbstständigkeit war ein vegetarisches Restaurant. Mit den ersten Einnahmen kaufte sie ihr erstes kleines Haus mit zwei Gästezimmern. Nach und nach kaufte sie weitere Häuser. Heute sagt sie: „Ich verdiene so viel wie eine deutsche Anwältin.“",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "6",
+     "text": "Svenja Peters blieb auf Sumatra, weil",
+     "options": [
+      {
+       "key": "A",
+       "text": "ihr Thailand nicht gefiel."
+      },
+      {
+       "key": "B",
+       "text": "sie dort als Anwältin arbeiten konnte."
+      },
+      {
+       "key": "C",
+       "text": "sie sich verliebte."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "7",
+     "text": "Nach ihrer Rückkehr nach Deutschland",
+     "options": [
+      {
+       "key": "A",
+       "text": "organisierte Svenja ihren Umzug."
+      },
+      {
+       "key": "B",
+       "text": "setzte Svenja ihr Studium fort."
+      },
+      {
+       "key": "C",
+       "text": "suchte Svenja eine Stelle als Anwältin."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "8",
+     "text": "Ihre Eltern hatten Angst, dass",
+     "options": [
+      {
+       "key": "A",
+       "text": "sie Svenja nicht wiedersehen würden."
+      },
+      {
+       "key": "B",
+       "text": "Svenja nicht selbstständig sein würde."
+      },
+      {
+       "key": "C",
+       "text": "Svenjas Studium umsonst war."
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "9",
+     "text": "Svenja und ihr Mann",
+     "options": [
+      {
+       "key": "A",
+       "text": "führen ein Hotel mit 36 Zimmern."
+      },
+      {
+       "key": "B",
+       "text": "haben zwei Kinder."
+      },
+      {
+       "key": "C",
+       "text": "sind seit 36 Jahren ein Paar."
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "10",
+     "text": "Svenja eröffnete auf Sumatra",
+     "options": [
+      {
+       "key": "A",
+       "text": "direkt das Hotel."
+      },
+      {
+       "key": "B",
+       "text": "ein Büro als Anwältin."
+      },
+      {
+       "key": "C",
+       "text": "zuerst ein Restaurant."
+      }
+     ],
+     "answer": "C"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
+  },
+  {
+   "id": "lv3",
+   "group": "Leseverstehen",
+   "title": "Leseverstehen, Teil 3",
+   "minutes": 20,
+   "instruction": "Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige.",
+   "format": "matching",
+   "bankImage": "img/m19-lv3.jpg",
+   "items": [
+    {
+     "id": "11",
+     "text": "Sie sind in der Schweiz und möchten sich ein paar Tage beim Baden erholen.",
+     "answer": "D"
+    },
+    {
+     "id": "12",
+     "text": "Sie hören gerne klassische Musik, am liebsten Barocklieder. Sie möchten in ein Konzert gehen.",
+     "answer": "H"
+    },
+    {
+     "id": "13",
+     "text": "Ihr Sohn möchte gerne in den Schulferien seine Fremdsprachenkenntnisse verbessern. Er möchte auch Sport treiben.",
+     "answer": "I"
+    },
+    {
+     "id": "14",
+     "text": "Sie reisen nicht gerne allein und suchen deshalb Reisepartner.",
+     "answer": "E"
+    },
+    {
+     "id": "15",
+     "text": "Sie möchten am Donnerstagabend mit Ihrer Bekannten eine Musikveranstaltung besuchen.",
+     "answer": "A"
+    },
+    {
+     "id": "16",
+     "text": "Ihre Familie möchte den nächsten Urlaub am Meer verbringen.",
+     "answer": "X"
+    },
+    {
+     "id": "17",
+     "text": "Sie leben in Zürich und möchten dort möglichst schnell Englisch lernen.",
+     "answer": "L"
+    },
+    {
+     "id": "18",
+     "text": "Sie bekommen Besuch von Ihrer Freundin. Sie möchte gerne tanzen gehen.",
+     "answer": "X"
+    },
+    {
+     "id": "19",
+     "text": "Sie möchten Freunde im Ausland besuchen und suchen ein Reisebüro.",
+     "answer": "F"
+    },
+    {
+     "id": "20",
+     "text": "Sie sind sportlich und möchten im Sommer in den Bergen wandern gehen.",
+     "answer": "G"
+    }
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    },
+    {
+     "key": "F",
+     "text": ""
+    },
+    {
+     "key": "G",
+     "text": ""
+    },
+    {
+     "key": "H",
+     "text": ""
+    },
+    {
+     "key": "I",
+     "text": ""
+    },
+    {
+     "key": "J",
+     "text": ""
+    },
+    {
+     "key": "K",
+     "text": ""
+    },
+    {
+     "key": "L",
+     "text": ""
+    },
+    {
+     "key": "X",
+     "text": ""
+    }
+   ],
+   "bankTitle": "Anzeigen"
+  },
+  {
+   "id": "sb1",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 1",
+   "minutes": 20,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 21–30. Welche Lösung (A, B oder C) ist jeweils richtig?",
+   "format": "mc",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Liebe Lisa,",
+       "b": false
+      },
+      {
+       "t": "ich hoffe, es geht dir gut! Wir (21) viel zu lange nichts mehr voneinander gehört. Seit wir (22) das letzte Mal gesehen haben, warst du mit Severin (23) New York und ich bin mit Maurizio durch Slowenien gereist.",
+       "b": false
+      },
+      {
+       "t": "Du (24) mir unbedingt erzählen, was ihr alles erlebt habt. Wart ihr auch im Central Park spazieren? (25) würde ich ja so gerne mal machen!",
+       "b": false
+      },
+      {
+       "t": "Uns hat es in Slowenien unglaublich gut gefallen. Wandern konnten wir leider (26) meiner Verletzung nicht. Dafür haben wir gut gegessen, jeden Abend am Feuer gesessen und (27) Ruhe genossen. Stell dir vor, in unserer (28) hatten wir kein Internet. Und auch mit (29) Handy hatte ich keinen Netzempfang. Diese (30) Pause hat sehr gutgetan. Jetzt bin ich wirklich erholt.",
+       "b": false
+      },
+      {
+       "t": "Bis hoffentlich bald! Deine Ruth",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "21",
+     "text": "Wir (21) viel zu lange nichts mehr voneinander gehört.",
+     "options": [
+      {
+       "key": "A",
+       "text": "habe"
+      },
+      {
+       "key": "B",
+       "text": "haben"
+      },
+      {
+       "key": "C",
+       "text": "habt"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "22",
+     "text": "Seit wir (22) das letzte Mal gesehen haben …",
+     "options": [
+      {
+       "key": "A",
+       "text": "mich"
+      },
+      {
+       "key": "B",
+       "text": "sie"
+      },
+      {
+       "key": "C",
+       "text": "uns"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "23",
+     "text": "… warst du mit Severin (23) New York …",
+     "options": [
+      {
+       "key": "A",
+       "text": "aus"
+      },
+      {
+       "key": "B",
+       "text": "auf"
+      },
+      {
+       "key": "C",
+       "text": "in"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "24",
+     "text": "Du (24) mir unbedingt erzählen, was ihr alles erlebt habt.",
+     "options": [
+      {
+       "key": "A",
+       "text": "brauchst"
+      },
+      {
+       "key": "B",
+       "text": "hast"
+      },
+      {
+       "key": "C",
+       "text": "musst"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "25",
+     "text": "(25) würde ich ja so gerne mal machen!",
+     "options": [
+      {
+       "key": "A",
+       "text": "Das"
+      },
+      {
+       "key": "B",
+       "text": "Was"
+      },
+      {
+       "key": "C",
+       "text": "Welches"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "26",
+     "text": "Wandern konnten wir leider (26) meiner Verletzung nicht.",
+     "options": [
+      {
+       "key": "A",
+       "text": "außer"
+      },
+      {
+       "key": "B",
+       "text": "trotz"
+      },
+      {
+       "key": "C",
+       "text": "wegen"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "27",
+     "text": "… jeden Abend am Feuer gesessen und (27) Ruhe genossen.",
+     "options": [
+      {
+       "key": "A",
+       "text": "der"
+      },
+      {
+       "key": "B",
+       "text": "die"
+      },
+      {
+       "key": "C",
+       "text": "eine"
+      }
+     ],
+     "answer": "B"
+    },
+    {
+     "id": "28",
+     "text": "Stell dir vor, in unserer (28) hatten wir kein Internet.",
+     "options": [
+      {
+       "key": "A",
+       "text": "Unterkunft"
+      },
+      {
+       "key": "B",
+       "text": "Unterkünfte"
+      },
+      {
+       "key": "C",
+       "text": "Unterkünften"
+      }
+     ],
+     "answer": "A"
+    },
+    {
+     "id": "29",
+     "text": "Und auch mit (29) Handy hatte ich keinen Netzempfang.",
+     "options": [
+      {
+       "key": "A",
+       "text": "deinem"
+      },
+      {
+       "key": "B",
+       "text": "ihrem"
+      },
+      {
+       "key": "C",
+       "text": "meinem"
+      }
+     ],
+     "answer": "C"
+    },
+    {
+     "id": "30",
+     "text": "Diese (30) Pause hat sehr gutgetan.",
+     "options": [
+      {
+       "key": "A",
+       "text": "digital"
+      },
+      {
+       "key": "B",
+       "text": "digitale"
+      },
+      {
+       "key": "C",
+       "text": "digitalen"
+      }
+     ],
+     "answer": "B"
+    }
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0
+  },
+  {
+   "id": "sb2",
+   "group": "Sprachbausteine",
+   "title": "Sprachbausteine, Teil 2",
+   "minutes": 20,
+   "instruction": "Lesen Sie den Text und schließen Sie die Lücken 31–40. Benutzen Sie die Wörter a–o. Jedes Wort passt nur einmal.",
+   "format": "wordbank",
+   "passages": [
+    {
+     "paragraphs": [
+      {
+       "t": "Hallo Emilia,",
+       "b": false
+      },
+      {
+       "t": "gestern hat mir mein Englischlehrer Informationen über ein Stipendium in den USA geschickt und ich (31) gleich an uns beide denken. Wir haben uns doch sowieso schon (32) einiger Zeit überlegt, nach dem Abitur im Ausland zu studieren. Vielleicht sollten wir diese Gelegenheit nutzen. Es gibt natürlich (33) Garantie, dass wir genommen werden, aber probieren können wir es, oder?",
+       "b": false
+      },
+      {
+       "t": "Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen. Eine andere Kultur zu erleben und (35) unsere Englischkenntnisse zu verbessern – das wäre doch genial! So ein Auslandsaufenthalt ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.",
+       "b": false
+      },
+      {
+       "t": "Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen. Außerdem gibt es viele (38) Wahlveranstaltungen wie Chorsingen, Theater und sportliche Aktivitäten. Wenn du Lust hast, könnten wir uns treffen und die (39) zusammen durchsehen. Wie sieht es (40) Woche bei dir aus?",
+       "b": false
+      },
+      {
+       "t": "Liebe Grüße Madeleine",
+       "b": false
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "31",
+     "text": "… und ich (31) gleich an uns beide denken.",
+     "answer": "F",
+     "explain": "musste"
+    },
+    {
+     "id": "32",
+     "text": "… schon (32) einiger Zeit überlegt …",
+     "answer": "I",
+     "explain": "seit"
+    },
+    {
+     "id": "33",
+     "text": "Es gibt natürlich (33) Garantie …",
+     "answer": "E",
+     "explain": "keine"
+    },
+    {
+     "id": "34",
+     "text": "Ich fände es toll, ein (34) Jahre in einem neuen Umfeld zu verbringen.",
+     "answer": "H",
+     "explain": "paar"
+    },
+    {
+     "id": "35",
+     "text": "… und (35) unsere Englischkenntnisse zu verbessern …",
+     "answer": "C",
+     "explain": "gleichzeitig"
+    },
+    {
+     "id": "36",
+     "text": "… ist nicht nur abenteuerlich, (36) kann auch nützlich für die Zukunft sein.",
+     "answer": "K",
+     "explain": "sondern"
+    },
+    {
+     "id": "37",
+     "text": "Das Beste an der Sache ist, wir (37) direkt auf dem Campus wohnen.",
+     "answer": "N",
+     "explain": "würden"
+    },
+    {
+     "id": "38",
+     "text": "Außerdem gibt es viele (38) Wahlveranstaltungen …",
+     "answer": "O",
+     "explain": "zusätzliche"
+    },
+    {
+     "id": "39",
+     "text": "… und die (39) zusammen durchsehen.",
+     "answer": "M",
+     "explain": "Unterlagen"
+    },
+    {
+     "id": "40",
+     "text": "Wie sieht es (40) Woche bei dir aus?",
+     "answer": "G",
+     "explain": "nächste"
+    }
+   ],
+   "pointsPerItem": 1.5,
+   "maxPoints": 15.0,
+   "availablePoints": 15.0,
+   "missing": 0,
+   "bank": [
+    {
+     "key": "A",
+     "text": "DURFTE"
+    },
+    {
+     "key": "B",
+     "text": "EINIGE"
+    },
+    {
+     "key": "C",
+     "text": "GLEICHZEITIG"
+    },
+    {
+     "key": "D",
+     "text": "IHRE"
+    },
+    {
+     "key": "E",
+     "text": "KEINE"
+    },
+    {
+     "key": "F",
+     "text": "MUSSTE"
+    },
+    {
+     "key": "G",
+     "text": "NÄCHSTE"
+    },
+    {
+     "key": "H",
+     "text": "PAAR"
+    },
+    {
+     "key": "I",
+     "text": "SEIT"
+    },
+    {
+     "key": "J",
+     "text": "SIE"
+    },
+    {
+     "key": "K",
+     "text": "SONDERN"
+    },
+    {
+     "key": "L",
+     "text": "STATT"
+    },
+    {
+     "key": "M",
+     "text": "UNTERLAGEN"
+    },
+    {
+     "key": "N",
+     "text": "WÜRDEN"
+    },
+    {
+     "key": "O",
+     "text": "ZUSÄTZLICHE"
+    }
+   ]
+  },
+  {
+   "id": "hv1",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 1",
+   "minutes": 8,
+   "instruction": "Sie hören nun fünf kurze Texte. Dazu sollen Sie fünf Aufgaben lösen. Sie hören diese Texte nur einmal. Entscheiden Sie beim Hören, ob die Aussagen 41–45 richtig (+) oder falsch (-) sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "41",
+     "text": "Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.",
+     "answer": "f"
+    },
+    {
+     "id": "42",
+     "text": "Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.",
+     "answer": "r"
+    },
+    {
+     "id": "43",
+     "text": "Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.",
+     "answer": "f"
+    },
+    {
+     "id": "44",
+     "text": "Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.",
+     "answer": "r"
+    },
+    {
+     "id": "45",
+     "text": "Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.",
+     "answer": "r"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
+  },
+  {
+   "id": "hv2",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 2",
+   "minutes": 12,
+   "instruction": "Sie hören ein Gespräch. Dazu sollen Sie zehn Aufgaben lösen. Sie hören das Gespräch zweimal. Entscheiden Sie beim Hören, ob die Aussagen 46–55 richtig (+) oder falsch (-) sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "46",
+     "text": "Die Sendung heißt „Kinder und Computer“.",
+     "answer": "r"
+    },
+    {
+     "id": "47",
+     "text": "Herr Russo findet es gut, dass Kinder Interesse an Neuem haben.",
+     "answer": "f"
+    },
+    {
+     "id": "48",
+     "text": "Früher hielt man das Lesen für gefährlich.",
+     "answer": "r"
+    },
+    {
+     "id": "49",
+     "text": "Eltern kennen das Verhalten ihrer Kinder aus ihrer eigenen Jugend.",
+     "answer": "f"
+    },
+    {
+     "id": "50",
+     "text": "Eltern sollen Kindern Computerspiele verbieten.",
+     "answer": "r"
+    },
+    {
+     "id": "51",
+     "text": "Für viele Eltern sind die Neuen Medien nach wie vor unheimlich.",
+     "answer": "f"
+    },
+    {
+     "id": "52",
+     "text": "Erst ab 19 Uhr sind elektronische Spielsachen bei Familie Russo erlaubt.",
+     "answer": "f"
+    },
+    {
+     "id": "53",
+     "text": "Der Experte hält nichts von Chats für Kinder.",
+     "answer": "r"
+    },
+    {
+     "id": "54",
+     "text": "Herr Russo empfiehlt, dass Kinder mehr Bücher lesen sollten.",
+     "answer": "f"
+    },
+    {
+     "id": "55",
+     "text": "In der kommenden Sendung geht es um Ernährung.",
+     "answer": "r"
+    }
+   ],
+   "pointsPerItem": 2.5,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
+  },
+  {
+   "id": "hv3",
+   "group": "Hörverstehen",
+   "title": "Hörverstehen, Teil 3",
+   "minutes": 10,
+   "instruction": "Sie hören fünf kurze Texte. Sie hören die Texte zweimal. Entscheiden Sie beim Hören, ob die Aussagen 56–60 richtig (+) oder falsch (-) sind.",
+   "note": "Hinweis: Die Hörtexte sind in der PDF-Vorlage nicht enthalten. Dieser Teil dient zum Wiederholen der Aussagen und zum Vergleich mit der Lösung — nicht zum Hörtraining.",
+   "format": "truefalse",
+   "items": [
+    {
+     "id": "56",
+     "text": "Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.",
+     "answer": "r"
+    },
+    {
+     "id": "57",
+     "text": "Die Firma liefert das bestellte Sofa am Dienstagnachmittag zwischen drei und sechs Uhr liefern.",
+     "answer": "f"
+    },
+    {
+     "id": "58",
+     "text": "Der Gasthof Lindner liegt neben einer Tankstelle.",
+     "answer": "r"
+    },
+    {
+     "id": "59",
+     "text": "Der Film Komiker wird mehrmals am Tag gezeigt.",
+     "answer": "r"
+    },
+    {
+     "id": "60",
+     "text": "Für den Abend wird kein Regen erwartet.",
+     "answer": "f"
+    }
+   ],
+   "pointsPerItem": 5.0,
+   "maxPoints": 25.0,
+   "availablePoints": 25.0,
+   "missing": 0
+  },
+  {
+   "id": "sa",
+   "group": "Schriftlicher Ausdruck",
+   "title": "Schriftlicher Ausdruck",
+   "minutes": 30,
+   "instruction": "Ihr Freund Moritz hat Ihnen folgende E-Mail geschrieben:",
+   "brief": {
+    "intro": "Ihr Freund Moritz hat Ihnen folgende E-Mail geschrieben:",
+    "greeting": "Liebe(r) ...,",
+    "paragraphs": [
+     "ich sende dir ganz viele Grüße aus San Diego! Du weißt ja, wie sehr ich Kalifornien mag! Ich habe mir ein Auto gemietet und bin von morgens bis abends nur unterwegs. Ich liebe die Architektur hier, diese Hochhäuser und natürlich die Strände – wunderbar! Gestern Abend war ich übrigens in einem Club. Die Musik war super.",
+     "Doch leider ist mein Urlaub schon fast vorbei. In zwei Tagen fliege ich zurück und dann beginnt der Alltag wieder ...",
+     "Vielleicht können wir uns ja in der nächsten Woche treffen. Dann erzähle ich dir alles genauer. Welches Land ist eigentlich dein Lieblingsland?",
+     "Viele Grüße"
+    ],
+    "signature": "Moritz"
+   },
+   "hints": [
+    "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss."
+   ],
+   "format": "writing",
+   "items": [
+    {
+     "id": "A",
+     "text": "Antworten Sie Moritz. Schreiben Sie etwas zu allen vier Punkten:",
+     "minWords": 100,
+     "points": [
+      "Ihr Lieblingsland",
+      "Was Sie an fremden Orten interessiert",
+      "Welche Musik Sie gern hören",
+      "Vorschlag für Treffen mit Moritz"
+     ]
+    }
+   ],
+   "criteria": [
+    {
+     "title": "Aufgabenbewältigung",
+     "hint": "Sind alle vier Leitpunkte inhaltlich angemessen bearbeitet?"
+    },
+    {
+     "title": "Kommunikative Gestaltung",
+     "hint": "Anrede, Gruß, passendes Register und verbundene Sätze statt aneinandergereihter Punkte?"
+    },
+    {
+     "title": "Formale Richtigkeit",
+     "hint": "Stören Fehler in Grammatik, Wortschatz und Rechtschreibung das Verstehen?"
+    }
+   ],
+   "grades": [
+    {
+     "key": "A",
+     "points": 5
+    },
+    {
+     "key": "B",
+     "points": 3
+    },
+    {
+     "key": "C",
+     "points": 1
+    },
+    {
+     "key": "D",
+     "points": 0
+    }
+   ],
+   "factor": 3,
+   "maxPoints": 45,
+   "availablePoints": 45,
+   "missing": 0
+  }
+ ]
+}
